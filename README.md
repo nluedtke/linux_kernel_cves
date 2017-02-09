@@ -20,3 +20,11 @@ best places is through github issues to start discussions and requests.
 If/When this idea matures direct contributions will of course be 
 accepted.
 
+### Known Issues
+
+  - Breaks/Fixes lists accuracy not 100% (This is slowly being corrected)
+  - Multiple commits to fix a CVE not handled
+  - If a commit fixes a previous incomplete fix the version timeline may not be correct
+  - Haven't verified if all CVEs are on the list yet (in the works)
+  - LTS Support not started yet
+
