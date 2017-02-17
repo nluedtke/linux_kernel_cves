@@ -43,5 +43,5 @@ accepted.
   - If a commit fixes a previous incomplete fix the version timeline 
   may not be correct
   - Haven't verified if all CVEs are on the list yet (in the works)
-  - LTS Support not started yet
-
+  - LTS Support not completed yet
+  - Missing fixing/breaking commits
