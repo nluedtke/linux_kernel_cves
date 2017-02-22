@@ -33,8 +33,10 @@ and when it was fixed.
 
 Want to contribute? Great! Due to the vary early stages of this work the 
 best places is through github issues to start discussions and requests. 
-If/When this idea matures direct contributions will of course be 
-accepted.
+Updating the commit maps with the breaks/fixes information is also very 
+helpful. File a merge request and it will accepted when the information 
+is validated. If/When this idea matures direct contributions will of 
+course be accepted.
 
 ### Known Issues
 
@@ -43,5 +45,5 @@ accepted.
   - If a commit fixes a previous incomplete fix the version timeline 
   may not be correct
   - Haven't verified if all CVEs are on the list yet (in the works)
-  - LTS Support not completed yet
+  - LTS Support not completed yet (Update: Added 4.9, 4.4, 4.1)
   - Missing fixing/breaking commits
