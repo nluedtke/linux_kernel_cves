@@ -3,8 +3,9 @@ This is simple project to track CVEs in the upstream linux kernel.
 Currently all output for this is stored in the CVEs.txt file. The output
 was generated automatically through a set of tools that has not been 
 fully tested or made public yet. The output file currently only takes 
-into account the torvalds tree. There are plans to aggregate data for 
-each of the LTS kernels as well. 
+into account the torvalds tree. There are seperate files for each LTS 
+stream. These files list all CVEs that possibly affect that stream and 
+when/if it was fixed.
 
 ### Reading stream reports
 
