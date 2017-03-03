@@ -44,7 +44,7 @@ course be accepted.
   - Breaks/Fixes lists accuracy not 100% (This is slowly being corrected)
   - Multiple commits to fix a CVE not handled
   - If a commit fixes a previous incomplete fix the version timeline 
-  may not be correct
+  may not be correct (Update: In progress)
   - Haven't verified if all CVEs are on the list yet (in the works)
-  - LTS Support not completed yet (Update: Added 4.9, 4.4, 4.1)
+  - LTS Support not completed yet (Update: Added 4.9, 4.4, 4.1, 3.18)
   - Missing fixing/breaking commits
