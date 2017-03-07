@@ -46,5 +46,4 @@ course be accepted.
   - If a commit fixes a previous incomplete fix the version timeline 
   may not be correct (Update: In progress)
   - Haven't verified if all CVEs are on the list yet (in the works)
-  - LTS Support not completed yet (Update: Added 4.9, 4.4, 4.1, 3.18)
   - Missing fixing/breaking commits
