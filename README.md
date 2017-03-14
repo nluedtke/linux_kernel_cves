@@ -10,7 +10,7 @@ when/if they were fixed.
 
 Below is a list of definitions for certain strings you might see in a 
 stream report. **The only CVEs that should appear in the stream document 
-are ones that potentially effect that stream.** (ie. ones that were not 
+are ones that potentially affect that stream.** (ie. ones that were not 
 fixed prior to the first release version and were not introduced after 
 the release version) If no fixing commit is known for a CVE, then by 
 default it is assumed to present in all streams after it was introduced.
