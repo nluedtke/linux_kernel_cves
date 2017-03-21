@@ -28,7 +28,7 @@ The process for generating these documents is focused on being as
 automated as possible. Below is the general outline of steps.
 
   1) Take list of all kernel CVEs (Currently limited to after 2004, see 
-  [#3](../../issues/3).
+  [#3](../../issues/3)).
   2) If the issue is marked as Vendor specific, ignore it.
   3) Get the Breaking/Fixing Commits. This is retrieved from the 
   internal cache first, if not present it pulls from Ubuntu, Debian, 
