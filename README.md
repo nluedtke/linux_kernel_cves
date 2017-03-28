@@ -39,7 +39,7 @@ automated as possible. Below is the general outline of steps.
   vulnerable perform steps 6 through 8.
   6) Find the commit who has the commit message that matches the commit 
   message from the mainline. This is the fixing commit in that stream. 
-  7) Record the commit id and git the earliest tag in the stream which 
+  7) Record the commit id and get the earliest tag in the stream which 
   has that commit.
   8) Output information to stream document. 
   9) Update JSONs.
