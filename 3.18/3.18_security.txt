@@ -239,6 +239,21 @@ CVEs fixed in 3.18.49:
   CVE-2017-7184: 281edc5a3778cd551e688e8d0c88d05d948b4faf xfrm_user: validate XFRM_MSG_NEWAE XFRMA_REPLAY_ESN_VAL replay_window
   CVE-2017-7308: eeead20a3d208b411eab883f9ba3180c15b566d0 net/packet: fix overflow in check for priv area size
 
+CVEs fixed in 3.18.50:
+  CVE-2017-2596: aa5b35bad59a2691db0ea739fb79be82aff5cbb8 kvm: fix page struct leak in handle_vmon
+  CVE-2017-6353: 02415182a92ccd72b60c22e723a56a74a566d2e7 sctp: deny peeloff operation on asocs with threads sleeping on it
+  CVE-2017-7187: a3bc27d43f5b5e8cac993b447eeb2f2efb1493af scsi: sg: check length passed to SG_NEXT_CMD_LEN
+  CVE-2017-7261: 6e7f776a49aabe3c734f9d94ba2522961a91c6b7 drm/vmwgfx: NULL pointer dereference in vmw_surface_define_ioctl()
+  CVE-2017-7294: 2e29dce3fd6c31f5d0e623e5a929c06d5436ee60 drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl()
+  CVE-2017-7346: 2e29dce3fd6c31f5d0e623e5a929c06d5436ee60 drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl()
+  CVE-2017-7616: c01cf9586df930e721f608578329496081c9624a mm/mempolicy.c: fix error handling in set_mempolicy and mbind.
+  CVE-2017-7618: c2798145e731005fa1e6ee2a489940c1dd8f03e4 crypto: ahash - Fix EINPROGRESS notification callback
+  CVE-2017-7889: be63d158bba15c468d474808b60e6ac2417a933b mm: Tighten x86 /dev/mem with zeroing reads
+  CVE-2017-8067: ae98f9de71a35fbc0e7164f76cf45c30716749d6 virtio-console: avoid DMA from stack
+  CVE-2017-8068: 90388dcb8fafea093c373b1509b724df24c2a6e2 pegasus: Use heap buffers for all register access
+  CVE-2017-8069: 86da423abff5709d07960c9d3ff3f1def1dd2fe6 rtl8150: Use heap buffers for all register access
+  CVE-2017-8070: 02197940d0643fea707254f0bab9d63caf42a577 catc: Use heap buffer for memory size test
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -336,7 +351,6 @@ Outstanding CVEs:
   CVE-2016-9794: (unk) ALSA: pcm : Call kill_fasync() in stream lock 
   CVE-2017-2583: (unk) KVM: x86: fix emulation of "MOV SS, null selector" 
   CVE-2017-2584: (unk) KVM: x86: Introduce segmented_write_std 
-  CVE-2017-2596: (unk) kvm: fix page struct leak in handle_vmon 
   CVE-2017-2671: (unk) ping: implement proper locking 
   CVE-2017-5549: (unk) USB: serial: kl5kusb105: fix line-state error handling 
   CVE-2017-5551: (unk) tmpfs: clear S_ISGID when setting posix ACLs 
@@ -346,14 +360,14 @@ Outstanding CVEs:
   CVE-2017-6001: (unk) perf/core: Fix concurrent sys_perf_event_open() vs. 'move_group' race 
   CVE-2017-6346: (unk) packet: fix races in fanout_add() 
   CVE-2017-6348: (unk) irda: Fix lockdep annotations in hashbin_delete(). 
-  CVE-2017-6353: (unk) sctp: deny peeloff operation on asocs with threads sleeping on it 
-  CVE-2017-7187: (unk) scsi: sg: check length passed to SG_NEXT_CMD_LEN 
-  CVE-2017-7261: (unk) drm/vmwgfx: NULL pointer dereference in vmw_surface_define_ioctl() 
   CVE-2017-7273: (unk) HID: hid-cypress: validate length of report 
-  CVE-2017-7294: (unk) drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl() 
-  CVE-2017-7346: (unk) drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl() 
   CVE-2017-7472: (unk) KEYS: fix keyctl_set_reqkey_keyring() to not leak thread keyrings 
-  CVE-2017-7616: (unk) mm/mempolicy.c: fix error handling in set_mempolicy and mbind. 
-  CVE-2017-7618: (unk) crypto: ahash - Fix EINPROGRESS notification callback 
   CVE-2017-7645: (unk)  
-  CVE-2017-7889: (unk) mm: Tighten x86 /dev/mem with zeroing reads 
+  CVE-2017-8061: (unk) [media] dvb-usb-firmware: don't do DMA on stack 
+  CVE-2017-8062: (unk) [media] dw2102: don't do DMA on stack 
+  CVE-2017-8063: (unk) [media] cxusb: Use a dma capable buffer also for reading 
+  CVE-2017-8064: (unk) [media] dvb-usb-v2: avoid use-after-free 
+  CVE-2017-8065: (unk) crypto: ccm - move cbcmac input off the stack 
+  CVE-2017-8066: (unk) can: gs_usb: Don't use stack memory for USB transfers 
+  CVE-2017-8071: (unk) HID: cp2112: fix sleep-while-atomic 
+  CVE-2017-8072: (unk) HID: cp2112: fix gpio-callback error handling 
