@@ -104,6 +104,7 @@ CVEs fixed in 3.12.21:
   CVE-2014-9715: 62c97a8612f753ffa6c5c7bebe140cc0951e539f netfilter: nf_conntrack: reserve two bytes for nf_ct_ext->len
 
 CVEs fixed in 3.12.22:
+  CVE-2014-1739: 2f1831612c94ee7b1819c4a6d21b9d5efac5297c media-device: fix infoleak in ioctl media_enum_entities()
   CVE-2014-3153: 888f1a0f8c36e6982040ec06447a1dcc15686562 futex: Make lookup_pi_state more robust
 
 CVEs fixed in 3.12.23:
@@ -169,6 +170,7 @@ CVEs fixed in 3.12.33:
   CVE-2014-7825: abc07cd01c51fb54088c6bc8ee654d104a5ec7d9 tracing/syscalls: Ignore numbers outside NR_syscalls' range
   CVE-2014-7826: abc07cd01c51fb54088c6bc8ee654d104a5ec7d9 tracing/syscalls: Ignore numbers outside NR_syscalls' range
   CVE-2014-7970: 365446fe1c7bf1b481cedfb9e50cfc8a86fdde89 mnt: Prevent pivot_root from creating a loop in the mount tree
+  CVE-2014-8884: 482c6cb2dfb40838d67b0ba844b4b3d0af0f3d20 ttusb-dec: buffer overflow in ioctl
 
 CVEs fixed in 3.12.34:
   CVE-2014-3673: bbd951a21e0fd555cd9ede44c7196af09d04d171 net: sctp: fix skb_over_panic when receiving malformed ASCONF chunks
@@ -406,7 +408,7 @@ CVEs fixed in 3.12.68:
 
 CVEs fixed in 3.12.69:
   CVE-2016-10200: c20932ae0d412f1aabf3514891cdd6ae6a08ae01 l2tp: fix racy SOCK_ZAPPED flag check in l2tp_ip{,6}_bind()
-  CVE-2016-8650: 18fb7a8fb3d55275fc17f4ff5c7e34dd2b6d74e5 mpi: Fix NULL ptr dereference in mpi_powm() 
+  CVE-2016-8650: 18fb7a8fb3d55275fc17f4ff5c7e34dd2b6d74e5 mpi: Fix NULL ptr dereference in mpi_powm()
   CVE-2016-8655: c80480c4ad5208431a7fb003472bd576bbe6ebb7 packet: fix race condition in packet_set_ring
   CVE-2016-9793: 40c753f1714416931dc093b960aa3fcac4a545c5 net: avoid signed overflows for SO_{SND|RCV}BUFFORCE
   CVE-2016-9794: 3af0be0536e71b0ed55620aca65f9144bf2c1088 ALSA: pcm : Call kill_fasync() in stream lock
@@ -416,6 +418,7 @@ CVEs fixed in 3.12.70:
   CVE-2016-10088: 7eb9e6472cbdd8e2df774ae91531c8959e21dbbc sg_write()/bsg_write() is not fit to be called under KERNEL_DS
   CVE-2016-7097: a88a2be387d1d8a5843826e12009c79e32fb46c8 posix_acl: Clear SGID bit when setting file permissions
   CVE-2016-7911: 075030bd3251283bd380b60eeecc8e4ba8778f22 block: fix use-after-free in sys_ioprio_get()
+  CVE-2016-7913: 74e3d04ca992bedac5080ed1a817fabf71667210 xc2028: avoid use after free
   CVE-2016-9083: e4f13c5f27d6bfb2fea565d346273b0c74023ae6 vfio/pci: Fix integer overflows, bitmask check
   CVE-2016-9084: e4f13c5f27d6bfb2fea565d346273b0c74023ae6 vfio/pci: Fix integer overflows, bitmask check
   CVE-2016-9191: baa7295e1d686a443c0c23156b0bc9058d783aa4 sysctl: Drop reference added by grab_header in proc_sys_readdir
@@ -459,12 +462,10 @@ Outstanding CVEs:
   CVE-2011-4917: (unk)  
   CVE-2012-4542: (unk)  
   CVE-2013-7445: (unk)  
-  CVE-2014-1739: (unk) [media] media-device: fix infoleak in ioctl media_enum_entities() 
   CVE-2014-1874: (unk) SELinux:  Fix kernel BUG on empty security contexts. 
   CVE-2014-4027: (unk) target/rd: Refactor rd_build_device_space + rd_release_device_space 
   CVE-2014-4943: (unk) net/l2tp: don't fall back on UDP [get|set]sockopt 
   CVE-2014-7145: (unk) [CIFS] Possible null ptr deref in SMB2_tcon 
-  CVE-2014-8884: (unk) [media] ttusb-dec: buffer overflow in ioctl 
   CVE-2014-9419: (unk) x86_64, switch_to(): Load TLS descriptors before switching DS and ES 
   CVE-2014-9717: (unk) mnt: Update detach_mounts to leave mounts connected 
   CVE-2014-9888: (unk) ARM: dma-mapping: don't allow DMA mappings to be marked executable 
@@ -502,7 +503,6 @@ Outstanding CVEs:
   CVE-2016-6213: (unk) mnt: Add a per mount namespace limit on the number of mounts 
   CVE-2016-6786: (unk) perf: Fix event->ctx locking 
   CVE-2016-6787: (unk) perf: Fix event->ctx locking 
-  CVE-2016-7913: (unk) [media] xc2028: avoid use after free 
   CVE-2016-7915: (unk) HID: core: prevent out-of-bound readings 
   CVE-2016-7917: (unk) netfilter: nfnetlink: correctly validate length of batch messages 
   CVE-2016-8632: (unk) tipc: check minimum bearer MTU 
@@ -527,4 +527,5 @@ Outstanding CVEs:
   CVE-2017-7645: (unk) nfsd: check for oversized NFSv2/v3 arguments 
   CVE-2017-7889: (unk) mm: Tighten x86 /dev/mem with zeroing reads 
   CVE-2017-7895: (unk) nfsd: stricter decoding of write-like NFSv2/v3 ops 
+  CVE-2017-8064: (unk) [media] dvb-usb-v2: avoid use-after-free 
   CVE-2017-8106: (unk) KVM: nVMX: Don't advertise single context invalidation for invept 

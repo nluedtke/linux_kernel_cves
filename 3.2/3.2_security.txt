@@ -232,6 +232,7 @@ CVEs fixed in 3.2.59:
   CVE-2014-1738: 629cbea2961ec001a85a4ac8821dcd45226dd29c floppy: don't write kernel-only members to FDRAWCMD ioctl output
 
 CVEs fixed in 3.2.60:
+  CVE-2014-1739: 5003eea6cec931203469521351918d4a54c18185 media-device: fix infoleak in ioctl media_enum_entities()
   CVE-2014-2851: a8a695a43272a19b08004a3632da23d03170bd87 net: ipv4: current group_info should be put after using.
   CVE-2014-3144: d41eb74e53d94aba656ffda647d106808e636cd6 filter: prevent nla extensions to peek beyond the end of the message
   CVE-2014-3145: d41eb74e53d94aba656ffda647d106808e636cd6 filter: prevent nla extensions to peek beyond the end of the message
@@ -294,6 +295,7 @@ CVEs fixed in 3.2.66:
   CVE-2014-8133: 106ed96d46fcaf9f2e72555035fa585403cf4dd3 x86/tls: Validate TLS entries to protect espfix
   CVE-2014-8134: 060d11323f35afb752a7ba6c5bead732c204de55 x86, kvm: Clear paravirt_enabled on KVM guests for espfix32's benefit
   CVE-2014-8559: 026181647a6262f4ba6d60c0847d306ad685468c move d_rcu from overlapping d_child to overlapping d_alias
+  CVE-2014-8884: 2f67670174ad4bd1c48e8b97cc107e3232d422ce ttusb-dec: buffer overflow in ioctl
   CVE-2015-7509: 6d9f360c00512f6a6fded2efcfcbe78ec73e5b1b ext4: make orphan functions be no-op in no-journal mode
 
 CVEs fixed in 3.2.67:
@@ -457,6 +459,7 @@ CVEs fixed in 3.2.84:
 CVEs fixed in 3.2.85:
   CVE-2012-6704: 3e21b29fc335c07161b01459a4123721da2e4642 net: cleanups in sock_setsockopt()
   CVE-2014-9888: d05fedab817c43171d355d3aad5a9281ff80a7ba ARM: dma-mapping: don't allow DMA mappings to be marked executable
+  CVE-2014-9895: f43c83348acdbdd8ca1af3c52f6ace629f5b386d media: info leak in __media_device_enum_links()
   CVE-2015-8962: 08f231da62d5a411ac5594409e76606e80107e02 sg: Fix double-free when drives detach during SG_IO
   CVE-2015-8963: d96703774345ffb7513b76058f4879ae14c298be perf: Fix race in swevent hash
   CVE-2015-8964: 72bc3e471e03421dd6e1dd71762b3208af8e02a5 tty: Prevent ldisc drivers from re-using stale tty fields
@@ -520,7 +523,6 @@ Outstanding CVEs:
   CVE-2013-4254: (unk) ARM: 7810/1: perf: Fix array out of bounds access in armpmu_map_hw_event() 
   CVE-2013-7445: (unk)  
   CVE-2014-0181: (unk) net: Use netlink_ns_capable to verify the permisions of netlink messages 
-  CVE-2014-1739: (unk) [media] media-device: fix infoleak in ioctl media_enum_entities() 
   CVE-2014-1874: (unk) SELinux:  Fix kernel BUG on empty security contexts. 
   CVE-2014-4027: (unk) target/rd: Refactor rd_build_device_space + rd_release_device_space 
   CVE-2014-4943: (unk) net/l2tp: don't fall back on UDP [get|set]sockopt 
@@ -528,11 +530,9 @@ Outstanding CVEs:
   CVE-2014-7975: (unk) fs: Add a missing permission check to do_umount 
   CVE-2014-8171: (unk) mm: memcg: do not trap chargers with full callstack on OOM 
   CVE-2014-8172: (unk) get rid of s_files and files_lock 
-  CVE-2014-8884: (unk) [media] ttusb-dec: buffer overflow in ioctl 
   CVE-2014-8989: (unk) userns: Don't allow setgroups until a gid mapping has been setablished 
   CVE-2014-9710: (unk) Btrfs: make xattr replace operations atomic 
   CVE-2014-9717: (unk) mnt: Update detach_mounts to leave mounts connected 
-  CVE-2014-9895: (unk) [media] media: info leak in __media_device_enum_links() 
   CVE-2014-9914: (unk) ipv4: fix a race in ip4_datagram_release_cb() 
   CVE-2014-9940: (unk) regulator: core: Fix regualtor_ena_gpio_free not to access pin after freeing 
   CVE-2015-1805: (unk) new helper: copy_page_from_iter() 

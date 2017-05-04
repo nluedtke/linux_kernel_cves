@@ -54,6 +54,7 @@ CVEs fixed in 3.16.35:
   CVE-2014-8159: c8f7da00f74c25e260a763446cc332196a6a1d13 IB/uverbs: Prevent integer overflow in ib_umem_get address arithmetic
   CVE-2014-8160: 85c981d1b144ddea85cf8827e7afafda024cf684 netfilter: conntrack: disable generic tracking for known protocols
   CVE-2014-8559: f185f12c4a26bf317e070697d3cf9ec17fc11864 move d_rcu from overlapping d_child to overlapping d_alias
+  CVE-2014-8884: 36bb34da20d9e641310f5153239f65b34495b7ae ttusb-dec: buffer overflow in ioctl
   CVE-2014-8989: 88e91dce8d462daaa4bf71b591e3f095ab3b084a userns: Don't allow setgroups until a gid mapping has been setablished
   CVE-2014-9090: 09f581ba6439450b04b1062ad257d0bb447189f9 x86_64, traps: Stop using IST for #SS
   CVE-2014-9322: 09f581ba6439450b04b1062ad257d0bb447189f9 x86_64, traps: Stop using IST for #SS
@@ -177,6 +178,7 @@ CVEs fixed in 3.16.35:
   CVE-2016-4805: 6ab3a4331a1de5a20c3dc97f5211d00f1b35ce50 ppp: take reference on channels netns
   CVE-2016-6327: c8db91d65f8322202d663432f7ac84014a77b2fc IB/srpt: Simplify srpt_handle_tsk_mgmt()
   CVE-2016-7117: fc49d04ae148b205c3817d901ce0f846869effa8 net: Fix use after free in the recvmmsg exit path
+  CVE-2016-7913: e6cb39ac3f31cb5409f4078a0f0f8e7c25e48a98 xc2028: avoid use after free
   CVE-2016-8646: 214fcf7977ef7579530609c24b94164a3b306d13 crypto: algif_hash - Only export and import on sockets with data
   CVE-2016-8666: 23cca87ff225c1c7327a715db1bcc98a241b0efa tunnels: Don't apply GRO to multiple layers of encapsulation.
   CVE-2016-9685: f7a39c8e72338d5d0f24ba38debf2d96c893d24b xfs: fix two memory leaks in xfs_attr_list.c error paths
@@ -253,7 +255,7 @@ CVEs fixed in 3.16.40:
   CVE-2016-8405: 4952d0fe7849840bf3767051eb296e84c0e6ed52 fbdev: color map copying bounds checking
   CVE-2016-8632: cd53924265a9d328af37722c6b682e4ea793d04e tipc: check minimum bearer MTU
   CVE-2016-8645: 3d59e6e25fd0cbe700d3f2910291729227dcfd23 tcp: take care of truncations done by sk_filter()
-  CVE-2016-8650: 0a74b364c4c2ce4bfffdbefd62cced99ad76bec9 mpi: Fix NULL ptr dereference in mpi_powm() 
+  CVE-2016-8650: 0a74b364c4c2ce4bfffdbefd62cced99ad76bec9 mpi: Fix NULL ptr dereference in mpi_powm()
   CVE-2016-8655: 943e7299c0fec28de9df8985953f45633b071690 packet: fix race condition in packet_set_ring
   CVE-2016-9120: ce626e14b2fd8f1f0ff6d17a8503f12d3e991cd3 staging/android/ion : fix a race condition in the ion driver
   CVE-2016-9191: 0b66ea3bca021aea839c526d7643df085c5dadbc sysctl: Drop reference added by grab_header in proc_sys_readdir
@@ -302,7 +304,6 @@ Outstanding CVEs:
   CVE-2012-4542: (unk)  
   CVE-2013-7445: (unk)  
   CVE-2014-7145: (unk) [CIFS] Possible null ptr deref in SMB2_tcon 
-  CVE-2014-8884: (unk) [media] ttusb-dec: buffer overflow in ioctl 
   CVE-2014-9717: (unk) mnt: Update detach_mounts to leave mounts connected 
   CVE-2014-9940: (unk) regulator: core: Fix regualtor_ena_gpio_free not to access pin after freeing 
   CVE-2015-2877: (unk)  
@@ -320,7 +321,6 @@ Outstanding CVEs:
   CVE-2016-3139: (unk) Input: wacom - compute the HID report size to get the actual packet size 
   CVE-2016-6197: (unk) ovl: verify upper dentry before unlink and rename 
   CVE-2016-6198: (unk) vfs: add vfs_select_inode() helper 
-  CVE-2016-7913: (unk) [media] xc2028: avoid use after free 
   CVE-2016-9178: (unk) fix minor infoleak in get_user_ex() 
   CVE-2016-9604: (unk) KEYS: Disallow keyrings beginning with '.' to be joined as session keyrings 
   CVE-2016-9644: (unk) x86/mm: Expand the exception table logic to allow new handling options 
@@ -343,3 +343,4 @@ Outstanding CVEs:
   CVE-2017-7645: (unk) nfsd: check for oversized NFSv2/v3 arguments 
   CVE-2017-7889: (unk) mm: Tighten x86 /dev/mem with zeroing reads 
   CVE-2017-7895: (unk) nfsd: stricter decoding of write-like NFSv2/v3 ops 
+  CVE-2017-8064: (unk) [media] dvb-usb-v2: avoid use-after-free 
