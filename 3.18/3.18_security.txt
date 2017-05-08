@@ -260,6 +260,16 @@ CVEs fixed in 3.18.51:
   CVE-2017-2671: 4e340a02d59c230b99460574c6a8fc87dc1a9a47 ping: implement proper locking
   CVE-2017-7472: 6efda2501976288f10895834ba2782d0df093441 KEYS: fix keyctl_set_reqkey_keyring() to not leak thread keyrings
 
+CVEs fixed in 3.18.52:
+  CVE-2014-9940: 42f268023df2919f484d8b46df34b35323bd3358 regulator: core: Fix regualtor_ena_gpio_free not to access pin after freeing
+  CVE-2015-3288: 47ce8d2e1fcaac31cbe7d84882c8a6b29e201398 mm: avoid setting up anonymous pages into file mapping
+  CVE-2015-9004: 5a7b3b1ec16b6bfa57752d37292988e64fcdd172 perf: Tighten (and fix) the grouping condition
+  CVE-2016-10200: dc57f1e18b8f484d013fd21bc89b7a5b88c3d460 l2tp: fix racy SOCK_ZAPPED flag check in l2tp_ip{,6}_bind()
+  CVE-2016-7097: d8333c045f045385a914013a220cd1ed54c88d48 posix_acl: Clear SGID bit when setting file permissions
+  CVE-2016-9793: 29fc5d17f274ccab37404882875f9045be10f6bd net: avoid signed overflows for SO_{SND|RCV}BUFFORCE
+  CVE-2016-9794: e6ef3b68c00023ebd52721b6ad210c4af3af6d35 ALSA: pcm : Call kill_fasync() in stream lock
+  CVE-2017-7645: a1552b1c52d9c2ed48b21f722c1bd7f0ffbdb398 nfsd: check for oversized NFSv2/v3 arguments
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -272,12 +282,10 @@ Outstanding CVEs:
   CVE-2012-4542: (unk)  
   CVE-2013-7445: (unk)  
   CVE-2014-9717: (unk) mnt: Update detach_mounts to leave mounts connected 
-  CVE-2014-9940: (unk) regulator: core: Fix regualtor_ena_gpio_free not to access pin after freeing 
   CVE-2015-1350: (unk) fs: Avoid premature clearing of capabilities 
   CVE-2015-2041: (unk) net: llc: use correct size for sysctl timeout entries 
   CVE-2015-2042: (unk) net: rds: use correct size for max unacked packets and bytes 
   CVE-2015-2877: (unk)  
-  CVE-2015-3288: (unk) mm: avoid setting up anonymous pages into file mapping 
   CVE-2015-3332: (unk) tcp: Fix crash in TCP Fast Open 
   CVE-2015-3339: (unk) fs: take i_mutex during prepare_binprm for set[ug]id executables 
   CVE-2015-4001: (unk) ozwpan: Use unsigned ints to prevent heap overflow 
@@ -306,11 +314,9 @@ Outstanding CVEs:
   CVE-2015-8964: (unk) tty: Prevent ldisc drivers from re-using stale tty fields 
   CVE-2015-8966: (unk) [PATCH] arm: fix handling of F_OFD_... in oabi_fcntl64() 
   CVE-2015-8967: (unk) arm64: make sys_call_table const 
-  CVE-2015-9004: (unk) perf: Tighten (and fix) the grouping condition 
   CVE-2016-0758: (unk) KEYS: Fix ASN.1 indefinite length object parsing 
   CVE-2016-10044: (unk) aio: mark AIO pseudo-fs noexec 
   CVE-2016-10147: (unk) crypto: mcryptd - Check mcryptd algorithm compatibility 
-  CVE-2016-10200: (unk) l2tp: fix racy SOCK_ZAPPED flag check in l2tp_ip{,6}_bind() 
   CVE-2016-10208: (unk) ext4: validate s_first_meta_bg at mount time 
   CVE-2016-1575: (unk) ovl: setattr: check permissions before copy-up 
   CVE-2016-1576: (unk) ovl: setattr: check permissions before copy-up 
@@ -336,7 +342,6 @@ Outstanding CVEs:
   CVE-2016-6213: (unk) mnt: Add a per mount namespace limit on the number of mounts 
   CVE-2016-6786: (unk) perf: Fix event->ctx locking 
   CVE-2016-6787: (unk) perf: Fix event->ctx locking 
-  CVE-2016-7097: (unk) posix_acl: Clear SGID bit when setting file permissions 
   CVE-2016-7912: (unk) usb: gadget: f_fs: Fix use-after-free 
   CVE-2016-7915: (unk) HID: core: prevent out-of-bound readings 
   CVE-2016-7917: (unk) netfilter: nfnetlink: correctly validate length of batch messages 
@@ -350,8 +355,6 @@ Outstanding CVEs:
   CVE-2016-9588: (unk) kvm: nVMX: Allow L1 to intercept software exceptions (#BP and #OF) 
   CVE-2016-9644: (unk) x86/mm: Expand the exception table logic to allow new handling options 
   CVE-2016-9756: (unk) KVM: x86: drop error recovery in em_jmp_far and em_ret_far 
-  CVE-2016-9793: (unk) net: avoid signed overflows for SO_{SND|RCV}BUFFORCE 
-  CVE-2016-9794: (unk) ALSA: pcm : Call kill_fasync() in stream lock 
   CVE-2017-0605: (unk)  
   CVE-2017-0627: (unk)  
   CVE-2017-0630: (unk)  
@@ -366,5 +369,5 @@ Outstanding CVEs:
   CVE-2017-6346: (unk) packet: fix races in fanout_add() 
   CVE-2017-6348: (unk) irda: Fix lockdep annotations in hashbin_delete(). 
   CVE-2017-7273: (unk) HID: hid-cypress: validate length of report 
-  CVE-2017-7645: (unk) nfsd: check for oversized NFSv2/v3 arguments 
   CVE-2017-7895: (unk) nfsd: stricter decoding of write-like NFSv2/v3 ops 
+  CVE-2017-8831: (unk)  
