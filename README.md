@@ -1,5 +1,8 @@
 # linux_kernel_cves
 This is a simple project to track CVEs in the upstream linux kernel. 
+Individual distro's (RHEL, Debian, Ubuntu, etc) often do a good job of 
+tracking CVEs for their own kernels but this information is lacking for 
+the upstream kernel. This project aims to help out with this void. 
 Currently all output for this is stored in the CVEs.txt file. The output
 was generated automatically through a set of tools that has not been 
 fully tested or made public yet. There are separate files for each LTS 
