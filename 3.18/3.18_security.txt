@@ -273,6 +273,22 @@ CVEs fixed in 3.18.52:
   CVE-2016-9794: e6ef3b68c00023ebd52721b6ad210c4af3af6d35 ALSA: pcm : Call kill_fasync() in stream lock
   CVE-2017-7645: a1552b1c52d9c2ed48b21f722c1bd7f0ffbdb398 nfsd: check for oversized NFSv2/v3 arguments
 
+CVEs fixed in 3.18.54:
+  CVE-2015-8955: e00f6efe21bd34a7dd1cc3520f6155180e3d8125 arm64: perf: reject groups spanning multiple HW PMUs
+  CVE-2015-8962: 6d523f23bb2dadfebcda1636ee2d534259566c6c sg: Fix double-free when drives detach during SG_IO
+  CVE-2015-8963: 6ee649ba055c71907226820070cde13079d3d49d perf: Fix race in swevent hash
+  CVE-2015-8967: c8f417a2d6af99b2735709cb60562e0a7c8ddf62 arm64: make sys_call_table const
+  CVE-2016-0758: 7da78079bae82dbaac4b88e0cb1f875e0dc52775 KEYS: Fix ASN.1 indefinite length object parsing
+  CVE-2016-2053: c66d9b77cbda5e0e71ae0dfabaa94b27ca3f6b63 ASN.1: Fix non-match detection failure on data overrun
+  CVE-2016-2544: 6d4025862a080579362994eeb0095eb78dd801f2 ALSA: seq: Fix race at timer setup and close
+  CVE-2016-2546: 19f609798f7ea6392028091b42dd53b3c7f9368f ALSA: timer: Fix race among timer ioctls
+  CVE-2016-3951: 2ed13588499c3f5f0dc6b6851471178ca5a44576 cdc_ncm: do not call usbnet_link_change from cdc_ncm_bind
+  CVE-2016-4569: bbcf19d306745832e043e02c7b3d4f4fad82d61e ALSA: timer: Fix leak in SNDRV_TIMER_IOCTL_PARAMS
+  CVE-2016-4578: bbb79774fcea8b92df051d1d68fcba18d884f860 ALSA: timer: Fix leak in events via snd_timer_user_ccallback
+  CVE-2016-6786: 33b738f7c5a704b729b2502669cf71c7b25ab7d6 perf: Fix event->ctx locking
+  CVE-2016-6787: 33b738f7c5a704b729b2502669cf71c7b25ab7d6 perf: Fix event->ctx locking
+  CVE-2016-7915: 18377401142c65b0afe0168502fd335697e47936 HID: core: prevent out-of-bound readings
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -311,42 +327,28 @@ Outstanding CVEs:
   CVE-2015-8845: (unk) powerpc/tm: Check for already reclaimed tasks 
   CVE-2015-8952: (unk) ext2: convert to mbcache2 
   CVE-2015-8953: (unk) ovl: fix dentry reference leak 
-  CVE-2015-8955: (unk) arm64: perf: reject groups spanning multiple HW PMUs 
-  CVE-2015-8962: (unk) sg: Fix double-free when drives detach during SG_IO 
-  CVE-2015-8963: (unk) perf: Fix race in swevent hash 
   CVE-2015-8964: (unk) tty: Prevent ldisc drivers from re-using stale tty fields 
   CVE-2015-8966: (unk) [PATCH] arm: fix handling of F_OFD_... in oabi_fcntl64() 
-  CVE-2015-8967: (unk) arm64: make sys_call_table const 
-  CVE-2016-0758: (unk) KEYS: Fix ASN.1 indefinite length object parsing 
   CVE-2016-10044: (unk) aio: mark AIO pseudo-fs noexec 
   CVE-2016-10147: (unk) crypto: mcryptd - Check mcryptd algorithm compatibility 
   CVE-2016-10208: (unk) ext4: validate s_first_meta_bg at mount time 
   CVE-2016-1575: (unk) ovl: setattr: check permissions before copy-up 
   CVE-2016-1576: (unk) ovl: setattr: check permissions before copy-up 
-  CVE-2016-2053: (unk) ASN.1: Fix non-match detection failure on data overrun 
   CVE-2016-2069: (unk) x86/mm: Add barriers and document switch_mm()-vs-flush synchronization 
   CVE-2016-2143: (unk) s390/mm: four page table levels vs. fork 
   CVE-2016-2543: (unk) ALSA: seq: Fix missing NULL check at remove_events ioctl 
-  CVE-2016-2544: (unk) ALSA: seq: Fix race at timer setup and close 
-  CVE-2016-2546: (unk) ALSA: timer: Fix race among timer ioctls 
   CVE-2016-2549: (unk) ALSA: hrtimer: Fix stall by hrtimer_cancel() 
   CVE-2016-3070: (unk) mm: migrate dirty page without clear_page_dirty_for_io etc 
   CVE-2016-3672: (unk) x86/mm/32: Enable full randomization on i386 and X86_32 
   CVE-2016-3857: (unk) arm: oabi compat: add missing access checks 
-  CVE-2016-3951: (unk) cdc_ncm: do not call usbnet_link_change from cdc_ncm_bind 
   CVE-2016-4482: (unk) USB: usbfs: fix potential infoleak in devio 
-  CVE-2016-4569: (unk) ALSA: timer: Fix leak in SNDRV_TIMER_IOCTL_PARAMS 
-  CVE-2016-4578: (unk) ALSA: timer: Fix leak in events via snd_timer_user_ccallback 
   CVE-2016-5243: (unk) tipc: fix an infoleak in tipc_nl_compat_link_dump 
   CVE-2016-5244: (unk) rds: fix an infoleak in rds_inc_info_copy 
   CVE-2016-5728: (unk) misc: mic: Fix for double fetch security bug in VOP driver 
   CVE-2016-6130: (unk) s390/sclp_ctl: fix potential information leak with /dev/sclp 
   CVE-2016-6198: (unk) vfs: add vfs_select_inode() helper 
   CVE-2016-6213: (unk) mnt: Add a per mount namespace limit on the number of mounts 
-  CVE-2016-6786: (unk) perf: Fix event->ctx locking 
-  CVE-2016-6787: (unk) perf: Fix event->ctx locking 
   CVE-2016-7912: (unk) usb: gadget: f_fs: Fix use-after-free 
-  CVE-2016-7915: (unk) HID: core: prevent out-of-bound readings 
   CVE-2016-7917: (unk) netfilter: nfnetlink: correctly validate length of batch messages 
   CVE-2016-8630: (unk) kvm: x86: Check memopp before dereference (CVE-2016-8630) 
   CVE-2016-8632: (unk) tipc: check minimum bearer MTU 
@@ -377,3 +379,9 @@ Outstanding CVEs:
   CVE-2017-8831: (unk)  
   CVE-2017-8890: (unk) dccp/tcp: do not inherit mc_list from parent 
   CVE-2017-9059: (unk) NFSv4: Fix callback server shutdown 
+  CVE-2017-9074: (unk) ipv6: Prevent overrun when parsing v6 header options 
+  CVE-2017-9075: (unk) sctp: do not inherit ipv6_{mc|ac|fl}_list from parent 
+  CVE-2017-9076: (unk) ipv6/dccp: do not inherit ipv6_mc_list from parent 
+  CVE-2017-9077: (unk) ipv6/dccp: do not inherit ipv6_mc_list from parent 
+  CVE-2017-9150: (unk) bpf: don't let ldimm64 leak map addresses on unprivileged 
+  CVE-2017-9211: (unk) crypto: skcipher - Add missing API setkey checks 
