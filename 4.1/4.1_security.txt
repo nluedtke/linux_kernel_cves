@@ -198,6 +198,22 @@ CVEs fixed in 4.1.39:
   CVE-2017-5549: 301242e3780413bffc7bbbd70cafb4ecee135080 USB: serial: kl5kusb105: fix line-state error handling
   CVE-2017-7273: e0fb4ae61143bb6b218aa8bab1730bb156c4d457 HID: hid-cypress: validate length of report
 
+CVEs fixed in 4.1.40:
+  CVE-2016-10229: 5c564705d3f0436ddc70d833b975b870ba560528 udp: properly support MSG_PEEK with truncated buffers
+  CVE-2016-2188: c4b51661231242b5b24431a31299c433934cad2e USB: iowarrior: fix NULL-deref at probe
+  CVE-2016-9604: 4ef48e49b1c550a511acb78d7b9e0b52bb43aba6 KEYS: Disallow keyrings beginning with '.' to be joined as session keyrings
+  CVE-2017-5669: c9cf983337a046e93f33c66c2707a704ec6440ac ipc/shm: Fix shmat mmap nil-page protection
+  CVE-2017-7187: 861b5c18bb146f3845dc52f64e7bc997d6cf8db3 scsi: sg: check length passed to SG_NEXT_CMD_LEN
+  CVE-2017-7261: 13b52a46a6778fe23e64a20499230738ed3d445b drm/vmwgfx: NULL pointer dereference in vmw_surface_define_ioctl()
+  CVE-2017-7294: d91a91d8f6ba1c98e0822e40b7e4a266d9567813 drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl()
+  CVE-2017-7346: d91a91d8f6ba1c98e0822e40b7e4a266d9567813 drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl()
+  CVE-2017-7472: a0f82864854a4511cd19f06436f0cf140fae2427 KEYS: fix keyctl_set_reqkey_keyring() to not leak thread keyrings
+  CVE-2017-7618: ce0e21e44f9766aeef6a8c18a750ef9d94c1ca8c crypto: ahash - Fix EINPROGRESS notification callback
+  CVE-2017-7645: c9bb9f02b0484703ca5d0da15a11f891954e1c31 nfsd: check for oversized NFSv2/v3 arguments
+  CVE-2017-7895: 5afff19d82af4e4ed66ce0320cd2f17053b78b25 nfsd: stricter decoding of write-like NFSv2/v3 ops
+  CVE-2017-8924: e0f57e1a406c091646d7f474572975aab4c6d1de USB: serial: io_ti: fix information leak in completion handler
+  CVE-2017-8925: 5dfb04937689e5f797506ee73f028f919cc9278d USB: serial: omninet: fix reference leaks at open
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -228,10 +244,8 @@ Outstanding CVEs:
   CVE-2016-10147: (unk) crypto: mcryptd - Check mcryptd algorithm compatibility 
   CVE-2016-10200: (unk) l2tp: fix racy SOCK_ZAPPED flag check in l2tp_ip{,6}_bind() 
   CVE-2016-10208: (unk) ext4: validate s_first_meta_bg at mount time 
-  CVE-2016-10229: (unk) udp: properly support MSG_PEEK with truncated buffers 
   CVE-2016-10318: (unk) fscrypto: add authorization check for setting encryption policy 
   CVE-2016-2053: (unk) ASN.1: Fix non-match detection failure on data overrun 
-  CVE-2016-2188: (unk) USB: iowarrior: fix NULL-deref at probe 
   CVE-2016-3070: (unk) mm: migrate dirty page without clear_page_dirty_for_io etc 
   CVE-2016-3672: (unk) x86/mm/32: Enable full randomization on i386 and X86_32 
   CVE-2016-3857: (unk) arm: oabi compat: add missing access checks 
@@ -254,7 +268,6 @@ Outstanding CVEs:
   CVE-2016-9084: (unk) vfio/pci: Fix integer overflows, bitmask check 
   CVE-2016-9120: (unk) staging/android/ion : fix a race condition in the ion driver 
   CVE-2016-9555: (unk) sctp: validate chunk len before actually using it 
-  CVE-2016-9604: (unk) KEYS: Disallow keyrings beginning with '.' to be joined as session keyrings 
   CVE-2016-9756: (unk) KVM: x86: drop error recovery in em_jmp_far and em_ret_far 
   CVE-2016-9793: (unk) net: avoid signed overflows for SO_{SND|RCV}BUFFORCE 
   CVE-2016-9794: (unk) ALSA: pcm : Call kill_fasync() in stream lock 
@@ -268,7 +281,6 @@ Outstanding CVEs:
   CVE-2017-2636: (unk) tty: n_hdlc: get rid of racy n_hdlc.tbuf 
   CVE-2017-2671: (unk) ping: implement proper locking 
   CVE-2017-5551: (unk) tmpfs: clear S_ISGID when setting posix ACLs 
-  CVE-2017-5669: (unk) ipc/shm: Fix shmat mmap nil-page protection 
   CVE-2017-5897: (unk) ip6_gre: fix ip6gre_err() invalid reads 
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
   CVE-2017-5970: (unk) ipv4: keep skb->dst around in presence of IP options 
@@ -283,25 +295,16 @@ Outstanding CVEs:
   CVE-2017-6348: (unk) irda: Fix lockdep annotations in hashbin_delete(). 
   CVE-2017-6353: (unk) sctp: deny peeloff operation on asocs with threads sleeping on it 
   CVE-2017-7184: (unk) xfrm_user: validate XFRM_MSG_NEWAE XFRMA_REPLAY_ESN_VAL replay_window 
-  CVE-2017-7187: (unk) scsi: sg: check length passed to SG_NEXT_CMD_LEN 
-  CVE-2017-7261: (unk) drm/vmwgfx: NULL pointer dereference in vmw_surface_define_ioctl() 
-  CVE-2017-7294: (unk) drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl() 
   CVE-2017-7308: (unk) net/packet: fix overflow in check for priv area size 
-  CVE-2017-7346: (unk) drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl() 
-  CVE-2017-7472: (unk) KEYS: fix keyctl_set_reqkey_keyring() to not leak thread keyrings 
   CVE-2017-7487: (unk) ipx: call ipxitf_put() in ioctl error path 
   CVE-2017-7616: (unk) mm/mempolicy.c: fix error handling in set_mempolicy and mbind. 
-  CVE-2017-7618: (unk) crypto: ahash - Fix EINPROGRESS notification callback 
-  CVE-2017-7645: (unk) nfsd: check for oversized NFSv2/v3 arguments 
   CVE-2017-7889: (unk) mm: Tighten x86 /dev/mem with zeroing reads 
-  CVE-2017-7895: (unk) nfsd: stricter decoding of write-like NFSv2/v3 ops 
   CVE-2017-8064: (unk) [media] dvb-usb-v2: avoid use-after-free 
   CVE-2017-8831: (unk)  
   CVE-2017-8890: (unk) dccp/tcp: do not inherit mc_list from parent 
-  CVE-2017-8924: (unk) USB: serial: io_ti: fix information leak in completion handler 
-  CVE-2017-8925: (unk) USB: serial: omninet: fix reference leaks at open 
   CVE-2017-9059: (unk) NFSv4: Fix callback server shutdown 
   CVE-2017-9074: (unk) ipv6: Prevent overrun when parsing v6 header options 
   CVE-2017-9075: (unk) sctp: do not inherit ipv6_{mc|ac|fl}_list from parent 
   CVE-2017-9076: (unk) ipv6/dccp: do not inherit ipv6_mc_list from parent 
   CVE-2017-9077: (unk) ipv6/dccp: do not inherit ipv6_mc_list from parent 
+  CVE-2017-9242: (unk) ipv6: fix out of bound writes in __ip6_append_data() 
