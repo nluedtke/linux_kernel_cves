@@ -293,6 +293,32 @@ CVEs fixed in 3.16.42:
 CVEs fixed in 3.16.43:
   CVE-2016-10044: 880366a6e2ef182c37b7c7317dc6d449f625b97d aio: mark AIO pseudo-fs noexec
 
+CVEs fixed in 3.16.44:
+  CVE-2016-2188: d2d603cf8fd51f0da5e4bc809d17824faa7630f7 USB: iowarrior: fix NULL-deref at probe
+  CVE-2016-9604: 41bd08bfce7c33e0d383e7678e6d6c7e8e041524 KEYS: Disallow keyrings beginning with '.' to be joined as session keyrings
+  CVE-2017-0605: a1141b19b23a0605d46f3fab63fd2d76207096c4 tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline()
+  CVE-2017-2671: c3f18d2a809b563ef078130ab3758899625e4cfb ping: implement proper locking
+  CVE-2017-7184: 811f5600db1a0a9c4f1abad5017e09f43d7088f3 xfrm_user: validate XFRM_MSG_NEWAE XFRMA_REPLAY_ESN_VAL replay_window
+  CVE-2017-7261: 61cabe967321767052498032178d56a1ea03a7bc drm/vmwgfx: NULL pointer dereference in vmw_surface_define_ioctl()
+  CVE-2017-7294: 629655f798b92fd309fdde494a3cfb8a37f807ad drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl()
+  CVE-2017-7308: a481ab4edd87bc2dc6f1fa9029866dd69c86fc5c net/packet: fix overflow in check for priv area size
+  CVE-2017-7346: 629655f798b92fd309fdde494a3cfb8a37f807ad drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl()
+  CVE-2017-7472: f7ce1014bc5e4bb42d6b9f5afb308f59534067ea KEYS: fix keyctl_set_reqkey_keyring() to not leak thread keyrings
+  CVE-2017-7487: c64988b55a19fc5c85f85c433976d6e5210f54dc ipx: call ipxitf_put() in ioctl error path
+  CVE-2017-7616: 4474624a1a496e4dc93a2cd49ea915d9c90d80e9 mm/mempolicy.c: fix error handling in set_mempolicy and mbind.
+  CVE-2017-7618: 13af702256f8b7d9bb51b86c982fe08e96c589c8 crypto: ahash - Fix EINPROGRESS notification callback
+  CVE-2017-7645: 1d4ab03084d4bace93b1573c57a309e954d05c09 nfsd: check for oversized NFSv2/v3 arguments
+  CVE-2017-7895: bb0ea8af0b69259f5ea1d2fcff52948c98129c5e nfsd: stricter decoding of write-like NFSv2/v3 ops
+  CVE-2017-8064: 522182342410708c54eb2b33ff36e85f0b045a6d dvb-usb-v2: avoid use-after-free
+  CVE-2017-8890: e4d8daa3b0d195c8aead116dd70aad8124be60c3 dccp/tcp: do not inherit mc_list from parent
+  CVE-2017-8924: f7287278eea268132ab71b30a0425ccf3a13a323 USB: serial: io_ti: fix information leak in completion handler
+  CVE-2017-8925: e766215595e90b7a307cc7c7054ff43e96340731 USB: serial: omninet: fix reference leaks at open
+  CVE-2017-9074: 3bff722de601acaf593a1ade13fbbee54b688e9b ipv6: Prevent overrun when parsing v6 header options
+  CVE-2017-9075: 60e7579f4b71e2e8b252d2f1b3ef5ffb3b971a4e sctp: do not inherit ipv6_{mc|ac|fl}_list from parent
+  CVE-2017-9076: 53d48f98b800059504da76d12bf0074581aa0fe2 ipv6/dccp: do not inherit ipv6_mc_list from parent
+  CVE-2017-9077: 53d48f98b800059504da76d12bf0074581aa0fe2 ipv6/dccp: do not inherit ipv6_mc_list from parent
+  CVE-2017-9242: 55c51263ff43e3bf5deb1425f4221696f94db1be ipv6: fix out of bound writes in __ip6_append_data()
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -318,42 +344,18 @@ Outstanding CVEs:
   CVE-2015-8966: (unk) [PATCH] arm: fix handling of F_OFD_... in oabi_fcntl64() 
   CVE-2015-8967: (unk) arm64: make sys_call_table const 
   CVE-2016-10147: (unk) crypto: mcryptd - Check mcryptd algorithm compatibility 
-  CVE-2016-2188: (unk) USB: iowarrior: fix NULL-deref at probe 
   CVE-2016-3139: (unk) Input: wacom - compute the HID report size to get the actual packet size 
   CVE-2016-6197: (unk) ovl: verify upper dentry before unlink and rename 
   CVE-2016-6198: (unk) vfs: add vfs_select_inode() helper 
   CVE-2016-9178: (unk) fix minor infoleak in get_user_ex() 
-  CVE-2016-9604: (unk) KEYS: Disallow keyrings beginning with '.' to be joined as session keyrings 
   CVE-2016-9644: (unk) x86/mm: Expand the exception table logic to allow new handling options 
-  CVE-2017-0605: (unk) tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline() 
   CVE-2017-0627: (unk)  
   CVE-2017-0630: (unk)  
   CVE-2017-1000363: (unk) char: lp: fix possible integer overflow in lp_setup() 
   CVE-2017-2647: (unk) KEYS: Remove key_type::match in favour of overriding default by match_preparse 
-  CVE-2017-2671: (unk) ping: implement proper locking 
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
   CVE-2017-5972: (unk) tcp: do not lock listener to process SYN packets 
   CVE-2017-6951: (unk) KEYS: Remove key_type::match in favour of overriding default by match_preparse 
-  CVE-2017-7184: (unk) xfrm_user: validate XFRM_MSG_NEWAE XFRMA_REPLAY_ESN_VAL replay_window 
-  CVE-2017-7261: (unk) drm/vmwgfx: NULL pointer dereference in vmw_surface_define_ioctl() 
-  CVE-2017-7294: (unk) drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl() 
-  CVE-2017-7308: (unk) net/packet: fix overflow in check for priv area size 
-  CVE-2017-7346: (unk) drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl() 
-  CVE-2017-7472: (unk) KEYS: fix keyctl_set_reqkey_keyring() to not leak thread keyrings 
-  CVE-2017-7487: (unk) ipx: call ipxitf_put() in ioctl error path 
-  CVE-2017-7616: (unk) mm/mempolicy.c: fix error handling in set_mempolicy and mbind. 
-  CVE-2017-7618: (unk) crypto: ahash - Fix EINPROGRESS notification callback 
-  CVE-2017-7645: (unk) nfsd: check for oversized NFSv2/v3 arguments 
   CVE-2017-7889: (unk) mm: Tighten x86 /dev/mem with zeroing reads 
-  CVE-2017-7895: (unk) nfsd: stricter decoding of write-like NFSv2/v3 ops 
-  CVE-2017-8064: (unk) [media] dvb-usb-v2: avoid use-after-free 
   CVE-2017-8831: (unk)  
-  CVE-2017-8890: (unk) dccp/tcp: do not inherit mc_list from parent 
-  CVE-2017-8924: (unk) USB: serial: io_ti: fix information leak in completion handler 
-  CVE-2017-8925: (unk) USB: serial: omninet: fix reference leaks at open 
   CVE-2017-9059: (unk) NFSv4: Fix callback server shutdown 
-  CVE-2017-9074: (unk) ipv6: Prevent overrun when parsing v6 header options 
-  CVE-2017-9075: (unk) sctp: do not inherit ipv6_{mc|ac|fl}_list from parent 
-  CVE-2017-9076: (unk) ipv6/dccp: do not inherit ipv6_mc_list from parent 
-  CVE-2017-9077: (unk) ipv6/dccp: do not inherit ipv6_mc_list from parent 
-  CVE-2017-9242: (unk) ipv6: fix out of bound writes in __ip6_append_data() 

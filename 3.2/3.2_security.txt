@@ -495,6 +495,30 @@ CVEs fixed in 3.2.88:
   CVE-2016-10200: 2147a17048314f069838aace1d08b8c719448b50 l2tp: fix racy SOCK_ZAPPED flag check in l2tp_ip{,6}_bind()
   CVE-2017-5970: 6892986c7db05c281322f1f8870f5a46d4080e99 ipv4: keep skb->dst around in presence of IP options
 
+CVEs fixed in 3.2.89:
+  CVE-2016-2188: 6598f3d653a85dccfb4a472504ec6fd12cec8e42 USB: iowarrior: fix NULL-deref at probe
+  CVE-2016-9604: 7488aaea277dc17eb12bda22c91332c804c62965 KEYS: Disallow keyrings beginning with '.' to be joined as session keyrings
+  CVE-2017-0605: e39e64193a8a611d11d4c62579a7246c1af70d1c tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline()
+  CVE-2017-2671: 352651a0a07649e4ee03e294da069b5c3e42aae4 ping: implement proper locking
+  CVE-2017-7184: 04dba730e9d4798184b4769f74ef14c20f8c6f9a xfrm_user: validate XFRM_MSG_NEWAE XFRMA_REPLAY_ESN_VAL replay_window
+  CVE-2017-7261: 20996e6d81c907b10a5ab57c4172be97cb1a7de1 drm/vmwgfx: NULL pointer dereference in vmw_surface_define_ioctl()
+  CVE-2017-7294: c2e7959f2ea446a417bf2cdb79792575852d17bb drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl()
+  CVE-2017-7308: 091a6de006536c50f8a30db60d994a5b083b1c7b net/packet: fix overflow in check for priv area size
+  CVE-2017-7472: 0ebd7208190d2f7b16fee3cea05665e212cebaab KEYS: fix keyctl_set_reqkey_keyring() to not leak thread keyrings
+  CVE-2017-7487: 48dc185bcc73e1bb42d007cbaf96ad55cefaf4cb ipx: call ipxitf_put() in ioctl error path
+  CVE-2017-7616: 3f3b4a9db31af279e793229177b63ea201e24629 mm/mempolicy.c: fix error handling in set_mempolicy and mbind.
+  CVE-2017-7618: 82ef3e7b16e777db114a0c3699b91134417fe8c9 crypto: ahash - Fix EINPROGRESS notification callback
+  CVE-2017-7645: 1eb3e42d91d63fc757a8da38683f417bcdf953a2 nfsd: check for oversized NFSv2/v3 arguments
+  CVE-2017-7895: 6b9ba0c00cb068a50a409bbdc7cfbe473f1c01a3 nfsd: stricter decoding of write-like NFSv2/v3 ops
+  CVE-2017-8890: 3d221359fedfc759661fb4a72804b6e798886e8f dccp/tcp: do not inherit mc_list from parent
+  CVE-2017-8924: 6d0c587048c85ca94723fc1bd900130cbe875eb3 USB: serial: io_ti: fix information leak in completion handler
+  CVE-2017-8925: 8b236342396140be22ab9b486c412666f161af78 USB: serial: omninet: fix reference leaks at open
+  CVE-2017-9074: ad8a4d9d3f255a783d534a47d4b4ac611bb291d8 ipv6: Prevent overrun when parsing v6 header options
+  CVE-2017-9075: cc1fa7814bdb7ebee2ee79bbce181c0783de9ad5 sctp: do not inherit ipv6_{mc|ac|fl}_list from parent
+  CVE-2017-9076: 0767192a2c4ac9145a7e8fb00370963bc145a920 ipv6/dccp: do not inherit ipv6_mc_list from parent
+  CVE-2017-9077: 0767192a2c4ac9145a7e8fb00370963bc145a920 ipv6/dccp: do not inherit ipv6_mc_list from parent
+  CVE-2017-9242: e5238fca9694d61861096d5fb80685c9f6581555 ipv6: fix out of bound writes in __ip6_append_data()
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -551,7 +575,6 @@ Outstanding CVEs:
   CVE-2015-9004: (unk) perf: Tighten (and fix) the grouping condition 
   CVE-2016-10044: (unk) aio: mark AIO pseudo-fs noexec 
   CVE-2016-10147: (unk) crypto: mcryptd - Check mcryptd algorithm compatibility 
-  CVE-2016-2188: (unk) USB: iowarrior: fix NULL-deref at probe 
   CVE-2016-3070: (unk) mm: migrate dirty page without clear_page_dirty_for_io etc 
   CVE-2016-3139: (unk) Input: wacom - compute the HID report size to get the actual packet size 
   CVE-2016-4997: (unk) netfilter: x_tables: check for bogus target offset 
@@ -563,37 +586,16 @@ Outstanding CVEs:
   CVE-2016-7917: (unk) netfilter: nfnetlink: correctly validate length of batch messages 
   CVE-2016-9120: (unk) staging/android/ion : fix a race condition in the ion driver 
   CVE-2016-9178: (unk) fix minor infoleak in get_user_ex() 
-  CVE-2016-9604: (unk) KEYS: Disallow keyrings beginning with '.' to be joined as session keyrings 
   CVE-2016-9644: (unk) x86/mm: Expand the exception table logic to allow new handling options 
   CVE-2016-9754: (unk) ring-buffer: Prevent overflow of size in ring_buffer_resize() 
-  CVE-2017-0605: (unk) tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline() 
   CVE-2017-0627: (unk)  
   CVE-2017-0630: (unk)  
   CVE-2017-1000363: (unk) char: lp: fix possible integer overflow in lp_setup() 
   CVE-2017-2647: (unk) KEYS: Remove key_type::match in favour of overriding default by match_preparse 
-  CVE-2017-2671: (unk) ping: implement proper locking 
   CVE-2017-5551: (unk) tmpfs: clear S_ISGID when setting posix ACLs 
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
   CVE-2017-5972: (unk) tcp: do not lock listener to process SYN packets 
   CVE-2017-6951: (unk) KEYS: Remove key_type::match in favour of overriding default by match_preparse 
-  CVE-2017-7184: (unk) xfrm_user: validate XFRM_MSG_NEWAE XFRMA_REPLAY_ESN_VAL replay_window 
-  CVE-2017-7261: (unk) drm/vmwgfx: NULL pointer dereference in vmw_surface_define_ioctl() 
-  CVE-2017-7294: (unk) drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl() 
-  CVE-2017-7308: (unk) net/packet: fix overflow in check for priv area size 
-  CVE-2017-7472: (unk) KEYS: fix keyctl_set_reqkey_keyring() to not leak thread keyrings 
-  CVE-2017-7487: (unk) ipx: call ipxitf_put() in ioctl error path 
-  CVE-2017-7616: (unk) mm/mempolicy.c: fix error handling in set_mempolicy and mbind. 
-  CVE-2017-7618: (unk) crypto: ahash - Fix EINPROGRESS notification callback 
-  CVE-2017-7645: (unk) nfsd: check for oversized NFSv2/v3 arguments 
   CVE-2017-7889: (unk) mm: Tighten x86 /dev/mem with zeroing reads 
-  CVE-2017-7895: (unk) nfsd: stricter decoding of write-like NFSv2/v3 ops 
   CVE-2017-8831: (unk)  
-  CVE-2017-8890: (unk) dccp/tcp: do not inherit mc_list from parent 
-  CVE-2017-8924: (unk) USB: serial: io_ti: fix information leak in completion handler 
-  CVE-2017-8925: (unk) USB: serial: omninet: fix reference leaks at open 
   CVE-2017-9059: (unk) NFSv4: Fix callback server shutdown 
-  CVE-2017-9074: (unk) ipv6: Prevent overrun when parsing v6 header options 
-  CVE-2017-9075: (unk) sctp: do not inherit ipv6_{mc|ac|fl}_list from parent 
-  CVE-2017-9076: (unk) ipv6/dccp: do not inherit ipv6_mc_list from parent 
-  CVE-2017-9077: (unk) ipv6/dccp: do not inherit ipv6_mc_list from parent 
-  CVE-2017-9242: (unk) ipv6: fix out of bound writes in __ip6_append_data() 
