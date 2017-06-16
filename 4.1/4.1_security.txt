@@ -213,6 +213,21 @@ CVEs fixed in 4.1.40:
   CVE-2017-8924: e0f57e1a406c091646d7f474572975aab4c6d1de USB: serial: io_ti: fix information leak in completion handler
   CVE-2017-8925: 5dfb04937689e5f797506ee73f028f919cc9278d USB: serial: omninet: fix reference leaks at open
 
+CVEs fixed in 4.1.41:
+  CVE-2016-7913: e21b00fe6cc7de57072cb89c87e43f33af866476 xc2028: avoid use after free
+  CVE-2016-9083: 073e9973d48b1a7fa6d610fde377f3d7f4171ad6 vfio/pci: Fix integer overflows, bitmask check
+  CVE-2016-9084: 073e9973d48b1a7fa6d610fde377f3d7f4171ad6 vfio/pci: Fix integer overflows, bitmask check
+  CVE-2016-9120: 9c90c093b98f210d9611fac2c1f9e4f28254a55c staging/android/ion : fix a race condition in the ion driver
+  CVE-2017-1000363: d0e929a4e63f5b4a95a7daaf68d3738d1ec06d8c char: lp: fix possible integer overflow in lp_setup()
+  CVE-2017-2596: 68e9c254f662e4c2763e672b026a513d91f3a1c4 kvm: fix page struct leak in handle_vmon
+  CVE-2017-2671: 5f1cef9e823aa35c881745446ea3c865da338e4e ping: implement proper locking
+  CVE-2017-6074: 98442999b9671784e659b205be8b5b6be8e81629 dccp: fix freeing skb too early for IPV6_RECVPKTINFO
+  CVE-2017-7308: dd07486ceba48b5d2157b212bb9bd5ce9a46b593 net/packet: fix overflow in check for priv area size
+  CVE-2017-7487: e8701e0f6768291622b01a3083c3a7e6761f6c51 ipx: call ipxitf_put() in ioctl error path
+  CVE-2017-7616: aa612d59c08f52a1ee508a12d95deb012e2163d2 mm/mempolicy.c: fix error handling in set_mempolicy and mbind.
+  CVE-2017-7889: eb618d2eb22bb0e1843fb17431fdd18253918cb8 mm: Tighten x86 /dev/mem with zeroing reads
+  CVE-2017-8064: 4473dc376c48ea0be28a087922b97c90333f22ce dvb-usb-v2: avoid use-after-free
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -255,7 +270,6 @@ Outstanding CVEs:
   CVE-2016-5728: (unk) misc: mic: Fix for double fetch security bug in VOP driver 
   CVE-2016-6130: (unk) s390/sclp_ctl: fix potential information leak with /dev/sclp 
   CVE-2016-6198: (unk) vfs: add vfs_select_inode() helper 
-  CVE-2016-7913: (unk) [media] xc2028: avoid use after free 
   CVE-2016-7915: (unk) HID: core: prevent out-of-bound readings 
   CVE-2016-7917: (unk) netfilter: nfnetlink: correctly validate length of batch messages 
   CVE-2016-8630: (unk) kvm: x86: Check memopp before dereference (CVE-2016-8630) 
@@ -263,9 +277,6 @@ Outstanding CVEs:
   CVE-2016-8646: (unk) crypto: algif_hash - Only export and import on sockets with data 
   CVE-2016-8650: (unk) mpi: Fix NULL ptr dereference in mpi_powm()  
   CVE-2016-8658: (unk) brcmfmac: avoid potential stack overflow in brcmf_cfg80211_start_ap() 
-  CVE-2016-9083: (unk) vfio/pci: Fix integer overflows, bitmask check 
-  CVE-2016-9084: (unk) vfio/pci: Fix integer overflows, bitmask check 
-  CVE-2016-9120: (unk) staging/android/ion : fix a race condition in the ion driver 
   CVE-2016-9555: (unk) sctp: validate chunk len before actually using it 
   CVE-2016-9756: (unk) KVM: x86: drop error recovery in em_jmp_far and em_ret_far 
   CVE-2016-9793: (unk) net: avoid signed overflows for SO_{SND|RCV}BUFFORCE 
@@ -273,13 +284,10 @@ Outstanding CVEs:
   CVE-2017-0605: (unk) tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline() 
   CVE-2017-0627: (unk)  
   CVE-2017-0630: (unk)  
-  CVE-2017-1000363: (unk) char: lp: fix possible integer overflow in lp_setup() 
   CVE-2017-1000380: (unk) ALSA: timer: Fix race between read and ioctl 
   CVE-2017-2583: (unk) KVM: x86: fix emulation of "MOV SS, null selector" 
   CVE-2017-2584: (unk) KVM: x86: Introduce segmented_write_std 
-  CVE-2017-2596: (unk) kvm: fix page struct leak in handle_vmon 
   CVE-2017-2636: (unk) tty: n_hdlc: get rid of racy n_hdlc.tbuf 
-  CVE-2017-2671: (unk) ping: implement proper locking 
   CVE-2017-5551: (unk) tmpfs: clear S_ISGID when setting posix ACLs 
   CVE-2017-5897: (unk) ip6_gre: fix ip6gre_err() invalid reads 
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
@@ -287,7 +295,6 @@ Outstanding CVEs:
   CVE-2017-5972: (unk) tcp: do not lock listener to process SYN packets 
   CVE-2017-5986: (unk) sctp: avoid BUG_ON on sctp_wait_for_sndbuf 
   CVE-2017-6001: (unk) perf/core: Fix concurrent sys_perf_event_open() vs. 'move_group' race 
-  CVE-2017-6074: (unk) dccp: fix freeing skb too early for IPV6_RECVPKTINFO 
   CVE-2017-6214: (unk) tcp: avoid infinite loop in tcp_splice_read() 
   CVE-2017-6345: (unk) net/llc: avoid BUG_ON() in skb_orphan() 
   CVE-2017-6346: (unk) packet: fix races in fanout_add() 
@@ -295,12 +302,7 @@ Outstanding CVEs:
   CVE-2017-6348: (unk) irda: Fix lockdep annotations in hashbin_delete(). 
   CVE-2017-6353: (unk) sctp: deny peeloff operation on asocs with threads sleeping on it 
   CVE-2017-7184: (unk) xfrm_user: validate XFRM_MSG_NEWAE XFRMA_REPLAY_ESN_VAL replay_window 
-  CVE-2017-7308: (unk) net/packet: fix overflow in check for priv area size 
   CVE-2017-7346: (unk) drm/vmwgfx: limit the number of mip levels in vmw_gb_surface_define_ioctl() 
-  CVE-2017-7487: (unk) ipx: call ipxitf_put() in ioctl error path 
-  CVE-2017-7616: (unk) mm/mempolicy.c: fix error handling in set_mempolicy and mbind. 
-  CVE-2017-7889: (unk) mm: Tighten x86 /dev/mem with zeroing reads 
-  CVE-2017-8064: (unk) [media] dvb-usb-v2: avoid use-after-free 
   CVE-2017-8831: (unk)  
   CVE-2017-8890: (unk) dccp/tcp: do not inherit mc_list from parent 
   CVE-2017-9074: (unk) ipv6: Prevent overrun when parsing v6 header options 
