@@ -132,6 +132,7 @@ CVEs fixed in 4.9.31:
 
 CVEs fixed in 4.9.32:
   CVE-2017-1000380: 66e982d8f1a1f5e151377fe37612e9151e552dc9 ALSA: timer: Fix race between read and ioctl
+  CVE-2017-15274: 1b253e023f8f75b109564a61d2050d818f75b4f3 KEYS: fix dereferencing NULL payload with nonzero length
   CVE-2017-7346: a76ff847013a7f6b1cd328381ca263ddcca12061 drm/vmwgfx: limit the number of mip levels in vmw_gb_surface_define_ioctl()
   CVE-2017-9605: 7860d0e5e2bf986d4bd06e7b029786747b5dc766 drm/vmwgfx: Make sure backup_handle is always valid
 
@@ -199,8 +200,14 @@ CVEs fixed in 4.9.53:
   CVE-2017-1000252: 3d4213fac7d10e72859112c9100d8015ce442a3a KVM: VMX: Do not BUG() on out-of-bounds guest IRQ
   CVE-2017-12153: c820441a7a52e3626aede8df94069a50a9e4efdb nl80211: check for the required netlink attributes presence
   CVE-2017-12154: 86ef97b2dfd504fbc65f6b244a422db0c1b15797 kvm: nVMX: Don't allow L2 to access the hardware CR8
+  CVE-2017-12192: dda70d28c0ac191f128bfd3acfd800667ed86bdf KEYS: prevent KEYCTL_READ on negative key
   CVE-2017-14156: 64afde6f956dfcb719e329a9d2098b53e68d2755 video: fbdev: aty: do not leak uninitialized padding in clk to userspace
   CVE-2017-14489: b42bf0f15cf70926f3a460e7517703fda6191ba7 scsi: scsi_transport_iscsi: fix the issue that iscsi_if_rx doesn't parse nlmsg properly
+
+CVEs fixed in 4.9.55:
+  CVE-2017-0786: 4d3132d97aa753104ee35722352a895750a0fca5 brcmfmac: add length check in brcmf_cfg80211_escan_handler()
+  CVE-2017-1000255: afebf5ef60da6d15e75398e41ea2817c7a2bb283 powerpc/64s: Use emergency stack for kernel TM Bad Thing program checks
+  CVE-2017-7518: 922e562b2613ae713d661c4fc0f92662f4fe6c41 KVM: x86: fix singlestepping over syscall
 
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
@@ -216,14 +223,12 @@ Outstanding CVEs:
   CVE-2015-2877: (unk)  
   CVE-2015-8553: (unk)  
   CVE-2016-8660: (unk)  
-  CVE-2017-0786: (unk) brcmfmac: add length check in brcmf_cfg80211_escan_handler() 
-  CVE-2017-1000255: (unk) powerpc/64s: Use emergency stack for kernel TM Bad Thing program checks 
   CVE-2017-11472: (unk) ACPICA: Namespace: fix operand cache leak 
   CVE-2017-12188: (unk)  
   CVE-2017-12190: (unk)  
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
   CVE-2017-13695: (unk)  
+  CVE-2017-15265: (unk)  
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
-  CVE-2017-7518: (unk) KVM: x86: fix singlestepping over syscall 
   CVE-2017-9986: (unk)  

@@ -308,6 +308,7 @@ CVEs fixed in 3.18.56:
 
 CVEs fixed in 3.18.57:
   CVE-2017-1000380: d96c363ff004fbb42f728b3e4299a71c4e567568 ALSA: timer: Fix race between read and ioctl
+  CVE-2017-15274: 8206e0a25785c58e88a444fed1d4646da60b14a4 KEYS: fix dereferencing NULL payload with nonzero length
   CVE-2017-7346: e3648dc366b1469972f02e023e38bf70f143dc0a drm/vmwgfx: limit the number of mip levels in vmw_gb_surface_define_ioctl()
 
 CVEs fixed in 3.18.58:
@@ -358,11 +359,15 @@ CVEs fixed in 3.18.72:
 CVEs fixed in 3.18.73:
   CVE-2017-12153: 65e3664fc6087d2941e940e38beb39920e9ae032 nl80211: check for the required netlink attributes presence
   CVE-2017-12154: 6ad74630c016ef823f2720671ee4db641d35fd2c kvm: nVMX: Don't allow L2 to access the hardware CR8
+  CVE-2017-12192: 6ea8051f42d965e3197ef31d4f54f75525b9439c KEYS: prevent KEYCTL_READ on negative key
   CVE-2017-14156: 2d53f0b14066d798104411f13442afc20bdea4d6 video: fbdev: aty: do not leak uninitialized padding in clk to userspace
   CVE-2017-14489: fec4cd33779f9edd7ab2d0d5ad7228f55f3f6887 scsi: scsi_transport_iscsi: fix the issue that iscsi_if_rx doesn't parse nlmsg properly
 
 CVEs fixed in 3.18.74:
   CVE-2016-8650: 703937f005ea09ac2b6da593a9cec0befcb7b22a mpi: Fix NULL ptr dereference in mpi_powm()
+
+CVEs fixed in 3.18.75:
+  CVE-2016-10208: 2ce649fdacd53afc430565e18124d7d72be92cb3 ext4: validate s_first_meta_bg at mount time
 
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
@@ -405,7 +410,6 @@ Outstanding CVEs:
   CVE-2015-8966: (unk) [PATCH] arm: fix handling of F_OFD_... in oabi_fcntl64() 
   CVE-2016-10044: (unk) aio: mark AIO pseudo-fs noexec 
   CVE-2016-10147: (unk) crypto: mcryptd - Check mcryptd algorithm compatibility 
-  CVE-2016-10208: (unk) ext4: validate s_first_meta_bg at mount time 
   CVE-2016-1575: (unk) ovl: setattr: check permissions before copy-up 
   CVE-2016-1576: (unk) ovl: setattr: check permissions before copy-up 
   CVE-2016-2069: (unk) x86/mm: Add barriers and document switch_mm()-vs-flush synchronization 
@@ -445,6 +449,7 @@ Outstanding CVEs:
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
   CVE-2017-13695: (unk)  
+  CVE-2017-15265: (unk)  
   CVE-2017-2583: (unk) KVM: x86: fix emulation of "MOV SS, null selector" 
   CVE-2017-2584: (unk) KVM: x86: Introduce segmented_write_std 
   CVE-2017-5549: (unk) USB: serial: kl5kusb105: fix line-state error handling 
