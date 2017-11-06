@@ -11,6 +11,7 @@ CVEs fixed in 4.13.2:
 CVEs fixed in 4.13.4:
   CVE-2017-14051: bb8eb5376409be8e2f4e2d24a473d2c0a35aa38e scsi: qla2xxx: Fix an integer overflow in sysfs code
   CVE-2017-14991: 9f62840e7fc648b0a55d089714484b704557c027 scsi: sg: fixup infoleak when using SG_GET_REQUEST_TABLE
+  CVE-2017-16528: 2f3ab4a5fe065958f33d41bec352de4b4844dff5 ALSA: seq: Cancel pending autoload work at unbinding device
 
 CVEs fixed in 4.13.5:
   CVE-2017-1000252: c69768cc3eb4fb41a0f3c47c6d6575fd8ead57b7 KVM: VMX: Do not BUG() on out-of-bounds guest IRQ
@@ -26,6 +27,11 @@ CVEs fixed in 4.13.6:
   CVE-2017-0786: 1b9fff6661fe217d56c6257515c0effbe41d9ab7 brcmfmac: add length check in brcmf_cfg80211_escan_handler()
   CVE-2017-1000255: c654b8387692160ced6e4dcbb3eed888d6ce10cd powerpc/64s: Use emergency stack for kernel TM Bad Thing program checks
   CVE-2017-15649: a5d0f35d810a531c971394b0ea5d8de417acfea5 packet: in packet_do_bind, test fanout with bind_lock held
+  CVE-2017-16526: 6fd9ba4251e3ce1f6f69c60e4c13539b745a0f8a uwb: properly check kthread_run return value
+  CVE-2017-16529: ee93eb98bc606a6c6dc37a04f6264ebb514117ab ALSA: usb-audio: Check out-of-bounds access by corrupted buffer descriptor
+  CVE-2017-16530: 468f2bf8e0d546479a935e67b4091cdb3c4a11e8 USB: uas: fix bug in handling of alternate settings
+  CVE-2017-16531: 31991559f483b33eb30b7fdb1219b3f78b616a27 USB: fix out-of-bounds in usb_set_configuration
+  CVE-2017-16534: 7dddbeaf504434f37e041479af997b14b0f9ea0d USB: core: harden cdc_parse_cdc_header
 
 CVEs fixed in 4.13.7:
   CVE-2017-5123: 3da54587cf4c1be7c26a8ae0b58313828b69638a waitid(): Add missing access_ok() checks
@@ -34,13 +40,18 @@ CVEs fixed in 4.13.8:
   CVE-2017-12188: a75ac6b475ae817f4006b511b8eb2d1fbe6a5713 KVM: nVMX: update last_nonleaf_level when initializing nested EPT
   CVE-2017-12190: ffe1d63bc4570ee980a59996667c296c5be7252e fix unbalanced page refcounting in bio_map_user_iov
   CVE-2017-15265: 71c766e18dd3f321bd450ec7c0c20643b2c4b74e ALSA: seq: Fix use-after-free at creating a port
+  CVE-2017-16525: e21045a223959d469174629614028136b202a586 USB: serial: console: fix use-after-free after failed setup
+  CVE-2017-16527: fd7066e5e913ef8bf6e58c9af8a63cb09e05952f ALSA: usb-audio: Kill stray URB at exiting
+  CVE-2017-16533: 984154e7eef1f9e543dabd7422cfc99015778732 HID: usbhid: fix out-of-bounds bug
 
 CVEs fixed in 4.13.10:
   CVE-2017-15299: 24a33a0c96f3e976c18e4321ca09f71cb835a9b5 KEYS: don't let add_key() update an uninstantiated key
   CVE-2017-15951: f45b8fe12221c178ce708b1c9d634634f2261802 KEYS: Fix race between updating and finding a negative key
+  CVE-2017-16535: 775462fd5c5378957e5165c898e2fa532ebf4234 USB: core: fix out-of-bounds access bug in usb_get_bos_descriptor()
 
 CVEs fixed in 4.13.11:
   CVE-2017-12193: ca6711747c5a1434219ae0bd6745864a618f68b3 assoc_array: Fix a buggy node-splitting case
+  CVE-2017-15306: 3f3414599f110c8dce4e0b0d51502fc8c07517d7 KVM: PPC: Fix oops when checking KVM_CAP_PPC_HTM
 
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
@@ -60,4 +71,8 @@ Outstanding CVEs:
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
   CVE-2017-13695: (unk)  
+  CVE-2017-16532: (unk) usb: usbtest: fix NULL pointer dereference 
+  CVE-2017-16536: (unk)  
+  CVE-2017-16537: (unk)  
+  CVE-2017-16538: (unk)  
   CVE-2017-9986: (unk)  
