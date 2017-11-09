@@ -267,6 +267,28 @@ CVEs fixed in 4.1.45:
   CVE-2017-9984: 77425f99e279723ed8bccd0905ba415ab803ad8d ALSA: msnd: Optimize / harden DSP and MIDI loops
   CVE-2017-9985: 77425f99e279723ed8bccd0905ba415ab803ad8d ALSA: msnd: Optimize / harden DSP and MIDI loops
 
+CVEs fixed in 4.1.46:
+  CVE-2017-0786: 90747f38a8873726d7efd81112967147098a2139 brcmfmac: add length check in brcmf_cfg80211_escan_handler()
+  CVE-2017-12153: 621e000d660bfe0311ab38c8d2b1a778dee45ae3 nl80211: check for the required netlink attributes presence
+  CVE-2017-12154: e480290da7987e37be86140792640f42b84e915b kvm: nVMX: Don't allow L2 to access the hardware CR8
+  CVE-2017-12190: 97c0249ef452b3ac850b812948dd992b37cdbd46 fix unbalanced page refcounting in bio_map_user_iov
+  CVE-2017-12192: f6df8c11a4c89da683a46505aac8a31fe98f5339 KEYS: prevent KEYCTL_READ on negative key
+  CVE-2017-12193: 34a5c6ecc7ae4470cc6f415cbc3c5b97c15023fe assoc_array: Fix a buggy node-splitting case
+  CVE-2017-14156: 92153256b2429e23a4f736cd1eab8dc18ad9883e video: fbdev: aty: do not leak uninitialized padding in clk to userspace
+  CVE-2017-14489: 74fbce9bea7351161fb5864e2fc31c02145fcab7 scsi: scsi_transport_iscsi: fix the issue that iscsi_if_rx doesn't parse nlmsg properly
+  CVE-2017-15265: 507bb1c783c2edc4ea481a6eab7a6d2d88627624 ALSA: seq: Fix use-after-free at creating a port
+  CVE-2017-15299: 7aeb11ac706537b29b704c344572c3f9ac908389 KEYS: don't let add_key() update an uninstantiated key
+  CVE-2017-15649: cafd2b53da565ca30c48a146635c95d385d83b81 packet: in packet_do_bind, test fanout with bind_lock held
+  CVE-2017-16525: 42651349f0207b8ba3b80b5bd868d9872fbcc6c1 USB: serial: console: fix use-after-free after failed setup
+  CVE-2017-16526: bd2ec3b5dd378b6d156d6b200faba82f9f087b16 uwb: properly check kthread_run return value
+  CVE-2017-16527: 44084551aa36a8f3899cc7e73c52846560d8de6a ALSA: usb-audio: Kill stray URB at exiting
+  CVE-2017-16529: b01117b7bc02923baebcff895609561c78559c08 ALSA: usb-audio: Check out-of-bounds access by corrupted buffer descriptor
+  CVE-2017-16530: 0078c8c1a6819a8badf212df782e090559055241 USB: uas: fix bug in handling of alternate settings
+  CVE-2017-16531: de5ffcc63dbdaffffd93934003fd527673f4da0a USB: fix out-of-bounds in usb_set_configuration
+  CVE-2017-16533: 439f76690d7d5dd212ea7bebc1f2fa077e3d645d HID: usbhid: fix out-of-bounds bug
+  CVE-2017-16535: e4e541386c2e0221a2325fc83b18ddf683db1f29 USB: core: fix out-of-bounds access bug in usb_get_bos_descriptor()
+  CVE-2017-16643: 500f156985a31f47a2eadb5b709b245af4c3a05b Input: gtco - fix potential out-of-bound access
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -319,48 +341,28 @@ Outstanding CVEs:
   CVE-2016-9756: (unk) KVM: x86: drop error recovery in em_jmp_far and em_ret_far 
   CVE-2016-9793: (unk) net: avoid signed overflows for SO_{SND|RCV}BUFFORCE 
   CVE-2016-9794: (unk) ALSA: pcm : Call kill_fasync() in stream lock 
-  CVE-2017-0786: (unk) brcmfmac: add length check in brcmf_cfg80211_escan_handler() 
   CVE-2017-1000112: (unk) udp: consistently apply ufo or fragmentation 
   CVE-2017-1000252: (unk) KVM: VMX: Do not BUG() on out-of-bounds guest IRQ 
   CVE-2017-10810: (unk) drm/virtio: don't leak bo on drm_gem_object_init failure 
   CVE-2017-10911: (unk) xen-blkback: don't leak stack data via response ring 
   CVE-2017-11472: (unk) ACPICA: Namespace: fix operand cache leak 
   CVE-2017-12134: (unk) xen: fix bio vec merging 
-  CVE-2017-12153: (unk) nl80211: check for the required netlink attributes presence 
-  CVE-2017-12154: (unk) kvm: nVMX: Don't allow L2 to access the hardware CR8 
   CVE-2017-12168: (unk) arm64: KVM: pmu: Fix AArch32 cycle counter access 
-  CVE-2017-12190: (unk) fix unbalanced page refcounting in bio_map_user_iov 
-  CVE-2017-12192: (unk) KEYS: prevent KEYCTL_READ on negative key 
-  CVE-2017-12193: (unk) assoc_array: Fix a buggy node-splitting case 
   CVE-2017-12762: (unk) isdn/i4l: fix buffer overflow 
   CVE-2017-13080: (unk) mac80211: accept key reinstall without changing anything 
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
   CVE-2017-13695: (unk)  
   CVE-2017-14140: (unk) Sanitize 'move_pages()' permission checks 
-  CVE-2017-14156: (unk) video: fbdev: aty: do not leak uninitialized padding in clk to userspace 
-  CVE-2017-14489: (unk) scsi: scsi_transport_iscsi: fix the issue that iscsi_if_rx doesn't parse nlmsg properly 
   CVE-2017-15102: (unk) usb: misc: legousbtower: Fix NULL pointer deference 
-  CVE-2017-15265: (unk) ALSA: seq: Fix use-after-free at creating a port 
   CVE-2017-15274: (unk) KEYS: fix dereferencing NULL payload with nonzero length 
-  CVE-2017-15299: (unk) KEYS: don't let add_key() update an uninstantiated key 
   CVE-2017-15537: (unk) x86/fpu: Don't let userspace set bogus xcomp_bv 
-  CVE-2017-15649: (unk) packet: in packet_do_bind, test fanout with bind_lock held 
-  CVE-2017-16525: (unk) USB: serial: console: fix use-after-free after failed setup 
-  CVE-2017-16526: (unk) uwb: properly check kthread_run return value 
-  CVE-2017-16527: (unk) ALSA: usb-audio: Kill stray URB at exiting 
   CVE-2017-16528: (unk) ALSA: seq: Cancel pending autoload work at unbinding device 
-  CVE-2017-16529: (unk) ALSA: usb-audio: Check out-of-bounds access by corrupted buffer descriptor 
-  CVE-2017-16530: (unk) USB: uas: fix bug in handling of alternate settings 
-  CVE-2017-16531: (unk) USB: fix out-of-bounds in usb_set_configuration 
   CVE-2017-16532: (unk) usb: usbtest: fix NULL pointer dereference 
-  CVE-2017-16533: (unk) HID: usbhid: fix out-of-bounds bug 
   CVE-2017-16534: (unk) USB: core: harden cdc_parse_cdc_header 
-  CVE-2017-16535: (unk) USB: core: fix out-of-bounds access bug in usb_get_bos_descriptor() 
   CVE-2017-16536: (unk)  
   CVE-2017-16537: (unk)  
   CVE-2017-16538: (unk)  
-  CVE-2017-16643: (unk) Input: gtco - fix potential out-of-bound access 
   CVE-2017-16644: (unk)  
   CVE-2017-16645: (unk) Input: ims-psu - check if CDC union descriptor is sane 
   CVE-2017-16646: (unk)  
