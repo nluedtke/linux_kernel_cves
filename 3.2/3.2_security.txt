@@ -556,6 +556,30 @@ CVEs fixed in 3.2.94:
   CVE-2017-14489: 7d38a8202c4a6acf91d6163f53f3253a261bbd22 scsi: scsi_transport_iscsi: fix the issue that iscsi_if_rx doesn't parse nlmsg properly
   CVE-2017-8831: 10c59d27363eba9fece1965293f83d865ba532be saa7164: fix double fetch PCIe access condition
 
+CVEs fixed in 3.2.95:
+  CVE-2015-9004: 5f542f7740bc8db862b8078e6a621ee7a13427b8 perf: Tighten (and fix) the grouping condition
+  CVE-2017-11473: 96301209473afd3f2f274b91cb7082d161b9be65 x86/acpi: Prevent out of bound access caused by broken ACPI tables
+  CVE-2017-12190: 9ff5d8fe36745867da8a028b3ea58629f7546155 fix unbalanced page refcounting in bio_map_user_iov
+  CVE-2017-13080: ef810e7c3d2a8fb3bbd23726599c487c30ea747e mac80211: accept key reinstall without changing anything
+  CVE-2017-15265: c3895a053b2505f9e409e6d6c57dcece714ab486 ALSA: seq: Fix use-after-free at creating a port
+  CVE-2017-15299: 57f94e88bb255bf7b7d267c999aefbe4557307c1 KEYS: don't let add_key() update an uninstantiated key
+  CVE-2017-15649: ca3d015d39f0357889fa3ef6a88028162de17d7d packet: in packet_do_bind, test fanout with bind_lock held
+  CVE-2017-16527: 72f4b1c7114c1b34302999d72bc5b16c8c1a1945 ALSA: usb-audio: Kill stray URB at exiting
+  CVE-2017-16529: 8a930044f0b100d6b28a94525e9cf62787b3ec3a ALSA: usb-audio: Check out-of-bounds access by corrupted buffer descriptor
+  CVE-2017-16531: a0e0a5850211dd09725c819a8915c2cbe9067317 USB: fix out-of-bounds in usb_set_configuration
+  CVE-2017-16532: f2a780301ae85dbe704499675832487130b8e267 usb: usbtest: fix NULL pointer dereference
+  CVE-2017-16533: 99de0781e0de7c866f762b931351c2a501c3074f HID: usbhid: fix out-of-bounds bug
+  CVE-2017-16535: 7c27b82fad16d2804c7c8405316a636f57edeabd USB: core: fix out-of-bounds access bug in usb_get_bos_descriptor()
+
+CVEs fixed in 3.2.96:
+  CVE-2017-14051: 1714a066d71dc00bc336aa1565ec86551e388704 scsi: qla2xxx: Fix an integer overflow in sysfs code
+  CVE-2017-15115: 16585babafe54375f23f73a8fc323bd51e7955d7 sctp: do not peel off an assoc from one netns to another one
+  CVE-2017-16525: b92072aadd839c9379190979edac63285ae2b790 USB: serial: console: fix use-after-free after failed setup
+  CVE-2017-16536: 59a7195cd497d430d9f76bc9f71cf53ed4102743 cx231xx-cards: fix NULL-deref on missing association descriptor
+  CVE-2017-16537: 0df873c63e8e99a8fb6e068d182b860e6e6e07a9 media: imon: Fix null-ptr-deref in imon_probe
+  CVE-2017-16643: 2de544fd1b16f76f8dd1213d585ce611155ccd34 Input: gtco - fix potential out-of-bound access
+  CVE-2017-16649: d7d24810ac55e2f3fb213d6acf80016a0d337c50 net: cdc_ether: fix divide by 0 on bad descriptors
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -609,7 +633,6 @@ Outstanding CVEs:
   CVE-2015-8955: (unk) arm64: perf: reject groups spanning multiple HW PMUs 
   CVE-2015-8966: (unk) [PATCH] arm: fix handling of F_OFD_... in oabi_fcntl64() 
   CVE-2015-8967: (unk) arm64: make sys_call_table const 
-  CVE-2015-9004: (unk) perf: Tighten (and fix) the grouping condition 
   CVE-2016-10044: (unk) aio: mark AIO pseudo-fs noexec 
   CVE-2016-10147: (unk) crypto: mcryptd - Check mcryptd algorithm compatibility 
   CVE-2016-3070: (unk) mm: migrate dirty page without clear_page_dirty_for_io etc 
@@ -632,40 +655,23 @@ Outstanding CVEs:
   CVE-2017-10663: (unk) f2fs: sanity check checkpoint segno and blkoff 
   CVE-2017-10810: (unk) drm/virtio: don't leak bo on drm_gem_object_init failure 
   CVE-2017-11472: (unk) ACPICA: Namespace: fix operand cache leak 
-  CVE-2017-11473: (unk) x86/acpi: Prevent out of bound access caused by broken ACPI tables 
   CVE-2017-12168: (unk) arm64: KVM: pmu: Fix AArch32 cycle counter access 
-  CVE-2017-12190: (unk) fix unbalanced page refcounting in bio_map_user_iov 
   CVE-2017-12762: (unk) isdn/i4l: fix buffer overflow 
-  CVE-2017-13080: (unk) mac80211: accept key reinstall without changing anything 
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
   CVE-2017-13695: (unk)  
-  CVE-2017-14051: (unk) scsi: qla2xxx: Fix an integer overflow in sysfs code 
   CVE-2017-14991: (unk) scsi: sg: fixup infoleak when using SG_GET_REQUEST_TABLE 
-  CVE-2017-15265: (unk) ALSA: seq: Fix use-after-free at creating a port 
-  CVE-2017-15299: (unk) KEYS: don't let add_key() update an uninstantiated key 
   CVE-2017-15537: (unk) x86/fpu: Don't let userspace set bogus xcomp_bv 
-  CVE-2017-15649: (unk) packet: in packet_do_bind, test fanout with bind_lock held 
-  CVE-2017-16525: (unk) USB: serial: console: fix use-after-free after failed setup 
   CVE-2017-16526: (unk) uwb: properly check kthread_run return value 
-  CVE-2017-16527: (unk) ALSA: usb-audio: Kill stray URB at exiting 
   CVE-2017-16528: (unk) ALSA: seq: Cancel pending autoload work at unbinding device 
-  CVE-2017-16529: (unk) ALSA: usb-audio: Check out-of-bounds access by corrupted buffer descriptor 
   CVE-2017-16530: (unk) USB: uas: fix bug in handling of alternate settings 
-  CVE-2017-16531: (unk) USB: fix out-of-bounds in usb_set_configuration 
-  CVE-2017-16532: (unk) usb: usbtest: fix NULL pointer dereference 
-  CVE-2017-16533: (unk) HID: usbhid: fix out-of-bounds bug 
   CVE-2017-16534: (unk) USB: core: harden cdc_parse_cdc_header 
-  CVE-2017-16535: (unk) USB: core: fix out-of-bounds access bug in usb_get_bos_descriptor() 
-  CVE-2017-16536: (unk)  
-  CVE-2017-16537: (unk)  
   CVE-2017-16538: (unk)  
-  CVE-2017-16643: (unk) Input: gtco - fix potential out-of-bound access 
   CVE-2017-16644: (unk)  
-  CVE-2017-16646: (unk)  
-  CVE-2017-16647: (unk)  
-  CVE-2017-16648: (unk)  
-  CVE-2017-16649: (unk)  
+  CVE-2017-16646: (unk) media: dib0700: fix invalid dvb_detach argument 
+  CVE-2017-16647: (unk) net: usb: asix: fill null-ptr-deref in asix_suspend 
+  CVE-2017-16648: (unk) dvb_frontend: don't use-after-free the frontend struct 
+  CVE-2017-16939: (unk) ipsec: Fix aborted xfrm policy dump crash 
   CVE-2017-5551: (unk) tmpfs: clear S_ISGID when setting posix ACLs 
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
   CVE-2017-5972: (unk) tcp: do not lock listener to process SYN packets 
@@ -673,4 +679,4 @@ Outstanding CVEs:
   CVE-2017-8797: (unk) nfsd: fix undefined behavior in nfsd4_layout_verify 
   CVE-2017-9984: (unk) ALSA: msnd: Optimize / harden DSP and MIDI loops 
   CVE-2017-9985: (unk) ALSA: msnd: Optimize / harden DSP and MIDI loops 
-  CVE-2017-9986: (unk)  
+  CVE-2017-9986: (unk) sound: Retire OSS 
