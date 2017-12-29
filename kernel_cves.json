@@ -6075,14 +6075,14 @@
         "fixes": "373c4557d2aa362702c4c2d41288fb1e54990b7c"
     }, 
     "CVE-2017-16995": {
-        "affected_versions": "unk to unk", 
-        "breaks": "", 
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc5", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
         "cmt_msg": "bpf: fix incorrect sign extension in check_alu_op()", 
         "fixes": "95a762e2c8c942780948091f8f2a4f32fce1ac6f"
     }, 
     "CVE-2017-16996": {
-        "affected_versions": "unk to unk", 
-        "breaks": "", 
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc5", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
         "cmt_msg": "bpf: fix incorrect tracking of register size truncation", 
         "fixes": "0c17d1d2c61936401f4702e1846e2c19b200f958"
     }, 
@@ -6136,10 +6136,12 @@
         "affected_versions": "v3.19-rc1 to v4.15-rc4", 
         "breaks": "c008ba5bdc9fa830e1a349b20b0be5a137bdef7a", 
         "cmt_msg": "net: ipv4: fix for a race condition in raw_sendmsg", 
+        "cvss2": "6.9", 
+        "cvss3": "7.0", 
         "fixes": "8f659a03a0ba9289b9aeb9b4470e6fb263d6f483"
     }, 
     "CVE-2017-17741": {
-        "affected_versions": "v2.6.12-rc2 to unk", 
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc5", 
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
         "cmt_msg": "KVM: Fix stack-out-of-bounds read in write_mmio", 
         "fixes": "e39d200fa5bf5b94a0948db0dae44c1b73b84a56"
@@ -6161,6 +6163,60 @@
         "breaks": "3e30148c3d524a9c1c63ca28261bc24c457eb07a", 
         "cmt_msg": "KEYS: add missing permission check for request_key() destination", 
         "fixes": "4dca6ea1d9432052afb06baf2e3ae78188a4410b"
+    }, 
+    "CVE-2017-17852": {
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc5", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
+        "cmt_msg": "bpf: fix 32-bit ALU op verification", 
+        "fixes": "468f6eafa6c44cb2c5d8aad35e12f06c240a812a"
+    }, 
+    "CVE-2017-17853": {
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc5", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
+        "cmt_msg": "bpf/verifier: fix bounds calculation on BPF_RSH", 
+        "fixes": "4374f256ce8182019353c0c639bb8d0695b4c941"
+    }, 
+    "CVE-2017-17854": {
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc5", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
+        "cmt_msg": "bpf: fix integer overflows", 
+        "fixes": "bb7f0f989ca7de1153bd128a40a71709e339fa03"
+    }, 
+    "CVE-2017-17855": {
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc5", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
+        "cmt_msg": "bpf: don't prune branches when a scalar is replaced with a pointer", 
+        "fixes": "179d1c5602997fef5a940c6ddcf31212cbfebd14"
+    }, 
+    "CVE-2017-17856": {
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc5", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
+        "cmt_msg": "bpf: force strict alignment checks for stack pointers", 
+        "fixes": "a5ec6ae161d72f01411169a938fa5f8baea16e8f"
+    }, 
+    "CVE-2017-17857": {
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc5", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
+        "cmt_msg": "bpf: fix missing error return in check_stack_boundary()", 
+        "fixes": "ea25f914dc164c8d56b36147ecc86bc65f83c469"
+    }, 
+    "CVE-2017-17862": {
+        "affected_versions": "v3.18-rc1 to v4.15-rc1", 
+        "breaks": "17a5267067f3c372fec9ffb798d6eaba6b5e6a4c", 
+        "cmt_msg": "bpf: fix branch pruning logic", 
+        "fixes": "c131187db2d3fa2f8bf32fdf4e9a4ef805168467"
+    }, 
+    "CVE-2017-17863": {
+        "affected_versions": "unk to v4.15-rc5", 
+        "breaks": "7bca0a9702edfc8d0e7e46f984ca422ffdbe0498", 
+        "cmt_msg": "bpf: fix integer overflows", 
+        "fixes": "bb7f0f989ca7de1153bd128a40a71709e339fa03"
+    }, 
+    "CVE-2017-17864": {
+        "affected_versions": "unk to v4.15-rc5", 
+        "breaks": "", 
+        "cmt_msg": "bpf: don't prune branches when a scalar is replaced with a pointer", 
+        "fixes": "179d1c5602997fef5a940c6ddcf31212cbfebd14"
     }, 
     "CVE-2017-2583": {
         "affected_versions": "v3.6-rc1 to v4.10-rc4", 
