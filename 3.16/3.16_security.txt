@@ -391,6 +391,23 @@ CVEs fixed in 3.16.51:
   CVE-2017-16649: fac4f4657e16d3457963d4c8ee6a356103155141 net: cdc_ether: fix divide by 0 on bad descriptors
   CVE-2017-16650: 4a14bd934b40b1a9f7fe3e0546f9873bb55e5b61 net: qmi_wwan: fix divide by 0 on bad descriptors
 
+CVEs fixed in 3.16.52:
+  CVE-2015-8709: d5b3e840dbf6dd2c0f30b5982b6f5ecd49e46b12 mm: Add a user_ns owner to mm_struct and fix ptrace permission checks
+  CVE-2017-1000407: 02b1dd5472cee5286ab1a9eb916c036ab2f86b78 KVM: VMX: remove I/O port 0x80 bypass on Intel hosts
+  CVE-2017-15868: 77369e6ee42b28a529932f5f7a5522de73310d21 Bluetooth: bnep: bnep_add_connection() should verify that it's dealing with l2cap socket
+  CVE-2017-16526: 8a088612bc35033159077fa7bee6f3761d712725 uwb: properly check kthread_run return value
+  CVE-2017-16645: eb791765b62b2a615fb692c3394d86f370d72681 Input: ims-psu - check if CDC union descriptor is sane
+  CVE-2017-16939: a7d7387cc169e912055faca1b0f123e5bce78f53 ipsec: Fix aborted xfrm policy dump crash
+  CVE-2017-17448: fad6474d43e985338e4c2b3bb1a7668cca1f041a netfilter: nfnetlink_cthelper: Add missing permission checks
+  CVE-2017-17449: df524750e2d1ead01cceed5ffc0b62166c7630dd netlink: Add netns check on taps
+  CVE-2017-17450: 06b6060a61b14a747b0f29890fcb20ece18a0944 netfilter: xt_osf: Add missing permission checks
+  CVE-2017-17558: 072bee30c5d314af02c211112697ab0931ab5039 USB: core: prevent malicious bNumInterfaces overflow
+  CVE-2017-17741: 7cc7f67418296f829a284b6e2d4c62d937f15faa KVM: Fix stack-out-of-bounds read in write_mmio
+  CVE-2017-17805: 9517d9d0c1d62515d33c0405b5a86e88647012a2 crypto: salsa20 - fix blkcipher_walk API usage
+  CVE-2017-17806: 150fbc1221d1352db7dc830074586e0ee28e2a15 crypto: hmac - require that the underlying hash algorithm is unkeyed
+  CVE-2017-17807: d3dc1ffed4044437339a22acebebaf1c5bc141ee KEYS: add missing permission check for request_key() destination
+  CVE-2017-8824: 37e923d49eb8219cab4e49237d026755276484a0 dccp: CVE-2017-8824: use-after-free in DCCP code
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -408,7 +425,6 @@ Outstanding CVEs:
   CVE-2015-3339: (unk) fs: take i_mutex during prepare_binprm for set[ug]id executables 
   CVE-2015-4004: (unk) staging: ozwpan: Remove from tree 
   CVE-2015-8553: (unk)  
-  CVE-2015-8709: (unk) mm: Add a user_ns owner to mm_struct and fix ptrace permission checks 
   CVE-2015-8830: (unk) aio: lift iov_iter_init() into aio_setup_..._rw() 
   CVE-2015-8839: (unk) ext4: fix races between page faults and hole punching 
   CVE-2015-8952: (unk) ext2: convert to mbcache2 
@@ -424,7 +440,6 @@ Outstanding CVEs:
   CVE-2017-0861: (unk) ALSA: pcm: prevent UAF in snd_pcm_info 
   CVE-2017-1000252: (unk) KVM: VMX: Do not BUG() on out-of-bounds guest IRQ 
   CVE-2017-1000405: (unk) mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d() 
-  CVE-2017-1000407: (unk) KVM: VMX: remove I/O port 0x80 bypass on Intel hosts 
   CVE-2017-10662: (unk) f2fs: sanity check segment count 
   CVE-2017-10663: (unk) f2fs: sanity check checkpoint segno and blkoff 
   CVE-2017-10810: (unk) drm/virtio: don't leak bo on drm_gem_object_init failure 
@@ -439,26 +454,14 @@ Outstanding CVEs:
   CVE-2017-15127: (unk) userfaultfd: hugetlbfs: remove superfluous page unlock in VM_SHARED case 
   CVE-2017-15128: (unk)  
   CVE-2017-15537: (unk) x86/fpu: Don't let userspace set bogus xcomp_bv 
-  CVE-2017-15868: (unk) Bluetooth: bnep: bnep_add_connection() should verify that it's dealing with l2cap socket 
-  CVE-2017-16526: (unk) uwb: properly check kthread_run return value 
   CVE-2017-16528: (unk) ALSA: seq: Cancel pending autoload work at unbinding device 
   CVE-2017-16534: (unk) USB: core: harden cdc_parse_cdc_header 
   CVE-2017-16538: (unk)  
-  CVE-2017-16645: (unk) Input: ims-psu - check if CDC union descriptor is sane 
   CVE-2017-16646: (unk) media: dib0700: fix invalid dvb_detach argument 
   CVE-2017-16647: (unk) net: usb: asix: fill null-ptr-deref in asix_suspend 
-  CVE-2017-16939: (unk) ipsec: Fix aborted xfrm policy dump crash 
   CVE-2017-16995: (unk) bpf: fix incorrect sign extension in check_alu_op() 
   CVE-2017-16996: (unk) bpf: fix incorrect tracking of register size truncation 
   CVE-2017-17053: (unk) x86/mm: Fix use-after-free of ldt_struct 
-  CVE-2017-17448: (unk) netfilter: nfnetlink_cthelper: Add missing permission checks 
-  CVE-2017-17449: (unk) netlink: Add netns check on taps 
-  CVE-2017-17450: (unk) netfilter: xt_osf: Add missing permission checks 
-  CVE-2017-17558: (unk) USB: core: prevent malicious bNumInterfaces overflow 
-  CVE-2017-17741: (unk) KVM: Fix stack-out-of-bounds read in write_mmio 
-  CVE-2017-17805: (unk) crypto: salsa20 - fix blkcipher_walk API usage 
-  CVE-2017-17806: (unk) crypto: hmac - require that the underlying hash algorithm is unkeyed 
-  CVE-2017-17807: (unk) KEYS: add missing permission check for request_key() destination 
   CVE-2017-17852: (unk) bpf: fix 32-bit ALU op verification 
   CVE-2017-17853: (unk) bpf/verifier: fix bounds calculation on BPF_RSH 
   CVE-2017-17854: (unk) bpf: fix integer overflows 
@@ -467,10 +470,10 @@ Outstanding CVEs:
   CVE-2017-17857: (unk) bpf: fix missing error return in check_stack_boundary() 
   CVE-2017-17863: (unk) bpf: fix integer overflows 
   CVE-2017-17864: (unk) bpf: don't prune branches when a scalar is replaced with a pointer 
+  CVE-2017-17975: (unk)  
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
   CVE-2017-5972: (unk) tcp: do not lock listener to process SYN packets 
   CVE-2017-8797: (unk) nfsd: fix undefined behavior in nfsd4_layout_verify 
-  CVE-2017-8824: (unk) dccp: CVE-2017-8824: use-after-free in DCCP code 
   CVE-2017-9984: (unk) ALSA: msnd: Optimize / harden DSP and MIDI loops 
   CVE-2017-9985: (unk) ALSA: msnd: Optimize / harden DSP and MIDI loops 
   CVE-2017-9986: (unk) sound: Retire OSS 
