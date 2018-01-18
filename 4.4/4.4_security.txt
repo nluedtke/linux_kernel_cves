@@ -22,6 +22,7 @@ CVEs fixed in 4.4.2:
   CVE-2016-2085: 8592536bcfcbc717a3bf7cec57d7c1b38f4eec1d EVM: Use crypto_memneq() for digest comparisons
   CVE-2016-2384: fbb430c51d7ac989b79bf1adb40cce7af581682a ALSA: usb-audio: avoid freeing umidi object twice
   CVE-2016-2782: ee4207bda5e15d0eecb834c4fc39c6069487279d USB: visor: fix null-deref at probe
+  CVE-2017-13215: fec8beab63283003b546f83eebbbe32efb9acc53 crypto: algif_skcipher - Load TX SG list after waiting
 
 CVEs fixed in 4.4.3:
   CVE-2016-0617: db33368ca32dd307cdcc191361de34f3937f513a fs/hugetlbfs/inode.c: fix bugs in hugetlb_vmtruncate_list()
@@ -437,6 +438,7 @@ CVEs fixed in 4.4.109:
   CVE-2017-17712: be27b620a861dc2a143b78e81e23f5622d9105da net: ipv4: fix for a race condition in raw_sendmsg
 
 CVEs fixed in 4.4.112:
+  CVE-2017-13216: b4106c55b574fe37900b02ddf89cbe4b9d971392 staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl
   CVE-2017-17741: eb91461daa77eb0ddb4c24aa427051f3669ba1f3 KVM: Fix stack-out-of-bounds read in write_mmio
   CVE-2018-5332: 10d06ed9a1899fcc1ecb7a1573f0f95b92dc470c RDS: Heap OOB write in rds_message_alloc_sgs()
   CVE-2018-5333: 44496521c6bd65a3c525b490c762875a075cf73b RDS: null pointer dereference in rds_atomic_free_op
@@ -461,8 +463,6 @@ Outstanding CVEs:
   CVE-2017-1000405: (unk) mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d() 
   CVE-2017-11472: (unk) ACPICA: Namespace: fix operand cache leak 
   CVE-2017-12168: (unk) arm64: KVM: pmu: Fix AArch32 cycle counter access 
-  CVE-2017-13215: (unk)  
-  CVE-2017-13216: (unk)  
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
   CVE-2017-13695: (unk)  
@@ -491,6 +491,6 @@ Outstanding CVEs:
   CVE-2017-8797: (unk) nfsd: fix undefined behavior in nfsd4_layout_verify 
   CVE-2017-8824: (unk) dccp: CVE-2017-8824: use-after-free in DCCP code 
   CVE-2017-9986: (unk) sound: Retire OSS 
-  CVE-2018-1000004: (unk)  
+  CVE-2018-1000004: (unk) ALSA: seq: Make ioctls race-free 
   CVE-2018-5344: (unk) loop: fix concurrent lo_open/lo_release 
   CVE-2018-5703: (unk)  
