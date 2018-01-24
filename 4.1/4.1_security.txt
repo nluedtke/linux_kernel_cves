@@ -308,6 +308,19 @@ CVEs fixed in 4.1.48:
   CVE-2017-16536: ee16c9ea4ef98684378e020df9a4efa32955d767 cx231xx-cards: fix NULL-deref on missing association descriptor
   CVE-2017-16939: 5e80f6036c71f6ce1dbba0ad2925c331767f76ac ipsec: Fix aborted xfrm policy dump crash
 
+CVEs fixed in 4.1.49:
+  CVE-2017-0861: 0bde6f9d1faf3d4aaf8346d8a326cf02e7ea1a3a ALSA: pcm: prevent UAF in snd_pcm_info
+  CVE-2017-1000407: 6552b7695ca65e6ca412948d4aa0179df69dbc1d KVM: VMX: remove I/O port 0x80 bypass on Intel hosts
+  CVE-2017-15274: c19aa530105b0d780ad72a78a7ef271037bcb774 KEYS: fix dereferencing NULL payload with nonzero length
+  CVE-2017-17558: 5b2323b62af18be000ef627f302b5bf167402de6 USB: core: prevent malicious bNumInterfaces overflow
+  CVE-2017-17805: bbda4c57b91619642a94b193531312fe01bc2398 crypto: salsa20 - fix blkcipher_walk API usage
+  CVE-2017-17806: bd7f57da8fff9b75204d6dd2b3ac6a30a6430a5c crypto: hmac - require that the underlying hash algorithm is unkeyed
+  CVE-2017-2636: 209fd3f3ef14e0b0a1d07d6ff27d75c49e656e84 tty: n_hdlc: get rid of racy n_hdlc.tbuf
+  CVE-2017-6345: 4fc8ff15e26ecfe974b7a3f386550bcfd259b8b1 net/llc: avoid BUG_ON() in skb_orphan()
+  CVE-2017-6346: 7babaac5d49ee7a88a5a324668dd13b575635d09 packet: fix races in fanout_add()
+  CVE-2017-6348: c9556862a64b5ac85bfee1cfd4313615dc21d6f8 irda: Fix lockdep annotations in hashbin_delete().
+  CVE-2017-7184: 438db92d7f2792e3bad17be70e6edf0f44a081f0 xfrm_user: validate XFRM_MSG_NEWAE XFRMA_REPLAY_ESN_VAL replay_window
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -360,11 +373,9 @@ Outstanding CVEs:
   CVE-2016-9756: (unk) KVM: x86: drop error recovery in em_jmp_far and em_ret_far 
   CVE-2016-9793: (unk) net: avoid signed overflows for SO_{SND|RCV}BUFFORCE 
   CVE-2016-9794: (unk) ALSA: pcm : Call kill_fasync() in stream lock 
-  CVE-2017-0861: (unk) ALSA: pcm: prevent UAF in snd_pcm_info 
   CVE-2017-1000112: (unk) udp: consistently apply ufo or fragmentation 
   CVE-2017-1000252: (unk) KVM: VMX: Do not BUG() on out-of-bounds guest IRQ 
   CVE-2017-1000405: (unk) mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d() 
-  CVE-2017-1000407: (unk) KVM: VMX: remove I/O port 0x80 bypass on Intel hosts 
   CVE-2017-10810: (unk) drm/virtio: don't leak bo on drm_gem_object_init failure 
   CVE-2017-11472: (unk) ACPICA: Namespace: fix operand cache leak 
   CVE-2017-12134: (unk) xen: fix bio vec merging 
@@ -372,6 +383,9 @@ Outstanding CVEs:
   CVE-2017-12762: (unk) isdn/i4l: fix buffer overflow 
   CVE-2017-13215: (unk) crypto: algif_skcipher - Load TX SG list after waiting 
   CVE-2017-13216: (unk) staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl 
+  CVE-2017-13220: (unk)  
+  CVE-2017-13221: (unk)  
+  CVE-2017-13222: (unk)  
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
   CVE-2017-13695: (unk)  
@@ -381,7 +395,6 @@ Outstanding CVEs:
   CVE-2017-15127: (unk) userfaultfd: hugetlbfs: remove superfluous page unlock in VM_SHARED case 
   CVE-2017-15128: (unk) userfaultfd: hugetlbfs: prevent UFFDIO_COPY to fill beyond the end of i_size 
   CVE-2017-15129: (unk) net: Fix double free and memory corruption in get_net_ns_by_id() 
-  CVE-2017-15274: (unk) KEYS: fix dereferencing NULL payload with nonzero length 
   CVE-2017-15537: (unk) x86/fpu: Don't let userspace set bogus xcomp_bv 
   CVE-2017-16534: (unk) USB: core: harden cdc_parse_cdc_header 
   CVE-2017-16538: (unk)  
@@ -393,11 +406,8 @@ Outstanding CVEs:
   CVE-2017-17448: (unk) netfilter: nfnetlink_cthelper: Add missing permission checks 
   CVE-2017-17449: (unk) netlink: Add netns check on taps 
   CVE-2017-17450: (unk) netfilter: xt_osf: Add missing permission checks 
-  CVE-2017-17558: (unk) USB: core: prevent malicious bNumInterfaces overflow 
   CVE-2017-17712: (unk) net: ipv4: fix for a race condition in raw_sendmsg 
   CVE-2017-17741: (unk) KVM: Fix stack-out-of-bounds read in write_mmio 
-  CVE-2017-17805: (unk) crypto: salsa20 - fix blkcipher_walk API usage 
-  CVE-2017-17806: (unk) crypto: hmac - require that the underlying hash algorithm is unkeyed 
   CVE-2017-17807: (unk) KEYS: add missing permission check for request_key() destination 
   CVE-2017-17852: (unk) bpf: fix 32-bit ALU op verification 
   CVE-2017-17853: (unk) bpf/verifier: fix bounds calculation on BPF_RSH 
@@ -410,7 +420,6 @@ Outstanding CVEs:
   CVE-2017-17975: (unk)  
   CVE-2017-2583: (unk) KVM: x86: fix emulation of "MOV SS, null selector" 
   CVE-2017-2584: (unk) KVM: x86: Introduce segmented_write_std 
-  CVE-2017-2636: (unk) tty: n_hdlc: get rid of racy n_hdlc.tbuf 
   CVE-2017-5551: (unk) tmpfs: clear S_ISGID when setting posix ACLs 
   CVE-2017-5715: (unk)  
   CVE-2017-5753: (unk)  
@@ -422,12 +431,8 @@ Outstanding CVEs:
   CVE-2017-5986: (unk) sctp: avoid BUG_ON on sctp_wait_for_sndbuf 
   CVE-2017-6001: (unk) perf/core: Fix concurrent sys_perf_event_open() vs. 'move_group' race 
   CVE-2017-6214: (unk) tcp: avoid infinite loop in tcp_splice_read() 
-  CVE-2017-6345: (unk) net/llc: avoid BUG_ON() in skb_orphan() 
-  CVE-2017-6346: (unk) packet: fix races in fanout_add() 
   CVE-2017-6347: (unk) ip: fix IP_CHECKSUM handling 
-  CVE-2017-6348: (unk) irda: Fix lockdep annotations in hashbin_delete(). 
   CVE-2017-6353: (unk) sctp: deny peeloff operation on asocs with threads sleeping on it 
-  CVE-2017-7184: (unk) xfrm_user: validate XFRM_MSG_NEWAE XFRMA_REPLAY_ESN_VAL replay_window 
   CVE-2017-7346: (unk) drm/vmwgfx: limit the number of mip levels in vmw_gb_surface_define_ioctl() 
   CVE-2017-7533: (unk) dentry name snapshots 
   CVE-2017-8797: (unk) nfsd: fix undefined behavior in nfsd4_layout_verify 
