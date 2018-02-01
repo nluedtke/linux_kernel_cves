@@ -426,6 +426,7 @@ CVEs fixed in 3.18.88:
   CVE-2017-17807: 228014b20bd8902b05942ce4db4197ce345296f3 KEYS: add missing permission check for request_key() destination
 
 CVEs fixed in 3.18.89:
+  CVE-2017-16914: f749066bec4019a7a5f7eee22b56314958161c1e usbip: fix stub_send_ret_submit() vulnerability to null transfer_buffer
   CVE-2017-17558: dd3ad5f60d520da135bf4dce5adcecf400e2db64 USB: core: prevent malicious bNumInterfaces overflow
   CVE-2017-17805: ebd52f8b6422b920b4d1697d90679a2bb4b48a0b crypto: salsa20 - fix blkcipher_walk API usage
   CVE-2017-17806: 252b343a9789151293ad1da4a1ac0851bf31a22e crypto: hmac - require that the underlying hash algorithm is unkeyed
@@ -438,6 +439,10 @@ CVEs fixed in 3.18.92:
   CVE-2017-6001: 2f9cf5cd5580046fe9ff97dae32f9c753500d4ea perf/core: Fix concurrent sys_perf_event_open() vs. 'move_group' race
   CVE-2018-5332: a7b25c9f6ea92d582bda195eca561b9cb605ea91 RDS: Heap OOB write in rds_message_alloc_sgs()
   CVE-2018-5333: 3396f2bef5ede06f73c0be43975ce837767785ed RDS: null pointer dereference in rds_atomic_free_op
+
+CVEs fixed in 3.18.93:
+  CVE-2017-17448: f4ba1d0e4366d63d1d09c024e8befc99c642e84b netfilter: nfnetlink_cthelper: Add missing permission checks
+  CVE-2017-17450: 115e3505bbd683a01496860646fa632e6533b4e3 netfilter: xt_osf: Add missing permission checks
 
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
@@ -531,11 +536,12 @@ Outstanding CVEs:
   CVE-2017-16647: (unk) net: usb: asix: fill null-ptr-deref in asix_suspend 
   CVE-2017-16649: (unk) net: cdc_ether: fix divide by 0 on bad descriptors 
   CVE-2017-16650: (unk) net: qmi_wwan: fix divide by 0 on bad descriptors 
+  CVE-2017-16911: (unk) usbip: prevent vhci_hcd driver from leaking a socket pointer address 
+  CVE-2017-16912: (unk) usbip: fix stub_rx: get_pipe() to validate endpoint number 
+  CVE-2017-16913: (unk) usbip: fix stub_rx: harden CMD_SUBMIT path to handle malicious input 
   CVE-2017-16995: (unk) bpf: fix incorrect sign extension in check_alu_op() 
   CVE-2017-16996: (unk) bpf: fix incorrect tracking of register size truncation 
   CVE-2017-17053: (unk) x86/mm: Fix use-after-free of ldt_struct 
-  CVE-2017-17448: (unk) netfilter: nfnetlink_cthelper: Add missing permission checks 
-  CVE-2017-17450: (unk) netfilter: xt_osf: Add missing permission checks 
   CVE-2017-17741: (unk) KVM: Fix stack-out-of-bounds read in write_mmio 
   CVE-2017-17852: (unk) bpf: fix 32-bit ALU op verification 
   CVE-2017-17853: (unk) bpf/verifier: fix bounds calculation on BPF_RSH 

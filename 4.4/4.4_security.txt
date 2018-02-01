@@ -428,6 +428,7 @@ CVEs fixed in 4.4.106:
   CVE-2017-1000407: 477b837533a2f592702d2affab36b8052691287b KVM: VMX: remove I/O port 0x80 bypass on Intel hosts
 
 CVEs fixed in 4.4.107:
+  CVE-2017-16914: 2862cfca39894ac265fbb5cde9a3ff90c02201f3 usbip: fix stub_send_ret_submit() vulnerability to null transfer_buffer
   CVE-2017-17558: dfdf5fa3e6647c0fc02be8d857b6b8b7098946ff USB: core: prevent malicious bNumInterfaces overflow
   CVE-2017-17805: 8a311b0462b59d12cb14e82e626d3612d988135b crypto: salsa20 - fix blkcipher_walk API usage
   CVE-2017-17806: 43cd7f38612df31fbd929588c065cfbc42102aab crypto: hmac - require that the underlying hash algorithm is unkeyed
@@ -447,6 +448,14 @@ CVEs fixed in 4.4.112:
   CVE-2018-5332: 10d06ed9a1899fcc1ecb7a1573f0f95b92dc470c RDS: Heap OOB write in rds_message_alloc_sgs()
   CVE-2018-5333: 44496521c6bd65a3c525b490c762875a075cf73b RDS: null pointer dereference in rds_atomic_free_op
 
+CVEs fixed in 4.4.114:
+  CVE-2017-11472: 4c19b00e5588828f0d3198b926efade766dcf2c8 ACPICA: Namespace: fix operand cache leak
+  CVE-2017-16911: 28f467e0bdda754aa36390fd90b01823f0d3b18d usbip: prevent vhci_hcd driver from leaking a socket pointer address
+  CVE-2017-16912: 80e733a9b37fb6b40351bf1924d5a90d89c375ae usbip: fix stub_rx: get_pipe() to validate endpoint number
+  CVE-2017-16913: b6f826ba10dce86f74efd3c0953cb9982a3c51e2 usbip: fix stub_rx: harden CMD_SUBMIT path to handle malicious input
+  CVE-2017-17448: a359a437fbc6bb08aa9cc8e25ef4ac3b77ca727b netfilter: nfnetlink_cthelper: Add missing permission checks
+  CVE-2017-17450: d01ceb4722cd8d64176272434fe332b596750d9c netfilter: xt_osf: Add missing permission checks
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -465,7 +474,6 @@ Outstanding CVEs:
   CVE-2016-5728: (unk) misc: mic: Fix for double fetch security bug in VOP driver 
   CVE-2016-8660: (unk)  
   CVE-2017-1000405: (unk) mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d() 
-  CVE-2017-11472: (unk) ACPICA: Namespace: fix operand cache leak 
   CVE-2017-12168: (unk) arm64: KVM: pmu: Fix AArch32 cycle counter access 
   CVE-2017-13220: (unk)  
   CVE-2017-13221: (unk)  
@@ -480,8 +488,6 @@ Outstanding CVEs:
   CVE-2017-16995: (unk) bpf: fix incorrect sign extension in check_alu_op() 
   CVE-2017-16996: (unk) bpf: fix incorrect tracking of register size truncation 
   CVE-2017-17053: (unk) x86/mm: Fix use-after-free of ldt_struct 
-  CVE-2017-17448: (unk) netfilter: nfnetlink_cthelper: Add missing permission checks 
-  CVE-2017-17450: (unk) netfilter: xt_osf: Add missing permission checks 
   CVE-2017-17852: (unk) bpf: fix 32-bit ALU op verification 
   CVE-2017-17853: (unk) bpf/verifier: fix bounds calculation on BPF_RSH 
   CVE-2017-17854: (unk) bpf: fix integer overflows 
