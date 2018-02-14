@@ -595,6 +595,16 @@ CVEs fixed in 3.2.97:
   CVE-2017-17807: 5d8207e99e9baadab32d815772da60bff3a07eb5 KEYS: add missing permission check for request_key() destination
   CVE-2017-8824: e23d13a89d8ca5fe717d75248672e1b8bc4a3be8 dccp: CVE-2017-8824: use-after-free in DCCP code
 
+CVEs fixed in 3.2.99:
+  CVE-2017-16911: 11406025161a8745167414687bca1f8c04b5eb6c usbip: prevent vhci_hcd driver from leaking a socket pointer address
+  CVE-2017-16912: 95ac81780575f669db047b30511d56400c67099e usbip: fix stub_rx: get_pipe() to validate endpoint number
+  CVE-2017-16913: 629f509078f02bf65da3ecca8363104b08a3fdd7 usbip: fix stub_rx: harden CMD_SUBMIT path to handle malicious input
+  CVE-2017-16914: 41ffa4f1c1480fe4392c6e1c48346a49d048ff4a usbip: fix stub_send_ret_submit() vulnerability to null transfer_buffer
+  CVE-2017-18017: d84eeff84e9869d29f442ff652ce1352cfa63e84 netfilter: xt_TCPMSS: add more sanity tests on tcph->doff
+  CVE-2018-1000004: d6693160906d55ba376bf0b88b7c129762170162 ALSA: seq: Make ioctls race-free
+  CVE-2018-5332: 60daca9efbb3e4109ebc1f7069543e5573fc124e RDS: Heap OOB write in rds_message_alloc_sgs()
+  CVE-2018-5333: 57e49cc5d8048f4274b3b2c8ec075f656f8a3ed1 RDS: null pointer dereference in rds_atomic_free_op
+
 Outstanding CVEs:
   CVE-2004-0230: (unk)  
   CVE-2005-3660: (unk)  
@@ -691,10 +701,6 @@ Outstanding CVEs:
   CVE-2017-16534: (unk) USB: core: harden cdc_parse_cdc_header 
   CVE-2017-16646: (unk) media: dib0700: fix invalid dvb_detach argument 
   CVE-2017-16647: (unk) net: usb: asix: fill null-ptr-deref in asix_suspend 
-  CVE-2017-16911: (unk) usbip: prevent vhci_hcd driver from leaking a socket pointer address 
-  CVE-2017-16912: (unk) usbip: fix stub_rx: get_pipe() to validate endpoint number 
-  CVE-2017-16913: (unk) usbip: fix stub_rx: harden CMD_SUBMIT path to handle malicious input 
-  CVE-2017-16914: (unk) usbip: fix stub_send_ret_submit() vulnerability to null transfer_buffer 
   CVE-2017-16995: (unk) bpf: fix incorrect sign extension in check_alu_op() 
   CVE-2017-16996: (unk) bpf: fix incorrect tracking of register size truncation 
   CVE-2017-17053: (unk) x86/mm: Fix use-after-free of ldt_struct 
@@ -706,8 +712,6 @@ Outstanding CVEs:
   CVE-2017-17856: (unk) bpf: force strict alignment checks for stack pointers 
   CVE-2017-17857: (unk) bpf: fix missing error return in check_stack_boundary() 
   CVE-2017-17863: (unk) bpf: fix integer overflows 
-  CVE-2017-18017: (unk) netfilter: xt_TCPMSS: add more sanity tests on tcph->doff 
-  CVE-2017-18174: (unk) pinctrl: amd: Use devm_pinctrl_register() for pinctrl registration 
   CVE-2017-5551: (unk) tmpfs: clear S_ISGID when setting posix ACLs 
   CVE-2017-5715: (unk)  
   CVE-2017-5753: (unk)  
@@ -719,10 +723,7 @@ Outstanding CVEs:
   CVE-2017-9984: (unk) ALSA: msnd: Optimize / harden DSP and MIDI loops 
   CVE-2017-9985: (unk) ALSA: msnd: Optimize / harden DSP and MIDI loops 
   CVE-2017-9986: (unk) sound: Retire OSS 
-  CVE-2018-1000004: (unk) ALSA: seq: Make ioctls race-free 
   CVE-2018-1000026: (unk) bnx2x: disable GSO where gso_size is too big for hardware 
-  CVE-2018-5332: (unk) RDS: Heap OOB write in rds_message_alloc_sgs() 
-  CVE-2018-5333: (unk) RDS: null pointer dereference in rds_atomic_free_op 
   CVE-2018-5344: (unk) loop: fix concurrent lo_open/lo_release 
   CVE-2018-5750: (unk)  
   CVE-2018-6412: (unk)  
