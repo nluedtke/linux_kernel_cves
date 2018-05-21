@@ -371,6 +371,7 @@ CVEs fixed in 3.18.73:
   CVE-2017-14156: 2d53f0b14066d798104411f13442afc20bdea4d6 video: fbdev: aty: do not leak uninitialized padding in clk to userspace
   CVE-2017-14489: fec4cd33779f9edd7ab2d0d5ad7228f55f3f6887 scsi: scsi_transport_iscsi: fix the issue that iscsi_if_rx doesn't parse nlmsg properly
   CVE-2017-15537: f23ec06d527c9cd90552a68c748bcb5aa942ee87 x86/fpu: Don't let userspace set bogus xcomp_bv
+  CVE-2017-18270: e3b663ba2ddd8f30ba92d4e6898637bb526dba70 KEYS: prevent creating a different user's keyrings
 
 CVEs fixed in 3.18.74:
   CVE-2016-8650: 703937f005ea09ac2b6da593a9cec0befcb7b22a mpi: Fix NULL ptr dereference in mpi_powm()
@@ -495,6 +496,9 @@ CVEs fixed in 3.18.107:
 CVEs fixed in 3.18.108:
   CVE-2018-1093: 0643dbdb5c697fbe20dd380bcb3faa1dcec03b78 ext4: add validity checks for bitmap block numbers
 
+CVEs fixed in 3.18.109:
+  CVE-2017-18255: 2e9cbae49c5d3e69ca04510d68ae161374e5d0a2 perf/core: Fix the perf_cpu_time_max_percent check
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -596,7 +600,6 @@ Outstanding CVEs:
   CVE-2017-18232: (unk) scsi: libsas: direct call probe and destruct 
   CVE-2017-18241: (unk) f2fs: fix a panic caused by NULL flush_cmd_control 
   CVE-2017-18249: (unk) f2fs: fix race condition in between free nid allocator/initializer 
-  CVE-2017-18255: (unk) perf/core: Fix the perf_cpu_time_max_percent check 
   CVE-2017-18257: (unk) f2fs: fix a dead loop in f2fs_fiemap() 
   CVE-2017-18261: (unk) clocksource/drivers/arm_arch_timer: Avoid infinite recursion when ftrace is enabled 
   CVE-2017-2583: (unk) KVM: x86: fix emulation of "MOV SS, null selector" 
@@ -627,6 +630,8 @@ Outstanding CVEs:
   CVE-2018-1066: (unk) CIFS: Enable encryption during session setup phase 
   CVE-2018-1094: (unk) ext4: always initialize the crc32c checksum driver 
   CVE-2018-1118: (unk)  
+  CVE-2018-1120: (unk) proc: do not access cmdline nor environ from file-backed areas 
+  CVE-2018-1121: (unk)  
   CVE-2018-6412: (unk) fbdev: Fixing arbitrary kernel leak in case FBIOGETCMAP_SPARC in sbusfb_ioctl_helper(). 
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7480: (unk) blkcg: fix double free of new_blkg in blkcg_init_queue 
