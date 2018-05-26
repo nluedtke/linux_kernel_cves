@@ -5,9 +5,15 @@ tracking CVEs for their own kernels but this information is lacking for
 the upstream kernel. This project aims to help out with this void. 
 Currently all output for this is stored in the CVEs.txt file. The output
 was generated automatically through a set of tools that has not been 
-fully tested or made public yet. There are separate files for each LTS 
-stream. These files list all CVEs that possibly affect that stream and 
-when/if they were fixed.
+fully tested or made public yet.
+
+### How to see the data
+There are two ways to view/consume the data. The easiest is the web front end at
+[www.linuxkernelcves.com][2]. Here can you can view CVEs by stream or by CVE id.
+The second way is on the github page at
+[https://github.com/nluedtke/linux_kernel_cves/][3]. On the github, the data is
+laid out in both JSON and text format. Both pages offer the same
+data.
 
 ### Linux Security Note
 Tracking, mitigating, and patching CVEs is just a small part of 
@@ -74,8 +80,7 @@ course be accepted.
 
   - Breaks/Fixes lists accuracy not 100% (This is slowly being corrected)
   - Multiple commits to fix a CVE not handled
-  - If a commit fixes a previous incomplete fix the version timeline 
-  may not be correct (Update: In progress)
-  - Haven't verified if all CVEs are on the list yet (in the works)
 
 [1]: https://kernsec.org/wiki/index.php/Kernel_Self_Protection_Project
+[2]: www.linuxkernelcves.com
+[3]: https://github.com/nluedtke/linux_kernel_cves/
