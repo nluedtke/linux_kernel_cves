@@ -617,6 +617,23 @@ CVEs fixed in 3.2.100:
   CVE-2018-6927: 9d4265fc8f485089645dca8c688eedd890a165af futex: Prevent overflow by strengthen input validation
   CVE-2018-7492: cbe131eb2d7bab9b3332094ae279fed7cb170a85 rds: Fix NULL pointer dereference in __rds_rdma_map
 
+CVEs fixed in 3.2.102:
+  CVE-2017-18208: 3d886ff142e713000aec6bf6f82944eb03dab28c mm/madvise.c: fix madvise() infinite loop under special circumstances
+  CVE-2017-18216: dfd9f20a2db71ca01033040ecf69d5c0e67db629 ocfs2: subsystem.su_mutex is required while accessing the item->ci_parent
+  CVE-2018-1000199: 03e58a520044e3ea80a3ea43586f956e2e86c74d perf/hwbp: Simplify the perf-hwbp code, fix documentation
+  CVE-2018-1068: dccc6e2c9b486b99b6ec356e14f7de58832b3833 netfilter: ebtables: CONFIG_COMPAT: don't trust userland offsets
+  CVE-2018-1092: bf7fc655f12864b4c12d902cf60ae37a708cc344 ext4: fail ext4_iget for root directory if unallocated
+  CVE-2018-1093: f278235ce148485cdb9dc990673943addafbd577 ext4: add validity checks for bitmap block numbers
+  CVE-2018-10940: 15bad6c8291a04692b928e9037844fde6f32a798 cdrom: information leak in cdrom_ioctl_media_changed()
+  CVE-2018-1130: 109503b8cccb3b803d875b88d21d49eab921969e dccp: check sk for closed state in dccp_sendmsg()
+  CVE-2018-5803: 61079d7091f4a673a337b5d63e7e7e38ac405d37 sctp: verify size of a new chunk in _sctp_make_chunk()
+  CVE-2018-6412: e553bcf09a6390e7f52e47132b27b4574d0ad71a fbdev: Fixing arbitrary kernel leak in case FBIOGETCMAP_SPARC in sbusfb_ioctl_helper().
+  CVE-2018-7566: b5c3d49b3d5889f334d519d7a4535a3bd8632d47 ALSA: seq: Fix racy pool initializations
+  CVE-2018-7757: 2a690a408dee7a9d51b17dfe93b116bd7ab6177a scsi: libsas: fix memory leak in sas_smp_get_phy_events()
+  CVE-2018-7995: 65e38566ae2600cebb885af0b58dc8732e25ee52 x86/MCE: Serialize sysfs changes
+  CVE-2018-8822: 38643d20b4d4ac378046e51b15556f0f7dc489ea staging: ncpfs: memory corruption in ncp_read_kernel()
+  CVE-2018-8897: 5a1f747c7f58e9820ebfb6b4811934a1f48bc4fe x86/entry/64: Don't use IST entry for #BP stack
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -718,8 +735,6 @@ Outstanding CVEs:
   CVE-2017-17863: (unk) bpf: fix integer overflows 
   CVE-2017-18193: (unk) f2fs: fix a bug caused by NULL extent tree 
   CVE-2017-18204: (unk) ocfs2: should wait dio before inode lock in ocfs2_setattr() 
-  CVE-2017-18208: (unk) mm/madvise.c: fix madvise() infinite loop under special circumstances 
-  CVE-2017-18216: (unk) ocfs2: subsystem.su_mutex is required while accessing the item->ci_parent 
   CVE-2017-18241: (unk) f2fs: fix a panic caused by NULL flush_cmd_control 
   CVE-2017-18249: (unk) f2fs: fix race condition in between free nid allocator/initializer 
   CVE-2017-18255: (unk) perf/core: Fix the perf_cpu_time_max_percent check 
@@ -736,33 +751,20 @@ Outstanding CVEs:
   CVE-2017-9985: (unk) ALSA: msnd: Optimize / harden DSP and MIDI loops 
   CVE-2017-9986: (unk) sound: Retire OSS 
   CVE-2018-1000026: (unk) bnx2x: disable GSO where gso_size is too big for hardware 
-  CVE-2018-1000199: (unk) perf/hwbp: Simplify the perf-hwbp code, fix documentation 
   CVE-2018-10021: (unk) scsi: libsas: defer ata device eh commands to libata 
   CVE-2018-10087: (unk) kernel/exit.c: avoid undefined behaviour when calling wait4() 
   CVE-2018-10124: (unk) kernel/signal.c: avoid undefined behaviour in kill_something_info 
   CVE-2018-10322: (unk) xfs: enhance dinode verifier 
   CVE-2018-10323: (unk) xfs: set format back to extents if xfs_bmap_extents_to_btree 
   CVE-2018-1066: (unk) CIFS: Enable encryption during session setup phase 
-  CVE-2018-1068: (unk) netfilter: ebtables: CONFIG_COMPAT: don't trust userland offsets 
   CVE-2018-1087: (unk) kvm/x86: fix icebp instruction handling 
-  CVE-2018-1092: (unk) ext4: fail ext4_iget for root directory if unallocated 
-  CVE-2018-1093: (unk) ext4: add validity checks for bitmap block numbers 
   CVE-2018-1094: (unk) ext4: always initialize the crc32c checksum driver 
-  CVE-2018-10940: (unk) cdrom: information leak in cdrom_ioctl_media_changed() 
   CVE-2018-1118: (unk)  
   CVE-2018-1120: (unk) proc: do not access cmdline nor environ from file-backed areas 
   CVE-2018-1121: (unk)  
-  CVE-2018-1130: (unk) dccp: check sk for closed state in dccp_sendmsg() 
   CVE-2018-3639: (unk) x86/nospec: Simplify alternative_msr_write() 
   CVE-2018-5344: (unk) loop: fix concurrent lo_open/lo_release 
-  CVE-2018-5803: (unk) sctp: verify size of a new chunk in _sctp_make_chunk() 
-  CVE-2018-6412: (unk) fbdev: Fixing arbitrary kernel leak in case FBIOGETCMAP_SPARC in sbusfb_ioctl_helper(). 
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7480: (unk) blkcg: fix double free of new_blkg in blkcg_init_queue 
-  CVE-2018-7566: (unk) ALSA: seq: Fix racy pool initializations 
   CVE-2018-7755: (unk)  
-  CVE-2018-7757: (unk) scsi: libsas: fix memory leak in sas_smp_get_phy_events() 
-  CVE-2018-7995: (unk) x86/MCE: Serialize sysfs changes 
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
-  CVE-2018-8822: (unk) staging: ncpfs: memory corruption in ncp_read_kernel() 
-  CVE-2018-8897: (unk) x86/entry/64: Don't use IST entry for #BP stack 
