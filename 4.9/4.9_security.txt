@@ -408,6 +408,15 @@ CVEs fixed in 4.9.110:
 CVEs fixed in 4.9.111:
   CVE-2018-13406: 7673ca3c93414faf90fa2a3c339f1f625415fecb video: uvesafb: Fix integer overflow in allocation
 
+CVEs fixed in 4.9.112:
+  CVE-2018-10876: 5ae57329580d6ceca97559ff030a5f0e91fa66fe ext4: only look at the bg_flags field if it is valid
+  CVE-2018-10877: 87dad44faabd45683fba94443471298f8809e8a8 ext4: verify the depth of extent tree in ext4_find_extent()
+  CVE-2018-10878: cdde876fce2501828af33d5e4faa36c8919fc96a ext4: always check block group bounds in ext4_init_block_bitmap()
+  CVE-2018-10879: 9e4842f2aa6c4b4340669730c90cb6fbf630ee42 ext4: make sure bitmaps and the inode table don't overlap with bg descriptors
+  CVE-2018-10881: a5e063d348bd2ef14fff96b129749409a8991ea5 ext4: clear i_data in ext4_inode_info when removing inline data
+  CVE-2018-10882: 425dc465de3725210162da9b1e9062e86cc2de27 ext4: add more inode number paranoia checks
+  CVE-2018-10883: 8ef97ef67ce0f8fc3d32c7218e6b412e479ee2ab jbd2: don't mark block as modified if the handle is out of credits
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -449,14 +458,8 @@ Outstanding CVEs:
   CVE-2018-1000026: (unk) bnx2x: disable GSO where gso_size is too big for hardware 
   CVE-2018-10322: (unk) xfs: enhance dinode verifier 
   CVE-2018-10323: (unk) xfs: set format back to extents if xfs_bmap_extents_to_btree 
-  CVE-2018-10876: (unk)  
-  CVE-2018-10877: (unk)  
-  CVE-2018-10878: (unk)  
-  CVE-2018-10879: (unk)  
-  CVE-2018-10880: (unk)  
-  CVE-2018-10881: (unk)  
-  CVE-2018-10882: (unk)  
-  CVE-2018-10883: (unk)  
+  CVE-2018-10872: (unk)  
+  CVE-2018-10880: (unk) ext4: never move the system.data xattr out of the inode body 
   CVE-2018-1094: (unk) ext4: always initialize the crc32c checksum driver 
   CVE-2018-1121: (unk)  
   CVE-2018-12233: (unk) jfs: Fix inconsistency between memory allocation and ea_buf->max_size 
@@ -476,6 +479,7 @@ Outstanding CVEs:
   CVE-2018-13099: (unk)  
   CVE-2018-13100: (unk)  
   CVE-2018-13405: (unk) Fix up non-directory creation in SGID directories 
+  CVE-2018-3693: (unk)  
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7755: (unk)  
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 

@@ -162,6 +162,16 @@ CVEs fixed in 4.14.52:
 CVEs fixed in 4.14.53:
   CVE-2018-13406: 9aa818d42bf5f5477f66dbc941b4daddfcae290d video: uvesafb: Fix integer overflow in allocation
 
+CVEs fixed in 4.14.55:
+  CVE-2018-10876: 44a4bc970bfae625d0ec9ecdfefc88c9d93dfe6c ext4: only look at the bg_flags field if it is valid
+  CVE-2018-10877: d69a9df614fc68741efcb0fcc020f05caa99d668 ext4: verify the depth of extent tree in ext4_find_extent()
+  CVE-2018-10878: ac48bb9bc0a32f5a4432be1645b57607f8c46aa7 ext4: always check block group bounds in ext4_init_block_bitmap()
+  CVE-2018-10879: ac93c718365ac6ea9d7631641c8dec867d623491 ext4: make sure bitmaps and the inode table don't overlap with bg descriptors
+  CVE-2018-10880: 8a9ef17c0dc93def47e17b227ada95c682592a1d ext4: never move the system.data xattr out of the inode body
+  CVE-2018-10881: deb465ec750b80776cc4ac5b92b72c0a71fd4f0b ext4: clear i_data in ext4_inode_info when removing inline data
+  CVE-2018-10882: c24aab6d86640ccf321b87be6096319f55b16274 ext4: add more inode number paranoia checks
+  CVE-2018-10883: 0321e68838d7ba2528b367b879b2fcf9d96a2099 jbd2: don't mark block as modified if the handle is out of credits
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -190,14 +200,7 @@ Outstanding CVEs:
   CVE-2018-1000026: (unk) bnx2x: disable GSO where gso_size is too big for hardware 
   CVE-2018-10322: (unk) xfs: enhance dinode verifier 
   CVE-2018-10323: (unk) xfs: set format back to extents if xfs_bmap_extents_to_btree 
-  CVE-2018-10876: (unk)  
-  CVE-2018-10877: (unk)  
-  CVE-2018-10878: (unk)  
-  CVE-2018-10879: (unk)  
-  CVE-2018-10880: (unk)  
-  CVE-2018-10881: (unk)  
-  CVE-2018-10882: (unk)  
-  CVE-2018-10883: (unk)  
+  CVE-2018-10872: (unk)  
   CVE-2018-1121: (unk)  
   CVE-2018-12233: (unk) jfs: Fix inconsistency between memory allocation and ea_buf->max_size 
   CVE-2018-12714: (unk) Merge tag 'trace-v4.18-rc1' of git://git.kernel.org/pub/scm/linux/kernel/git/rostedt/linux-trace 
@@ -216,6 +219,7 @@ Outstanding CVEs:
   CVE-2018-13099: (unk)  
   CVE-2018-13100: (unk)  
   CVE-2018-13405: (unk) Fix up non-directory creation in SGID directories 
+  CVE-2018-3693: (unk)  
   CVE-2018-5703: (unk) tls: Use correct sk->sk_prot for IPV6 
   CVE-2018-7755: (unk)  
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
