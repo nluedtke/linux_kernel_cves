@@ -82,5 +82,5 @@ course be accepted.
   - Multiple commits to fix a CVE not handled
 
 [1]: https://kernsec.org/wiki/index.php/Kernel_Self_Protection_Project
-[2]: www.linuxkernelcves.com
+[2]: https://www.linuxkernelcves.com
 [3]: https://github.com/nluedtke/linux_kernel_cves/
