@@ -459,6 +459,35 @@ CVEs fixed in 3.16.57:
   CVE-2018-8897: 45dc1e88fb5a728c1f2186edafccf6581c9c99b8 x86/entry/64: Don't use IST entry for #BP stack
   CVE-2018-9518: 3b3a343e2442a4fb2730967df4e2a29f0fa66c84 NFC: llcp: Limit size of SDP URI
 
+CVEs fixed in 3.16.58:
+  CVE-2018-1000204: 582802e7c617cfb07cc15f280c128e6decbc57b8 scsi: sg: allocate with __GFP_ZERO in sg_build_indirect()
+  CVE-2018-10021: 0643adfa36b54ea5948e48383d8549ac5c2fb69e scsi: libsas: defer ata device eh commands to libata
+  CVE-2018-10323: 00fe22e3f801fd5225aeecc6bf79630ec201f8e4 xfs: set format back to extents if xfs_bmap_extents_to_btree
+  CVE-2018-10876: 9c2e1d0691bfc68ebc914043497330bd530c6ed6 ext4: only look at the bg_flags field if it is valid
+  CVE-2018-10877: 09999807edd836f8d96ca5a5b8bf007856c5f268 ext4: verify the depth of extent tree in ext4_find_extent()
+  CVE-2018-10878: e6eacb6555474a49b1aa29f4e98b38348d3c45fd ext4: always check block group bounds in ext4_init_block_bitmap()
+  CVE-2018-10879: 96e340bf132e16be02fdbd6d03c4946f824c085d ext4: make sure bitmaps and the inode table don't overlap with bg descriptors
+  CVE-2018-10880: 42a6cd12f1f0728e7c09a0c1dde8f6d9e8a5fbd6 ext4: never move the system.data xattr out of the inode body
+  CVE-2018-10881: e2e3ff3ad042fba28c0b49e9534f3b281b105c48 ext4: clear i_data in ext4_inode_info when removing inline data
+  CVE-2018-10882: f8d710be66f6f85084331734d7795a7fc80d99de ext4: add more inode number paranoia checks
+  CVE-2018-10883: 005c9f88b625b204e5f80d0241cbf38963f263bf jbd2: don't mark block as modified if the handle is out of credits
+  CVE-2018-10902: c95e0783eab0d1f31c7f8baa6e4ff8b0b8e7eb72 ALSA: rawmidi: Change resized buffers atomically
+  CVE-2018-12233: 63bd05e42208647417f421504ea70db00f046d21 jfs: Fix inconsistency between memory allocation and ea_buf->max_size
+  CVE-2018-13093: 7744e6b42712dd27e2457e1eb03b1c73920364c2 xfs: validate cached inodes are free when allocated
+  CVE-2018-13094: 991ec538e6683859b065467b8406c7e57526e212 xfs: don't call xfs_da_shrink_inode with NULL bp
+  CVE-2018-13405: 0b3369840cd61c23e2b9241093737b4c395cb406 Fix up non-directory creation in SGID directories
+  CVE-2018-13406: ab6d43c1c7c298cacaae180b2232fe8abc18075f video: uvesafb: Fix integer overflow in allocation
+  CVE-2018-14609: 7cd49306b9e47333e097ea586feef596ba708771 btrfs: relocation: Only remove reloc rb_trees if reloc control has been initialized
+  CVE-2018-14617: 5c8e78e811123b61c8a194a28b48df984b540ec7 hfsplus: fix NULL dereference in hfsplus_lookup()
+  CVE-2018-14734: c62b25af5f51f49e9f93f828cc38a82c23e8a0c5 infiniband: fix a possible use-after-free bug
+  CVE-2018-15572: ba4a6140b84f5a86be14c2511431004bc4b9be69 x86/speculation: Protect against userspace-userspace spectreRSB
+  CVE-2018-16276: 189254a6aa0cc823b55e624ba77ad3bd0637bbd9 USB: yurex: fix out-of-bounds uaccess in read handler
+  CVE-2018-16658: 585e054220cd820aeac2436c29ff9c06e483dc83 cdrom: Fix info leak/OOB read in cdrom_ioctl_drive_status
+  CVE-2018-17182: 536c4d174c0402c5fbf6f7a995f7c9539d124410 mm: get rid of vmacache_flush_all() entirely
+  CVE-2018-5814: 896b00bd9c66cc72ae6800ff6dba65a9e83ea5fd usbip: usbip_host: fix NULL-ptr deref and use-after-free errors
+  CVE-2018-9363: 556fa3e5feba266ebfb14df4509ef0a69b0b1f24 Bluetooth: hidp: buffer overflow in hidp_process_report
+  CVE-2018-9422: 862b19bc43313fadad14334760d447f715003500 futex: Remove requirement for lock_page() in get_futex_key()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -530,46 +559,28 @@ Outstanding CVEs:
   CVE-2017-9985: (unk) ALSA: msnd: Optimize / harden DSP and MIDI loops 
   CVE-2017-9986: (unk) sound: Retire OSS 
   CVE-2018-1000026: (unk) bnx2x: disable GSO where gso_size is too big for hardware 
-  CVE-2018-1000204: (unk) scsi: sg: allocate with __GFP_ZERO in sg_build_indirect() 
-  CVE-2018-10021: (unk) scsi: libsas: defer ata device eh commands to libata 
   CVE-2018-10087: (unk) kernel/exit.c: avoid undefined behaviour when calling wait4() 
   CVE-2018-10124: (unk) kernel/signal.c: avoid undefined behaviour in kill_something_info 
   CVE-2018-10322: (unk) xfs: enhance dinode verifier 
-  CVE-2018-10323: (unk) xfs: set format back to extents if xfs_bmap_extents_to_btree 
   CVE-2018-1066: (unk) CIFS: Enable encryption during session setup phase 
-  CVE-2018-10876: (unk) ext4: only look at the bg_flags field if it is valid 
-  CVE-2018-10877: (unk) ext4: verify the depth of extent tree in ext4_find_extent() 
-  CVE-2018-10878: (unk) ext4: always check block group bounds in ext4_init_block_bitmap() 
-  CVE-2018-10879: (unk) ext4: make sure bitmaps and the inode table don't overlap with bg descriptors 
-  CVE-2018-10880: (unk) ext4: never move the system.data xattr out of the inode body 
-  CVE-2018-10881: (unk) ext4: clear i_data in ext4_inode_info when removing inline data 
-  CVE-2018-10882: (unk) ext4: add more inode number paranoia checks 
-  CVE-2018-10883: (unk) jbd2: don't mark block as modified if the handle is out of credits 
-  CVE-2018-10902: (unk) ALSA: rawmidi: Change resized buffers atomically 
   CVE-2018-10938: (unk) Cipso: cipso_v4_optptr enter infinite loop 
   CVE-2018-1094: (unk) ext4: always initialize the crc32c checksum driver 
   CVE-2018-1120: (unk) proc: do not access cmdline nor environ from file-backed areas 
   CVE-2018-1121: (unk)  
   CVE-2018-1128: (unk) libceph: add authorizer challenge 
   CVE-2018-1129: (unk) libceph: implement CEPHX_V2 calculation mode 
-  CVE-2018-12233: (unk) jfs: Fix inconsistency between memory allocation and ea_buf->max_size 
   CVE-2018-12896: (unk) posix-timers: Sanitize overrun handling 
   CVE-2018-12928: (unk)  
   CVE-2018-12929: (unk)  
   CVE-2018-12930: (unk)  
   CVE-2018-12931: (unk)  
   CVE-2018-13053: (unk) alarmtimer: Prevent overflow for relative nanosleep 
-  CVE-2018-13093: (unk) xfs: validate cached inodes are free when allocated 
-  CVE-2018-13094: (unk) xfs: don't call xfs_da_shrink_inode with NULL bp 
   CVE-2018-13095: (unk) xfs: More robust inode extent count validation 
   CVE-2018-13096: (unk) f2fs: fix to do sanity check with node footer and iblocks 
   CVE-2018-13097: (unk) f2fs: fix to do sanity check with user_block_count 
   CVE-2018-13098: (unk) f2fs: fix to do sanity check with extra_attr feature 
   CVE-2018-13099: (unk) f2fs: fix to do sanity check with reserved blkaddr of inline inode 
   CVE-2018-13100: (unk) f2fs: fix to do sanity check with secs_per_zone 
-  CVE-2018-13405: (unk) Fix up non-directory creation in SGID directories 
-  CVE-2018-13406: (unk) video: uvesafb: Fix integer overflow in allocation 
-  CVE-2018-14609: (unk) btrfs: relocation: Only remove reloc rb_trees if reloc control has been initialized 
   CVE-2018-14610: (unk) btrfs: Check that each block group has corresponding chunk at mount time 
   CVE-2018-14611: (unk) btrfs: validate type when reading a chunk 
   CVE-2018-14612: (unk) btrfs: tree-checker: Detect invalid and empty essential trees 
@@ -577,23 +588,16 @@ Outstanding CVEs:
   CVE-2018-14614: (unk) f2fs: fix to do sanity check with cp_pack_start_sum 
   CVE-2018-14615: (unk) f2fs: fix to do sanity check with i_extra_isize 
   CVE-2018-14616: (unk) f2fs: fix to do sanity check with block address in main area v2 
-  CVE-2018-14617: (unk) hfsplus: fix NULL dereference in hfsplus_lookup() 
   CVE-2018-14625: (unk)  
   CVE-2018-14633: (unk)  
   CVE-2018-14634: (unk) exec: Limit arg stack to at most 75% of _STK_LIM 
-  CVE-2018-14734: (unk) infiniband: fix a possible use-after-free bug 
-  CVE-2018-15572: (unk) x86/speculation: Protect against userspace-userspace spectreRSB 
-  CVE-2018-16276: (unk) USB: yurex: fix out-of-bounds uaccess in read handler 
   CVE-2018-16597: (unk) ovl: modify ovl_permission() to do checks on two inodes 
-  CVE-2018-16658: (unk) cdrom: Fix info leak/OOB read in cdrom_ioctl_drive_status 
-  CVE-2018-17182: (unk) mm: get rid of vmacache_flush_all() entirely 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3639: (unk) x86/nospec: Simplify alternative_msr_write() 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3693: (unk)  
   CVE-2018-5344: (unk) loop: fix concurrent lo_open/lo_release 
   CVE-2018-5391: (unk) ip: discard IPv4 datagrams with overlapping segments. 
-  CVE-2018-5814: (unk) usbip: usbip_host: fix NULL-ptr deref and use-after-free errors 
   CVE-2018-5953: (unk) printk: hash addresses printed with %p 
   CVE-2018-5995: (unk) printk: hash addresses printed with %p 
   CVE-2018-6554: (unk) staging: irda: remove the irda network stack and drivers 
@@ -603,7 +607,5 @@ Outstanding CVEs:
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
   CVE-2018-7755: (unk)  
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
-  CVE-2018-9363: (unk) Bluetooth: hidp: buffer overflow in hidp_process_report 
-  CVE-2018-9422: (unk) futex: Remove requirement for lock_page() in get_futex_key() 
   CVE-2018-9465: (unk) binder: fix proc->files use-after-free 
   CVE-2018-9516: (unk) HID: debug: check length before copy_to_user() 
