@@ -544,6 +544,18 @@ CVEs fixed in 3.18.123:
   CVE-2018-14609: 56f338b39513de39679cf0c2da704d4803c9a0d5 btrfs: relocation: Only remove reloc rb_trees if reloc control has been initialized
   CVE-2018-17182: 2b8f74c8f0a4aab0a20b9e77fdc3d17e8f2405dd mm: get rid of vmacache_flush_all() entirely
 
+CVEs fixed in 3.18.124:
+  CVE-2018-10876: 8d419749b27419caf8eb914cd2d6b7fc19efc316 ext4: only look at the bg_flags field if it is valid
+  CVE-2018-10877: 683626073ac0f1ded012d8861b189350147eb86b ext4: verify the depth of extent tree in ext4_find_extent()
+  CVE-2018-10878: 6f6da33decb7d9de01447638ca737a846bf0181b ext4: always check block group bounds in ext4_init_block_bitmap()
+  CVE-2018-10880: fd2634366fca1f93e7d4cf36c8a919dfe11cd0ec ext4: never move the system.data xattr out of the inode body
+  CVE-2018-10882: 292dc9673821842c0762b5d095a05e354e795392 ext4: add more inode number paranoia checks
+  CVE-2018-10883: 524100251d15d4dc491671b84854017327ff2dba jbd2: don't mark block as modified if the handle is out of credits
+  CVE-2018-13053: f497869a6feab016c2dfd58bf80decfe57348ed9 alarmtimer: Prevent overflow for relative nanosleep
+  CVE-2018-14633: d31152ba0f282348c9ffbd8436b7a3622064aea6 scsi: target: iscsi: Use hex2bin instead of a re-implementation
+  CVE-2018-18021: d26e09111cb7b9c3727c4621ee241cb408d47a7d arm64: KVM: Tighten guest core register access from userspace
+  CVE-2018-7755: 0facefd1d7db43e1c220405ca773adb7b97975a6 floppy: Do not copy a kernel pointer to user memory in FDGETPRM ioctl
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -670,12 +682,6 @@ Outstanding CVEs:
   CVE-2018-10322: (unk) xfs: enhance dinode verifier 
   CVE-2018-10323: (unk) xfs: set format back to extents if xfs_bmap_extents_to_btree 
   CVE-2018-1066: (unk) CIFS: Enable encryption during session setup phase 
-  CVE-2018-10876: (unk) ext4: only look at the bg_flags field if it is valid 
-  CVE-2018-10877: (unk) ext4: verify the depth of extent tree in ext4_find_extent() 
-  CVE-2018-10878: (unk) ext4: always check block group bounds in ext4_init_block_bitmap() 
-  CVE-2018-10880: (unk) ext4: never move the system.data xattr out of the inode body 
-  CVE-2018-10882: (unk) ext4: add more inode number paranoia checks 
-  CVE-2018-10883: (unk) jbd2: don't mark block as modified if the handle is out of credits 
   CVE-2018-1094: (unk) ext4: always initialize the crc32c checksum driver 
   CVE-2018-1120: (unk) proc: do not access cmdline nor environ from file-backed areas 
   CVE-2018-1121: (unk)  
@@ -686,7 +692,6 @@ Outstanding CVEs:
   CVE-2018-12929: (unk)  
   CVE-2018-12930: (unk)  
   CVE-2018-12931: (unk)  
-  CVE-2018-13053: (unk) alarmtimer: Prevent overflow for relative nanosleep 
   CVE-2018-13093: (unk) xfs: validate cached inodes are free when allocated 
   CVE-2018-13094: (unk) xfs: don't call xfs_da_shrink_inode with NULL bp 
   CVE-2018-13095: (unk) xfs: More robust inode extent count validation 
@@ -704,12 +709,10 @@ Outstanding CVEs:
   CVE-2018-14616: (unk) f2fs: fix to do sanity check with block address in main area v2 
   CVE-2018-14617: (unk) hfsplus: fix NULL dereference in hfsplus_lookup() 
   CVE-2018-14625: (unk)  
-  CVE-2018-14633: (unk) scsi: target: iscsi: Use hex2bin instead of a re-implementation 
   CVE-2018-15572: (unk) x86/speculation: Protect against userspace-userspace spectreRSB 
   CVE-2018-16597: (unk) ovl: modify ovl_permission() to do checks on two inodes 
   CVE-2018-17972: (unk)  
   CVE-2018-17977: (unk)  
-  CVE-2018-18021: (unk) arm64: KVM: Tighten guest core register access from userspace 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3639: (unk) x86/nospec: Simplify alternative_msr_write() 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
@@ -722,7 +725,6 @@ Outstanding CVEs:
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7480: (unk) blkcg: fix double free of new_blkg in blkcg_init_queue 
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
-  CVE-2018-7755: (unk) floppy: Do not copy a kernel pointer to user memory in FDGETPRM ioctl 
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
   CVE-2018-8897: (unk) x86/entry/64: Don't use IST entry for #BP stack 
   CVE-2018-9465: (unk) binder: fix proc->files use-after-free 
