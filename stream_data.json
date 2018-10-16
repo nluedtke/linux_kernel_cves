@@ -1389,6 +1389,10 @@
                 "cmt_msg": "ACPI: sbshc: remove raw pointer from printk() message", 
                 "cmt_id": "0a0e3ffb0a1445a756cc91cd9f03b1ac3abd2e32"
             }, 
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()", 
+                "cmt_id": "99a223bcec506dbd8de7aa3c16995b71d3ca7bb6"
+            }, 
             "CVE-2017-18344": {
                 "cmt_msg": "posix-timer: Properly check sigevent->sigev_notify", 
                 "cmt_id": "28ef9653c18539f8123dd668ad3b28289ec0514a"
@@ -2754,6 +2758,9 @@
             "CVE-2017-14106": {
                 "cmt_msg": "tcp: initialize rcv_mss to TCP_MIN_MSS instead of 0"
             }, 
+            "CVE-2018-10675": {
+                "cmt_msg": "mm/mempolicy: fix use after free when calling get_mempolicy"
+            }, 
             "CVE-2017-18218": {
                 "cmt_msg": "net: hns: Fix a skb used after free bug"
             }, 
@@ -3096,8 +3103,8 @@
             "CVE-2018-5344": {
                 "cmt_msg": "loop: fix concurrent lo_open/lo_release"
             }, 
-            "CVE-2018-10675": {
-                "cmt_msg": "mm/mempolicy: fix use after free when calling get_mempolicy"
+            "CVE-2017-16643": {
+                "cmt_msg": "Input: gtco - fix potential out-of-bound access"
             }, 
             "CVE-2018-10323": {
                 "cmt_msg": "xfs: set format back to extents if xfs_bmap_extents_to_btree"
@@ -3144,8 +3151,8 @@
             "CVE-2017-16644": {
                 "cmt_msg": "media: hdpvr: Fix an error handling path in hdpvr_probe()"
             }, 
-            "CVE-2017-16643": {
-                "cmt_msg": "Input: gtco - fix potential out-of-bound access"
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()"
             }, 
             "CVE-2017-16649": {
                 "cmt_msg": "net: cdc_ether: fix divide by 0 on bad descriptors"
@@ -5845,37 +5852,25 @@
             }
         }, 
         "4.1.50": {
-            "CVE-2017-17741": {
-                "cmt_msg": "KVM: Fix stack-out-of-bounds read in write_mmio", 
-                "cmt_id": "bec1dbb0f0a93d5eb9d6b2741ead4156408d8150"
-            }, 
-            "CVE-2017-17448": {
-                "cmt_msg": "netfilter: nfnetlink_cthelper: Add missing permission checks", 
-                "cmt_id": "6d752a482cf7ce18ca96abaf0a159e801d4c38e8"
-            }, 
-            "CVE-2018-1000004": {
-                "cmt_msg": "ALSA: seq: Make ioctls race-free", 
-                "cmt_id": "f8a38ab4cd9624fc5ac8a7f965c7b20f5b62c03c"
-            }, 
-            "CVE-2017-16913": {
-                "cmt_msg": "usbip: fix stub_rx: harden CMD_SUBMIT path to handle malicious input", 
-                "cmt_id": "41ab9559b047a8a3f958a89f0202772a1aeaf4e4"
-            }, 
-            "CVE-2017-16912": {
-                "cmt_msg": "usbip: fix stub_rx: get_pipe() to validate endpoint number", 
-                "cmt_id": "fcd31102e7ff3c83c6a6cda08156393e18c5e8f3"
-            }, 
-            "CVE-2017-16911": {
-                "cmt_msg": "usbip: prevent vhci_hcd driver from leaking a socket pointer address", 
-                "cmt_id": "8c2b2e645aa47c2e9910e168398f7d28d31a0dc3"
-            }, 
-            "CVE-2017-8824": {
-                "cmt_msg": "dccp: CVE-2017-8824: use-after-free in DCCP code", 
-                "cmt_id": "203e5dcc6edbe7248c9800689da3dd316f4c434a"
-            }, 
             "CVE-2018-7566": {
                 "cmt_msg": "ALSA: seq: Fix racy pool initializations", 
                 "cmt_id": "e78748b40e887c6e544dab71653858c370e283ea"
+            }, 
+            "CVE-2018-5750": {
+                "cmt_msg": "ACPI: sbshc: remove raw pointer from printk() message", 
+                "cmt_id": "4e5d88a911f6c610afe11b36c9b3b36f8928daf7"
+            }, 
+            "CVE-2016-9793": {
+                "cmt_msg": "net: avoid signed overflows for SO_{SND|RCV}BUFFORCE", 
+                "cmt_id": "f99fb439e6aff4e9f8b91a80d48b2a2d97aa2248"
+            }, 
+            "CVE-2018-5873": {
+                "cmt_msg": "nsfs: mark dentry with DCACHE_RCUACCESS", 
+                "cmt_id": "2ce8a62d862e3bcd16d12d6d7d71c0a343f4f99a"
+            }, 
+            "CVE-2017-17741": {
+                "cmt_msg": "KVM: Fix stack-out-of-bounds read in write_mmio", 
+                "cmt_id": "bec1dbb0f0a93d5eb9d6b2741ead4156408d8150"
             }, 
             "CVE-2017-16538": {
                 "cmt_msg": "media: dvb-usb-v2: lmedm04: Improve logic checking of warm start", 
@@ -5893,17 +5888,9 @@
                 "cmt_msg": "staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl", 
                 "cmt_id": "700dbec6cafafbe5e018a90e8e92a4762c19884d"
             }, 
-            "CVE-2018-5750": {
-                "cmt_msg": "ACPI: sbshc: remove raw pointer from printk() message", 
-                "cmt_id": "4e5d88a911f6c610afe11b36c9b3b36f8928daf7"
-            }, 
-            "CVE-2018-6927": {
-                "cmt_msg": "futex: Prevent overflow by strengthen input validation", 
-                "cmt_id": "c3e715e4a45301380a1ae1f677de2f1a428b6349"
-            }, 
-            "CVE-2016-10318": {
-                "cmt_msg": "fscrypto: add authorization check for setting encryption policy", 
-                "cmt_id": "e68557814c7e9e4943caca924ff5537952bb3b4e"
+            "CVE-2017-17448": {
+                "cmt_msg": "netfilter: nfnetlink_cthelper: Add missing permission checks", 
+                "cmt_id": "6d752a482cf7ce18ca96abaf0a159e801d4c38e8"
             }, 
             "CVE-2017-17449": {
                 "cmt_msg": "netlink: Add netns check on taps", 
@@ -5913,21 +5900,45 @@
                 "cmt_msg": "posix-timer: Properly check sigevent->sigev_notify", 
                 "cmt_id": "16cd05f25489459d10035ffab9cb7391512f1437"
             }, 
-            "CVE-2016-9793": {
-                "cmt_msg": "net: avoid signed overflows for SO_{SND|RCV}BUFFORCE", 
-                "cmt_id": "f99fb439e6aff4e9f8b91a80d48b2a2d97aa2248"
+            "CVE-2016-10318": {
+                "cmt_msg": "fscrypto: add authorization check for setting encryption policy", 
+                "cmt_id": "e68557814c7e9e4943caca924ff5537952bb3b4e"
+            }, 
+            "CVE-2018-1000004": {
+                "cmt_msg": "ALSA: seq: Make ioctls race-free", 
+                "cmt_id": "f8a38ab4cd9624fc5ac8a7f965c7b20f5b62c03c"
+            }, 
+            "CVE-2017-16913": {
+                "cmt_msg": "usbip: fix stub_rx: harden CMD_SUBMIT path to handle malicious input", 
+                "cmt_id": "41ab9559b047a8a3f958a89f0202772a1aeaf4e4"
+            }, 
+            "CVE-2017-16912": {
+                "cmt_msg": "usbip: fix stub_rx: get_pipe() to validate endpoint number", 
+                "cmt_id": "fcd31102e7ff3c83c6a6cda08156393e18c5e8f3"
+            }, 
+            "CVE-2017-16911": {
+                "cmt_msg": "usbip: prevent vhci_hcd driver from leaking a socket pointer address", 
+                "cmt_id": "8c2b2e645aa47c2e9910e168398f7d28d31a0dc3"
             }, 
             "CVE-2018-5344": {
                 "cmt_msg": "loop: fix concurrent lo_open/lo_release", 
                 "cmt_id": "f3ddd4df852f8c2ed11d09086b64a3be76ea2aed"
             }, 
+            "CVE-2018-6927": {
+                "cmt_msg": "futex: Prevent overflow by strengthen input validation", 
+                "cmt_id": "c3e715e4a45301380a1ae1f677de2f1a428b6349"
+            }, 
+            "CVE-2017-8824": {
+                "cmt_msg": "dccp: CVE-2017-8824: use-after-free in DCCP code", 
+                "cmt_id": "203e5dcc6edbe7248c9800689da3dd316f4c434a"
+            }, 
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()", 
+                "cmt_id": "1f338384b46b16f9682c8e01f8d158e90e5d6cc2"
+            }, 
             "CVE-2017-17450": {
                 "cmt_msg": "netfilter: xt_osf: Add missing permission checks", 
                 "cmt_id": "6a45beb377097053f1b293db3d0e01f35b3a7cbf"
-            }, 
-            "CVE-2018-5873": {
-                "cmt_msg": "nsfs: mark dentry with DCACHE_RCUACCESS", 
-                "cmt_id": "2ce8a62d862e3bcd16d12d6d7d71c0a343f4f99a"
             }
         }, 
         "4.1.51": {
@@ -10381,6 +10392,9 @@
             "CVE-2018-7273": {
                 "cmt_msg": "printk: hash addresses printed with %p"
             }, 
+            "CVE-2018-10675": {
+                "cmt_msg": "mm/mempolicy: fix use after free when calling get_mempolicy"
+            }, 
             "CVE-2017-14991": {
                 "cmt_msg": "scsi: sg: fixup infoleak when using SG_GET_REQUEST_TABLE"
             }, 
@@ -10534,8 +10548,8 @@
             "CVE-2017-15116": {
                 "cmt_msg": "crypto: rng - Remove old low-level rng interface"
             }, 
-            "CVE-2018-10675": {
-                "cmt_msg": "mm/mempolicy: fix use after free when calling get_mempolicy"
+            "CVE-2017-16643": {
+                "cmt_msg": "Input: gtco - fix potential out-of-bound access"
             }, 
             "CVE-2015-4001": {
                 "cmt_msg": "ozwpan: Use unsigned ints to prevent heap overflow"
@@ -10591,8 +10605,8 @@
             "CVE-2016-1583": {
                 "cmt_msg": "proc: prevent stacking filesystems on top"
             }, 
-            "CVE-2017-16643": {
-                "cmt_msg": "Input: gtco - fix potential out-of-bound access"
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()"
             }, 
             "CVE-2017-13220": {
                 "cmt_msg": "Bluetooth: hidp_connection_add() unsafe use of l2cap_pi()"
@@ -11544,6 +11558,10 @@
             "CVE-2017-5754": {
                 "cmt_msg": "x86/cpufeatures: Add Intel feature bits for Speculation Control", 
                 "cmt_id": "40532f65cccc5056b50cf1ab07a9a41445b24aa8"
+            }, 
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()", 
+                "cmt_id": "9692602ab850eec484d8cc5a740803d34f00016c"
             }
         }, 
         "4.9.82": {
@@ -13700,6 +13718,9 @@
             "CVE-2018-7492": {
                 "cmt_msg": "rds: Fix NULL pointer dereference in __rds_rdma_map"
             }, 
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()"
+            }, 
             "CVE-2017-13220": {
                 "cmt_msg": "Bluetooth: hidp_connection_add() unsafe use of l2cap_pi()"
             }, 
@@ -14903,6 +14924,9 @@
             "CVE-2017-14106": {
                 "cmt_msg": "tcp: initialize rcv_mss to TCP_MIN_MSS instead of 0"
             }, 
+            "CVE-2018-10675": {
+                "cmt_msg": "mm/mempolicy: fix use after free when calling get_mempolicy"
+            }, 
             "CVE-2017-18218": {
                 "cmt_msg": "net: hns: Fix a skb used after free bug"
             }, 
@@ -15287,8 +15311,8 @@
             "CVE-2018-5344": {
                 "cmt_msg": "loop: fix concurrent lo_open/lo_release"
             }, 
-            "CVE-2018-10675": {
-                "cmt_msg": "mm/mempolicy: fix use after free when calling get_mempolicy"
+            "CVE-2017-16643": {
+                "cmt_msg": "Input: gtco - fix potential out-of-bound access"
             }, 
             "CVE-2018-10323": {
                 "cmt_msg": "xfs: set format back to extents if xfs_bmap_extents_to_btree"
@@ -15347,8 +15371,8 @@
             "CVE-2017-16644": {
                 "cmt_msg": "media: hdpvr: Fix an error handling path in hdpvr_probe()"
             }, 
-            "CVE-2017-16643": {
-                "cmt_msg": "Input: gtco - fix potential out-of-bound access"
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()"
             }, 
             "CVE-2017-16649": {
                 "cmt_msg": "net: cdc_ether: fix divide by 0 on bad descriptors"
@@ -17532,6 +17556,9 @@
             }, 
             "CVE-2017-16646": {
                 "cmt_msg": "media: dib0700: fix invalid dvb_detach argument"
+            }, 
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()"
             }, 
             "CVE-2015-3339": {
                 "cmt_msg": "fs: take i_mutex during prepare_binprm for set[ug]id executables"
@@ -20110,6 +20137,9 @@
             "CVE-2013-1819": {
                 "cmt_msg": "xfs: fix _xfs_buf_find oops on blocks beyond the filesystem end"
             }, 
+            "CVE-2014-7975": {
+                "cmt_msg": "fs: Add a missing permission check to do_umount"
+            }, 
             "CVE-2017-1000": {
                 "cmt_msg": "udp: consistently apply ufo or fragmentation"
             }, 
@@ -20179,8 +20209,8 @@
             "CVE-2014-7970": {
                 "cmt_msg": "mnt: Prevent pivot_root from creating a loop in the mount tree"
             }, 
-            "CVE-2014-7975": {
-                "cmt_msg": "fs: Add a missing permission check to do_umount"
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()"
             }, 
             "CVE-2015-3332": {
                 "cmt_msg": "tcp: Fix crash in TCP Fast Open"
@@ -21551,25 +21581,29 @@
             }
         }, 
         "4.4.116": {
-            "CVE-2017-18344": {
-                "cmt_msg": "posix-timer: Properly check sigevent->sigev_notify", 
-                "cmt_id": "77f56f5d39e95a152a755d53b0d870b92fbf466b"
+            "CVE-2018-5873": {
+                "cmt_msg": "nsfs: mark dentry with DCACHE_RCUACCESS", 
+                "cmt_id": "49ffe04fcdf29c8925344bce314d9398b2d7743d"
             }, 
             "CVE-2017-8824": {
                 "cmt_msg": "dccp: CVE-2017-8824: use-after-free in DCCP code", 
                 "cmt_id": "3196c1515ea683bb6f95673feb2998f605ab581d"
             }, 
-            "CVE-2018-5750": {
-                "cmt_msg": "ACPI: sbshc: remove raw pointer from printk() message", 
-                "cmt_id": "591060a7a0a09cbaa5b6c04bd309966586aa9d2e"
-            }, 
             "CVE-2017-16538": {
                 "cmt_msg": "media: dvb-usb-v2: lmedm04: Improve logic checking of warm start", 
                 "cmt_id": "ca48c81cff0e5b56e525414b75990bcb64b7cbb9"
             }, 
-            "CVE-2018-5873": {
-                "cmt_msg": "nsfs: mark dentry with DCACHE_RCUACCESS", 
-                "cmt_id": "49ffe04fcdf29c8925344bce314d9398b2d7743d"
+            "CVE-2018-5750": {
+                "cmt_msg": "ACPI: sbshc: remove raw pointer from printk() message", 
+                "cmt_id": "591060a7a0a09cbaa5b6c04bd309966586aa9d2e"
+            }, 
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()", 
+                "cmt_id": "33813d43dd593e1c32c567c75483233212b825ae"
+            }, 
+            "CVE-2017-18344": {
+                "cmt_msg": "posix-timer: Properly check sigevent->sigev_notify", 
+                "cmt_id": "77f56f5d39e95a152a755d53b0d870b92fbf466b"
             }
         }, 
         "4.4.117": {
@@ -23350,6 +23384,9 @@
             }, 
             "CVE-2017-16650": {
                 "cmt_msg": "net: qmi_wwan: fix divide by 0 on bad descriptors"
+            }, 
+            "CVE-2017-13305": {
+                "cmt_msg": "KEYS: encrypted: fix buffer overread in valid_master_desc()"
             }, 
             "CVE-2017-1000": {
                 "cmt_msg": "udp: consistently apply ufo or fragmentation"
