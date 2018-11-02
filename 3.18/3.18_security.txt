@@ -128,6 +128,9 @@ CVEs fixed in 3.18.28:
   CVE-2016-2085: 6702fc0c98d40442f9e74e10c499d68cd96455df EVM: Use crypto_memneq() for digest comparisons
   CVE-2016-2384: b4dc014d417de972afd85248c8027380f1166317 ALSA: usb-audio: avoid freeing umidi object twice
 
+CVEs fixed in 3.18.29:
+  CVE-2015-8553: 3d0ec7c06a1994f71ef7820185a71b7c1d8bbb42 xen/pciback: Don't allow MSI-X ops if PCI_COMMAND_MEMORY is not set.
+
 CVEs fixed in 3.18.30:
   CVE-2016-3044: c518a1b39eda7356aebfd514cd8164ed909d995f KVM: PPC: Book3S HV: Sanitize special-purpose register values on guest exit
 
@@ -555,6 +558,7 @@ CVEs fixed in 3.18.124:
   CVE-2018-10883: 524100251d15d4dc491671b84854017327ff2dba jbd2: don't mark block as modified if the handle is out of credits
   CVE-2018-13053: f497869a6feab016c2dfd58bf80decfe57348ed9 alarmtimer: Prevent overflow for relative nanosleep
   CVE-2018-14633: d31152ba0f282348c9ffbd8436b7a3622064aea6 scsi: target: iscsi: Use hex2bin instead of a re-implementation
+  CVE-2018-17972: ea20fab573d999205f8b1438d792486dcf76aa4c proc: restrict kernel stack dumps to root
   CVE-2018-18021: d26e09111cb7b9c3727c4621ee241cb408d47a7d arm64: KVM: Tighten guest core register access from userspace
   CVE-2018-7755: 0facefd1d7db43e1c220405ca773adb7b97975a6 floppy: Do not copy a kernel pointer to user memory in FDGETPRM ioctl
 
@@ -586,7 +590,6 @@ Outstanding CVEs:
   CVE-2015-8550: (unk) xen: Add RING_COPY_REQUEST() 
   CVE-2015-8551: (unk) xen/pciback: Return error on XEN_PCI_OP_enable_msi when device has MSI or MSI-X enabled 
   CVE-2015-8552: (unk) xen/pciback: Return error on XEN_PCI_OP_enable_msi when device has MSI or MSI-X enabled 
-  CVE-2015-8553: (unk)  
   CVE-2015-8709: (unk) mm: Add a user_ns owner to mm_struct and fix ptrace permission checks 
   CVE-2015-8767: (unk) sctp: Prevent soft lockup when sctp_accept() is called during a timeout event 
   CVE-2015-8830: (unk) aio: lift iov_iter_init() into aio_setup_..._rw() 
@@ -710,16 +713,12 @@ Outstanding CVEs:
   CVE-2018-14615: (unk) f2fs: fix to do sanity check with i_extra_isize 
   CVE-2018-14616: (unk) f2fs: fix to do sanity check with block address in main area v2 
   CVE-2018-14617: (unk) hfsplus: fix NULL dereference in hfsplus_lookup() 
-  CVE-2018-14625: (unk)  
   CVE-2018-15572: (unk) x86/speculation: Protect against userspace-userspace spectreRSB 
   CVE-2018-16597: (unk) ovl: modify ovl_permission() to do checks on two inodes 
-  CVE-2018-17972: (unk)  
   CVE-2018-17977: (unk)  
   CVE-2018-18281: (unk) mremap: properly flush TLB before releasing the page 
-  CVE-2018-18653: (unk)  
   CVE-2018-18690: (unk) xfs: don't fail when converting shortform attr to long form during ATTR_REPLACE 
   CVE-2018-18710: (unk) cdrom: fix improper type cast, which can leat to information leak. 
-  CVE-2018-3574: (unk)  
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3639: (unk) x86/nospec: Simplify alternative_msr_write() 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
