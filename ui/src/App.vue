@@ -24,7 +24,6 @@
       </div>
     </div>
     <div class="container">
-      <sidebar></sidebar>
       <router-view/>
     </div>
   </div>
@@ -32,7 +31,6 @@
 
 <script>
 import axios from 'axios'
-import sidebar from './components/sidebar'
 
 export default {
   name: 'App',
@@ -47,11 +45,7 @@ export default {
       contents: [],
       errors: [],
       limit: 10,
-      sidebar: 'sidebar'
     }
-  },
-  components: {
-    sidebar
   },
   created () {
     axios.get(`https://api.github.com/repos/nluedtke/linux_kernel_cves/contents`)
