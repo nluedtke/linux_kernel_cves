@@ -2,8 +2,13 @@
   <div class="hello">
     <div id="content">
       <h3 class="cve-headline">{{ contents.id  }}</h3>
-      <p><em>{{ contents.cmt_msg }}</em></p>
+      <div class="distro-links">
+        <p><span v-for="(item, key) in contents.ref_urls" v-bind:key="key" class="distro-version-fixed">
+          <a :href="item" target="_blank">{{key}}<img class="external-link" src="../assets/external-link.svg"></a></span>
+        </p>
+      </div>
       <span v-if="contents.cwe" class="tag">{{ contents.cwe }}</span>
+      <p><em>{{ contents.cmt_msg }}</em></p>
       <h4>Affected Versions</h4>
       <p class="versions">{{contents.affected_versions}}</p>
       <h4>Hashes</h4>
@@ -42,7 +47,7 @@ export default {
   },
 
   watch: {
-    '$route' (to, from) {
+    '$route' () {
       this.load()
     }
   },
@@ -75,7 +80,6 @@ export default {
           this.stream = stream
         })
         .catch(e => {
-          console.log('Error loading stream.')
           this.stream = ''
           this.errors.push(e)
         })
@@ -115,11 +119,45 @@ ul {
   font-size: 1.2em;
   white-space: pre;
 }
+.external-link {
+  height: 14px;
+  width: 14px;
+  margin-left: 3px;
+  vertical-align: text-top;
+}
 .tag {
+  border: 2px solid #CE4513;
+  background-color: white;
+  color: #CE4513;
+  margin-right: 8px;
+  padding: .5em 1em;
+  font-size: 12px;
+  font-weight: 700;
+}
+.distro-version-fixed a, .disro-version-unfixed a, .distro-version-unknown a {
+  color:white;
+  text-decoration: none;
+}
+.distro-version-fixed {
+  background-color: #42b983f5;
+  color: white;
+  padding: .5em 1em;
+  font-size: 12px;
+  margin-right: 8px;
+}
+.distro-version-unfixed {
   background-color: #CE4513;
   color: white;
   padding: .5em 1em;
   font-size: 12px;
+  margin-right: 8px;
+}
+.distro-version-unknown {
+  background-color: #b1b1b1;
+  color: white;
+  padding: .5em 1em;
+  font-size: 12px;
+  margin-right: 8px;
 }
 @media only screen and (max-width : 700px) {
 /* Styles */
