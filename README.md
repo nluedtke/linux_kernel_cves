@@ -43,8 +43,7 @@ by default it is assumed to present in all streams after it was introduced.
 The process for generating these documents is focused on being as 
 automated as possible. Below is the general outline of steps.
 
-  1) Take list of all kernel CVEs (Currently limited to after 2004, see 
-  [#3](../../issues/3)).
+  1) Take list of all kernel CVEs
   2) If the issue is marked as Vendor specific, ignore it.
   3) Get the Breaking/Fixing Commits. This is retrieved from the 
   internal cache first, if not present it pulls from Ubuntu, Debian, 
@@ -78,7 +77,6 @@ course be accepted.
 
 ### Known Issues
 
-  - Breaks/Fixes lists accuracy not 100% (This is slowly being corrected)
   - Multiple commits to fix a CVE not handled
 
 [1]: https://kernsec.org/wiki/index.php/Kernel_Self_Protection_Project
