@@ -3,13 +3,14 @@
     <h1>CVEs in Stream {{this.stream}}</h1>
     <div id="content">
       <div class="row" v-for="(fixes, stream) in contents" v-bind:key="stream">
-        <h3>Fixed in {{stream}}</h3>
+        <h3 v-if="stream != 'outstanding'">Fixed in {{stream}}</h3>
+        <h3 v-if="stream === 'outstanding'">Outstanding CVEs in this Stream</h3>
         <div class="card-container">
           <div class="cards" v-for="(data, fix) in fixes" v-bind:key="fix">
             <router-link :to="'/cves/' + fix">{{fix}}</router-link>
-            <p>{{ data.cmt_msg }}</p>
-            <p><strong>{{ data.cmt_id | trim }}...</strong> </p>
-                <button class="copy-button" type="button"
+            <p v-if="stream != 'outstanding'">{{ data.cmt_msg }}</p>
+            <p v-if="stream != 'outstanding'"><strong>{{ data.cmt_id | trim }}...</strong> </p>
+                <button v-if="stream != 'outstanding'" class="copy-button" type="button"
                         v-clipboard:copy="data.cmt_id"
                         v-clipboard:success="onCopy"
                         v-clipboard:error="onError">Copy ID</button>
