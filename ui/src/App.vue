@@ -15,10 +15,9 @@
         <div class="nav-box">
           <select v-model="stream" v-on:change="gotoStream">
             <option disabled value="default">View by Stream</option>
-            <option v-for="content in contents"
-                    v-if="content.type === 'dir'"
-                    v-bind:key="content.name"
-                    v-bind:value="content.name">Stream {{content.name}}</option>
+            <option v-for="aStream in streams"
+                    v-bind:key="aStream"
+                    v-bind:value="aStream">Stream {{aStream}}</option>
           </select>
         </div>
       </div>
@@ -42,21 +41,23 @@ export default {
       }],
       filteredOptions: [],
       cve: '',
-      contents: [],
+      streams: [],
       errors: [],
       limit: 10,
     }
   },
   created () {
-    axios.get(`https://api.github.com/repos/nluedtke/linux_kernel_cves/contents`)
+    axios.get(this.$apiBaseUrl + 'kern.json')
       .then(response => {
-      // JSON responses are automatically parsed.
-        this.contents = response.data
+        var streams = response.data.eol_streams.concat(response.data.supp_streams)
+        streams = streams.map( a => a.split('.').map( n => +n+1000 ).join('.') ).sort()
+                         .map( a => a.split('.').map( n => +n-1000 ).join('.') )
+        this.streams = streams
       })
       .catch(e => {
         this.errors.push(e)
       })
-    let cvesUrl = 'https://raw.githubusercontent.com/nluedtke/linux_kernel_cves/master/kernel_cves.json'
+    var cvesUrl = this.$apiBaseUrl + 'kernel_cves.json'
     axios.get(cvesUrl)
       .then(response => {
       // JSON responses are automatically parsed.
