@@ -54,9 +54,10 @@ export default {
   methods: {
     load: function () {
       var cvesUrl = this.$apiBaseUrl + 'kernel_cves.json'
+      var cveID = this.$route.path.split('/')[2]
+      document.title = 'Linux Kernel CVEs | ' + cveID
       axios.get(cvesUrl)
         .then(response => {
-          var cveID = this.$route.path.split('/')[2]
           var cve = response.data[cveID]
           if (cve == null) {
             this.$router.push('/404')
