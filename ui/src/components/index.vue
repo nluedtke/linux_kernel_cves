@@ -19,6 +19,7 @@
           <input type="hidden" name="currency_code" value="USD" />
           <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
           <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          <button id="contact-us"><a href="mailto:linuxkernelcves@gmail.com">contact us</a></button>
         </form>
       </div>
     </div>
@@ -60,6 +61,24 @@ h1 {
   margin: 0 auto;
   line-height: 1.5em;
   text-align: left;
+}
+#contact-us {
+  margin-top: 30px;
+  color: #fff;
+  padding: .5em;
+  font-size: 14px;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #42b983;
+  background-color: #42b983;
+  box-shadow: none;
+  min-width: 35px;
+  width: 100%;
+}
+#contact-us a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 #homepage-sidebar {
   width: 600px;
