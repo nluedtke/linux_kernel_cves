@@ -19,8 +19,8 @@
           <input type="hidden" name="currency_code" value="USD" />
           <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
           <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-          <button id="contact-us"><a href="mailto:linuxkernelcves@gmail.com">contact us</a></button>
         </form>
+        <div id="contact-us"><a href="mailto:linuxkernelcves@gmail.com">contact us</a></div>
       </div>
     </div>
     <vue-markdown :source="contents"></vue-markdown>
@@ -63,6 +63,7 @@ h1 {
   text-align: left;
 }
 #contact-us {
+  text-align: center;
   margin-top: 30px;
   color: #fff;
   padding: .5em;
