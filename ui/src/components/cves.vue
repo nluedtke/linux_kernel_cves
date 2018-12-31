@@ -4,7 +4,7 @@
       <h3>All CVEs Tracked</h3>
       <ul>
         <li v-for="(values, cve) in contents" v-bind:key="cve">
-            <a :href="'/cves/' + cve">{{ cve }}</a><span v-if="values.cmt_msg != null">&nbsp;&nbsp;{{values.cmt_msg}}</span>
+            <router-link :to="'/cves/' + cve">{{ cve }}</router-link><span v-if="values.cmt_msg != null">&nbsp;&nbsp;{{values.cmt_msg}}</span>
         </li>
       </ul>
     </div>
