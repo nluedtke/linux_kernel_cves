@@ -2,6 +2,10 @@
 
   <div class="hello">
     <div id="homepage-sidebar">
+      <h3>Navigation</h3>
+      <router-link to="/cves">
+        <a>All CVEs</a>
+      </router-link>
       <h3>Linux distros security pages</h3>
       <ul>
         <li><a href="https://www.debian.org/security/">Debian</a></li>
