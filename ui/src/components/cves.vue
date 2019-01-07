@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     load: function () {
-      var cvesUrl = this.$apiBaseUrl + 'kernel_cves.json'
+      var cvesUrl = this.$apiBaseUrl + 'data/kernel_cves.json'
       document.title = 'Linux Kernel CVEs | All CVEs'
       axios.get(cvesUrl)
         .then(response => {
