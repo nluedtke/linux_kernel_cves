@@ -57,7 +57,7 @@ export default {
       .catch(e => {
         this.errors.push(e)
       })
-    var cvesUrl = this.$apiBaseUrl + 'kernel_cves.json'
+    var cvesUrl = this.$apiBaseUrl + 'data/kernel_cves.json'
     axios.get(cvesUrl)
       .then(response => {
       // JSON responses are automatically parsed.

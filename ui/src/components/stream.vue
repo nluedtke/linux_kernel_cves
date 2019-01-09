@@ -55,7 +55,7 @@ export default {
     load: function () {
       this.stream = this.$route.path.split('/')[2]
       document.title = 'Linux Kernel CVEs | ' + 'CVEs in Stream ' + this.stream
-      var url = this.$apiBaseUrl + 'stream_data.json'
+      var url = this.$apiBaseUrl + 'data/stream_data.json'
       axios.get(url)
         .then(response => {
           // JSON responses are automatically parsed.
