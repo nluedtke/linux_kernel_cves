@@ -2,7 +2,7 @@
   <div class="cvss">
     <div class="cvss-header">
       <p class="score">{{cvssVersion}} score: <strong>{{cvssData.score}}</strong></p>
-      <button class="toggle-cvss" @click="isShowing ^= true">show {{cvssVersion}} details</button>
+      <button class="toggle-cvss" @click="showHide">{{showHideText}} {{cvssVersion}} details</button>
     </div>
     <div v-show="isShowing" class='cvss-columns'>
       <div class='cvss-column' v-for="(values, category) in cvss" v-bind:key="category">
@@ -99,7 +99,8 @@ export default {
       contents: [],
       cvss: null,
       errors: [],
-      isShowing: false
+      isShowing: false,
+      showHideText: 'show'
     }
   },
   created () {
@@ -124,6 +125,14 @@ export default {
           this.$data.cvss[key][value] = true
         }
       }
+    },
+    showHide: function () {
+      this.$data.isShowing ^= true
+      if (this.$data.showHideText == 'show') {
+        this.$data.showHideText = 'hide'
+      } else {
+        this.$data.showHideText = 'show'
+      }
     }
   }
 }
@@ -146,9 +155,16 @@ export default {
   font-size: 1.5em;
 }
 .toggle-cvss {
+  font-size: 10px;
+  font-weight: 700;
+  color: #0D8E53;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  padding: .5em;
   float: right;
   display: inline-block;
-  margin-left: 2em;
+  margin: .5em;
 }
 .cvss-metric {
   width: 8em;
