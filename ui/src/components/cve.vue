@@ -22,11 +22,8 @@
           <li><strong>Breaks: </strong>{{contents.breaks}}</li>
           <li><strong>Fixes:  </strong>{{contents.fixes}}</li>
         </ul>
-        <h4>Risk Score</h4>
-        <ul>
-          <li><strong>cvss2</strong>: {{ contents.cvss2 }}</li>
-          <li><strong>cvss3</strong>: {{ contents.cvss3 }}</li>
-        </ul>
+        <cvss v-if="contents.cvss2" cvssVersion="cvss2" v-bind:cvssData="contents.cvss2"/>
+        <cvss v-if="contents.cvss3" cvssVersion="cvss3" v-bind:cvssData="contents.cvss3"/>
         <h4>Fixed Versions</h4>
         <ul>
           <li v-for="(item, key) in stream"
@@ -40,8 +37,12 @@
 
 <script>
 import axios from 'axios'
+import cvss from './cvss'
 
 export default {
+  components: {
+    cvss
+  },
   data () {
     return {
       stream: [],
@@ -99,7 +100,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hello {
-  max-width: 600px;
+  max-width: 740px;
   margin: 0 auto;
 }
 #content {
