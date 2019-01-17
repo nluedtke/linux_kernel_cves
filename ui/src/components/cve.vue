@@ -8,24 +8,28 @@
         </p>
       </div>
       <span v-if="contents.cwe" class="tag">{{ contents.cwe }}</span>
-      <p><em>{{ contents.cmt_msg }}</em></p>
-      <h4>Affected Versions</h4>
-      <p class="versions">{{contents.affected_versions}}</p>
-      <h4>Hashes</h4>
-      <ul id="hashes">
-        <li><strong>Breaks: </strong>{{contents.breaks}}</li>
-        <li><strong>Fixes:  </strong>{{contents.fixes}}</li>
-      </ul>
-      <h4>Risk Score</h4>
-      <ul>
-        <li><strong>cvss2</strong>: {{ contents.cvss2 }}</li>
-        <li><strong>cvss3</strong>: {{ contents.cvss3 }}</li>
-      </ul>
-      <h4>Fixed Versions</h4>
-      <ul>
-        <li v-for="(item, key) in stream"
-            v-bind:key="key"><strong>{{key}}</strong>:{{item.spacing}}{{item.fixed_version}}</li>
-      </ul>
+      <div v-if="contents.vendor_specific === true" class="vendor-specific">
+        <h4>Vendor Specific</h4>
+        <p>This CVE has been marked <strong>vendor specific</strong>. CVEs with the tag are believed to only affect one or more distribution specific kernels. This maybe due to a custom patch set, error in back porting, or another error.</p>
+        <p>If you disagree with the Vendor Specific nature of this CVE please submit an <a>issue</a>.</p>
+      </div>
+      <div v-if="contents.vendor_specific != true">
+        <p><em>{{ contents.cmt_msg }}</em></p>
+        <h4>Affected Versions</h4>
+        <p class="versions">{{contents.affected_versions}}</p>
+        <h4>Hashes</h4>
+        <ul id="hashes">
+          <li><strong>Breaks: </strong>{{contents.breaks}}</li>
+          <li><strong>Fixes:  </strong>{{contents.fixes}}</li>
+        </ul>
+        <cvss v-if="contents.cvss2" cvssVersion="cvss2" v-bind:cvssData="contents.cvss2"/>
+        <cvss v-if="contents.cvss3" cvssVersion="cvss3" v-bind:cvssData="contents.cvss3"/>
+        <h4>Fixed Versions</h4>
+        <ul>
+          <li v-for="(item, key) in stream"
+              v-bind:key="key"><strong>{{key}}</strong>:{{item.spacing}}{{item.fixed_version}}</li>
+        </ul>
+      </div>
     </div>
     <input action="action" onclick="window.history.go(-1); return false;" type="button" value="Back" />
   </div>
@@ -33,8 +37,12 @@
 
 <script>
 import axios from 'axios'
+import cvss from './cvss'
 
 export default {
+  components: {
+    cvss
+  },
   data () {
     return {
       stream: [],
@@ -53,7 +61,7 @@ export default {
   },
   methods: {
     load: function () {
-      var cvesUrl = this.$apiBaseUrl + 'kernel_cves.json'
+      var cvesUrl = this.$apiBaseUrl + 'data/kernel_cves.json'
       var cveID = this.$route.path.split('/')[2]
       document.title = 'Linux Kernel CVEs | ' + cveID
       axios.get(cvesUrl)
@@ -68,7 +76,7 @@ export default {
         .catch(e => {
           this.errors.push(e)
         })
-      var streamUrl = this.$apiBaseUrl + 'stream_fixes.json'
+      var streamUrl = this.$apiBaseUrl + 'data/stream_fixes.json'
       axios.get(streamUrl)
         .then(response => {
           // JSON responses are automatically parsed.
@@ -92,7 +100,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hello {
-  max-width: 600px;
+  max-width: 740px;
   margin: 0 auto;
 }
 #content {
@@ -159,6 +167,11 @@ ul {
   padding: .5em 1em;
   font-size: 12px;
   margin-right: 8px;
+}
+.vendor-specific {
+  padding: .5em 1em;
+  margin: 2em 0;
+  background-color: #ffc2ab;
 }
 @media only screen and (max-width : 700px) {
 /* Styles */
