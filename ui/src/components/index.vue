@@ -8,6 +8,7 @@
       </router-link>
       <h3>Linux distros security pages</h3>
       <ul>
+        <li><a href="https://security.archlinux.org">Arch Linux</a></li>
         <li><a href="https://www.debian.org/security/">Debian</a></li>
         <li><a href="https://www.gentoo.org/support/security/">Gentoo</a></li>
         <li><a href="https://access.redhat.com/security/">Red Hat</a></li>
