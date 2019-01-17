@@ -7,7 +7,7 @@ import './helpers/repoData.js'
 Vue.config.productionTip = false
 
 // configuration
-Vue.prototype.$apiBaseUrl = 'https://raw.githubusercontent.com/nluedtke/linux_kernel_cves/cvss_changes/'
+Vue.prototype.$apiBaseUrl = 'https://raw.githubusercontent.com/nluedtke/linux_kernel_cves/master/'
 
 Vue.component('vue-markdown', VueMarkdown)
 Vue.use(VueAutosuggest)
