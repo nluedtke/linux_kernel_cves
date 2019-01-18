@@ -10,3 +10,9 @@ before_script:
   - cd ui
   - npm install
 script: npm run build
+deploy:
+  provider: s3
+  access_key_id: "YOUR AWS ACCESS KEY"
+  secret_access_key: "YOUR AWS SECRET KEY"
+  bucket: "staging.linuxkernelcves.com"
+  local_dir: dist
