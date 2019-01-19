@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/components/index'
-import stream from '@/components/stream'
-import cves from '@/components/cves'
-import cve from '@/components/cve'
 import four from '@/components/four'
 
 Vue.use(Router)
@@ -18,17 +15,17 @@ export default new Router({
     {
       path: '/streams/:stream_id',
       name: 'stream',
-      component: stream
+      component: () => import('@/components/stream')
     },
     {
       path: '/cves',
       name: 'cves',
-      component: cves
+      component: () => import('@/components/cves')
     },
     {
       path: '/cves/:cve_id',
       name: 'cve',
-      component: cve
+      component: () => import('@/components/cve')
     },
     {
       path: '/404',
