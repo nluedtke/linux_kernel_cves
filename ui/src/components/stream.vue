@@ -41,7 +41,7 @@ export default {
     this.load()
   },
   watch: {
-    '$route' (to, from) {
+    '$route' () {
       this.load()
     }
   },
@@ -49,8 +49,8 @@ export default {
     onCopy: function (e) {
       alert('Commit ID copied to clipboard: ' + e.text)
     },
-    onError: function (e) {
-      alert('Failed to copy text')
+    onError: function () {
+      alert('Failed to copy text.')
     },
     load: function () {
       this.stream = this.$route.path.split('/')[2]
