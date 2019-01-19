@@ -1,0 +1,35 @@
+branches:
+  only:
+  - master
+  - staging
+language: node_js - "stable"
+before_install:
+- npm install -g @vue/cli
+before_script:
+- cd ui
+- npm install
+script: npm run build
+deploy:
+  - provider: s3
+    access_key_id: AKIAJN3HQ3Z6EUHX7RJQ
+    secret_access_key:
+      secure: hqS/QCpbTHV3jslUrEbNvyyAXUnz6jQsH+hOJ/GJmaaHI2qGc4hDEsqGY6B47HbOPEwdbVv4jQevy2QQtvnenuXey67TNXTOHd/ZPZMY4qBJy6QU4ryTOfP1APOxJT0tDVIK4376erSctu39NMGzeWFfIh1MJH2nkzHx4PC7WJtXf4x6S6YuJj8Z2cxwmr4SFgk9uYvNKUxY56UwPrVa/jezWUZ61rZqAj0WkliKiVnHan3F3hfPnX2YGXg302n91HCDOflSsw76DoQKn54V+/kj+fkAxPewxWW/z7YwFJ6GPINIhVBuYroXHL9QKVVHsnidMPM3KZ9xQf0qrbr4GOTBUgysSzzg7m8K8cbqGxgDxDFNHUMrd1Nqy6u25hFP2XAL52d2UBcRucrCbKbUtxEOArV04DuEfB8DQuPzLRiSupKy0zbouy+dhDYaUDFgPAqYRGIR0A2uumrK4LdsZnrrQf1mdq8QuY/7oeGEdp7hqxOg2xEP5cEF5RamD3WcXqqg8Y8+DHN2/aQs2JBxqNILOQ4Y+ZVpcnafP0M8oJR0V3VYJSI05DpFUslmxsscv0rBurruER3GVCMUTDzrWyu9dp6QuwPI/BGD0fLuOuLkkxim1LXSQmttEejqDVzD8EcoLOoHMz5l2tVIxC9QVorP+p/awvCgADyKn2e9XB4=
+    bucket: staging.linuxkernelcves.com
+    local-dir: dist
+    acl: public_read
+    skip_cleanup: true
+    on:
+      repo: nluedtke/linux_kernel_cves
+      branch: staging
+  - provider: s3
+    access_key_id: AKIAJN3HQ3Z6EUHX7RJQ
+    secret_access_key:
+      secure: hqS/QCpbTHV3jslUrEbNvyyAXUnz6jQsH+hOJ/GJmaaHI2qGc4hDEsqGY6B47HbOPEwdbVv4jQevy2QQtvnenuXey67TNXTOHd/ZPZMY4qBJy6QU4ryTOfP1APOxJT0tDVIK4376erSctu39NMGzeWFfIh1MJH2nkzHx4PC7WJtXf4x6S6YuJj8Z2cxwmr4SFgk9uYvNKUxY56UwPrVa/jezWUZ61rZqAj0WkliKiVnHan3F3hfPnX2YGXg302n91HCDOflSsw76DoQKn54V+/kj+fkAxPewxWW/z7YwFJ6GPINIhVBuYroXHL9QKVVHsnidMPM3KZ9xQf0qrbr4GOTBUgysSzzg7m8K8cbqGxgDxDFNHUMrd1Nqy6u25hFP2XAL52d2UBcRucrCbKbUtxEOArV04DuEfB8DQuPzLRiSupKy0zbouy+dhDYaUDFgPAqYRGIR0A2uumrK4LdsZnrrQf1mdq8QuY/7oeGEdp7hqxOg2xEP5cEF5RamD3WcXqqg8Y8+DHN2/aQs2JBxqNILOQ4Y+ZVpcnafP0M8oJR0V3VYJSI05DpFUslmxsscv0rBurruER3GVCMUTDzrWyu9dp6QuwPI/BGD0fLuOuLkkxim1LXSQmttEejqDVzD8EcoLOoHMz5l2tVIxC9QVorP+p/awvCgADyKn2e9XB4=
+    bucket: linuxkernelcves.com
+    local-dir: dist
+    acl: public_read
+    skip_cleanup: true
+    on:
+      repo: nluedtke/linux_kernel_cves
+      branch: master
+

@@ -72,13 +72,18 @@ the code was introduced and when it was fixed.
 
 ## Development
 
-Want to contribute? Great! Due to the vary early stages of this work the
-best places is through github issues to start discussions and requests.
-Updating the commit maps with the breaks/fixes information is also very
-helpful. File a merge request and it will accepted when the information
-is validated. Alternatively, filing an issue to request new feature or to
-update CVE information is also acceptable. If/When this idea matures, direct
-contributions will of course be accepted.
+Want to contribute? Great! 
+
+### Data Contributions
+
+Any additions/removals/updates to the data should start with an Issue. Please 
+be as accurate and complete as possible when requesting a change so the 
+information can be validated as quickly as possible. 
+
+### Code Contributions
+
+All code changes or enchancements must be done through a Pull Request to the 
+staging branch. No PRs directly to master will be accepted. 
 
 ## Known Issues
 

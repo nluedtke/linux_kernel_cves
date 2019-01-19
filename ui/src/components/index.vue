@@ -28,7 +28,8 @@
         <div id="contact-us"><a href="mailto:linuxkernelcves@gmail.com">contact us</a></div>
       </div>
     </div>
-    <vue-markdown :source="contents"></vue-markdown>
+    <vue-markdown id="changes-block" :source="changes"></vue-markdown>
+    <vue-markdown id="contents-block" :source="contents"></vue-markdown>
   </div>
 </template>
 
@@ -39,15 +40,26 @@ export default {
   data () {
     return {
       contents: '',
+      changes: '',
       errors: []
     }
   },
   created () {
-    let url = this.$apiBaseUrl + 'README.md'
-    axios.get(url)
+    var readmeUrl = this.$apiBaseUrl + 'README.md'
+    var changesUrl = this.$apiBaseUrl + 'CHANGES.md'
+
+    axios.get(readmeUrl)
       .then(response => {
       // JSON responses are automatically parsed.
         this.contents = response.data
+      })
+      .catch(e => {
+        this.errors.push(e)
+      })
+    axios.get(changesUrl)
+      .then(response => {
+      // JSON responses are automatically parsed.
+        this.changes = response.data
       })
       .catch(e => {
         this.errors.push(e)
@@ -137,7 +149,8 @@ a {
 .cve-select  {
   display: inline;
 }
-vue-markdown {
-  white-space: pre;
+#changes-block {
+  background-color: #ffc2ab;
+  padding: 1em;
 }
 </style>
