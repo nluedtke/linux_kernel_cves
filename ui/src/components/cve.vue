@@ -37,11 +37,10 @@
 
 <script>
 import axios from 'axios'
-import cvss from './cvss'
 
 export default {
   components: {
-    cvss
+    cvss: () => import('./cvss')
   },
   data () {
     return {
