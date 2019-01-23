@@ -1,12 +1,12 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 22Jan19 16:26
+## Last Update - 23Jan19 07:37
 
 ### **New Versions Checked:**
 
-4.19.17  
-4.20.4
+4.9.152  
+4.14.95
 
 ### **Updated CVEs:**
 
