@@ -11,7 +11,7 @@
       <div v-if="contents.vendor_specific === true" class="vendor-specific">
         <h4>Vendor Specific</h4>
         <p>This CVE has been marked <strong>vendor specific</strong>. CVEs with the tag are believed to only affect one or more distribution specific kernels. This maybe due to a custom patch set, error in back porting, or another error.</p>
-        <p>If you disagree with the Vendor Specific nature of this CVE please submit an <a>issue</a>.</p>
+        <p>If you disagree with the Vendor Specific nature of this CVE please submit an <a href="https://github.com/nluedtke/linux_kernel_cves/issues/new?assignees=&labels=Data&template=cve-data-issue.md&title=%5BDATA%5D+CVE-XXXX-XXXXXX">issue</a>.</p>
       </div>
       <div v-if="contents.vendor_specific != true">
         <p><em>{{ contents.cmt_msg }}</em></p>
