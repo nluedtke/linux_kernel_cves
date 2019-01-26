@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h1>FOUR OH FOUR</h1>
-    <p>You thought you were cool, but that CVE definitely don't exist, my dude.</p>
-    <p>In the spirit of cooperation, you can try again.</p>
+    <p>This CVE does not appear in our data. This could be because its too new (within hours), is embargoed, or we believe that it does not affect the upstream kernel.</p>
+    <p>If you believe this CVE does affect the Linux Kernel, please fill out an <a href="https://github.com/nluedtke/linux_kernel_cves/issues/new?assignees=&labels=Data&template=cve-data-issue.md&title=%5BDATA%5D+CVE-XXXX-XXXXXX">issue</a>.</p>
   </div>
 </template>
 
