@@ -14,7 +14,6 @@ Vue.use(VueAutosuggest)
 
 /* eslint-disable no-new */
 new Vue({
-  mode: 'history',
   el: '#app',
   router,
   render: h => h(App)
