@@ -8,6 +8,9 @@
 # clone the linux-kernel-cves repo
 git clone https://github.com/nluedtke/linux_kernel_cves.git
 
+# Install vue
+npm install -g @vue/cli
+
 # move to ui folder, install dependencies with npm
 cd ui
 npm install
