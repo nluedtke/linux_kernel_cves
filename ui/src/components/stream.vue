@@ -59,7 +59,11 @@ export default {
       axios.get(url)
         .then(response => {
           // JSON responses are automatically parsed.
-          this.contents = response.data[this.stream]
+          var stream = response.data[this.stream]
+          if (stream == null) {
+            this.$router.push('/404')
+          }
+          this.contents = stream
         })
         .catch(e => {
           this.errors.push(e)
