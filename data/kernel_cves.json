@@ -34930,7 +34930,29 @@
     "CVE-2018-18653": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Improper Access Control",
         "fixes": "",
+        "last_modified": "2019-01-28",
         "nvd_text": "The Linux kernel, as used in Ubuntu 18.10 and when booted with UEFI Secure Boot enabled, allows privileged local users to bypass intended Secure Boot restrictions and execute untrusted code by loading arbitrary kernel modules. This occurs because a modified kernel/module.c, in conjunction with certain configuration options, leads to mishandling of the result of signature verification.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-18653",
@@ -36955,8 +36977,29 @@
     "CVE-2019-3819": {
         "affected_versions": "v4.18-rc5 to unk",
         "breaks": "717adfdaf14704fd3ec7fa2c04520c0723247eac",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "4.4"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "",
-        "last_modified": "2019-01-25",
+        "last_modified": "2019-01-28",
         "nvd_text": "A flaw was found in the Linux kernel in the function hid_debug_events_read() in drivers/hid/hid-debug.c file which may enter an infinite loop with certain parameters passed from a userspace. A local privileged user (\"root\") can cause a system lock up and a denial of service. Versions from v4.18 and newer are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3819",
