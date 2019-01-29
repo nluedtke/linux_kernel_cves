@@ -22051,8 +22051,9 @@
         }
     },
     "CVE-2017-0627": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.14-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "media: uvcvideo: Prevent heap overflow when accessing mapped controls",
         "cvss2": {
             "Access Complexity": "High",
             "Access Vector": "Network Accessible",
@@ -22074,7 +22075,8 @@
             "score": "4.7"
         },
         "cwe": "Information Leak / Disclosure",
-        "fixes": "",
+        "fixes": "7e09f7d5c790278ab98e5f2c22307ebe8ad6e8ba",
+        "last_modified": "2019-01-29",
         "nvd_text": "An information disclosure vulnerability in the kernel UVC driver could enable a local malicious application to access data outside of its permission levels. This issue is rated as Moderate because it first requires compromising a privileged process. Product: Android. Versions: Kernel-3.10, Kernel-3.18. Android ID: A-33300353.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-0627",
@@ -34590,7 +34592,8 @@
         "affected_versions": "v4.16-rc1 to unk",
         "breaks": "e2b3b35eb9896f26c98b9a2c047d9111638059a2",
         "fixes": "",
-        "last_modified": "2019-01-25",
+        "last_modified": "2019-01-29",
+        "nvd_text": "A flaw was found in the Linux kernel's handle_rx() function in the [vhost_net] driver. A malicious virtual guest, under specific conditions, can trigger an out-of-bounds write in a kmalloc-8 slab on a virtual host which may lead to a kernel memory corruption and a system panic. Due to the nature of the flaw, privilege escalation cannot be fully ruled out. Versions from v4.16 and newer are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16880",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-16880",
@@ -34604,7 +34607,29 @@
         "affected_versions": "v4.14-rc1 to v4.20",
         "breaks": "5e2f30b756a37bd80c5b0471d0e10d769ab2eb9a",
         "cmt_msg": "KVM: Fix UAF in nested posted interrupt processing",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "c2dd5146e9fe1f22c77c1b011adf84eea0245806",
+        "last_modified": "2019-01-29",
         "nvd_text": "A use-after-free issue was found in the way the Linux kernel's KVM hypervisor processed posted interrupts when nested(=1) virtualization is enabled. In nested_get_vmcs12_pages(), in case of an error while processing posted interrupt address, it unmaps the 'pi_desc_page' without resetting 'pi_desc' descriptor address, which is later used in pi_test_and_clear_on(). A guest user/process could use this flaw to crash the host kernel resulting in DoS or potentially gain privileged access to a system. Kernel versions before 4.14.91 and before 4.19.13 are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16882",
