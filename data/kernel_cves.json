@@ -34591,8 +34591,9 @@
     "CVE-2018-16880": {
         "affected_versions": "v4.16-rc1 to unk",
         "breaks": "e2b3b35eb9896f26c98b9a2c047d9111638059a2",
-        "fixes": "",
-        "last_modified": "2019-01-29",
+        "cmt_msg": "vhost: fix OOB in get_rx_bufs()",
+        "fixes": "b46a0bf78ad7b150ef5910da83859f7f5a514ffd",
+        "last_modified": "2019-01-30",
         "nvd_text": "A flaw was found in the Linux kernel's handle_rx() function in the [vhost_net] driver. A malicious virtual guest, under specific conditions, can trigger an out-of-bounds write in a kmalloc-8 slab on a virtual host which may lead to a kernel memory corruption and a system panic. Due to the nature of the flaw, privilege escalation cannot be fully ruled out. Versions from v4.16 and newer are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16880",
