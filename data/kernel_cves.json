@@ -34645,8 +34645,29 @@
         "affected_versions": "v3.7-rc1 to v5.0-rc1",
         "breaks": "23c20ecd44750dd42e5fd53285a17ca8d8a9b0a3",
         "cmt_msg": "sunrpc: use-after-free in svc_process_common()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "Single",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "6.7"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "8.0"
+        },
+        "cwe": "Use After Free",
         "fixes": "d4b09acf924b84bae77cad090a9d108e70b43643",
-        "last_modified": "2019-01-26",
+        "last_modified": "2019-01-31",
         "nvd_text": "A flaw was found in the Linux kernel's NFS41+ subsystem. NFS41+ shares mounted in different network namespaces at the same time can make bc_svc_process() use wrong back-channel IDs and cause a use-after-free vulnerability. Thus a malicious container user can cause a host kernel memory corruption and a system panic. Due to the nature of the flaw, privilege escalation cannot be fully ruled out.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16884",
@@ -34819,7 +34840,29 @@
         "affected_versions": "v2.6.12-rc2 to v4.19",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "mremap: properly flush TLB before releasing the page",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Input Validation",
         "fixes": "eb66ae030829605d61fbef1909ce310e29f78821",
+        "last_modified": "2019-01-31",
         "nvd_text": "Since Linux kernel version 3.2, the mremap() syscall performs TLB flushes after dropping pagetable locks. If a syscall such as ftruncate() removes entries from the pagetables of a task that is in the middle of mremap(), a stale TLB entry can remain for a short time that permits access to a physical page after it has been released back to the page allocator and reused. This is fixed in the following kernel versions: 4.9.135, 4.14.78, 4.18.16, 4.19.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-18281",
@@ -35175,7 +35218,29 @@
         "affected_versions": "v3.1-rc8 to v4.20-rc6",
         "breaks": "362e4e49abe53e89d87455dfcd7c1bbaf08a839d",
         "cmt_msg": "ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "5f8cf712582617d523120df67d392059eaf2fc4b",
+        "last_modified": "2019-01-31",
         "nvd_text": "In the Linux kernel through 4.19.6, a local user could exploit a use-after-free in the ALSA driver by supplying a malicious USB Sound device (with zero interfaces) that is mishandled in usb_audio_probe in sound/usb/card.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-19824",
