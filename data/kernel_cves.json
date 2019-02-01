@@ -16120,9 +16120,10 @@
         }
     },
     "CVE-2016-10741": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v4.10-rc1",
         "breaks": "",
-        "fixes": "",
+        "cmt_msg": "xfs: don't BUG() on mixed direct and mapped I/O",
+        "fixes": "04197b341f23b908193308b8d63d17ff23232598",
         "last_modified": "2019-02-01",
         "nvd_text": "In the Linux kernel before 4.9.3, fs/xfs/xfs_aops.c allows local users to cause a denial of service (system crash) because there is a race condition between direct and memory-mapped I/O (associated with a hole) that is handled with BUG_ON instead of an I/O failure.",
         "ref_urls": {
@@ -31349,6 +31350,7 @@
     },
     "CVE-2018-1000028": {
         "affected_versions": "v4.15-rc4 to v4.15",
+        "backport": true,
         "breaks": "bdcf0a423ea1c40bbb40e7ee483b50fc8aa3d758",
         "cmt_msg": "nfsd: auth: Fix gid sorting when rootsquash enabled",
         "cvss2": {
@@ -31373,6 +31375,7 @@
         },
         "cwe": "Improper Access Control",
         "fixes": "1995266727fa8143897e89b55f5d3c79aa828420",
+        "last_modified": "2019-02-01",
         "nvd_text": "Linux kernel version after commit bdcf0a423ea1 - 4.15-rc4+, 4.14.8+, 4.9.76+, 4.4.111+ contains a Incorrect Access Control vulnerability in NFS server (nfsd) that can result in remote users reading or writing files they should not be able to via NFS. This attack appear to be exploitable via NFS server must export a filesystem with the \"rootsquash\" options enabled. This vulnerability appears to have been fixed in after commit 1995266727fa.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1000028",
