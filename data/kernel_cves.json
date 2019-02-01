@@ -16119,6 +16119,21 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2016/CVE-2016-10723"
         }
     },
+    "CVE-2016-10741": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-02-01",
+        "nvd_text": "In the Linux kernel before 4.9.3, fs/xfs/xfs_aops.c allows local users to cause a denial of service (system crash) because there is a race condition between direct and memory-mapped I/O (associated with a hole) that is handled with BUG_ON instead of an I/O failure.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-10741",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2016-10741",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2016-10741",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2016-10741",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2016-10741",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2016/CVE-2016-10741"
+        }
+    },
     "CVE-2016-1237": {
         "affected_versions": "v3.14-rc1 to v4.7-rc5",
         "breaks": "4ac7249ea5a0ceef9f8269f63f33cc873c3fac61",
@@ -23035,6 +23050,43 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2017-10911",
             "SUSE": "https://www.suse.com/security/cve/CVE-2017-10911",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2017/CVE-2017-10911"
+        }
+    },
+    "CVE-2017-11089": {
+        "affected_versions": "v3.9-rc1 to v4.13-rc1",
+        "breaks": "3b1c5a5307fb5277f395efdcf330c064d79df07d",
+        "cmt_msg": "cfg80211: Define nla_policy for NL80211_ATTR_LOCAL_MESH_POWER_MODE",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Information Leak / Disclosure",
+        "fixes": "8feb69c7bd89513be80eb19198d48f154b254021",
+        "last_modified": "2019-02-01",
+        "nvd_text": "In android for MSM, Firefox OS for MSM, QRD Android, with all Android releases from CAF using the Linux kernel, a buffer overread is observed in nl80211_set_station when user space application sends attribute NL80211_ATTR_LOCAL_MESH_POWER_MODE with data of size less than 4 bytes",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-11089",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2017-11089",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2017-11089",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2017-11089",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2017-11089",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2017/CVE-2017-11089"
         }
     },
     "CVE-2017-11176": {
@@ -32983,7 +33035,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-11987",
             "SUSE": "https://www.suse.com/security/cve/CVE-2018-11987",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-11987"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2018-12232": {
         "affected_versions": "v4.10-rc1 to v4.18-rc1",
