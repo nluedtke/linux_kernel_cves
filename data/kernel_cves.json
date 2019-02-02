@@ -16120,11 +16120,11 @@
         }
     },
     "CVE-2016-10741": {
-        "affected_versions": "unk to v4.10-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.10-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xfs: don't BUG() on mixed direct and mapped I/O",
         "fixes": "04197b341f23b908193308b8d63d17ff23232598",
-        "last_modified": "2019-02-01",
+        "last_modified": "2019-02-02",
         "nvd_text": "In the Linux kernel before 4.9.3, fs/xfs/xfs_aops.c allows local users to cause a denial of service (system crash) because there is a race condition between direct and memory-mapped I/O (associated with a hole) that is handled with BUG_ON instead of an I/O failure.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-10741",
@@ -37272,6 +37272,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-5489",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-5489",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-5489"
+        }
+    },
+    "CVE-2019-7308": {
+        "affected_versions": "unk to v5.0-rc3",
+        "breaks": "",
+        "cmt_msg": "bpf: fix sanitation of alu op with pointer / scalar type from different paths",
+        "fixes": "d3bd7413e0ca40b60cf60d4003246d067cafdeda",
+        "last_modified": "2019-02-02",
+        "nvd_text": "kernel/bpf/verifier.c in the Linux kernel before 4.20.6 performs undesirable out-of-bounds speculation on pointer arithmetic in various cases, including cases of different branches with different state or limits to sanitize, leading to side-channel attacks.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7308",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7308",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-7308",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-7308",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-7308",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-7308"
         }
     }
 }
