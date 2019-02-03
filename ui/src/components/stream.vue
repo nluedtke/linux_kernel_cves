@@ -3,6 +3,7 @@
     <h1>CVEs in Stream {{this.stream}}</h1>
     <div id="content">
       <div class="row" v-for="(fixes, stream) in contents" v-bind:key="stream">
+        <a class="anchor" v-if="stream != 'outstanding'" v-bind:id="stream"></a>
         <h3 v-if="stream != 'outstanding'">Fixed in {{stream}}</h3>
         <h3 v-if="stream === 'outstanding'">Outstanding CVEs in this Stream</h3>
         <div class="card-container">
@@ -131,5 +132,11 @@ button.copy-button {
   padding: 2px 6px;
   right: 4px;
   top: 4px;
+}
+a.anchor {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
 }
 </style>
