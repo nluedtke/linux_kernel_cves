@@ -1,11 +1,23 @@
 <template>
   <div class="hello">
+    <div class="sort-menu">
+      <select v-model="sorting">
+        <option value="most recent">most recent</option>
+        <option value="least recent">least recent</option>
+      </select>
+    </div>
     <h1>CVEs in Stream {{this.stream}}</h1>
     <div id="content">
-      <div class="row" v-for="(fixes, stream) in contents" v-bind:key="stream">
+      <div class="row outstanding-container" v-if="outstanding">
+        <h3>Outstanding CVEs in this Stream</h3>
+        <div class="outstanding" v-for="(data, cve) in outstanding" v-bind:key="cve">
+          <router-link v-if="data.cmt_msg" :to="'/cves/' + cve">{{ cve }}</router-link>
+          <span v-else>{{ cve }}</span>
+        </div>
+      </div>
+      <div class="row" v-for="(fixes, stream) in orderedStreams" v-bind:key="stream">
         <a class="anchor" v-if="stream != 'outstanding'" v-bind:id="stream"></a>
         <h3 v-if="stream != 'outstanding'">Fixed in {{stream}}</h3>
-        <h3 v-if="stream === 'outstanding'">Outstanding CVEs in this Stream</h3>
         <div class="card-container">
           <div class="cards" v-for="(data, fix) in fixes" v-bind:key="fix">
             <router-link :to="'/cves/' + fix">{{fix}}</router-link>
@@ -35,6 +47,7 @@ export default {
       stream: [],
       contents: [],
       errors: [],
+      sorting: 'most recent',
       message: 'copy'
     }
   },
@@ -69,12 +82,30 @@ export default {
         .catch(e => {
           this.errors.push(e)
         })
-    }
+    },
   },
   filters: {
     trim: function (value) {
       if (!value) return ''
       return value.substring(0, 7)
+    }
+  },
+  computed: {
+    orderedStreams: function ()  {
+      var sortedStreams = this.contents
+      delete sortedStreams['outstanding']
+      if (this.sorting === 'most recent') {
+        var reversed = {}
+        var keys = Object.keys(this.contents).reverse()
+        keys.forEach((key) => {
+          reversed[key] = this.contents[key]
+        })
+        return reversed
+      }
+      return this.contents
+    },
+    outstanding: function () {
+      return this.contents['outstanding']
     }
   }
 }
@@ -87,6 +118,20 @@ export default {
 }
 .hello {
   margin: 1em 0;
+}
+.sort-menu {
+  float: right;
+}
+@media only screen and (min-width: 1170px) {
+  .outstanding-container {
+    z-index: -1;
+    top: 150px;
+    max-width: 180px;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    margin-left: 2em;
+  }
 }
 .card-container:before {
   content: "";
