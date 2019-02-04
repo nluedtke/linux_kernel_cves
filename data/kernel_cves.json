@@ -16123,8 +16123,29 @@
         "affected_versions": "v2.6.12-rc2 to v4.10-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xfs: don't BUG() on mixed direct and mapped I/O",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.7"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "4.7"
+        },
+        "cwe": "Race Conditions",
         "fixes": "04197b341f23b908193308b8d63d17ff23232598",
-        "last_modified": "2019-02-02",
+        "last_modified": "2019-02-04",
         "nvd_text": "In the Linux kernel before 4.9.3, fs/xfs/xfs_aops.c allows local users to cause a denial of service (system crash) because there is a race condition between direct and memory-mapped I/O (associated with a hole) that is handled with BUG_ON instead of an I/O failure.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-10741",
@@ -34670,7 +34691,29 @@
         "affected_versions": "v3.15-rc1 to v4.20-rc5",
         "breaks": "91b0abe36a7b2b3b02d7500925a5f8455334f0e5",
         "cmt_msg": "mm: cleancache: fix corruption on missed inode invalidation",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "6ff38bd40230af35e446239396e5fc8ebd6a5248",
+        "last_modified": "2019-02-04",
         "nvd_text": "A security flaw was found in the Linux kernel in a way that the cleancache subsystem clears an inode after the final file truncation (removal). The new file created with the same inode may contain leftover pages from cleancache and the old file data instead of the new one.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16862",
@@ -34685,8 +34728,29 @@
         "affected_versions": "v4.16-rc1 to v5.0-rc5",
         "breaks": "e2b3b35eb9896f26c98b9a2c047d9111638059a2",
         "cmt_msg": "vhost: fix OOB in get_rx_bufs()",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.0"
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "b46a0bf78ad7b150ef5910da83859f7f5a514ffd",
-        "last_modified": "2019-01-30",
+        "last_modified": "2019-02-04",
         "nvd_text": "A flaw was found in the Linux kernel's handle_rx() function in the [vhost_net] driver. A malicious virtual guest, under specific conditions, can trigger an out-of-bounds write in a kmalloc-8 slab on a virtual host which may lead to a kernel memory corruption and a system panic. Due to the nature of the flaw, privilege escalation cannot be fully ruled out. Versions from v4.16 and newer are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16880",
@@ -37225,8 +37289,8 @@
             "score": "4.4"
         },
         "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
-        "fixes": "",
-        "last_modified": "2019-01-28",
+        "fixes": "13054abbaa4f1fd4e6f3b4b63439ec033b4c8035",
+        "last_modified": "2019-02-04",
         "nvd_text": "A flaw was found in the Linux kernel in the function hid_debug_events_read() in drivers/hid/hid-debug.c file which may enter an infinite loop with certain parameters passed from a userspace. A local privileged user (\"root\") can cause a system lock up and a denial of service. Versions from v4.18 and newer are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3819",
@@ -37275,11 +37339,11 @@
         }
     },
     "CVE-2019-7308": {
-        "affected_versions": "unk to v5.0-rc3",
-        "breaks": "",
+        "affected_versions": "v4.15-rc8 to v5.0-rc3",
+        "breaks": "b2157399cc9898260d6031c5bfe45fe137c1fbe7",
         "cmt_msg": "bpf: fix sanitation of alu op with pointer / scalar type from different paths",
         "fixes": "d3bd7413e0ca40b60cf60d4003246d067cafdeda",
-        "last_modified": "2019-02-02",
+        "last_modified": "2019-02-04",
         "nvd_text": "kernel/bpf/verifier.c in the Linux kernel before 4.20.6 performs undesirable out-of-bounds speculation on pointer arithmetic in various cases, including cases of different branches with different state or limits to sanitize, leading to side-channel attacks.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7308",
