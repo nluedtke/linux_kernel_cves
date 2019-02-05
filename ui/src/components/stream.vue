@@ -124,7 +124,6 @@ export default {
 }
 @media only screen and (min-width: 1170px) {
   .outstanding-container {
-    z-index: -1;
     top: 150px;
     max-width: 180px;
     position: absolute;
