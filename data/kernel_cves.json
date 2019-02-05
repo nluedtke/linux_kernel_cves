@@ -35070,7 +35070,29 @@
         "affected_versions": "v4.11-rc1 to v4.20-rc5",
         "breaks": "4c27fe4c4c84f3afd504ecff2420cc1ad420d38e",
         "cmt_msg": "userfaultfd: use ENOENT instead of EFAULT if the atomic copy user fails",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Improper Access Control",
         "fixes": "9e368259ad988356c4c95150fafd1a06af095d98",
+        "last_modified": "2019-02-05",
         "nvd_text": "The userfaultfd implementation in the Linux kernel before 4.19.7 mishandles access control for certain UFFDIO_ ioctl calls, as demonstrated by allowing local users to write data into holes in a tmpfs file (if the user has read-only access to that file, and that file contains holes), related to fs/userfaultfd.c and mm/userfaultfd.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-18397",
@@ -35412,7 +35434,29 @@
         "affected_versions": "v4.12-rc1 to v4.20-rc3",
         "breaks": "4473710df1f8779c59b33737eeaa151596907761",
         "cmt_msg": "crypto: user - fix leaking uninitialized memory to userspace",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "1.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "4.7"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "f43f39958beb206b53292801e216d9b8a660f087",
+        "last_modified": "2019-02-05",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.19.3. crypto_report_one() and related functions in crypto/crypto_user.c (the crypto user configuration API) do not fully initialize structures that are copied to userspace, potentially leaking sensitive memory to user programs. NOTE: this is a CVE-2013-2547 regression but with easier exploitability because the attacker does not need a capability (however, the system must have the CONFIG_CRYPTO_USER kconfig option).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-19854",
