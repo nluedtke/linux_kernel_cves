@@ -120,6 +120,7 @@ body {
   margin-top: 100px;
 }
 .nav-wrapper {
+  z-index: 1;
   position: fixed;
   top: 0;
   width: 100%;
