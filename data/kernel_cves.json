@@ -308,6 +308,20 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2008/CVE-2008-7316"
         }
     },
+    "CVE-2010-3432": {
+        "affected_versions": "unk to v2.6.36-rc5",
+        "breaks": "",
+        "fixes": "4bdab43323b459900578b200a4b8cf9713ac8fab",
+        "last_modified": "2019-02-08",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2010-3432",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2010-3432",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2010-3432",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2010-3432",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2010-3432",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2010/CVE-2010-3432"
+        }
+    },
     "CVE-2010-4563": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -18804,6 +18818,8 @@
         },
         "cwe": "Race Conditions",
         "fixes": "19be0eaffa3ac7d8eb6784ad9bdbc7d67ed8e619",
+        "last_modified": "2019-02-08",
+        "name": "Dirty COW",
         "nvd_text": "Race condition in mm/gup.c in the Linux kernel 2.x through 4.x before 4.8.3 allows local users to gain privileges by leveraging incorrect handling of a copy-on-write (COW) feature to write to a read-only memory mapping, as exploited in the wild in October 2016, aka \"Dirty COW.\"",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-5195",
@@ -22812,6 +22828,8 @@
         },
         "cwe": "Race Conditions",
         "fixes": "a8f97366452ed491d13cf1e44241bc0b5740b1f0",
+        "last_modified": "2019-02-08",
+        "name": "Dirty COW (variant)",
         "nvd_text": "The Linux Kernel versions 2.6.38 through 4.14 have a problematic use of pmd_mkdirty() in the touch_pmd() function inside the THP implementation. touch_pmd() can be reached by get_user_pages(). In such case, the pmd will become dirty. This scenario breaks the new can_follow_write_pmd()'s logic - pmd can become dirty without going through a COW cycle. This bug is not as severe as the original \"Dirty cow\" because an ext4 file (or any other regular file) cannot be mapped using THP. Nevertheless, it does allow us to overwrite read-only huge pages. For example, the zero huge page and sealed shmem files can be overwritten (since their mapping can be populated using THP). Note that after the first write page-fault to the zero page, it will be replaced with a new fresh (and zeroed) thp.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-1000405",
@@ -28405,6 +28423,8 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "99c6fa2511d8a683e61468be91b83f85452115fa",
+        "last_modified": "2019-02-08",
+        "name": "Spectre",
         "nvd_text": "Systems with microprocessors utilizing speculative execution and indirect branch prediction may allow unauthorized disclosure of information to an attacker with local user access via a side-channel analysis.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-5715",
@@ -28441,6 +28461,8 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "99c6fa2511d8a683e61468be91b83f85452115fa",
+        "last_modified": "2019-02-08",
+        "name": "Spectre",
         "nvd_text": "Systems with microprocessors utilizing speculative execution and branch prediction may allow unauthorized disclosure of information to an attacker with local user access via a side-channel analysis.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-5753",
@@ -28477,6 +28499,8 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "fc67dd70adb711a45d2ef34e12d1a8be75edde61",
+        "last_modified": "2019-02-08",
+        "name": "Meltdown",
         "nvd_text": "Systems with microprocessors utilizing speculative execution and indirect branch prediction may allow unauthorized disclosure of information to an attacker with local user access via a side-channel analysis of the data cache.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-5754",
@@ -34282,6 +34306,8 @@
         },
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "da029c11e6b12f321f36dac8771e833b65cec962",
+        "last_modified": "2019-02-08",
+        "name": "Mutagen Astronomy",
         "nvd_text": "An integer overflow flaw was found in the Linux kernel's create_elf_tables() function. An unprivileged local user with access to SUID (or otherwise privileged) binary could use this flaw to escalate their privileges on the system. Kernel versions 2.6.x, 3.10.x and 4.14.x are believed to be vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14634",
@@ -35921,6 +35947,8 @@
         },
         "cwe": "Input Validation",
         "fixes": "72cd43ba64fc172a443410ce01645895850844c8",
+        "last_modified": "2019-02-08",
+        "name": "SegmentSmack",
         "nvd_text": "Linux kernel versions 4.9+ can be forced to make very expensive calls to tcp_collapse_ofo_queue() and tcp_prune_ofo_queue() for every incoming packet which can lead to a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5390",
@@ -35958,6 +35986,7 @@
         "cwe": "Input Validation",
         "fixes": "7969e5c40dfd04799d4341f1b7cd266b6e47f227",
         "last_modified": "2019-02-08",
+        "name": "FragmentSmack",
         "nvd_text": "The Linux kernel, versions 3.9+, is vulnerable to a denial of service attack with low rates of specially modified packets targeting IP fragment re-assembly. An attacker may cause a denial of service condition by sending specially crafted IP fragments. Various vulnerabilities in IP fragmentation have been discovered and fixed over the years. The current vulnerability (CVE-2018-5391) became exploitable in the Linux kernel with the increase of the IP fragment reassembly queue size.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5391",
