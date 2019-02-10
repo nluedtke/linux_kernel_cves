@@ -308,6 +308,20 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2008/CVE-2008-7316"
         }
     },
+    "CVE-2010-3432": {
+        "affected_versions": "unk to v2.6.36-rc5",
+        "breaks": "",
+        "fixes": "4bdab43323b459900578b200a4b8cf9713ac8fab",
+        "last_modified": "2019-02-08",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2010-3432",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2010-3432",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2010-3432",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2010-3432",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2010-3432",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2010/CVE-2010-3432"
+        }
+    },
     "CVE-2010-4563": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -16123,8 +16137,29 @@
         "affected_versions": "v2.6.12-rc2 to v4.10-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xfs: don't BUG() on mixed direct and mapped I/O",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.7"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "4.7"
+        },
+        "cwe": "Race Conditions",
         "fixes": "04197b341f23b908193308b8d63d17ff23232598",
-        "last_modified": "2019-02-02",
+        "last_modified": "2019-02-04",
         "nvd_text": "In the Linux kernel before 4.9.3, fs/xfs/xfs_aops.c allows local users to cause a denial of service (system crash) because there is a race condition between direct and memory-mapped I/O (associated with a hole) that is handled with BUG_ON instead of an I/O failure.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-10741",
@@ -18783,6 +18818,8 @@
         },
         "cwe": "Race Conditions",
         "fixes": "19be0eaffa3ac7d8eb6784ad9bdbc7d67ed8e619",
+        "last_modified": "2019-02-08",
+        "name": "Dirty COW",
         "nvd_text": "Race condition in mm/gup.c in the Linux kernel 2.x through 4.x before 4.8.3 allows local users to gain privileges by leveraging incorrect handling of a copy-on-write (COW) feature to write to a read-only memory mapping, as exploited in the wild in October 2016, aka \"Dirty COW.\"",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-5195",
@@ -22791,6 +22828,8 @@
         },
         "cwe": "Race Conditions",
         "fixes": "a8f97366452ed491d13cf1e44241bc0b5740b1f0",
+        "last_modified": "2019-02-08",
+        "name": "Dirty COW (variant)",
         "nvd_text": "The Linux Kernel versions 2.6.38 through 4.14 have a problematic use of pmd_mkdirty() in the touch_pmd() function inside the THP implementation. touch_pmd() can be reached by get_user_pages(). In such case, the pmd will become dirty. This scenario breaks the new can_follow_write_pmd()'s logic - pmd can become dirty without going through a COW cycle. This bug is not as severe as the original \"Dirty cow\" because an ext4 file (or any other regular file) cannot be mapped using THP. Nevertheless, it does allow us to overwrite read-only huge pages. For example, the zero huge page and sealed shmem files can be overwritten (since their mapping can be populated using THP). Note that after the first write page-fault to the zero page, it will be replaced with a new fresh (and zeroed) thp.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-1000405",
@@ -23664,6 +23703,43 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2017-13166",
             "SUSE": "https://www.suse.com/security/cve/CVE-2017-13166",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2017/CVE-2017-13166"
+        }
+    },
+    "CVE-2017-13167": {
+        "affected_versions": "v2.6.12-rc2 to v4.5-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "ALSA: timer: Fix race at concurrent reads",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Permissions, Privileges, and Access Control",
+        "fixes": "4dff5c7b7093b19c19d3a100f8a3ad87cb7cd9e7",
+        "last_modified": "2019-02-10",
+        "nvd_text": "An elevation of privilege vulnerability in the kernel sound timer. Product: Android. Versions: Android kernel. Android ID A-37240993.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-13167",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2017-13167",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2017-13167",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2017-13167",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2017-13167",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2017/CVE-2017-13167"
         }
     },
     "CVE-2017-13168": {
@@ -28384,6 +28460,8 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "99c6fa2511d8a683e61468be91b83f85452115fa",
+        "last_modified": "2019-02-08",
+        "name": "Spectre",
         "nvd_text": "Systems with microprocessors utilizing speculative execution and indirect branch prediction may allow unauthorized disclosure of information to an attacker with local user access via a side-channel analysis.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-5715",
@@ -28420,6 +28498,8 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "99c6fa2511d8a683e61468be91b83f85452115fa",
+        "last_modified": "2019-02-08",
+        "name": "Spectre",
         "nvd_text": "Systems with microprocessors utilizing speculative execution and branch prediction may allow unauthorized disclosure of information to an attacker with local user access via a side-channel analysis.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-5753",
@@ -28456,6 +28536,8 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "fc67dd70adb711a45d2ef34e12d1a8be75edde61",
+        "last_modified": "2019-02-08",
+        "name": "Meltdown",
         "nvd_text": "Systems with microprocessors utilizing speculative execution and indirect branch prediction may allow unauthorized disclosure of information to an attacker with local user access via a side-channel analysis of the data cache.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-5754",
@@ -34261,6 +34343,8 @@
         },
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "da029c11e6b12f321f36dac8771e833b65cec962",
+        "last_modified": "2019-02-08",
+        "name": "Mutagen Astronomy",
         "nvd_text": "An integer overflow flaw was found in the Linux kernel's create_elf_tables() function. An unprivileged local user with access to SUID (or otherwise privileged) binary could use this flaw to escalate their privileges on the system. Kernel versions 2.6.x, 3.10.x and 4.14.x are believed to be vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14634",
@@ -34670,7 +34754,29 @@
         "affected_versions": "v3.15-rc1 to v4.20-rc5",
         "breaks": "91b0abe36a7b2b3b02d7500925a5f8455334f0e5",
         "cmt_msg": "mm: cleancache: fix corruption on missed inode invalidation",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "6ff38bd40230af35e446239396e5fc8ebd6a5248",
+        "last_modified": "2019-02-04",
         "nvd_text": "A security flaw was found in the Linux kernel in a way that the cleancache subsystem clears an inode after the final file truncation (removal). The new file created with the same inode may contain leftover pages from cleancache and the old file data instead of the new one.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16862",
@@ -34682,11 +34788,32 @@
         }
     },
     "CVE-2018-16880": {
-        "affected_versions": "v4.16-rc1 to unk",
+        "affected_versions": "v4.16-rc1 to v5.0-rc5",
         "breaks": "e2b3b35eb9896f26c98b9a2c047d9111638059a2",
         "cmt_msg": "vhost: fix OOB in get_rx_bufs()",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.0"
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "b46a0bf78ad7b150ef5910da83859f7f5a514ffd",
-        "last_modified": "2019-01-30",
+        "last_modified": "2019-02-06",
         "nvd_text": "A flaw was found in the Linux kernel's handle_rx() function in the [vhost_net] driver. A malicious virtual guest, under specific conditions, can trigger an out-of-bounds write in a kmalloc-8 slab on a virtual host which may lead to a kernel memory corruption and a system panic. Due to the nature of the flaw, privilege escalation cannot be fully ruled out. Versions from v4.16 and newer are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16880",
@@ -35006,7 +35133,29 @@
         "affected_versions": "v4.11-rc1 to v4.20-rc5",
         "breaks": "4c27fe4c4c84f3afd504ecff2420cc1ad420d38e",
         "cmt_msg": "userfaultfd: use ENOENT instead of EFAULT if the atomic copy user fails",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Improper Access Control",
         "fixes": "9e368259ad988356c4c95150fafd1a06af095d98",
+        "last_modified": "2019-02-05",
         "nvd_text": "The userfaultfd implementation in the Linux kernel before 4.19.7 mishandles access control for certain UFFDIO_ ioctl calls, as demonstrated by allowing local users to write data into holes in a tmpfs file (if the user has read-only access to that file, and that file contains holes), related to fs/userfaultfd.c and mm/userfaultfd.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-18397",
@@ -35348,7 +35497,29 @@
         "affected_versions": "v4.12-rc1 to v4.20-rc3",
         "breaks": "4473710df1f8779c59b33737eeaa151596907761",
         "cmt_msg": "crypto: user - fix leaking uninitialized memory to userspace",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "1.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "4.7"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "f43f39958beb206b53292801e216d9b8a660f087",
+        "last_modified": "2019-02-05",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.19.3. crypto_report_one() and related functions in crypto/crypto_user.c (the crypto user configuration API) do not fully initialize structures that are copied to userspace, potentially leaking sensitive memory to user programs. NOTE: this is a CVE-2013-2547 regression but with easier exploitability because the attacker does not need a capability (however, the system must have the CONFIG_CRYPTO_USER kconfig option).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-19854",
@@ -35813,6 +35984,8 @@
         },
         "cwe": "Input Validation",
         "fixes": "72cd43ba64fc172a443410ce01645895850844c8",
+        "last_modified": "2019-02-08",
+        "name": "SegmentSmack",
         "nvd_text": "Linux kernel versions 4.9+ can be forced to make very expensive calls to tcp_collapse_ofo_queue() and tcp_prune_ofo_queue() for every incoming packet which can lead to a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5390",
@@ -35849,6 +36022,8 @@
         },
         "cwe": "Input Validation",
         "fixes": "7969e5c40dfd04799d4341f1b7cd266b6e47f227",
+        "last_modified": "2019-02-08",
+        "name": "FragmentSmack",
         "nvd_text": "The Linux kernel, versions 3.9+, is vulnerable to a denial of service attack with low rates of specially modified packets targeting IP fragment re-assembly. An attacker may cause a denial of service condition by sending specially crafted IP fragments. Various vulnerabilities in IP fragmentation have been discovered and fixed over the years. The current vulnerability (CVE-2018-5391) became exploitable in the Linux kernel with the increase of the IP fragment reassembly queue size.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5391",
@@ -36038,6 +36213,41 @@
             "SUSE": "https://www.suse.com/security/cve/CVE-2018-5848",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-5848"
         }
+    },
+    "CVE-2018-5856": {
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "6.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
+        "last_modified": "2019-02-10",
+        "new": true,
+        "nvd_text": "In all android releases(Android for MSM, Firefox OS for MSM, QRD Android) from CAF using the linux kernel, due to a race condition, a Use After Free condition can occur in Audio.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5856",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-5856",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-5856",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-5856",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-5856",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-5856"
+        },
+        "vendor_specific": true
     },
     "CVE-2018-5873": {
         "affected_versions": "v3.19-rc1 to v4.11-rc8",
@@ -37204,6 +37414,7 @@
     "CVE-2019-3819": {
         "affected_versions": "v4.18-rc5 to unk",
         "breaks": "717adfdaf14704fd3ec7fa2c04520c0723247eac",
+        "cmt_msg": "HID: debug: fix the ring buffer implementation",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -37225,8 +37436,8 @@
             "score": "4.4"
         },
         "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
-        "fixes": "",
-        "last_modified": "2019-01-28",
+        "fixes": "13054abbaa4f1fd4e6f3b4b63439ec033b4c8035",
+        "last_modified": "2019-02-07",
         "nvd_text": "A flaw was found in the Linux kernel in the function hid_debug_events_read() in drivers/hid/hid-debug.c file which may enter an infinite loop with certain parameters passed from a userspace. A local privileged user (\"root\") can cause a system lock up and a denial of service. Versions from v4.18 and newer are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3819",
@@ -37274,12 +37485,57 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-5489"
         }
     },
-    "CVE-2019-7308": {
-        "affected_versions": "unk to v5.0-rc3",
+    "CVE-2019-6974": {
+        "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974)",
+        "fixes": "cfa39381173d5f969daf43582c95ad679189cbc9",
+        "last_modified": "2019-02-07",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-6974",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-6974",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-6974",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-6974",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-6974",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-6974"
+        }
+    },
+    "CVE-2019-7221": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221)",
+        "fixes": "ecec76885bcfe3294685dc363fd1273df0d5d65f",
+        "last_modified": "2019-02-07",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7221",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7221",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-7221",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-7221",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-7221",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-7221"
+        }
+    },
+    "CVE-2019-7222": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "KVM: x86: work around leak of uninitialized stack contents (CVE-2019-7222)",
+        "fixes": "353c0956a618a07ba4bbe7ad00ff29fe70e8412a",
+        "last_modified": "2019-02-07",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7222",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7222",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-7222",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-7222",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-7222",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-7222"
+        }
+    },
+    "CVE-2019-7308": {
+        "affected_versions": "v4.15-rc8 to v5.0-rc3",
+        "breaks": "b2157399cc9898260d6031c5bfe45fe137c1fbe7",
         "cmt_msg": "bpf: fix sanitation of alu op with pointer / scalar type from different paths",
         "fixes": "d3bd7413e0ca40b60cf60d4003246d067cafdeda",
-        "last_modified": "2019-02-02",
+        "last_modified": "2019-02-04",
         "nvd_text": "kernel/bpf/verifier.c in the Linux kernel before 4.20.6 performs undesirable out-of-bounds speculation on pointer arithmetic in various cases, including cases of different branches with different state or limits to sanitize, leading to side-channel attacks.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7308",
