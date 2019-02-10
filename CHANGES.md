@@ -5,6 +5,6 @@
 
 ### **New CVEs Added:**
 
-[CVE-2010-3432](https://www.linuxkernelcves.com/cves/CVE-2010-3432)  
+[CVE-2010-3432](cves/CVE-2010-3432)  
 
 
