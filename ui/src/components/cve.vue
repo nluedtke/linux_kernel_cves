@@ -15,21 +15,22 @@
         <p>If you disagree with the Vendor Specific nature of this CVE please submit an <a href="https://github.com/nluedtke/linux_kernel_cves/issues/new?assignees=&labels=Data&template=cve-data-issue.md&title=%5BDATA%5D+CVE-XXXX-XXXXXX">issue</a>.</p>
       </div>
       <div v-if="contents.vendor_specific != true">
+        <h4 v-if="contents.nvd_text">NVD Text</h4>
         <p class="nvd-text" v-if="contents.nvd_text">{{ contents.nvd_text }}</p>
-        <p class="commit-message"><strong>Commit message:</strong> {{ contents.cmt_msg }}</p>
         <h4>Affected Versions</h4>
         <p class="versions">{{contents.affected_versions}}</p>
         <h4>Hashes</h4>
         <ul id="hashes">
           <li><strong>Breaks: </strong>{{contents.breaks}}</li>
           <li><strong>Fixes:  </strong>{{contents.fixes}}</li>
+          <p class="commit-message"><strong>Commit message:</strong> {{ contents.cmt_msg }}</p>
         </ul>
         <cvss v-if="contents.cvss2" cvssVersion="cvss2" v-bind:cvssData="contents.cvss2"/>
         <cvss v-if="contents.cvss3" cvssVersion="cvss3" v-bind:cvssData="contents.cvss3"/>
         <h4>Fixed Versions</h4>
         <ul>
-          <li v-for="(item, key) in stream"
-              v-bind:key="key"><strong>{{key}}</strong>:{{item.spacing}}{{item.fixed_version}}</li>
+          <li v-for="(item, stream_id) in stream"
+              v-bind:key="stream_id"><strong><router-link :to="{ name: 'stream', params: { stream_id: stream_id } }">{{stream_id}}</router-link></strong>:{{item.spacing}}{{item.fixed_version}}</li>
         </ul>
       </div>
     </div>
@@ -115,6 +116,9 @@ export default {
   text-align: center;
   margin: 1em 0 0.5em 0;
 }
+.distro-links {
+  text-align: center;
+}
 .last-modified {
   font-size: .9em;
   text-align: center;
@@ -124,7 +128,6 @@ export default {
   padding: .5em 1em 1em
 }
 .nvd-text {
-  padding: 1.5em 0 0 0;
 }
 .commit-message {
   background-color: #42b983f5;
