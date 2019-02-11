@@ -135,6 +135,8 @@ export default {
   padding: .5em 1em;
   font-size: 12px;
   margin-right: 8px;
+  white-space: normal;
+  text-overflow: ellipsis;
 }
 h1, h2, h3, h4{
   margin-top: 1.75em;
