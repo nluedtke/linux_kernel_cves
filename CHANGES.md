@@ -1,8 +1,5 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 10Feb19 10:36
+## Last Update - 11Feb19 06:14
 
-### **New CVEs Added:**
-
-[CVE-2017-13167](cves/CVE-2017-13167)
