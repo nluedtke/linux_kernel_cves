@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <div id="content">
-      <h3 class="cve-headline">{{ contents.id  }}</h3>
+      <h3 v-if="contents.name" class="cve-headline"> {{ contents.name }} - {{ contents.id }}</h3>
+      <h3 v-else class="cve-headline">{{ contents.id }}</h3>
       <p v-if="contents.last_modified" class="last-modified"><em>Last modified {{ contents.last_modified }}</em></p>
       <div class="distro-links">
         <p><span v-for="(item, key) in contents.ref_urls" v-bind:key="key" class="distro-version-fixed">
