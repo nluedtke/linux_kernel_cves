@@ -2,6 +2,7 @@
   <div class="hello">
     <div id="content">
       <h3 class="cve-headline">{{ contents.id  }}</h3>
+      <p v-if="contents.last_modified" class="last-modified"><em>Last modified {{ contents.last_modified }}</em></p>
       <div class="distro-links">
         <p><span v-for="(item, key) in contents.ref_urls" v-bind:key="key" class="distro-version-fixed">
           <a :href="item" target="_blank">{{key}}<img class="external-link" src="../assets/external-link.svg"></a></span>
@@ -14,20 +15,22 @@
         <p>If you disagree with the Vendor Specific nature of this CVE please submit an <a href="https://github.com/nluedtke/linux_kernel_cves/issues/new?assignees=&labels=Data&template=cve-data-issue.md&title=%5BDATA%5D+CVE-XXXX-XXXXXX">issue</a>.</p>
       </div>
       <div v-if="contents.vendor_specific != true">
-        <p><em>{{ contents.cmt_msg }}</em></p>
+        <h4 v-if="contents.nvd_text">NVD Text</h4>
+        <p class="nvd-text" v-if="contents.nvd_text">{{ contents.nvd_text }}</p>
         <h4>Affected Versions</h4>
         <p class="versions">{{contents.affected_versions}}</p>
         <h4>Hashes</h4>
         <ul id="hashes">
           <li><strong>Breaks: </strong>{{contents.breaks}}</li>
           <li><strong>Fixes:  </strong>{{contents.fixes}}</li>
+          <p class="commit-message"><strong>Commit message:</strong> {{ contents.cmt_msg }}</p>
         </ul>
         <cvss v-if="contents.cvss2" cvssVersion="cvss2" v-bind:cvssData="contents.cvss2"/>
         <cvss v-if="contents.cvss3" cvssVersion="cvss3" v-bind:cvssData="contents.cvss3"/>
         <h4>Fixed Versions</h4>
         <ul>
-          <li v-for="(item, key) in stream"
-              v-bind:key="key"><strong>{{key}}</strong>:{{item.spacing}}{{item.fixed_version}}</li>
+          <li v-for="(item, stream_id) in stream"
+              v-bind:key="stream_id"><strong><router-link :to="{ name: 'stream', params: { stream_id: stream_id } }">{{stream_id}}</router-link></strong>:{{item.spacing}}{{item.fixed_version}}</li>
         </ul>
       </div>
     </div>
@@ -109,11 +112,31 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .cve-headline {
+  font-size: 1.7em;
   text-align: center;
-  margin: 1em 0 2em;
+  margin: 1em 0 0.5em 0;
+}
+.distro-links {
+  text-align: center;
+}
+.last-modified {
+  font-size: .9em;
+  text-align: center;
+  margin-bottom: 2em;
 }
 .versions {
   padding: .5em 1em 1em
+}
+.nvd-text {
+}
+.commit-message {
+  background-color: #42b983f5;
+  color: white;
+  padding: .5em 1em;
+  font-size: 12px;
+  margin-right: 8px;
+  white-space: normal;
+  text-overflow: ellipsis;
 }
 h1, h2, h3, h4{
   margin-top: 1.75em;
