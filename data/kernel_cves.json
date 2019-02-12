@@ -35482,7 +35482,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "5f8cf712582617d523120df67d392059eaf2fc4b",
-        "last_modified": "2019-01-31",
+        "last_modified": "2019-02-11",
         "nvd_text": "In the Linux kernel through 4.19.6, a local user could exploit a use-after-free in the ALSA driver by supplying a malicious USB Sound device (with zero interfaces) that is mishandled in usb_audio_probe in sound/usb/card.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-19824",
@@ -35571,7 +35571,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "704620afc70cf47abb9d6a1a57f3825d2bca49cf",
-        "last_modified": "2019-01-31",
+        "last_modified": "2019-02-11",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.19.9. The USB subsystem mishandles size checks during the reading of an extra descriptor, related to __usb_get_extra_descriptor in drivers/usb/core/usb.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20169",
@@ -37399,8 +37399,29 @@
         "affected_versions": "v3.2-rc1 to v5.0-rc3",
         "breaks": "c1aabdf379bc2feeb0df7057ed5bad96f492133e",
         "cmt_msg": "can: gw: ensure DLC boundaries after CAN frame modification",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "score": "5.5"
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "0aaa81377c5a01f686bcdb8c7a6929a7bf330c68",
-        "last_modified": "2019-01-26",
+        "last_modified": "2019-02-11",
         "nvd_text": "An issue was discovered in can_can_gw_rcv in net/can/gw.c in the Linux kernel through 4.19.13. The CAN frame modification rules allow bitwise logical operations that can be also applied to the can_dlc field. Because of a missing check, the CAN drivers may write arbitrary content beyond the data registers in the CAN controller's I/O memory when processing can-gw manipulated outgoing frames. This is related to cgw_csum_xor_rel. An unprivileged user can trigger a system crash (general protection fault).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3701",
