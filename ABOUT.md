@@ -1,6 +1,8 @@
 # Linux Kernel CVE Tracker
 
-This is an open source tracker for Linux kernel CVEs. While this site contains links to Linux distributions, it primary aim is to provide a resource for CVEs affecting the Upstream Linux Kernel.
+This is an open source tracker for Linux kernel CVEs. While this site contains
+links to Linux distributions, it primary aim is to provide a resource for CVEs
+affecting the Upstream Linux Kernel.
 
 ## How to see the data
 
