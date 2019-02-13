@@ -45,10 +45,10 @@ export default {
     }
   },
   created () {
-    var readmeUrl = this.$apiBaseUrl + 'README.md'
+    var aboutUrl = this.$apiBaseUrl + 'ABOUT.md'
     var changesUrl = this.$apiBaseUrl + 'CHANGES.md'
 
-    axios.get(readmeUrl)
+    axios.get(aboutUrl)
       .then(response => {
       // JSON responses are automatically parsed.
         this.contents = response.data
