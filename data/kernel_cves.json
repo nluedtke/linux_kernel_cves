@@ -37534,8 +37534,30 @@
         "affected_versions": "unk to v5.0-rc6",
         "breaks": "",
         "cmt_msg": "kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974)",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "score": "5.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.9"
+        },
+        "cwe": "Race Conditions",
         "fixes": "cfa39381173d5f969daf43582c95ad679189cbc9",
-        "last_modified": "2019-02-12",
+        "last_modified": "2019-02-15",
+        "nvd_text": "In the Linux kernel before 4.20.8, kvm_ioctl_create_device in virt/kvm/kvm_main.c mishandles reference counting because of a race condition, leading to a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-6974",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-6974",
