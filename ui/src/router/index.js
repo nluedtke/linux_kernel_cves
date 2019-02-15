@@ -11,10 +11,7 @@ export default new Router({
     {
       path: '/',
       name: 'github',
-      component: index,
-      meta: {
-        title: 'Linux Kernel CVE Tracker'
-      }
+      component: index
     },
     {
       path: '/streams/:stream_id',
