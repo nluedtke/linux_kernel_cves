@@ -11,7 +11,16 @@ export default new Router({
     {
       path: '/',
       name: 'github',
-      component: index
+      component: index,
+      meta: {
+        title: 'Linux Kernel CVE Tracker',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Security Tracker for the Linux Kernel. Provides details, fixed versions, and CVSS scores for CVEs affecting the Linux Kernel.'
+          }
+        ]
+      }
     },
     {
       path: '/streams/:stream_id',
