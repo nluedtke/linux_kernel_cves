@@ -9,7 +9,7 @@ before_install:
 - npm install -g @vue/cli
 before_script:
 - cd ui
-- if [ "$TRAVIS_BRANCH" = "staging" ]; sed -i "s/\/master\//\/staging\//g" src/main.js ; fi
+- if [ "$TRAVIS_BRANCH" = "staging" ]; then sed -i "s/\/master\//\/staging\//g" src/main.js ; fi
 - npm install
 script: npm run build
 deploy:
