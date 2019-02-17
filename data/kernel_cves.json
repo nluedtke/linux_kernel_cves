@@ -22165,6 +22165,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "",
+        "last_modified": "2019-02-13",
         "nvd_text": "An information disclosure vulnerability in the kernel trace subsystem could enable a local malicious application to access data outside of its permission levels. This issue is rated as Moderate because it first requires compromising a privileged process. Product: Android. Versions: Kernel-3.10, Kernel-3.18. Android ID: A-34277115.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-0630",
@@ -22173,7 +22174,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2017-0630",
             "SUSE": "https://www.suse.com/security/cve/CVE-2017-0630",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2017/CVE-2017-0630"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2017-0749": {
         "affected_versions": "unk to unk",
@@ -34901,7 +34903,29 @@
     "CVE-2018-16885": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "",
+        "last_modified": "2019-02-12",
         "nvd_text": "A flaw was found in the Linux kernel that allows the userspace to call memcpy_fromiovecend() and similar functions with a zero offset and buffer length which causes the read beyond the buffer boundaries, in certain cases causing a memory access fault and a system halt by accessing invalid memory address. This issue only affects kernel version 3.10.x as shipped with Red Hat Enterprise Linux 7.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16885",
@@ -35482,7 +35506,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "5f8cf712582617d523120df67d392059eaf2fc4b",
-        "last_modified": "2019-01-31",
+        "last_modified": "2019-02-11",
         "nvd_text": "In the Linux kernel through 4.19.6, a local user could exploit a use-after-free in the ALSA driver by supplying a malicious USB Sound device (with zero interfaces) that is mishandled in usb_audio_probe in sound/usb/card.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-19824",
@@ -35571,7 +35595,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "704620afc70cf47abb9d6a1a57f3825d2bca49cf",
-        "last_modified": "2019-01-31",
+        "last_modified": "2019-02-11",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.19.9. The USB subsystem mishandles size checks during the reading of an extra descriptor, related to __usb_get_extra_descriptor in drivers/usb/core/usb.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20169",
@@ -37399,8 +37423,29 @@
         "affected_versions": "v3.2-rc1 to v5.0-rc3",
         "breaks": "c1aabdf379bc2feeb0df7057ed5bad96f492133e",
         "cmt_msg": "can: gw: ensure DLC boundaries after CAN frame modification",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "score": "5.5"
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "0aaa81377c5a01f686bcdb8c7a6929a7bf330c68",
-        "last_modified": "2019-01-26",
+        "last_modified": "2019-02-11",
         "nvd_text": "An issue was discovered in can_can_gw_rcv in net/can/gw.c in the Linux kernel through 4.19.13. The CAN frame modification rules allow bitwise logical operations that can be also applied to the can_dlc field. Because of a missing check, the CAN drivers may write arbitrary content beyond the data registers in the CAN controller's I/O memory when processing can-gw manipulated outgoing frames. This is related to cgw_csum_xor_rel. An unprivileged user can trigger a system crash (general protection fault).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3701",
@@ -37437,7 +37482,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "13054abbaa4f1fd4e6f3b4b63439ec033b4c8035",
-        "last_modified": "2019-02-07",
+        "last_modified": "2019-02-12",
         "nvd_text": "A flaw was found in the Linux kernel in the function hid_debug_events_read() in drivers/hid/hid-debug.c file which may enter an infinite loop with certain parameters passed from a userspace. A local privileged user (\"root\") can cause a system lock up and a denial of service. Versions from v4.18 and newer are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3819",
@@ -37489,8 +37534,30 @@
         "affected_versions": "unk to v5.0-rc6",
         "breaks": "",
         "cmt_msg": "kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974)",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "score": "5.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.9"
+        },
+        "cwe": "Race Conditions",
         "fixes": "cfa39381173d5f969daf43582c95ad679189cbc9",
-        "last_modified": "2019-02-07",
+        "last_modified": "2019-02-15",
+        "nvd_text": "In the Linux kernel before 4.20.8, kvm_ioctl_create_device in virt/kvm/kvm_main.c mishandles reference counting because of a race condition, leading to a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-6974",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-6974",
@@ -37505,7 +37572,7 @@
         "breaks": "",
         "cmt_msg": "KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221)",
         "fixes": "ecec76885bcfe3294685dc363fd1273df0d5d65f",
-        "last_modified": "2019-02-07",
+        "last_modified": "2019-02-12",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7221",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7221",
@@ -37520,7 +37587,7 @@
         "breaks": "",
         "cmt_msg": "KVM: x86: work around leak of uninitialized stack contents (CVE-2019-7222)",
         "fixes": "353c0956a618a07ba4bbe7ad00ff29fe70e8412a",
-        "last_modified": "2019-02-07",
+        "last_modified": "2019-02-12",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7222",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7222",
