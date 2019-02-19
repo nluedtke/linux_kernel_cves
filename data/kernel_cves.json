@@ -37531,8 +37531,8 @@
         }
     },
     "CVE-2019-6974": {
-        "affected_versions": "unk to v5.0-rc6",
-        "breaks": "",
+        "affected_versions": "v3.10-rc1 to v5.0-rc6",
+        "breaks": "852b6d57dc7fa378019786fa84727036e56839ea",
         "cmt_msg": "kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974)",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -37556,7 +37556,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "cfa39381173d5f969daf43582c95ad679189cbc9",
-        "last_modified": "2019-02-15",
+        "last_modified": "2019-02-18",
         "nvd_text": "In the Linux kernel before 4.20.8, kvm_ioctl_create_device in virt/kvm/kvm_main.c mishandles reference counting because of a race condition, leading to a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-6974",
@@ -37568,11 +37568,11 @@
         }
     },
     "CVE-2019-7221": {
-        "affected_versions": "unk to v5.0-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.0-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221)",
         "fixes": "ecec76885bcfe3294685dc363fd1273df0d5d65f",
-        "last_modified": "2019-02-12",
+        "last_modified": "2019-02-18",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7221",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7221",
@@ -37583,11 +37583,11 @@
         }
     },
     "CVE-2019-7222": {
-        "affected_versions": "unk to v5.0-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.0-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "KVM: x86: work around leak of uninitialized stack contents (CVE-2019-7222)",
         "fixes": "353c0956a618a07ba4bbe7ad00ff29fe70e8412a",
-        "last_modified": "2019-02-12",
+        "last_modified": "2019-02-18",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7222",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7222",
@@ -37611,6 +37611,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-7308",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-7308",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-7308"
+        }
+    },
+    "CVE-2019-8912": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-02-18",
+        "nvd_text": "In the Linux kernel through 4.20.10, af_alg_release() in crypto/af_alg.c neglects to set a NULL value for a certain structure member, which leads to a use-after-free in sockfs_setattr.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-8912",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-8912",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-8912",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-8912",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-8912",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-8912"
         }
     }
 }
