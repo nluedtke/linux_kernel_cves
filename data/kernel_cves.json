@@ -37602,8 +37602,29 @@
         "affected_versions": "v4.15-rc8 to v5.0-rc3",
         "breaks": "b2157399cc9898260d6031c5bfe45fe137c1fbe7",
         "cmt_msg": "bpf: fix sanitation of alu op with pointer / scalar type from different paths",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "7.5"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Numeric Errors",
         "fixes": "d3bd7413e0ca40b60cf60d4003246d067cafdeda",
-        "last_modified": "2019-02-04",
+        "last_modified": "2019-02-20",
         "nvd_text": "kernel/bpf/verifier.c in the Linux kernel before 4.20.6 performs undesirable out-of-bounds speculation on pointer arithmetic in various cases, including cases of different branches with different state or limits to sanitize, leading to side-channel attacks.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7308",
