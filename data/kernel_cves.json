@@ -37638,6 +37638,7 @@
     "CVE-2019-8912": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "net: crypto set sk to NULL when af_alg_release.",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -37659,8 +37660,8 @@
             "score": "9.8"
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2019-02-19",
+        "fixes": "9060cb719e61b685ec0102574e10337fa5f445ea",
+        "last_modified": "2019-02-21",
         "nvd_text": "In the Linux kernel through 4.20.10, af_alg_release() in crypto/af_alg.c neglects to set a NULL value for a certain structure member, which leads to a use-after-free in sockfs_setattr.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-8912",
@@ -37669,6 +37670,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-8912",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-8912",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-8912"
+        }
+    },
+    "CVE-2019-8956": {
+        "affected_versions": "v4.17-rc1 to v5.0-rc6",
+        "breaks": "4910280503f3af2857d5aa77e35b22d93a8960a8",
+        "cmt_msg": "sctp: walk the list of asoc safely",
+        "fixes": "ba59fb0273076637f0add4311faa990a5eec27c0",
+        "last_modified": "2019-02-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-8956",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-8956",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-8956",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-8956",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-8956",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-8956"
         }
     },
     "CVE-2019-8980": {
