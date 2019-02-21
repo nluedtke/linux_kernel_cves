@@ -37636,8 +37636,8 @@
         }
     },
     "CVE-2019-8912": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.10-rc1 to unk",
+        "breaks": "86741ec25462e4c8cdce6df2f41ead05568c7d5e",
         "cmt_msg": "net: crypto set sk to NULL when af_alg_release.",
         "cvss2": {
             "Access Complexity": "Low",
@@ -37690,6 +37690,27 @@
     "CVE-2019-8980": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Resource Management Errors",
         "fixes": "",
         "last_modified": "2019-02-21",
         "nvd_text": "A memory leak in the kernel_read_file function in fs/exec.c in the Linux kernel through 4.20.11 allows attackers to cause a denial of service (memory consumption) by triggering vfs_read failures.",
