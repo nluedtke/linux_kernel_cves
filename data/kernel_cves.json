@@ -31422,6 +31422,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "8914a595110a6eca69a5e275b323f5d09e18f4f9",
+        "last_modified": "2019-02-20",
         "nvd_text": "Linux Linux kernel version at least v4.8 onwards, probably well before contains a Insufficient input validation vulnerability in bnx2x network card driver that can result in DoS: Network card firmware assertion takes card off-line. This attack appear to be exploitable via An attacker on a must pass a very large, specially crafted packet to the bnx2x card. This can be done from an untrusted guest VM..",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1000026",
@@ -35658,6 +35659,43 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20669"
         }
     },
+    "CVE-2018-20784": {
+        "affected_versions": "v4.13-rc1 to v5.0-rc1",
+        "breaks": "a9e7f6544b9cebdae54d29f87a7ba2a83c0471b5",
+        "cmt_msg": "sched/fair: Fix infinite loop in update_blocked_averages() by reverting a9e7f6544b9c",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "7.5"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
+        "fixes": "c40f7d74c741a907cfaeb73a7697081881c497d0",
+        "last_modified": "2019-02-22",
+        "nvd_text": "In the Linux kernel before 4.20.2, kernel/sched/fair.c mishandles leaf cfs_rq's, which allows attackers to cause a denial of service (infinite loop in update_blocked_averages) or possibly have unspecified other impact by inducing a high load.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20784",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-20784",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-20784",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-20784",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-20784",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20784"
+        }
+    },
     "CVE-2018-3574": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -37531,8 +37569,8 @@
         }
     },
     "CVE-2019-6974": {
-        "affected_versions": "unk to v5.0-rc6",
-        "breaks": "",
+        "affected_versions": "v3.10-rc1 to v5.0-rc6",
+        "breaks": "852b6d57dc7fa378019786fa84727036e56839ea",
         "cmt_msg": "kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974)",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -37556,7 +37594,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "cfa39381173d5f969daf43582c95ad679189cbc9",
-        "last_modified": "2019-02-15",
+        "last_modified": "2019-02-23",
         "nvd_text": "In the Linux kernel before 4.20.8, kvm_ioctl_create_device in virt/kvm/kvm_main.c mishandles reference counting because of a race condition, leading to a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-6974",
@@ -37568,11 +37606,11 @@
         }
     },
     "CVE-2019-7221": {
-        "affected_versions": "unk to v5.0-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.0-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221)",
         "fixes": "ecec76885bcfe3294685dc363fd1273df0d5d65f",
-        "last_modified": "2019-02-12",
+        "last_modified": "2019-02-20",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7221",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7221",
@@ -37583,11 +37621,11 @@
         }
     },
     "CVE-2019-7222": {
-        "affected_versions": "unk to v5.0-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.0-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "KVM: x86: work around leak of uninitialized stack contents (CVE-2019-7222)",
         "fixes": "353c0956a618a07ba4bbe7ad00ff29fe70e8412a",
-        "last_modified": "2019-02-12",
+        "last_modified": "2019-02-20",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7222",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7222",
@@ -37601,8 +37639,29 @@
         "affected_versions": "v4.15-rc8 to v5.0-rc3",
         "breaks": "b2157399cc9898260d6031c5bfe45fe137c1fbe7",
         "cmt_msg": "bpf: fix sanitation of alu op with pointer / scalar type from different paths",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "7.5"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Numeric Errors",
         "fixes": "d3bd7413e0ca40b60cf60d4003246d067cafdeda",
-        "last_modified": "2019-02-04",
+        "last_modified": "2019-02-20",
         "nvd_text": "kernel/bpf/verifier.c in the Linux kernel before 4.20.6 performs undesirable out-of-bounds speculation on pointer arithmetic in various cases, including cases of different branches with different state or limits to sanitize, leading to side-channel attacks.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7308",
@@ -37611,6 +37670,131 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-7308",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-7308",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-7308"
+        }
+    },
+    "CVE-2019-8912": {
+        "affected_versions": "v4.10-rc1 to unk",
+        "breaks": "86741ec25462e4c8cdce6df2f41ead05568c7d5e",
+        "cmt_msg": "net: crypto set sk to NULL when af_alg_release.",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "7.5"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Use After Free",
+        "fixes": "9060cb719e61b685ec0102574e10337fa5f445ea",
+        "last_modified": "2019-02-23",
+        "nvd_text": "In the Linux kernel through 4.20.10, af_alg_release() in crypto/af_alg.c neglects to set a NULL value for a certain structure member, which leads to a use-after-free in sockfs_setattr.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-8912",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-8912",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-8912",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-8912",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-8912",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-8912"
+        }
+    },
+    "CVE-2019-8956": {
+        "affected_versions": "v4.17-rc1 to v5.0-rc6",
+        "breaks": "4910280503f3af2857d5aa77e35b22d93a8960a8",
+        "cmt_msg": "sctp: walk the list of asoc safely",
+        "fixes": "ba59fb0273076637f0add4311faa990a5eec27c0",
+        "last_modified": "2019-02-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-8956",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-8956",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-8956",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-8956",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-8956",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-8956"
+        }
+    },
+    "CVE-2019-8980": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Resource Management Errors",
+        "fixes": "",
+        "last_modified": "2019-02-21",
+        "nvd_text": "A memory leak in the kernel_read_file function in fs/exec.c in the Linux kernel through 4.20.11 allows attackers to cause a denial of service (memory consumption) by triggering vfs_read failures.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-8980",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-8980",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-8980",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-8980",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-8980",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-8980"
+        }
+    },
+    "CVE-2019-9003": {
+        "affected_versions": "v4.18-rc1 to v5.0-rc4",
+        "breaks": "e86ee2d44b44056243da17c120ad258717cedf9b",
+        "cmt_msg": "ipmi: fix use-after-free of user->release_barrier.rda",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Use After Free",
+        "fixes": "77f8269606bf95fcb232ee86f6da80886f1dfae8",
+        "last_modified": "2019-02-22",
+        "nvd_text": "In the Linux kernel before 4.20.5, attackers can trigger a drivers/char/ipmi/ipmi_msghandler.c use-after-free and OOPS by arranging for certain simultaneous execution of the code, as demonstrated by a \"service ipmievd restart\" loop.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9003",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9003",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-9003",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-9003",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-9003",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-9003"
         }
     }
 }
