@@ -2,11 +2,14 @@ branches:
   only:
   - master
   - staging
-language: node_js - "stable"
+language: node_js
+node_js:
+  - "node"
 before_install:
 - npm install -g @vue/cli
 before_script:
 - cd ui
+- if [ "$TRAVIS_BRANCH" = "staging" ]; then sed -i "s/\/master\//\/staging\//g" src/main.js ; fi
 - npm install
 script: npm run build
 deploy:
