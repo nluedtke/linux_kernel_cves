@@ -9539,8 +9539,8 @@
         }
     },
     "CVE-2014-9717": {
-        "affected_versions": "v2.6.12-rc2 to v4.1-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.1-rc1 to v4.1-rc1",
+        "breaks": "ce07d891a0891d3c0d0c2d73d577490486b809e1",
         "cmt_msg": "mnt: Update detach_mounts to leave mounts connected",
         "cvss2": {
             "Access Complexity": "Low",
@@ -9564,6 +9564,7 @@
         },
         "cwe": "Improper Access Control",
         "fixes": "e0c9c0afd2fc958ffa34b697972721d81df8a56f",
+        "last_modified": "2019-02-26",
         "nvd_text": "fs/namespace.c in the Linux kernel before 4.0.2 processes MNT_DETACH umount2 system calls without verifying that the MNT_LOCKED flag is unset, which allows local users to bypass intended access restrictions and navigate to filesystem locations beneath a mount by calling umount2 within a user namespace.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2014-9717",
@@ -14984,8 +14985,8 @@
         "vendor_specific": true
     },
     "CVE-2015-8950": {
-        "affected_versions": "v2.6.12-rc2 to v4.1-rc2",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.18-rc1 to v4.1-rc2",
+        "breaks": "d4932f9e81ae7a7bf3c3967e48373909b9c98ee5",
         "cmt_msg": "arm64: dma-mapping: always clear allocated buffers",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -15009,6 +15010,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "6829e274a623187c24f7cfc0e3d35f25d087fcc5",
+        "last_modified": "2019-02-26",
         "nvd_text": "arch/arm64/mm/dma-mapping.c in the Linux kernel before 4.0.3, as used in the ION subsystem in Android and other products, does not initialize certain data structures, which allows local users to obtain sensitive information from kernel memory by triggering a dma_mmap call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8950",
@@ -15451,8 +15453,8 @@
         }
     },
     "CVE-2015-9016": {
-        "affected_versions": "v2.6.12-rc2 to v4.3-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.14-rc3 to v4.3-rc1",
+        "breaks": "18741986a4b1dc4b1f171634c4191abc3b0fa023",
         "cmt_msg": "blk-mq: fix race between timeout and freeing request",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -15476,6 +15478,7 @@
         },
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "0048b4837affd153897ed1222283492070027aa9",
+        "last_modified": "2019-02-26",
         "nvd_text": "In blk_mq_tag_to_rq in blk-mq.c in the upstream kernel, there is a possible use after free due to a race condition when a request has been previously freed by blk_mq_complete_request. This could lead to local escalation of privilege. Product: Android. Versions: Android kernel. Android ID: A-63083046.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-9016",
@@ -15810,8 +15813,8 @@
         }
     },
     "CVE-2016-10147": {
-        "affected_versions": "v2.6.12-rc2 to v4.9",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.18-rc1 to v4.9",
+        "breaks": "1e65b81a90df50bf450193065cc9073b706b8dda",
         "cmt_msg": "crypto: mcryptd - Check mcryptd algorithm compatibility",
         "cvss2": {
             "Access Complexity": "Low",
@@ -15835,6 +15838,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "48a992727d82cb7db076fa15d372178743b1f4cd",
+        "last_modified": "2019-02-26",
         "nvd_text": "crypto/mcryptd.c in the Linux kernel before 4.8.15 allows local users to cause a denial of service (NULL pointer dereference and system crash) by using an AF_ALG socket with an incompatible algorithm, as demonstrated by mcryptd(md5).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-10147",
@@ -15954,8 +15958,8 @@
         }
     },
     "CVE-2016-10200": {
-        "affected_versions": "v2.6.12-rc2 to v4.9-rc7",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.5-rc1 to v4.9-rc7",
+        "breaks": "c51ce49735c183ef2592db70f918ee698716276b",
         "cmt_msg": "l2tp: fix racy SOCK_ZAPPED flag check in l2tp_ip{,6}_bind()",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -15979,6 +15983,7 @@
         },
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "32c231164b762dddefa13af5a0101032c70b50ef",
+        "last_modified": "2019-02-26",
         "nvd_text": "Race condition in the L2TPv3 IP Encapsulation feature in the Linux kernel before 4.8.14 allows local users to gain privileges or cause a denial of service (use-after-free) by making multiple bind system calls without properly ascertaining whether a socket has the SOCK_ZAPPED status, related to net/l2tp/l2tp_ip.c and net/l2tp/l2tp_ip6.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-10200",
@@ -16279,8 +16284,8 @@
         }
     },
     "CVE-2016-1583": {
-        "affected_versions": "v2.6.12-rc2 to v4.7-rc3",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.19-rc1 to v4.7-rc3",
+        "breaks": "237fead619984cc48818fe12ee0ceada3f55b012",
         "cmt_msg": "proc: prevent stacking filesystems on top",
         "cvss2": {
             "Access Complexity": "Low",
@@ -16304,6 +16309,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "e54ad7f1ee263ffa5a2de9c609d58dfa27b21cd9",
+        "last_modified": "2019-02-26",
         "nvd_text": "The ecryptfs_privileged_open function in fs/ecryptfs/kthread.c in the Linux kernel before 4.6.3 allows local users to gain privileges or cause a denial of service (stack memory consumption) via vectors involving crafted mmap calls for /proc pathnames, leading to recursive pagefault handling.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-1583",
@@ -18721,8 +18727,8 @@
         }
     },
     "CVE-2016-4997": {
-        "affected_versions": "v2.6.12-rc2 to v4.7-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.17-rc1 to v4.7-rc1",
+        "breaks": "2722971cbe831117686039d5c334f2c0f560be13",
         "cmt_msg": "netfilter: x_tables: check for bogus target offset",
         "cvss2": {
             "Access Complexity": "Low",
@@ -18746,6 +18752,7 @@
         },
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "ce683e5f9d045e5d67d1312a42b359cb2ab2a13c",
+        "last_modified": "2019-02-26",
         "nvd_text": "The compat IPT_SO_SET_REPLACE and IP6T_SO_SET_REPLACE setsockopt implementations in the netfilter subsystem in the Linux kernel before 4.6.3 allow local users to gain privileges or cause a denial of service (memory corruption) by leveraging in-container root access to provide a crafted offset value that triggers an unintended decrement.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-4997",
@@ -21087,8 +21094,8 @@
         }
     },
     "CVE-2016-9120": {
-        "affected_versions": "v2.6.12-rc2 to v4.6-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.14-rc1 to v4.6-rc1",
+        "breaks": "c30707be128e952ca2ba77417cb5509e254a4aac",
         "cmt_msg": "staging/android/ion : fix a race condition in the ion driver",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -21112,6 +21119,7 @@
         },
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "9590232bb4f4cc824f3425a6e1349afbe6d6d2b7",
+        "last_modified": "2019-02-26",
         "nvd_text": "Race condition in the ion_ioctl function in drivers/staging/android/ion/ion.c in the Linux kernel before 4.6 allows local users to gain privileges or cause a denial of service (use-after-free) by calling ION_IOC_FREE on two CPUs at the same time.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-9120",
@@ -22016,7 +22024,7 @@
         "vendor_specific": true
     },
     "CVE-2017-0537": {
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "breaks": "",
         "cvss2": {
             "Access Complexity": "High",
             "Access Vector": "Network Accessible",
@@ -22087,12 +22095,13 @@
         "vendor_specific": true
     },
     "CVE-2017-0605": {
-        "affected_versions": "v2.6.12-rc2 to v4.12-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.30-rc1 to v4.12-rc1",
+        "breaks": "50d88758a3f9787cbdbdbc030560b815721eab4b",
         "cmt_msg": "tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline()",
         "cvss2": "9.3",
         "cvss3": "7.8",
         "fixes": "e09e28671cda63e6308b31798b997639120e2a21",
+        "last_modified": "2019-02-26",
         "nvd_text": "** REJECT **  DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate was withdrawn by its CNA.  Further investigation showed that it was not a security issue.  Notes: none.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-0605",
@@ -22408,8 +22417,8 @@
         }
     },
     "CVE-2017-1000251": {
-        "affected_versions": "v2.6.12-rc2 to v4.14-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.32-rc1 to v4.14-rc1",
+        "breaks": "f2fcfcd670257236ebf2088bbdf26f6a8ef459fe",
         "cmt_msg": "Bluetooth: Properly check L2CAP config option output buffer length",
         "cvss2": {
             "Access Complexity": "Low",
@@ -22433,6 +22442,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "e860d2c904d1a9f38a24eb44c9f34b8f915a6ea3",
+        "last_modified": "2019-02-26",
         "nvd_text": "The native Bluetooth stack in the Linux Kernel (BlueZ), starting at the Linux kernel version 2.6.32 and up to and including 4.13.1, are vulnerable to a stack overflow vulnerability in the processing of L2CAP configuration responses resulting in Remote code execution in kernel space.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-1000251",
@@ -22480,8 +22490,8 @@
         }
     },
     "CVE-2017-1000253": {
-        "affected_versions": "v2.6.12-rc2 to v4.1-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.25-rc1 to v4.1-rc1",
+        "breaks": "cc503c1b43e002e3f1fed70f46d947e2bf349bb6",
         "cmt_msg": "fs/binfmt_elf.c: fix bug in loading of PIE binaries",
         "cvss2": {
             "Access Complexity": "Low",
@@ -22505,6 +22515,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "a87938b2e246b81b4fb713edb371a9fa3c5c3c86",
+        "last_modified": "2019-02-26",
         "nvd_text": "Linux distributions that have not patched their long-term kernels with https://git.kernel.org/linus/a87938b2e246b81b4fb713edb371a9fa3c5c3c86 (committed on April 14, 2015). This kernel vulnerability was fixed in April 2015 by commit a87938b2e246b81b4fb713edb371a9fa3c5c3c86 (backported to Linux 3.10.77 in May 2015), but it was not recognized as a security threat. With CONFIG_ARCH_BINFMT_ELF_RANDOMIZE_PIE enabled, and a normal top-down address allocation strategy, load_elf_binary() will attempt to map a PIE binary into an address range immediately below mm-&gt;mmap_base. Unfortunately, load_elf_ binary() does not take account of the need to allocate sufficient space for the entire binary which means that, while the first PT_LOAD segment is mapped below mm-&gt;mmap_base, the subsequent PT_LOAD segment(s) end up being mapped above mm-&gt;mmap_base into the are that is supposed to be the \"gap\" between the stack and the binary.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-1000253",
@@ -22843,8 +22854,8 @@
         }
     },
     "CVE-2017-1000407": {
-        "affected_versions": "v2.6.12-rc2 to v4.15-rc3",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.23-rc1 to v4.15-rc3",
+        "breaks": "fdef3ad1b38660d74a29abc990940b5dbaaf3fc9",
         "cmt_msg": "KVM: VMX: remove I/O port 0x80 bypass on Intel hosts",
         "cvss2": {
             "Access Complexity": "Low",
@@ -22868,6 +22879,7 @@
         },
         "cwe": "Improper Check for Unusual or Exceptional Conditions",
         "fixes": "d59d51f088014f25c2562de59b9abff4f42a7468",
+        "last_modified": "2019-02-26",
         "nvd_text": "The Linux Kernel 2.6.32 and later are affected by a denial of service, by flooding the diagnostic port 0x80 an exception can be triggered leading to a kernel panic.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-1000407",
@@ -22987,8 +22999,8 @@
         }
     },
     "CVE-2017-10663": {
-        "affected_versions": "v2.6.12-rc2 to v4.13-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.8-rc1 to v4.13-rc1",
+        "breaks": "aff063e266cbf4754021d8e5d16ee418560906fd",
         "cmt_msg": "f2fs: sanity check checkpoint segno and blkoff",
         "cvss2": {
             "Access Complexity": "Low",
@@ -23012,6 +23024,7 @@
         },
         "cwe": "Improper Validation of Array Index",
         "fixes": "15d3042a937c13f5d9244241c7a9c8416ff6e82a",
+        "last_modified": "2019-02-26",
         "nvd_text": "The sanity_check_ckpt function in fs/f2fs/super.c in the Linux kernel before 4.12.4 does not validate the blkoff and segno arrays, which allows local users to gain privileges via unspecified vectors.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-10663",
@@ -23023,8 +23036,8 @@
         }
     },
     "CVE-2017-10810": {
-        "affected_versions": "v2.6.12-rc2 to v4.12-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.2-rc1 to v4.12-rc1",
+        "breaks": "dc5698e80cf724770283e10414054662bdf6ccfa",
         "cmt_msg": "drm/virtio: don't leak bo on drm_gem_object_init failure",
         "cvss2": {
             "Access Complexity": "Low",
@@ -23048,6 +23061,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "385aee965b4e4c36551c362a334378d2985b722a",
+        "last_modified": "2019-02-26",
         "nvd_text": "Memory leak in the virtio_gpu_object_create function in drivers/gpu/drm/virtio/virtgpu_object.c in the Linux kernel through 4.11.8 allows attackers to cause a denial of service (memory consumption) by triggering object-initialization failures.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-10810",
@@ -23420,8 +23434,8 @@
         }
     },
     "CVE-2017-12168": {
-        "affected_versions": "v2.6.12-rc2 to v4.9-rc6",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.6-rc1 to v4.9-rc6",
+        "breaks": "051ff581ce70e822729e9474941f3c206cbf7436",
         "cmt_msg": "arm64: KVM: pmu: Fix AArch32 cycle counter access",
         "cvss2": {
             "Access Complexity": "Low",
@@ -23445,6 +23459,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "9e3f7a29694049edd728e2400ab57ad7553e5aa9",
+        "last_modified": "2019-02-26",
         "nvd_text": "The access_pmu_evcntr function in arch/arm64/kvm/sys_regs.c in the Linux kernel before 4.8.11 allows privileged KVM guest OS users to cause a denial of service (assertion failure and host OS crash) by accessing the Performance Monitors Cycle Count Register (PMCCNTR).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-12168",
@@ -24353,8 +24368,8 @@
         }
     },
     "CVE-2017-14489": {
-        "affected_versions": "v2.6.12-rc2 to v4.14-rc3",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.15-rc1 to v4.14-rc3",
+        "breaks": "0896b752302662909b52895bd7f601136001069d",
         "cmt_msg": "scsi: scsi_transport_iscsi: fix the issue that iscsi_if_rx doesn't parse nlmsg properly",
         "cvss2": {
             "Access Complexity": "Low",
@@ -24378,6 +24393,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "c88f0e6b06f4092995688211a631bb436125d77b",
+        "last_modified": "2019-02-26",
         "nvd_text": "The iscsi_if_rx function in drivers/scsi/scsi_transport_iscsi.c in the Linux kernel through 4.13.2 allows local users to cause a denial of service (panic) by leveraging incorrect length validation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-14489",
@@ -24929,8 +24945,8 @@
         }
     },
     "CVE-2017-15537": {
-        "affected_versions": "v2.6.12-rc2 to v4.14-rc3",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.17-rc1 to v4.14-rc3",
+        "breaks": "21e726c4a3625a1038e97795b7aad97109ba7e19",
         "cmt_msg": "x86/fpu: Don't let userspace set bogus xcomp_bv",
         "cvss2": {
             "Access Complexity": "Low",
@@ -24954,6 +24970,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "814fb7bb7db5433757d76f4c4502c96fc53b0b5e",
+        "last_modified": "2019-02-26",
         "nvd_text": "The x86/fpu (Floating Point Unit) subsystem in the Linux kernel before 4.13.5, when a processor supports the xsave feature but not the xsaves feature, does not correctly handle attempts to set reserved bits in the xstate header via the ptrace() or rt_sigreturn() system call, allowing local users to read the FPU registers of other processes on the system, related to arch/x86/kernel/fpu/regset.c and arch/x86/kernel/fpu/signal.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-15537",
@@ -25181,8 +25198,8 @@
         }
     },
     "CVE-2017-16528": {
-        "affected_versions": "v2.6.12-rc2 to v4.14-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.19-rc1 to v4.14-rc1",
+        "breaks": "68ab61084de3220e2fb0a698c890ba91decddc85",
         "cmt_msg": "ALSA: seq: Cancel pending autoload work at unbinding device",
         "cvss2": {
             "Access Complexity": "Low",
@@ -25206,6 +25223,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "fc27fe7e8deef2f37cba3f2be2d52b6ca5eb9d57",
+        "last_modified": "2019-02-26",
         "nvd_text": "sound/core/seq_device.c in the Linux kernel before 4.13.4 allows local users to cause a denial of service (snd_rawmidi_dev_seq_free use-after-free and system crash) or possibly have unspecified other impact via a crafted USB device.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-16528",
@@ -25253,8 +25271,8 @@
         }
     },
     "CVE-2017-16530": {
-        "affected_versions": "v2.6.12-rc2 to v4.14-rc4",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.37-rc1 to v4.14-rc4",
+        "breaks": "115bb1ffa54c3934f3617bdd4e4dfc68b11e1e69",
         "cmt_msg": "USB: uas: fix bug in handling of alternate settings",
         "cvss2": {
             "Access Complexity": "Low",
@@ -25278,6 +25296,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "786de92b3cb26012d3d0f00ee37adf14527f35c4",
+        "last_modified": "2019-02-26",
         "nvd_text": "The uas driver in the Linux kernel before 4.13.6 allows local users to cause a denial of service (out-of-bounds read and system crash) or possibly have unspecified other impact via a crafted USB device, related to drivers/usb/storage/uas-detect.h and drivers/usb/storage/uas.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-16530",
@@ -25433,8 +25452,8 @@
         }
     },
     "CVE-2017-16535": {
-        "affected_versions": "v2.6.12-rc2 to v4.14-rc6",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.2-rc1 to v4.14-rc6",
+        "breaks": "3148bf041d169a083aa31bd69bedd5bfb7ffe215",
         "cmt_msg": "USB: core: fix out-of-bounds access bug in usb_get_bos_descriptor()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -25458,6 +25477,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "1c0edc3633b56000e18d82fc241e3995ca18a69e",
+        "last_modified": "2019-02-26",
         "nvd_text": "The usb_get_bos_descriptor function in drivers/usb/core/config.c in the Linux kernel before 4.13.10 allows local users to cause a denial of service (out-of-bounds read and system crash) or possibly have unspecified other impact via a crafted USB device.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-16535",
@@ -25469,8 +25489,8 @@
         }
     },
     "CVE-2017-16536": {
-        "affected_versions": "v2.6.12-rc2 to v4.15-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.30-rc1 to v4.15-rc1",
+        "breaks": "e0d3bafd02586cfde286c320f56906fd9fa8d256",
         "cmt_msg": "[media] cx231xx-cards: fix NULL-deref on missing association descriptor",
         "cvss2": {
             "Access Complexity": "Low",
@@ -25494,6 +25514,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "6c3b047fa2d2286d5e438bcb470c7b1a49f415f6",
+        "last_modified": "2019-02-26",
         "nvd_text": "The cx231xx_usb_probe function in drivers/media/usb/cx231xx/cx231xx-cards.c in the Linux kernel through 4.13.11 allows local users to cause a denial of service (NULL pointer dereference and system crash) or possibly have unspecified other impact via a crafted USB device.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-16536",
@@ -26081,8 +26102,8 @@
         }
     },
     "CVE-2017-16995": {
-        "affected_versions": "v2.6.12-rc2 to v4.15-rc5",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.18-rc1 to v4.15-rc5",
+        "breaks": "17a5267067f3c372fec9ffb798d6eaba6b5e6a4c",
         "cmt_msg": "bpf: fix incorrect sign extension in check_alu_op()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -26106,6 +26127,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "95a762e2c8c942780948091f8f2a4f32fce1ac6f",
+        "last_modified": "2019-02-26",
         "nvd_text": "The check_alu_op function in kernel/bpf/verifier.c in the Linux kernel through 4.14.8 allows local users to cause a denial of service (memory corruption) or possibly have unspecified other impact by leveraging incorrect sign extension.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-16995",
@@ -26624,8 +26646,8 @@
         }
     },
     "CVE-2017-17854": {
-        "affected_versions": "v2.6.12-rc2 to v4.15-rc5",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.14-rc1 to v4.15-rc5",
+        "breaks": "f1174f77b50c94eecaa658fdc56fa69b421de4b8",
         "cmt_msg": "bpf: fix integer overflows",
         "cvss2": {
             "Access Complexity": "Low",
@@ -26649,6 +26671,7 @@
         },
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "bb7f0f989ca7de1153bd128a40a71709e339fa03",
+        "last_modified": "2019-02-26",
         "nvd_text": "kernel/bpf/verifier.c in the Linux kernel through 4.14.8 allows local users to cause a denial of service (integer overflow and memory corruption) or possibly have unspecified other impact by leveraging unrestricted integer values for pointer arithmetic.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-17854",
@@ -27095,8 +27118,8 @@
         }
     },
     "CVE-2017-18193": {
-        "affected_versions": "v2.6.12-rc2 to v4.13-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.1-rc1 to v4.13-rc1",
+        "breaks": "028a41e89383e1208dff1afe3e260b8cb6d3431c",
         "cmt_msg": "f2fs: fix a bug caused by NULL extent tree",
         "cvss2": {
             "Access Complexity": "Low",
@@ -27120,6 +27143,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "dad48e73127ba10279ea33e6dbc8d3905c4d31c0",
+        "last_modified": "2019-02-26",
         "nvd_text": "fs/f2fs/extent_cache.c in the Linux kernel before 4.13 mishandles extent trees, which allows local users to cause a denial of service (BUG) via an application with multiple threads.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-18193",
@@ -27527,8 +27551,8 @@
         }
     },
     "CVE-2017-18241": {
-        "affected_versions": "v2.6.12-rc2 to v4.13-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.15-rc1 to v4.13-rc1",
+        "breaks": "6b4afdd794783fe515b50838aa36591e3feea990",
         "cmt_msg": "f2fs: fix a panic caused by NULL flush_cmd_control",
         "cvss2": {
             "Access Complexity": "Low",
@@ -27552,6 +27576,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "d4fdf8ba0e5808ba9ad6b44337783bd9935e0982",
+        "last_modified": "2019-02-26",
         "nvd_text": "fs/f2fs/segment.c in the Linux kernel before 4.13 allows local users to cause a denial of service (NULL pointer dereference and panic) by using a noflush_merge option that triggers a NULL value for a flush_cmd_control data structure.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-18241",
@@ -27636,8 +27661,8 @@
         }
     },
     "CVE-2017-18257": {
-        "affected_versions": "v2.6.12-rc2 to v4.11-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.2-rc1 to v4.11-rc1",
+        "breaks": "003a3e1d60b0bb5cfb4feffb05a2083db2346364",
         "cmt_msg": "f2fs: fix a dead loop in f2fs_fiemap()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -27661,6 +27686,7 @@
         },
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "b86e33075ed1909d8002745b56ecf73b833db143",
+        "last_modified": "2019-02-26",
         "nvd_text": "The __get_data_block function in fs/f2fs/data.c in the Linux kernel before 4.11 allows local users to cause a denial of service (integer overflow and loop) via crafted use of the open and fallocate system calls with an FS_IOC_FIEMAP ioctl.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-18257",
@@ -28774,8 +28800,8 @@
         }
     },
     "CVE-2017-6074": {
-        "affected_versions": "v2.6.12-rc2 to v4.10",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.14-rc1 to v4.10",
+        "breaks": "7c657876b63cb1d8a2ec06f8fc6c37bb8412e66c",
         "cmt_msg": "dccp: fix freeing skb too early for IPV6_RECVPKTINFO",
         "cvss2": {
             "Access Complexity": "Low",
@@ -28799,6 +28825,7 @@
         },
         "cwe": "Double Free",
         "fixes": "5edabca9d4cff7f1f2b68f0bac55ef99d9798ba4",
+        "last_modified": "2019-02-26",
         "nvd_text": "The dccp_rcv_state_process function in net/dccp/input.c in the Linux kernel through 4.9.11 mishandles DCCP_PKT_REQUEST packet data structures in the LISTEN state, which allows local users to obtain root privileges or cause a denial of service (double free) via an application that makes an IPV6_RECVPKTINFO setsockopt system call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-6074",
@@ -29315,8 +29342,8 @@
         }
     },
     "CVE-2017-7308": {
-        "affected_versions": "v2.6.12-rc2 to v4.11-rc6",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.2-rc1 to v4.11-rc6",
+        "breaks": "f6fb8f100b807378fda19e83e5ac6828b638603a",
         "cmt_msg": "net/packet: fix overflow in check for priv area size",
         "cvss2": {
             "Access Complexity": "Low",
@@ -29340,6 +29367,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "2b6867c2ce76c596676bec7d2d525af525fdc6e2",
+        "last_modified": "2019-02-26",
         "nvd_text": "The packet_set_ring function in net/packet/af_packet.c in the Linux kernel through 4.10.6 does not properly validate certain block-size data, which allows local users to cause a denial of service (integer signedness error and out-of-bounds write), or gain privileges (if the CAP_NET_RAW capability is held), via crafted system calls.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-7308",
@@ -29531,8 +29559,8 @@
         }
     },
     "CVE-2017-7482": {
-        "affected_versions": "v2.6.12-rc2 to v4.12-rc7",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.22-rc1 to v4.12-rc7",
+        "breaks": "17926a79320afa9b95df6b977b40cca6d8713cea",
         "cmt_msg": "rxrpc: Fix several cases where a padded len isn't checked in ticket decode",
         "cvss2": {
             "Access Complexity": "Low",
@@ -29556,6 +29584,7 @@
         },
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "5f2f97656ada8d811d3c1bef503ced266fcd53a0",
+        "last_modified": "2019-02-26",
         "nvd_text": "In the Linux kernel before version 4.12, Kerberos 5 tickets decoded when using the RXRPC keys incorrectly assumes the size of a field. This could lead to the size-remaining variable wrapping and the data pointer going over the end of the buffer. This could possibly lead to memory corruption and possible privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-7482",
@@ -30682,8 +30711,8 @@
         "vendor_specific": true
     },
     "CVE-2017-8797": {
-        "affected_versions": "v2.6.12-rc2 to v4.12-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.8-rc1 to v4.12-rc1",
+        "breaks": "8a4c3926889e7bf226e9f0254e7eface1f85f312",
         "cmt_msg": "nfsd: fix undefined behavior in nfsd4_layout_verify",
         "cvss2": {
             "Access Complexity": "Low",
@@ -30707,6 +30736,7 @@
         },
         "cwe": "Improper Validation of Array Index",
         "fixes": "b550a32e60a4941994b437a8d662432a486235a5",
+        "last_modified": "2019-02-26",
         "nvd_text": "The NFSv4 server in the Linux kernel before 4.11.3 does not properly validate the layout type when processing the NFSv4 pNFS GETDEVICEINFO or LAYOUTGET operand in a UDP packet from a remote attacker. This type value is uninitialized upon encountering certain error conditions. This value is used as an array index for dereferencing, which leads to an OOPS and eventually a DoS of knfsd and a soft-lockup of the whole system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-8797",
@@ -32593,8 +32623,8 @@
         }
     },
     "CVE-2018-1094": {
-        "affected_versions": "v2.6.12-rc2 to v4.17-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.13-rc1 to v4.17-rc1",
+        "breaks": "dec214d00e0d78a08b947d7dccdfdb84407a9f4d",
         "cmt_msg": "ext4: always initialize the crc32c checksum driver",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -32618,6 +32648,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "a45403b51582a87872927a3e0fc0a389c26867f1",
+        "last_modified": "2019-02-26",
         "nvd_text": "The ext4_fill_super function in fs/ext4/super.c in the Linux kernel through 4.15.15 does not always initialize the crc32c checksum driver, which allows attackers to cause a denial of service (ext4_xattr_inode_hash NULL pointer dereference and system crash) via a crafted ext4 image.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1094",
@@ -32952,8 +32983,8 @@
         }
     },
     "CVE-2018-1130": {
-        "affected_versions": "v2.6.12-rc2 to v4.16-rc7",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.15-rc3 to v4.16-rc7",
+        "breaks": "69c64866ce072dea1d1e59a0d61e0f66c0dffb76",
         "cmt_msg": "dccp: check sk for closed state in dccp_sendmsg()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -32977,6 +33008,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "67f93df79aeefc3add4e4b31a752600f834236e2",
+        "last_modified": "2019-02-26",
         "nvd_text": "Linux kernel before version 4.16-rc7 is vulnerable to a null pointer dereference in dccp_write_xmit() function in net/dccp/output.c in that allows a local user to cause a denial of service by a number of certain crafted system calls.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1130",
@@ -33780,8 +33812,8 @@
         }
     },
     "CVE-2018-13100": {
-        "affected_versions": "v2.6.12-rc2 to v4.19-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.8-rc1 to v4.19-rc1",
+        "breaks": "aff063e266cbf4754021d8e5d16ee418560906fd",
         "cmt_msg": "f2fs: fix to do sanity check with secs_per_zone",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -33805,7 +33837,7 @@
         },
         "cwe": "Divide By Zero",
         "fixes": "42bf546c1fe3f3654bdf914e977acbc2b80a5be5",
-        "last_modified": "2019-01-26",
+        "last_modified": "2019-02-26",
         "nvd_text": "An issue was discovered in fs/f2fs/super.c in the Linux kernel through 4.17.3, which does not properly validate secs_per_zone in a corrupted f2fs image, as demonstrated by a divide-by-zero error.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-13100",
@@ -33889,8 +33921,8 @@
         }
     },
     "CVE-2018-14609": {
-        "affected_versions": "v2.6.12-rc2 to v4.19-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.31-rc1 to v4.19-rc1",
+        "breaks": "5d4f98a28c7d334091c1b7744f48a1acdd2a4ae0",
         "cmt_msg": "btrfs: relocation: Only remove reloc rb_trees if reloc control has been initialized",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -33914,6 +33946,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "389305b2aa68723c754f88d9dbd268a400e10664",
+        "last_modified": "2019-02-26",
         "nvd_text": "An issue was discovered in the Linux kernel through 4.17.10. There is an invalid pointer dereference in __del_reloc_root() in fs/btrfs/relocation.c when mounting a crafted btrfs image, related to removing reloc rb_trees when reloc control has not been initialized.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14609",
@@ -34110,8 +34143,8 @@
         }
     },
     "CVE-2018-14615": {
-        "affected_versions": "v2.6.12-rc2 to v4.19-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.14-rc1 to v4.19-rc1",
+        "breaks": "7a2af766af15887754f7f7a0869b4603b390876a",
         "cmt_msg": "f2fs: fix to do sanity check with i_extra_isize",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -34135,6 +34168,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "18dd6470c2d14d10f5a2dd926925dc80dbd3abfd",
+        "last_modified": "2019-02-26",
         "nvd_text": "An issue was discovered in the Linux kernel through 4.17.10. There is a buffer overflow in truncate_inline_inode() in fs/f2fs/inline.c when umounting an f2fs image, because a length value may be negative.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14615",
@@ -34291,8 +34325,8 @@
         }
     },
     "CVE-2018-14633": {
-        "affected_versions": "v2.6.12-rc2 to v4.19-rc6",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.1-rc1 to v4.19-rc6",
+        "breaks": "e48354ce078c079996f89d715dfa44814b4eba01",
         "cmt_msg": "scsi: target: iscsi: Use hex2bin instead of a re-implementation",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -34316,6 +34350,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "1816494330a83f2a064499d8ed2797045641f92c",
+        "last_modified": "2019-02-26",
         "nvd_text": "A security flaw was found in the chap_server_compute_md5() function in the ISCSI target code in the Linux kernel in a way an authentication request from an ISCSI initiator is processed. An unauthenticated remote attacker can cause a stack buffer overflow and smash up to 17 bytes of the stack. The attack requires the iSCSI target to be enabled on the victim host. Depending on how the target's code was built (i.e. depending on a compiler, compile flags and hardware architecture) an attack may lead to a system crash and thus to a denial-of-service or possibly to a non-authorized access to data exported by an iSCSI target. Due to the nature of the flaw, privilege escalation cannot be fully ruled out, although we believe it is highly unlikely. Kernel versions 4.18.x, 4.14.x and 3.10.x are believed to be vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14633",
@@ -34580,8 +34615,8 @@
         }
     },
     "CVE-2018-15572": {
-        "affected_versions": "v2.6.12-rc2 to v4.19-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.15-rc9 to v4.19-rc1",
+        "breaks": "c995efd5a740d9cbafbf58bde4973e8b50b4d761",
         "cmt_msg": "x86/speculation: Protect against userspace-userspace spectreRSB",
         "cvss2": {
             "Access Complexity": "Low",
@@ -34605,6 +34640,7 @@
         },
         "cwe": "Security Features",
         "fixes": "fdf82a7856b32d905c39afc85e34364491e46346",
+        "last_modified": "2019-02-26",
         "nvd_text": "The spectre_v2_select_mitigation function in arch/x86/kernel/cpu/bugs.c in the Linux kernel before 4.18.1 does not always fill RSB upon a context switch, which makes it easier for attackers to conduct userspace-userspace spectreRSB attacks.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-15572",
@@ -35088,8 +35124,8 @@
         }
     },
     "CVE-2018-18281": {
-        "affected_versions": "v2.6.12-rc2 to v4.19",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.2-rc1 to v4.19",
+        "breaks": "7b6efc2bc4f19952b25ebf9b236e5ac43cd386c2",
         "cmt_msg": "mremap: properly flush TLB before releasing the page",
         "cvss2": {
             "Access Complexity": "Low",
@@ -35113,7 +35149,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "eb66ae030829605d61fbef1909ce310e29f78821",
-        "last_modified": "2019-01-31",
+        "last_modified": "2019-02-26",
         "nvd_text": "Since Linux kernel version 3.2, the mremap() syscall performs TLB flushes after dropping pagetable locks. If a syscall such as ftruncate() removes entries from the pagetables of a task that is in the middle of mremap(), a stale TLB entry can remain for a short time that permits access to a physical page after it has been released back to the page allocator and reused. This is fixed in the following kernel versions: 4.9.135, 4.14.78, 4.18.16, 4.19.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-18281",
@@ -36065,8 +36101,8 @@
         }
     },
     "CVE-2018-5391": {
-        "affected_versions": "v2.6.12-rc2 to v4.19-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.9-rc1 to v4.19-rc1",
+        "breaks": "c2a936600f78aea00d3312ea4b66a79a4619f9b4",
         "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments.",
         "cvss2": {
             "Access Complexity": "Low",
@@ -36090,7 +36126,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "7969e5c40dfd04799d4341f1b7cd266b6e47f227",
-        "last_modified": "2019-02-08",
+        "last_modified": "2019-02-26",
         "name": "FragmentSmack",
         "nvd_text": "The Linux kernel, versions 3.9+, is vulnerable to a denial of service attack with low rates of specially modified packets targeting IP fragment re-assembly. An attacker may cause a denial of service condition by sending specially crafted IP fragments. Various vulnerabilities in IP fragmentation have been discovered and fixed over the years. The current vulnerability (CVE-2018-5391) became exploitable in the Linux kernel with the increase of the IP fragment reassembly queue size.",
         "ref_urls": {
@@ -36139,8 +36175,8 @@
         }
     },
     "CVE-2018-5750": {
-        "affected_versions": "v2.6.12-rc2 to v4.16-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.24-rc1 to v4.16-rc1",
+        "breaks": "91087dfa51a29b3c190e99339c4c32eb13646c51",
         "cmt_msg": "ACPI: sbshc: remove raw pointer from printk() message",
         "cvss2": {
             "Access Complexity": "Low",
@@ -36164,6 +36200,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "43cdd1b716b26f6af16da4e145b6578f98798bf6",
+        "last_modified": "2019-02-26",
         "nvd_text": "The acpi_smbus_hc_add function in drivers/acpi/sbshc.c in the Linux kernel through 4.14.15 allows local users to obtain sensitive address information by reading dmesg data from an SBS HC printk call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5750",
@@ -36211,8 +36248,8 @@
         }
     },
     "CVE-2018-5814": {
-        "affected_versions": "v2.6.12-rc2 to v4.17-rc6",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v2.6.36-rc1 to v4.17-rc6",
+        "breaks": "aa5873e96271611ae55586f65e49ea1fab90cb88",
         "cmt_msg": "usbip: usbip_host: fix NULL-ptr deref and use-after-free errors",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -36236,6 +36273,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "22076557b07c12086eeb16b8ce2b0b735f7a27e7",
+        "last_modified": "2019-02-26",
         "nvd_text": "In the Linux Kernel before version 4.16.11, 4.14.43, 4.9.102, and 4.4.133, multiple race condition errors when handling probe, disconnect, and rebind operations can be exploited to trigger a use-after-free condition or a NULL pointer dereference by sending multiple USB over IP packets.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5814",
@@ -36642,8 +36680,8 @@
         }
     },
     "CVE-2018-7480": {
-        "affected_versions": "v2.6.12-rc2 to v4.11-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.3-rc1 to v4.11-rc1",
+        "breaks": "994b78327458ea14a1743196ee0560c73ace37f3",
         "cmt_msg": "blkcg: fix double free of new_blkg in blkcg_init_queue",
         "cvss2": {
             "Access Complexity": "Low",
@@ -36667,6 +36705,7 @@
         },
         "cwe": "Double Free",
         "fixes": "9b54d816e00425c3a517514e0d677bb3cec49258",
+        "last_modified": "2019-02-26",
         "nvd_text": "The blkcg_init_queue function in block/blk-cgroup.c in the Linux kernel before 4.11 allows local users to cause a denial of service (double free) or possibly have unspecified other impact by triggering a creation failure.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-7480",
@@ -36930,8 +36969,8 @@
         }
     },
     "CVE-2018-8043": {
-        "affected_versions": "v2.6.12-rc2 to v4.16-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.18-rc1 to v4.16-rc1",
+        "breaks": "2ba1b163c9d5d716fb1061f3fb76832cc6eea37f",
         "cmt_msg": "net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -36955,6 +36994,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "297a6961ffb8ff4dc66c9fbf53b924bd1dda05d5",
+        "last_modified": "2019-02-26",
         "nvd_text": "The unimac_mdio_probe function in drivers/net/phy/mdio-bcm-unimac.c in the Linux kernel through 4.15.8 does not validate certain resource availability, which allows local users to cause a denial of service (NULL pointer dereference).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-8043",
@@ -37612,11 +37652,11 @@
         }
     },
     "CVE-2019-7221": {
-        "affected_versions": "v2.6.12-rc2 to v5.0-rc6",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.15-rc1 to v5.0-rc6",
+        "breaks": "f4124500c2c13eb1208c6143b3f6d469709dea10",
         "cmt_msg": "KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221)",
         "fixes": "ecec76885bcfe3294685dc363fd1273df0d5d65f",
-        "last_modified": "2019-02-20",
+        "last_modified": "2019-02-26",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7221",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7221",
