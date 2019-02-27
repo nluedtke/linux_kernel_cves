@@ -25433,8 +25433,8 @@
         }
     },
     "CVE-2017-16535": {
-        "affected_versions": "v2.6.12-rc2 to v4.14-rc6",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.2-rc1 to v4.14-rc6",
+        "breaks": "3148bf041d169a083aa31bd69bedd5bfb7ffe215",
         "cmt_msg": "USB: core: fix out-of-bounds access bug in usb_get_bos_descriptor()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -25458,6 +25458,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "1c0edc3633b56000e18d82fc241e3995ca18a69e",
+        "last_modified": "2019-02-27",
         "nvd_text": "The usb_get_bos_descriptor function in drivers/usb/core/config.c in the Linux kernel before 4.13.10 allows local users to cause a denial of service (out-of-bounds read and system crash) or possibly have unspecified other impact via a crafted USB device.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-16535",
@@ -27636,8 +27637,8 @@
         }
     },
     "CVE-2017-18257": {
-        "affected_versions": "v2.6.12-rc2 to v4.11-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.2-rc1 to v4.11-rc1",
+        "breaks": "003a3e1d60b0bb5cfb4feffb05a2083db2346364",
         "cmt_msg": "f2fs: fix a dead loop in f2fs_fiemap()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -27661,6 +27662,7 @@
         },
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "b86e33075ed1909d8002745b56ecf73b833db143",
+        "last_modified": "2019-02-27",
         "nvd_text": "The __get_data_block function in fs/f2fs/data.c in the Linux kernel before 4.11 allows local users to cause a denial of service (integer overflow and loop) via crafted use of the open and fallocate system calls with an FS_IOC_FIEMAP ioctl.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-18257",
@@ -29279,8 +29281,8 @@
         }
     },
     "CVE-2017-7294": {
-        "affected_versions": "v2.6.33-rc1 to v4.11-rc6",
-        "breaks": "fb1d9738ca053ea8afa5e86af6463155f983b01c",
+        "affected_versions": "v3.2-rc1 to v4.11-rc6",
+        "breaks": "414ee50b3a111983056b1a828fac08f9e8fbc7e9",
         "cmt_msg": "drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -29304,6 +29306,7 @@
         },
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "e7e11f99564222d82f0ce84bd521e57d78a6b678",
+        "last_modified": "2019-02-27",
         "nvd_text": "The vmw_surface_define_ioctl function in drivers/gpu/drm/vmwgfx/vmwgfx_surface.c in the Linux kernel through 4.10.6 does not validate addition of certain levels data, which allows local users to trigger an integer overflow and out-of-bounds write, and cause a denial of service (system hang or crash) or possibly gain privileges, via a crafted ioctl call for a /dev/dri/renderD* device.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-7294",
@@ -33134,7 +33137,7 @@
     },
     "CVE-2018-12232": {
         "affected_versions": "v4.10-rc1 to v4.18-rc1",
-        "breaks": "86741ec25462",
+        "breaks": "86741ec25462e4c8cdce6df2f41ead05568c7d5e",
         "cmt_msg": "socket: close race condition between sock_close() and sockfs_setattr()",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -33158,6 +33161,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "6d8c50dcb029872b298eea68cc6209c866fd3e14",
+        "last_modified": "2019-02-27",
         "nvd_text": "In net/socket.c in the Linux kernel through 4.17.1, there is a race condition between fchownat and close in cases where they target the same socket file descriptor, related to the sock_close and sockfs_setattr functions. fchownat does not increment the file descriptor reference count, which allows close to set the socket to NULL during fchownat's execution, leading to a NULL pointer dereference and system crash.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-12232",
@@ -37807,8 +37811,29 @@
         "affected_versions": "v4.16-rc1 to v5.0-rc7",
         "breaks": "cc2d58634e0f489d28b5564c05abc69930b4d920",
         "cmt_msg": "netfilter: nf_nat_snmp_basic: add missing length checks in ASN.1 cbs",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Improper Validation of Array Index",
         "fixes": "c4c07b4d6fa1f11880eab8e076d3d060ef3f55fc",
-        "last_modified": "2019-02-26",
+        "last_modified": "2019-02-27",
         "nvd_text": "In the Linux kernel before 4.20.12, net/ipv4/netfilter/nf_nat_snmp_basic_main.c in the SNMP NAT module has insufficient ASN.1 length checks (aka an array index error), making out-of-bounds read and write operations possible, leading to an OOPS or local privilege escalation. This affects snmp_version and snmp_helper.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9162",
