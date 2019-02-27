@@ -1,12 +1,13 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 26Feb19 12:32
+## Last Update - 27Feb19 05:52
 
-### **Updated CVEs:**
+### **New Versions Checked:**
 
-[CVE-2017-17852](cves/CVE-2017-17852)  
-[CVE-2017-17853](cves/CVE-2017-17853)  
-[CVE-2017-17855](cves/CVE-2017-17855)  
-[CVE-2017-17856](cves/CVE-2017-17856)  
-[CVE-2017-17857](cves/CVE-2017-17857)  
+[4.14.104](streams/4.14)  
+[4.19.26](streams/4.19)  
+[4.20.13](streams/4.20)  
+[4.9.161](streams/4.9)  
+
+
