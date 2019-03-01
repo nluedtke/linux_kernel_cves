@@ -30184,6 +30184,7 @@
     },
     "CVE-2017-8065": {
         "affected_versions": "v4.11-rc1 to v4.11-rc1",
+        "backport": true,
         "breaks": "f15f05b0a5de667c821a9727c33bce9d1d9b26dd",
         "cmt_msg": "crypto: ccm - move cbcmac input off the stack",
         "cvss2": {
@@ -30208,6 +30209,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "3b30460c5b0ed762be75a004e924ec3f8711e032",
+        "last_modified": "2019-03-01",
         "nvd_text": "crypto/ccm.c in the Linux kernel 4.9.x and 4.10.x through 4.10.12 interacts incorrectly with the CONFIG_VMAP_STACK option, which allows local users to cause a denial of service (system crash or memory corruption) or possibly have unspecified other impact by leveraging use of more than one virtual page for a DMA scatterlist.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-8065",
@@ -36072,8 +36074,8 @@
         }
     },
     "CVE-2018-5391": {
-        "affected_versions": "v2.6.12-rc2 to v4.19-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.9-rc1 to v4.19-rc1",
+        "breaks": "c2a936600f78aea00d3312ea4b66a79a4619f9b4",
         "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments.",
         "cvss2": {
             "Access Complexity": "Low",
@@ -36097,7 +36099,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "7969e5c40dfd04799d4341f1b7cd266b6e47f227",
-        "last_modified": "2019-02-08",
+        "last_modified": "2019-03-01",
         "name": "FragmentSmack",
         "nvd_text": "The Linux kernel, versions 3.9+, is vulnerable to a denial of service attack with low rates of specially modified packets targeting IP fragment re-assembly. An attacker may cause a denial of service condition by sending specially crafted IP fragments. Various vulnerabilities in IP fragmentation have been discovered and fixed over the years. The current vulnerability (CVE-2018-5391) became exploitable in the Linux kernel with the increase of the IP fragment reassembly queue size.",
         "ref_urls": {
