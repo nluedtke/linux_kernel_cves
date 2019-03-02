@@ -33788,8 +33788,8 @@
         }
     },
     "CVE-2018-13100": {
-        "affected_versions": "v2.6.12-rc2 to v4.19-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.8-rc1 to v4.19-rc1",
+        "breaks": "aff063e266cbf4754021d8e5d16ee418560906fd",
         "cmt_msg": "f2fs: fix to do sanity check with secs_per_zone",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -33813,7 +33813,7 @@
         },
         "cwe": "Divide By Zero",
         "fixes": "42bf546c1fe3f3654bdf914e977acbc2b80a5be5",
-        "last_modified": "2019-01-26",
+        "last_modified": "2019-03-02",
         "nvd_text": "An issue was discovered in fs/f2fs/super.c in the Linux kernel through 4.17.3, which does not properly validate secs_per_zone in a corrupted f2fs image, as demonstrated by a divide-by-zero error.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-13100",
@@ -36651,8 +36651,9 @@
         }
     },
     "CVE-2018-7480": {
-        "affected_versions": "v2.6.12-rc2 to v4.11-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v4.2-rc1 to v4.11-rc1",
+        "backport": true,
+        "breaks": "ec13b1d6f0a0457312e615335ce8ceb07da50a11",
         "cmt_msg": "blkcg: fix double free of new_blkg in blkcg_init_queue",
         "cvss2": {
             "Access Complexity": "Low",
@@ -36676,6 +36677,7 @@
         },
         "cwe": "Double Free",
         "fixes": "9b54d816e00425c3a517514e0d677bb3cec49258",
+        "last_modified": "2019-03-02",
         "nvd_text": "The blkcg_init_queue function in block/blk-cgroup.c in the Linux kernel before 4.11 allows local users to cause a denial of service (double free) or possibly have unspecified other impact by triggering a creation failure.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-7480",
@@ -37621,11 +37623,11 @@
         }
     },
     "CVE-2019-7221": {
-        "affected_versions": "v2.6.12-rc2 to v5.0-rc6",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.15-rc1 to v5.0-rc6",
+        "breaks": "f4124500c2c13eb1208c6143b3f6d469709dea10",
         "cmt_msg": "KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221)",
         "fixes": "ecec76885bcfe3294685dc363fd1273df0d5d65f",
-        "last_modified": "2019-02-20",
+        "last_modified": "2019-03-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7221",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7221",
