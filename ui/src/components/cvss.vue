@@ -118,11 +118,16 @@ export default {
       // set cvss template based on cvssVersion
       if (this.$props.cvssVersion === 'cvss2') {this.$data.cvss = cvss2Template}
       if (this.$props.cvssVersion === 'cvss3') {this.$data.cvss = cvss3Template}
-      
+
       var data = this.$props.cvssData
-      for (var [key, value] of Object.entries(data)) {
-        if (key != 'score') {
-          this.$data.cvss[key][value] = true
+      for (var [key, value] of Object.entries(this.$data.cvss)) {
+        for (var name of Object.keys(value)) {
+          if (data[key] == name) {
+            this.$data.cvss[key][name] = true
+          }
+          else {
+            this.$data.cvss[key][name] = false
+          }
         }
       }
     },
