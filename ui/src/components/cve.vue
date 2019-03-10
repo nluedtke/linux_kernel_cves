@@ -138,8 +138,6 @@ export default {
 .versions {
   padding: .5em 1em 1em
 }
-.nvd-text {
-}
 .commit-message {
   background-color: #42b983f5;
   color: white;
