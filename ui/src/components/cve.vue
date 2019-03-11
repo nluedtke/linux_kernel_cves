@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <div id="content">
+    <div v-if="contents" class="content">
       <h3 v-if="contents.name" class="cve-headline"> {{ contents.name }} - {{ contents.id }}</h3>
       <h3 v-else class="cve-headline">{{ contents.id }}</h3>
       <p v-if="contents.last_modified" class="last-modified"><em>Last modified {{ contents.last_modified }}</em></p>
@@ -35,6 +35,14 @@
         </ul>
       </div>
     </div>
+    <div v-else class="content">
+      <h3 class="cve-headline"> {{ cveId }} not found</h3>
+      <p>{{cveId}} does not appear in our data. This could be because its too new (within hours), is embargoed, or we believe that it does not affect the upstream kernel.</p>
+      <p>If you believe this CVE does affect the Linux Kernel, please fill out an issue on our github by clicking the button below.</p>
+      <div class="row">
+        <a class="issue" href="https://github.com/nluedtke/linux_kernel_cves/issues/new?assignees=&labels=Data&template=cve-data-issue.md&title=%5BDATA%5D+CVE-XXXX-XXXXXX">file an issue</a>
+      </div>
+    </div>
     <input action="action" onclick="window.history.go(-1); return false;" type="button" value="Back" />
   </div>
 </template>
@@ -50,7 +58,8 @@ export default {
     return {
       stream: [],
       contents: [],
-      errors: []
+      errors: [],
+      cveId: []
     }
   },
   created () {
@@ -66,12 +75,13 @@ export default {
     load: function () {
       var cvesUrl = this.$apiBaseUrl + 'data/kernel_cves.json'
       var cveID = this.$route.path.split('/')[2]
+      this.cveId = cveID
       document.title = 'Linux Kernel CVEs | ' + cveID
       axios.get(cvesUrl)
         .then(response => {
           var cve = response.data[cveID]
           if (cve == null) {
-            this.$router.push('/404')
+            this.contents = null
           }
           cve['id'] = cveID
           this.contents = cve
@@ -106,7 +116,7 @@ export default {
   max-width: 740px;
   margin: 0 auto;
 }
-#content {
+.content {
   text-align: left;
   padding: 1em 2em;
   margin: 4em 0 2em;
@@ -127,8 +137,6 @@ export default {
 }
 .versions {
   padding: .5em 1em 1em
-}
-.nvd-text {
 }
 .commit-message {
   background-color: #42b983f5;
@@ -209,5 +217,23 @@ ul {
 }
 a {
   color: #42b983;
+}
+.issue {
+  text-decoration: none;
+  padding: 1em 2em;
+  background-color: #42b983;
+  color: white;
+  border: 1px solid white;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.issue:hover {
+  color: #42b983;
+  background-color: white;
+  border: 1px solid #42b983;
+}
+.row {
+  padding: 1em 0;
+  margin: 1em 0;
 }
 </style>
