@@ -13,6 +13,7 @@ CVEs fixed in 4.19.7:
   CVE-2018-16862: 16a2d602244ff5327cecd210fdd50ad5ad443c9c mm: cleancache: fix corruption on missed inode invalidation
   CVE-2018-19406: ffb01e73737b4d3e66734c901ee666ae8a23a857 KVM: LAPIC: Fix pv ipis use-before-initialization
   CVE-2018-19407: 61c42d657c859ccc95e53afdac64f73a0053b8ea KVM: X86: Fix scan ioapic use-before-initialization
+  CVE-2019-2025: 553927d6aab993e1297d0c69274cd0c2df5440ca binder: fix race that allows malicious free of live buffer
 
 CVEs fixed in 4.19.8:
   CVE-2018-18397: 10f98c134b02d11923d45ce6688c2479435e8ec9 userfaultfd: use ENOENT instead of EFAULT if the atomic copy user fails
@@ -26,11 +27,40 @@ CVEs fixed in 4.19.13:
   CVE-2018-16882: 1972ca04708330b0edd52956e644e3974065a613 KVM: Fix UAF in nested posted interrupt processing
   CVE-2018-19985: 8f980122236c1fc8e11ffb57ec73315d01dc88e0 USB: hso: Fix OOB memory access in hso_probe/hso_get_config_data
 
+CVEs fixed in 4.19.15:
+  CVE-2018-20784: dc8408ea0b22ab181ee541f3786b4fd6161e0ce3 sched/fair: Fix infinite loop in update_blocked_averages() by reverting a9e7f6544b9c
+
 CVEs fixed in 4.19.16:
   CVE-2018-16884: 44e7bab39f877c9c095bfaaee943b0807574a7f7 sunrpc: use-after-free in svc_process_common()
 
 CVEs fixed in 4.19.17:
   CVE-2019-3701: 8db82a6f2b76d42ec2615f8def6e797e064e7822 can: gw: ensure DLC boundaries after CAN frame modification
+
+CVEs fixed in 4.19.18:
+  CVE-2019-9003: 1c393ca118cfaf36c95270b9bed295bba109fafa ipmi: fix use-after-free of user->release_barrier.rda
+
+CVEs fixed in 4.19.19:
+  CVE-2019-7308: eed84f94ff8d97abcbc5706f6f9427520fd60a10 bpf: fix sanitation of alu op with pointer / scalar type from different paths
+
+CVEs fixed in 4.19.20:
+  CVE-2018-16880: aafe74b726891386cd139d3432ec619ed5189b29 vhost: fix OOB in get_rx_bufs()
+
+CVEs fixed in 4.19.21:
+  CVE-2019-3819: c70374ce418e7ae9276d3dc26aed0301e4da5e35 HID: debug: fix the ring buffer implementation
+  CVE-2019-6974: 24b027d2b1386da03aafb2aaac69d4fa67ee7d9c kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974)
+  CVE-2019-7221: 236fd677125f974aaf39f09074d226a884b4fe0e KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221)
+  CVE-2019-7222: 5a45d3720b5437515f8c094f1c3d61f6afe211c1 KVM: x86: work around leak of uninitialized stack contents (CVE-2019-7222)
+  CVE-2019-8956: 7c2361308e1727c3135ebb3b5c6906fb781bb261 sctp: walk the list of asoc safely
+
+CVEs fixed in 4.19.25:
+  CVE-2019-8912: eb5e6869125f69dd28513f92992d97ec62bb9773 net: crypto set sk to NULL when af_alg_release.
+  CVE-2019-9162: 6a3f7237871c4d5c090ab9a6fce3ba6a1baf1f82 netfilter: nf_nat_snmp_basic: add missing length checks in ASN.1 cbs
+
+CVEs fixed in 4.19.27:
+  CVE-2019-9213: de04d2973a62e4efb3de45e93bd46acd6d510e0a mm: enforce min addr even if capable() in expand_downwards()
+
+CVEs fixed in 4.19.28:
+  CVE-2019-8980: b60d90b2d3d14c426693a0a34041db11be66d29e exec: Fix mem leak in kernel_read_file
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -44,19 +74,15 @@ Outstanding CVEs:
   CVE-2013-7445: (unk)  
   CVE-2015-2877: (unk)  
   CVE-2016-8660: (unk)  
-  CVE-2017-0630: (unk)  
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
   CVE-2018-1121: (unk)  
-  CVE-2018-11987: (unk)  
   CVE-2018-12928: (unk)  
   CVE-2018-12929: (unk)  
   CVE-2018-12930: (unk)  
   CVE-2018-12931: (unk)  
-  CVE-2018-16880: (unk)  
   CVE-2018-17977: (unk)  
   CVE-2018-20669: (unk) make 'user_access_begin()' do 'access_ok()' 
-  CVE-2019-3459: (unk)  
-  CVE-2019-3460: (unk)  
-  CVE-2019-3819: (unk)  
+  CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
+  CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 

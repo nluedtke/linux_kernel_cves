@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
-    <div id="content">
-      <h3 class="cve-headline">{{ contents.id  }}</h3>
+    <div v-if="contents" class="content">
+      <h3 v-if="contents.name" class="cve-headline"> {{ contents.name }} - {{ contents.id }}</h3>
+      <h3 v-else class="cve-headline">{{ contents.id }}</h3>
+      <p v-if="contents.last_modified" class="last-modified"><em>Last modified {{ contents.last_modified }}</em></p>
       <div class="distro-links">
         <p><span v-for="(item, key) in contents.ref_urls" v-bind:key="key" class="distro-version-fixed">
           <a :href="item" target="_blank">{{key}}<img class="external-link" src="../assets/external-link.svg"></a></span>
@@ -14,21 +16,31 @@
         <p>If you disagree with the Vendor Specific nature of this CVE please submit an <a href="https://github.com/nluedtke/linux_kernel_cves/issues/new?assignees=&labels=Data&template=cve-data-issue.md&title=%5BDATA%5D+CVE-XXXX-XXXXXX">issue</a>.</p>
       </div>
       <div v-if="contents.vendor_specific != true">
-        <p><em>{{ contents.cmt_msg }}</em></p>
+        <h4 v-if="contents.nvd_text">NVD Text</h4>
+        <p class="nvd-text" v-if="contents.nvd_text">{{ contents.nvd_text }}</p>
         <h4>Affected Versions</h4>
         <p class="versions">{{contents.affected_versions}}</p>
         <h4>Hashes</h4>
         <ul id="hashes">
           <li><strong>Breaks: </strong>{{contents.breaks}}</li>
           <li><strong>Fixes:  </strong>{{contents.fixes}}</li>
+          <p class="commit-message"><strong>Commit message:</strong> {{ contents.cmt_msg }}</p>
         </ul>
         <cvss v-if="contents.cvss2" cvssVersion="cvss2" v-bind:cvssData="contents.cvss2"/>
         <cvss v-if="contents.cvss3" cvssVersion="cvss3" v-bind:cvssData="contents.cvss3"/>
         <h4>Fixed Versions</h4>
         <ul>
-          <li v-for="(item, key) in stream"
-              v-bind:key="key"><strong>{{key}}</strong>:{{item.spacing}}{{item.fixed_version}}</li>
+          <li v-for="(item, stream_id) in stream"
+              v-bind:key="stream_id"><strong><router-link :to="{ name: 'stream', params: { stream_id: stream_id } }">{{stream_id}}</router-link></strong>:{{item.spacing}}{{item.fixed_version}}</li>
         </ul>
+      </div>
+    </div>
+    <div v-else class="content">
+      <h3 class="cve-headline"> {{ cveId }} not found</h3>
+      <p>{{cveId}} does not appear in our data. This could be because its too new (within hours), is embargoed, or we believe that it does not affect the upstream kernel.</p>
+      <p>If you believe this CVE does affect the Linux Kernel, please fill out an issue on our github by clicking the button below.</p>
+      <div class="row">
+        <a class="issue" href="https://github.com/nluedtke/linux_kernel_cves/issues/new?assignees=&labels=Data&template=cve-data-issue.md&title=%5BDATA%5D+CVE-XXXX-XXXXXX">file an issue</a>
       </div>
     </div>
     <input action="action" onclick="window.history.go(-1); return false;" type="button" value="Back" />
@@ -46,7 +58,8 @@ export default {
     return {
       stream: [],
       contents: [],
-      errors: []
+      errors: [],
+      cveId: []
     }
   },
   created () {
@@ -62,12 +75,13 @@ export default {
     load: function () {
       var cvesUrl = this.$apiBaseUrl + 'data/kernel_cves.json'
       var cveID = this.$route.path.split('/')[2]
+      this.cveId = cveID
       document.title = 'Linux Kernel CVEs | ' + cveID
       axios.get(cvesUrl)
         .then(response => {
           var cve = response.data[cveID]
           if (cve == null) {
-            this.$router.push('/404')
+            this.contents = null
           }
           cve['id'] = cveID
           this.contents = cve
@@ -102,18 +116,35 @@ export default {
   max-width: 740px;
   margin: 0 auto;
 }
-#content {
+.content {
   text-align: left;
   padding: 1em 2em;
   margin: 4em 0 2em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .cve-headline {
+  font-size: 1.7em;
   text-align: center;
-  margin: 1em 0 2em;
+  margin: 1em 0 0.5em 0;
+}
+.distro-links {
+  text-align: center;
+}
+.last-modified {
+  font-size: .9em;
+  text-align: center;
+  margin-bottom: 2em;
 }
 .versions {
   padding: .5em 1em 1em
+}
+.commit-message {
+  background-color: #42b983f5;
+  color: white;
+  padding: .5em 1em;
+  font-size: 12px;
+  margin-right: 8px;
+  white-space: normal;
 }
 h1, h2, h3, h4{
   margin-top: 1.75em;
@@ -186,5 +217,23 @@ ul {
 }
 a {
   color: #42b983;
+}
+.issue {
+  text-decoration: none;
+  padding: 1em 2em;
+  background-color: #42b983;
+  color: white;
+  border: 1px solid white;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.issue:hover {
+  color: #42b983;
+  background-color: white;
+  border: 1px solid #42b983;
+}
+.row {
+  padding: 1em 0;
+  margin: 1em 0;
 }
 </style>

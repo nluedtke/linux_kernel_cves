@@ -78,6 +78,7 @@ CVEs fixed in 4.1.19:
   CVE-2016-2085: d185fa457006e98aa975ed6c0e7d2ddfe3d26695 EVM: Use crypto_memneq() for digest comparisons
   CVE-2016-2383: 0f912f6700a3f14481c13cbda2b9cc1b636948ac bpf: fix branch offset adjustment on backjumps after patching ctx expansion
   CVE-2016-2384: 1ea63b629c9c53af6cdde4daf166b3d31b3e9cfe ALSA: usb-audio: avoid freeing umidi object twice
+  CVE-2017-13167: 0163f1a71f10b25eae8d7019124cd7f1141b109a ALSA: timer: Fix race at concurrent reads
 
 CVEs fixed in 4.1.20:
   CVE-2015-8553: fda3e3e7b638f742149fb32aa9b691413bb91f41 xen/pciback: Don't allow MSI-X ops if PCI_COMMAND_MEMORY is not set.
@@ -227,6 +228,7 @@ CVEs fixed in 4.1.41:
   CVE-2017-10661: db14464180fa453a8ba82bce8107884571d7db6d timerfd: Protect the might cancel mechanism proper
   CVE-2017-10662: 46527f8d11fa64d3b493d03fc5c3b5ecc7d4d37a f2fs: sanity check segment count
   CVE-2017-18221: 00fc586ea7410ee8664bfd4f4ea246c60ea0482c mlock: fix mlock count can not decrease in race condition
+  CVE-2017-18360: 2cd394cd10465fc0878958ba99e6080ac8ead559 USB: serial: io_ti: fix div-by-zero in set_termios
   CVE-2017-2596: 68e9c254f662e4c2763e672b026a513d91f3a1c4 kvm: fix page struct leak in handle_vmon
   CVE-2017-2671: 5f1cef9e823aa35c881745446ea3c865da338e4e ping: implement proper locking
   CVE-2017-6074: 98442999b9671784e659b205be8b5b6be8e81629 dccp: fix freeing skb too early for IPV6_RECVPKTINFO
@@ -250,6 +252,7 @@ CVEs fixed in 4.1.43:
   CVE-2017-1000365: a9cea2f13c889658769ba50d46cb0e88900e6795 fs/exec.c: account for argv/envp pointers
   CVE-2017-1000370: 5bb3ce649f8b42185922d90de13874d23f7ff37f binfmt_elf: use ELF_ET_DYN_BASE only for PIE
   CVE-2017-1000371: 5bb3ce649f8b42185922d90de13874d23f7ff37f binfmt_elf: use ELF_ET_DYN_BASE only for PIE
+  CVE-2017-11089: e61d75e0d800c7f4469d391e3598b890be11d95c cfg80211: Define nla_policy for NL80211_ATTR_LOCAL_MESH_POWER_MODE
   CVE-2017-11176: 89e4078c6ea15ea65e3d5aa3d72e7913b7b500da mqueue: fix a use-after-free in sys_mq_notify()
   CVE-2017-12146: 5c387e92ec5c6e2d56b19f9ce4ca1cefef38d601 driver core: platform: fix race condition with driver_override
   CVE-2017-18017: a7776b8815a90da464f045f7c24d9565ae9f1963 netfilter: xt_TCPMSS: add more sanity tests on tcph->doff
@@ -266,6 +269,7 @@ CVEs fixed in 4.1.44:
   CVE-2017-8831: 0b3294aae7bc3940a659928e352ffb0588dfeb54 saa7164: fix double fetch PCIe access condition
 
 CVEs fixed in 4.1.45:
+  CVE-2017-0627: 1e3bbc18904041cd230725cf711e12a888efa49f media: uvcvideo: Prevent heap overflow when accessing mapped controls
   CVE-2017-1000251: 361e3cc44419cb9387c48ea993d0ba3f381667de Bluetooth: Properly check L2CAP config option output buffer length
   CVE-2017-1000410: 361e3cc44419cb9387c48ea993d0ba3f381667de Bluetooth: Properly check L2CAP config option output buffer length
   CVE-2017-11600: ded415d815a17597d6de4555524f89ed7ea08923 xfrm: policy: check policy direction value
@@ -352,6 +356,7 @@ CVEs fixed in 4.1.50:
   CVE-2017-18344: 16cd05f25489459d10035ffab9cb7391512f1437 posix-timer: Properly check sigevent->sigev_notify
   CVE-2017-8824: 203e5dcc6edbe7248c9800689da3dd316f4c434a dccp: CVE-2017-8824: use-after-free in DCCP code
   CVE-2018-1000004: f8a38ab4cd9624fc5ac8a7f965c7b20f5b62c03c ALSA: seq: Make ioctls race-free
+  CVE-2018-1000028: 48978a7cb8586c49875ccbc6d243c880e4cbaf44 nfsd: auth: Fix gid sorting when rootsquash enabled
   CVE-2018-18386: 9820d89b1a266ac573dae8fa46e4aa43f277a302 n_tty: fix EXTPROC vs ICANON interaction with TIOCINQ (aka FIONREAD)
   CVE-2018-5332: 4b1ffce255006f1220fce0f24772b9563ed91088 RDS: Heap OOB write in rds_message_alloc_sgs()
   CVE-2018-5333: ad99858fa14a888b77dc2095f412e443639f953c RDS: null pointer dereference in rds_atomic_free_op
@@ -412,6 +417,7 @@ Outstanding CVEs:
   CVE-2016-10200: (unk) l2tp: fix racy SOCK_ZAPPED flag check in l2tp_ip{,6}_bind() 
   CVE-2016-10208: (unk) ext4: validate s_first_meta_bg at mount time 
   CVE-2016-10723: (unk) mm, oom: remove sleep from under oom_lock 
+  CVE-2016-10741: (unk) xfs: don't BUG() on mixed direct and mapped I/O 
   CVE-2016-2053: (unk) ASN.1: Fix non-match detection failure on data overrun 
   CVE-2016-3070: (unk) mm: migrate dirty page without clear_page_dirty_for_io etc 
   CVE-2016-3672: (unk) x86/mm/32: Enable full randomization on i386 and X86_32 
@@ -432,7 +438,7 @@ Outstanding CVEs:
   CVE-2016-9555: (unk) sctp: validate chunk len before actually using it 
   CVE-2016-9756: (unk) KVM: x86: drop error recovery in em_jmp_far and em_ret_far 
   CVE-2016-9794: (unk) ALSA: pcm : Call kill_fasync() in stream lock 
-  CVE-2017-0630: (unk)  
+  CVE-2017-0605: (unk) tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline() 
   CVE-2017-1000: (unk) udp: consistently apply ufo or fragmentation 
   CVE-2017-1000112: (unk) udp: consistently apply ufo or fragmentation 
   CVE-2017-1000405: (unk) mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d() 
@@ -454,14 +460,7 @@ Outstanding CVEs:
   CVE-2017-15537: (unk) x86/fpu: Don't let userspace set bogus xcomp_bv 
   CVE-2017-16649: (unk) net: cdc_ether: fix divide by 0 on bad descriptors 
   CVE-2017-16995: (unk) bpf: fix incorrect sign extension in check_alu_op() 
-  CVE-2017-16996: (unk) bpf: fix incorrect tracking of register size truncation 
   CVE-2017-17807: (unk) KEYS: add missing permission check for request_key() destination 
-  CVE-2017-17852: (unk) bpf: fix 32-bit ALU op verification 
-  CVE-2017-17853: (unk) bpf/verifier: fix bounds calculation on BPF_RSH 
-  CVE-2017-17854: (unk) bpf: fix integer overflows 
-  CVE-2017-17855: (unk) bpf: don't prune branches when a scalar is replaced with a pointer 
-  CVE-2017-17856: (unk) bpf: force strict alignment checks for stack pointers 
-  CVE-2017-17857: (unk) bpf: fix missing error return in check_stack_boundary() 
   CVE-2017-17862: (unk) bpf: fix branch pruning logic 
   CVE-2017-18174: (unk) pinctrl: amd: Use devm_pinctrl_register() for pinctrl registration 
   CVE-2017-18193: (unk) f2fs: fix a bug caused by NULL extent tree 
@@ -469,7 +468,6 @@ Outstanding CVEs:
   CVE-2017-18232: (unk) scsi: libsas: direct call probe and destruct 
   CVE-2017-18241: (unk) f2fs: fix a panic caused by NULL flush_cmd_control 
   CVE-2017-18249: (unk) f2fs: fix race condition in between free nid allocator/initializer 
-  CVE-2017-18257: (unk) f2fs: fix a dead loop in f2fs_fiemap() 
   CVE-2017-18261: (unk) clocksource/drivers/arm_arch_timer: Avoid infinite recursion when ftrace is enabled 
   CVE-2017-2583: (unk) KVM: x86: fix emulation of "MOV SS, null selector" 
   CVE-2017-2584: (unk) KVM: x86: Introduce segmented_write_std 
@@ -488,6 +486,7 @@ Outstanding CVEs:
   CVE-2017-6353: (unk) sctp: deny peeloff operation on asocs with threads sleeping on it 
   CVE-2017-7346: (unk) drm/vmwgfx: limit the number of mip levels in vmw_gb_surface_define_ioctl() 
   CVE-2017-7533: (unk) dentry name snapshots 
+  CVE-2017-8065: (unk) crypto: ccm - move cbcmac input off the stack 
   CVE-2017-8797: (unk) nfsd: fix undefined behavior in nfsd4_layout_verify 
   CVE-2017-9076: (unk) ipv6/dccp: do not inherit ipv6_mc_list from parent 
   CVE-2017-9077: (unk) ipv6/dccp: do not inherit ipv6_mc_list from parent 
@@ -513,12 +512,10 @@ Outstanding CVEs:
   CVE-2018-1092: (unk) ext4: fail ext4_iget for root directory if unallocated 
   CVE-2018-1093: (unk) ext4: add validity checks for bitmap block numbers 
   CVE-2018-10938: (unk) Cipso: cipso_v4_optptr enter infinite loop 
-  CVE-2018-1094: (unk) ext4: always initialize the crc32c checksum driver 
   CVE-2018-1120: (unk) proc: do not access cmdline nor environ from file-backed areas 
   CVE-2018-1121: (unk)  
   CVE-2018-1128: (unk) libceph: add authorizer challenge 
   CVE-2018-1129: (unk) libceph: implement CEPHX_V2 calculation mode 
-  CVE-2018-11987: (unk)  
   CVE-2018-12233: (unk) jfs: Fix inconsistency between memory allocation and ea_buf->max_size 
   CVE-2018-12896: (unk) posix-timers: Sanitize overrun handling 
   CVE-2018-12928: (unk)  
@@ -542,7 +539,6 @@ Outstanding CVEs:
   CVE-2018-14612: (unk) btrfs: tree-checker: Detect invalid and empty essential trees 
   CVE-2018-14613: (unk) btrfs: tree-checker: Verify block_group_item 
   CVE-2018-14614: (unk) f2fs: fix to do sanity check with cp_pack_start_sum 
-  CVE-2018-14615: (unk) f2fs: fix to do sanity check with i_extra_isize 
   CVE-2018-14616: (unk) f2fs: fix to do sanity check with block address in main area v2 
   CVE-2018-14617: (unk) hfsplus: fix NULL dereference in hfsplus_lookup() 
   CVE-2018-14633: (unk) scsi: target: iscsi: Use hex2bin instead of a re-implementation 
@@ -564,7 +560,6 @@ Outstanding CVEs:
   CVE-2018-19985: (unk) USB: hso: Fix OOB memory access in hso_probe/hso_get_config_data 
   CVE-2018-20169: (unk) USB: check usb_get_extra_descriptor for proper size 
   CVE-2018-20511: (unk) net/appletalk: fix minor pointer leak to userspace in SIOCFINDIPDDPRT 
-  CVE-2018-20669: (unk) make 'user_access_begin()' do 'access_ok()' 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3639: (unk) x86/nospec: Simplify alternative_msr_write() 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
@@ -587,7 +582,13 @@ Outstanding CVEs:
   CVE-2018-9516: (unk) HID: debug: check length before copy_to_user() 
   CVE-2018-9517: (unk) l2tp: pass tunnel pointer to ->session_create() 
   CVE-2018-9518: (unk) NFC: llcp: Limit size of SDP URI 
-  CVE-2019-3459: (unk)  
-  CVE-2019-3460: (unk)  
+  CVE-2019-2024: (unk) media: em28xx: Fix use-after-free when disconnecting 
+  CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
+  CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
+  CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
   CVE-2019-3701: (unk) can: gw: ensure DLC boundaries after CAN frame modification 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
+  CVE-2019-6974: (unk) kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974) 
+  CVE-2019-7221: (unk) KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221) 
+  CVE-2019-7222: (unk) KVM: x86: work around leak of uninitialized stack contents (CVE-2019-7222) 
+  CVE-2019-9213: (unk) mm: enforce min addr even if capable() in expand_downwards() 

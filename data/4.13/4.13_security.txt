@@ -10,6 +10,7 @@ CVEs fixed in 4.13.2:
   CVE-2017-14340: 24cb33252843e531194e78222af2d8afb75fac5f xfs: XFS_IS_REALTIME_INODE() should be false if no rt device present
 
 CVEs fixed in 4.13.4:
+  CVE-2017-0627: 4185087177877b467df0b4aa08a128e7822542e2 media: uvcvideo: Prevent heap overflow when accessing mapped controls
   CVE-2017-14051: bb8eb5376409be8e2f4e2d24a473d2c0a35aa38e scsi: qla2xxx: Fix an integer overflow in sysfs code
   CVE-2017-14991: 9f62840e7fc648b0a55d089714484b704557c027 scsi: sg: fixup infoleak when using SG_GET_REQUEST_TABLE
   CVE-2017-16528: 2f3ab4a5fe065958f33d41bec352de4b4844dff5 ALSA: seq: Cancel pending autoload work at unbinding device
@@ -93,7 +94,6 @@ Outstanding CVEs:
   CVE-2015-2877: (unk)  
   CVE-2016-10723: (unk) mm, oom: remove sleep from under oom_lock 
   CVE-2016-8660: (unk)  
-  CVE-2017-0630: (unk)  
   CVE-2017-0861: (unk) ALSA: pcm: prevent UAF in snd_pcm_info 
   CVE-2017-1000405: (unk) mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d() 
   CVE-2017-1000407: (unk) KVM: VMX: remove I/O port 0x80 bypass on Intel hosts 
@@ -112,7 +112,6 @@ Outstanding CVEs:
   CVE-2017-16913: (unk) usbip: fix stub_rx: harden CMD_SUBMIT path to handle malicious input 
   CVE-2017-16914: (unk) usbip: fix stub_send_ret_submit() vulnerability to null transfer_buffer 
   CVE-2017-16995: (unk) bpf: fix incorrect sign extension in check_alu_op() 
-  CVE-2017-16996: (unk) bpf: fix incorrect tracking of register size truncation 
   CVE-2017-17448: (unk) netfilter: nfnetlink_cthelper: Add missing permission checks 
   CVE-2017-17449: (unk) netlink: Add netns check on taps 
   CVE-2017-17450: (unk) netfilter: xt_osf: Add missing permission checks 
@@ -122,12 +121,6 @@ Outstanding CVEs:
   CVE-2017-17805: (unk) crypto: salsa20 - fix blkcipher_walk API usage 
   CVE-2017-17806: (unk) crypto: hmac - require that the underlying hash algorithm is unkeyed 
   CVE-2017-17807: (unk) KEYS: add missing permission check for request_key() destination 
-  CVE-2017-17852: (unk) bpf: fix 32-bit ALU op verification 
-  CVE-2017-17853: (unk) bpf/verifier: fix bounds calculation on BPF_RSH 
-  CVE-2017-17854: (unk) bpf: fix integer overflows 
-  CVE-2017-17855: (unk) bpf: don't prune branches when a scalar is replaced with a pointer 
-  CVE-2017-17856: (unk) bpf: force strict alignment checks for stack pointers 
-  CVE-2017-17857: (unk) bpf: fix missing error return in check_stack_boundary() 
   CVE-2017-17862: (unk) bpf: fix branch pruning logic 
   CVE-2017-17863: (unk) bpf: fix integer overflows 
   CVE-2017-17975: (unk) media: usbtv: prevent double free in error case 
@@ -146,6 +139,7 @@ Outstanding CVEs:
   CVE-2017-9986: (unk) sound: Retire OSS 
   CVE-2018-1000004: (unk) ALSA: seq: Make ioctls race-free 
   CVE-2018-1000026: (unk) bnx2x: disable GSO where gso_size is too big for hardware 
+  CVE-2018-1000028: (unk) nfsd: auth: Fix gid sorting when rootsquash enabled 
   CVE-2018-1000199: (unk) perf/hwbp: Simplify the perf-hwbp code, fix documentation 
   CVE-2018-1000204: (unk) scsi: sg: allocate with __GFP_ZERO in sg_build_indirect() 
   CVE-2018-10021: (unk) scsi: libsas: defer ata device eh commands to libata 
@@ -180,7 +174,6 @@ Outstanding CVEs:
   CVE-2018-11412: (unk) ext4: do not allow external inodes for inline data 
   CVE-2018-11506: (unk) sr: pass down correctly sized SCSI sense buffer 
   CVE-2018-11508: (unk) compat: fix 4-byte infoleak via uninitialized struct field 
-  CVE-2018-11987: (unk)  
   CVE-2018-12232: (unk) socket: close race condition between sock_close() and sockfs_setattr() 
   CVE-2018-12233: (unk) jfs: Fix inconsistency between memory allocation and ea_buf->max_size 
   CVE-2018-12896: (unk) posix-timers: Sanitize overrun handling 
@@ -206,7 +199,6 @@ Outstanding CVEs:
   CVE-2018-14612: (unk) btrfs: tree-checker: Detect invalid and empty essential trees 
   CVE-2018-14613: (unk) btrfs: tree-checker: Verify block_group_item 
   CVE-2018-14614: (unk) f2fs: fix to do sanity check with cp_pack_start_sum 
-  CVE-2018-14615: (unk) f2fs: fix to do sanity check with i_extra_isize 
   CVE-2018-14616: (unk) f2fs: fix to do sanity check with block address in main area v2 
   CVE-2018-14617: (unk) hfsplus: fix NULL dereference in hfsplus_lookup() 
   CVE-2018-14625: (unk) vhost/vsock: fix use-after-free in network stack callers 
@@ -235,6 +227,7 @@ Outstanding CVEs:
   CVE-2018-20169: (unk) USB: check usb_get_extra_descriptor for proper size 
   CVE-2018-20511: (unk) net/appletalk: fix minor pointer leak to userspace in SIOCFINDIPDDPRT 
   CVE-2018-20669: (unk) make 'user_access_begin()' do 'access_ok()' 
+  CVE-2018-20784: (unk) sched/fair: Fix infinite loop in update_blocked_averages() by reverting a9e7f6544b9c 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3639: (unk) x86/nospec: Simplify alternative_msr_write() 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
@@ -275,7 +268,15 @@ Outstanding CVEs:
   CVE-2018-9516: (unk) HID: debug: check length before copy_to_user() 
   CVE-2018-9517: (unk) l2tp: pass tunnel pointer to ->session_create() 
   CVE-2018-9518: (unk) NFC: llcp: Limit size of SDP URI 
-  CVE-2019-3459: (unk)  
-  CVE-2019-3460: (unk)  
+  CVE-2019-2024: (unk) media: em28xx: Fix use-after-free when disconnecting 
+  CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
+  CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
+  CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
   CVE-2019-3701: (unk) can: gw: ensure DLC boundaries after CAN frame modification 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
+  CVE-2019-6974: (unk) kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974) 
+  CVE-2019-7221: (unk) KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221) 
+  CVE-2019-7222: (unk) KVM: x86: work around leak of uninitialized stack contents (CVE-2019-7222) 
+  CVE-2019-8912: (unk) net: crypto set sk to NULL when af_alg_release. 
+  CVE-2019-8980: (unk) exec: Fix mem leak in kernel_read_file 
+  CVE-2019-9213: (unk) mm: enforce min addr even if capable() in expand_downwards() 

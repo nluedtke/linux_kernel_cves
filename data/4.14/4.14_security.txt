@@ -79,6 +79,7 @@ CVEs fixed in 4.14.15:
 CVEs fixed in 4.14.16:
   CVE-2017-17448: 671624872144abc37bc5e8f3b27987890f6e87f3 netfilter: nfnetlink_cthelper: Add missing permission checks
   CVE-2017-17450: 19848ca7b7dad5153860239c893c1eadd603217e netfilter: xt_osf: Add missing permission checks
+  CVE-2018-1000028: 54e67ba7d20a5921cfe712cfe4bd773e75df10e0 nfsd: auth: Fix gid sorting when rootsquash enabled
 
 CVEs fixed in 4.14.17:
   CVE-2018-5344: d5e06a1867210049bbfe27864ee0a40cfd9b1e9b loop: fix concurrent lo_open/lo_release
@@ -273,6 +274,8 @@ CVEs fixed in 4.14.86:
   CVE-2018-19407: 83f00ab9a7c03e9f1410727d985b7fe9473002e1 KVM: X86: Fix scan ioapic use-before-initialization
   CVE-2018-5703: 2a0f5919e1e6a1c0423d895ab75eb15f94a67c69 tls: Use correct sk->sk_prot for IPV6
   CVE-2018-5848: 107b02c81a8761f1f7efc1e8b54d435324ccd13e wil6210: missing length check in wmi_set_ie
+  CVE-2019-2024: 30cdc0c3bac950bebd3ba59f5ff980cdd3710e0f media: em28xx: Fix use-after-free when disconnecting
+  CVE-2019-2025: fd6cc33d0775b0d902906d88dd05cc1a2a059f8d binder: fix race that allows malicious free of live buffer
 
 CVEs fixed in 4.14.87:
   CVE-2018-16862: 60720df8bf43e8ca2ce1a17936904a52129c8471 mm: cleancache: fix corruption on missed inode invalidation
@@ -288,11 +291,31 @@ CVEs fixed in 4.14.91:
   CVE-2018-16882: cc70f14956fa0ea84ee1a3a5b79347730c6c2d08 KVM: Fix UAF in nested posted interrupt processing
   CVE-2018-19985: 49be8dc589aee04c64d61e362c5029ab20fd6fd7 USB: hso: Fix OOB memory access in hso_probe/hso_get_config_data
 
+CVEs fixed in 4.14.93:
+  CVE-2018-20784: c6a9a1ccafc49fe95d8de54eef154ad5c3b94077 sched/fair: Fix infinite loop in update_blocked_averages() by reverting a9e7f6544b9c
+
 CVEs fixed in 4.14.94:
   CVE-2018-16884: 65dba32522065b79a16393efc75f8006c2c3dbb8 sunrpc: use-after-free in svc_process_common()
 
 CVEs fixed in 4.14.95:
   CVE-2019-3701: 39ff087b5c6be2ff0b08e617d334e5bf72a08b44 can: gw: ensure DLC boundaries after CAN frame modification
+
+CVEs fixed in 4.14.99:
+  CVE-2019-6974: 8c1b11bc3555b5d1207b0e179cbdd8b945e71e69 kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974)
+  CVE-2019-7221: 1c965b1b5ecc2c9e1d59b2514cedb6f7483a0241 KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221)
+  CVE-2019-7222: ef1b3d4893cec543305d30e8160df8c096135950 KVM: x86: work around leak of uninitialized stack contents (CVE-2019-7222)
+
+CVEs fixed in 4.14.102:
+  CVE-2018-1000026: 60cd31866de4386d940e55073491c3ee17ca593e bnx2x: disable GSO where gso_size is too big for hardware
+
+CVEs fixed in 4.14.103:
+  CVE-2019-8912: 6e4c01ee785c2192fcc4be234cedde3706309a7e net: crypto set sk to NULL when af_alg_release.
+
+CVEs fixed in 4.14.105:
+  CVE-2019-9213: f5817069248630b3b7b17ebfcdee0b679c52be33 mm: enforce min addr even if capable() in expand_downwards()
+
+CVEs fixed in 4.14.106:
+  CVE-2019-8980: 069fb92ea221c72bd75f4863b3540420082f32ba exec: Fix mem leak in kernel_read_file
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -307,7 +330,6 @@ Outstanding CVEs:
   CVE-2015-2877: (unk)  
   CVE-2016-10723: (unk) mm, oom: remove sleep from under oom_lock 
   CVE-2016-8660: (unk)  
-  CVE-2017-0630: (unk)  
   CVE-2017-1000405: (unk) mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d() 
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
@@ -315,11 +337,9 @@ Outstanding CVEs:
   CVE-2017-5715: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-9986: (unk) sound: Retire OSS 
-  CVE-2018-1000026: (unk) bnx2x: disable GSO where gso_size is too big for hardware 
   CVE-2018-10322: (unk) xfs: enhance dinode verifier 
   CVE-2018-10323: (unk) xfs: set format back to extents if xfs_bmap_extents_to_btree 
   CVE-2018-1121: (unk)  
-  CVE-2018-11987: (unk)  
   CVE-2018-12928: (unk)  
   CVE-2018-12929: (unk)  
   CVE-2018-12930: (unk)  
@@ -330,6 +350,6 @@ Outstanding CVEs:
   CVE-2018-6554: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-6555: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
-  CVE-2019-3459: (unk)  
-  CVE-2019-3460: (unk)  
+  CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
+  CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 

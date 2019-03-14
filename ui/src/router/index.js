@@ -6,6 +6,7 @@ import four from '@/components/four'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
