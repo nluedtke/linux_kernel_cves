@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import './plugins/vuetify'
 import App from './App'
 import VueMarkdown from 'vue-markdown'
 import VueAutosuggest from 'vue-autosuggest'

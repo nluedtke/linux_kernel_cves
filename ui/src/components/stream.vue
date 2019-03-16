@@ -19,6 +19,7 @@
         <a class="anchor" v-if="stream != 'outstanding'" v-bind:id="stream"></a>
         <h3 v-if="stream != 'outstanding'">Fixed in {{stream}}</h3>
         <div class="card-container">
+          <v-card v-for="(data, fix) in fixes" v-bind:key="fix">hi</v-card>
           <div class="cards" v-for="(data, fix) in fixes" v-bind:key="fix">
             <router-link :to="'/cves/' + fix">{{fix}}</router-link>
             <p v-if="stream != 'outstanding'">{{ data.cmt_msg }}</p>
@@ -121,16 +122,6 @@ export default {
 }
 .sort-menu {
   float: right;
-}
-@media only screen and (min-width: 1170px) {
-  .outstanding-container {
-    top: 150px;
-    max-width: 180px;
-    position: absolute;
-    background-color: white;
-    left: 0;
-    margin-left: 2em;
-  }
 }
 .card-container:before {
   content: "";

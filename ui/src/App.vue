@@ -1,5 +1,32 @@
 <template>
-  <div id="app">
+  <v-app>
+    <v-toolbar color="#42b983" fixed="true">
+      <v-icon color="white">bug_report</v-icon>
+      <v-toolbar-title class="white--text">Linux Kernel CVEs</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-menu>
+          <template v-slot:activator="{ gostreams }">
+            <v-btn flat class="white--text" v-on="gostreams">Streams</v-btn>
+          </template>
+                <v-list>
+        <v-list-tile
+          v-for="item in streams"
+          :key="item"
+          @click=""
+        >
+          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+        </v-menu>
+        <v-btn flat class="white--text">All CVEs</v-btn>
+        <v-text-field
+                label="Search by CVE id"
+                append-icon="search"
+                single-line
+              ></v-text-field>
+      </v-toolbar-items>
+    </v-toolbar>
     <div class="nav-wrapper">
       <div class="nav">
         <a href="/"><img id="logo" src="./assets/logo.jpg"></a>
@@ -25,12 +52,11 @@
     <div class="container">
       <router-view/>
     </div>
-  </div>
+  </v-app>
 </template>
 
 <script>
 import axios from 'axios'
-
 export default {
   name: 'App',
   data () {
@@ -103,145 +129,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #303030;
-  margin: 0 auto;
-}
-body {
-  margin: 0;
-}
-.container {
-  margin: 0 auto;
-  max-width: 800px;
-  margin-top: 100px;
-}
-.nav-wrapper {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 75px;
-  background-color: #fafafb;
-  border-bottom: 1px #f3f3f3 solid;
-}
-.nav {
-  background-color: #fafafb;
-  border-bottom: 1px #f3f3f3 solid;
-  width: 100%;
-  max-width: 1000px;
-  height: 75px;
-  margin: 0 auto;
-}
-.nav #logo {
-  height: 75px;
-  float: left;
-}
-.nav .nav-box {
-  float: right;
-  width: 300px;
-  display: inline-block;
-  padding: 1.5em 0;
-}
-@media only screen and (max-width : 700px) {
-/* Styles */
-  .nav-wrapper {
-    position: static;
-    height: auto;
-  }
-  .nav {
-    height: auto;
-    padding-bottom: 1em
-  }
-  .nav #logo {
-    height: 100px;
-    float: none;
-  }
-  .nav .nav-box {
-    float: none;
-    min-width: 300px;
-    width: 100%;
-    display: inline-block;
-    padding: 1em 0 0;
-  }
-}
-.nav select, .nav input {
-  padding: .5em;
-  font-size: 14px;
-  border-width: 1px;
-  border-radius: 4px;
-  border-color: #42b983;
-  box-shadow: none;
-  min-width: 200px;
-}
-.nav button {
-  color: #fff;
-  padding: .5em;
-  font-size: 14px;
-  border-width: 1px;
-  border-radius: 4px;
-  border-color: #42b983;
-  background-color: #42b983;
-  box-shadow: none;
-  min-width: 35px;
-}
-.nav .stream-tag {
-  width: 100px;
-  padding-top: 32px;
-  color: #42b983;
-  font-weight: 550;
-}
-#autosuggest {
-  display: inline-block;
-}
-#autosuggest__input {
-  width: 200px;
-  display:inline-block;
-}
-.autosuggest__results-container {
-    position: relative;
-    margin: 0 auto;
-    width: 216px;
-}
-.autosuggest__results {
-    font-weight: 300;
-    margin: 0;
-    position: absolute;
-    z-index: 10000001;
-    width: 100%;
-    border: 1px solid #e0e0e0;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background: #fff;
-    padding: 0;
-}
-.autosuggest__results ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-.autosuggest__results .autosuggest__results_title {
-    color: gray;
-    font-size: 11px;
-    margin-left: 0;
-    padding: 15px 13px 5px;
-    border-top: 1px solid #d3d3d3;
-}
-.autosuggest__results .autosuggest__results_item {
-    cursor: pointer;
-    padding: 7px;
-    text-align: left;
-}
-.autosuggest__results .autosuggest__results_item.autosuggest__results_item-highlighted, .autosuggest__results .autosuggest__results_item:active, .autosuggest__results .autosuggest__results_item:focus, .autosuggest__results .autosuggest__results_item:hover {
-    background-color: #ddd;
-}
-a {
-  color: #42b983;
-}
-.sidebar {
-  display: none;
-}
+
 </style>
