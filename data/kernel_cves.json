@@ -37625,6 +37625,43 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-5489"
         }
     },
+    "CVE-2019-6133": {
+        "affected_versions": "v2.6.12-rc2 to v5.0-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "fork: record start_time late",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.4"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "score": "6.7"
+        },
+        "cwe": "Improper Access Control",
+        "fixes": "7b55851367136b1efd84d98fea81ba57a98304cf",
+        "last_modified": "2019-03-16",
+        "nvd_text": "In PolicyKit (aka polkit) 0.115, the \"start time\" protection mechanism can be bypassed because fork() is not atomic, and therefore authorization decisions are improperly cached. This is related to lack of uid checking in polkitbackend/polkitbackendinteractiveauthority.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-6133",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-6133",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-6133",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-6133",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-6133",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-6133"
+        }
+    },
     "CVE-2019-6974": {
         "affected_versions": "v3.10-rc1 to v5.0-rc6",
         "breaks": "852b6d57dc7fa378019786fa84727036e56839ea",
