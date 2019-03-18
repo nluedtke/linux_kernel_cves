@@ -1,35 +1,60 @@
 <template>
   <div class="hello">
-    <div class="sort-menu">
-      <select v-model="sorting">
-        <option value="most recent">most recent</option>
-        <option value="least recent">least recent</option>
-      </select>
-    </div>
     <h1>CVEs in Stream {{this.stream}}</h1>
     <div id="content">
-      <div class="row outstanding-container" v-if="outstanding">
-        <h3>Outstanding CVEs in this Stream</h3>
-        <div class="outstanding" v-for="(data, cve) in outstanding" v-bind:key="cve">
-          <router-link v-if="data.cmt_msg" :to="'/cves/' + cve">{{ cve }}</router-link>
-          <span v-else>{{ cve }}</span>
-        </div>
-      </div>
-      <div class="row" v-for="(fixes, stream) in orderedStreams" v-bind:key="stream">
-        <a class="anchor" v-if="stream != 'outstanding'" v-bind:id="stream"></a>
-        <h3 v-if="stream != 'outstanding'">Fixed in {{stream}}</h3>
-        <div class="card-container">
-          <div class="cards" v-for="(data, fix) in fixes" v-bind:key="fix">
-            <router-link :to="'/cves/' + fix">{{fix}}</router-link>
-            <p v-if="stream != 'outstanding'">{{ data.cmt_msg }}</p>
-            <p v-if="stream != 'outstanding'"><strong>{{ data.cmt_id | trim }}...</strong> </p>
-                <button v-if="stream != 'outstanding'" class="copy-button" type="button"
-                        v-clipboard:copy="data.cmt_id"
-                        v-clipboard:success="onCopy"
-                        v-clipboard:error="onError">Copy ID</button>
-          </div>
-        </div>
-      </div>
+      <v-list>
+        <v-list-group
+          v-for="(data, id) in contents"
+          :key="id"
+        >
+          <template slot="activator">
+            <v-list-tile>
+              <v-list-tile-content>
+                <v-list-tile-title>Fixed in {{ id }}</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </template>
+          <v-container fluid>
+            <v-layout
+              flexbox
+              row
+              fill-height
+              wrap
+            >
+              <v-flex 
+                xs12 sm6 m6 l4
+                v-for="(details, cveid) in data"
+                :key="cveid"
+              >
+                <v-card class="cve-card">
+                  <v-card-title>
+                    <span class="headline">{{cveid}}</span>
+                  </v-card-title>
+                  <v-card-text>
+                    <span>{{details.cmt_msg}}</span>
+                    <span>{{details.cmt_id}}</span>
+                  </v-card-text>
+                  <v-card-actions v-if="details.cmt_id">
+                    <v-spacer></v-spacer>
+                    <v-btn icon flat color="green"
+                      :to="'/cves/' + cveid"
+                    >
+                    <v-icon>link</v-icon>
+                    </v-btn>
+                    <v-btn flat icon color="green"
+                      v-clipboard:copy="details.cmt_id"
+                      v-clipboard:success="onCopy"
+                      v-clipboard:error="onError"
+                    >
+                      <v-icon>file_copy</v-icon>
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-list-group>
+      </v-list>
     </div>
   </div>
 </template>
@@ -105,6 +130,7 @@ export default {
       return this.contents
     },
     outstanding: function () {
+      console.log(this.contents['outstanding'])
       return this.contents['outstanding']
     }
   }
@@ -113,74 +139,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#content {
-  text-align: left;
-}
-.hello {
-  margin: 1em 0;
-}
-.sort-menu {
-  float: right;
-}
-@media only screen and (min-width: 1170px) {
-  .outstanding-container {
-    top: 150px;
-    max-width: 180px;
-    position: absolute;
-    background-color: white;
-    left: 0;
-    margin-left: 2em;
-  }
-}
-.card-container:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-}
-.cards {
-  display: inline-block;
-  vertical-align: top;
-  width: 200px;
-  min-height: 160px;
-  text-align: left;
-  padding: 1em 1.5em;
-  margin: 0 1em 1em 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.streamCVE {
-  width: 240px;
-  padding: 10px;
+.cve-card {
   margin: 10px;
-  display: inline-block;
-  overflow: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-h1, h2 {
-  font-weight: normal;
-}
-h1 {
-  margin: 1em 0;
-}
-ul {
-  list-style-type: none;
-}
-a {
-  color: #42b983;
-}
-button.copy-button {
-  webkit-transition: opacity .3s ease-in-out;
-  -o-transition: opacity .3s ease-in-out;
-  transition: opacity .3s ease-in-out;
-  opacity: 1;
-  padding: 2px 6px;
-  right: 4px;
-  top: 4px;
-}
-a.anchor {
-  display: block;
-  position: relative;
-  top: -80px;
-  visibility: hidden;
 }
 </style>
