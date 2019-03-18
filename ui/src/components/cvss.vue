@@ -149,7 +149,7 @@ export default {
   margin: 2em 0 0 0;
   padding: 0 0 0 1em;
   color: white;
-  background-color: #0D8E53;
+  background-color: #354649;
 }
 .score {
   text-transform: uppercase;
@@ -162,7 +162,7 @@ export default {
 .toggle-cvss {
   font-size: 10px;
   font-weight: 700;
-  color: #0D8E53;
+  color: #354649;
   text-transform: uppercase;
   background-color: white;
   border: none;
