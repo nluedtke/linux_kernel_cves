@@ -164,9 +164,10 @@ export default {
   },
   methods: {
     gotoCVE () {
-      this.$data.stream = 'default'
-      this.$router.push('/cves/' + this.cve.toUpperCase().trim())
-      this.cve = ''
+      this.$router.push('/cves/' + this.cve.toUpperCase().trim(), () => {
+        // TODO: make this reset more reliably
+        this.cve = ''
+      })
     },
   }
 }
