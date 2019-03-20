@@ -4906,6 +4906,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "712f4aad406bb1ed67f3f98d04c044191f0ff593",
+        "last_modified": "2019-03-20",
         "nvd_text": "The Linux kernel before 4.4.1 allows local users to bypass file-descriptor limits and cause a denial of service (memory consumption) by sending each descriptor over a UNIX socket before closing it, related to net/unix/af_unix.c and net/unix/garbage.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2013-4312",
@@ -6231,6 +6232,7 @@
         },
         "cwe": "Other",
         "fixes": "7d267278a9ece963d77eefec61630223fce08c6c",
+        "last_modified": "2019-03-20",
         "nvd_text": "Use-after-free vulnerability in net/unix/af_unix.c in the Linux kernel before 4.3.3 allows local users to bypass intended AF_UNIX socket permissions or cause a denial of service (panic) via crafted epoll_ctl calls.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2013-7446",
@@ -11837,6 +11839,7 @@
     "CVE-2015-1339": {
         "affected_versions": "v4.2-rc1 to v4.4-rc5",
         "breaks": "cc080e9e9be16ccf26135d366d7d2b65209f1d56",
+        "cmt_msg": "cuse: fix memory leak",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -11859,6 +11862,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "2c5816b4beccc8ba709144539f6fdd764f8fa49c",
+        "last_modified": "2019-03-20",
         "nvd_text": "Memory leak in the cuse_channel_release function in fs/fuse/cuse.c in the Linux kernel before 4.4 allows local users to cause a denial of service (memory consumption) or possibly have unspecified other impact by opening /dev/cuse many times.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-1339",
@@ -13039,6 +13043,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "54a20552e1eae07aa240fa370a0293e006b5faed",
+        "last_modified": "2019-03-20",
         "nvd_text": "The KVM subsystem in the Linux kernel through 4.2.6, and Xen 4.3.x through 4.6.x, allows guest OS users to cause a denial of service (host OS panic or hang) by triggering many #AC (aka Alignment Check) exceptions, related to svm.c and vmx.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-5307",
@@ -13052,6 +13057,7 @@
     "CVE-2015-5327": {
         "affected_versions": "v4.3-rc1 to v4.4-rc1",
         "breaks": "fd19a3d195be23e8d9d0d66576b96ea25eea8323",
+        "cmt_msg": "X.509: Fix the time validation [ver #2]",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -13074,6 +13080,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "cc25b994acfbc901429da682d0f73c190e960206",
+        "last_modified": "2019-03-20",
         "nvd_text": "Out-of-bounds memory read in the x509_decode_time function in x509_cert_parser.c in Linux kernels 4.3-rc1 and after.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-5327",
@@ -13503,6 +13510,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "b4a1b4f5047e4f54e194681125c74c0aa64d637d",
+        "last_modified": "2019-03-20",
         "nvd_text": "The keyctl_read_key function in security/keys/keyctl.c in the Linux kernel before 4.3.4 does not properly use a semaphore, which allows local users to cause a denial of service (NULL pointer dereference and system crash) or possibly have unspecified other impact via a crafted application that leverages a race condition between keyctl_revoke and keyctl_read calls.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-7550",
@@ -13574,6 +13582,7 @@
         },
         "cwe": "Other",
         "fixes": "cb3232138e37129e88240a98a1d2aba2187ff57c",
+        "last_modified": "2019-03-20",
         "nvd_text": "The clie_5_attach function in drivers/usb/serial/visor.c in the Linux kernel through 4.4.1 allows physically proximate attackers to cause a denial of service (NULL pointer dereference and system crash) or possibly have unspecified other impact by inserting a USB device that lacks a bulk-out endpoint.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-7566",
@@ -13624,6 +13633,7 @@
         },
         "cwe": "Other",
         "fixes": "0baa57d8dc32db78369d8b5176ef56c5e2e18ab3",
+        "last_modified": "2019-03-20",
         "nvd_text": "The slhc_init function in drivers/net/slip/slhc.c in the Linux kernel through 4.2.3 does not ensure that certain slot numbers are valid, which allows local users to cause a denial of service (NULL pointer dereference and system crash) via a crafted PPPIOCSMAXCID ioctl call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-7799",
@@ -13745,6 +13755,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "eda98796aff0d9bf41094b06811f5def3b4c333c",
+        "last_modified": "2019-03-20",
         "nvd_text": "The vivid_fb_ioctl function in drivers/media/platform/vivid/vivid-osd.c in the Linux kernel through 4.3.3 does not initialize a certain structure member, which allows local users to obtain sensitive information from kernel memory via a crafted application.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-7884",
@@ -13794,6 +13805,7 @@
     "CVE-2015-7990": {
         "affected_versions": "v4.3-rc1 to v4.4-rc4",
         "breaks": "74e98eb085889b0d2d4908f59f6e00026063014f",
+        "cmt_msg": "RDS: fix race condition when sending a message on unbound socket",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Local Access",
@@ -13816,6 +13828,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "8c7188b23474cca017b3ef354c4a58456f68303a",
+        "last_modified": "2019-03-20",
         "nvd_text": "Race condition in the rds_sendmsg function in net/rds/sendmsg.c in the Linux kernel before 4.3.3 allows local users to cause a denial of service (NULL pointer dereference and system crash) or possibly have unspecified other impact by using a socket that was not properly bound.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2015-6937.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-7990",
@@ -13877,6 +13890,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "cbdb967af3d54993f5814f1cee0ed311a055377d",
+        "last_modified": "2019-03-20",
         "nvd_text": "The KVM subsystem in the Linux kernel through 4.2.6, and Xen 4.3.x through 4.6.x, allows guest OS users to cause a denial of service (host OS panic or hang) by triggering many #DB (aka Debug) exceptions, related to svm.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8104",
@@ -13973,6 +13987,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "0305cd5f7fca85dae392b9ba85b116896eb7c1c7",
+        "last_modified": "2019-03-20",
         "nvd_text": "fs/btrfs/inode.c in the Linux kernel before 4.3.3 mishandles compressed inline extents, which allows local users to obtain sensitive pre-truncation information from a file via a clone action.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8374",
@@ -14044,6 +14059,7 @@
         },
         "cwe": "Other",
         "fixes": "79462ad02e861803b3840cc782248c7359451cd9",
+        "last_modified": "2019-03-20",
         "nvd_text": "The networking implementation in the Linux kernel through 4.3.3, as used in Android and other products, does not validate protocol identifiers for certain protocol families, which allows local users to cause a denial of service (NULL function pointer dereference and system crash) or possibly gain privileges by leveraging CLONE_NEWUSER support to execute a crafted SOCK_RAW application.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8543",
@@ -14224,6 +14240,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "09ccfd238e5a0e670d8178cf50180ea81ae09ae1",
+        "last_modified": "2019-03-20",
         "nvd_text": "The (1) pptp_bind and (2) pptp_connect functions in drivers/net/ppp/pptp.c in the Linux kernel through 4.3.3 do not verify an address length, which allows local users to obtain sensitive information from kernel memory and bypass the KASLR protection mechanism via a crafted application.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8569",
@@ -14260,6 +14277,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "5233252fce714053f0151680933571a2da9cbfb4",
+        "last_modified": "2019-03-20",
         "nvd_text": "The sco_sock_bind function in net/bluetooth/sco.c in the Linux kernel before 4.3.4 does not verify an address length, which allows local users to obtain sensitive information from kernel memory and bypass the KASLR protection mechanism via a crafted application.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8575",
@@ -14548,6 +14566,7 @@
         },
         "cwe": "Other",
         "fixes": "e50293ef9775c5f1cf3fcc093037dd6a8c5684ea",
+        "last_modified": "2019-03-20",
         "nvd_text": "The hub_activate function in drivers/usb/core/hub.c in the Linux kernel before 4.3.5 does not properly maintain a hub-interface data structure, which allows physically proximate attackers to cause a denial of service (invalid memory access and system crash) or possibly have unspecified other impact by unplugging a USB hub device.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8816",
@@ -14656,6 +14675,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "d2b9d2a5ad5ef04ff978c9923d19730cb05efd55",
+        "last_modified": "2019-03-20",
         "nvd_text": "The signal implementation in the Linux kernel before 4.3.5 on powerpc platforms does not check for an MSR with both the S and T bits set, which allows local users to cause a denial of service (TM Bad Thing exception and panic) via a crafted application.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8844",
@@ -14692,6 +14712,7 @@
         },
         "cwe": "Improper Access Control",
         "fixes": "7f821fc9c77a9b01fe7b1d6e72717b33d8d64142",
+        "last_modified": "2019-03-20",
         "nvd_text": "The tm_reclaim_thread function in arch/powerpc/kernel/process.c in the Linux kernel before 4.4.1 on powerpc platforms does not ensure that TM suspend mode exists before proceeding with a tm_reclaim call, which allows local users to cause a denial of service (TM Bad Thing exception and panic) via a crafted application.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8845",
@@ -15081,6 +15102,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "ab79efab0a0ba01a74df782eb7fa44b044dae8b5",
+        "last_modified": "2019-03-20",
         "nvd_text": "fs/overlayfs/copy_up.c in the Linux kernel before 4.2.6 uses an incorrect cleanup code path, which allows local users to cause a denial of service (dentry reference leak) via filesystem operations on a large file in a lower overlayfs layer.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8953",
@@ -15166,6 +15188,7 @@
     "CVE-2015-8961": {
         "affected_versions": "v4.2-rc2 to v4.4-rc1",
         "breaks": "9705acd63b125dee8b15c705216d7186daea4625",
+        "cmt_msg": "ext4: fix potential use after free in __ext4_journal_stop",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -15188,6 +15211,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "6934da9238da947628be83635e365df41064b09b",
+        "last_modified": "2019-03-20",
         "nvd_text": "The __ext4_journal_stop function in fs/ext4/ext4_jbd2.c in the Linux kernel before 4.3.3 allows local users to gain privileges or cause a denial of service (use-after-free) by leveraging improper access to a certain error field.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8961",
@@ -15404,6 +15428,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "dd504589577d8e8e70f51f997ad487a4cb6c026f",
+        "last_modified": "2019-03-20",
         "nvd_text": "crypto/algif_skcipher.c in the Linux kernel before 4.4.2 does not verify that a setkey operation has been performed on an AF_ALG socket before an accept system call is processed, which allows local users to cause a denial of service (NULL pointer dereference and system crash) via a crafted application that does not supply a key, related to the lrw_crypt function in crypto/lrw.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8970",
@@ -15548,6 +15573,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "5c17c861a357e9458001f021a7afa7aab9937439",
+        "last_modified": "2019-03-20",
         "nvd_text": "Race condition in the tty_ioctl function in drivers/tty/tty_io.c in the Linux kernel through 4.4.1 allows local users to obtain sensitive information from kernel memory or cause a denial of service (use-after-free and system crash) by making a TIOCGETD ioctl call during processing of a TIOCSETD ioctl call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-0723",
@@ -15584,6 +15610,7 @@
         },
         "cwe": "Other",
         "fixes": "23567fd052a9abb6d67fe8e7a9ccdd9800a540f2",
+        "last_modified": "2019-03-20",
         "nvd_text": "The join_session_keyring function in security/keys/process_keys.c in the Linux kernel before 4.4.1 mishandles object references in a certain error case, which allows local users to gain privileges or cause a denial of service (integer overflow and use-after-free) via crafted keyctl commands.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-0728",
@@ -16376,6 +16403,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "71b3c126e61177eb693423f2e18a1914205b165e",
+        "last_modified": "2019-03-20",
         "nvd_text": "Race condition in arch/x86/mm/tlb.c in the Linux kernel before 4.4.1 allows local users to gain privileges by triggering access to a paging structure by a different CPU.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2069",
@@ -16412,6 +16440,7 @@
         },
         "cwe": "Numeric Errors",
         "fixes": "8b8a321ff72c785ed5e8b4cf6eda20b35d427390",
+        "last_modified": "2019-03-20",
         "nvd_text": "The tcp_cwnd_reduction function in net/ipv4/tcp_input.c in the Linux kernel before 4.3.5 allows remote attackers to cause a denial of service (divide-by-zero error and system crash) via crafted TCP traffic.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2070",
@@ -16448,6 +16477,7 @@
         },
         "cwe": "Data Handling",
         "fixes": "613317bd212c585c20796c10afe5daaa95d4b0a1",
+        "last_modified": "2019-03-20",
         "nvd_text": "The evm_verify_hmac function in security/integrity/evm/evm_main.c in the Linux kernel before 4.5 does not properly copy data, which makes it easier for local users to forge MAC values via a timing side-channel attack.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2085",
@@ -16772,6 +16802,7 @@
         },
         "cwe": "Other",
         "fixes": "07d86ca93db7e5cdf4743564d98292042ec21af7",
+        "last_modified": "2019-03-20",
         "nvd_text": "Double free vulnerability in the snd_usbmidi_create function in sound/usb/midi.c in the Linux kernel before 4.5 allows physically proximate attackers to cause a denial of service (panic) or possibly have unspecified other impact via vectors involving an invalid USB descriptor.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2384",
@@ -16808,6 +16839,7 @@
         },
         "cwe": "Other",
         "fixes": "030e2c78d3a91dd0d27fef37e91950dde333eba1",
+        "last_modified": "2019-03-20",
         "nvd_text": "The snd_seq_ioctl_remove_events function in sound/core/seq/seq_clientmgr.c in the Linux kernel before 4.4.1 does not verify FIFO assignment before proceeding with FIFO clearing, which allows local users to cause a denial of service (NULL pointer dereference and OOPS) via a crafted ioctl call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2543",
@@ -16844,6 +16876,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "3567eb6af614dac436c4b16a8d426f9faed639b3",
+        "last_modified": "2019-03-20",
         "nvd_text": "Race condition in the queue_delete function in sound/core/seq/seq_queue.c in the Linux kernel before 4.4.1 allows local users to cause a denial of service (use-after-free and system crash) by making an ioctl call at a certain time.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2544",
@@ -16880,6 +16913,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "ee8413b01045c74340aa13ad5bdf905de32be736",
+        "last_modified": "2019-03-20",
         "nvd_text": "The snd_timer_interrupt function in sound/core/timer.c in the Linux kernel before 4.4.1 does not properly maintain a certain linked list, which allows local users to cause a denial of service (race condition and system crash) via a crafted ioctl call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2545",
@@ -16916,6 +16950,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "af368027a49a751d6ff4ee9e3f9961f35bb4fede",
+        "last_modified": "2019-03-20",
         "nvd_text": "sound/core/timer.c in the Linux kernel before 4.4.1 uses an incorrect type of mutex, which allows local users to cause a denial of service (race condition, use-after-free, and system crash) via a crafted ioctl call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2546",
@@ -16952,6 +16987,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "b5a663aa426f4884c71cd8580adae73f33570f0d",
+        "last_modified": "2019-03-20",
         "nvd_text": "sound/core/timer.c in the Linux kernel before 4.4.1 employs a locking approach that does not consider slave timer instances, which allows local users to cause a denial of service (race condition, use-after-free, and system crash) via a crafted ioctl call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2547",
@@ -16988,6 +17024,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "b5a663aa426f4884c71cd8580adae73f33570f0d",
+        "last_modified": "2019-03-20",
         "nvd_text": "sound/core/timer.c in the Linux kernel before 4.4.1 retains certain linked lists after a close or stop action, which allows local users to cause a denial of service (system crash) via a crafted ioctl call, related to the (1) snd_timer_close and (2) _snd_timer_stop functions.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2548",
@@ -17024,6 +17061,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "2ba1fe7a06d3624f9a7586d672b55f08f7c670f3",
+        "last_modified": "2019-03-20",
         "nvd_text": "sound/core/hrtimer.c in the Linux kernel before 4.4.1 does not prevent recursive callback access, which allows local users to cause a denial of service (deadlock) via a crafted ioctl call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2549",
@@ -17095,6 +17133,7 @@
         },
         "cwe": "Other",
         "fixes": "cac9b50b0d75a1d50d6c056ff65c005f3224c8e0",
+        "last_modified": "2019-03-20",
         "nvd_text": "The treo_attach function in drivers/usb/serial/visor.c in the Linux kernel before 4.5 allows physically proximate attackers to cause a denial of service (NULL pointer dereference and system crash) or possibly have unspecified other impact by inserting a USB device that lacks a (1) bulk-in or (2) interrupt-in endpoint.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2782",
@@ -17954,6 +17993,7 @@
         },
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "45f6fad84cc305103b28d73482b344d7f5b76f39",
+        "last_modified": "2019-03-20",
         "nvd_text": "The IPv6 stack in the Linux kernel before 4.3.3 mishandles options data, which allows local users to gain privileges or cause a denial of service (use-after-free and system crash) via a crafted sendmsg system call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-3841",
@@ -20825,6 +20865,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "4afa5f9617927453ac04b24b584f6c718dfb4f45",
+        "last_modified": "2019-03-20",
         "nvd_text": "The hash_accept function in crypto/algif_hash.c in the Linux kernel before 4.3.6 allows local users to cause a denial of service (OOPS) by attempting to trigger use of in-kernel hash algorithms for a socket that has received zero bytes of data.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-8646",
@@ -23733,7 +23774,7 @@
         },
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "4dff5c7b7093b19c19d3a100f8a3ad87cb7cd9e7",
-        "last_modified": "2019-02-10",
+        "last_modified": "2019-03-20",
         "nvd_text": "An elevation of privilege vulnerability in the kernel sound timer. Product: Android. Versions: Android kernel. Android ID A-37240993.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-13167",
@@ -23806,6 +23847,7 @@
         },
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "4f0414e54e4d1893c6f08260693f8ef84c929293",
+        "last_modified": "2019-03-20",
         "nvd_text": "A elevation of privilege vulnerability in the Upstream kernel skcipher. Product: Android. Versions: Android kernel. Android ID: A-64386293. References: Upstream kernel.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-13215",
