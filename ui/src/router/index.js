@@ -10,7 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'github',
+      name: 'index',
       component: index
     },
     {

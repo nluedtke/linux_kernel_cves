@@ -17,7 +17,7 @@
           dense
           hide-no-data
           append-icon="search"
-          :items="cves[0].data"
+          :items="cves"
           v-model="cve"
           @change="gotoCVE()"
         >
@@ -126,9 +126,7 @@ export default {
   data () {
     return {
       stream: 'default',
-      cves: [{
-        data: []
-      }],
+      cves: [],
       filteredOptions: [],
       cve: '',
       eolStreams: [],
@@ -153,10 +151,7 @@ export default {
     axios.get(cvesUrl)
       .then(response => {
       // JSON responses are automatically parsed.
-        this.cves[0].data = Object.keys(response.data)
-        this.filteredOptions = [{
-          data: this.cves[0].data.slice(0, this.limit)
-        }]
+        this.cves = Object.keys(response.data)
       })
       .catch(e => {
         this.errors.push(e)
@@ -164,9 +159,12 @@ export default {
   },
   methods: {
     gotoCVE () {
-      this.$data.stream = 'default'
-      this.$router.push('/cves/' + this.cve.toUpperCase().trim())
-      this.cve = ''
+      this.$router.push('/cves/' + this.cve.toUpperCase().trim(), () => {
+        // TODO: make this reset more reliably
+        this.$nextTick(() => {
+          this.cve = '' 
+        })
+      })
     },
   }
 }
