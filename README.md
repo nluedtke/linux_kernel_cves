@@ -11,9 +11,8 @@ fully tested or made public yet.
 
 There are two ways to view/consume the data. The easiest is the web front end at
 [www.linuxkernelcves.com][2]. Here can you can view CVEs by stream or by CVE id.
-The second way is on the github page at
-[https://github.com/nluedtke/linux_kernel_cves/][3]. On the github, the data is
-laid out in both JSON and text format. Both pages offer the same data.
+The second way is this github page. Here, the data is laid out in both JSON
+and text format.
 
 ## Linux Security Note
 
@@ -72,18 +71,18 @@ the code was introduced and when it was fixed.
 
 ## Development
 
-Want to contribute? Great! 
+Want to contribute? Great!
 
 ### Data Contributions
 
-Any additions/removals/updates to the data should start with an Issue. Please 
-be as accurate and complete as possible when requesting a change so the 
-information can be validated as quickly as possible. 
+Any additions/removals/updates to the data should start with an Issue. Please
+be as accurate and complete as possible when requesting a change so the
+information can be validated as quickly as possible.
 
 ### Code Contributions
 
-All code changes or enchancements must be done through a Pull Request to the 
-staging branch. No PRs directly to master will be accepted. 
+All code changes or enchancements must be done through a Pull Request to the
+staging branch. No PRs directly to master will be accepted.
 
 ## Known Issues
 
@@ -91,4 +90,3 @@ staging branch. No PRs directly to master will be accepted.
 
 [1]: https://kernsec.org/wiki/index.php/Kernel_Self_Protection_Project
 [2]: https://www.linuxkernelcves.com
-[3]: https://github.com/nluedtke/linux_kernel_cves/
