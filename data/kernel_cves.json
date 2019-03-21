@@ -35622,7 +35622,8 @@
         "breaks": "72dc1c096c7051a48ab1dbb12f71976656b55eb5",
         "cmt_msg": "USB: hso: Fix OOB memory access in hso_probe/hso_get_config_data",
         "fixes": "5146f95df782b0ac61abde36567e718692725c89",
-        "last_modified": "2019-01-13",
+        "last_modified": "2019-03-21",
+        "nvd_text": "The function hso_get_config_data in drivers/net/usb/hso.c in the Linux kernel through 4.19.8 reads if_num from the USB device (as a u8) and uses it to index a small array, resulting in an object out-of-bounds (OOB) read that potentially allows arbitrary read in the kernel address space.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-19985",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-19985",
@@ -35711,7 +35712,8 @@
         "breaks": "2889caa9232109afc8881f29a2205abeb5709d0c",
         "cmt_msg": "make 'user_access_begin()' do 'access_ok()'",
         "fixes": "594cc251fdd0d231d342d88b2fdff4bc42fb0690",
-        "last_modified": "2019-01-27",
+        "last_modified": "2019-03-21",
+        "nvd_text": "An issue where a provided address with access_ok() is not checked was discovered in i915_gem_execbuffer2_ioctl in drivers/gpu/drm/i915/i915_gem_execbuffer.c in the Linux kernel through 4.19.13. A local attacker can craft a malicious IOCTL function call to overwrite arbitrary kernel memory, resulting in a Denial of Service or privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20669",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-20669",
@@ -37760,7 +37762,8 @@
         "breaks": "f4124500c2c13eb1208c6143b3f6d469709dea10",
         "cmt_msg": "KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221)",
         "fixes": "ecec76885bcfe3294685dc363fd1273df0d5d65f",
-        "last_modified": "2019-03-02",
+        "last_modified": "2019-03-21",
+        "nvd_text": "The KVM implementation in the Linux kernel through 4.20.5 has a Use-after-Free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7221",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7221",
@@ -37775,7 +37778,8 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "KVM: x86: work around leak of uninitialized stack contents (CVE-2019-7222)",
         "fixes": "353c0956a618a07ba4bbe7ad00ff29fe70e8412a",
-        "last_modified": "2019-02-20",
+        "last_modified": "2019-03-21",
+        "nvd_text": "The KVM implementation in the Linux kernel through 4.20.5 has an Information Leak.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7222",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-7222",
@@ -38026,7 +38030,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2019-03-18",
+        "last_modified": "2019-03-21",
+        "nvd_text": "In the Linux kernel through 5.0.2, the function inotify_update_existing_watch() in fs/notify/inotify/inotify_user.c neglects to call fsnotify_put_mark() with IN_MASK_CREATE after fsnotify_find_mark(), which will cause a memory leak (aka refcount leak). Finally, this will cause a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9857",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9857",
