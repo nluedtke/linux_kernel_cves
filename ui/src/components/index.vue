@@ -14,10 +14,6 @@
           <v-btn @click="dismissChanges()" flat color="primary">Dismiss</v-btn>
         </v-card-actions>
       </v-card>
-
-        <!--
-          <vue-markdown id="contents-block" :source="contents"></vue-markdown>
-        -->
     </v-flex>
     <v-flex class="row" xs12>
       <h1>Linux Kernel CVEs</h1>
@@ -61,24 +57,13 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      contents: '',
       changes: '',
       dismissedChanges: false,
       errors: []
     }
   },
   created () {
-    var readmeUrl = this.$apiBaseUrl + 'README.md'
     var changesUrl = this.$apiBaseUrl + 'CHANGES.md'
-
-    axios.get(readmeUrl)
-      .then(response => {
-      // JSON responses are automatically parsed.
-        this.contents = response.data
-      })
-      .catch(e => {
-        this.errors.push(e)
-      })
     axios.get(changesUrl)
       .then(response => {
       // JSON responses are automatically parsed.
