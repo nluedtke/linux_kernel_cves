@@ -22,10 +22,8 @@
         <p class="versions">{{contents.affected_versions}}</p>
         <h4>Hashes</h4>
         <ul id="hashes">
-          <li v-if='contents.breaks == ""'><strong>Breaks: </strong>{{contents.breaks}}</li>
-          <li v-else><strong>Breaks: </strong><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id={{contents.breaks}}"> {{contents.breaks}}</a></li>
-          <li v-if='contents.fixes == ""'><strong>Fixes:  </strong>{{contents.fixes}}</li>
-          <li v-else><strong>Fixes:  </strong><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id={{contents.fixes}}">{{contents.fixes}}</a></li>
+          <li><strong>Breaks: </strong>{{contents.breaks}}</li>
+          <li><strong>Fixes:  </strong>{{contents.fixes}}</li>
           <p class="commit-message"><strong>Commit message:</strong> {{ contents.cmt_msg }}</p>
         </ul>
         <cvss v-if="contents.cvss2" cvssVersion="cvss2" v-bind:cvssData="contents.cvss2"/>
