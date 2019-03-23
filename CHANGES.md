@@ -1,12 +1,14 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 21Mar19 16:53
+## Last Update - 23Mar19 07:36
+
+### **New Versions Checked:**
+
+[3.18.137](streams/3.18)  
+[4.4.177](streams/4.4)  
+
 
 ### **Updated CVEs:**
 
-[CVE-2018-19985](cves/CVE-2018-19985)  
-[CVE-2018-20669](cves/CVE-2018-20669)  
-[CVE-2019-7221](cves/CVE-2019-7221)  
-[CVE-2019-7222](cves/CVE-2019-7222)  
-[CVE-2019-9857](cves/CVE-2019-9857)  
+[CVE-2019-9213](cves/CVE-2019-9213)  
