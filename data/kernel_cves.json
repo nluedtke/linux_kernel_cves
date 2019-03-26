@@ -37799,8 +37799,29 @@
         "affected_versions": "v2.6.12-rc2 to v5.0-rc6",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "KVM: x86: work around leak of uninitialized stack contents (CVE-2019-7222)",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "353c0956a618a07ba4bbe7ad00ff29fe70e8412a",
-        "last_modified": "2019-03-25",
+        "last_modified": "2019-03-26",
         "nvd_text": "The KVM implementation in the Linux kernel through 4.20.5 has an Information Leak.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-7222",
@@ -38052,8 +38073,29 @@
         "affected_versions": "unk to v5.1-rc2",
         "breaks": "",
         "cmt_msg": "inotify: Fix fsnotify_mark refcount leak in inotify_update_existing_watch()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Resource Management Errors",
         "fixes": "62c9d2674b31d4c8a674bee86b7edc6da2803aea",
-        "last_modified": "2019-03-24",
+        "last_modified": "2019-03-26",
         "nvd_text": "In the Linux kernel through 5.0.2, the function inotify_update_existing_watch() in fs/notify/inotify/inotify_user.c neglects to call fsnotify_put_mark() with IN_MASK_CREATE after fsnotify_find_mark(), which will cause a memory leak (aka refcount leak). Finally, this will cause a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9857",
