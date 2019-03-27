@@ -35747,8 +35747,29 @@
         "affected_versions": "v4.13-rc1 to v5.0-rc1",
         "breaks": "2889caa9232109afc8881f29a2205abeb5709d0c",
         "cmt_msg": "make 'user_access_begin()' do 'access_ok()'",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Input Validation",
         "fixes": "594cc251fdd0d231d342d88b2fdff4bc42fb0690",
-        "last_modified": "2019-03-21",
+        "last_modified": "2019-03-27",
         "nvd_text": "An issue where a provided address with access_ok() is not checked was discovered in i915_gem_execbuffer2_ioctl in drivers/gpu/drm/i915/i915_gem_execbuffer.c in the Linux kernel through 4.19.13. A local attacker can craft a malicious IOCTL function call to overwrite arbitrary kernel memory, resulting in a Denial of Service or privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20669",
@@ -37538,6 +37559,27 @@
         "affected_versions": "unk to v5.1-rc1",
         "breaks": "",
         "cmt_msg": "mm: hwpoison: fix thp split handing in soft_offline_in_use_page()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Code Injection",
         "fixes": "46612b751c4941c5c0472ddf04027e877ae5990f",
         "last_modified": "2019-03-27",
         "nvd_text": "An issue was discovered in the hwpoison implementation in mm/memory-failure.c in the Linux kernel before 5.0.4. When soft_offline_in_use_page() runs on a thp tail page after pmd is split, an attacker can cause a denial of service (BUG).",
@@ -38137,8 +38179,8 @@
         }
     },
     "CVE-2019-9857": {
-        "affected_versions": "unk to v5.1-rc2",
-        "breaks": "",
+        "affected_versions": "v4.19-rc1 to v5.1-rc2",
+        "breaks": "4d97f7d53da7dc830dbf416a3d2a6778d267ae68",
         "cmt_msg": "inotify: Fix fsnotify_mark refcount leak in inotify_update_existing_watch()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38162,7 +38204,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "62c9d2674b31d4c8a674bee86b7edc6da2803aea",
-        "last_modified": "2019-03-26",
+        "last_modified": "2019-03-27",
         "nvd_text": "In the Linux kernel through 5.0.2, the function inotify_update_existing_watch() in fs/notify/inotify/inotify_user.c neglects to call fsnotify_put_mark() with IN_MASK_CREATE after fsnotify_find_mark(), which will cause a memory leak (aka refcount leak). Finally, this will cause a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9857",
