@@ -311,8 +311,19 @@
     "CVE-2010-3432": {
         "affected_versions": "unk to v2.6.36-rc5",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cwe": "Other",
         "fixes": "4bdab43323b459900578b200a4b8cf9713ac8fab",
-        "last_modified": "2019-02-08",
+        "last_modified": "2019-03-26",
+        "nvd_text": "The sctp_packet_config function in net/sctp/output.c in the Linux kernel before 2.6.35.6 performs extraneous initializations of packet data structures, which allows remote attackers to cause a denial of service (panic) via a certain sequence of SCTP traffic.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2010-3432",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2010-3432",
@@ -344,6 +355,31 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2010-4563",
             "SUSE": "https://www.suse.com/security/cve/CVE-2010-4563",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2010/CVE-2010-4563"
+        }
+    },
+    "CVE-2010-4648": {
+        "affected_versions": "v2.6.28-rc1 to v2.6.37-rc6",
+        "breaks": "d03032af511c56d3c1580fa4f54f6285f650e638",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "3.3"
+        },
+        "cwe": "Insufficient Information",
+        "fixes": "0a54917c3fc295cb61f3fb52373c173fd3b69f48",
+        "last_modified": "2019-03-26",
+        "nvd_text": "The orinoco_ioctl_set_auth function in drivers/net/wireless/orinoco/wext.c in the Linux kernel before 2.6.37 does not properly implement a TKIP protection mechanism, which makes it easier for remote attackers to obtain access to a Wi-Fi network by reading Wi-Fi frames.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2010-4648",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2010-4648",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2010-4648",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2010-4648",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2010-4648",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2010/CVE-2010-4648"
         }
     },
     "CVE-2010-5313": {
