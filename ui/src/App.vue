@@ -7,7 +7,7 @@
       fixed
       clipped-left
     >
-      <v-icon color="white">bug_report</v-icon>
+      <img class="logo" src="@/assets/logo.svg"/>
       <v-toolbar-title class="white--text headline font-weight-light">Linux Kernel CVEs</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
@@ -175,6 +175,10 @@ export default {
 </style>
 
 <style scoped>
+.logo {
+  width: 50px;
+  height: 50px;
+}
 .support {
   margin: 10px;
   margin-bottom: 25px;
