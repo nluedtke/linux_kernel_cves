@@ -35657,8 +35657,29 @@
         "affected_versions": "v2.6.27-rc1 to v4.20",
         "breaks": "72dc1c096c7051a48ab1dbb12f71976656b55eb5",
         "cmt_msg": "USB: hso: Fix OOB memory access in hso_probe/hso_get_config_data",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "4.6"
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "5146f95df782b0ac61abde36567e718692725c89",
-        "last_modified": "2019-03-25",
+        "last_modified": "2019-03-28",
         "nvd_text": "The function hso_get_config_data in drivers/net/usb/hso.c in the Linux kernel through 4.19.8 reads if_num from the USB device (as a u8) and uses it to index a small array, resulting in an object out-of-bounds (OOB) read that potentially allows arbitrary read in the kernel address space.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-19985",
@@ -37595,8 +37616,29 @@
     "CVE-2019-10125": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "10.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Code Injection",
         "fixes": "",
-        "last_modified": "2019-03-27",
+        "last_modified": "2019-03-28",
         "nvd_text": "An issue was discovered in aio_poll() in fs/aio.c in the Linux kernel through 5.0.4. A file may be released by aio_poll_wake() if an expected event is triggered immediately (e.g., by the close of a pair of pipes) after the return of vfs_poll(), and this will cause a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10125",
