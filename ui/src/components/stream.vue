@@ -130,7 +130,6 @@ export default {
       return this.contents
     },
     outstanding: function () {
-      console.log(this.contents['outstanding'])
       return this.contents['outstanding']
     }
   }
