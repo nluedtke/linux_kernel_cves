@@ -311,8 +311,19 @@
     "CVE-2010-3432": {
         "affected_versions": "unk to v2.6.36-rc5",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cwe": "Other",
         "fixes": "4bdab43323b459900578b200a4b8cf9713ac8fab",
-        "last_modified": "2019-02-08",
+        "last_modified": "2019-03-26",
+        "nvd_text": "The sctp_packet_config function in net/sctp/output.c in the Linux kernel before 2.6.35.6 performs extraneous initializations of packet data structures, which allows remote attackers to cause a denial of service (panic) via a certain sequence of SCTP traffic.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2010-3432",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2010-3432",
@@ -344,6 +355,31 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2010-4563",
             "SUSE": "https://www.suse.com/security/cve/CVE-2010-4563",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2010/CVE-2010-4563"
+        }
+    },
+    "CVE-2010-4648": {
+        "affected_versions": "v2.6.28-rc1 to v2.6.37-rc6",
+        "breaks": "d03032af511c56d3c1580fa4f54f6285f650e638",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "3.3"
+        },
+        "cwe": "Insufficient Information",
+        "fixes": "0a54917c3fc295cb61f3fb52373c173fd3b69f48",
+        "last_modified": "2019-03-26",
+        "nvd_text": "The orinoco_ioctl_set_auth function in drivers/net/wireless/orinoco/wext.c in the Linux kernel before 2.6.37 does not properly implement a TKIP protection mechanism, which makes it easier for remote attackers to obtain access to a Wi-Fi network by reading Wi-Fi frames.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2010-4648",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2010-4648",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2010-4648",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2010-4648",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2010-4648",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2010/CVE-2010-4648"
         }
     },
     "CVE-2010-5313": {
@@ -35621,8 +35657,29 @@
         "affected_versions": "v2.6.27-rc1 to v4.20",
         "breaks": "72dc1c096c7051a48ab1dbb12f71976656b55eb5",
         "cmt_msg": "USB: hso: Fix OOB memory access in hso_probe/hso_get_config_data",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "4.6"
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "5146f95df782b0ac61abde36567e718692725c89",
-        "last_modified": "2019-03-25",
+        "last_modified": "2019-03-28",
         "nvd_text": "The function hso_get_config_data in drivers/net/usb/hso.c in the Linux kernel through 4.19.8 reads if_num from the USB device (as a u8) and uses it to index a small array, resulting in an object out-of-bounds (OOB) read that potentially allows arbitrary read in the kernel address space.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-19985",
@@ -35711,8 +35768,29 @@
         "affected_versions": "v4.13-rc1 to v5.0-rc1",
         "breaks": "2889caa9232109afc8881f29a2205abeb5709d0c",
         "cmt_msg": "make 'user_access_begin()' do 'access_ok()'",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Input Validation",
         "fixes": "594cc251fdd0d231d342d88b2fdff4bc42fb0690",
-        "last_modified": "2019-03-21",
+        "last_modified": "2019-03-27",
         "nvd_text": "An issue where a provided address with access_ok() is not checked was discovered in i915_gem_execbuffer2_ioctl in drivers/gpu/drm/i915/i915_gem_execbuffer.c in the Linux kernel through 4.19.13. A local attacker can craft a malicious IOCTL function call to overwrite arbitrary kernel memory, resulting in a Denial of Service or privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20669",
@@ -37498,6 +37576,79 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-9568"
         }
     },
+    "CVE-2019-10124": {
+        "affected_versions": "unk to v5.1-rc1",
+        "breaks": "",
+        "cmt_msg": "mm: hwpoison: fix thp split handing in soft_offline_in_use_page()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Code Injection",
+        "fixes": "46612b751c4941c5c0472ddf04027e877ae5990f",
+        "last_modified": "2019-03-27",
+        "nvd_text": "An issue was discovered in the hwpoison implementation in mm/memory-failure.c in the Linux kernel before 5.0.4. When soft_offline_in_use_page() runs on a thp tail page after pmd is split, an attacker can cause a denial of service (BUG).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10124",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10124",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-10124",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-10124",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-10124",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10124"
+        }
+    },
+    "CVE-2019-10125": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "10.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Code Injection",
+        "fixes": "",
+        "last_modified": "2019-03-28",
+        "nvd_text": "An issue was discovered in aio_poll() in fs/aio.c in the Linux kernel through 5.0.4. A file may be released by aio_poll_wake() if an expected event is triggered immediately (e.g., by the close of a pair of pipes) after the return of vfs_poll(), and this will cause a use-after-free.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10125",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10125",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-10125",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-10125",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-10125",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10125"
+        }
+    },
     "CVE-2019-2024": {
         "affected_versions": "unk to v4.16-rc1",
         "breaks": "",
@@ -38070,8 +38221,8 @@
         }
     },
     "CVE-2019-9857": {
-        "affected_versions": "unk to v5.1-rc2",
-        "breaks": "",
+        "affected_versions": "v4.19-rc1 to v5.1-rc2",
+        "breaks": "4d97f7d53da7dc830dbf416a3d2a6778d267ae68",
         "cmt_msg": "inotify: Fix fsnotify_mark refcount leak in inotify_update_existing_watch()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38095,7 +38246,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "62c9d2674b31d4c8a674bee86b7edc6da2803aea",
-        "last_modified": "2019-03-26",
+        "last_modified": "2019-03-27",
         "nvd_text": "In the Linux kernel through 5.0.2, the function inotify_update_existing_watch() in fs/notify/inotify/inotify_user.c neglects to call fsnotify_put_mark() with IN_MASK_CREATE after fsnotify_find_mark(), which will cause a memory leak (aka refcount leak). Finally, this will cause a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9857",
