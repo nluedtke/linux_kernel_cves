@@ -1,58 +1,151 @@
 <template>
-  <div id="app">
-    <div class="nav-wrapper">
-      <div class="nav">
-        <a href="/"><img id="logo" src="./assets/logo.jpg"></a>
-        <div class="nav-box">
-          <vue-autosuggest
-            :suggestions="filteredOptions"
-            :onSelected="onSelected"
-            :inputProps="{id:'autosuggest__input', onInputChange: this.onInputChange, placeholder:'Or by CVE id'}"
-          />
-          <!--<input v-model="cve" placeholder="Search by CVE ID">-->
-          <button v-on:click="gotoCVE">go</button>
-        </div>
-        <div class="nav-box">
-          <select v-model="stream" v-on:change="gotoStream">
-            <option disabled value="default">View by Stream</option>
-            <option v-for="aStream in streams"
-                    v-bind:key="aStream"
-                    v-bind:value="aStream">Stream {{aStream}}</option>
-          </select>
-        </div>
+  <v-app>
+    <v-toolbar
+      color="#354649"
+      dark
+      app
+      fixed
+      clipped-left
+    >
+      <img class="logo" src="@/assets/logo.svg"/>
+      <v-toolbar-title class="white--text headline font-weight-light">Linux Kernel CVEs</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-autocomplete
+          label="Search by CVE ID"
+          color="white"
+          dense
+          hide-no-data
+          append-icon="search"
+          :items="cves"
+          v-model="cve"
+          @change="gotoCVE()"
+        >
+        </v-autocomplete>
+      </v-toolbar-items>
+    </v-toolbar>
+    <v-navigation-drawer permanent clipped hide-overlay app mobile-break-point=0>
+      <v-list>
+        <v-list-tile
+          to="/"
+        >
+          <v-list-tile-title>Home</v-list-tile-title>
+        </v-list-tile>
+        <v-list-group>
+          <template slot="activator">
+            <v-list-tile>
+              <v-list-tile-content>
+              <v-list-tile-title>Stream Reports</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </template>
+            <v-list-group sub-group>
+              <template slot="activator">
+                <v-list-tile>
+                  <v-list-tile-content>
+                  <v-list-tile-title>Supported Streams</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </template>
+              <v-list-tile 
+                v-for="stream in supportedStreams" 
+                :key="stream"
+                :to="'/streams/' + stream"
+              >
+                <v-list-tile-action>
+                  <v-icon color="primary">$vuetify.icons.stream-icon</v-icon>
+                </v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>Stream {{ stream }}</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </v-list-group>
+            <v-list-group sub-group>
+              <template slot="activator">
+                <v-list-tile>
+                  <v-list-tile-content>
+                  <v-list-tile-title>EOL Streams</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </template>
+              <v-list-tile 
+                v-for="stream in eolStreams" 
+                :key="stream"
+                :to="'/streams/' + stream"
+              >
+                <v-list-tile-content>
+                  <v-list-tile-title>Stream {{ stream }}</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </v-list-group>
+        </v-list-group>
+        <v-list-tile
+          to="/cves"
+        >
+          <v-list-tile-title>All CVEs in Index</v-list-tile-title>
+        </v-list-tile>
+        <v-list-group>
+          <template slot="activator">
+            <v-list-tile>
+              <v-list-tile-content>
+              <v-list-tile-title>Linux Distro Security Pages</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </template>
+          <v-list-tile><a target="_blank" href="https://security.archlinux.org">Arch Linux</a></v-list-tile>
+          <v-list-tile><a target="_blank" href="https://www.debian.org/security/">Debian</a></v-list-tile>
+          <v-list-tile><a target="_blank" href="https://www.gentoo.org/support/security/">Gentoo</a></v-list-tile>
+          <v-list-tile><a target="_blank" href="https://access.redhat.com/security/">Red Hat</a></v-list-tile>
+          <v-list-tile><a target="_blank" href="https://www.suse.com/support/security/">SUSE</a></v-list-tile>
+          <v-list-tile><a target="_blank" href="https://www.ubuntu.com/security/">Ubuntu</a></v-list-tile>
+        </v-list-group>
+      </v-list>
+      <v-divider></v-divider>
+      <div class="support">
+        <h3>Want to support this project?</h3>
+        <p>Infrastructure costs money. Donate to keep this page updating.</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_donations" />
+          <input type="hidden" name="business" value="linuxkernelcves@gmail.com" />
+          <input type="hidden" name="currency_code" value="USD" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+          <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+        <v-btn class="contact-us" dark large color="#354649" href="mailto:linuxkernelcves@gmail.com">contact us</v-btn>
       </div>
-    </div>
-    <div class="container">
-      <router-view/>
-    </div>
-  </div>
+    </v-navigation-drawer>
+    <v-content>
+      <v-container fluid>
+        <router-view/>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
 import axios from 'axios'
-
 export default {
   name: 'App',
   data () {
     return {
       stream: 'default',
-      cves: [{
-        data: []
-      }],
+      cves: [],
       filteredOptions: [],
       cve: '',
-      streams: [],
+      eolStreams: [],
+      supportedStreams: [],
       errors: [],
-      limit: 10,
     }
   },
   created () {
     axios.get(this.$apiBaseUrl + 'kern.json')
       .then(response => {
-        var streams = response.data.eol_streams.concat(response.data.supp_streams)
-        streams = streams.map( a => a.split('.').map( n => +n+1000 ).join('.') ).sort()
-                         .map( a => a.split('.').map( n => +n-1000 ).join('.') )
-        this.streams = streams
+        var eolStreams = response.data.eol_streams
+        var supportedStreams = response.data.supp_streams
+        this.supportedStreams = supportedStreams.map( a => a.split('.').map( n => +n+1000 ).join('.') ).sort()
+                                .map( a => a.split('.').map( n => +n-1000 ).join('.') )
+        this.eolStreams = eolStreams.map( a => a.split('.').map( n => +n+1000 ).join('.') ).sort()
+                                .map( a => a.split('.').map( n => +n-1000 ).join('.') )
       })
       .catch(e => {
         this.errors.push(e)
@@ -61,187 +154,42 @@ export default {
     axios.get(cvesUrl)
       .then(response => {
       // JSON responses are automatically parsed.
-        this.cves[0].data = Object.keys(response.data)
-        this.filteredOptions = [{
-          data: this.cves[0].data.slice(0, this.limit)
-        }]
+        this.cves = Object.keys(response.data)
       })
       .catch(e => {
         this.errors.push(e)
       })
   },
   methods: {
-    gotoStream () {
-      this.$data.cve = ''
-      this.$router.push('/streams/' + this.stream)
-    },
     gotoCVE () {
-      this.$data.stream = 'default'
-      this.$router.push('/cves/' + this.cve.toUpperCase().trim())
-      // temporarily comment this out to fix
-      // this.cve = ''
+      this.$router.push('/cves/' + this.cve.toUpperCase().trim(), () => {
+        // TODO: make this reset more reliably
+        this.$nextTick(() => {
+          this.cve = '' 
+        })
+      })
     },
-    onSelected (option) {
-      this.cve = option.item
-      this.gotoCVE()
-    },
-    onInputChange (text) {
-      if (text === '' || text === undefined) {
-        return
-      }
-      this.cve = text
-      /* Full control over filtering. Maybe fetch from API?! Up to you!!! */
-      const filteredData = this.cves[0].data.filter(item => {
-        return item.toLowerCase().indexOf(text.toLowerCase()) > -1
-      }).slice(0, this.limit)
-      this.filteredOptions = [{
-        data: filteredData
-      }]
-    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #303030;
-  margin: 0 auto;
+
+</style>
+
+<style scoped>
+.logo {
+  width: 50px;
+  height: 50px;
 }
-body {
-  margin: 0;
+.support {
+  margin: 10px;
+  margin-bottom: 25px;
 }
-.container {
-  margin: 0 auto;
-  max-width: 800px;
-  margin-top: 100px;
+.support h3, .support p, .support form {
+  padding: 5px;
 }
-.nav-wrapper {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 75px;
-  background-color: #fafafb;
-  border-bottom: 1px #f3f3f3 solid;
-}
-.nav {
-  background-color: #fafafb;
-  border-bottom: 1px #f3f3f3 solid;
-  width: 100%;
-  max-width: 1000px;
-  height: 75px;
-  margin: 0 auto;
-}
-.nav #logo {
-  height: 75px;
-  float: left;
-}
-.nav .nav-box {
-  float: right;
-  width: 300px;
-  display: inline-block;
-  padding: 1.5em 0;
-}
-@media only screen and (max-width : 700px) {
-/* Styles */
-  .nav-wrapper {
-    position: static;
-    height: auto;
-  }
-  .nav {
-    height: auto;
-    padding-bottom: 1em
-  }
-  .nav #logo {
-    height: 100px;
-    float: none;
-  }
-  .nav .nav-box {
-    float: none;
-    min-width: 300px;
-    width: 100%;
-    display: inline-block;
-    padding: 1em 0 0;
-  }
-}
-.nav select, .nav input {
-  padding: .5em;
-  font-size: 14px;
-  border-width: 1px;
-  border-radius: 4px;
-  border-color: #42b983;
-  box-shadow: none;
-  min-width: 200px;
-}
-.nav button {
-  color: #fff;
-  padding: .5em;
-  font-size: 14px;
-  border-width: 1px;
-  border-radius: 4px;
-  border-color: #42b983;
-  background-color: #42b983;
-  box-shadow: none;
-  min-width: 35px;
-}
-.nav .stream-tag {
-  width: 100px;
-  padding-top: 32px;
-  color: #42b983;
-  font-weight: 550;
-}
-#autosuggest {
-  display: inline-block;
-}
-#autosuggest__input {
-  width: 200px;
-  display:inline-block;
-}
-.autosuggest__results-container {
-    position: relative;
-    margin: 0 auto;
-    width: 216px;
-}
-.autosuggest__results {
-    font-weight: 300;
-    margin: 0;
-    position: absolute;
-    z-index: 10000001;
-    width: 100%;
-    border: 1px solid #e0e0e0;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background: #fff;
-    padding: 0;
-}
-.autosuggest__results ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-.autosuggest__results .autosuggest__results_title {
-    color: gray;
-    font-size: 11px;
-    margin-left: 0;
-    padding: 15px 13px 5px;
-    border-top: 1px solid #d3d3d3;
-}
-.autosuggest__results .autosuggest__results_item {
-    cursor: pointer;
-    padding: 7px;
-    text-align: left;
-}
-.autosuggest__results .autosuggest__results_item.autosuggest__results_item-highlighted, .autosuggest__results .autosuggest__results_item:active, .autosuggest__results .autosuggest__results_item:focus, .autosuggest__results .autosuggest__results_item:hover {
-    background-color: #ddd;
-}
-a {
-  color: #42b983;
-}
-.sidebar {
-  display: none;
+.contact-us {
+  margin-top: 25px;
 }
 </style>

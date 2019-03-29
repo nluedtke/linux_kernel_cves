@@ -139,7 +139,7 @@ export default {
   padding: .5em 1em 1em
 }
 .commit-message {
-  background-color: #42b983f5;
+  background-color: #354649;
   color: white;
   padding: .5em 1em;
   font-size: 12px;
@@ -152,7 +152,7 @@ h1, h2, h3, h4{
 }
 ul {
   list-style-type: none;
-  background-color: #42b9835e;
+  background-color: #9FD9E3;
   font-family: monospace;
   padding: 1em 2em;
   font-size: 1.2em;
@@ -178,7 +178,7 @@ ul {
   text-decoration: none;
 }
 .distro-version-fixed {
-  background-color: #42b983f5;
+  background-color: #354649;
   color: white;
   padding: .5em 1em;
   font-size: 12px;
@@ -216,7 +216,7 @@ ul {
   }
 }
 a {
-  color: #42b983;
+  color: #354649;
 }
 .issue {
   text-decoration: none;
