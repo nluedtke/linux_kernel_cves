@@ -14215,8 +14215,8 @@
         }
     },
     "CVE-2015-8553": {
-        "affected_versions": "unk to v4.4-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.4-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/pciback: Don't allow MSI-X ops if PCI_COMMAND_MEMORY is not set.",
         "cvss2": {
             "Access Complexity": "Low",
@@ -14240,6 +14240,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "408fb0e5aa7fda0059db282ff58c3b2a4278baa0",
+        "last_modified": "2019-04-04",
         "nvd_text": "Xen allows guest OS users to obtain sensitive information from uninitialized locations in host OS kernel memory by not enabling memory and I/O decoding control bits.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2015-0777.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8553",
@@ -37651,11 +37652,11 @@
         }
     },
     "CVE-2019-2024": {
-        "affected_versions": "unk to v4.16-rc1",
-        "breaks": "",
+        "affected_versions": "v3.15-rc1 to v4.16-rc1",
+        "breaks": "425f53aaf76cce77b3bedd8ed4902bc94ed254ff",
         "cmt_msg": "media: em28xx: Fix use-after-free when disconnecting",
         "fixes": "910b0797fa9e8af09c44a3fa36cb310ba7a7218d",
-        "last_modified": "2019-03-06",
+        "last_modified": "2019-04-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2024",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2024",
@@ -37666,11 +37667,11 @@
         }
     },
     "CVE-2019-2025": {
-        "affected_versions": "unk to v4.20-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.20-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "binder: fix race that allows malicious free of live buffer",
         "fixes": "7bada55ab50697861eee6bb7d60b41e68a961a9c",
-        "last_modified": "2019-03-06",
+        "last_modified": "2019-04-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2025",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2025",
@@ -37784,11 +37785,46 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3819"
         }
     },
-    "CVE-2019-3874": {
+    "CVE-2019-3837": {
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2019-03-25",
+        "last_modified": "2019-04-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3837",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3837",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-3837",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3837",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-3837",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3837"
+        }
+    },
+    "CVE-2019-3874": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "3.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "6.5"
+        },
+        "cwe": "Buffer Errors",
+        "fixes": "",
+        "last_modified": "2019-04-04",
         "nvd_text": "The SCTP socket buffer used by a userspace application is not accounted by the cgroups subsystem. An attacker can use this flaw to cause a denial of service attack. Kernel 3.10.x and 4.18.x branches are believed to be vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3874",
@@ -38076,8 +38112,29 @@
         "affected_versions": "v4.17-rc1 to v5.0-rc6",
         "breaks": "4910280503f3af2857d5aa77e35b22d93a8960a8",
         "cmt_msg": "sctp: walk the list of asoc safely",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "ba59fb0273076637f0add4311faa990a5eec27c0",
-        "last_modified": "2019-04-01",
+        "last_modified": "2019-04-04",
         "nvd_text": "In the Linux Kernel before versions 4.20.8 and 4.19.21 a use-after-free error in the \"sctp_sendmsg()\" function (net/sctp/socket.c) when handling SCTP_SENDALL flag can be exploited to corrupt memory.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-8956",
