@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>CVEs in Stream {{this.stream}}</h1>
+    <h1>CVEs in Stream {{stream}}</h1>
     <div id="content">
       <v-list>
         <v-list-group
@@ -10,7 +10,8 @@
           <template slot="activator">
             <v-list-tile>
               <v-list-tile-content>
-                <v-list-tile-title>Fixed in {{ id }}</v-list-tile-title>
+                <v-list-tile-title v-if="id != 'outstanding'">Fixed in {{ id }}</v-list-tile-title>
+                <v-list-tile-title v-else>Outstanding CVEs in Stream {{ stream }}</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </template>
