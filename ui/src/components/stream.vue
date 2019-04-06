@@ -1,7 +1,13 @@
 <template>
   <div class="hello">
     <h1>CVEs in Stream {{stream}}</h1>
-    <div id="content">
+    <div v-if="contents == false" class="text-xs-center">
+      <v-progress-linear
+        color="primary"
+        indeterminate
+      ></v-progress-linear>
+    </div>
+    <div v-else id="content">
       <v-list>
         <v-list-group
           v-for="(data, id) in contents"
