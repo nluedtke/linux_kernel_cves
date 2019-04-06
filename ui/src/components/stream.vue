@@ -99,6 +99,7 @@ export default {
       alert('Failed to copy text.')
     },
     load: function () {
+      this.contents = []
       this.stream = this.$route.path.split('/')[2]
       document.title = 'Linux Kernel CVEs | ' + 'CVEs in Stream ' + this.stream
       var url = this.$apiBaseUrl + 'data/stream_data.json'
