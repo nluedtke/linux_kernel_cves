@@ -37893,7 +37893,8 @@
         "breaks": "",
         "cmt_msg": "KVM: x86: nVMX: close leak of L0's x2APIC MSRs (CVE-2019-3887)",
         "fixes": "acff78477b9b4f26ecdf65733a4ed77fe837e9dc",
-        "last_modified": "2019-04-08",
+        "last_modified": "2019-04-09",
+        "nvd_text": "A flaw was found in the way KVM hypervisor handled x2APIC Machine Specific Rregister (MSR) access with nested(=1) virtualization enabled. In that, L1 guest could access L0's APIC register values via L2 guest, when 'virtualize x2APIC mode' is enabled. A guest could use this flaw to potentially crash the host kernel resulting in DoS issue. Kernel versions from 4.16 and newer are vulnerable to this issue.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3887",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3887",
