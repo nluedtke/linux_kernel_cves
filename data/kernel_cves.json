@@ -35730,8 +35730,9 @@
         }
     },
     "CVE-2018-20449": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.7-rc1 to v4.15-rc2",
+        "breaks": "570d0176296f0d17c4b5ab206ad4a4bc027b863b",
+        "cmt_msg": "printk: hash addresses printed with %p",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -35753,8 +35754,8 @@
             "score": "5.5"
         },
         "cwe": "Information Leak / Disclosure",
-        "fixes": "",
-        "last_modified": "2019-04-07",
+        "fixes": "ad67b74d2469d9b82aaa572d76474c95bc484d57",
+        "last_modified": "2019-04-10",
         "nvd_text": "The hidma_chan_stats function in drivers/dma/qcom/hidma_dbg.c in the Linux kernel 4.14.90 allows local users to obtain sensitive address information by reading \"callback=\" lines in a debugfs file.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20449",
@@ -37823,11 +37824,11 @@
         }
     },
     "CVE-2019-3837": {
-        "affected_versions": "unk to v3.18-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.18-rc1 to v3.18-rc1",
+        "breaks": "db21733488f84a596faaad0d05430b3f51804692",
         "cmt_msg": "net_dma: simple removal",
         "fixes": "7bced397510ab569d31de4c70b39e13355046387",
-        "last_modified": "2019-04-08",
+        "last_modified": "2019-04-10",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3837",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3837",
@@ -37874,11 +37875,11 @@
         }
     },
     "CVE-2019-3882": {
-        "affected_versions": "unk to v5.1-rc4",
-        "breaks": "",
+        "affected_versions": "v3.6-rc1 to v5.1-rc4",
+        "breaks": "73fa0d10d077d9521ee2dace2307ae2c9a965336",
         "cmt_msg": "vfio/type1: Limit DMA mappings per container",
         "fixes": "492855939bdb59c6f947b0b5b44af9ad82b7e38c",
-        "last_modified": "2019-04-08",
+        "last_modified": "2019-04-10",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3882",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3882",
@@ -37889,11 +37890,32 @@
         }
     },
     "CVE-2019-3887": {
-        "affected_versions": "unk to v5.1-rc4",
-        "breaks": "",
+        "affected_versions": "v4.16-rc1 to v5.1-rc4",
+        "breaks": "15303ba5d1cd9b28d03a980456c0978c0ea3b208",
         "cmt_msg": "KVM: x86: nVMX: close leak of L0's x2APIC MSRs (CVE-2019-3887)",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.7"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Changed",
+            "User Interaction": "None",
+            "score": "5.6"
+        },
+        "cwe": "Input Validation",
         "fixes": "acff78477b9b4f26ecdf65733a4ed77fe837e9dc",
-        "last_modified": "2019-04-09",
+        "last_modified": "2019-04-10",
         "nvd_text": "A flaw was found in the way KVM hypervisor handled x2APIC Machine Specific Rregister (MSR) access with nested(=1) virtualization enabled. In that, L1 guest could access L0's APIC register values via L2 guest, when 'virtualize x2APIC mode' is enabled. A guest could use this flaw to potentially crash the host kernel resulting in DoS issue. Kernel versions from 4.16 and newer are vulnerable to this issue.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3887",
