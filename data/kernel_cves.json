@@ -37723,8 +37723,30 @@
         "affected_versions": "v2.6.12-rc2 to v5.1-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "3.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "6.5"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "7c9cbd0b5e38a1672fcd137894ace3b042dfbf69",
-        "last_modified": "2019-04-03",
+        "last_modified": "2019-04-11",
+        "nvd_text": "A heap address information leak while using L2CAP_GET_CONF_OPT was discovered in the Linux kernel before 5.1-rc1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3459",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3459",
@@ -37738,8 +37760,30 @@
         "affected_versions": "v2.6.12-rc2 to v5.1-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "3.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "6.5"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "af3d5d1c87664a4f150fcf3534c6567cb19909b0",
-        "last_modified": "2019-04-03",
+        "last_modified": "2019-04-11",
+        "nvd_text": "A heap data infoleak in multiple locations including L2CAP_PARSE_CONF_RSP was found in the Linux kernel before 5.1-rc1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3460",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3460",
@@ -37828,7 +37872,8 @@
         "breaks": "db21733488f84a596faaad0d05430b3f51804692",
         "cmt_msg": "net_dma: simple removal",
         "fixes": "7bced397510ab569d31de4c70b39e13355046387",
-        "last_modified": "2019-04-10",
+        "last_modified": "2019-04-11",
+        "nvd_text": "It was found that the net_dma code in tcp_recvmsg() in the 2.6.32 kernel as shipped in RHEL6 is thread-unsafe. So an unprivileged multi-threaded userspace application calling recvmsg() for the same network socket in parallel executed on ioatdma-enabled hardware with net_dma enabled can leak the memory, crash the host leading to a denial-of-service or cause a random memory corruption.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3837",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3837",
