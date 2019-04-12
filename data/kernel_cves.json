@@ -37689,6 +37689,37 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10125"
         }
     },
+    "CVE-2019-11190": {
+        "affected_versions": "unk to v4.8-rc5",
+        "breaks": "",
+        "cmt_msg": "binfmt_elf: switch to new creds when switching to new mm",
+        "fixes": "9f834ec18defc369d73ccf9e87a2790bfa05bf46",
+        "last_modified": "2019-04-12",
+        "nvd_text": "The Linux kernel before 4.8 allows local users to bypass ASLR on setuid programs (such as /bin/su) because install_exec_creds() is called too late in load_elf_binary() in fs/binfmt_elf.c, and thus the ptrace_may_access() check has a race condition when reading /proc/pid/stat.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11190",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11190",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11190",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11190",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11190",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11190"
+        }
+    },
+    "CVE-2019-11191": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-04-12",
+        "nvd_text": "The Linux kernel through 5.0.7, when CONFIG_IA32_AOUT is enabled and ia32_aout is loaded, allows local users to bypass ASLR on setuid a.out programs (if any exist) because install_exec_creds() is called too late in load_aout_binary() in fs/binfmt_aout.c, and thus the ptrace_may_access() check has a race condition when reading /proc/pid/stat.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11191",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11191",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11191",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11191",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11191",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11191"
+        }
+    },
     "CVE-2019-2024": {
         "affected_versions": "v3.15-rc1 to v4.16-rc1",
         "breaks": "425f53aaf76cce77b3bedd8ed4902bc94ed254ff",
