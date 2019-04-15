@@ -37727,9 +37727,8 @@
         }
     },
     "CVE-2019-11191": {
-        "affected_versions": "unk to v4.6-rc6",
+        "affected_versions": "unk to unk",
         "breaks": "",
-        "cmt_msg": "perf/core: Fix perf_event_open() vs. execve() race",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Local Access",
@@ -37751,8 +37750,8 @@
             "score": "4.7"
         },
         "cwe": "Race Conditions",
-        "fixes": "79c9ce57eb2d5f1497546a3946b4ae21b6fdc438",
-        "last_modified": "2019-04-15",
+        "fixes": "",
+        "last_modified": "2019-04-12",
         "nvd_text": "The Linux kernel through 5.0.7, when CONFIG_IA32_AOUT is enabled and ia32_aout is loaded, allows local users to bypass ASLR on setuid a.out programs (if any exist) because install_exec_creds() is called too late in load_aout_binary() in fs/binfmt_aout.c, and thus the ptrace_may_access() check has a race condition when reading /proc/pid/stat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11191",
