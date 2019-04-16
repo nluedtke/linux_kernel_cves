@@ -37751,7 +37751,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "",
-        "last_modified": "2019-04-15",
+        "last_modified": "2019-04-16",
         "nvd_text": "The Linux kernel through 5.0.7, when CONFIG_IA32_AOUT is enabled and ia32_aout is loaded, allows local users to bypass ASLR on setuid a.out programs (if any exist) because install_exec_creds() is called too late in load_aout_binary() in fs/binfmt_aout.c, and thus the ptrace_may_access() check has a race condition when reading /proc/pid/stat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11191",
