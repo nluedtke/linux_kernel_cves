@@ -37690,8 +37690,8 @@
         }
     },
     "CVE-2019-11190": {
-        "affected_versions": "unk to v4.8-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.8-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "binfmt_elf: switch to new creds when switching to new mm",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -37715,7 +37715,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "9f834ec18defc369d73ccf9e87a2790bfa05bf46",
-        "last_modified": "2019-04-12",
+        "last_modified": "2019-04-18",
         "nvd_text": "The Linux kernel before 4.8 allows local users to bypass ASLR on setuid programs (such as /bin/su) because install_exec_creds() is called too late in load_elf_binary() in fs/binfmt_elf.c, and thus the ptrace_may_access() check has a race condition when reading /proc/pid/stat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11190",
@@ -37727,8 +37727,8 @@
         }
     },
     "CVE-2019-11191": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Local Access",
@@ -37751,7 +37751,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "",
-        "last_modified": "2019-04-16",
+        "last_modified": "2019-04-18",
         "nvd_text": "The Linux kernel through 5.0.7, when CONFIG_IA32_AOUT is enabled and ia32_aout is loaded, allows local users to bypass ASLR on setuid a.out programs (if any exist) because install_exec_creds() is called too late in load_aout_binary() in fs/binfmt_aout.c, and thus the ptrace_may_access() check has a race condition when reading /proc/pid/stat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11191",
