@@ -37782,8 +37782,29 @@
         "affected_versions": "unk to v5.1-rc4",
         "breaks": "",
         "cmt_msg": "tty: mark Siemens R3964 line discipline as BROKEN",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.0"
+        },
+        "cwe": "Race Conditions",
         "fixes": "c7084edc3f6d67750f50d4183134c4fb5712a5c8",
-        "last_modified": "2019-04-24",
+        "last_modified": "2019-04-25",
         "nvd_text": "The Siemens R3964 line discipline driver in drivers/tty/n_r3964.c in the Linux kernel before 5.0.8 has multiple race conditions.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11486",
@@ -38134,6 +38155,7 @@
         "breaks": "",
         "fixes": "",
         "last_modified": "2019-04-25",
+        "nvd_text": "An infinite loop issue was found in the vhost_net kernel module in Linux Kernel up to and including v5.1-rc6, while handling incoming packets in handle_rx(). It could occur if one end sends packets faster than the other end can process them. A guest user, maybe remote one, could use this flaw to stall the vhost_net kernel thread, resulting in a DoS scenario.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3900",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3900",
