@@ -6283,8 +6283,29 @@
         "affected_versions": "v2.6.12-rc2 to v3.12-rc7",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "net: fix cipso packet validation when !NETLABEL",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.9"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "f2e5ddcc0d12f9c4c7b254358ad245c9dddce13b",
-        "last_modified": "2019-04-23",
+        "last_modified": "2019-04-26",
         "nvd_text": "cipso_v4_validate in include/net/cipso_ipv4.h in the Linux kernel before 3.11.7, when CONFIG_NETLABEL is disabled, allows attackers to cause a denial of service (infinite loop and crash), as demonstrated by icmpsic, a different vulnerability than CVE-2013-0310.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2013-7470",
@@ -37779,8 +37800,8 @@
         }
     },
     "CVE-2019-11486": {
-        "affected_versions": "unk to v5.1-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.1-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "tty: mark Siemens R3964 line discipline as BROKEN",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -37804,7 +37825,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "c7084edc3f6d67750f50d4183134c4fb5712a5c8",
-        "last_modified": "2019-04-25",
+        "last_modified": "2019-04-26",
         "nvd_text": "The Siemens R3964 line discipline driver in drivers/tty/n_r3964.c in the Linux kernel before 5.0.8 has multiple race conditions.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11486",
