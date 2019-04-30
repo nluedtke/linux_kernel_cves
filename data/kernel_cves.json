@@ -37844,8 +37844,29 @@
         "affected_versions": "unk to v5.1-rc5",
         "breaks": "",
         "cmt_msg": "fs: prevent page refcount overflow in pipe_buf_get",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "15fab63e1e57be9fdb5eec1bbc5916e9825e9acb",
-        "last_modified": "2019-04-24",
+        "last_modified": "2019-04-30",
         "nvd_text": "The Linux kernel before 5.1-rc5 allows page-&gt;_refcount reference count overflow, with resultant use-after-free issues, if about 140 GiB of RAM exists. This is related to fs/fuse/dev.c, fs/pipe.c, fs/splice.c, include/linux/mm.h, include/linux/pipe_fs_i.h, kernel/trace/trace.c, mm/gup.c, and mm/hugetlb.c. It can occur with FUSE requests.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11487",
@@ -38177,11 +38198,11 @@
         }
     },
     "CVE-2019-3892": {
-        "affected_versions": "unk to v5.1-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.1-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping",
         "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
-        "last_modified": "2019-04-27",
+        "last_modified": "2019-04-30",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3892",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3892",
@@ -38192,10 +38213,10 @@
         }
     },
     "CVE-2019-3900": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v3.14 to unk",
+        "breaks": "d8316f3991d207fe32881a9ac20241be8fa2bad0",
         "fixes": "",
-        "last_modified": "2019-04-25",
+        "last_modified": "2019-04-30",
         "nvd_text": "An infinite loop issue was found in the vhost_net kernel module in Linux Kernel up to and including v5.1-rc6, while handling incoming packets in handle_rx(). It could occur if one end sends packets faster than the other end can process them. A guest user, maybe remote one, could use this flaw to stall the vhost_net kernel thread, resulting in a DoS scenario.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3900",
