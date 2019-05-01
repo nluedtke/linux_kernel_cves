@@ -38148,8 +38148,29 @@
         "affected_versions": "v3.6-rc1 to v5.1-rc4",
         "breaks": "73fa0d10d077d9521ee2dace2307ae2c9a965336",
         "cmt_msg": "vfio/type1: Limit DMA mappings per container",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "492855939bdb59c6f947b0b5b44af9ad82b7e38c",
-        "last_modified": "2019-04-24",
+        "last_modified": "2019-05-01",
         "nvd_text": "A flaw was found in the Linux kernel's vfio interface implementation that permits violation of the user's locked memory limit. If a device is bound to a vfio driver, such as vfio-pci, and the local attacker is administratively granted ownership of the device, it may cause a system memory exhaustion and thus a denial of service (DoS). Versions 3.10, 4.14 and 4.18 are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3882",
