@@ -38236,8 +38236,29 @@
     "CVE-2019-3900": {
         "affected_versions": "v3.14 to unk",
         "breaks": "d8316f3991d207fe32881a9ac20241be8fa2bad0",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "Single",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "6.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "6.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "",
-        "last_modified": "2019-04-30",
+        "last_modified": "2019-05-02",
         "nvd_text": "An infinite loop issue was found in the vhost_net kernel module in Linux Kernel up to and including v5.1-rc6, while handling incoming packets in handle_rx(). It could occur if one end sends packets faster than the other end can process them. A guest user, maybe remote one, could use this flaw to stall the vhost_net kernel thread, resulting in a DoS scenario.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3900",
