@@ -37881,6 +37881,27 @@
         "affected_versions": "unk to v5.1-rc6",
         "breaks": "",
         "cmt_msg": "coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.0"
+        },
+        "cwe": "Race Conditions",
         "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
         "last_modified": "2019-05-03",
         "nvd_text": "The coredump implementation in the Linux kernel before 5.0.10 does not use locking or other mechanisms to prevent vma layout or vma flags changes while it runs, which allows local users to obtain sensitive information, cause a denial of service, or possibly have unspecified other impact by triggering a race condition with mmget_not_zero or get_task_mm calls. This is related to fs/userfaultfd.c, mm/mmap.c, fs/proc/task_mmu.c, and drivers/infiniband/core/uverbs_main.c.",
@@ -37894,9 +37915,30 @@
         }
     },
     "CVE-2019-11683": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v5.0-rc1 to unk",
+        "breaks": "e20cf8d3f1f763ad28a9cb3b41305b8a8a42653e",
         "cmt_msg": "udp: fix GRO packet of death",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "10.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Resource Management Errors",
         "fixes": "4dd2b82d5adfbe0b1587ccad7a8f76d826120f37",
         "last_modified": "2019-05-03",
         "nvd_text": "udp_gro_receive_segment in net/ipv4/udp_offload.c in the Linux kernel 5.x through 5.0.11 allows remote attackers to cause a denial of service (slab-out-of-bounds memory corruption) or possibly have unspecified other impact via UDP packets with a 0 payload, because of mishandling of padded packets, aka the \"GRO packet of death\" issue.",
