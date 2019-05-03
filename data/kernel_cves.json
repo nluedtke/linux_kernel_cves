@@ -37756,7 +37756,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "9f834ec18defc369d73ccf9e87a2790bfa05bf46",
-        "last_modified": "2019-04-27",
+        "last_modified": "2019-05-03",
         "nvd_text": "The Linux kernel before 4.8 allows local users to bypass ASLR on setuid programs (such as /bin/su) because install_exec_creds() is called too late in load_elf_binary() in fs/binfmt_elf.c, and thus the ptrace_may_access() check has a race condition when reading /proc/pid/stat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11190",
@@ -37829,7 +37829,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "c7084edc3f6d67750f50d4183134c4fb5712a5c8",
-        "last_modified": "2019-04-27",
+        "last_modified": "2019-05-03",
         "nvd_text": "The Siemens R3964 line discipline driver in drivers/tty/n_r3964.c in the Linux kernel before 5.0.8 has multiple race conditions.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11486",
@@ -37882,7 +37882,7 @@
         "breaks": "",
         "cmt_msg": "coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping",
         "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
-        "last_modified": "2019-04-30",
+        "last_modified": "2019-05-03",
         "nvd_text": "The coredump implementation in the Linux kernel before 5.0.10 does not use locking or other mechanisms to prevent vma layout or vma flags changes while it runs, which allows local users to obtain sensitive information, cause a denial of service, or possibly have unspecified other impact by triggering a race condition with mmget_not_zero or get_task_mm calls. This is related to fs/userfaultfd.c, mm/mmap.c, fs/proc/task_mmu.c, and drivers/infiniband/core/uverbs_main.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11599",
@@ -37893,12 +37893,28 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11599"
         }
     },
+    "CVE-2019-11683": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "udp: fix GRO packet of death",
+        "fixes": "4dd2b82d5adfbe0b1587ccad7a8f76d826120f37",
+        "last_modified": "2019-05-03",
+        "nvd_text": "udp_gro_receive_segment in net/ipv4/udp_offload.c in the Linux kernel 5.x through 5.0.11 allows remote attackers to cause a denial of service (slab-out-of-bounds memory corruption) or possibly have unspecified other impact via UDP packets with a 0 payload, because of mishandling of padded packets, aka the \"GRO packet of death\" issue.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11683",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11683",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11683",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11683",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11683",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11683"
+        }
+    },
     "CVE-2019-2024": {
         "affected_versions": "v3.15-rc1 to v4.16-rc1",
         "breaks": "425f53aaf76cce77b3bedd8ed4902bc94ed254ff",
         "cmt_msg": "media: em28xx: Fix use-after-free when disconnecting",
         "fixes": "910b0797fa9e8af09c44a3fa36cb310ba7a7218d",
-        "last_modified": "2019-04-04",
+        "last_modified": "2019-05-03",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2024",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2024",
@@ -37949,7 +37965,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "7c9cbd0b5e38a1672fcd137894ace3b042dfbf69",
-        "last_modified": "2019-04-11",
+        "last_modified": "2019-05-03",
         "nvd_text": "A heap address information leak while using L2CAP_GET_CONF_OPT was discovered in the Linux kernel before 5.1-rc1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3459",
@@ -37986,7 +38002,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "af3d5d1c87664a4f150fcf3534c6567cb19909b0",
-        "last_modified": "2019-04-11",
+        "last_modified": "2019-05-03",
         "nvd_text": "A heap data infoleak in multiple locations including L2CAP_PARSE_CONF_RSP was found in the Linux kernel before 5.1-rc1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3460",
@@ -38170,7 +38186,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "492855939bdb59c6f947b0b5b44af9ad82b7e38c",
-        "last_modified": "2019-05-02",
+        "last_modified": "2019-05-03",
         "nvd_text": "A flaw was found in the Linux kernel's vfio interface implementation that permits violation of the user's locked memory limit. If a device is bound to a vfio driver, such as vfio-pci, and the local attacker is administratively granted ownership of the device, it may cause a system memory exhaustion and thus a denial of service (DoS). Versions 3.10, 4.14 and 4.18 are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3882",
@@ -38223,7 +38239,7 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping",
         "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
-        "last_modified": "2019-04-30",
+        "last_modified": "2019-05-03",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3892",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3892",
@@ -38295,7 +38311,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "79c9ce57eb2d5f1497546a3946b4ae21b6fdc438",
-        "last_modified": "2019-04-29",
+        "last_modified": "2019-05-03",
         "nvd_text": "A race condition in perf_event_open() allows local attackers to leak sensitive data from setuid programs. As no relevant locks (in particular the cred_guard_mutex) are held during the ptrace_may_access() call, it is possible for the specified target task to perform an execve() syscall with setuid execution before perf_event_alloc() actually attaches to it, allowing an attacker to bypass the ptrace_may_access() check and the perf_event_exit_task(current) call that is performed in install_exec_creds() during privileged execve() calls. This issue affects kernel versions before 4.8.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3901",
@@ -38739,7 +38755,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "0a1d52994d440e21def1c2174932410b4f2a98a1",
-        "last_modified": "2019-03-23",
+        "last_modified": "2019-05-03",
         "nvd_text": "In the Linux kernel before 4.20.14, expand_downwards in mm/mmap.c lacks a check for the mmap minimum address, which makes it easier for attackers to exploit kernel NULL pointer dereferences on non-SMAP platforms. This is related to a capability check for the wrong task.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9213",
@@ -38770,7 +38786,7 @@
         "breaks": "5b435de0d786869c95d1962121af0d7df2542009",
         "cmt_msg": "brcmfmac: add subtype check for event handling in data path",
         "fixes": "a4176ec356c73a46c07c181c6d04039fafa34a9f",
-        "last_modified": "2019-04-17",
+        "last_modified": "2019-05-03",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9503",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9503",
