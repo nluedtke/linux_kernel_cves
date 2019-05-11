@@ -36012,7 +36012,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "b90cd6f2b905905fb42671009dc0e27c310a16ae",
-        "last_modified": "2019-05-08",
+        "last_modified": "2019-05-10",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.20. There is a race condition in smp_task_timedout() and smp_task_done() in drivers/scsi/libsas/sas_expander.c, leading to a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20836",
@@ -38138,8 +38138,29 @@
         "affected_versions": "unk to v5.1-rc4",
         "breaks": "",
         "cmt_msg": "net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock().",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "9.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "8.1"
+        },
+        "cwe": "Race Conditions",
         "fixes": "cb66ddd156203daefb8d71158036b27b0e2caf63",
-        "last_modified": "2019-05-08",
+        "last_modified": "2019-05-10",
         "nvd_text": "An issue was discovered in rds_tcp_kill_sock in net/rds/tcp.c in the Linux kernel before 5.0.8. There is a race condition leading to a use-after-free, related to net namespace cleanup.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11815",
@@ -38183,8 +38204,29 @@
     "CVE-2019-2054": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "",
-        "last_modified": "2019-05-09",
+        "last_modified": "2019-05-10",
         "nvd_text": "In the seccomp implementation prior to kernel version 4.8, there is a possible seccomp bypass due to seccomp policies that allow the use of ptrace. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. Product: Android Versions: Android kernel Android ID: A-119769499",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2054",
