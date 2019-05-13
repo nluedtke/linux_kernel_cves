@@ -38135,8 +38135,8 @@
         }
     },
     "CVE-2019-11815": {
-        "affected_versions": "unk to v5.1-rc4",
-        "breaks": "",
+        "affected_versions": "v4.3-rc1 to v5.1-rc4",
+        "breaks": "467fa15356acfb7b2efa38839c3e76caa4e6e0ea",
         "cmt_msg": "net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock().",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -38160,7 +38160,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "cb66ddd156203daefb8d71158036b27b0e2caf63",
-        "last_modified": "2019-05-10",
+        "last_modified": "2019-05-13",
         "nvd_text": "An issue was discovered in rds_tcp_kill_sock in net/rds/tcp.c in the Linux kernel before 5.0.8. There is a race condition leading to a use-after-free, related to net namespace cleanup.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11815",
@@ -38175,8 +38175,29 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "cmt_msg": "Bluetooth: hidp: fix buffer overflow",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "Low",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "3.3"
+        },
+        "cwe": "Command Injection",
         "fixes": "a1616a5ac99ede5d605047a9012481ce7ff18b16",
-        "last_modified": "2019-05-11",
+        "last_modified": "2019-05-13",
         "nvd_text": "The do_hidp_sock_ioctl function in net/bluetooth/hidp/sock.c in the Linux kernel before 5.0.15 allows a local user to obtain potentially sensitive information from kernel stack memory via a HIDPCONNADD command, because a name field may not end with a '\\0' character.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11884",
