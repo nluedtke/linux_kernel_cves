@@ -36060,7 +36060,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "b90cd6f2b905905fb42671009dc0e27c310a16ae",
-        "last_modified": "2019-05-10",
+        "last_modified": "2019-05-16",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.20. There is a race condition in smp_task_timedout() and smp_task_done() in drivers/scsi/libsas/sas_expander.c, leading to a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20836",
@@ -38253,8 +38253,29 @@
     "CVE-2019-11833": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "592acbf16821288ecdc4192c47e3774a4c48bb64",
-        "last_modified": "2019-05-15",
+        "last_modified": "2019-05-16",
         "nvd_text": "fs/ext4/extents.c in the Linux kernel through 5.1.2 does not zero out the unused memory region in the extent tree block, which might allow local users to obtain sensitive information by reading uninitialized data in the filesystem.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11833",
@@ -38291,7 +38312,7 @@
         },
         "cwe": "Command Injection",
         "fixes": "a1616a5ac99ede5d605047a9012481ce7ff18b16",
-        "last_modified": "2019-05-13",
+        "last_modified": "2019-05-16",
         "nvd_text": "The do_hidp_sock_ioctl function in net/bluetooth/hidp/sock.c in the Linux kernel before 5.0.15 allows a local user to obtain potentially sensitive information from kernel stack memory via a HIDPCONNADD command, because a name field may not end with a '\\0' character.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11884",
