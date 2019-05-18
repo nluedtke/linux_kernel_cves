@@ -36978,6 +36978,43 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-6927"
         }
     },
+    "CVE-2018-7191": {
+        "affected_versions": "v3.8-rc1 to v4.14-rc6",
+        "breaks": "96442e42429e5f268ab97a3586c7694a3acc55a7",
+        "cmt_msg": "tun: call dev_get_valid_name() before register_netdevice()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "0ad646c81b2182f7fa67ec0c8c825e0ee165696d",
+        "last_modified": "2019-05-18",
+        "nvd_text": "In the tun subsystem in the Linux kernel before 4.13.14, dev_get_valid_name is not called before register_netdevice. This allows local users to cause a denial of service (NULL pointer dereference and panic) via an ioctl(TUNSETIFF) call with a dev name containing a / character. This is similar to CVE-2013-4343.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-7191",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-7191",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-7191",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-7191",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-7191",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-7191"
+        }
+    },
     "CVE-2018-7273": {
         "affected_versions": "v2.6.12-rc2 to v4.15-rc2",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -37892,7 +37929,8 @@
         "breaks": "659643f7d81432189c2c87230e2feee4c75c14c1",
         "cmt_msg": "drm/i915/gvt: Fix mmap range check",
         "fixes": "51b00d8509dc69c98740da2ad07308b630d3eb7d",
-        "last_modified": "2019-05-17",
+        "last_modified": "2019-05-18",
+        "nvd_text": "Insufficient input validation in Kernel Mode Driver in Intel(R) i915 Graphics for Linux before version 5.0 may allow an authenticated user to potentially enable escalation of privilege via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11085",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11085",
