@@ -37930,8 +37930,29 @@
         "affected_versions": "v4.10-rc1 to v5.0-rc3",
         "breaks": "659643f7d81432189c2c87230e2feee4c75c14c1",
         "cmt_msg": "drm/i915/gvt: Fix mmap range check",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Input Validation",
         "fixes": "51b00d8509dc69c98740da2ad07308b630d3eb7d",
-        "last_modified": "2019-05-18",
+        "last_modified": "2019-05-22",
         "nvd_text": "Insufficient input validation in Kernel Mode Driver in Intel(R) i915 Graphics for Linux before version 5.0 may allow an authenticated user to potentially enable escalation of privilege via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11085",
@@ -38291,8 +38312,8 @@
         }
     },
     "CVE-2019-11833": {
-        "affected_versions": "unk to v5.2-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.19-rc2 to v5.2-rc1",
+        "breaks": "a86c61812637c7dd0c57e29880cffd477b62f2e7",
         "cmt_msg": "ext4: zero out the unused memory region in the extent tree block",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38316,7 +38337,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "592acbf16821288ecdc4192c47e3774a4c48bb64",
-        "last_modified": "2019-05-20",
+        "last_modified": "2019-05-22",
         "nvd_text": "fs/ext4/extents.c in the Linux kernel through 5.1.2 does not zero out the unused memory region in the extent tree block, which might allow local users to obtain sensitive information by reading uninitialized data in the filesystem.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11833",
