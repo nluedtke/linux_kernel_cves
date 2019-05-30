@@ -1,7 +1,13 @@
 <template>
   <div class="hello">
-    <h1>CVEs in Stream {{this.stream}}</h1>
-    <div id="content">
+    <h1>CVEs in Stream {{stream}}</h1>
+    <div v-if="contents == false" class="text-xs-center">
+      <v-progress-linear
+        color="primary"
+        indeterminate
+      ></v-progress-linear>
+    </div>
+    <div v-else id="content">
       <v-list>
         <v-list-group
           v-for="(data, id) in contents"
@@ -10,7 +16,8 @@
           <template slot="activator">
             <v-list-tile>
               <v-list-tile-content>
-                <v-list-tile-title>Fixed in {{ id }}</v-list-tile-title>
+                <v-list-tile-title v-if="id != 'outstanding'">Fixed in {{ id }}</v-list-tile-title>
+                <v-list-tile-title v-else>Outstanding CVEs in Stream {{ stream }}</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </template>
@@ -92,6 +99,7 @@ export default {
       alert('Failed to copy text.')
     },
     load: function () {
+      this.contents = []
       this.stream = this.$route.path.split('/')[2]
       document.title = 'Linux Kernel CVEs | ' + 'CVEs in Stream ' + this.stream
       var url = this.$apiBaseUrl + 'data/stream_data.json'
