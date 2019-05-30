@@ -6279,6 +6279,43 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2013/CVE-2013-7446"
         }
     },
+    "CVE-2013-7470": {
+        "affected_versions": "v2.6.12-rc2 to v3.12-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "net: fix cipso packet validation when !NETLABEL",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.9"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
+        "fixes": "f2e5ddcc0d12f9c4c7b254358ad245c9dddce13b",
+        "last_modified": "2019-04-26",
+        "nvd_text": "cipso_v4_validate in include/net/cipso_ipv4.h in the Linux kernel before 3.11.7, when CONFIG_NETLABEL is disabled, allows attackers to cause a denial of service (infinite loop and crash), as demonstrated by icmpsic, a different vulnerability than CVE-2013-0310.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2013-7470",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2013-7470",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2013-7470",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2013-7470",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2013-7470",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2013/CVE-2013-7470"
+        }
+    },
     "CVE-2014-0038": {
         "affected_versions": "v3.4-rc1 to v3.14-rc1",
         "breaks": "ee4fa23c4bfcc635d077a9633d405610de45bc70",
@@ -14215,8 +14252,8 @@
         }
     },
     "CVE-2015-8553": {
-        "affected_versions": "unk to v4.4-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.4-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/pciback: Don't allow MSI-X ops if PCI_COMMAND_MEMORY is not set.",
         "cvss2": {
             "Access Complexity": "Low",
@@ -14240,6 +14277,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "408fb0e5aa7fda0059db282ff58c3b2a4278baa0",
+        "last_modified": "2019-04-04",
         "nvd_text": "Xen allows guest OS users to obtain sensitive information from uninitialized locations in host OS kernel memory by not enabling memory and I/O decoding control bits.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2015-0777.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8553",
@@ -31947,6 +31985,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "cabfb3680f78981d26c078a26e5c748531257ebb",
+        "last_modified": "2019-04-04",
         "nvd_text": "The Linux kernel before version 4.11 is vulnerable to a NULL pointer dereference in fs/cifs/cifsencrypt.c:setup_ntlmv2_rsp() that allows an attacker controlling a CIFS server to kernel panic a client that has this server mounted, because an empty TargetInfo field in an NTLMSSP setup negotiation response is mishandled during session recovery.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1066",
@@ -33217,6 +33256,57 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-11987"
         },
         "vendor_specific": true
+    },
+    "CVE-2018-12126": {
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "s390/speculation: Support 'mitigations=' cmdline option",
+        "fixes": "0336e04a6520bdaefdb0769d2a70084fa52e81ed",
+        "last_modified": "2019-05-30",
+        "name": "Fallout",
+        "nvd_text": "Microarchitectural Store Buffer Data Sampling (MSBDS): Store buffers on some microprocessors utilizing speculative execution may allow an authenticated user to potentially enable information disclosure via a side channel with local access. A list of impacted products can be found here: https://www.intel.com/content/dam/www/public/us/en/documents/corporate-information/SA00233-microcode-update-guidance_05132019.pdf",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-12126",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-12126",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-12126",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-12126",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-12126",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-12126"
+        }
+    },
+    "CVE-2018-12127": {
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "s390/speculation: Support 'mitigations=' cmdline option",
+        "fixes": "0336e04a6520bdaefdb0769d2a70084fa52e81ed",
+        "last_modified": "2019-05-30",
+        "name": "RIDL",
+        "nvd_text": "Microarchitectural Load Port Data Sampling (MLPDS): Load ports on some microprocessors utilizing speculative execution may allow an authenticated user to potentially enable information disclosure via a side channel with local access. A list of impacted products can be found here: https://www.intel.com/content/dam/www/public/us/en/documents/corporate-information/SA00233-microcode-update-guidance_05132019.pdf",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-12127",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-12127",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-12127",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-12127",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-12127",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-12127"
+        }
+    },
+    "CVE-2018-12130": {
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "s390/speculation: Support 'mitigations=' cmdline option",
+        "fixes": "0336e04a6520bdaefdb0769d2a70084fa52e81ed",
+        "last_modified": "2019-05-30",
+        "name": "Zombieload",
+        "nvd_text": "Microarchitectural Fill Buffer Data Sampling (MFBDS): Fill buffers on some microprocessors utilizing speculative execution may allow an authenticated user to potentially enable information disclosure via a side channel with local access. A list of impacted products can be found here: https://www.intel.com/content/dam/www/public/us/en/documents/corporate-information/SA00233-microcode-update-guidance_05132019.pdf",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-12130",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-12130",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-12130",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-12130",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-12130",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-12130"
+        }
     },
     "CVE-2018-12232": {
         "affected_versions": "v4.10-rc1 to v4.18-rc1",
@@ -35727,6 +35817,117 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20169"
         }
     },
+    "CVE-2018-20449": {
+        "affected_versions": "v4.7-rc1 to v4.15-rc2",
+        "breaks": "570d0176296f0d17c4b5ab206ad4a4bc027b863b",
+        "cmt_msg": "printk: hash addresses printed with %p",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Information Leak / Disclosure",
+        "fixes": "ad67b74d2469d9b82aaa572d76474c95bc484d57",
+        "last_modified": "2019-04-27",
+        "nvd_text": "The hidma_chan_stats function in drivers/dma/qcom/hidma_dbg.c in the Linux kernel 4.14.90 allows local users to obtain sensitive address information by reading \"callback=\" lines in a debugfs file.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20449",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-20449",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-20449",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-20449",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-20449",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20449"
+        }
+    },
+    "CVE-2018-20509": {
+        "affected_versions": "v2.6.12-rc2 to v4.14-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "binder: refactor binder ref inc/dec for thread safety",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Information Leak / Disclosure",
+        "fixes": "372e3147df7016ebeaa372939e8774a1292db558",
+        "last_modified": "2019-05-20",
+        "nvd_text": "The print_binder_ref_olocked function in drivers/android/binder.c in the Linux kernel 4.14.90 allows local users to obtain sensitive address information by reading \" ref *desc *node\" lines in a debugfs file.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20509",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-20509",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-20509",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-20509",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-20509",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20509"
+        }
+    },
+    "CVE-2018-20510": {
+        "affected_versions": "v2.6.29-rc1 to v4.16-rc3",
+        "breaks": "457b9a6f09f011ebcb9b52cc203a6331a6fc2de7",
+        "cmt_msg": "binder: replace \"%p\" with \"%pK\"",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Information Leak / Disclosure",
+        "fixes": "8ca86f1639ec5890d400fff9211aca22d0a392eb",
+        "last_modified": "2019-05-20",
+        "nvd_text": "The print_binder_transaction_ilocked function in drivers/android/binder.c in the Linux kernel 4.14.90 allows local users to obtain sensitive address information by reading \"*from *code *flags\" lines in a debugfs file.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20510",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-20510",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-20510",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-20510",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-20510",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20510"
+        }
+    },
     "CVE-2018-20511": {
         "affected_versions": "v2.6.31-rc1 to v4.19-rc5",
         "breaks": "5615968a70845157adaffc11062c997d045339ee",
@@ -35836,6 +36037,43 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-20784",
             "SUSE": "https://www.suse.com/security/cve/CVE-2018-20784",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20784"
+        }
+    },
+    "CVE-2018-20836": {
+        "affected_versions": "v2.6.19-rc1 to v4.20-rc1",
+        "breaks": "2908d778ab3e244900c310974e1fc1c69066e450",
+        "cmt_msg": "scsi: libsas: fix a race condition when smp task timeout",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "9.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "8.1"
+        },
+        "cwe": "Race Conditions",
+        "fixes": "b90cd6f2b905905fb42671009dc0e27c310a16ae",
+        "last_modified": "2019-05-20",
+        "nvd_text": "An issue was discovered in the Linux kernel before 4.20. There is a race condition in smp_task_timedout() and smp_task_done() in drivers/scsi/libsas/sas_expander.c, leading to a use-after-free.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20836",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-20836",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-20836",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-20836",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-20836",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20836"
         }
     },
     "CVE-2018-3574": {
@@ -36517,6 +36755,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "ad67b74d2469d9b82aaa572d76474c95bc484d57",
+        "last_modified": "2019-05-12",
         "nvd_text": "The swiotlb_print_info function in lib/swiotlb.c in the Linux kernel through 4.14.14 allows local users to obtain sensitive address information by reading dmesg data from a \"software IO TLB\" printk call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5953",
@@ -36553,6 +36792,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "ad67b74d2469d9b82aaa572d76474c95bc484d57",
+        "last_modified": "2019-05-12",
         "nvd_text": "The pcpu_embed_first_chunk function in mm/percpu.c in the Linux kernel through 4.14.14 allows local users to obtain sensitive address information by reading dmesg data from a \"pages/cpu\" printk call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5995",
@@ -36743,6 +36983,43 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-6927"
         }
     },
+    "CVE-2018-7191": {
+        "affected_versions": "v3.8-rc1 to v4.14-rc6",
+        "breaks": "96442e42429e5f268ab97a3586c7694a3acc55a7",
+        "cmt_msg": "tun: call dev_get_valid_name() before register_netdevice()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "0ad646c81b2182f7fa67ec0c8c825e0ee165696d",
+        "last_modified": "2019-05-18",
+        "nvd_text": "In the tun subsystem in the Linux kernel before 4.13.14, dev_get_valid_name is not called before register_netdevice. This allows local users to cause a denial of service (NULL pointer dereference and panic) via an ioctl(TUNSETIFF) call with a dev name containing a / character. This is similar to CVE-2013-4343.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-7191",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-7191",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-7191",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-7191",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-7191",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-7191"
+        }
+    },
     "CVE-2018-7273": {
         "affected_versions": "v2.6.12-rc2 to v4.15-rc2",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -36769,6 +37046,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "ad67b74d2469d9b82aaa572d76474c95bc484d57",
+        "last_modified": "2019-05-12",
         "nvd_text": "In the Linux kernel through 4.15.4, the floppy driver reveals the addresses of kernel functions and global variables using printk calls within the function show_floppy in drivers/block/floppy.c. An attacker can read this information from dmesg and use the addresses to find the locations of kernel code and data and bypass kernel security protections such as KASLR.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-7273",
@@ -36951,6 +37229,7 @@
         },
         "cwe": "Information Exposure Through Debug Log Files",
         "fixes": "ad67b74d2469d9b82aaa572d76474c95bc484d57",
+        "last_modified": "2019-05-12",
         "nvd_text": "The aoedisk_debugfs_show function in drivers/block/aoe/aoeblk.c in the Linux kernel through 4.16.4rc4 allows local users to obtain sensitive address information by reading \"ffree: \" lines in a debugfs file.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-7754",
@@ -37577,8 +37856,8 @@
         }
     },
     "CVE-2019-10124": {
-        "affected_versions": "unk to v5.1-rc1",
-        "breaks": "",
+        "affected_versions": "v4.5-rc1 to v5.1-rc1",
+        "breaks": "61f5d698cc97600e813ca5cf8e449b1ea1c11492",
         "cmt_msg": "mm: hwpoison: fix thp split handing in soft_offline_in_use_page()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -37602,7 +37881,7 @@
         },
         "cwe": "Code Injection",
         "fixes": "46612b751c4941c5c0472ddf04027e877ae5990f",
-        "last_modified": "2019-03-27",
+        "last_modified": "2019-04-01",
         "nvd_text": "An issue was discovered in the hwpoison implementation in mm/memory-failure.c in the Linux kernel before 5.0.4. When soft_offline_in_use_page() runs on a thp tail page after pmd is split, an attacker can cause a denial of service (BUG).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10124",
@@ -37614,8 +37893,9 @@
         }
     },
     "CVE-2019-10125": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.19-rc1 to v5.1-rc1",
+        "breaks": "bfe4037e722ec672c9dafd5730d9132afeeb76e9",
+        "cmt_msg": "aio: simplify - and fix - fget/fput for io_submit()",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -37637,8 +37917,8 @@
             "score": "9.8"
         },
         "cwe": "Code Injection",
-        "fixes": "",
-        "last_modified": "2019-03-28",
+        "fixes": "84c4e1f89fefe70554da0ab33be72c9be7994379",
+        "last_modified": "2019-05-02",
         "nvd_text": "An issue was discovered in aio_poll() in fs/aio.c in the Linux kernel through 5.0.4. A file may be released by aio_poll_wake() if an expected event is triggered immediately (e.g., by the close of a pair of pipes) after the return of vfs_poll(), and this will cause a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10125",
@@ -37649,12 +37929,812 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10125"
         }
     },
-    "CVE-2019-2024": {
-        "affected_versions": "unk to v4.16-rc1",
+    "CVE-2019-10142": {
+        "affected_versions": "v3.1-rc1 to v5.2-rc1",
+        "breaks": "6db7199407ca56f55bc0832fb124e1ad216ea57b",
+        "cmt_msg": "drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl",
+        "fixes": "6a024330650e24556b8a18cc654ad00cfecf6c6c",
+        "last_modified": "2019-05-27",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10142",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10142",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-10142",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-10142",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-10142",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10142"
+        }
+    },
+    "CVE-2019-11085": {
+        "affected_versions": "v4.10-rc1 to v5.0-rc3",
+        "breaks": "659643f7d81432189c2c87230e2feee4c75c14c1",
+        "cmt_msg": "drm/i915/gvt: Fix mmap range check",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Input Validation",
+        "fixes": "51b00d8509dc69c98740da2ad07308b630d3eb7d",
+        "last_modified": "2019-05-22",
+        "nvd_text": "Insufficient input validation in Kernel Mode Driver in Intel(R) i915 Graphics for Linux before version 5.0 may allow an authenticated user to potentially enable escalation of privilege via local access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11085",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11085",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11085",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11085",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11085",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11085"
+        }
+    },
+    "CVE-2019-11091": {
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "s390/speculation: Support 'mitigations=' cmdline option",
+        "fixes": "0336e04a6520bdaefdb0769d2a70084fa52e81ed",
+        "last_modified": "2019-05-30",
+        "name": "Zombieload",
+        "nvd_text": "Microarchitectural Data Sampling Uncacheable Memory (MDSUM): Uncacheable memory on some microprocessors utilizing speculative execution may allow an authenticated user to potentially enable information disclosure via a side channel with local access. A list of impacted products can be found here: https://www.intel.com/content/dam/www/public/us/en/documents/corporate-information/SA00233-microcode-update-guidance_05132019.pdf",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11091",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11091",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11091",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11091",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11091",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11091"
+        }
+    },
+    "CVE-2019-11190": {
+        "affected_versions": "v2.6.12-rc2 to v4.8-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "binfmt_elf: switch to new creds when switching to new mm",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "None",
+            "score": "4.7"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "4.7"
+        },
+        "cwe": "Race Conditions",
+        "fixes": "9f834ec18defc369d73ccf9e87a2790bfa05bf46",
+        "last_modified": "2019-05-03",
+        "nvd_text": "The Linux kernel before 4.8 allows local users to bypass ASLR on setuid programs (such as /bin/su) because install_exec_creds() is called too late in load_elf_binary() in fs/binfmt_elf.c, and thus the ptrace_may_access() check has a race condition when reading /proc/pid/stat.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11190",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11190",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11190",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11190",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11190",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11190"
+        }
+    },
+    "CVE-2019-11191": {
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "None",
+            "score": "4.7"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "4.7"
+        },
+        "cwe": "Race Conditions",
+        "fixes": "",
+        "last_modified": "2019-04-18",
+        "nvd_text": "The Linux kernel through 5.0.7, when CONFIG_IA32_AOUT is enabled and ia32_aout is loaded, allows local users to bypass ASLR on setuid a.out programs (if any exist) because install_exec_creds() is called too late in load_aout_binary() in fs/binfmt_aout.c, and thus the ptrace_may_access() check has a race condition when reading /proc/pid/stat.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11191",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11191",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11191",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11191",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11191",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11191"
+        }
+    },
+    "CVE-2019-11486": {
+        "affected_versions": "v2.6.12-rc2 to v5.1-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "tty: mark Siemens R3964 line discipline as BROKEN",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.0"
+        },
+        "cwe": "Race Conditions",
+        "fixes": "c7084edc3f6d67750f50d4183134c4fb5712a5c8",
+        "last_modified": "2019-05-03",
+        "nvd_text": "The Siemens R3964 line discipline driver in drivers/tty/n_r3964.c in the Linux kernel before 5.0.8 has multiple race conditions.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11486",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11486",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11486",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11486",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11486",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11486"
+        }
+    },
+    "CVE-2019-11487": {
+        "affected_versions": "v2.6.12-rc2 to v5.1-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "fs: prevent page refcount overflow in pipe_buf_get",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
+        "fixes": "15fab63e1e57be9fdb5eec1bbc5916e9825e9acb",
+        "last_modified": "2019-05-20",
+        "nvd_text": "The Linux kernel before 5.1-rc5 allows page-&gt;_refcount reference count overflow, with resultant use-after-free issues, if about 140 GiB of RAM exists. This is related to fs/fuse/dev.c, fs/pipe.c, fs/splice.c, include/linux/mm.h, include/linux/pipe_fs_i.h, kernel/trace/trace.c, mm/gup.c, and mm/hugetlb.c. It can occur with FUSE requests.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11487",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11487",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11487",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11487",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11487",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11487"
+        }
+    },
+    "CVE-2019-11599": {
+        "affected_versions": "v2.6.12-rc2 to v5.1-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.0"
+        },
+        "cwe": "Race Conditions",
+        "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
+        "last_modified": "2019-05-20",
+        "nvd_text": "The coredump implementation in the Linux kernel before 5.0.10 does not use locking or other mechanisms to prevent vma layout or vma flags changes while it runs, which allows local users to obtain sensitive information, cause a denial of service, or possibly have unspecified other impact by triggering a race condition with mmget_not_zero or get_task_mm calls. This is related to fs/userfaultfd.c, mm/mmap.c, fs/proc/task_mmu.c, and drivers/infiniband/core/uverbs_main.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11599",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11599",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11599",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11599",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11599",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11599"
+        }
+    },
+    "CVE-2019-11683": {
+        "affected_versions": "v5.0-rc1 to v5.1",
+        "breaks": "e20cf8d3f1f763ad28a9cb3b41305b8a8a42653e",
+        "cmt_msg": "udp: fix GRO packet of death",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "10.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Resource Management Errors",
+        "fixes": "4dd2b82d5adfbe0b1587ccad7a8f76d826120f37",
+        "last_modified": "2019-05-06",
+        "nvd_text": "udp_gro_receive_segment in net/ipv4/udp_offload.c in the Linux kernel 5.x through 5.0.11 allows remote attackers to cause a denial of service (slab-out-of-bounds memory corruption) or possibly have unspecified other impact via UDP packets with a 0 payload, because of mishandling of padded packets, aka the \"GRO packet of death\" issue.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11683",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11683",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11683",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11683",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11683",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11683"
+        }
+    },
+    "CVE-2019-11810": {
+        "affected_versions": "v2.6.14-rc4 to v5.1-rc1",
+        "breaks": "c4a3e0a529ab3e65223e81681c7c6b1bc188fa58",
+        "cmt_msg": "scsi: megaraid_sas: return error when create DMA pool failed",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "bcf3b67d16a4c8ffae0aa79de5853435e683945c",
+        "last_modified": "2019-05-20",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.7. A NULL pointer dereference can occur when megasas_create_frame_pool() fails in megasas_alloc_cmds() in drivers/scsi/megaraid/megaraid_sas_base.c. This causes a Denial of Service, related to a use-after-free.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11810",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11810",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11810",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11810",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11810",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11810"
+        }
+    },
+    "CVE-2019-11811": {
+        "affected_versions": "v4.18-rc1 to v5.1-rc1",
+        "breaks": "93c303d2045b30572d8d5e74d3ad80692acfebbe",
+        "cmt_msg": "ipmi_si: fix use-after-free of resource->name",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "10.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Use After Free",
+        "fixes": "401e7e88d4ef80188ffa07095ac00456f901b8c4",
+        "last_modified": "2019-05-20",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.4. There is a use-after-free upon attempted read access to /proc/ioports after the ipmi_si module is removed, related to drivers/char/ipmi/ipmi_si_intf.c, drivers/char/ipmi/ipmi_si_mem_io.c, and drivers/char/ipmi/ipmi_si_port_io.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11811",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11811",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11811",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11811",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11811",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11811"
+        }
+    },
+    "CVE-2019-11815": {
+        "affected_versions": "v4.3-rc1 to v5.1-rc4",
+        "breaks": "467fa15356acfb7b2efa38839c3e76caa4e6e0ea",
+        "cmt_msg": "net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock().",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "9.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "8.1"
+        },
+        "cwe": "Race Conditions",
+        "fixes": "cb66ddd156203daefb8d71158036b27b0e2caf63",
+        "last_modified": "2019-05-13",
+        "nvd_text": "An issue was discovered in rds_tcp_kill_sock in net/rds/tcp.c in the Linux kernel before 5.0.8. There is a race condition leading to a use-after-free, related to net namespace cleanup.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11815",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11815",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11815",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11815",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11815",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11815"
+        }
+    },
+    "CVE-2019-11833": {
+        "affected_versions": "v2.6.19-rc2 to v5.2-rc1",
+        "breaks": "a86c61812637c7dd0c57e29880cffd477b62f2e7",
+        "cmt_msg": "ext4: zero out the unused memory region in the extent tree block",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Information Leak / Disclosure",
+        "fixes": "592acbf16821288ecdc4192c47e3774a4c48bb64",
+        "last_modified": "2019-05-22",
+        "nvd_text": "fs/ext4/extents.c in the Linux kernel through 5.1.2 does not zero out the unused memory region in the extent tree block, which might allow local users to obtain sensitive information by reading uninitialized data in the filesystem.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11833",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11833",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11833",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11833",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11833",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11833"
+        }
+    },
+    "CVE-2019-11884": {
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "Bluetooth: hidp: fix buffer overflow",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "Low",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "3.3"
+        },
+        "cwe": "Command Injection",
+        "fixes": "a1616a5ac99ede5d605047a9012481ce7ff18b16",
+        "last_modified": "2019-05-20",
+        "nvd_text": "The do_hidp_sock_ioctl function in net/bluetooth/hidp/sock.c in the Linux kernel before 5.0.15 allows a local user to obtain potentially sensitive information from kernel stack memory via a HIDPCONNADD command, because a name field may not end with a '\\0' character.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11884",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11884",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11884",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11884",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11884",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11884"
+        }
+    },
+    "CVE-2019-12378": {
+        "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "95baa60a0da80a0143e3ddd4d3725758b4513825",
+        "last_modified": "2019-05-30",
+        "nvd_text": "An issue was discovered in ip6_ra_control in net/ipv6/ipv6_sockglue.c in the Linux kernel through 5.1.5. There is an unchecked kmalloc of new_ra, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12378",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12378",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12378",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12378",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12378",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12378"
+        }
+    },
+    "CVE-2019-12379": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Resource Management Errors",
+        "fixes": "84ecc2f6eb1cb12e6d44818f94fa49b50f06e6ac",
+        "last_modified": "2019-05-29",
+        "nvd_text": "An issue was discovered in con_insert_unipair in drivers/tty/vt/consolemap.c in the Linux kernel through 5.1.5. There is a memory leak in a certain case of an ENOMEM outcome of kmalloc.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12379",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12379",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12379",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12379",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12379",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12379"
+        }
+    },
+    "CVE-2019-12380": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Error Handling",
+        "fixes": "4e78921ba4dd0aca1cc89168f45039add4183f8e",
+        "last_modified": "2019-05-29",
+        "nvd_text": "An issue was discovered in the efi subsystem in the Linux kernel through 5.1.5. phys_efi_set_virtual_address_map in arch/x86/platform/efi/efi.c and efi_call_phys_prolog in arch/x86/platform/efi/efi_64.c mishandle memory allocation failures.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12380",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12380",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12380",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12380",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12380",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12380"
+        }
+    },
+    "CVE-2019-12381": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "425aa0e1d01513437668fa3d4a971168bbaa8515",
+        "last_modified": "2019-05-29",
+        "nvd_text": "An issue was discovered in ip_ra_control in net/ipv4/ip_sockglue.c in the Linux kernel through 5.1.5. There is an unchecked kmalloc of new_ra, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12381",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12381",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12381",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12381",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12381",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12381"
+        }
+    },
+    "CVE-2019-12382": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "9f1f1a2dab38d4ce87a13565cf4dc1b73bef3a5f",
+        "last_modified": "2019-05-29",
+        "nvd_text": "An issue was discovered in drm_load_edid_firmware in drivers/gpu/drm/drm_edid_load.c in the Linux kernel through 5.1.5. There is an unchecked kstrdup of fwstr, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12382",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12382",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12382",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12382",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12382",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12382"
+        }
+    },
+    "CVE-2019-12454": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Input Validation",
+        "fixes": "",
+        "last_modified": "2019-05-30",
+        "nvd_text": "An issue was discovered in wcd9335_codec_enable_dec in sound/soc/codecs/wcd9335.c in the Linux kernel through 5.1.5. It uses kstrndup instead of kmemdup_nul, which allows attackers to have an unspecified impact via unknown vectors.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12454",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12454",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12454",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12454",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12454",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12454"
+        }
+    },
+    "CVE-2019-12455": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "",
+        "last_modified": "2019-05-30",
+        "nvd_text": "An issue was discovered in sunxi_divs_clk_setup in drivers/clk/sunxi/clk-sunxi.c in the Linux kernel through 5.1.5. There is an unchecked kstrndup of derived_name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12455",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12455",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12455",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12455",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12455",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12455"
+        }
+    },
+    "CVE-2019-12456": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Input Validation",
+        "fixes": "",
+        "last_modified": "2019-05-30",
+        "nvd_text": "An issue was discovered in the MPT3COMMAND case in _ctl_ioctl_main in drivers/scsi/mpt3sas/mpt3sas_ctl.c in the Linux kernel through 5.1.5. It allows local users to cause a denial of service or possibly have unspecified other impact by changing the value of ioc_number between two kernel reads of that value, aka a \"double fetch\" vulnerability.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12456",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12456",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12456",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12456",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12456",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12456"
+        }
+    },
+    "CVE-2019-1999": {
+        "affected_versions": "v2.6.12-rc2 to v5.1-rc3",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "binder: fix race between munmap() and direct reclaim",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Double Free",
+        "fixes": "5cec2d2e5839f9c0fec319c523a911e0a7fd299f",
+        "last_modified": "2019-05-20",
+        "nvd_text": "In binder_alloc_free_page of binder_alloc.c, there is a possible double free due to improper locking. This could lead to local escalation of privilege in the kernel with no additional execution privileges needed. User interaction is not needed for exploitation. Product: Android. Versions: Android kernel. Android ID: A-120025196.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-1999",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-1999",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-1999",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-1999",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-1999",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-1999"
+        }
+    },
+    "CVE-2019-2024": {
+        "affected_versions": "v3.15-rc1 to v4.16-rc1",
+        "breaks": "425f53aaf76cce77b3bedd8ed4902bc94ed254ff",
         "cmt_msg": "media: em28xx: Fix use-after-free when disconnecting",
         "fixes": "910b0797fa9e8af09c44a3fa36cb310ba7a7218d",
-        "last_modified": "2019-03-06",
+        "last_modified": "2019-05-03",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2024",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2024",
@@ -37665,11 +38745,11 @@
         }
     },
     "CVE-2019-2025": {
-        "affected_versions": "unk to v4.20-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.20-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "binder: fix race that allows malicious free of live buffer",
         "fixes": "7bada55ab50697861eee6bb7d60b41e68a961a9c",
-        "last_modified": "2019-03-06",
+        "last_modified": "2019-04-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2025",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2025",
@@ -37679,12 +38759,71 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-2025"
         }
     },
+    "CVE-2019-2054": {
+        "affected_versions": "v2.6.12-rc2 to v4.8-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "arm/ptrace: run seccomp after ptrace",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Permissions, Privileges, and Access Control",
+        "fixes": "0f3912fd934cdfd03d93f2dc6f064099795bf638",
+        "last_modified": "2019-05-20",
+        "nvd_text": "In the seccomp implementation prior to kernel version 4.8, there is a possible seccomp bypass due to seccomp policies that allow the use of ptrace. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. Product: Android Versions: Android kernel Android ID: A-119769499",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2054",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2054",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-2054",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-2054",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-2054",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-2054"
+        }
+    },
     "CVE-2019-3459": {
         "affected_versions": "v2.6.12-rc2 to v5.1-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "3.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "6.5"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "7c9cbd0b5e38a1672fcd137894ace3b042dfbf69",
-        "last_modified": "2019-03-17",
+        "last_modified": "2019-05-03",
+        "nvd_text": "A heap address information leak while using L2CAP_GET_CONF_OPT was discovered in the Linux kernel before 5.1-rc1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3459",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3459",
@@ -37698,8 +38837,30 @@
         "affected_versions": "v2.6.12-rc2 to v5.1-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "3.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "6.5"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "af3d5d1c87664a4f150fcf3534c6567cb19909b0",
-        "last_modified": "2019-03-17",
+        "last_modified": "2019-05-03",
+        "nvd_text": "A heap data infoleak in multiple locations including L2CAP_PARSE_CONF_RSP was found in the Linux kernel before 5.1-rc1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3460",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3460",
@@ -37783,11 +38944,84 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3819"
         }
     },
-    "CVE-2019-3874": {
+    "CVE-2019-3837": {
+        "affected_versions": "v2.6.18-rc1 to v3.18-rc1",
+        "breaks": "db21733488f84a596faaad0d05430b3f51804692",
+        "cmt_msg": "net_dma: simple removal",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Buffer Errors",
+        "fixes": "7bced397510ab569d31de4c70b39e13355046387",
+        "last_modified": "2019-04-12",
+        "nvd_text": "It was found that the net_dma code in tcp_recvmsg() in the 2.6.32 kernel as shipped in RHEL6 is thread-unsafe. So an unprivileged multi-threaded userspace application calling recvmsg() for the same network socket in parallel executed on ioatdma-enabled hardware with net_dma enabled can leak the memory, crash the host leading to a denial-of-service or cause a random memory corruption.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3837",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3837",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-3837",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3837",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-3837",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3837"
+        }
+    },
+    "CVE-2019-3846": {
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2019-03-25",
+        "last_modified": "2019-05-30",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3846",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3846",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-3846",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3846",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-3846",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3846"
+        }
+    },
+    "CVE-2019-3874": {
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "sctp: implement memory accounting on tx path",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "3.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "6.5"
+        },
+        "cwe": "Buffer Errors",
+        "fixes": "1033990ac5b2ab6cee93734cb6d301aa3a35bcaa",
+        "last_modified": "2019-05-20",
         "nvd_text": "The SCTP socket buffer used by a userspace application is not accounted by the cgroups subsystem. An attacker can use this flaw to cause a denial of service attack. Kernel 3.10.x and 4.18.x branches are believed to be vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3874",
@@ -37796,6 +39030,168 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3874",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-3874",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3874"
+        }
+    },
+    "CVE-2019-3882": {
+        "affected_versions": "v3.6-rc1 to v5.1-rc4",
+        "breaks": "73fa0d10d077d9521ee2dace2307ae2c9a965336",
+        "cmt_msg": "vfio/type1: Limit DMA mappings per container",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
+        "fixes": "492855939bdb59c6f947b0b5b44af9ad82b7e38c",
+        "last_modified": "2019-05-17",
+        "nvd_text": "A flaw was found in the Linux kernel's vfio interface implementation that permits violation of the user's locked memory limit. If a device is bound to a vfio driver, such as vfio-pci, and the local attacker is administratively granted ownership of the device, it may cause a system memory exhaustion and thus a denial of service (DoS). Versions 3.10, 4.14 and 4.18 are vulnerable.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3882",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3882",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-3882",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3882",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-3882",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3882"
+        }
+    },
+    "CVE-2019-3887": {
+        "affected_versions": "v4.16-rc1 to v5.1-rc4",
+        "breaks": "15303ba5d1cd9b28d03a980456c0978c0ea3b208",
+        "cmt_msg": "KVM: x86: nVMX: close leak of L0's x2APIC MSRs (CVE-2019-3887)",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.7"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Changed",
+            "User Interaction": "None",
+            "score": "5.6"
+        },
+        "cwe": "Input Validation",
+        "fixes": "acff78477b9b4f26ecdf65733a4ed77fe837e9dc",
+        "last_modified": "2019-04-17",
+        "nvd_text": "A flaw was found in the way KVM hypervisor handled x2APIC Machine Specific Rregister (MSR) access with nested(=1) virtualization enabled. In that, L1 guest could access L0's APIC register values via L2 guest, when 'virtualize x2APIC mode' is enabled. A guest could use this flaw to potentially crash the host kernel resulting in DoS issue. Kernel versions from 4.16 and newer are vulnerable to this issue.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3887",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3887",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-3887",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3887",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-3887",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3887"
+        }
+    },
+    "CVE-2019-3892": {
+        "affected_versions": "v2.6.12-rc2 to v5.1-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping",
+        "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
+        "last_modified": "2019-05-03",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3892",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3892",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-3892",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3892",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-3892",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3892"
+        }
+    },
+    "CVE-2019-3900": {
+        "affected_versions": "v3.14 to unk",
+        "breaks": "d8316f3991d207fe32881a9ac20241be8fa2bad0",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "Single",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "6.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "6.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
+        "fixes": "",
+        "last_modified": "2019-05-02",
+        "nvd_text": "An infinite loop issue was found in the vhost_net kernel module in Linux Kernel up to and including v5.1-rc6, while handling incoming packets in handle_rx(). It could occur if one end sends packets faster than the other end can process them. A guest user, maybe remote one, could use this flaw to stall the vhost_net kernel thread, resulting in a DoS scenario.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3900",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3900",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-3900",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3900",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-3900",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3900"
+        }
+    },
+    "CVE-2019-3901": {
+        "affected_versions": "v2.6.12-rc2 to v4.6-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "perf/core: Fix perf_event_open() vs. execve() race",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "1.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "4.7"
+        },
+        "cwe": "Race Conditions",
+        "fixes": "79c9ce57eb2d5f1497546a3946b4ae21b6fdc438",
+        "last_modified": "2019-05-03",
+        "nvd_text": "A race condition in perf_event_open() allows local attackers to leak sensitive data from setuid programs. As no relevant locks (in particular the cred_guard_mutex) are held during the ptrace_may_access() call, it is possible for the specified target task to perform an execve() syscall with setuid execution before perf_event_alloc() actually attaches to it, allowing an attacker to bypass the ptrace_may_access() check and the perf_event_exit_task(current) call that is performed in install_exec_creds() during privileged execve() calls. This issue affects kernel versions before 4.8.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3901",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3901",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-3901",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3901",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-3901",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3901"
         }
     },
     "CVE-2019-5489": {
@@ -37861,7 +39257,7 @@
         },
         "cwe": "Improper Access Control",
         "fixes": "7b55851367136b1efd84d98fea81ba57a98304cf",
-        "last_modified": "2019-03-16",
+        "last_modified": "2019-05-12",
         "nvd_text": "In PolicyKit (aka polkit) 0.115, the \"start time\" protection mechanism can be bypassed because fork() is not atomic, and therefore authorization decisions are improperly cached. This is related to lack of uid checking in polkitbackend/polkitbackendinteractiveauthority.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-6133",
@@ -38061,8 +39457,30 @@
         "affected_versions": "v4.17-rc1 to v5.0-rc6",
         "breaks": "4910280503f3af2857d5aa77e35b22d93a8960a8",
         "cmt_msg": "sctp: walk the list of asoc safely",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "ba59fb0273076637f0add4311faa990a5eec27c0",
-        "last_modified": "2019-02-21",
+        "last_modified": "2019-04-04",
+        "nvd_text": "In the Linux Kernel before versions 4.20.8 and 4.19.21 a use-after-free error in the \"sctp_sendmsg()\" function (net/sctp/socket.c) when handling SCTP_SENDALL flag can be exploited to corrupt memory.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-8956",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-8956",
@@ -38209,7 +39627,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "0a1d52994d440e21def1c2174932410b4f2a98a1",
-        "last_modified": "2019-03-23",
+        "last_modified": "2019-05-03",
         "nvd_text": "In the Linux kernel before 4.20.14, expand_downwards in mm/mmap.c lacks a check for the mmap minimum address, which makes it easier for attackers to exploit kernel NULL pointer dereferences on non-SMAP platforms. This is related to a capability check for the wrong task.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9213",
@@ -38218,6 +39636,36 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-9213",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-9213",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-9213"
+        }
+    },
+    "CVE-2019-9500": {
+        "affected_versions": "v4.5-rc1 to v5.1-rc1",
+        "breaks": "3021ad9a4f009265e6063e617fb91306980af16c",
+        "cmt_msg": "brcmfmac: assure SSID length from firmware is limited",
+        "fixes": "1b5e2423164b3670e8bc9174e4762d297990deff",
+        "last_modified": "2019-04-16",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9500",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9500",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-9500",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-9500",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-9500",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-9500"
+        }
+    },
+    "CVE-2019-9503": {
+        "affected_versions": "v3.2-rc1 to v5.1-rc1",
+        "breaks": "5b435de0d786869c95d1962121af0d7df2542009",
+        "cmt_msg": "brcmfmac: add subtype check for event handling in data path",
+        "fixes": "a4176ec356c73a46c07c181c6d04039fafa34a9f",
+        "last_modified": "2019-05-03",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9503",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9503",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-9503",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-9503",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-9503",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-9503"
         }
     },
     "CVE-2019-9857": {
@@ -38246,7 +39694,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "62c9d2674b31d4c8a674bee86b7edc6da2803aea",
-        "last_modified": "2019-03-27",
+        "last_modified": "2019-04-20",
         "nvd_text": "In the Linux kernel through 5.0.2, the function inotify_update_existing_watch() in fs/notify/inotify/inotify_user.c neglects to call fsnotify_put_mark() with IN_MASK_CREATE after fsnotify_find_mark(), which will cause a memory leak (aka refcount leak). Finally, this will cause a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9857",

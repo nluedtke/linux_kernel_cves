@@ -83,6 +83,7 @@ CVEs fixed in 4.4.11:
 CVEs fixed in 4.4.12:
   CVE-2016-3713: 1716643bc4725bb92a1f527f759a93e37a2bc1f0 KVM: MTRR: remove MSR 0x2f8
   CVE-2016-9754: f199023137853eb1d46e8b7ebc274b29ba99028c ring-buffer: Prevent overflow of size in ring_buffer_resize()
+  CVE-2019-3901: c5174678e2e5bd691da58a116fbc123c6fbc7b2c perf/core: Fix perf_event_open() vs. execve() race
 
 CVEs fixed in 4.4.13:
   CVE-2016-2847: fa6d0ba12a8eb6a2e9a1646c5816da307c1f93a7 pipe: limit the per-user amount of pages allocated in pipes
@@ -414,6 +415,7 @@ CVEs fixed in 4.4.99:
   CVE-2017-16528: 1e98fd54c356bb2bcf827a74949c9372c455409f ALSA: seq: Cancel pending autoload work at unbinding device
   CVE-2017-16532: de46c1adbea694109036d3e7dee1fa6250b72660 usb: usbtest: fix NULL pointer dereference
   CVE-2017-16645: b7c625ce6d279bf3e138c25c0cd3f595923825f3 Input: ims-psu - check if CDC union descriptor is sane
+  CVE-2018-7191: 4b27fe34a226dd9087cb2e93161ffec03952c05a tun: call dev_get_valid_name() before register_netdevice()
 
 CVEs fixed in 4.4.100:
   CVE-2017-10911: 11e8e55be18cd39c3d54674362aa18695b243e22 xen-blkback: don't leak stack data via response ring
@@ -674,6 +676,22 @@ CVEs fixed in 4.4.176:
 CVEs fixed in 4.4.177:
   CVE-2019-9213: 40952b6a649b9bfad11ae4fa2862fa0108c9ec24 mm: enforce min addr even if capable() in expand_downwards()
 
+CVEs fixed in 4.4.178:
+  CVE-2019-3459: ade4560e4fea198866e033fe1c02f063d6d7db2e Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
+  CVE-2019-3460: d22036003893cbe479404e20fdae10addc6c18dd Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
+
+CVEs fixed in 4.4.179:
+  CVE-2019-11190: 1eb40df35d99f353e7bdfcbb21f249428ec0f4b6 binfmt_elf: switch to new creds when switching to new mm
+  CVE-2019-11486: c3e76f072adbcc426fbeef5d7469f847a2f700d6 tty: mark Siemens R3964 line discipline as BROKEN
+  CVE-2019-11810: 09a6db51dcb41990fe020e45af8b2e44010fc1e7 scsi: megaraid_sas: return error when create DMA pool failed
+  CVE-2019-11815: c4e97b06cfdc5213494c22dd5c2b41ff8b15e0ee net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock().
+
+CVEs fixed in 4.4.180:
+  CVE-2018-20836: fe3f6511c9af47847e3547c1525de290a3d908eb scsi: libsas: fix a race condition when smp task timeout
+  CVE-2019-10142: 9db489ed49711d1575f631b68aaa911d3b6198f9 drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl
+  CVE-2019-11884: dd150bcc93ffaa80ca67d5a71d7850fffe5eb549 Bluetooth: hidp: fix buffer overflow
+  CVE-2019-3882: e1a5cdbf7cb32a168d37a4804379b9b70d31b39b vfio/type1: Limit DMA mappings per container
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -711,6 +729,9 @@ Outstanding CVEs:
   CVE-2018-1121: (unk)  
   CVE-2018-1128: (unk) libceph: add authorizer challenge 
   CVE-2018-1129: (unk) libceph: implement CEPHX_V2 calculation mode 
+  CVE-2018-12126: (unk) s390/speculation: Support 'mitigations=' cmdline option 
+  CVE-2018-12127: (unk) s390/speculation: Support 'mitigations=' cmdline option 
+  CVE-2018-12130: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2018-12928: (unk)  
   CVE-2018-12929: (unk)  
   CVE-2018-12930: (unk)  
@@ -721,6 +742,8 @@ Outstanding CVEs:
   CVE-2018-13098: (unk) f2fs: fix to do sanity check with extra_attr feature 
   CVE-2018-16597: (unk) ovl: modify ovl_permission() to do checks on two inodes 
   CVE-2018-17977: (unk)  
+  CVE-2018-20509: (unk) binder: refactor binder ref inc/dec for thread safety 
+  CVE-2018-20510: (unk) binder: replace "%p" with "%pK" 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-5953: (unk) printk: hash addresses printed with %p 
@@ -732,10 +755,25 @@ Outstanding CVEs:
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
   CVE-2018-9465: (unk) binder: fix proc->files use-after-free 
   CVE-2018-9517: (unk) l2tp: pass tunnel pointer to ->session_create() 
-  CVE-2019-10124: (unk) mm: hwpoison: fix thp split handing in soft_offline_in_use_page() 
-  CVE-2019-10125: (unk)  
+  CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
+  CVE-2019-11191: (unk)  
+  CVE-2019-11487: (unk) fs: prevent page refcount overflow in pipe_buf_get 
+  CVE-2019-11599: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
+  CVE-2019-11833: (unk) ext4: zero out the unused memory region in the extent tree block 
+  CVE-2019-12378: (unk)  
+  CVE-2019-12379: (unk)  
+  CVE-2019-12380: (unk)  
+  CVE-2019-12381: (unk)  
+  CVE-2019-12382: (unk)  
+  CVE-2019-12454: (unk)  
+  CVE-2019-12455: (unk)  
+  CVE-2019-12456: (unk)  
+  CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
-  CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
-  CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
-  CVE-2019-3874: (unk)  
+  CVE-2019-2054: (unk) arm/ptrace: run seccomp after ptrace 
+  CVE-2019-3846: (unk)  
+  CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
+  CVE-2019-3892: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
+  CVE-2019-3900: (unk)  
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
+  CVE-2019-9503: (unk) brcmfmac: add subtype check for event handling in data path 

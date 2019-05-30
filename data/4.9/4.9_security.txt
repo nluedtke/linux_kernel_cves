@@ -261,6 +261,7 @@ CVEs fixed in 4.9.63:
   CVE-2017-16528: 1862eca99e2732da2594e05406c9f78b4265bf5b ALSA: seq: Cancel pending autoload work at unbinding device
   CVE-2017-16532: 8cf061d919e2102d0de0379bafea6cce1405d786 usb: usbtest: fix NULL pointer dereference
   CVE-2017-16645: 9d65d0ea55dcb813cea7df05602f233ad4843baf Input: ims-psu - check if CDC union descriptor is sane
+  CVE-2018-7191: 3e2ab0ceef68ab995bc9f7c699e62b95c0edcdc4 tun: call dev_get_valid_name() before register_netdevice()
 
 CVEs fixed in 4.9.64:
   CVE-2017-16537: ca98a5c721703de77f7fb8bbafd0673e4a60a841 media: imon: Fix null-ptr-deref in imon_probe
@@ -568,6 +569,37 @@ CVEs fixed in 4.9.163:
 CVEs fixed in 4.9.165:
   CVE-2019-10124: 78f42f1156fd661f708cadd9ad9c3f0ac039b411 mm: hwpoison: fix thp split handing in soft_offline_in_use_page()
 
+CVEs fixed in 4.9.167:
+  CVE-2019-3459: 99665dcf6ff803351b5e658f3a929cb498561e36 Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
+  CVE-2019-3460: def5c1fbee851e9c044ce9fa647238efc15458b4 Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
+
+CVEs fixed in 4.9.168:
+  CVE-2019-11810: 650c8ec81f458472eda16883acd5dbf37c5049dc scsi: megaraid_sas: return error when create DMA pool failed
+
+CVEs fixed in 4.9.169:
+  CVE-2019-11486: 942ddc0de8efb52c43250033c7c6091f15e191f5 tty: mark Siemens R3964 line discipline as BROKEN
+  CVE-2019-11815: a1aa69beac4d88dfb892a95ee04fe6f932803952 net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock().
+
+CVEs fixed in 4.9.171:
+  CVE-2018-20449: 2c4ae3a694fabfc19b0fc6e65d530a7cdb542bda printk: hash addresses printed with %p
+  CVE-2018-5953: 2c4ae3a694fabfc19b0fc6e65d530a7cdb542bda printk: hash addresses printed with %p
+  CVE-2018-5995: 2c4ae3a694fabfc19b0fc6e65d530a7cdb542bda printk: hash addresses printed with %p
+  CVE-2018-7273: 2c4ae3a694fabfc19b0fc6e65d530a7cdb542bda printk: hash addresses printed with %p
+  CVE-2018-7754: 2c4ae3a694fabfc19b0fc6e65d530a7cdb542bda printk: hash addresses printed with %p
+
+CVEs fixed in 4.9.173:
+  CVE-2019-3882: 4f97abd571ec3d56c50a2edfe0932059f4549afa vfio/type1: Limit DMA mappings per container
+
+CVEs fixed in 4.9.175:
+  CVE-2018-20836: 41b5d3eee4af6a4ea488a1735ed82e4e593eec0d scsi: libsas: fix a race condition when smp task timeout
+  CVE-2019-11884: 0d134aebfd7222dc946437ea2941b94fa64be605 Bluetooth: hidp: fix buffer overflow
+
+CVEs fixed in 4.9.177:
+  CVE-2019-10142: 71e29a15b4babddba1a6faab6d98d2dcce1cd0ff drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl
+
+CVEs fixed in 4.9.178:
+  CVE-2019-11833: ab6d14e83db6e08c39a867a4cba378f7a774d273 ext4: zero out the unused memory region in the extent tree block
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -596,6 +628,9 @@ Outstanding CVEs:
   CVE-2018-10322: (unk) xfs: enhance dinode verifier 
   CVE-2018-10323: (unk) xfs: set format back to extents if xfs_bmap_extents_to_btree 
   CVE-2018-1121: (unk)  
+  CVE-2018-12126: (unk) s390/speculation: Support 'mitigations=' cmdline option 
+  CVE-2018-12127: (unk) s390/speculation: Support 'mitigations=' cmdline option 
+  CVE-2018-12130: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2018-12928: (unk)  
   CVE-2018-12929: (unk)  
   CVE-2018-12930: (unk)  
@@ -605,17 +640,30 @@ Outstanding CVEs:
   CVE-2018-13095: (unk) xfs: More robust inode extent count validation 
   CVE-2018-13098: (unk) f2fs: fix to do sanity check with extra_attr feature 
   CVE-2018-17977: (unk)  
-  CVE-2018-5953: (unk) printk: hash addresses printed with %p 
-  CVE-2018-5995: (unk) printk: hash addresses printed with %p 
+  CVE-2018-20509: (unk) binder: refactor binder ref inc/dec for thread safety 
+  CVE-2018-20510: (unk) binder: replace "%p" with "%pK" 
   CVE-2018-6554: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-6555: (unk) staging: irda: remove the irda network stack and drivers 
-  CVE-2018-7273: (unk) printk: hash addresses printed with %p 
-  CVE-2018-7754: (unk) printk: hash addresses printed with %p 
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
   CVE-2018-9517: (unk) l2tp: pass tunnel pointer to ->session_create() 
-  CVE-2019-10125: (unk)  
+  CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
+  CVE-2019-11191: (unk)  
+  CVE-2019-11487: (unk) fs: prevent page refcount overflow in pipe_buf_get 
+  CVE-2019-11599: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
+  CVE-2019-12378: (unk)  
+  CVE-2019-12379: (unk)  
+  CVE-2019-12380: (unk)  
+  CVE-2019-12381: (unk)  
+  CVE-2019-12382: (unk)  
+  CVE-2019-12454: (unk)  
+  CVE-2019-12455: (unk)  
+  CVE-2019-12456: (unk)  
+  CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
-  CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
-  CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
-  CVE-2019-3874: (unk)  
+  CVE-2019-3846: (unk)  
+  CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
+  CVE-2019-3892: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
+  CVE-2019-3900: (unk)  
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
+  CVE-2019-9500: (unk) brcmfmac: assure SSID length from firmware is limited 
+  CVE-2019-9503: (unk) brcmfmac: add subtype check for event handling in data path 

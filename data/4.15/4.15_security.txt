@@ -14,6 +14,9 @@ CVEs fixed in 4.15.4:
 CVEs fixed in 4.15.5:
   CVE-2018-7566: 3b8e84c8373de4e068e282102425d498d992e49b ALSA: seq: Fix racy pool initializations
 
+CVEs fixed in 4.15.6:
+  CVE-2018-20510: 008fdd7c3915f5fe5481289e66986f149d824ad5 binder: replace "%p" with "%pK"
+
 CVEs fixed in 4.15.8:
   CVE-2018-5703: c5f3a16c047dfa7f309a2e1ca7d43e7db92ec35b tls: Use correct sk->sk_prot for IPV6
   CVE-2018-5803: 4fadd1aa760e40ee98507326cb714036b92d1fc1 sctp: verify size of a new chunk in _sctp_make_chunk()
@@ -89,6 +92,9 @@ Outstanding CVEs:
   CVE-2018-11412: (unk) ext4: do not allow external inodes for inline data 
   CVE-2018-11506: (unk) sr: pass down correctly sized SCSI sense buffer 
   CVE-2018-11508: (unk) compat: fix 4-byte infoleak via uninitialized struct field 
+  CVE-2018-12126: (unk) s390/speculation: Support 'mitigations=' cmdline option 
+  CVE-2018-12127: (unk) s390/speculation: Support 'mitigations=' cmdline option 
+  CVE-2018-12130: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2018-12232: (unk) socket: close race condition between sock_close() and sockfs_setattr() 
   CVE-2018-12233: (unk) jfs: Fix inconsistency between memory allocation and ea_buf->max_size 
   CVE-2018-12896: (unk) posix-timers: Sanitize overrun handling 
@@ -145,6 +151,7 @@ Outstanding CVEs:
   CVE-2018-20511: (unk) net/appletalk: fix minor pointer leak to userspace in SIOCFINDIPDDPRT 
   CVE-2018-20669: (unk) make 'user_access_begin()' do 'access_ok()' 
   CVE-2018-20784: (unk) sched/fair: Fix infinite loop in update_blocked_averages() by reverting a9e7f6544b9c 
+  CVE-2018-20836: (unk) scsi: libsas: fix a race condition when smp task timeout 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3639: (unk) x86/nospec: Simplify alternative_msr_write() 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
@@ -165,13 +172,36 @@ Outstanding CVEs:
   CVE-2018-9516: (unk) HID: debug: check length before copy_to_user() 
   CVE-2018-9518: (unk) NFC: llcp: Limit size of SDP URI 
   CVE-2019-10124: (unk) mm: hwpoison: fix thp split handing in soft_offline_in_use_page() 
-  CVE-2019-10125: (unk)  
+  CVE-2019-10142: (unk) drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl 
+  CVE-2019-11085: (unk) drm/i915/gvt: Fix mmap range check 
+  CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
+  CVE-2019-11191: (unk)  
+  CVE-2019-11486: (unk) tty: mark Siemens R3964 line discipline as BROKEN 
+  CVE-2019-11487: (unk) fs: prevent page refcount overflow in pipe_buf_get 
+  CVE-2019-11599: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
+  CVE-2019-11810: (unk) scsi: megaraid_sas: return error when create DMA pool failed 
+  CVE-2019-11815: (unk) net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock(). 
+  CVE-2019-11833: (unk) ext4: zero out the unused memory region in the extent tree block 
+  CVE-2019-11884: (unk) Bluetooth: hidp: fix buffer overflow 
+  CVE-2019-12378: (unk)  
+  CVE-2019-12379: (unk)  
+  CVE-2019-12380: (unk)  
+  CVE-2019-12381: (unk)  
+  CVE-2019-12382: (unk)  
+  CVE-2019-12454: (unk)  
+  CVE-2019-12455: (unk)  
+  CVE-2019-12456: (unk)  
+  CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2024: (unk) media: em28xx: Fix use-after-free when disconnecting 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
   CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
   CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
   CVE-2019-3701: (unk) can: gw: ensure DLC boundaries after CAN frame modification 
-  CVE-2019-3874: (unk)  
+  CVE-2019-3846: (unk)  
+  CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
+  CVE-2019-3882: (unk) vfio/type1: Limit DMA mappings per container 
+  CVE-2019-3892: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
+  CVE-2019-3900: (unk)  
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2019-6133: (unk) fork: record start_time late 
   CVE-2019-6974: (unk) kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974) 
@@ -181,3 +211,5 @@ Outstanding CVEs:
   CVE-2019-8912: (unk) net: crypto set sk to NULL when af_alg_release. 
   CVE-2019-8980: (unk) exec: Fix mem leak in kernel_read_file 
   CVE-2019-9213: (unk) mm: enforce min addr even if capable() in expand_downwards() 
+  CVE-2019-9500: (unk) brcmfmac: assure SSID length from firmware is limited 
+  CVE-2019-9503: (unk) brcmfmac: add subtype check for event handling in data path 

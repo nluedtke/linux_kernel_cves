@@ -35,6 +35,7 @@ CVEs fixed in 4.19.16:
   CVE-2018-16884: 44e7bab39f877c9c095bfaaee943b0807574a7f7 sunrpc: use-after-free in svc_process_common()
 
 CVEs fixed in 4.19.17:
+  CVE-2019-11085: ac8b9e8e7ddd69f3efa91e8a99312de5729382c0 drm/i915/gvt: Fix mmap range check
   CVE-2019-3701: 8db82a6f2b76d42ec2615f8def6e797e064e7822 can: gw: ensure DLC boundaries after CAN frame modification
 
 CVEs fixed in 4.19.18:
@@ -65,6 +66,49 @@ CVEs fixed in 4.19.28:
 
 CVEs fixed in 4.19.31:
   CVE-2019-10124: 234c0cc982211bb5539db632f31490bf0ad54827 mm: hwpoison: fix thp split handing in soft_offline_in_use_page()
+  CVE-2019-11811: a441fdaf8c3034436fb6045ee285e515628fc555 ipmi_si: fix use-after-free of resource->name
+
+CVEs fixed in 4.19.33:
+  CVE-2019-3459: 15d6538a0d6e0f6de5116081a948cba7cc3e1d3d Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
+  CVE-2019-3460: 2318c0e4b87e590c9d8e88db185477cfac18abe2 Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
+
+CVEs fixed in 4.19.34:
+  CVE-2019-11810: 8032fc9120c211cd40beef4c91c8206f4167e523 scsi: megaraid_sas: return error when create DMA pool failed
+
+CVEs fixed in 4.19.35:
+  CVE-2019-11486: 894dc8495898cf6075eadf99fd496374decd3986 tty: mark Siemens R3964 line discipline as BROKEN
+  CVE-2019-11815: 78b4bf26a8a76569fd6d0b47d98fb553c333b06f net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock().
+  CVE-2019-3887: 119031be7b0a2ce4ff4cd5525bec6d42817ff53d KVM: x86: nVMX: close leak of L0's x2APIC MSRs (CVE-2019-3887)
+
+CVEs fixed in 4.19.36:
+  CVE-2019-9857: ca306c17d2edcc8aa3bf1724a5cb1ecefc31ef3b inotify: Fix fsnotify_mark refcount leak in inotify_update_existing_watch()
+
+CVEs fixed in 4.19.37:
+  CVE-2019-11599: 6ff17bc5936e5fab33de8064dc0690f6c8c789ca coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
+  CVE-2019-3892: 6ff17bc5936e5fab33de8064dc0690f6c8c789ca coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
+
+CVEs fixed in 4.19.38:
+  CVE-2019-10125: d6b2615f7d31d8e58b685d42dbafcc7dc1204bbd aio: simplify - and fix - fget/fput for io_submit()
+  CVE-2019-3882: f7b467ad1be0478f0341afa8a9ac112732def088 vfio/type1: Limit DMA mappings per container
+
+CVEs fixed in 4.19.39:
+  CVE-2019-11487: 0311ff82b70fa12e80d188635bff24029ec06ae1 fs: prevent page refcount overflow in pipe_buf_get
+
+CVEs fixed in 4.19.42:
+  CVE-2018-20836: 0f18e433b97bf74bb62e0caa95c61e8631967fb9 scsi: libsas: fix a race condition when smp task timeout
+  CVE-2019-11884: c6d1f9b4b2cb768e29f5d44af143f25ad89062b1 Bluetooth: hidp: fix buffer overflow
+
+CVEs fixed in 4.19.43:
+  CVE-2018-12126: 59a14fb5832c370c63ab483f4f3718a0f729c7f5 s390/speculation: Support 'mitigations=' cmdline option
+  CVE-2018-12127: 59a14fb5832c370c63ab483f4f3718a0f729c7f5 s390/speculation: Support 'mitigations=' cmdline option
+  CVE-2018-12130: 59a14fb5832c370c63ab483f4f3718a0f729c7f5 s390/speculation: Support 'mitigations=' cmdline option
+  CVE-2019-11091: 59a14fb5832c370c63ab483f4f3718a0f729c7f5 s390/speculation: Support 'mitigations=' cmdline option
+
+CVEs fixed in 4.19.44:
+  CVE-2019-10142: e9ec5073c90d6de2ca5338bd67f7935b19d7c0c7 drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl
+
+CVEs fixed in 4.19.45:
+  CVE-2019-11833: 25d010f4e0ece1ddf0d8d57942c0b0f1568fe498 ext4: zero out the unused memory region in the extent tree block
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -87,9 +131,19 @@ Outstanding CVEs:
   CVE-2018-12931: (unk)  
   CVE-2018-17977: (unk)  
   CVE-2018-20669: (unk) make 'user_access_begin()' do 'access_ok()' 
-  CVE-2019-10125: (unk)  
-  CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
-  CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
-  CVE-2019-3874: (unk)  
+  CVE-2019-11191: (unk)  
+  CVE-2019-12378: (unk)  
+  CVE-2019-12379: (unk)  
+  CVE-2019-12380: (unk)  
+  CVE-2019-12381: (unk)  
+  CVE-2019-12382: (unk)  
+  CVE-2019-12454: (unk)  
+  CVE-2019-12455: (unk)  
+  CVE-2019-12456: (unk)  
+  CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
+  CVE-2019-3846: (unk)  
+  CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
+  CVE-2019-3900: (unk)  
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
-  CVE-2019-9857: (unk) inotify: Fix fsnotify_mark refcount leak in inotify_update_existing_watch() 
+  CVE-2019-9500: (unk) brcmfmac: assure SSID length from firmware is limited 
+  CVE-2019-9503: (unk) brcmfmac: add subtype check for event handling in data path 

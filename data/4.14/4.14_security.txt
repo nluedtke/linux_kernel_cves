@@ -98,6 +98,9 @@ CVEs fixed in 4.14.20:
 CVEs fixed in 4.14.21:
   CVE-2018-7566: 7466294dad8963e29f051d8ab2f4d3f67d2f62a6 ALSA: seq: Fix racy pool initializations
 
+CVEs fixed in 4.14.22:
+  CVE-2018-20510: b46af094b82a47ca1cbba9092578f8f96af82798 binder: replace "%p" with "%pK"
+
 CVEs fixed in 4.14.25:
   CVE-2018-5803: 1fc74a57a8ae863c95afedef2510e7e42b194e56 sctp: verify size of a new chunk in _sctp_make_chunk()
 
@@ -301,6 +304,9 @@ CVEs fixed in 4.14.94:
 CVEs fixed in 4.14.95:
   CVE-2019-3701: 39ff087b5c6be2ff0b08e617d334e5bf72a08b44 can: gw: ensure DLC boundaries after CAN frame modification
 
+CVEs fixed in 4.14.96:
+  CVE-2019-11085: e89ec9b92f9b75b44e1ff9f52dab48bd01834ed6 drm/i915/gvt: Fix mmap range check
+
 CVEs fixed in 4.14.99:
   CVE-2019-6974: 8c1b11bc3555b5d1207b0e179cbdd8b945e71e69 kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974)
   CVE-2019-7221: 1c965b1b5ecc2c9e1d59b2514cedb6f7483a0241 KVM: nVMX: unconditionally cancel preemption timer in free_nested (CVE-2019-7221)
@@ -319,7 +325,45 @@ CVEs fixed in 4.14.106:
   CVE-2019-8980: 069fb92ea221c72bd75f4863b3540420082f32ba exec: Fix mem leak in kernel_read_file
 
 CVEs fixed in 4.14.108:
+  CVE-2018-20449: a8cae6144a25054875d0ab6e31f550af7e531500 printk: hash addresses printed with %p
   CVE-2019-10124: c02fd076842636fb7506d4ca8a2bb3f91faf1af3 mm: hwpoison: fix thp split handing in soft_offline_in_use_page()
+
+CVEs fixed in 4.14.110:
+  CVE-2019-3459: 2b59d36f22622c92c0b06aee7571f0a86a217188 Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
+  CVE-2019-3460: 82868814a87236b17ac588fbb779c87616e99345 Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
+
+CVEs fixed in 4.14.111:
+  CVE-2019-11810: 90fca247abf6adc1ee6eef9b3de199448c8a4ad6 scsi: megaraid_sas: return error when create DMA pool failed
+
+CVEs fixed in 4.14.112:
+  CVE-2019-11486: 429977fd9f7153607230a6040ee12510a525e930 tty: mark Siemens R3964 line discipline as BROKEN
+  CVE-2019-11815: c8a88799e632045399af886a1b1a5205e5d49897 net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock().
+
+CVEs fixed in 4.14.114:
+  CVE-2019-11599: bb461ad8e6e0653fc6bd0f26d9173bab0aec235b coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
+  CVE-2019-3892: bb461ad8e6e0653fc6bd0f26d9173bab0aec235b coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
+
+CVEs fixed in 4.14.115:
+  CVE-2019-3882: 73a95f1a41c0bb586b8c62622ebf25aca1582af3 vfio/type1: Limit DMA mappings per container
+
+CVEs fixed in 4.14.116:
+  CVE-2019-11487: c88a0aa7ace7eb10dca42be59f21e2cbd263575e fs: prevent page refcount overflow in pipe_buf_get
+
+CVEs fixed in 4.14.118:
+  CVE-2018-20836: 3739f98aea7113a21d11b1a604525049e422e29e scsi: libsas: fix a race condition when smp task timeout
+  CVE-2019-11884: 2c33156b2d2f5efe820d8efdd610fb168c9acf72 Bluetooth: hidp: fix buffer overflow
+
+CVEs fixed in 4.14.119:
+  CVE-2018-12126: 91788fcb21d008b1b7ac6beae20522725fa78239 s390/speculation: Support 'mitigations=' cmdline option
+  CVE-2018-12127: 91788fcb21d008b1b7ac6beae20522725fa78239 s390/speculation: Support 'mitigations=' cmdline option
+  CVE-2018-12130: 91788fcb21d008b1b7ac6beae20522725fa78239 s390/speculation: Support 'mitigations=' cmdline option
+  CVE-2019-11091: 91788fcb21d008b1b7ac6beae20522725fa78239 s390/speculation: Support 'mitigations=' cmdline option
+
+CVEs fixed in 4.14.120:
+  CVE-2019-10142: 1a3a561df5e176a4422270e3d2cca1cd835b292e drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl
+
+CVEs fixed in 4.14.121:
+  CVE-2019-11833: d7d9e4823b658eb795f4a379d121d3f0539c1117 ext4: zero out the unused memory region in the extent tree block
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -354,8 +398,19 @@ Outstanding CVEs:
   CVE-2018-6554: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-6555: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
-  CVE-2019-10125: (unk)  
-  CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
-  CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
-  CVE-2019-3874: (unk)  
+  CVE-2019-11191: (unk)  
+  CVE-2019-12378: (unk)  
+  CVE-2019-12379: (unk)  
+  CVE-2019-12380: (unk)  
+  CVE-2019-12381: (unk)  
+  CVE-2019-12382: (unk)  
+  CVE-2019-12454: (unk)  
+  CVE-2019-12455: (unk)  
+  CVE-2019-12456: (unk)  
+  CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
+  CVE-2019-3846: (unk)  
+  CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
+  CVE-2019-3900: (unk)  
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
+  CVE-2019-9500: (unk) brcmfmac: assure SSID length from firmware is limited 
+  CVE-2019-9503: (unk) brcmfmac: add subtype check for event handling in data path 
