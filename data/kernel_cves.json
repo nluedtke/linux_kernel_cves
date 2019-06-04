@@ -38794,6 +38794,37 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12456"
         }
     },
+    "CVE-2019-12614": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-06-04",
+        "nvd_text": "An issue was discovered in dlpar_parse_cc_property in arch/powerpc/platforms/pseries/dlpar.c in the Linux kernel through 5.1.6. There is an unchecked kstrdup of prop-&gt;name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12614",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12614",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12614",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12614",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12614",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12614"
+        }
+    },
+    "CVE-2019-12615": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "mdesc: fix a missing-check bug in get_vdev_port_node_info()",
+        "fixes": "80caf43549e7e41a695c6d1e11066286538b336f",
+        "last_modified": "2019-06-04",
+        "nvd_text": "An issue was discovered in get_vdev_port_node_info in arch/sparc/kernel/mdesc.c in the Linux kernel through 5.1.6. There is an unchecked kstrdup_const of node_info-&gt;vdev_port.name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12615",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12615",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12615",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12615",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12615",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12615"
+        }
+    },
     "CVE-2019-1999": {
         "affected_versions": "v2.6.12-rc2 to v5.1-rc3",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -39227,6 +39258,7 @@
     "CVE-2019-3900": {
         "affected_versions": "v3.14 to unk",
         "breaks": "d8316f3991d207fe32881a9ac20241be8fa2bad0",
+        "cmt_msg": "vhost_net: fix possible infinite loop",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -39248,8 +39280,8 @@
             "score": "6.5"
         },
         "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
-        "fixes": "",
-        "last_modified": "2019-05-02",
+        "fixes": "e2412c07f8f3040593dfb88207865a3cd58680c0",
+        "last_modified": "2019-06-04",
         "nvd_text": "An infinite loop issue was found in the vhost_net kernel module in Linux Kernel up to and including v5.1-rc6, while handling incoming packets in handle_rx(). It could occur if one end sends packets faster than the other end can process them. A guest user, maybe remote one, could use this flaw to stall the vhost_net kernel thread, resulting in a DoS scenario.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3900",
