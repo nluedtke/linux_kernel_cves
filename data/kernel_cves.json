@@ -38881,6 +38881,38 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12615"
         }
     },
+    "CVE-2019-12818": {
+        "affected_versions": "unk to v5.0",
+        "breaks": "",
+        "cmt_msg": "net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails",
+        "fixes": "58bdd544e2933a21a51eecf17c3f5f94038261b5",
+        "last_modified": "2019-06-14",
+        "nvd_text": "An issue was discovered in the Linux kernel before 4.20.15. The nfc_llcp_build_tlv function in net/nfc/llcp_commands.c may return NULL. If the caller does not check for this, it will trigger a NULL pointer dereference. This will cause denial of service. This affects nfc_llcp_build_gb in net/nfc/llcp_core.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12818",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12818",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12818",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12818",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12818",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12818"
+        }
+    },
+    "CVE-2019-12819": {
+        "affected_versions": "unk to v5.0-rc8",
+        "breaks": "",
+        "cmt_msg": "mdio_bus: Fix use-after-free on device_register fails",
+        "fixes": "6ff7b060535e87c2ae14dd8548512abfdda528fb",
+        "last_modified": "2019-06-14",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0. The function __mdiobus_register() in drivers/net/phy/mdio_bus.c calls put_device(), which will trigger a fixed_mdio_bus_init use-after-free. This will cause a denial of service.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12819",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12819",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12819",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12819",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12819",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12819"
+        }
+    },
     "CVE-2019-1999": {
         "affected_versions": "v2.6.12-rc2 to v5.1-rc3",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
