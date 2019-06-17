@@ -38010,8 +38010,29 @@
     "CVE-2019-10126": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "7.5"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Buffer Errors",
         "fixes": "",
-        "last_modified": "2019-06-15",
+        "last_modified": "2019-06-17",
         "nvd_text": "A flaw was found in the Linux kernel. A heap based buffer overflow in mwifiex_uap_parse_tail_ies function in drivers/net/wireless/marvell/mwifiex/ie.c might lead to memory corruption and possibly other consequences.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10126",
@@ -38886,8 +38907,29 @@
         "affected_versions": "unk to v5.0",
         "breaks": "",
         "cmt_msg": "net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "58bdd544e2933a21a51eecf17c3f5f94038261b5",
-        "last_modified": "2019-06-14",
+        "last_modified": "2019-06-17",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.20.15. The nfc_llcp_build_tlv function in net/nfc/llcp_commands.c may return NULL. If the caller does not check for this, it will trigger a NULL pointer dereference. This will cause denial of service. This affects nfc_llcp_build_gb in net/nfc/llcp_core.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12818",
@@ -38902,8 +38944,29 @@
         "affected_versions": "unk to v5.0-rc8",
         "breaks": "",
         "cmt_msg": "mdio_bus: Fix use-after-free on device_register fails",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Use After Free",
         "fixes": "6ff7b060535e87c2ae14dd8548512abfdda528fb",
-        "last_modified": "2019-06-14",
+        "last_modified": "2019-06-17",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.0. The function __mdiobus_register() in drivers/net/phy/mdio_bus.c calls put_device(), which will trigger a fixed_mdio_bus_init use-after-free. This will cause a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12819",
@@ -39391,7 +39454,8 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping",
         "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
-        "last_modified": "2019-05-03",
+        "last_modified": "2019-06-17",
+        "nvd_text": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2019-11599. Reason: This candidate is a reservation duplicate of CVE-2019-11599. Notes: All CVE users should reference CVE-2019-11599 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3892",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3892",
