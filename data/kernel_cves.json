@@ -38236,7 +38236,8 @@
         "breaks": "832d11c5cd076abc0aa1eaf7be96c81d1a59ce41",
         "cmt_msg": "tcp: limit payload size of sacked skbs",
         "fixes": "3b4929f65b0d8249f19a50245cd88ed1a2f78cff",
-        "last_modified": "2019-06-18",
+        "last_modified": "2019-06-20",
+        "nvd_text": "Jonathan Looney discovered that the TCP_SKB_CB(skb)-&gt;tcp_gso_segs value was subject to an integer overflow in the Linux kernel when handling TCP Selective Acknowledgments (SACKs). A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commit 3b4929f65b0d8249f19a50245cd88ed1a2f78cff.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11477",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11477",
@@ -38251,7 +38252,8 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "tcp: tcp_fragment() should apply sane memory limits",
         "fixes": "f070ef2ac66716357066b683fb0baf55f8191a2e",
-        "last_modified": "2019-06-18",
+        "last_modified": "2019-06-20",
+        "nvd_text": "Jonathan Looney discovered that the TCP retransmission queue implementation in tcp_fragment in the Linux kernel could be fragmented when handling certain TCP Selective Acknowledgment (SACK) sequences. A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commit f070ef2ac66716357066b683fb0baf55f8191a2e.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11478",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11478",
@@ -38266,7 +38268,8 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "tcp: add tcp_min_snd_mss sysctl",
         "fixes": "5f3e2bf008c2221478101ee72f5cb4654b9fc363",
-        "last_modified": "2019-06-18",
+        "last_modified": "2019-06-20",
+        "nvd_text": "Jonathan Looney discovered that the Linux kernel default MSS is hard-coded to 48 bytes. This allows a remote peer to fragment TCP resend queues significantly more than if a larger MSS were enforced. A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commits 967c05aee439e6e5d7d805e195b3a20ef5c433d6 and 5f3e2bf008c2221478101ee72f5cb4654b9fc363.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11479",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11479",
@@ -38647,8 +38650,8 @@
         }
     },
     "CVE-2019-12379": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -38671,7 +38674,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "84ecc2f6eb1cb12e6d44818f94fa49b50f06e6ac",
-        "last_modified": "2019-05-29",
+        "last_modified": "2019-06-20",
         "nvd_text": "An issue was discovered in con_insert_unipair in drivers/tty/vt/consolemap.c in the Linux kernel through 5.1.5. There is a memory leak in a certain case of an ENOMEM outcome of kmalloc.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12379",
@@ -38683,8 +38686,8 @@
         }
     },
     "CVE-2019-12380": {
-        "affected_versions": "unk to v5.2-rc3",
-        "breaks": "",
+        "affected_versions": "v3.8-rc6 to v5.2-rc3",
+        "breaks": "b8f2c21db390273c3eaf0e5308faeaeb1e233840",
         "cmt_msg": "efi/x86/Add missing error handling to old_memmap 1:1 mapping code",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38708,7 +38711,7 @@
         },
         "cwe": "Error Handling",
         "fixes": "4e78921ba4dd0aca1cc89168f45039add4183f8e",
-        "last_modified": "2019-06-03",
+        "last_modified": "2019-06-20",
         "nvd_text": "An issue was discovered in the efi subsystem in the Linux kernel through 5.1.5. phys_efi_set_virtual_address_map in arch/x86/platform/efi/efi.c and efi_call_phys_prolog in arch/x86/platform/efi/efi_64.c mishandle memory allocation failures.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12380",
@@ -39047,6 +39050,21 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12819"
         }
     },
+    "CVE-2019-12881": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-06-20",
+        "nvd_text": "i915_gem_userptr_get_pages in drivers/gpu/drm/i915/i915_gem_userptr.c in the Linux kernel 4.15.0 on Ubuntu 18.04.2 allows local users to cause a denial of service (NULL pointer dereference and BUG) or possibly have unspecified other impact via crafted ioctl calls to /dev/dri/card0.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12881",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12881",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12881",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12881",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12881",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12881"
+        }
+    },
     "CVE-2019-1999": {
         "affected_versions": "v2.6.12-rc2 to v5.1-rc3",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -39089,7 +39107,8 @@
         "breaks": "425f53aaf76cce77b3bedd8ed4902bc94ed254ff",
         "cmt_msg": "media: em28xx: Fix use-after-free when disconnecting",
         "fixes": "910b0797fa9e8af09c44a3fa36cb310ba7a7218d",
-        "last_modified": "2019-05-03",
+        "last_modified": "2019-06-20",
+        "nvd_text": "In em28xx_unregister_dvb of em28xx-dvb.c, there is a possible use after free issue. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-111761954References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2024",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2024",
@@ -39104,7 +39123,8 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "binder: fix race that allows malicious free of live buffer",
         "fixes": "7bada55ab50697861eee6bb7d60b41e68a961a9c",
-        "last_modified": "2019-04-04",
+        "last_modified": "2019-06-20",
+        "nvd_text": "In binder_thread_read of binder.c, there is a possible use-after-free due to improper locking. This could lead to local escalation of privilege in the kernel with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-116855682References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2025",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2025",
@@ -39539,8 +39559,30 @@
     "CVE-2019-3896": {
         "affected_versions": "unk to v2.6.35-rc1",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Double Free",
         "fixes": "2dcb22b346be7b7b7e630a8970d69cf3f1111ec1",
-        "last_modified": "2019-06-17",
+        "last_modified": "2019-06-20",
+        "nvd_text": "A double-free can happen in idr_remove_all() in lib/idr.c in the Linux kernel 2.6 branch. An unprivileged local attacker can use this flaw for a privilege escalation or for a system crash and a denial of service (DoS).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3896",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3896",
