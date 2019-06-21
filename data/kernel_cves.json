@@ -38033,8 +38033,9 @@
         }
     },
     "CVE-2019-10126": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies()",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -38056,8 +38057,8 @@
             "score": "9.8"
         },
         "cwe": "Buffer Errors",
-        "fixes": "",
-        "last_modified": "2019-06-17",
+        "fixes": "69ae4f6aac1578575126319d3f55550e7e440449",
+        "last_modified": "2019-06-21",
         "nvd_text": "A flaw was found in the Linux kernel. A heap based buffer overflow in mwifiex_uap_parse_tail_ies function in drivers/net/wireless/marvell/mwifiex/ie.c might lead to memory corruption and possibly other consequences.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10126",
@@ -38073,7 +38074,7 @@
         "breaks": "6db7199407ca56f55bc0832fb124e1ad216ea57b",
         "cmt_msg": "drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl",
         "fixes": "6a024330650e24556b8a18cc654ad00cfecf6c6c",
-        "last_modified": "2019-05-27",
+        "last_modified": "2019-06-21",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10142",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10142",
@@ -38235,8 +38236,29 @@
         "affected_versions": "v2.6.29-rc1 to unk",
         "breaks": "832d11c5cd076abc0aa1eaf7be96c81d1a59ce41",
         "cmt_msg": "tcp: limit payload size of sacked skbs",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Integer Overflow or Wraparound",
         "fixes": "3b4929f65b0d8249f19a50245cd88ed1a2f78cff",
-        "last_modified": "2019-06-20",
+        "last_modified": "2019-06-21",
         "nvd_text": "Jonathan Looney discovered that the TCP_SKB_CB(skb)-&gt;tcp_gso_segs value was subject to an integer overflow in the Linux kernel when handling TCP Selective Acknowledgments (SACKs). A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commit 3b4929f65b0d8249f19a50245cd88ed1a2f78cff.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11477",
@@ -38251,8 +38273,29 @@
         "affected_versions": "v2.6.12-rc2 to unk",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "tcp: tcp_fragment() should apply sane memory limits",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "f070ef2ac66716357066b683fb0baf55f8191a2e",
-        "last_modified": "2019-06-20",
+        "last_modified": "2019-06-21",
         "nvd_text": "Jonathan Looney discovered that the TCP retransmission queue implementation in tcp_fragment in the Linux kernel could be fragmented when handling certain TCP Selective Acknowledgment (SACK) sequences. A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commit f070ef2ac66716357066b683fb0baf55f8191a2e.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11478",
@@ -38267,8 +38310,29 @@
         "affected_versions": "v2.6.12-rc2 to unk",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "tcp: add tcp_min_snd_mss sysctl",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "5f3e2bf008c2221478101ee72f5cb4654b9fc363",
-        "last_modified": "2019-06-20",
+        "last_modified": "2019-06-21",
         "nvd_text": "Jonathan Looney discovered that the Linux kernel default MSS is hard-coded to 48 bytes. This allows a remote peer to fragment TCP resend queues significantly more than if a larger MSS were enforced. A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commits 967c05aee439e6e5d7d805e195b3a20ef5c433d6 and 5f3e2bf008c2221478101ee72f5cb4654b9fc363.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11479",
@@ -38453,7 +38517,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "bcf3b67d16a4c8ffae0aa79de5853435e683945c",
-        "last_modified": "2019-05-20",
+        "last_modified": "2019-06-21",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.0.7. A NULL pointer dereference can occur when megasas_create_frame_pool() fails in megasas_alloc_cmds() in drivers/scsi/megaraid/megaraid_sas_base.c. This causes a Denial of Service, related to a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11810",
@@ -38564,7 +38628,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "592acbf16821288ecdc4192c47e3774a4c48bb64",
-        "last_modified": "2019-06-11",
+        "last_modified": "2019-06-21",
         "nvd_text": "fs/ext4/extents.c in the Linux kernel through 5.1.2 does not zero out the unused memory region in the extent tree block, which might allow local users to obtain sensitive information by reading uninitialized data in the filesystem.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11833",
@@ -38601,7 +38665,7 @@
         },
         "cwe": "Command Injection",
         "fixes": "a1616a5ac99ede5d605047a9012481ce7ff18b16",
-        "last_modified": "2019-05-20",
+        "last_modified": "2019-06-21",
         "nvd_text": "The do_hidp_sock_ioctl function in net/bluetooth/hidp/sock.c in the Linux kernel before 5.0.15 allows a local user to obtain potentially sensitive information from kernel stack memory via a HIDPCONNADD command, because a name field may not end with a '\\0' character.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11884",
@@ -38723,8 +38787,8 @@
         }
     },
     "CVE-2019-12381": {
-        "affected_versions": "unk to v5.2-rc3",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc3",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ip_sockglue: Fix missing-check bug in ip_ra_control()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38748,7 +38812,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "425aa0e1d01513437668fa3d4a971168bbaa8515",
-        "last_modified": "2019-06-03",
+        "last_modified": "2019-06-21",
         "nvd_text": "An issue was discovered in ip_ra_control in net/ipv4/ip_sockglue.c in the Linux kernel through 5.1.5. There is an unchecked kmalloc of new_ra, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12381",
@@ -38940,8 +39004,8 @@
         }
     },
     "CVE-2019-12615": {
-        "affected_versions": "unk to v5.2-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "mdesc: fix a missing-check bug in get_vdev_port_node_info()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38965,7 +39029,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "80caf43549e7e41a695c6d1e11066286538b336f",
-        "last_modified": "2019-06-09",
+        "last_modified": "2019-06-21",
         "nvd_text": "An issue was discovered in get_vdev_port_node_info in arch/sparc/kernel/mdesc.c in the Linux kernel through 5.1.6. There is an unchecked kstrdup_const of node_info-&gt;vdev_port.name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12615",
@@ -38977,8 +39041,8 @@
         }
     },
     "CVE-2019-12818": {
-        "affected_versions": "unk to v5.0",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.0",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails",
         "cvss2": {
             "Access Complexity": "Low",
@@ -39002,7 +39066,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "58bdd544e2933a21a51eecf17c3f5f94038261b5",
-        "last_modified": "2019-06-17",
+        "last_modified": "2019-06-21",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.20.15. The nfc_llcp_build_tlv function in net/nfc/llcp_commands.c may return NULL. If the caller does not check for this, it will trigger a NULL pointer dereference. This will cause denial of service. This affects nfc_llcp_build_gb in net/nfc/llcp_core.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12818",
@@ -39014,8 +39078,8 @@
         }
     },
     "CVE-2019-12819": {
-        "affected_versions": "unk to v5.0-rc8",
-        "breaks": "",
+        "affected_versions": "v3.14-rc1 to v5.0-rc8",
+        "breaks": "0c692d07842a67d9aa6b8266a80e4ac460a5c1a2",
         "cmt_msg": "mdio_bus: Fix use-after-free on device_register fails",
         "cvss2": {
             "Access Complexity": "Low",
@@ -39039,7 +39103,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "6ff7b060535e87c2ae14dd8548512abfdda528fb",
-        "last_modified": "2019-06-17",
+        "last_modified": "2019-06-21",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.0. The function __mdiobus_register() in drivers/net/phy/mdio_bus.c calls put_device(), which will trigger a fixed_mdio_bus_init use-after-free. This will cause a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12819",
@@ -39053,8 +39117,29 @@
     "CVE-2019-12881": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "",
-        "last_modified": "2019-06-20",
+        "last_modified": "2019-06-21",
         "nvd_text": "i915_gem_userptr_get_pages in drivers/gpu/drm/i915/i915_gem_userptr.c in the Linux kernel 4.15.0 on Ubuntu 18.04.2 allows local users to cause a denial of service (NULL pointer dereference and BUG) or possibly have unspecified other impact via crafted ioctl calls to /dev/dri/card0.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12881",
@@ -39172,8 +39257,9 @@
         }
     },
     "CVE-2019-2101": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.1-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "media: uvcvideo: Fix 'type' check leading to overflow",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -39195,8 +39281,8 @@
             "score": "5.5"
         },
         "cwe": "Out-of-bounds Read",
-        "fixes": "",
-        "last_modified": "2019-06-11",
+        "fixes": "47bb117911b051bbc90764a8bff96543cbd2005f",
+        "last_modified": "2019-06-21",
         "nvd_text": "In uvc_parse_standard_control of uvc_driver.c, there is a possible out-of-bound read due to improper input validation. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation. Product: Android. Versions: Android kernel. Android ID: A-111760968.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2101",

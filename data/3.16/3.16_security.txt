@@ -562,6 +562,15 @@ CVEs fixed in 3.16.67:
   CVE-2018-7754: 14c2d9209a135872def8508e3f19c74f0f3fee52 printk: hash addresses printed with %p
   CVE-2019-6133: 971081984266d7934b2f0253215e3f31f9337915 fork: record start_time late
 
+CVEs fixed in 3.16.69:
+  CVE-2019-10142: bfa8c73482dae6bafc0741cbfd63f84d11311b36 drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl
+  CVE-2019-11477: ef27e3c531782ec8213108e11e5515f9724303c7 tcp: limit payload size of sacked skbs
+  CVE-2019-11478: dc97a907bc76b71c08e7e99a5b1b30ef4d5e4a85 tcp: tcp_fragment() should apply sane memory limits
+  CVE-2019-11479: 6b7e7997ad3505db7de85ff12276fc84659481d3 tcp: add tcp_min_snd_mss sysctl
+  CVE-2019-11810: bd0908fbd84009cb5f01cf1a258a6f7fd78b6b3a scsi: megaraid_sas: return error when create DMA pool failed
+  CVE-2019-11833: 13c4be25bdcbe5045f9b17ad875c3253a4888e45 ext4: zero out the unused memory region in the extent tree block
+  CVE-2019-11884: acaf43aa7ede1e500532f1f5d910e207f89d5e1f Bluetooth: hidp: fix buffer overflow
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -660,17 +669,10 @@ Outstanding CVEs:
   CVE-2018-6555: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-7480: (unk) blkcg: fix double free of new_blkg in blkcg_init_queue 
   CVE-2018-9465: (unk) binder: fix proc->files use-after-free 
-  CVE-2019-10126: (unk)  
-  CVE-2019-10142: (unk) drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl 
+  CVE-2019-10126: (unk) mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies() 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2019-11191: (unk)  
-  CVE-2019-11477: (unk) tcp: limit payload size of sacked skbs 
-  CVE-2019-11478: (unk) tcp: tcp_fragment() should apply sane memory limits 
-  CVE-2019-11479: (unk) tcp: add tcp_min_snd_mss sysctl 
   CVE-2019-11487: (unk) fs: prevent page refcount overflow in pipe_buf_get 
-  CVE-2019-11810: (unk) scsi: megaraid_sas: return error when create DMA pool failed 
-  CVE-2019-11833: (unk) ext4: zero out the unused memory region in the extent tree block 
-  CVE-2019-11884: (unk) Bluetooth: hidp: fix buffer overflow 
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
   CVE-2019-12379: (unk)  
   CVE-2019-12380: (unk) efi/x86/Add missing error handling to old_memmap 1:1 mapping code 
@@ -684,7 +686,7 @@ Outstanding CVEs:
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
   CVE-2019-2054: (unk) arm/ptrace: run seccomp after ptrace 
-  CVE-2019-2101: (unk)  
+  CVE-2019-2101: (unk) media: uvcvideo: Fix 'type' check leading to overflow 
   CVE-2019-3837: (unk) net_dma: simple removal 
   CVE-2019-3846: (unk) mwifiex: Fix possible buffer overflows at parsing bss descriptor 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
