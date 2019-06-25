@@ -39044,8 +39044,30 @@
         "affected_versions": "v4.17-rc1 to unk",
         "breaks": "f384796c40dc55b3dba25e0ee9c1afd98c6d24d1",
         "cmt_msg": "powerpc/mm/64s/hash: Reallocate context ids on fork",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.0"
+        },
+        "cwe": "Buffer Errors",
         "fixes": "ca72d88378b2f2444d3ec145dd442d449d3fefbc",
         "last_modified": "2019-06-25",
+        "nvd_text": "arch/powerpc/mm/mmu_context_book3s64.c in the Linux kernel before 5.1.15 for powerpc has a bug where unrelated processes may be able to read/write to one another's virtual memory under certain conditions via an mmap above 512 TB. Only a subset of powerpc systems are affected.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12817",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12817",
