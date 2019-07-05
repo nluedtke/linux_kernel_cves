@@ -38258,7 +38258,8 @@
         },
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "3b4929f65b0d8249f19a50245cd88ed1a2f78cff",
-        "last_modified": "2019-06-24",
+        "last_modified": "2019-07-05",
+        "name": "SACK Panic",
         "nvd_text": "Jonathan Looney discovered that the TCP_SKB_CB(skb)-&gt;tcp_gso_segs value was subject to an integer overflow in the Linux kernel when handling TCP Selective Acknowledgments (SACKs). A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commit 3b4929f65b0d8249f19a50245cd88ed1a2f78cff.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11477",
@@ -39225,8 +39226,8 @@
         }
     },
     "CVE-2019-13233": {
-        "affected_versions": "unk to v5.2-rc4",
-        "breaks": "",
+        "affected_versions": "v4.15-rc1 to v5.2-rc4",
+        "breaks": "670f928ba09b06712da34a3c44be6c8fa561fb19",
         "cmt_msg": "x86/insn-eval: Fix use-after-free access to LDT entry",
         "fixes": "de9f869616dd95e95c00bdd6b0fcd3421e8a4323",
         "last_modified": "2019-07-05",
