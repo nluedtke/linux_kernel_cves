@@ -39262,8 +39262,29 @@
         "affected_versions": "v4.15-rc1 to v5.2-rc4",
         "breaks": "670f928ba09b06712da34a3c44be6c8fa561fb19",
         "cmt_msg": "x86/insn-eval: Fix use-after-free access to LDT entry",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.4"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.0"
+        },
+        "cwe": "Race Conditions",
         "fixes": "de9f869616dd95e95c00bdd6b0fcd3421e8a4323",
-        "last_modified": "2019-07-05",
+        "last_modified": "2019-07-10",
         "nvd_text": "In arch/x86/lib/insn-eval.c in the Linux kernel before 5.1.9, there is a use-after-free for access to an LDT entry because of a race condition between modify_ldt() and a #BR exception for an MPX bounds violation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-13233",
