@@ -1,9 +1,13 @@
 
 CVEs fixed in 5.0:
+  CVE-2019-12818: 58bdd544e2933a21a51eecf17c3f5f94038261b5 net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails
   CVE-2019-9213: 0a1d52994d440e21def1c2174932410b4f2a98a1 mm: enforce min addr even if capable() in expand_downwards()
 
 CVEs fixed in 5.0.1:
   CVE-2019-8980: a9bda122bd77a784933edde4120e12a28847aafd exec: Fix mem leak in kernel_read_file
+
+CVEs fixed in 5.0.2:
+  CVE-2019-2101: e83b05c4c17e36fb5af028a4f84b5888c80584bc media: uvcvideo: Fix 'type' check leading to overflow
 
 CVEs fixed in 5.0.4:
   CVE-2019-10124: 84fe80428739b7f40763b4d4c1c84c2ce8591fe5 mm: hwpoison: fix thp split handing in soft_offline_in_use_page()
@@ -20,6 +24,7 @@ CVEs fixed in 5.0.7:
   CVE-2019-11810: 952613125def6dc9b33982f84c497a3f00aac601 scsi: megaraid_sas: return error when create DMA pool failed
 
 CVEs fixed in 5.0.8:
+  CVE-2019-10639: ec7aeb6a0709855c6b76bc10e8a218e84d80fc68 netns: provide pure entropy for net_hash_mix()
   CVE-2019-11486: e4ebae16792ad736add8a40645ecdf42afaba85e tty: mark Siemens R3964 line discipline as BROKEN
   CVE-2019-11815: 4e8d8e767f11aa420b6fef1f260d40010df77628 net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock().
   CVE-2019-3887: b564364f22ac56f8be0ed7367fbebbe9df6d1569 KVM: x86: nVMX: close leak of L0's x2APIC MSRs (CVE-2019-3887)
@@ -59,6 +64,9 @@ CVEs fixed in 5.0.20:
   CVE-2019-9500: c40be0dd9af9ec1289527761b35e940f757581ca brcmfmac: assure SSID length from firmware is limited
   CVE-2019-9503: 72be314718b0e0e3a4d3f7c02aca65bc12aada95 brcmfmac: add subtype check for event handling in data path
 
+CVEs fixed in 5.0.21:
+  CVE-2019-10638: 8d9b786e1124253738e992a845af24d9d95eac68 inet: switch IP ID generator to siphash
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -79,8 +87,11 @@ Outstanding CVEs:
   CVE-2018-12930: (unk)  
   CVE-2018-12931: (unk)  
   CVE-2018-17977: (unk)  
-  CVE-2019-10126: (unk)  
+  CVE-2019-10126: (unk) mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies() 
   CVE-2019-11191: (unk)  
+  CVE-2019-11477: (unk) tcp: limit payload size of sacked skbs 
+  CVE-2019-11478: (unk) tcp: tcp_fragment() should apply sane memory limits 
+  CVE-2019-11479: (unk) tcp: add tcp_min_snd_mss sysctl 
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
   CVE-2019-12379: (unk)  
   CVE-2019-12380: (unk) efi/x86/Add missing error handling to old_memmap 1:1 mapping code 
@@ -90,7 +101,11 @@ Outstanding CVEs:
   CVE-2019-12456: (unk)  
   CVE-2019-12614: (unk)  
   CVE-2019-12615: (unk) mdesc: fix a missing-check bug in get_vdev_port_node_info() 
+  CVE-2019-12817: (unk) powerpc/mm/64s/hash: Reallocate context ids on fork 
+  CVE-2019-12881: (unk)  
+  CVE-2019-12984: (unk) nfc: Ensure presence of required attributes in the deactivate_target handler 
+  CVE-2019-13233: (unk) x86/insn-eval: Fix use-after-free access to LDT entry 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
-  CVE-2019-3846: (unk)  
+  CVE-2019-3846: (unk) mwifiex: Fix possible buffer overflows at parsing bss descriptor 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-3900: (unk) vhost_net: fix possible infinite loop 

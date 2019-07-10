@@ -565,7 +565,12 @@ CVEs fixed in 4.9.162:
   CVE-2019-9213: 331fc4df776be3e5a88a1a9f08ef2f7e063ef1a9 mm: enforce min addr even if capable() in expand_downwards()
 
 CVEs fixed in 4.9.163:
+  CVE-2019-12818: 05d3d2d0b8574d0f61d12a64e2c6475a5c3d5ba6 net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails
+  CVE-2019-2101: 47d77d464e574d56eecb39677df7bc6663635a3f media: uvcvideo: Fix 'type' check leading to overflow
   CVE-2019-8980: dd6734e17903f16a47c78d0418f02e06df080c54 exec: Fix mem leak in kernel_read_file
+
+CVEs fixed in 4.9.164:
+  CVE-2019-12819: c4bec922def2285707cd3be3a80be46467ad8cde mdio_bus: Fix use-after-free on device_register fails
 
 CVEs fixed in 4.9.165:
   CVE-2019-10124: 78f42f1156fd661f708cadd9ad9c3f0ac039b411 mm: hwpoison: fix thp split handing in soft_offline_in_use_page()
@@ -578,6 +583,7 @@ CVEs fixed in 4.9.168:
   CVE-2019-11810: 650c8ec81f458472eda16883acd5dbf37c5049dc scsi: megaraid_sas: return error when create DMA pool failed
 
 CVEs fixed in 4.9.169:
+  CVE-2019-10639: 6996763856e1fb27ccae260e41fd73a3fff56678 netns: provide pure entropy for net_hash_mix()
   CVE-2019-11486: 942ddc0de8efb52c43250033c7c6091f15e191f5 tty: mark Siemens R3964 line discipline as BROKEN
   CVE-2019-11815: a1aa69beac4d88dfb892a95ee04fe6f932803952 net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock().
 
@@ -600,6 +606,17 @@ CVEs fixed in 4.9.177:
 
 CVEs fixed in 4.9.178:
   CVE-2019-11833: ab6d14e83db6e08c39a867a4cba378f7a774d273 ext4: zero out the unused memory region in the extent tree block
+
+CVEs fixed in 4.9.181:
+  CVE-2018-20510: 6f3433c47e8223c97746ad227d1e6f5531e0758a binder: replace "%p" with "%pK"
+  CVE-2019-11487: 9557090582a33801349f0a0920a55d134a27e740 fs: prevent page refcount overflow in pipe_buf_get
+  CVE-2019-9500: 76e7e98e229ae8fa7f4b30a6fd2bb3cd2ad26a67 brcmfmac: assure SSID length from firmware is limited
+  CVE-2019-9503: 433b957a9e2df0305c1273011aa6e6cc0f8f815d brcmfmac: add subtype check for event handling in data path
+
+CVEs fixed in 4.9.182:
+  CVE-2019-11477: cc1b58ccb78e0de51bcec1f2914d9296260668bd tcp: limit payload size of sacked skbs
+  CVE-2019-11478: e358f4af19db46ca25cc9a8a78412b09ba98859d tcp: tcp_fragment() should apply sane memory limits
+  CVE-2019-11479: 8e39cbc03dafa3731d22533f869bf326c0e6e6f8 tcp: add tcp_min_snd_mss sysctl
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -642,15 +659,14 @@ Outstanding CVEs:
   CVE-2018-13098: (unk) f2fs: fix to do sanity check with extra_attr feature 
   CVE-2018-17977: (unk)  
   CVE-2018-20509: (unk) binder: refactor binder ref inc/dec for thread safety 
-  CVE-2018-20510: (unk) binder: replace "%p" with "%pK" 
   CVE-2018-6554: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-6555: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
   CVE-2018-9517: (unk) l2tp: pass tunnel pointer to ->session_create() 
-  CVE-2019-10126: (unk)  
+  CVE-2019-10126: (unk) mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies() 
+  CVE-2019-10638: (unk) inet: switch IP ID generator to siphash 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2019-11191: (unk)  
-  CVE-2019-11487: (unk) fs: prevent page refcount overflow in pipe_buf_get 
   CVE-2019-11599: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
   CVE-2019-12379: (unk)  
@@ -661,12 +677,11 @@ Outstanding CVEs:
   CVE-2019-12456: (unk)  
   CVE-2019-12614: (unk)  
   CVE-2019-12615: (unk) mdesc: fix a missing-check bug in get_vdev_port_node_info() 
+  CVE-2019-12881: (unk)  
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
-  CVE-2019-3846: (unk)  
+  CVE-2019-3846: (unk) mwifiex: Fix possible buffer overflows at parsing bss descriptor 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-3892: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
   CVE-2019-3900: (unk) vhost_net: fix possible infinite loop 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
-  CVE-2019-9500: (unk) brcmfmac: assure SSID length from firmware is limited 
-  CVE-2019-9503: (unk) brcmfmac: add subtype check for event handling in data path 

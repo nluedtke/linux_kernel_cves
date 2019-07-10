@@ -308,6 +308,31 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2008/CVE-2008-7316"
         }
     },
+    "CVE-2010-0008": {
+        "affected_versions": "unk to v2.6.23-rc9",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cwe": "Resource Management Errors",
+        "fixes": "ece25dfa0991f65c4e1d26beb1c3c45bda4239b8",
+        "last_modified": "2019-06-17",
+        "nvd_text": "The sctp_rcv_ootb function in the SCTP implementation in the Linux kernel before 2.6.23 allows remote attackers to cause a denial of service (infinite loop) via (1) an Out Of The Blue (OOTB) chunk or (2) a chunk of zero length.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2010-0008",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2010-0008",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2010-0008",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2010-0008",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2010-0008",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2010/CVE-2010-0008"
+        }
+    },
     "CVE-2010-3432": {
         "affected_versions": "unk to v2.6.36-rc5",
         "breaks": "",
@@ -31551,7 +31576,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "8914a595110a6eca69a5e275b323f5d09e18f4f9",
-        "last_modified": "2019-02-20",
+        "last_modified": "2019-06-11",
         "nvd_text": "Linux Linux kernel version at least v4.8 onwards, probably well before contains a Insufficient input validation vulnerability in bnx2x network card driver that can result in DoS: Network card firmware assertion takes card off-line. This attack appear to be exploitable via An attacker on a must pass a very large, specially crafted packet to the bnx2x card. This can be done from an untrusted guest VM..",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1000026",
@@ -34958,6 +34983,7 @@
         },
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "c0ca3d70e8d3cf81e2255a217f7ca402f5ed0862",
+        "last_modified": "2019-07-10",
         "nvd_text": "An issue was discovered in the Linux kernel through 4.18.6. Incorrect access checking in overlayfs mounts could be used by local attackers to modify or truncate files in the underlying filesystem.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16597",
@@ -35995,7 +36021,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "8ca86f1639ec5890d400fff9211aca22d0a392eb",
-        "last_modified": "2019-05-20",
+        "last_modified": "2019-06-11",
         "nvd_text": "The print_binder_transaction_ilocked function in drivers/android/binder.c in the Linux kernel 4.14.90 allows local users to obtain sensitive address information by reading \"*from *code *flags\" lines in a debugfs file.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20510",
@@ -38008,10 +38034,33 @@
         }
     },
     "CVE-2019-10126": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2019-06-05",
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "7.5"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Buffer Errors",
+        "fixes": "69ae4f6aac1578575126319d3f55550e7e440449",
+        "last_modified": "2019-07-10",
+        "nvd_text": "A flaw was found in the Linux kernel. A heap based buffer overflow in mwifiex_uap_parse_tail_ies function in drivers/net/wireless/marvell/mwifiex/ie.c might lead to memory corruption and possibly other consequences.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10126",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10126",
@@ -38026,7 +38075,7 @@
         "breaks": "6db7199407ca56f55bc0832fb124e1ad216ea57b",
         "cmt_msg": "drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl",
         "fixes": "6a024330650e24556b8a18cc654ad00cfecf6c6c",
-        "last_modified": "2019-05-27",
+        "last_modified": "2019-06-21",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10142",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10142",
@@ -38034,6 +38083,38 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-10142",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-10142",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10142"
+        }
+    },
+    "CVE-2019-10638": {
+        "affected_versions": "unk to v5.2-rc1",
+        "breaks": "",
+        "cmt_msg": "inet: switch IP ID generator to siphash",
+        "fixes": "df453700e8d81b1bdafdf684365ee2b9431fb702",
+        "last_modified": "2019-07-06",
+        "nvd_text": "In the Linux kernel before 5.1.7, a device can be tracked by an attacker using the IP ID values the kernel produces for connection-less protocols (e.g., UDP and ICMP). When such traffic is sent to multiple destination IP addresses, it is possible to obtain hash collisions (of indices to the counter array) and thereby obtain the hashing key (via enumeration). An attack may be conducted by hosting a crafted web page that uses WebRTC or gQUIC to force UDP traffic to attacker-controlled IP addresses.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10638",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10638",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-10638",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-10638",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-10638",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10638"
+        }
+    },
+    "CVE-2019-10639": {
+        "affected_versions": "unk to v5.1-rc4",
+        "breaks": "",
+        "cmt_msg": "netns: provide pure entropy for net_hash_mix()",
+        "fixes": "355b98553789b646ed97ad801a619ff898471b92",
+        "last_modified": "2019-07-06",
+        "nvd_text": "The Linux kernel 4.x (starting from 4.1) and 5.x before 5.0.8 allows Information Exposure (partial kernel address disclosure), leading to a KASLR bypass. Specifically, it is possible to extract the KASLR kernel image offset using the IP ID values the kernel produces for connection-less protocols (e.g., UDP and ICMP). When such traffic is sent to multiple destination IP addresses, it is possible to obtain hash collisions (of indices to the counter array) and thereby obtain the hashing key (via enumeration). This key contains enough bits from a kernel address (of a static variable) so when the key is extracted (via enumeration), the offset of the kernel image is exposed. This attack can be carried out remotely, by the attacker forcing the target device to send UDP or ICMP (or certain other) traffic to attacker-controlled IP addresses. Forcing a server to send UDP traffic is trivial if the server is a DNS server. ICMP traffic is trivial if the server answers ICMP Echo requests (ping). For client targets, if the target visits the attacker's web page, then WebRTC or gQUIC can be used to force UDP traffic to attacker-controlled IP addresses. NOTE: this attack against KASLR became viable in 4.1 because IP ID generation was changed to have a dependency on an address associated with a network namespace.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10639",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10639",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-10639",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-10639",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-10639",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10639"
         }
     },
     "CVE-2019-11085": {
@@ -38184,6 +38265,118 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11191"
         }
     },
+    "CVE-2019-11477": {
+        "affected_versions": "v2.6.29-rc1 to v5.2-rc6",
+        "breaks": "832d11c5cd076abc0aa1eaf7be96c81d1a59ce41",
+        "cmt_msg": "tcp: limit payload size of sacked skbs",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Integer Overflow or Wraparound",
+        "fixes": "3b4929f65b0d8249f19a50245cd88ed1a2f78cff",
+        "last_modified": "2019-07-05",
+        "name": "SACK Panic",
+        "nvd_text": "Jonathan Looney discovered that the TCP_SKB_CB(skb)-&gt;tcp_gso_segs value was subject to an integer overflow in the Linux kernel when handling TCP Selective Acknowledgments (SACKs). A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commit 3b4929f65b0d8249f19a50245cd88ed1a2f78cff.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11477",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11477",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11477",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11477",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11477",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11477"
+        }
+    },
+    "CVE-2019-11478": {
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "tcp: tcp_fragment() should apply sane memory limits",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
+        "fixes": "f070ef2ac66716357066b683fb0baf55f8191a2e",
+        "last_modified": "2019-06-24",
+        "nvd_text": "Jonathan Looney discovered that the TCP retransmission queue implementation in tcp_fragment in the Linux kernel could be fragmented when handling certain TCP Selective Acknowledgment (SACK) sequences. A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commit f070ef2ac66716357066b683fb0baf55f8191a2e.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11478",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11478",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11478",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11478",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11478",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11478"
+        }
+    },
+    "CVE-2019-11479": {
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "tcp: add tcp_min_snd_mss sysctl",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
+        "fixes": "5f3e2bf008c2221478101ee72f5cb4654b9fc363",
+        "last_modified": "2019-06-24",
+        "nvd_text": "Jonathan Looney discovered that the Linux kernel default MSS is hard-coded to 48 bytes. This allows a remote peer to fragment TCP resend queues significantly more than if a larger MSS were enforced. A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commits 967c05aee439e6e5d7d805e195b3a20ef5c433d6 and 5f3e2bf008c2221478101ee72f5cb4654b9fc363.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11479",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-11479",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-11479",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-11479",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-11479",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-11479"
+        }
+    },
     "CVE-2019-11486": {
         "affected_versions": "v2.6.12-rc2 to v5.1-rc4",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -38247,7 +38440,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "15fab63e1e57be9fdb5eec1bbc5916e9825e9acb",
-        "last_modified": "2019-05-20",
+        "last_modified": "2019-06-11",
         "nvd_text": "The Linux kernel before 5.1-rc5 allows page-&gt;_refcount reference count overflow, with resultant use-after-free issues, if about 140 GiB of RAM exists. This is related to fs/fuse/dev.c, fs/pipe.c, fs/splice.c, include/linux/mm.h, include/linux/pipe_fs_i.h, kernel/trace/trace.c, mm/gup.c, and mm/hugetlb.c. It can occur with FUSE requests.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11487",
@@ -38284,7 +38477,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
-        "last_modified": "2019-05-20",
+        "last_modified": "2019-06-22",
         "nvd_text": "The coredump implementation in the Linux kernel before 5.0.10 does not use locking or other mechanisms to prevent vma layout or vma flags changes while it runs, which allows local users to obtain sensitive information, cause a denial of service, or possibly have unspecified other impact by triggering a race condition with mmget_not_zero or get_task_mm calls. This is related to fs/userfaultfd.c, mm/mmap.c, fs/proc/task_mmu.c, and drivers/infiniband/core/uverbs_main.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11599",
@@ -38358,7 +38551,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "bcf3b67d16a4c8ffae0aa79de5853435e683945c",
-        "last_modified": "2019-05-20",
+        "last_modified": "2019-06-21",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.0.7. A NULL pointer dereference can occur when megasas_create_frame_pool() fails in megasas_alloc_cmds() in drivers/scsi/megaraid/megaraid_sas_base.c. This causes a Denial of Service, related to a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11810",
@@ -38469,7 +38662,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "592acbf16821288ecdc4192c47e3774a4c48bb64",
-        "last_modified": "2019-05-22",
+        "last_modified": "2019-06-21",
         "nvd_text": "fs/ext4/extents.c in the Linux kernel through 5.1.2 does not zero out the unused memory region in the extent tree block, which might allow local users to obtain sensitive information by reading uninitialized data in the filesystem.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11833",
@@ -38506,7 +38699,7 @@
         },
         "cwe": "Command Injection",
         "fixes": "a1616a5ac99ede5d605047a9012481ce7ff18b16",
-        "last_modified": "2019-05-20",
+        "last_modified": "2019-06-21",
         "nvd_text": "The do_hidp_sock_ioctl function in net/bluetooth/hidp/sock.c in the Linux kernel before 5.0.15 allows a local user to obtain potentially sensitive information from kernel stack memory via a HIDPCONNADD command, because a name field may not end with a '\\0' character.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11884",
@@ -38555,8 +38748,8 @@
         }
     },
     "CVE-2019-12379": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -38579,7 +38772,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "84ecc2f6eb1cb12e6d44818f94fa49b50f06e6ac",
-        "last_modified": "2019-05-29",
+        "last_modified": "2019-06-20",
         "nvd_text": "An issue was discovered in con_insert_unipair in drivers/tty/vt/consolemap.c in the Linux kernel through 5.1.5. There is a memory leak in a certain case of an ENOMEM outcome of kmalloc.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12379",
@@ -38591,8 +38784,8 @@
         }
     },
     "CVE-2019-12380": {
-        "affected_versions": "unk to v5.2-rc3",
-        "breaks": "",
+        "affected_versions": "v3.8-rc6 to v5.2-rc3",
+        "breaks": "b8f2c21db390273c3eaf0e5308faeaeb1e233840",
         "cmt_msg": "efi/x86/Add missing error handling to old_memmap 1:1 mapping code",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38616,7 +38809,7 @@
         },
         "cwe": "Error Handling",
         "fixes": "4e78921ba4dd0aca1cc89168f45039add4183f8e",
-        "last_modified": "2019-06-03",
+        "last_modified": "2019-06-20",
         "nvd_text": "An issue was discovered in the efi subsystem in the Linux kernel through 5.1.5. phys_efi_set_virtual_address_map in arch/x86/platform/efi/efi.c and efi_call_phys_prolog in arch/x86/platform/efi/efi_64.c mishandle memory allocation failures.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12380",
@@ -38628,8 +38821,8 @@
         }
     },
     "CVE-2019-12381": {
-        "affected_versions": "unk to v5.2-rc3",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc3",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ip_sockglue: Fix missing-check bug in ip_ra_control()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38653,7 +38846,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "425aa0e1d01513437668fa3d4a971168bbaa8515",
-        "last_modified": "2019-06-03",
+        "last_modified": "2019-06-21",
         "nvd_text": "An issue was discovered in ip_ra_control in net/ipv4/ip_sockglue.c in the Linux kernel through 5.1.5. There is an unchecked kmalloc of new_ra, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12381",
@@ -38809,8 +39002,8 @@
         }
     },
     "CVE-2019-12614": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.33-rc1 to unk",
+        "breaks": "ab519a011caa5ec47d992cb8a4fc8e7af9b9e3f8",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -38833,7 +39026,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "efa9ace68e487ddd29c2b4d6dd23242158f1f607",
-        "last_modified": "2019-06-04",
+        "last_modified": "2019-06-27",
         "nvd_text": "An issue was discovered in dlpar_parse_cc_property in arch/powerpc/platforms/pseries/dlpar.c in the Linux kernel through 5.1.6. There is an unchecked kstrdup of prop-&gt;name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12614",
@@ -38845,8 +39038,8 @@
         }
     },
     "CVE-2019-12615": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "mdesc: fix a missing-check bug in get_vdev_port_node_info()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38870,7 +39063,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "80caf43549e7e41a695c6d1e11066286538b336f",
-        "last_modified": "2019-06-04",
+        "last_modified": "2019-06-25",
         "nvd_text": "An issue was discovered in get_vdev_port_node_info in arch/sparc/kernel/mdesc.c in the Linux kernel through 5.1.6. There is an unchecked kstrdup_const of node_info-&gt;vdev_port.name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12615",
@@ -38879,6 +39072,227 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12615",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-12615",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12615"
+        }
+    },
+    "CVE-2019-12817": {
+        "affected_versions": "v4.17-rc1 to v5.2-rc7",
+        "breaks": "f384796c40dc55b3dba25e0ee9c1afd98c6d24d1",
+        "cmt_msg": "powerpc/mm/64s/hash: Reallocate context ids on fork",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.0"
+        },
+        "cwe": "Buffer Errors",
+        "fixes": "ca72d88378b2f2444d3ec145dd442d449d3fefbc",
+        "last_modified": "2019-06-30",
+        "nvd_text": "arch/powerpc/mm/mmu_context_book3s64.c in the Linux kernel before 5.1.15 for powerpc has a bug where unrelated processes may be able to read/write to one another's virtual memory under certain conditions via an mmap above 512 TB. Only a subset of powerpc systems are affected.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12817",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12817",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12817",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12817",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12817",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12817"
+        }
+    },
+    "CVE-2019-12818": {
+        "affected_versions": "v2.6.12-rc2 to v5.0",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "58bdd544e2933a21a51eecf17c3f5f94038261b5",
+        "last_modified": "2019-06-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 4.20.15. The nfc_llcp_build_tlv function in net/nfc/llcp_commands.c may return NULL. If the caller does not check for this, it will trigger a NULL pointer dereference. This will cause denial of service. This affects nfc_llcp_build_gb in net/nfc/llcp_core.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12818",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12818",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12818",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12818",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12818",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12818"
+        }
+    },
+    "CVE-2019-12819": {
+        "affected_versions": "v3.14-rc1 to v5.0-rc8",
+        "breaks": "0c692d07842a67d9aa6b8266a80e4ac460a5c1a2",
+        "cmt_msg": "mdio_bus: Fix use-after-free on device_register fails",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Use After Free",
+        "fixes": "6ff7b060535e87c2ae14dd8548512abfdda528fb",
+        "last_modified": "2019-06-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0. The function __mdiobus_register() in drivers/net/phy/mdio_bus.c calls put_device(), which will trigger a fixed_mdio_bus_init use-after-free. This will cause a denial of service.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12819",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12819",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12819",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12819",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12819",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12819"
+        }
+    },
+    "CVE-2019-12881": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "",
+        "last_modified": "2019-06-21",
+        "nvd_text": "i915_gem_userptr_get_pages in drivers/gpu/drm/i915/i915_gem_userptr.c in the Linux kernel 4.15.0 on Ubuntu 18.04.2 allows local users to cause a denial of service (NULL pointer dereference and BUG) or possibly have unspecified other impact via crafted ioctl calls to /dev/dri/card0.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12881",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12881",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12881",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12881",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12881",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12881"
+        }
+    },
+    "CVE-2019-12984": {
+        "affected_versions": "v4.15-rc1 to v5.2-rc6",
+        "breaks": "4d63adfe12dd9cb61ed8badb4d798955399048c2",
+        "cmt_msg": "nfc: Ensure presence of required attributes in the deactivate_target handler",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "385097a3675749cbc9e97c085c0e5dfe4269ca51",
+        "last_modified": "2019-06-29",
+        "nvd_text": "A NULL pointer dereference vulnerability in the function nfc_genl_deactivate_target() in net/nfc/netlink.c in the Linux kernel before 5.1.13 can be triggered by a malicious user-mode program that omits certain NFC attributes, leading to denial of service.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12984",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-12984",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-12984",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-12984",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-12984",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-12984"
+        }
+    },
+    "CVE-2019-13233": {
+        "affected_versions": "v4.15-rc1 to v5.2-rc4",
+        "breaks": "670f928ba09b06712da34a3c44be6c8fa561fb19",
+        "cmt_msg": "x86/insn-eval: Fix use-after-free access to LDT entry",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.4"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.0"
+        },
+        "cwe": "Race Conditions",
+        "fixes": "de9f869616dd95e95c00bdd6b0fcd3421e8a4323",
+        "last_modified": "2019-07-10",
+        "nvd_text": "In arch/x86/lib/insn-eval.c in the Linux kernel before 5.1.9, there is a use-after-free for access to an LDT entry because of a race condition between modify_ldt() and a #BR exception for an MPX bounds violation.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-13233",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-13233",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-13233",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-13233",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-13233",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-13233"
         }
     },
     "CVE-2019-1999": {
@@ -38907,7 +39321,7 @@
         },
         "cwe": "Double Free",
         "fixes": "5cec2d2e5839f9c0fec319c523a911e0a7fd299f",
-        "last_modified": "2019-05-20",
+        "last_modified": "2019-06-09",
         "nvd_text": "In binder_alloc_free_page of binder_alloc.c, there is a possible double free due to improper locking. This could lead to local escalation of privilege in the kernel with no additional execution privileges needed. User interaction is not needed for exploitation. Product: Android. Versions: Android kernel. Android ID: A-120025196.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-1999",
@@ -38922,8 +39336,30 @@
         "affected_versions": "v3.15-rc1 to v4.16-rc1",
         "breaks": "425f53aaf76cce77b3bedd8ed4902bc94ed254ff",
         "cmt_msg": "media: em28xx: Fix use-after-free when disconnecting",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "910b0797fa9e8af09c44a3fa36cb310ba7a7218d",
-        "last_modified": "2019-05-03",
+        "last_modified": "2019-06-22",
+        "nvd_text": "In em28xx_unregister_dvb of em28xx-dvb.c, there is a possible use after free issue. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-111761954References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2024",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2024",
@@ -38937,8 +39373,30 @@
         "affected_versions": "v2.6.12-rc2 to v4.20-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "binder: fix race that allows malicious free of live buffer",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "7bada55ab50697861eee6bb7d60b41e68a961a9c",
-        "last_modified": "2019-04-04",
+        "last_modified": "2019-06-22",
+        "nvd_text": "In binder_thread_read of binder.c, there is a possible use-after-free due to improper locking. This could lead to local escalation of privilege in the kernel with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-116855682References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2025",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2025",
@@ -38983,6 +39441,43 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-2054",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-2054",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-2054"
+        }
+    },
+    "CVE-2019-2101": {
+        "affected_versions": "v2.6.12-rc2 to v5.1-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "media: uvcvideo: Fix 'type' check leading to overflow",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Out-of-bounds Read",
+        "fixes": "47bb117911b051bbc90764a8bff96543cbd2005f",
+        "last_modified": "2019-07-10",
+        "nvd_text": "In uvc_parse_standard_control of uvc_driver.c, there is a possible out-of-bound read due to improper input validation. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation. Product: Android. Versions: Android kernel. Android ID: A-111760968.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2101",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2101",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-2101",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-2101",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-2101",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-2101"
         }
     },
     "CVE-2019-3459": {
@@ -39171,8 +39666,9 @@
         }
     },
     "CVE-2019-3846": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v3.0-rc1 to v5.2-rc6",
+        "breaks": "5e6e3a92b9a4c9416b17f468fa5c7fa2233b8b4e",
+        "cmt_msg": "mwifiex: Fix possible buffer overflows at parsing bss descriptor",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Adjacent Network",
@@ -39194,8 +39690,8 @@
             "score": "8.8"
         },
         "cwe": "Buffer Errors",
-        "fixes": "",
-        "last_modified": "2019-06-04",
+        "fixes": "13ec7f10b87f5fc04c4ccbd491c94c7980236a74",
+        "last_modified": "2019-07-10",
         "nvd_text": "A flaw that allowed an attacker to corrupt memory and possibly escalate privileges was found in the mwifiex kernel module while connecting to a malicious wireless network.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3846",
@@ -39322,7 +39818,8 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping",
         "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
-        "last_modified": "2019-05-03",
+        "last_modified": "2019-06-22",
+        "nvd_text": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2019-11599. Reason: This candidate is a reservation duplicate of CVE-2019-11599. Notes: All CVE users should reference CVE-2019-11599 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3892",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3892",
@@ -39332,8 +39829,44 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3892"
         }
     },
+    "CVE-2019-3896": {
+        "affected_versions": "v2.6.12-rc2 to v2.6.35-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Double Free",
+        "fixes": "2dcb22b346be7b7b7e630a8970d69cf3f1111ec1",
+        "last_modified": "2019-06-29",
+        "nvd_text": "A double-free can happen in idr_remove_all() in lib/idr.c in the Linux kernel 2.6 branch. An unprivileged local attacker can use this flaw for a privilege escalation or for a system crash and a denial of service (DoS).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3896",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3896",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-3896",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3896",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-3896",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3896"
+        }
+    },
     "CVE-2019-3900": {
-        "affected_versions": "v3.14 to unk",
+        "affected_versions": "v3.14 to v5.2-rc4",
         "breaks": "d8316f3991d207fe32881a9ac20241be8fa2bad0",
         "cmt_msg": "vhost_net: fix possible infinite loop",
         "cvss2": {
@@ -39358,7 +39891,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "e2412c07f8f3040593dfb88207865a3cd58680c0",
-        "last_modified": "2019-06-04",
+        "last_modified": "2019-07-10",
         "nvd_text": "An infinite loop issue was found in the vhost_net kernel module in Linux Kernel up to and including v5.1-rc6, while handling incoming packets in handle_rx(). It could occur if one end sends packets faster than the other end can process them. A guest user, maybe remote one, could use this flaw to stall the vhost_net kernel thread, resulting in a DoS scenario.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3900",
@@ -39855,7 +40388,7 @@
         "breaks": "3021ad9a4f009265e6063e617fb91306980af16c",
         "cmt_msg": "brcmfmac: assure SSID length from firmware is limited",
         "fixes": "1b5e2423164b3670e8bc9174e4762d297990deff",
-        "last_modified": "2019-05-31",
+        "last_modified": "2019-06-11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9500",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9500",
@@ -39870,7 +40403,7 @@
         "breaks": "5b435de0d786869c95d1962121af0d7df2542009",
         "cmt_msg": "brcmfmac: add subtype check for event handling in data path",
         "fixes": "a4176ec356c73a46c07c181c6d04039fafa34a9f",
-        "last_modified": "2019-05-31",
+        "last_modified": "2019-06-11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9503",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9503",

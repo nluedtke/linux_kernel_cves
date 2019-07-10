@@ -674,6 +674,9 @@ CVEs fixed in 4.4.176:
   CVE-2019-6974: bc4db52485cc6edfd6861417d178bb71f743ced7 kvm: fix kvm_ioctl_create_device() reference counting (CVE-2019-6974)
 
 CVEs fixed in 4.4.177:
+  CVE-2019-12818: 6e7339d5ee302fcbfe8ef29c058cc85c360849b9 net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails
+  CVE-2019-12819: a1b4ace43842791d908a8837304031e439c2ea39 mdio_bus: Fix use-after-free on device_register fails
+  CVE-2019-2101: bba078c9fc3c7e44370f870d97c5eed64f6c5d1f media: uvcvideo: Fix 'type' check leading to overflow
   CVE-2019-9213: 40952b6a649b9bfad11ae4fa2862fa0108c9ec24 mm: enforce min addr even if capable() in expand_downwards()
 
 CVEs fixed in 4.4.178:
@@ -681,6 +684,7 @@ CVEs fixed in 4.4.178:
   CVE-2019-3460: d22036003893cbe479404e20fdae10addc6c18dd Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
 
 CVEs fixed in 4.4.179:
+  CVE-2019-10639: 0ede14314f6d9e6a172eb4c4b6b9fe5477aa70bc netns: provide pure entropy for net_hash_mix()
   CVE-2019-11190: 1eb40df35d99f353e7bdfcbb21f249428ec0f4b6 binfmt_elf: switch to new creds when switching to new mm
   CVE-2019-11486: c3e76f072adbcc426fbeef5d7469f847a2f700d6 tty: mark Siemens R3964 line discipline as BROKEN
   CVE-2019-11810: 09a6db51dcb41990fe020e45af8b2e44010fc1e7 scsi: megaraid_sas: return error when create DMA pool failed
@@ -691,6 +695,24 @@ CVEs fixed in 4.4.180:
   CVE-2019-10142: 9db489ed49711d1575f631b68aaa911d3b6198f9 drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl
   CVE-2019-11884: dd150bcc93ffaa80ca67d5a71d7850fffe5eb549 Bluetooth: hidp: fix buffer overflow
   CVE-2019-3882: e1a5cdbf7cb32a168d37a4804379b9b70d31b39b vfio/type1: Limit DMA mappings per container
+
+CVEs fixed in 4.4.181:
+  CVE-2018-1000026: c55a2cffa5caaf72db415558f8058f995578a773 bnx2x: disable GSO where gso_size is too big for hardware
+  CVE-2018-20510: c53c1a821d62eb8476425ebe79c0c0054ab45315 binder: replace "%p" with "%pK"
+  CVE-2019-11833: 98529ecd313bbeff006930056dad26529510054f ext4: zero out the unused memory region in the extent tree block
+  CVE-2019-9503: 4e06554db5e5c3d693141b84aba3a4f29b7d9ef5 brcmfmac: add subtype check for event handling in data path
+
+CVEs fixed in 4.4.182:
+  CVE-2019-11477: 4657ee0fe05e15ab572b157f13a82e080d4b7d73 tcp: limit payload size of sacked skbs
+  CVE-2019-11478: ad472d3a9483abc155e1644ad740cd8c039b5170 tcp: tcp_fragment() should apply sane memory limits
+  CVE-2019-11479: e757d052f3b8ce739d068a1e890643376c16b7a9 tcp: add tcp_min_snd_mss sysctl
+
+CVEs fixed in 4.4.183:
+  CVE-2019-11599: 8f6345a11caae324ad36abca8723a5710d099a85 coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
+  CVE-2019-3892: 8f6345a11caae324ad36abca8723a5710d099a85 coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
+
+CVEs fixed in 4.4.185:
+  CVE-2018-16597: b24be4acd17a8963a29b2a92e1d80b9ddf759c95 ovl: modify ovl_permission() to do checks on two inodes
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -723,7 +745,6 @@ Outstanding CVEs:
   CVE-2017-8065: (unk) crypto: ccm - move cbcmac input off the stack 
   CVE-2017-8797: (unk) nfsd: fix undefined behavior in nfsd4_layout_verify 
   CVE-2017-9986: (unk) sound: Retire OSS 
-  CVE-2018-1000026: (unk) bnx2x: disable GSO where gso_size is too big for hardware 
   CVE-2018-10322: (unk) xfs: enhance dinode verifier 
   CVE-2018-10323: (unk) xfs: set format back to extents if xfs_bmap_extents_to_btree 
   CVE-2018-1121: (unk)  
@@ -740,10 +761,8 @@ Outstanding CVEs:
   CVE-2018-13094: (unk) xfs: don't call xfs_da_shrink_inode with NULL bp 
   CVE-2018-13095: (unk) xfs: More robust inode extent count validation 
   CVE-2018-13098: (unk) f2fs: fix to do sanity check with extra_attr feature 
-  CVE-2018-16597: (unk) ovl: modify ovl_permission() to do checks on two inodes 
   CVE-2018-17977: (unk)  
   CVE-2018-20509: (unk) binder: refactor binder ref inc/dec for thread safety 
-  CVE-2018-20510: (unk) binder: replace "%p" with "%pK" 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-5953: (unk) printk: hash addresses printed with %p 
@@ -755,12 +774,11 @@ Outstanding CVEs:
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
   CVE-2018-9465: (unk) binder: fix proc->files use-after-free 
   CVE-2018-9517: (unk) l2tp: pass tunnel pointer to ->session_create() 
-  CVE-2019-10126: (unk)  
+  CVE-2019-10126: (unk) mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies() 
+  CVE-2019-10638: (unk) inet: switch IP ID generator to siphash 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2019-11191: (unk)  
   CVE-2019-11487: (unk) fs: prevent page refcount overflow in pipe_buf_get 
-  CVE-2019-11599: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
-  CVE-2019-11833: (unk) ext4: zero out the unused memory region in the extent tree block 
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
   CVE-2019-12379: (unk)  
   CVE-2019-12380: (unk) efi/x86/Add missing error handling to old_memmap 1:1 mapping code 
@@ -770,12 +788,11 @@ Outstanding CVEs:
   CVE-2019-12456: (unk)  
   CVE-2019-12614: (unk)  
   CVE-2019-12615: (unk) mdesc: fix a missing-check bug in get_vdev_port_node_info() 
+  CVE-2019-12881: (unk)  
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
   CVE-2019-2054: (unk) arm/ptrace: run seccomp after ptrace 
-  CVE-2019-3846: (unk)  
+  CVE-2019-3846: (unk) mwifiex: Fix possible buffer overflows at parsing bss descriptor 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
-  CVE-2019-3892: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
   CVE-2019-3900: (unk) vhost_net: fix possible infinite loop 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
-  CVE-2019-9503: (unk) brcmfmac: add subtype check for event handling in data path 

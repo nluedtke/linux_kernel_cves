@@ -544,6 +544,8 @@ CVEs fixed in 3.16.66:
   CVE-2019-11190: 1e06334afa7199cc86c6c4830b71a7c1ea8e7901 binfmt_elf: switch to new creds when switching to new mm
   CVE-2019-11486: e0d2ad5eaec135bb79a7045b1c0718557bac4c4d tty: mark Siemens R3964 line discipline as BROKEN
   CVE-2019-11599: a301e6a651037c11d2d9932a35fb56a04eedba8c coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
+  CVE-2019-12818: 2c716db6f80cef6159972be0dab86892c39de277 net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails
+  CVE-2019-12819: 8a5e2f4be5d08d16964ce2adb8da6fc42052c6f1 mdio_bus: Fix use-after-free on device_register fails
   CVE-2019-2024: abbb5cf0c8e9995defed43a6c98296f357098b5b media: em28xx: Fix use-after-free when disconnecting
   CVE-2019-3459: 78c2887130f1a7d1883195732be1b6cdab667487 Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
   CVE-2019-3460: c5c6a5c7eb7e3d7859e7ec78a2872360e4bab6aa Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
@@ -558,7 +560,22 @@ CVEs fixed in 3.16.67:
   CVE-2018-5995: 14c2d9209a135872def8508e3f19c74f0f3fee52 printk: hash addresses printed with %p
   CVE-2018-7273: 14c2d9209a135872def8508e3f19c74f0f3fee52 printk: hash addresses printed with %p
   CVE-2018-7754: 14c2d9209a135872def8508e3f19c74f0f3fee52 printk: hash addresses printed with %p
+  CVE-2019-10639: 8b197d3ce585d6777197e0633d71e5af7d98cb35 netns: provide pure entropy for net_hash_mix()
   CVE-2019-6133: 971081984266d7934b2f0253215e3f31f9337915 fork: record start_time late
+
+CVEs fixed in 3.16.69:
+  CVE-2019-10142: bfa8c73482dae6bafc0741cbfd63f84d11311b36 drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl
+  CVE-2019-11477: ef27e3c531782ec8213108e11e5515f9724303c7 tcp: limit payload size of sacked skbs
+  CVE-2019-11478: dc97a907bc76b71c08e7e99a5b1b30ef4d5e4a85 tcp: tcp_fragment() should apply sane memory limits
+  CVE-2019-11479: 6b7e7997ad3505db7de85ff12276fc84659481d3 tcp: add tcp_min_snd_mss sysctl
+  CVE-2019-11810: bd0908fbd84009cb5f01cf1a258a6f7fd78b6b3a scsi: megaraid_sas: return error when create DMA pool failed
+  CVE-2019-11833: 13c4be25bdcbe5045f9b17ad875c3253a4888e45 ext4: zero out the unused memory region in the extent tree block
+  CVE-2019-11884: acaf43aa7ede1e500532f1f5d910e207f89d5e1f Bluetooth: hidp: fix buffer overflow
+
+CVEs fixed in 3.16.70:
+  CVE-2019-10126: a62393d7eb63bd075c51154002825cc7ab4dd3eb mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies()
+  CVE-2019-2101: 1ea04ca97ab7f4d583949825dd7d55467aa2536f media: uvcvideo: Fix 'type' check leading to overflow
+  CVE-2019-3846: a24ac7326f38ffab2b63141496d075da144cec7d mwifiex: Fix possible buffer overflows at parsing bss descriptor
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -658,14 +675,10 @@ Outstanding CVEs:
   CVE-2018-6555: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-7480: (unk) blkcg: fix double free of new_blkg in blkcg_init_queue 
   CVE-2018-9465: (unk) binder: fix proc->files use-after-free 
-  CVE-2019-10126: (unk)  
-  CVE-2019-10142: (unk) drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl 
+  CVE-2019-10638: (unk) inet: switch IP ID generator to siphash 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2019-11191: (unk)  
   CVE-2019-11487: (unk) fs: prevent page refcount overflow in pipe_buf_get 
-  CVE-2019-11810: (unk) scsi: megaraid_sas: return error when create DMA pool failed 
-  CVE-2019-11833: (unk) ext4: zero out the unused memory region in the extent tree block 
-  CVE-2019-11884: (unk) Bluetooth: hidp: fix buffer overflow 
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
   CVE-2019-12379: (unk)  
   CVE-2019-12380: (unk) efi/x86/Add missing error handling to old_memmap 1:1 mapping code 
@@ -675,11 +688,11 @@ Outstanding CVEs:
   CVE-2019-12456: (unk)  
   CVE-2019-12614: (unk)  
   CVE-2019-12615: (unk) mdesc: fix a missing-check bug in get_vdev_port_node_info() 
+  CVE-2019-12881: (unk)  
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
   CVE-2019-2054: (unk) arm/ptrace: run seccomp after ptrace 
   CVE-2019-3837: (unk) net_dma: simple removal 
-  CVE-2019-3846: (unk)  
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-3900: (unk) vhost_net: fix possible infinite loop 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
