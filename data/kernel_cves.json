@@ -38897,6 +38897,7 @@
     "CVE-2019-12454": {
         "affected_versions": "v5.1-rc1 to unk",
         "breaks": "20aedafdf4926e7a957f8b302a18c8fb75c7e332",
+        "cmt_msg": "wcd9335: fix a incorrect use of kstrndup()",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -38918,8 +38919,8 @@
             "score": "7.8"
         },
         "cwe": "Input Validation",
-        "fixes": "",
-        "last_modified": "2019-05-31",
+        "fixes": "a54988113985ca22e414e132054f234fc8a92604",
+        "last_modified": "2019-07-12",
         "nvd_text": "An issue was discovered in wcd9335_codec_enable_dec in sound/soc/codecs/wcd9335.c in the Linux kernel through 5.1.5. It uses kstrndup instead of kmemdup_nul, which allows attackers to have an unspecified impact via unknown vectors.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12454",
@@ -38954,8 +38955,8 @@
             "score": "5.5"
         },
         "cwe": "NULL Pointer Dereference",
-        "fixes": "",
-        "last_modified": "2019-05-30",
+        "fixes": "fcdf445ff42f036d22178b49cf64e92d527c1330",
+        "last_modified": "2019-07-12",
         "nvd_text": "An issue was discovered in sunxi_divs_clk_setup in drivers/clk/sunxi/clk-sunxi.c in the Linux kernel through 5.1.5. There is an unchecked kstrndup of derived_name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12455",
@@ -38990,8 +38991,8 @@
             "score": "7.8"
         },
         "cwe": "Input Validation",
-        "fixes": "",
-        "last_modified": "2019-05-30",
+        "fixes": "86e5aca7fa2927060839f3e3b40c8bd65a7e8d1e",
+        "last_modified": "2019-07-12",
         "nvd_text": "An issue was discovered in the MPT3COMMAND case in _ctl_ioctl_main in drivers/scsi/mpt3sas/mpt3sas_ctl.c in the Linux kernel through 5.1.5. It allows local users to cause a denial of service or possibly have unspecified other impact by changing the value of ioc_number between two kernel reads of that value, aka a \"double fetch\" vulnerability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12456",
