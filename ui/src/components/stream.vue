@@ -29,17 +29,17 @@
               wrap
             >
               <v-flex 
-                xs12 sm6 m6 l4
                 v-for="(details, cveid) in data"
                 :key="cveid"
+                xs12 sm12 md6 lg6
               >
                 <v-card class="cve-card">
                   <v-card-title>
                     <span class="headline">{{cveid}}</span>
                   </v-card-title>
                   <v-card-text>
-                    <span>{{details.cmt_msg}}</span>
-                    <span>{{details.cmt_id}}</span>
+                    <p>{{details.cmt_msg}}</p>
+                    <span class="mono">{{details.cmt_id}}</span>
                   </v-card-text>
                   <v-card-actions v-if="details.cmt_id">
                     <v-spacer></v-spacer>
@@ -148,5 +148,8 @@ export default {
 <style scoped>
 .cve-card {
   margin: 10px;
+}
+.mono {
+  font-family: 'Courier New', Courier, monospace;
 }
 </style>
