@@ -7,6 +7,10 @@
       fixed
       clipped-left
     >
+      <v-toolbar-side-icon 
+        class="hidden-lg-and-up"
+        @click="drawer = !drawer"
+      ></v-toolbar-side-icon>
       <img class="logo" src="@/assets/logo.svg"/>
       <v-toolbar-title class="white--text headline font-weight-light">Linux Kernel CVEs</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -24,7 +28,12 @@
         </v-autocomplete>
       </v-toolbar-items>
     </v-toolbar>
-    <v-navigation-drawer permanent clipped hide-overlay app mobile-break-point=0>
+    <v-navigation-drawer 
+      v-model="drawer" 
+      clipped
+      absolute 
+      app
+    >
       <v-list>
         <v-list-tile
           to="/"
@@ -135,6 +144,7 @@ export default {
       eolStreams: [],
       supportedStreams: [],
       errors: [],
+      drawer: false
     }
   },
   created () {
@@ -179,8 +189,9 @@ export default {
 
 <style scoped>
 .logo {
-  width: 50px;
-  height: 50px;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
 }
 .support {
   margin: 10px;
@@ -191,5 +202,8 @@ export default {
 }
 .contact-us {
   margin-top: 25px;
+}
+.page {
+  max-width: 885px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <v-layout column>
+  <v-layout column class="page">
     <v-flex class="row" xs12 v-if="!dismissedChanges">
       <v-card transition="slide-y-transition">
         <v-container>
@@ -15,7 +15,7 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-    <v-flex class="row" xs12>
+    <v-flex class="row main-content" xs12>
       <h1>Linux Kernel CVEs</h1>
       <p>This is a simple project to track CVEs in the upstream linux kernel. Individual distro’s (RHEL, Debian, Ubuntu, etc) often do a good job of tracking CVEs for their own kernels but this information is lacking for the upstream kernel. This project aims to help out with this void. The output was generated automatically through a set of tools that has not been fully tested or made public yet.</p>
       <h3>Linux security note</h3>
