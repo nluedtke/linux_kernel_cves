@@ -38977,6 +38977,7 @@
     "CVE-2019-12455": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "clk-sunxi: fix a missing-check bug in sunxi_divs_clk_setup()",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -38999,7 +39000,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "fcdf445ff42f036d22178b49cf64e92d527c1330",
-        "last_modified": "2019-07-12",
+        "last_modified": "2019-07-17",
         "nvd_text": "An issue was discovered in sunxi_divs_clk_setup in drivers/clk/sunxi/clk-sunxi.c in the Linux kernel through 5.1.5. There is an unchecked kstrndup of derived_name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12455",
@@ -39339,6 +39340,23 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-13233",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-13233",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-13233"
+        }
+    },
+    "CVE-2019-13272": {
+        "affected_versions": "v4.10-rc1 to v5.2",
+        "backport": true,
+        "breaks": "64b875f7ac8a5d60a4e191479299e931ee949b67",
+        "cmt_msg": "ptrace: Fix ->ptracer_cred handling for PTRACE_TRACEME",
+        "fixes": "6994eefb0053799d2e07cd140df6c2ea106c41ee",
+        "last_modified": "2019-07-17",
+        "nvd_text": "In the Linux kernel before 5.1.17, ptrace_link in kernel/ptrace.c mishandles the recording of the credentials of a process that wants to create a ptrace relationship, which allows local users to obtain root access by leveraging certain scenarios with a parent-child process relationship, where a parent drops privileges and calls execve (potentially allowing control by an attacker). One contributing factor is an object lifetime issue (which can also cause a panic). Another contributing factor is incorrect marking of a ptrace relationship as privileged, which is exploitable through (for example) Polkit's pkexec helper with PTRACE_TRACEME.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-13272",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-13272",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-13272",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-13272",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-13272",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-13272"
         }
     },
     "CVE-2019-1999": {
