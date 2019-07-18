@@ -22,8 +22,14 @@
         <p class="versions">{{contents.affected_versions}}</p>
         <h4>Hashes</h4>
         <ul id="hashes">
-          <li><strong>Breaks: </strong>{{contents.breaks}}</li>
-          <li><strong>Fixes:  </strong>{{contents.fixes}}</li>
+          <li><strong>Breaks: </strong>
+            <a class="hash-link"
+               target="_blank"
+               :href="'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/' + contents.breaks">{{contents.breaks}}</a></li>
+          <li><strong>Fixes:  </strong>
+            <a class="hash-link"
+               target="_blank"
+               :href="'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/' + contents.fixes">{{contents.fixes}}</a></li>
           <p class="commit-message"><strong>Commit message:</strong> {{ contents.cmt_msg }}</p>
         </ul>
         <cvss v-if="contents.cvss2" cvssVersion="cvss2" v-bind:cvssData="contents.cvss2"/>
@@ -136,7 +142,16 @@ export default {
   padding: .5em 1em;
   font-size: 12px;
   margin-right: 8px;
+  margin-top: 10px;
   white-space: normal;
+}
+.hash-link {
+  text-decoration: none;
+  -webkit-transition: color .2s, background-color .2s; /* Safari */
+  transition: color .2s, background-color .2s;
+}
+.hash-link:hover {
+  background-color: #b1b1b1;
 }
 h1, h2, h3, h4{
   margin-top: 1.75em;
