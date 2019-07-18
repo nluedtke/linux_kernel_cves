@@ -38,10 +38,11 @@
                     <span class="headline">{{cveid}}</span>
                   </v-card-title>
                   <v-card-text>
-                    <p>{{details.cmt_msg}}</p>
+                    <p v-if="details.cmt_msg">{{details.cmt_msg}}</p>
+                    <p v-else><em>This CVE has no fixing commit in stream {{ stream }}.</em></p>
                     <span class="mono">{{details.cmt_id}}</span>
                   </v-card-text>
-                  <v-card-actions v-if="details.cmt_id">
+                  <v-card-actions v-if="cveid">
                     <v-spacer></v-spacer>
                     <v-btn icon flat color="green"
                       :to="'/cves/' + cveid"
