@@ -38059,7 +38059,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "69ae4f6aac1578575126319d3f55550e7e440449",
-        "last_modified": "2019-07-10",
+        "last_modified": "2019-07-15",
         "nvd_text": "A flaw was found in the Linux kernel. A heap based buffer overflow in mwifiex_uap_parse_tail_ies function in drivers/net/wireless/marvell/mwifiex/ie.c might lead to memory corruption and possibly other consequences.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10126",
@@ -38089,8 +38089,29 @@
         "affected_versions": "unk to v5.2-rc1",
         "breaks": "",
         "cmt_msg": "inet: switch IP ID generator to siphash",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "4.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "score": "6.5"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "df453700e8d81b1bdafdf684365ee2b9431fb702",
-        "last_modified": "2019-07-06",
+        "last_modified": "2019-07-16",
         "nvd_text": "In the Linux kernel before 5.1.7, a device can be tracked by an attacker using the IP ID values the kernel produces for connection-less protocols (e.g., UDP and ICMP). When such traffic is sent to multiple destination IP addresses, it is possible to obtain hash collisions (of indices to the counter array) and thereby obtain the hashing key (via enumeration). An attack may be conducted by hosting a crafted web page that uses WebRTC or gQUIC to force UDP traffic to attacker-controlled IP addresses.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10638",
@@ -38105,8 +38126,29 @@
         "affected_versions": "unk to v5.1-rc4",
         "breaks": "",
         "cmt_msg": "netns: provide pure entropy for net_hash_mix()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Information Leak / Disclosure",
         "fixes": "355b98553789b646ed97ad801a619ff898471b92",
-        "last_modified": "2019-07-06",
+        "last_modified": "2019-07-17",
         "nvd_text": "The Linux kernel 4.x (starting from 4.1) and 5.x before 5.0.8 allows Information Exposure (partial kernel address disclosure), leading to a KASLR bypass. Specifically, it is possible to extract the KASLR kernel image offset using the IP ID values the kernel produces for connection-less protocols (e.g., UDP and ICMP). When such traffic is sent to multiple destination IP addresses, it is possible to obtain hash collisions (of indices to the counter array) and thereby obtain the hashing key (via enumeration). This key contains enough bits from a kernel address (of a static variable) so when the key is extracted (via enumeration), the offset of the kernel image is exposed. This attack can be carried out remotely, by the attacker forcing the target device to send UDP or ICMP (or certain other) traffic to attacker-controlled IP addresses. Forcing a server to send UDP traffic is trivial if the server is a DNS server. ICMP traffic is trivial if the server answers ICMP Echo requests (ping). For client targets, if the target visits the attacker's web page, then WebRTC or gQUIC can be used to force UDP traffic to attacker-controlled IP addresses. NOTE: this attack against KASLR became viable in 4.1 because IP ID generation was changed to have a dependency on an address associated with a network namespace.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10639",
@@ -38750,6 +38792,7 @@
     "CVE-2019-12379": {
         "affected_versions": "v2.6.12-rc2 to unk",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "consolemap: Fix a memory leaking bug in drivers/tty/vt/consolemap.c",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -38772,7 +38815,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "84ecc2f6eb1cb12e6d44818f94fa49b50f06e6ac",
-        "last_modified": "2019-06-20",
+        "last_modified": "2019-07-12",
         "nvd_text": "An issue was discovered in con_insert_unipair in drivers/tty/vt/consolemap.c in the Linux kernel through 5.1.5. There is a memory leak in a certain case of an ENOMEM outcome of kmalloc.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12379",
@@ -38860,6 +38903,7 @@
     "CVE-2019-12382": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "drm/edid: Fix a missing-check bug in drm_load_edid_firmware()",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -38882,7 +38926,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "9f1f1a2dab38d4ce87a13565cf4dc1b73bef3a5f",
-        "last_modified": "2019-05-29",
+        "last_modified": "2019-07-16",
         "nvd_text": "An issue was discovered in drm_load_edid_firmware in drivers/gpu/drm/drm_edid_load.c in the Linux kernel through 5.1.5. There is an unchecked kstrdup of fwstr, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12382",
@@ -38896,6 +38940,7 @@
     "CVE-2019-12454": {
         "affected_versions": "v5.1-rc1 to unk",
         "breaks": "20aedafdf4926e7a957f8b302a18c8fb75c7e332",
+        "cmt_msg": "wcd9335: fix a incorrect use of kstrndup()",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -38917,8 +38962,8 @@
             "score": "7.8"
         },
         "cwe": "Input Validation",
-        "fixes": "",
-        "last_modified": "2019-05-31",
+        "fixes": "a54988113985ca22e414e132054f234fc8a92604",
+        "last_modified": "2019-07-12",
         "nvd_text": "An issue was discovered in wcd9335_codec_enable_dec in sound/soc/codecs/wcd9335.c in the Linux kernel through 5.1.5. It uses kstrndup instead of kmemdup_nul, which allows attackers to have an unspecified impact via unknown vectors.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12454",
@@ -38932,6 +38977,7 @@
     "CVE-2019-12455": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "clk-sunxi: fix a missing-check bug in sunxi_divs_clk_setup()",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -38953,8 +38999,8 @@
             "score": "5.5"
         },
         "cwe": "NULL Pointer Dereference",
-        "fixes": "",
-        "last_modified": "2019-05-30",
+        "fixes": "fcdf445ff42f036d22178b49cf64e92d527c1330",
+        "last_modified": "2019-07-17",
         "nvd_text": "An issue was discovered in sunxi_divs_clk_setup in drivers/clk/sunxi/clk-sunxi.c in the Linux kernel through 5.1.5. There is an unchecked kstrndup of derived_name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12455",
@@ -38966,8 +39012,8 @@
         }
     },
     "CVE-2019-12456": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v3.8-rc1 to unk",
+        "breaks": "f92363d12359498f9a9960511de1a550f0ec41c2",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -38989,8 +39035,8 @@
             "score": "7.8"
         },
         "cwe": "Input Validation",
-        "fixes": "",
-        "last_modified": "2019-05-30",
+        "fixes": "86e5aca7fa2927060839f3e3b40c8bd65a7e8d1e",
+        "last_modified": "2019-07-18",
         "nvd_text": "An issue was discovered in the MPT3COMMAND case in _ctl_ioctl_main in drivers/scsi/mpt3sas/mpt3sas_ctl.c in the Linux kernel through 5.1.5. It allows local users to cause a denial of service or possibly have unspecified other impact by changing the value of ioc_number between two kernel reads of that value, aka a \"double fetch\" vulnerability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12456",
@@ -39004,6 +39050,7 @@
     "CVE-2019-12614": {
         "affected_versions": "v2.6.33-rc1 to unk",
         "breaks": "ab519a011caa5ec47d992cb8a4fc8e7af9b9e3f8",
+        "cmt_msg": "powerpc/pseries/dlpar: Fix a missing check in dlpar_parse_cc_property()",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -39026,7 +39073,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "efa9ace68e487ddd29c2b4d6dd23242158f1f607",
-        "last_modified": "2019-06-27",
+        "last_modified": "2019-07-15",
         "nvd_text": "An issue was discovered in dlpar_parse_cc_property in arch/powerpc/platforms/pseries/dlpar.c in the Linux kernel through 5.1.6. There is an unchecked kstrdup of prop-&gt;name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12614",
@@ -39293,6 +39340,38 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-13233",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-13233",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-13233"
+        }
+    },
+    "CVE-2019-13272": {
+        "affected_versions": "v4.10-rc1 to v5.2",
+        "backport": true,
+        "breaks": "64b875f7ac8a5d60a4e191479299e931ee949b67",
+        "cmt_msg": "ptrace: Fix ->ptracer_cred handling for PTRACE_TRACEME",
+        "fixes": "6994eefb0053799d2e07cd140df6c2ea106c41ee",
+        "last_modified": "2019-07-17",
+        "nvd_text": "In the Linux kernel before 5.1.17, ptrace_link in kernel/ptrace.c mishandles the recording of the credentials of a process that wants to create a ptrace relationship, which allows local users to obtain root access by leveraging certain scenarios with a parent-child process relationship, where a parent drops privileges and calls execve (potentially allowing control by an attacker). One contributing factor is an object lifetime issue (which can also cause a panic). Another contributing factor is incorrect marking of a ptrace relationship as privileged, which is exploitable through (for example) Polkit's pkexec helper with PTRACE_TRACEME.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-13272",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-13272",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-13272",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-13272",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-13272",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-13272"
+        }
+    },
+    "CVE-2019-13631": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-07-18",
+        "nvd_text": "In parse_hid_report_descriptor in drivers/input/tablet/gtco.c in the Linux kernel through 5.2.1, a malicious USB device can send an HID report that triggers an out-of-bounds write during generation of debugging messages.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-13631",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-13631",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-13631",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-13631",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-13631",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-13631"
         }
     },
     "CVE-2019-1999": {
@@ -39691,7 +39770,7 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "13ec7f10b87f5fc04c4ccbd491c94c7980236a74",
-        "last_modified": "2019-07-10",
+        "last_modified": "2019-07-15",
         "nvd_text": "A flaw that allowed an attacker to corrupt memory and possibly escalate privileges was found in the mwifiex kernel module while connecting to a malicious wireless network.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3846",
