@@ -38790,7 +38790,7 @@
         }
     },
     "CVE-2019-12379": {
-        "affected_versions": "v2.6.12-rc2 to unk",
+        "affected_versions": "v2.6.12-rc2 to v5.3-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "consolemap: Fix a memory leaking bug in drivers/tty/vt/consolemap.c",
         "cvss2": {
@@ -38815,7 +38815,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "84ecc2f6eb1cb12e6d44818f94fa49b50f06e6ac",
-        "last_modified": "2019-07-12",
+        "last_modified": "2019-07-22",
         "nvd_text": "An issue was discovered in con_insert_unipair in drivers/tty/vt/consolemap.c in the Linux kernel through 5.1.5. There is a memory leak in a certain case of an ENOMEM outcome of kmalloc.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12379",
@@ -38901,7 +38901,7 @@
         }
     },
     "CVE-2019-12382": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.3-rc1",
         "breaks": "",
         "cmt_msg": "drm/edid: Fix a missing-check bug in drm_load_edid_firmware()",
         "cvss2": {
@@ -38926,7 +38926,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "9f1f1a2dab38d4ce87a13565cf4dc1b73bef3a5f",
-        "last_modified": "2019-07-16",
+        "last_modified": "2019-07-22",
         "nvd_text": "An issue was discovered in drm_load_edid_firmware in drivers/gpu/drm/drm_edid_load.c in the Linux kernel through 5.1.5. There is an unchecked kstrdup of fwstr, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12382",
@@ -38938,7 +38938,7 @@
         }
     },
     "CVE-2019-12454": {
-        "affected_versions": "v5.1-rc1 to unk",
+        "affected_versions": "v5.1-rc1 to v5.3-rc1",
         "breaks": "20aedafdf4926e7a957f8b302a18c8fb75c7e332",
         "cmt_msg": "wcd9335: fix a incorrect use of kstrndup()",
         "cvss2": {
@@ -38963,7 +38963,7 @@
         },
         "cwe": "Input Validation",
         "fixes": "a54988113985ca22e414e132054f234fc8a92604",
-        "last_modified": "2019-07-12",
+        "last_modified": "2019-07-22",
         "nvd_text": "An issue was discovered in wcd9335_codec_enable_dec in sound/soc/codecs/wcd9335.c in the Linux kernel through 5.1.5. It uses kstrndup instead of kmemdup_nul, which allows attackers to have an unspecified impact via unknown vectors.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12454",
@@ -38975,7 +38975,7 @@
         }
     },
     "CVE-2019-12455": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.3-rc1",
         "breaks": "",
         "cmt_msg": "clk-sunxi: fix a missing-check bug in sunxi_divs_clk_setup()",
         "cvss2": {
@@ -39000,7 +39000,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "fcdf445ff42f036d22178b49cf64e92d527c1330",
-        "last_modified": "2019-07-17",
+        "last_modified": "2019-07-22",
         "nvd_text": "An issue was discovered in sunxi_divs_clk_setup in drivers/clk/sunxi/clk-sunxi.c in the Linux kernel through 5.1.5. There is an unchecked kstrndup of derived_name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12455",
@@ -39048,7 +39048,7 @@
         }
     },
     "CVE-2019-12614": {
-        "affected_versions": "v2.6.33-rc1 to unk",
+        "affected_versions": "v2.6.33-rc1 to v5.3-rc1",
         "breaks": "ab519a011caa5ec47d992cb8a4fc8e7af9b9e3f8",
         "cmt_msg": "powerpc/pseries/dlpar: Fix a missing check in dlpar_parse_cc_property()",
         "cvss2": {
@@ -39073,7 +39073,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "efa9ace68e487ddd29c2b4d6dd23242158f1f607",
-        "last_modified": "2019-07-15",
+        "last_modified": "2019-07-22",
         "nvd_text": "An issue was discovered in dlpar_parse_cc_property in arch/powerpc/platforms/pseries/dlpar.c in the Linux kernel through 5.1.6. There is an unchecked kstrdup of prop-&gt;name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12614",
@@ -39360,11 +39360,11 @@
         }
     },
     "CVE-2019-13631": {
-        "affected_versions": "v2.6.21-rc1 to unk",
+        "affected_versions": "v2.6.21-rc1 to v5.3-rc1",
         "breaks": "a19ceb56cbd1e1beff3e9cf6042e1f31f6487aa6",
         "cmt_msg": "Input: gtco - bounds check collection indent level",
         "fixes": "2a017fd82c5402b3c8df5e3d6e5165d9e6147dc1",
-        "last_modified": "2019-07-21",
+        "last_modified": "2019-07-22",
         "nvd_text": "In parse_hid_report_descriptor in drivers/input/tablet/gtco.c in the Linux kernel through 5.2.1, a malicious USB device can send an HID report that triggers an out-of-bounds write during generation of debugging messages.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-13631",
