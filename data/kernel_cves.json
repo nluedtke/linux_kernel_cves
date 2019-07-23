@@ -38086,8 +38086,8 @@
         }
     },
     "CVE-2019-10638": {
-        "affected_versions": "unk to v5.2-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "inet: switch IP ID generator to siphash",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -38111,7 +38111,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "df453700e8d81b1bdafdf684365ee2b9431fb702",
-        "last_modified": "2019-07-16",
+        "last_modified": "2019-07-23",
         "nvd_text": "In the Linux kernel before 5.1.7, a device can be tracked by an attacker using the IP ID values the kernel produces for connection-less protocols (e.g., UDP and ICMP). When such traffic is sent to multiple destination IP addresses, it is possible to obtain hash collisions (of indices to the counter array) and thereby obtain the hashing key (via enumeration). An attack may be conducted by hosting a crafted web page that uses WebRTC or gQUIC to force UDP traffic to attacker-controlled IP addresses.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10638",
@@ -38123,8 +38123,8 @@
         }
     },
     "CVE-2019-10639": {
-        "affected_versions": "unk to v5.1-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.27-rc1 to v5.1-rc4",
+        "breaks": "0b4419162aa6c4204843f3a13b48d9ab821d3167",
         "cmt_msg": "netns: provide pure entropy for net_hash_mix()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38148,7 +38148,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "355b98553789b646ed97ad801a619ff898471b92",
-        "last_modified": "2019-07-17",
+        "last_modified": "2019-07-23",
         "nvd_text": "The Linux kernel 4.x (starting from 4.1) and 5.x before 5.0.8 allows Information Exposure (partial kernel address disclosure), leading to a KASLR bypass. Specifically, it is possible to extract the KASLR kernel image offset using the IP ID values the kernel produces for connection-less protocols (e.g., UDP and ICMP). When such traffic is sent to multiple destination IP addresses, it is possible to obtain hash collisions (of indices to the counter array) and thereby obtain the hashing key (via enumeration). This key contains enough bits from a kernel address (of a static variable) so when the key is extracted (via enumeration), the offset of the kernel image is exposed. This attack can be carried out remotely, by the attacker forcing the target device to send UDP or ICMP (or certain other) traffic to attacker-controlled IP addresses. Forcing a server to send UDP traffic is trivial if the server is a DNS server. ICMP traffic is trivial if the server answers ICMP Echo requests (ping). For client targets, if the target visits the attacker's web page, then WebRTC or gQUIC can be used to force UDP traffic to attacker-controlled IP addresses. NOTE: this attack against KASLR became viable in 4.1 because IP ID generation was changed to have a dependency on an address associated with a network namespace.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10639",
@@ -39376,10 +39376,10 @@
         }
     },
     "CVE-2019-13648": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v3.9-rc1 to unk",
+        "breaks": "2b0a576d15e0e14751f00f9c87e46bad27f217e7",
         "fixes": "",
-        "last_modified": "2019-07-19",
+        "last_modified": "2019-07-23",
         "nvd_text": "In the Linux kernel through 5.2.1 on the powerpc platform, when hardware transactional memory is disabled, a local user can cause a denial of service (TM Bad Thing exception and system crash) via a sigreturn() system call that sends a crafted signal frame. This affects arch/powerpc/kernel/signal_32.c and arch/powerpc/kernel/signal_64.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-13648",
