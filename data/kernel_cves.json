@@ -36180,6 +36180,54 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20836"
         }
     },
+    "CVE-2018-20854": {
+        "affected_versions": "unk to v4.20-rc1",
+        "breaks": "",
+        "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read",
+        "fixes": "6acb47d1a318e5b3b7115354ebc4ea060c59d3a1",
+        "last_modified": "2019-07-26",
+        "nvd_text": "An issue was discovered in the Linux kernel before 4.20. drivers/phy/mscc/phy-ocelot-serdes.c has an off-by-one error with a resultant ctrl-&gt;phys out-of-bounds read.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20854",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-20854",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-20854",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-20854",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-20854",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20854"
+        }
+    },
+    "CVE-2018-20855": {
+        "affected_versions": "unk to v4.19-rc1",
+        "breaks": "",
+        "cmt_msg": "IB/mlx5: Fix leaking stack memory to userspace",
+        "fixes": "0625b4ba1a5d4703c7fb01c497bd6c156908af00",
+        "last_modified": "2019-07-26",
+        "nvd_text": "An issue was discovered in the Linux kernel before 4.18.7. In create_qp_common in drivers/infiniband/hw/mlx5/qp.c, mlx5_ib_create_qp_resp was never initialized, resulting in a leak of stack memory to userspace.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20855",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-20855",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-20855",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-20855",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-20855",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20855"
+        }
+    },
+    "CVE-2018-20856": {
+        "affected_versions": "unk to v4.19-rc1",
+        "breaks": "",
+        "cmt_msg": "block: blk_init_allocated_queue() set q->fq as NULL in the fail case",
+        "fixes": "54648cf1ec2d7f4b6a71767799c45676a138ca24",
+        "last_modified": "2019-07-26",
+        "nvd_text": "An issue was discovered in the Linux kernel before 4.18.7. In block/blk-core.c, there is an __blk_drain_queue() use-after-free because a certain error case is mishandled.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20856",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2018-20856",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2018-20856",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2018-20856",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2018-20856",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2018/CVE-2018-20856"
+        }
+    },
     "CVE-2018-3574": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -39420,7 +39468,7 @@
         },
         "cwe": "Out-of-bounds Write",
         "fixes": "2a017fd82c5402b3c8df5e3d6e5165d9e6147dc1",
-        "last_modified": "2019-07-24",
+        "last_modified": "2019-07-26",
         "nvd_text": "In parse_hid_report_descriptor in drivers/input/tablet/gtco.c in the Linux kernel through 5.2.1, a malicious USB device can send an HID report that triggers an out-of-bounds write during generation of debugging messages.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-13631",
