@@ -39494,6 +39494,38 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-13648"
         }
     },
+    "CVE-2019-14283": {
+        "affected_versions": "unk to v5.3-rc1",
+        "breaks": "",
+        "cmt_msg": "floppy: fix out-of-bounds read in copy_buffer",
+        "fixes": "da99466ac243f15fbba65bd261bfc75ffa1532b6",
+        "last_modified": "2019-07-26",
+        "nvd_text": "In the Linux kernel before 5.2.3, set_geometry in drivers/block/floppy.c does not validate the sect and head fields, as demonstrated by an integer overflow and out-of-bounds read. It can be triggered by an unprivileged local user when a floppy disk has been inserted. NOTE: QEMU creates the floppy device by default.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14283",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14283",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-14283",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-14283",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-14283",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-14283"
+        }
+    },
+    "CVE-2019-14284": {
+        "affected_versions": "unk to v5.3-rc1",
+        "breaks": "",
+        "cmt_msg": "floppy: fix div-by-zero in setup_format_params",
+        "fixes": "f3554aeb991214cbfafd17d55e2bfddb50282e32",
+        "last_modified": "2019-07-26",
+        "nvd_text": "In the Linux kernel before 5.2.3, drivers/block/floppy.c allows a denial of service by setup_format_params division-by-zero. Two consecutive ioctls can trigger the bug: the first one should set the drive geometry with .sect and .rate values that make F_SECT_PER_TRACK be zero. Next, the floppy format operation should be called. It can be triggered by an unprivileged local user even when a floppy disk has not been inserted. NOTE: QEMU creates the floppy device by default.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14284",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14284",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-14284",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-14284",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-14284",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-14284"
+        }
+    },
     "CVE-2019-1999": {
         "affected_versions": "v2.6.12-rc2 to v5.1-rc3",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
