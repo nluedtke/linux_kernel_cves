@@ -25,11 +25,11 @@
           <li><strong>Breaks: </strong>
             <a class="hash-link"
                target="_blank"
-               :href="'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/' + contents.breaks">{{contents.breaks}}</a></li>
+               :href="'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit?id=' + contents.breaks">{{contents.breaks}}</a></li>
           <li><strong>Fixes:  </strong>
             <a class="hash-link"
                target="_blank"
-               :href="'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/' + contents.fixes">{{contents.fixes}}</a></li>
+               :href="'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit?id=' + contents.fixes">{{contents.fixes}}</a></li>
           <p class="commit-message"><strong>Commit message:</strong> {{ contents.cmt_msg }}</p>
         </ul>
         <cvss v-if="contents.cvss2" cvssVersion="cvss2" v-bind:cvssData="contents.cvss2"/>
