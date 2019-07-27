@@ -144,7 +144,7 @@ export default {
       eolStreams: [],
       supportedStreams: [],
       errors: [],
-      drawer: false
+      drawer: true
     }
   },
   created () {
