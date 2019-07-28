@@ -252,6 +252,7 @@ CVEs fixed in 3.12.45:
 CVEs fixed in 3.12.46:
   CVE-2015-4692: cda28549b632e62f662ce15242b7266cce90c128 kvm: x86: fix kvm_apic_has_events to check for NULL pointer
   CVE-2015-5707: aba300b9c26f063efcaee374e54264c79a611f22 sg_start_req(): make sure that there's not too many elements in iovec
+  CVE-2015-9289: da0f41c912a624883a79ff47321b0e9f76d7f27a cx24116: fix a buffer overflow when checking userspace params
 
 CVEs fixed in 3.12.47:
   CVE-2015-3288: bf653833fc72668cadcb1f54310f3d0bd6b36393 mm: avoid setting up anonymous pages into file mapping
@@ -513,6 +514,7 @@ Outstanding CVEs:
   CVE-2016-10147: (unk) crypto: mcryptd - Check mcryptd algorithm compatibility 
   CVE-2016-10723: (unk) mm, oom: remove sleep from under oom_lock 
   CVE-2016-10741: (unk) xfs: don't BUG() on mixed direct and mapped I/O 
+  CVE-2016-10764: (unk) mtd: spi-nor: Off by one in cqspi_setup_flash() 
   CVE-2016-1583: (unk) proc: prevent stacking filesystems on top 
   CVE-2016-3139: (unk) Input: wacom - compute the HID report size to get the actual packet size 
   CVE-2016-3672: (unk) x86/mm/32: Enable full randomization on i386 and X86_32 
@@ -634,6 +636,7 @@ Outstanding CVEs:
   CVE-2017-18270: (unk) KEYS: prevent creating a different user's keyrings 
   CVE-2017-18344: (unk) posix-timer: Properly check sigevent->sigev_notify 
   CVE-2017-18360: (unk) USB: serial: io_ti: fix div-by-zero in set_termios 
+  CVE-2017-18379: (unk) nvmet-fc: ensure target queue id within range. 
   CVE-2017-5715: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5754: (unk) x86/cpufeatures: Add Intel feature bits for Speculation Control 
@@ -741,6 +744,9 @@ Outstanding CVEs:
   CVE-2018-20510: (unk) binder: replace "%p" with "%pK" 
   CVE-2018-20511: (unk) net/appletalk: fix minor pointer leak to userspace in SIOCFINDIPDDPRT 
   CVE-2018-20836: (unk) scsi: libsas: fix a race condition when smp task timeout 
+  CVE-2018-20854: (unk) phy: ocelot-serdes: fix out-of-bounds read 
+  CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
+  CVE-2018-20856: (unk) block: blk_init_allocated_queue() set q->fq as NULL in the fail case 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3639: (unk) x86/nospec: Simplify alternative_msr_write() 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
@@ -779,6 +785,7 @@ Outstanding CVEs:
   CVE-2018-9568: (unk) net: Set sk_prot_creator when cloning sockets to the right proto 
   CVE-2019-10126: (unk) mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies() 
   CVE-2019-10142: (unk) drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl 
+  CVE-2019-10207: (unk)  
   CVE-2019-10638: (unk) inet: switch IP ID generator to siphash 
   CVE-2019-10639: (unk) netns: provide pure entropy for net_hash_mix() 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
@@ -805,7 +812,10 @@ Outstanding CVEs:
   CVE-2019-12818: (unk) net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails 
   CVE-2019-12881: (unk)  
   CVE-2019-13272: (unk) ptrace: Fix ->ptracer_cred handling for PTRACE_TRACEME 
-  CVE-2019-13631: (unk)  
+  CVE-2019-13631: (unk) Input: gtco - bounds check collection indent level 
+  CVE-2019-13648: (unk) powerpc/tm: Fix oops on sigreturn on systems without TM 
+  CVE-2019-14283: (unk) floppy: fix out-of-bounds read in copy_buffer 
+  CVE-2019-14284: (unk) floppy: fix div-by-zero in setup_format_params 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
   CVE-2019-2054: (unk) arm/ptrace: run seccomp after ptrace 

@@ -28,6 +28,7 @@ CVEs fixed in 4.9.5:
 
 CVEs fixed in 4.9.6:
   CVE-2016-10153: ecf7ced8562811576cd02158d6ae8e44c1fb4671 libceph: introduce ceph_crypt() for in-place en/decryption
+  CVE-2016-10764: e55e6c026b7c49c4dcc33f4ebc330e660ecf3963 mtd: spi-nor: Off by one in cqspi_setup_flash()
   CVE-2017-5547: 63df1ccb937f67fbefa0a77415b3a4d10434a09b HID: corsair: fix DMA buffers on stack
   CVE-2017-5548: 86249aef233e6e05ba84f6c9aab9e6b890fc6ba7 ieee802154: atusb: do not use the stack for buffers to make them DMA able
   CVE-2017-5551: 782b361c93062f083bbc9a78928498218f950399 tmpfs: clear S_ISGID when setting posix ACLs
@@ -621,6 +622,10 @@ CVEs fixed in 4.9.182:
 CVEs fixed in 4.9.185:
   CVE-2019-13272: d8b99303da935228a33fa7656a964adfb33e271b ptrace: Fix ->ptracer_cred handling for PTRACE_TRACEME
 
+CVEs fixed in 4.9.186:
+  CVE-2019-10126: f70d411e2ecd1f8297e1fd7e91108ca220986784 mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies()
+  CVE-2019-3846: 58ec3690a908494f7a7c3e8a302eb491bef9d979 mwifiex: Fix possible buffer overflows at parsing bss descriptor
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -641,6 +646,7 @@ Outstanding CVEs:
   CVE-2017-13694: (unk)  
   CVE-2017-18232: (unk) scsi: libsas: direct call probe and destruct 
   CVE-2017-18261: (unk) clocksource/drivers/arm_arch_timer: Avoid infinite recursion when ftrace is enabled 
+  CVE-2017-18379: (unk) nvmet-fc: ensure target queue id within range. 
   CVE-2017-5715: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
@@ -662,11 +668,14 @@ Outstanding CVEs:
   CVE-2018-13098: (unk) f2fs: fix to do sanity check with extra_attr feature 
   CVE-2018-17977: (unk)  
   CVE-2018-20509: (unk) binder: refactor binder ref inc/dec for thread safety 
+  CVE-2018-20854: (unk) phy: ocelot-serdes: fix out-of-bounds read 
+  CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
+  CVE-2018-20856: (unk) block: blk_init_allocated_queue() set q->fq as NULL in the fail case 
   CVE-2018-6554: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-6555: (unk) staging: irda: remove the irda network stack and drivers 
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
   CVE-2018-9517: (unk) l2tp: pass tunnel pointer to ->session_create() 
-  CVE-2019-10126: (unk) mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies() 
+  CVE-2019-10207: (unk)  
   CVE-2019-10638: (unk) inet: switch IP ID generator to siphash 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2019-11191: (unk)  
@@ -681,10 +690,12 @@ Outstanding CVEs:
   CVE-2019-12614: (unk) powerpc/pseries/dlpar: Fix a missing check in dlpar_parse_cc_property() 
   CVE-2019-12615: (unk) mdesc: fix a missing-check bug in get_vdev_port_node_info() 
   CVE-2019-12881: (unk)  
-  CVE-2019-13631: (unk)  
+  CVE-2019-13631: (unk) Input: gtco - bounds check collection indent level 
+  CVE-2019-13648: (unk) powerpc/tm: Fix oops on sigreturn on systems without TM 
+  CVE-2019-14283: (unk) floppy: fix out-of-bounds read in copy_buffer 
+  CVE-2019-14284: (unk) floppy: fix div-by-zero in setup_format_params 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
-  CVE-2019-3846: (unk) mwifiex: Fix possible buffer overflows at parsing bss descriptor 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-3892: (unk) coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping 
   CVE-2019-3900: (unk) vhost_net: fix possible infinite loop 

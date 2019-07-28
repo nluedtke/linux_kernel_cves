@@ -69,6 +69,7 @@ CVEs fixed in 3.18.18:
   CVE-2015-3212: 720e1669baa8f2658d737825e49edb018cf3aa1d sctp: fix ASCONF list handling
   CVE-2015-4002: 63f352a237c26bf679a9f73a5e92060bb1f94ef9 ozwpan: Use proper check to prevent heap overflow
   CVE-2015-4003: 5fcae12c6f561a1b218f0250f599d12fdd5b6b45 ozwpan: divide-by-zero leading to panic
+  CVE-2015-9289: f162b656ee480c9a3b024c85deffc4ab39f1a9a5 cx24116: fix a buffer overflow when checking userspace params
 
 CVEs fixed in 3.18.19:
   CVE-2014-9710: 55e97f654cbbbef70f9714f0e113604dd931e360 Btrfs: make xattr replace operations atomic
@@ -664,6 +665,7 @@ Outstanding CVEs:
   CVE-2016-10147: (unk) crypto: mcryptd - Check mcryptd algorithm compatibility 
   CVE-2016-10723: (unk) mm, oom: remove sleep from under oom_lock 
   CVE-2016-10741: (unk) xfs: don't BUG() on mixed direct and mapped I/O 
+  CVE-2016-10764: (unk) mtd: spi-nor: Off by one in cqspi_setup_flash() 
   CVE-2016-1575: (unk) ovl: setattr: check permissions before copy-up 
   CVE-2016-1576: (unk) ovl: setattr: check permissions before copy-up 
   CVE-2016-2069: (unk) x86/mm: Add barriers and document switch_mm()-vs-flush synchronization 
@@ -717,6 +719,7 @@ Outstanding CVEs:
   CVE-2017-18241: (unk) f2fs: fix a panic caused by NULL flush_cmd_control 
   CVE-2017-18249: (unk) f2fs: fix race condition in between free nid allocator/initializer 
   CVE-2017-18261: (unk) clocksource/drivers/arm_arch_timer: Avoid infinite recursion when ftrace is enabled 
+  CVE-2017-18379: (unk) nvmet-fc: ensure target queue id within range. 
   CVE-2017-2583: (unk) KVM: x86: fix emulation of "MOV SS, null selector" 
   CVE-2017-2584: (unk) KVM: x86: Introduce segmented_write_std 
   CVE-2017-5549: (unk) USB: serial: kl5kusb105: fix line-state error handling 
@@ -775,6 +778,9 @@ Outstanding CVEs:
   CVE-2018-19824: (unk) ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c 
   CVE-2018-20509: (unk) binder: refactor binder ref inc/dec for thread safety 
   CVE-2018-20510: (unk) binder: replace "%p" with "%pK" 
+  CVE-2018-20854: (unk) phy: ocelot-serdes: fix out-of-bounds read 
+  CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
+  CVE-2018-20856: (unk) block: blk_init_allocated_queue() set q->fq as NULL in the fail case 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3639: (unk) x86/nospec: Simplify alternative_msr_write() 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
@@ -792,6 +798,7 @@ Outstanding CVEs:
   CVE-2018-9465: (unk) binder: fix proc->files use-after-free 
   CVE-2018-9517: (unk) l2tp: pass tunnel pointer to ->session_create() 
   CVE-2019-10126: (unk) mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies() 
+  CVE-2019-10207: (unk)  
   CVE-2019-10638: (unk) inet: switch IP ID generator to siphash 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2019-11191: (unk)  
@@ -812,7 +819,10 @@ Outstanding CVEs:
   CVE-2019-12615: (unk) mdesc: fix a missing-check bug in get_vdev_port_node_info() 
   CVE-2019-12881: (unk)  
   CVE-2019-13272: (unk) ptrace: Fix ->ptracer_cred handling for PTRACE_TRACEME 
-  CVE-2019-13631: (unk)  
+  CVE-2019-13631: (unk) Input: gtco - bounds check collection indent level 
+  CVE-2019-13648: (unk) powerpc/tm: Fix oops on sigreturn on systems without TM 
+  CVE-2019-14283: (unk) floppy: fix out-of-bounds read in copy_buffer 
+  CVE-2019-14284: (unk) floppy: fix div-by-zero in setup_format_params 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2024: (unk) media: em28xx: Fix use-after-free when disconnecting 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
