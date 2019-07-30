@@ -29,19 +29,20 @@
               wrap
             >
               <v-flex 
-                xs12 sm6 m6 l4
                 v-for="(details, cveid) in data"
                 :key="cveid"
+                xs12 sm12 md6 lg6
               >
                 <v-card class="cve-card">
                   <v-card-title>
                     <span class="headline">{{cveid}}</span>
                   </v-card-title>
                   <v-card-text>
-                    <span>{{details.cmt_msg}}</span>
-                    <span>{{details.cmt_id}}</span>
+                    <p v-if="details.cmt_msg">{{details.cmt_msg}}</p>
+                    <p v-else><em>This CVE has no fixing commit in stream {{ stream }}.</em></p>
+                    <span class="mono">{{details.cmt_id}}</span>
                   </v-card-text>
-                  <v-card-actions v-if="details.cmt_id">
+                  <v-card-actions v-if="cveid">
                     <v-spacer></v-spacer>
                     <v-btn icon flat color="green"
                       :to="'/cves/' + cveid"
@@ -148,5 +149,8 @@ export default {
 <style scoped>
 .cve-card {
   margin: 10px;
+}
+.mono {
+  font-family: 'Courier New', Courier, monospace;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="page">
     <div v-if="contents" class="content">
       <h3 v-if="contents.name" class="cve-headline"> {{ contents.name }} - {{ contents.id }}</h3>
       <h3 v-else class="cve-headline">{{ contents.id }}</h3>
@@ -22,8 +22,14 @@
         <p class="versions">{{contents.affected_versions}}</p>
         <h4>Hashes</h4>
         <ul id="hashes">
-          <li><strong>Breaks: </strong>{{contents.breaks}}</li>
-          <li><strong>Fixes:  </strong>{{contents.fixes}}</li>
+          <li><strong>Breaks: </strong>
+            <a class="hash-link"
+               target="_blank"
+               :href="'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit?id=' + contents.breaks">{{contents.breaks}}</a></li>
+          <li><strong>Fixes:  </strong>
+            <a class="hash-link"
+               target="_blank"
+               :href="'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit?id=' + contents.fixes">{{contents.fixes}}</a></li>
           <p class="commit-message"><strong>Commit message:</strong> {{ contents.cmt_msg }}</p>
         </ul>
         <cvss v-if="contents.cvss2" cvssVersion="cvss2" v-bind:cvssData="contents.cvss2"/>
@@ -43,7 +49,6 @@
         <a class="issue" href="https://github.com/nluedtke/linux_kernel_cves/issues/new?assignees=&labels=Data&template=cve-data-issue.md&title=%5BDATA%5D+CVE-XXXX-XXXXXX">file an issue</a>
       </div>
     </div>
-    <input action="action" onclick="window.history.go(-1); return false;" type="button" value="Back" />
   </div>
 </template>
 
@@ -112,27 +117,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello {
-  max-width: 740px;
-  margin: 0 auto;
-}
 .content {
   text-align: left;
-  padding: 1em 2em;
-  margin: 4em 0 2em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .cve-headline {
   font-size: 1.7em;
-  text-align: center;
+  text-align: left;
   margin: 1em 0 0.5em 0;
 }
 .distro-links {
-  text-align: center;
+  text-align: left;
 }
 .last-modified {
   font-size: .9em;
-  text-align: center;
+  text-align: left;
   margin-bottom: 2em;
 }
 .versions {
@@ -144,7 +142,16 @@ export default {
   padding: .5em 1em;
   font-size: 12px;
   margin-right: 8px;
+  margin-top: 10px;
   white-space: normal;
+}
+.hash-link {
+  text-decoration: none;
+  -webkit-transition: color .2s, background-color .2s; /* Safari */
+  transition: color .2s, background-color .2s;
+}
+.hash-link:hover {
+  background-color: #b1b1b1;
 }
 h1, h2, h3, h4{
   margin-top: 1.75em;
