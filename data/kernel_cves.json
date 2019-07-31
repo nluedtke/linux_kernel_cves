@@ -39177,7 +39177,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "9f1f1a2dab38d4ce87a13565cf4dc1b73bef3a5f",
-        "last_modified": "2019-07-22",
+        "last_modified": "2019-07-31",
         "nvd_text": "An issue was discovered in drm_load_edid_firmware in drivers/gpu/drm/drm_edid_load.c in the Linux kernel through 5.1.5. There is an unchecked kstrdup of fwstr, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12382",
@@ -39657,7 +39657,7 @@
         },
         "cwe": "Out-of-bounds Write",
         "fixes": "2a017fd82c5402b3c8df5e3d6e5165d9e6147dc1",
-        "last_modified": "2019-07-26",
+        "last_modified": "2019-07-31",
         "nvd_text": "In parse_hid_report_descriptor in drivers/input/tablet/gtco.c in the Linux kernel through 5.2.1, a malicious USB device can send an HID report that triggers an out-of-bounds write during generation of debugging messages.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-13631",
@@ -39694,7 +39694,7 @@
         },
         "cwe": "Resource Management Errors",
         "fixes": "f16d80b75a096c52354c6e0a574993f3b0dfbdfe",
-        "last_modified": "2019-07-29",
+        "last_modified": "2019-07-31",
         "nvd_text": "In the Linux kernel through 5.2.1 on the powerpc platform, when hardware transactional memory is disabled, a local user can cause a denial of service (TM Bad Thing exception and system crash) via a sigreturn() system call that sends a crafted signal frame. This affects arch/powerpc/kernel/signal_32.c and arch/powerpc/kernel/signal_64.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-13648",
@@ -39710,7 +39710,7 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "floppy: fix out-of-bounds read in copy_buffer",
         "fixes": "da99466ac243f15fbba65bd261bfc75ffa1532b6",
-        "last_modified": "2019-07-30",
+        "last_modified": "2019-07-31",
         "nvd_text": "In the Linux kernel before 5.2.3, set_geometry in drivers/block/floppy.c does not validate the sect and head fields, as demonstrated by an integer overflow and out-of-bounds read. It can be triggered by an unprivileged local user when a floppy disk has been inserted. NOTE: QEMU creates the floppy device by default.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14283",
@@ -39726,7 +39726,7 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "floppy: fix div-by-zero in setup_format_params",
         "fixes": "f3554aeb991214cbfafd17d55e2bfddb50282e32",
-        "last_modified": "2019-07-30",
+        "last_modified": "2019-07-31",
         "nvd_text": "In the Linux kernel before 5.2.3, drivers/block/floppy.c allows a denial of service by setup_format_params division-by-zero. Two consecutive ioctls can trigger the bug: the first one should set the drive geometry with .sect and .rate values that make F_SECT_PER_TRACK be zero. Next, the floppy format operation should be called. It can be triggered by an unprivileged local user even when a floppy disk has not been inserted. NOTE: QEMU creates the floppy device by default.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14284",
