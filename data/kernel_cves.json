@@ -757,8 +757,29 @@
     "CVE-2011-5327": {
         "affected_versions": "v2.6.39-rc1 to v3.1-rc1",
         "breaks": "3703b2c5d041a68095cdd22380c23ce27d449ad7",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "7.5"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "12f09ccb4612734a53e47ed5302e0479c10a50f8",
-        "last_modified": "2019-07-30",
+        "last_modified": "2019-08-01",
         "nvd_text": "In the Linux kernel before 3.1, an off by one in the drivers/target/loopback/tcm_loop.c tcm_loop_make_naa_tpg() function could result in at least memory corruption.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2011-5327",
@@ -2205,8 +2226,29 @@
         "affected_versions": "v2.6.27-rc1 to v3.4-rc1",
         "breaks": "24e5c40130c29bed0fbfbcc9c23613ae6ffc4c0a",
         "cmt_msg": "iwlwifi: Sanity check for sta_id",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "7.5"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "2da424b0773cea3db47e1e81db71eeebde8269d4",
-        "last_modified": "2019-07-30",
+        "last_modified": "2019-08-01",
         "nvd_text": "In the Linux kernel before 3.4, a buffer overflow occurs in drivers/net/wireless/iwlwifi/iwl-agn-sta.c, which will cause at least memory corruption.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2012-6712",
@@ -36435,8 +36477,29 @@
         "affected_versions": "v4.20-rc1 to v4.20-rc1",
         "breaks": "51f6b410fc220d8a5a4fae00ebfd8243b6c11d4e",
         "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "6acb47d1a318e5b3b7115354ebc4ea060c59d3a1",
-        "last_modified": "2019-07-29",
+        "last_modified": "2019-08-01",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.20. drivers/phy/mscc/phy-ocelot-serdes.c has an off-by-one error with a resultant ctrl-&gt;phys out-of-bounds read.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20854",
@@ -36451,8 +36514,29 @@
         "affected_versions": "v3.11-rc1 to v4.19-rc1",
         "breaks": "e126ba97dba9edeb6fafa3665b5f8497fc9cdf8c",
         "cmt_msg": "IB/mlx5: Fix leaking stack memory to userspace",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "0625b4ba1a5d4703c7fb01c497bd6c156908af00",
-        "last_modified": "2019-07-29",
+        "last_modified": "2019-08-01",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.18.7. In create_qp_common in drivers/infiniband/hw/mlx5/qp.c, mlx5_ib_create_qp_resp was never initialized, resulting in a leak of stack memory to userspace.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20855",
@@ -36467,8 +36551,29 @@
         "affected_versions": "v3.18-rc1 to v4.19-rc1",
         "breaks": "7c94e1c157a227837b04f02f5edeff8301410ba2",
         "cmt_msg": "block: blk_init_allocated_queue() set q->fq as NULL in the fail case",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "54648cf1ec2d7f4b6a71767799c45676a138ca24",
-        "last_modified": "2019-07-29",
+        "last_modified": "2019-08-01",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.18.7. In block/blk-core.c, there is an __blk_drain_queue() use-after-free because a certain error case is mishandled.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20856",
@@ -39776,8 +39881,29 @@
         "affected_versions": "v2.6.12-rc2 to v5.3-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "floppy: fix out-of-bounds read in copy_buffer",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "6.8"
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "da99466ac243f15fbba65bd261bfc75ffa1532b6",
-        "last_modified": "2019-07-31",
+        "last_modified": "2019-08-01",
         "nvd_text": "In the Linux kernel before 5.2.3, set_geometry in drivers/block/floppy.c does not validate the sect and head fields, as demonstrated by an integer overflow and out-of-bounds read. It can be triggered by an unprivileged local user when a floppy disk has been inserted. NOTE: QEMU creates the floppy device by default.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14283",
@@ -39792,8 +39918,29 @@
         "affected_versions": "v2.6.12-rc2 to v5.3-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "floppy: fix div-by-zero in setup_format_params",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "6.2"
+        },
+        "cwe": "Divide By Zero",
         "fixes": "f3554aeb991214cbfafd17d55e2bfddb50282e32",
-        "last_modified": "2019-07-31",
+        "last_modified": "2019-08-01",
         "nvd_text": "In the Linux kernel before 5.2.3, drivers/block/floppy.c allows a denial of service by setup_format_params division-by-zero. Two consecutive ioctls can trigger the bug: the first one should set the drive geometry with .sect and .rate values that make F_SECT_PER_TRACK be zero. Next, the floppy format operation should be called. It can be triggered by an unprivileged local user even when a floppy disk has not been inserted. NOTE: QEMU creates the floppy device by default.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14284",
