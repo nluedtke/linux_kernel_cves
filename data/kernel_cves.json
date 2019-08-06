@@ -35363,8 +35363,29 @@
         "affected_versions": "v4.5-rc1 to v4.20-rc3",
         "breaks": "ffa0160a103917defd5d9c097ae0455a59166e03",
         "cmt_msg": "nfsd: COPY and CLONE operations require the saved filehandle to be set",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "01310bb7c9c98752cc763b36532fab028e0f8f81",
-        "last_modified": "2019-07-30",
+        "last_modified": "2019-08-06",
         "nvd_text": "A flaw was found in the Linux kernel's NFS implementation, all versions 3.x and all versions 4.x up to 4.20. An attacker, who is able to mount an exported NFS filesystem, is able to trigger a null pointer dereference by using an invalid NFS sequence. This can panic the machine and deny access to the NFS server. Any outstanding disk writes to the NFS server will be lost.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16871",
@@ -38943,7 +38964,7 @@
         },
         "cwe": "Race Conditions",
         "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
-        "last_modified": "2019-06-22",
+        "last_modified": "2019-08-06",
         "nvd_text": "The coredump implementation in the Linux kernel before 5.0.10 does not use locking or other mechanisms to prevent vma layout or vma flags changes while it runs, which allows local users to obtain sensitive information, cause a denial of service, or possibly have unspecified other impact by triggering a race condition with mmget_not_zero or get_task_mm calls. This is related to fs/userfaultfd.c, mm/mmap.c, fs/proc/task_mmu.c, and drivers/infiniband/core/uverbs_main.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11599",
@@ -40475,7 +40496,7 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping",
         "fixes": "04f5866e41fb70690e28397487d8bd8eea7d712a",
-        "last_modified": "2019-06-22",
+        "last_modified": "2019-08-06",
         "nvd_text": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2019-11599. Reason: This candidate is a reservation duplicate of CVE-2019-11599. Notes: All CVE users should reference CVE-2019-11599 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3892",
