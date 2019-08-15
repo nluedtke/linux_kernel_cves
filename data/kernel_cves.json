@@ -36625,8 +36625,29 @@
         "affected_versions": "v4.4-rc5 to v4.17-rc1",
         "breaks": "ad0d1a058eac46503edbc510d1ce44c5df8e0c91",
         "cmt_msg": "USB: gadget: f_midi: fixing a possible double-free in f_midi",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "10.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "9.8"
+        },
+        "cwe": "Double Free",
         "fixes": "7fafcfdf6377b18b2a726ea554d6e593ba44349f",
-        "last_modified": "2019-08-13",
+        "last_modified": "2019-08-15",
         "nvd_text": "In the Linux kernel before 4.16.4, a double free vulnerability in the f_midi_set_alt function of drivers/usb/gadget/function/f_midi.c in the f_midi driver may allow attackers to cause a denial of service or possibly have unspecified other impact.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20961",
@@ -40045,8 +40066,29 @@
         "affected_versions": "v4.11-rc1 to v4.17-rc1",
         "breaks": "749494b6bdbbaf0899aa1c62a1ad74cd747bce47",
         "cmt_msg": "usb: dwc3: gadget: never call ->complete() from ->ep_queue()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Numeric Errors",
         "fixes": "c91815b596245fd7da349ecc43c8def670d2269e",
-        "last_modified": "2019-08-13",
+        "last_modified": "2019-08-15",
         "nvd_text": "In the Linux kernel before 4.16.4, a double-locking error in drivers/usb/dwc3/gadget.c may potentially cause a deadlock with f_hid.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14763",
