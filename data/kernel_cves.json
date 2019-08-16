@@ -28254,11 +28254,11 @@
         }
     },
     "CVE-2017-18509": {
-        "affected_versions": "unk to v4.11-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.11-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt",
         "fixes": "99253eb750fda6a644d5188fb26c43bad8d5a745",
-        "last_modified": "2019-08-13",
+        "last_modified": "2019-08-16",
         "nvd_text": "An issue was discovered in net/ipv6/ip6mr.c in the Linux kernel before 4.11. By setting a specific socket option, an attacker can control a pointer in kernel land and cause an inet_csk_listen_stop general protection fault, or potentially execute arbitrary code under certain circumstances. The issue can be triggered as root (e.g., inside a default LXC container or with the CAP_NET_ADMIN capability) or after namespace unsharing. This occurs because sk_type and protocol are not checked in the appropriate part of the ip6_mroute_* functions. NOTE: this affects Linux distributions that use 4.9.x longterm kernels.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-18509",
@@ -38552,6 +38552,21 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10126"
         }
     },
+    "CVE-2019-10140": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-08-16",
+        "nvd_text": "A vulnerability was found in Linux kernel's, versions up to 3.10, implementation of overlayfs. An attacker with local access can create a denial of service situation via NULL pointer dereference in ovl_posix_acl_create function in fs/overlayfs/dir.c. This can allow attackers with ability to create directories on overlayfs to crash the kernel creating a denial of service (DOS).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10140",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10140",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-10140",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-10140",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-10140",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10140"
+        }
+    },
     "CVE-2019-10142": {
         "affected_versions": "v3.1-rc1 to v5.2-rc1",
         "breaks": "6db7199407ca56f55bc0832fb124e1ad216ea57b",
@@ -40097,6 +40112,52 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-14763",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-14763",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-14763"
+        }
+    },
+    "CVE-2019-15090": {
+        "affected_versions": "unk to v5.2-rc2",
+        "breaks": "",
+        "cmt_msg": "scsi: qedi: remove memset/memcpy to nfunc and use func instead",
+        "fixes": "c09581a52765a85f19fc35340127396d5e3379cc",
+        "last_modified": "2019-08-16",
+        "nvd_text": "An issue was discovered in drivers/scsi/qedi/qedi_dbg.c in the Linux kernel before 5.1.12. In the qedi_dbg_* family of functions, there is an out-of-bounds read.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15090",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15090",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15090",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15090",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15090",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15090"
+        }
+    },
+    "CVE-2019-15098": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-08-16",
+        "nvd_text": "drivers/net/wireless/ath/ath6kl/usb.c in the Linux kernel through 5.2.8 has a NULL pointer dereference via an incomplete address in an endpoint descriptor.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15098",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15098",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15098",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15098",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15098",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15098"
+        }
+    },
+    "CVE-2019-15099": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-08-16",
+        "nvd_text": "drivers/net/wireless/ath/ath10k/usb.c in the Linux kernel through 5.2.8 has a NULL pointer dereference via an incomplete address in an endpoint descriptor.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15099",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15099",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15099",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15099",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15099",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15099"
         }
     },
     "CVE-2019-1999": {
