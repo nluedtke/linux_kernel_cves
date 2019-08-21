@@ -40287,11 +40287,11 @@
         }
     },
     "CVE-2019-15117": {
-        "affected_versions": "unk to v5.3-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.3-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ALSA: usb-audio: Fix an OOB bug in parse_audio_mixer_unit",
         "fixes": "daac07156b330b18eb5071aec4b3ddca1c377f2c",
-        "last_modified": "2019-08-19",
+        "last_modified": "2019-08-21",
         "nvd_text": "parse_audio_mixer_unit in sound/usb/mixer.c in the Linux kernel through 5.2.9 mishandles a short descriptor, leading to out-of-bounds memory access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15117",
@@ -40303,11 +40303,11 @@
         }
     },
     "CVE-2019-15118": {
-        "affected_versions": "unk to v5.3-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.3-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ALSA: usb-audio: Fix a stack buffer overflow bug in check_input_term",
         "fixes": "19bce474c45be69a284ecee660aa12d8f1e88f18",
-        "last_modified": "2019-08-19",
+        "last_modified": "2019-08-21",
         "nvd_text": "check_input_term in sound/usb/mixer.c in the Linux kernel through 5.2.9 mishandles recursion, leading to kernel stack exhaustion.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15118",
@@ -40349,6 +40349,179 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15212"
         }
     },
+    "CVE-2019-15213": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.2.3. There is a use-after-free caused by a malicious USB device in the drivers/media/usb/dvb-usb/dvb-usb-init.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15213",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15213",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15213",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15213",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15213",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15213"
+        }
+    },
+    "CVE-2019-15214": {
+        "affected_versions": "unk to v5.1-rc6",
+        "breaks": "",
+        "cmt_msg": "ALSA: core: Fix card races between register and disconnect",
+        "fixes": "2a3f7221acddfe1caa9ff09b3a8158c39b2fdeac",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.10. There is a use-after-free in the sound subsystem because card disconnection causes certain data structures to be deleted too early. This is related to sound/core/init.c and sound/core/info.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15214",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15214",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15214",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15214",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15214",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15214"
+        }
+    },
+    "CVE-2019-15215": {
+        "affected_versions": "unk to v5.3-rc1",
+        "breaks": "",
+        "cmt_msg": "media: cpia2_usb: first wake up, then free in disconnect",
+        "fixes": "eff73de2b1600ad8230692f00bc0ab49b166512a",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.2.6. There is a use-after-free caused by a malicious USB device in the drivers/media/usb/cpia2/cpia2_usb.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15215",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15215",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15215",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15215",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15215",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15215"
+        }
+    },
+    "CVE-2019-15216": {
+        "affected_versions": "unk to v5.1",
+        "breaks": "",
+        "cmt_msg": "USB: yurex: Fix protection fault after device removal",
+        "fixes": "ef61eb43ada6c1d6b94668f0f514e4c268093ff3",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.14. There is a NULL pointer dereference caused by a malicious USB device in the drivers/usb/misc/yurex.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15216",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15216",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15216",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15216",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15216",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15216"
+        }
+    },
+    "CVE-2019-15217": {
+        "affected_versions": "unk to v5.3-rc1",
+        "breaks": "",
+        "cmt_msg": "media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap",
+        "fixes": "5d2e73a5f80a5b5aff3caf1ec6d39b5b3f54b26e",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.2.3. There is a NULL pointer dereference caused by a malicious USB device in the drivers/media/usb/zr364xx/zr364xx.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15217",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15217",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15217",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15217",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15217",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15217"
+        }
+    },
+    "CVE-2019-15218": {
+        "affected_versions": "unk to v5.2-rc3",
+        "breaks": "",
+        "cmt_msg": "media: usb: siano: Fix general protection fault in smsusb",
+        "fixes": "31e0456de5be379b10fea0fa94a681057114a96e",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.1.8. There is a NULL pointer dereference caused by a malicious USB device in the drivers/media/usb/siano/smsusb.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15218",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15218",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15218",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15218",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15218",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15218"
+        }
+    },
+    "CVE-2019-15219": {
+        "affected_versions": "unk to v5.2-rc3",
+        "breaks": "",
+        "cmt_msg": "USB: sisusbvga: fix oops in error path of sisusb_probe",
+        "fixes": "9a5729f68d3a82786aea110b1bfe610be318f80a",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.1.8. There is a NULL pointer dereference caused by a malicious USB device in the drivers/usb/misc/sisusbvga/sisusb.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15219",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15219",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15219",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15219",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15219",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15219"
+        }
+    },
+    "CVE-2019-15220": {
+        "affected_versions": "unk to v5.3-rc1",
+        "breaks": "",
+        "cmt_msg": "p54usb: Fix race between disconnect and firmware loading",
+        "fixes": "6e41e2257f1094acc37618bf6c856115374c6922",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.2.1. There is a use-after-free caused by a malicious USB device in the drivers/net/wireless/intersil/p54/p54usb.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15220",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15220",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15220",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15220",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15220",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15220"
+        }
+    },
+    "CVE-2019-15221": {
+        "affected_versions": "unk to v5.2",
+        "breaks": "",
+        "cmt_msg": "ALSA: line6: Fix write on zero-sized buffer",
+        "fixes": "3450121997ce872eb7f1248417225827ea249710",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.1.17. There is a NULL pointer dereference caused by a malicious USB device in the sound/usb/line6/pcm.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15221",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15221",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15221",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15221",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15221",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15221"
+        }
+    },
+    "CVE-2019-15222": {
+        "affected_versions": "v5.3-rc1 to v5.3-rc3",
+        "breaks": "801ebf1043ae7b182588554cc9b9ad3c14bc2ab5",
+        "fixes": "5d78e1c2b7f4be00bbe62141603a631dc7812f35",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.2.8. There is a NULL pointer dereference caused by a malicious USB device in the sound/usb/helper.c (motu_microbookii) driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15222",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15222",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15222",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15222",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15222",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15222"
+        }
+    },
+    "CVE-2019-15223": {
+        "affected_versions": "v5.2-rc1 to v5.2-rc3",
+        "breaks": "7f84ff68be05ec7a5d2acf8fdc734fe5897af48f",
+        "fixes": "0b074ab7fc0d575247b9cc9f93bb7e007ca38840",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.1.8. There is a NULL pointer dereference caused by a malicious USB device in the sound/usb/line6/driver.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15223",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15223",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15223",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15223",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15223",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15223"
+        }
+    },
     "CVE-2019-15239": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -40362,6 +40535,52 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15239",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-15239",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15239"
+        }
+    },
+    "CVE-2019-15290": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.2.9. There is a NULL pointer dereference caused by a malicious USB device in the ath6kl_usb_alloc_urb_from_pipe function in the drivers/net/wireless/ath/ath6kl/usb.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15290",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15290",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15290",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15290",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15290",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15290"
+        }
+    },
+    "CVE-2019-15291": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.2.9. There is a NULL pointer dereference caused by a malicious USB device in the flexcop_usb_probe function in the drivers/media/usb/b2c2/flexcop-usb.c driver.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15291",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15291",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15291",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15291",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15291",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15291"
+        }
+    },
+    "CVE-2019-15292": {
+        "affected_versions": "unk to v5.1-rc1",
+        "breaks": "",
+        "cmt_msg": "appletalk: Fix use-after-free in atalk_proc_exit",
+        "fixes": "6377f787aeb945cae7abbb6474798de129e1f3ac",
+        "last_modified": "2019-08-21",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.9. There is a use-after-free in atalk_proc_exit, related to net/appletalk/atalk_proc.c, net/appletalk/ddp.c, and net/appletalk/sysctl_net_atalk.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15292",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15292",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15292",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15292",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15292",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15292"
         }
     },
     "CVE-2019-1999": {
@@ -41484,11 +41703,11 @@
         }
     },
     "CVE-2019-9506": {
-        "affected_versions": "unk to v5.2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: Fix faulty expression for minimum encryption key size check",
         "fixes": "eca94432934fe5f141d084f2e36ee2c0e614cc04",
-        "last_modified": "2019-08-19",
+        "last_modified": "2019-08-21",
         "nvd_text": "The Bluetooth BR/EDR specification up to and including version 5.1 permits sufficiently low encryption key length and does not prevent an attacker from influencing the key length negotiation. This allows practical brute-force attacks (aka \"KNOB\") that can decrypt traffic and inject arbitrary ciphertext without the victim noticing.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9506",

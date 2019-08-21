@@ -354,10 +354,12 @@ CVEs fixed in 4.14.112:
   CVE-2019-11815: c8a88799e632045399af886a1b1a5205e5d49897 net: rds: force to destroy connection if t_sock is NULL in rds_tcp_kill_sock().
 
 CVEs fixed in 4.14.113:
+  CVE-2019-15292: 0ba1fa56351e6e9c2f8db4ffc823cb7057e4ea82 appletalk: Fix use-after-free in atalk_proc_exit
   CVE-2019-7308: 6588a490bfe1b879f11b5e74724ef53a33b68641 bpf: fix sanitation of alu op with pointer / scalar type from different paths
 
 CVEs fixed in 4.14.114:
   CVE-2019-11599: bb461ad8e6e0653fc6bd0f26d9173bab0aec235b coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
+  CVE-2019-15214: d11a33e9ba584bb6f5cc74df9d74b26156ba9bb2 ALSA: core: Fix card races between register and disconnect
   CVE-2019-3892: bb461ad8e6e0653fc6bd0f26d9173bab0aec235b coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
 
 CVEs fixed in 4.14.115:
@@ -365,6 +367,9 @@ CVEs fixed in 4.14.115:
 
 CVEs fixed in 4.14.116:
   CVE-2019-11487: c88a0aa7ace7eb10dca42be59f21e2cbd263575e fs: prevent page refcount overflow in pipe_buf_get
+
+CVEs fixed in 4.14.117:
+  CVE-2019-15216: 5696fa3f42168ee33256c0b0b72ca963d224327f USB: yurex: Fix protection fault after device removal
 
 CVEs fixed in 4.14.118:
   CVE-2018-20836: 3739f98aea7113a21d11b1a604525049e422e29e scsi: libsas: fix a race condition when smp task timeout
@@ -389,6 +394,8 @@ CVEs fixed in 4.14.123:
 CVEs fixed in 4.14.124:
   CVE-2019-10638: e10789acbe6a76b304f45cbc8bb77a926ae4f201 inet: switch IP ID generator to siphash
   CVE-2019-15212: f18227d08e6b50717e1560a86fbebda0ca911507 USB: rio500: refuse more than one device at a time
+  CVE-2019-15218: 5a7adcda3de26a44fc0fa3f68199358b1527daf4 media: usb: siano: Fix general protection fault in smsusb
+  CVE-2019-15219: 47ffaae93ea154ae149315389a30780fa3189caf USB: sisusbvga: fix oops in error path of sisusb_probe
   CVE-2019-1999: c2a035d7822ac8d2870cd6dbaadc1ab407713b83 binder: fix race between munmap() and direct reclaim
 
 CVEs fixed in 4.14.127:
@@ -404,11 +411,13 @@ CVEs fixed in 4.14.130:
 
 CVEs fixed in 4.14.133:
   CVE-2019-13272: bf71ef9655d25e8b275ec6ed649b6bd719231ddc ptrace: Fix ->ptracer_cred handling for PTRACE_TRACEME
+  CVE-2019-15221: 37eaa74451c1003a6bec548c957890c264559463 ALSA: line6: Fix write on zero-sized buffer
   CVE-2019-3900: ae446749492d8bd23f1d0b81adba16e5739dc740 vhost_net: fix possible infinite loop
   CVE-2019-9506: 05206de4e9ae033afd32f685c4a005cbc1dceb39 Bluetooth: Fix faulty expression for minimum encryption key size check
 
 CVEs fixed in 4.14.134:
   CVE-2019-10126: b1459fb34061337efbf0d47a3ba6208f2f59829d mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies()
+  CVE-2019-15220: c760ecb74f84f729ae31b9fbc6b772923cdc78df p54usb: Fix race between disconnect and firmware loading
   CVE-2019-3846: d50f6b58d7ad30ad8e96c0bbc3e5ecfe9b91ba77 mwifiex: Fix possible buffer overflows at parsing bss descriptor
 
 CVEs fixed in 4.14.135:
@@ -420,6 +429,7 @@ CVEs fixed in 4.14.135:
 
 CVEs fixed in 4.14.136:
   CVE-2019-10207: 69f9c2bc3f754ad1d610b30b940681d678c8e684 Bluetooth: hci_uart: check for missing tty operations
+  CVE-2019-15215: 3566a98e59b5cb19829d21bfe18cd396812ce15e media: cpia2_usb: first wake up, then free in disconnect
 
 CVEs fixed in 4.14.137:
   CVE-2019-1125: 83e6e48e70a133a5ea6167bf152ce2b274008b3d x86/speculation: Prepare entry code for Spectre v1 swapgs mitigations
@@ -474,6 +484,10 @@ Outstanding CVEs:
   CVE-2019-15117: (unk) ALSA: usb-audio: Fix an OOB bug in parse_audio_mixer_unit 
   CVE-2019-15118: (unk) ALSA: usb-audio: Fix a stack buffer overflow bug in check_input_term 
   CVE-2019-15211: (unk)  
+  CVE-2019-15213: (unk)  
+  CVE-2019-15217: (unk) media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap 
   CVE-2019-15239: (unk)  
+  CVE-2019-15290: (unk)  
+  CVE-2019-15291: (unk)  
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
