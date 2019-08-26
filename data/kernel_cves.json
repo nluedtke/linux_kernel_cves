@@ -40482,7 +40482,7 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ALSA: usb-audio: Fix an OOB bug in parse_audio_mixer_unit",
         "fixes": "daac07156b330b18eb5071aec4b3ddca1c377f2c",
-        "last_modified": "2019-08-25",
+        "last_modified": "2019-08-26",
         "nvd_text": "parse_audio_mixer_unit in sound/usb/mixer.c in the Linux kernel through 5.2.9 mishandles a short descriptor, leading to out-of-bounds memory access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15117",
@@ -40498,7 +40498,7 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ALSA: usb-audio: Fix a stack buffer overflow bug in check_input_term",
         "fixes": "19bce474c45be69a284ecee660aa12d8f1e88f18",
-        "last_modified": "2019-08-25",
+        "last_modified": "2019-08-26",
         "nvd_text": "check_input_term in sound/usb/mixer.c in the Linux kernel through 5.2.9 mishandles recursion, leading to kernel stack exhaustion.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15118",
@@ -41118,6 +41118,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15505",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-15505",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15505"
+        }
+    },
+    "CVE-2019-15538": {
+        "affected_versions": "unk to v5.3-rc6",
+        "breaks": "",
+        "cmt_msg": "xfs: fix missing ILOCK unlock when xfs_setattr_nonsize fails due to EDQUOT",
+        "fixes": "1fb254aa983bf190cfd685d40c64a480a9bafaee",
+        "last_modified": "2019-08-26",
+        "nvd_text": "An issue was discovered in xfs_setattr_nonsize in fs/xfs/xfs_iops.c in the Linux kernel through 5.2.9. XFS partially wedges when a chgrp fails on account of being out of disk quota. xfs_setattr_nonsize is failing to unlock the ILOCK after the xfs_qm_vop_chown_reserve call fails. This is primarily a local DoS attack vector, but it might result as well in remote DoS if the XFS filesystem is exported for instance via NFS.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15538",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15538",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15538",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15538",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15538",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15538"
         }
     },
     "CVE-2019-1999": {
