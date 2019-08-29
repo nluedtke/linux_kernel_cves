@@ -38872,8 +38872,29 @@
     "CVE-2019-10140": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "",
-        "last_modified": "2019-08-16",
+        "last_modified": "2019-08-29",
         "nvd_text": "A vulnerability was found in Linux kernel's, versions up to 3.10, implementation of overlayfs. An attacker with local access can create a denial of service situation via NULL pointer dereference in ovl_posix_acl_create function in fs/overlayfs/dir.c. This can allow attackers with ability to create directories on overlayfs to crash the kernel creating a denial of service (DOS).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10140",
@@ -38882,7 +38903,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-10140",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-10140",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-10140"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2019-10142": {
         "affected_versions": "v3.1-rc1 to v5.2-rc1",
@@ -40565,8 +40587,29 @@
         "affected_versions": "v2.6.12-rc2 to v5.3-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ALSA: usb-audio: Fix an OOB bug in parse_audio_mixer_unit",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "daac07156b330b18eb5071aec4b3ddca1c377f2c",
-        "last_modified": "2019-08-26",
+        "last_modified": "2019-08-29",
         "nvd_text": "parse_audio_mixer_unit in sound/usb/mixer.c in the Linux kernel through 5.2.9 mishandles a short descriptor, leading to out-of-bounds memory access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15117",
@@ -40581,8 +40624,29 @@
         "affected_versions": "v2.6.12-rc2 to v5.3-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ALSA: usb-audio: Fix a stack buffer overflow bug in check_input_term",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
         "fixes": "19bce474c45be69a284ecee660aa12d8f1e88f18",
-        "last_modified": "2019-08-26",
+        "last_modified": "2019-08-29",
         "nvd_text": "check_input_term in sound/usb/mixer.c in the Linux kernel through 5.2.9 mishandles recursion, leading to kernel stack exhaustion.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15118",
@@ -41272,7 +41336,7 @@
         "breaks": "",
         "cmt_msg": "xfs: fix missing ILOCK unlock when xfs_setattr_nonsize fails due to EDQUOT",
         "fixes": "1fb254aa983bf190cfd685d40c64a480a9bafaee",
-        "last_modified": "2019-08-26",
+        "last_modified": "2019-08-29",
         "nvd_text": "An issue was discovered in xfs_setattr_nonsize in fs/xfs/xfs_iops.c in the Linux kernel through 5.2.9. XFS partially wedges when a chgrp fails on account of being out of disk quota. xfs_setattr_nonsize is failing to unlock the ILOCK after the xfs_qm_vop_chown_reserve call fails. This is primarily a local DoS attack vector, but it might result as well in remote DoS if the XFS filesystem is exported for instance via NFS.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15538",
