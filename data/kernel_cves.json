@@ -39222,7 +39222,8 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "x86/speculation: Prepare entry code for Spectre v1 swapgs mitigations",
         "fixes": "18ec54fdd6d18d92025af097cd042a75cf0ea24c",
-        "last_modified": "2019-08-13",
+        "last_modified": "2019-09-03",
+        "nvd_text": "An information disclosure vulnerability exists when certain central processing units (CPU) speculatively access memory, aka 'Windows Kernel Information Disclosure Vulnerability'. This CVE ID is unique from CVE-2019-1071, CVE-2019-1073.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-1125",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-1125",
@@ -41339,8 +41340,8 @@
         }
     },
     "CVE-2019-15504": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.17-rc1 to unk",
+        "breaks": "a1854fae1414dd8edfff4857fd26c3e355d43e19",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -41363,7 +41364,7 @@
         },
         "cwe": "Double Free",
         "fixes": "",
-        "last_modified": "2019-08-26",
+        "last_modified": "2019-09-03",
         "nvd_text": "drivers/net/wireless/rsi/rsi_91x_usb.c in the Linux kernel through 5.2.9 has a Double Free via crafted USB device traffic (which may be remote via usbip or usbredir).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15504",
@@ -41375,8 +41376,8 @@
         }
     },
     "CVE-2019-15505": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.39-rc1 to unk",
+        "breaks": "739ff04f63ba6498b287021649cb999e639c3c83",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -41399,7 +41400,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "",
-        "last_modified": "2019-08-26",
+        "last_modified": "2019-09-03",
         "nvd_text": "drivers/media/usb/dvb-usb/technisat-usb2.c in the Linux kernel through 5.2.9 has an out-of-bounds read via crafted USB device traffic (which may be remote via usbip or usbredir).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15505",
@@ -41411,11 +41412,32 @@
         }
     },
     "CVE-2019-15538": {
-        "affected_versions": "unk to v5.3-rc6",
-        "breaks": "",
+        "affected_versions": "v4.7-rc1 to v5.3-rc6",
+        "breaks": "253f4911f297b83745938b7f2c5649b94730b002",
         "cmt_msg": "xfs: fix missing ILOCK unlock when xfs_setattr_nonsize fails due to EDQUOT",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Resource Management Errors",
         "fixes": "1fb254aa983bf190cfd685d40c64a480a9bafaee",
-        "last_modified": "2019-08-29",
+        "last_modified": "2019-09-03",
         "nvd_text": "An issue was discovered in xfs_setattr_nonsize in fs/xfs/xfs_iops.c in the Linux kernel through 5.2.9. XFS partially wedges when a chgrp fails on account of being out of disk quota. xfs_setattr_nonsize is failing to unlock the ILOCK after the xfs_qm_vop_chown_reserve call fails. This is primarily a local DoS attack vector, but it might result as well in remote DoS if the XFS filesystem is exported for instance via NFS.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15538",
@@ -41427,8 +41449,8 @@
         }
     },
     "CVE-2019-15666": {
-        "affected_versions": "unk to v5.1",
-        "breaks": "",
+        "affected_versions": "v3.14-rc1 to v5.1",
+        "breaks": "e682adf021be796940be6cc10c07be7f7398c220",
         "cmt_msg": "xfrm: policy: Fix out-of-bound array accesses in __xfrm_policy_unlink",
         "cvss2": {
             "Access Complexity": "Low",
@@ -41452,7 +41474,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "b805d78d300bcf2c83d6df7da0c818b0fee41427",
-        "last_modified": "2019-09-02",
+        "last_modified": "2019-09-03",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.0.19. There is an out-of-bounds array access in __xfrm_policy_unlink, which will cause denial of service, because verify_newpolicy_info in net/xfrm/xfrm_user.c mishandles directory validation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15666",
@@ -41464,11 +41486,32 @@
         }
     },
     "CVE-2019-15807": {
-        "affected_versions": "unk to v5.2-rc3",
-        "breaks": "",
+        "affected_versions": "v2.6.19-rc1 to v5.2-rc3",
+        "breaks": "2908d778ab3e244900c310974e1fc1c69066e450",
         "cmt_msg": "scsi: libsas: delete sas port if expander discover failed",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Resource Management Errors",
         "fixes": "3b0541791453fbe7f42867e310e0c9eb6295364d",
-        "last_modified": "2019-09-02",
+        "last_modified": "2019-09-03",
         "nvd_text": "In the Linux kernel before 5.1.13, there is a memory leak in drivers/scsi/libsas/sas_expander.c when SAS expander discovery fails. This will cause a BUG and denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15807",
