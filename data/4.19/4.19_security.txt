@@ -64,6 +64,7 @@ CVEs fixed in 4.19.27:
 
 CVEs fixed in 4.19.28:
   CVE-2019-12818: f132b3f5f1ad1cbe818474ab8d0b555ff39369d5 net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails
+  CVE-2019-15916: 7ce2a517fd8b7742e381d3b3551b9b03e667ad79 net-sysfs: Fix mem leak in netdev_register_kobject
   CVE-2019-8980: b60d90b2d3d14c426693a0a34041db11be66d29e exec: Fix mem leak in kernel_read_file
 
 CVEs fixed in 4.19.29:
@@ -76,7 +77,11 @@ CVEs fixed in 4.19.31:
   CVE-2019-10124: 234c0cc982211bb5539db632f31490bf0ad54827 mm: hwpoison: fix thp split handing in soft_offline_in_use_page()
   CVE-2019-11811: a441fdaf8c3034436fb6045ee285e515628fc555 ipmi_si: fix use-after-free of resource->name
 
+CVEs fixed in 4.19.32:
+  CVE-2019-15917: e365b94086f9dec02ddfcc193dcad72858c6d973 Bluetooth: hci_ldisc: Postpone HCI_UART_PROTO_READY bit set in hci_uart_set_proto()
+
 CVEs fixed in 4.19.33:
+  CVE-2019-15921: 9b8ef421b481d6e648438131d867986c649c297c genetlink: Fix a memory leak on error path
   CVE-2019-3459: 15d6538a0d6e0f6de5116081a948cba7cc3e1d3d Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
   CVE-2019-3460: 2318c0e4b87e590c9d8e88db185477cfac18abe2 Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
 
@@ -96,10 +101,13 @@ CVEs fixed in 4.19.36:
 CVEs fixed in 4.19.37:
   CVE-2019-11599: 6ff17bc5936e5fab33de8064dc0690f6c8c789ca coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
   CVE-2019-15214: b50e435df2d8b9a1d3e956e1c767dfc7e30a441b ALSA: core: Fix card races between register and disconnect
+  CVE-2019-15919: 8fb89b43b65fcd35f15d982712904b96fc64c68a cifs: Fix use-after-free in SMB2_write
+  CVE-2019-15920: c69330a855ab4342d304f67f8c1e7d1fa2686bec cifs: Fix use-after-free in SMB2_read
   CVE-2019-3892: 6ff17bc5936e5fab33de8064dc0690f6c8c789ca coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
 
 CVEs fixed in 4.19.38:
   CVE-2019-10125: d6b2615f7d31d8e58b685d42dbafcc7dc1204bbd aio: simplify - and fix - fget/fput for io_submit()
+  CVE-2019-15924: 9b9b0df4e7882638e53c55e8f556aa78915418b9 fm10k: Fix a potential NULL pointer dereference
   CVE-2019-3882: f7b467ad1be0478f0341afa8a9ac112732def088 vfio/type1: Limit DMA mappings per container
 
 CVEs fixed in 4.19.39:
@@ -237,5 +245,9 @@ Outstanding CVEs:
   CVE-2019-15291: (unk)  
   CVE-2019-15504: (unk)  
   CVE-2019-15505: (unk)  
+  CVE-2019-15902: (unk)  
+  CVE-2019-15918: (unk) cifs: Fix lease buffer length error 
+  CVE-2019-15922: (unk) paride/pf: Fix potential NULL pointer dereference 
+  CVE-2019-15923: (unk) paride/pcd: Fix potential NULL pointer dereference and mem leak 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 

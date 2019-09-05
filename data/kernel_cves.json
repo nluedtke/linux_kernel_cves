@@ -39221,8 +39221,29 @@
         "affected_versions": "v2.6.12-rc2 to v5.3-rc4",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "x86/speculation: Prepare entry code for Spectre v1 swapgs mitigations",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Information Exposure",
         "fixes": "18ec54fdd6d18d92025af097cd042a75cf0ea24c",
-        "last_modified": "2019-09-03",
+        "last_modified": "2019-09-04",
         "nvd_text": "An information disclosure vulnerability exists when certain central processing units (CPU) speculatively access memory, aka 'Windows Kernel Information Disclosure Vulnerability'. This CVE ID is unique from CVE-2019-1071, CVE-2019-1073.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-1125",
@@ -41520,6 +41541,165 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15807",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-15807",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15807"
+        }
+    },
+    "CVE-2019-15902": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-09-04",
+        "nvd_text": "A backporting error was discovered in the Linux stable/longterm kernel 4.4.x through 4.4.190, 4.9.x through 4.9.190, 4.14.x through 4.14.141, 4.19.x through 4.19.69, and 5.2.x through 5.2.11. Misuse of the upstream \"x86/ptrace: Fix possible spectre-v1 in ptrace_get_debugreg()\" commit reintroduced the Spectre vulnerability that it aimed to eliminate. This occurred because the backport process depends on cherry picking specific commits, and because two (correctly ordered) code lines were swapped.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15902",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15902",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15902",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15902",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15902",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15902"
+        }
+    },
+    "CVE-2019-15916": {
+        "affected_versions": "unk to v5.1-rc1",
+        "breaks": "",
+        "cmt_msg": "net-sysfs: Fix mem leak in netdev_register_kobject",
+        "fixes": "895a5e96dbd6386c8e78e5b78e067dcc67b7f0ab",
+        "last_modified": "2019-09-04",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.1. There is a memory leak in register_queue_kobjects() in net/core/net-sysfs.c, which will cause denial of service.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15916",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15916",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15916",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15916",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15916",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15916"
+        }
+    },
+    "CVE-2019-15917": {
+        "affected_versions": "unk to v5.1-rc1",
+        "breaks": "",
+        "cmt_msg": "Bluetooth: hci_ldisc: Postpone HCI_UART_PROTO_READY bit set in hci_uart_set_proto()",
+        "fixes": "56897b217a1d0a91c9920cb418d6b3fe922f590a",
+        "last_modified": "2019-09-04",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.5. There is a use-after-free issue when hci_uart_register_dev() fails in hci_uart_set_proto() in drivers/bluetooth/hci_ldisc.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15917",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15917",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15917",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15917",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15917",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15917"
+        }
+    },
+    "CVE-2019-15918": {
+        "affected_versions": "unk to v5.1-rc6",
+        "breaks": "",
+        "cmt_msg": "cifs: Fix lease buffer length error",
+        "fixes": "b57a55e2200ede754e4dc9cce4ba9402544b9365",
+        "last_modified": "2019-09-04",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.10. SMB2_negotiate in fs/cifs/smb2pdu.c has an out-of-bounds read because data structures are incompletely updated after a change from smb30 to smb21.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15918",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15918",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15918",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15918",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15918",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15918"
+        }
+    },
+    "CVE-2019-15919": {
+        "affected_versions": "unk to v5.1-rc6",
+        "breaks": "",
+        "cmt_msg": "cifs: Fix use-after-free in SMB2_write",
+        "fixes": "6a3eb3360667170988f8a6477f6686242061488a",
+        "last_modified": "2019-09-04",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.10. SMB2_write in fs/cifs/smb2pdu.c has a use-after-free.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15919",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15919",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15919",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15919",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15919",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15919"
+        }
+    },
+    "CVE-2019-15920": {
+        "affected_versions": "unk to v5.1-rc6",
+        "breaks": "",
+        "cmt_msg": "cifs: Fix use-after-free in SMB2_read",
+        "fixes": "088aaf17aa79300cab14dbee2569c58cfafd7d6e",
+        "last_modified": "2019-09-04",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.10. SMB2_read in fs/cifs/smb2pdu.c has a use-after-free. NOTE: this was not fixed correctly in 5.0.10; see the 5.0.11 ChangeLog, which documents a memory leak.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15920",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15920",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15920",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15920",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15920",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15920"
+        }
+    },
+    "CVE-2019-15921": {
+        "affected_versions": "unk to v5.1-rc3",
+        "breaks": "",
+        "cmt_msg": "genetlink: Fix a memory leak on error path",
+        "fixes": "ceabee6c59943bdd5e1da1a6a20dc7ee5f8113a2",
+        "last_modified": "2019-09-04",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.6. There is a memory leak issue when idr_alloc() fails in genl_register_family() in net/netlink/genetlink.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15921",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15921",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15921",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15921",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15921",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15921"
+        }
+    },
+    "CVE-2019-15922": {
+        "affected_versions": "unk to v5.1-rc4",
+        "breaks": "",
+        "cmt_msg": "paride/pf: Fix potential NULL pointer dereference",
+        "fixes": "58ccd2d31e502c37e108b285bf3d343eb00c235b",
+        "last_modified": "2019-09-04",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.9. There is a NULL pointer dereference for a pf data structure if alloc_disk fails in drivers/block/paride/pf.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15922",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15922",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15922",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15922",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15922",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15922"
+        }
+    },
+    "CVE-2019-15923": {
+        "affected_versions": "unk to v5.1-rc4",
+        "breaks": "",
+        "cmt_msg": "paride/pcd: Fix potential NULL pointer dereference and mem leak",
+        "fixes": "f0d1762554014ce0ae347b9f0d088f2c157c8c72",
+        "last_modified": "2019-09-04",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.9. There is a NULL pointer dereference for a cd data structure if alloc_disk fails in drivers/block/paride/pf.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15923",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15923",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15923",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15923",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15923",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15923"
+        }
+    },
+    "CVE-2019-15924": {
+        "affected_versions": "unk to v5.1-rc4",
+        "breaks": "",
+        "cmt_msg": "fm10k: Fix a potential NULL pointer dereference",
+        "fixes": "01ca667133d019edc9f0a1f70a272447c84ec41f",
+        "last_modified": "2019-09-04",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.11. fm10k_init_module in drivers/net/ethernet/intel/fm10k/fm10k_main.c has a NULL pointer dereference because there is no -ENOMEM upon an alloc_workqueue failure.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15924",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15924",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-15924",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15924",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-15924",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15924"
         }
     },
     "CVE-2019-1999": {

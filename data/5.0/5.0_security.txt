@@ -4,6 +4,7 @@ CVEs fixed in 5.0:
   CVE-2019-9213: 0a1d52994d440e21def1c2174932410b4f2a98a1 mm: enforce min addr even if capable() in expand_downwards()
 
 CVEs fixed in 5.0.1:
+  CVE-2019-15916: 1ba2882157049c54324cd703060a11dc4e493efe net-sysfs: Fix mem leak in netdev_register_kobject
   CVE-2019-8980: a9bda122bd77a784933edde4120e12a28847aafd exec: Fix mem leak in kernel_read_file
 
 CVEs fixed in 5.0.2:
@@ -15,8 +16,10 @@ CVEs fixed in 5.0.4:
 
 CVEs fixed in 5.0.5:
   CVE-2019-10125: a179695eddd9f94e89ede2cbbf2b27cf748d5070 aio: simplify - and fix - fget/fput for io_submit()
+  CVE-2019-15917: 35228ce61a8160199d1ea4ced956116bba686192 Bluetooth: hci_ldisc: Postpone HCI_UART_PROTO_READY bit set in hci_uart_set_proto()
 
 CVEs fixed in 5.0.6:
+  CVE-2019-15921: bd60a788b10b6b10cc7d53a41a8a53a300705690 genetlink: Fix a memory leak on error path
   CVE-2019-3459: a556547bae00528f24b42786b41a14047db14b84 Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
   CVE-2019-3460: 8dac9b8d27b504734429cb0be541425a216ccba2 Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
 
@@ -31,14 +34,20 @@ CVEs fixed in 5.0.8:
 
 CVEs fixed in 5.0.9:
   CVE-2019-15292: 2fbb0171b13a2fcdd7deb682527784b47cd8d624 appletalk: Fix use-after-free in atalk_proc_exit
+  CVE-2019-15922: e78434f4dcd2136c537f7b430f7a5a8c45ec406e paride/pf: Fix potential NULL pointer dereference
+  CVE-2019-15923: 2db9f8d63d74969fc97017136b347ed2a5fb4b66 paride/pcd: Fix potential NULL pointer dereference and mem leak
   CVE-2019-9857: 7f434180c880a89525e68aa65ca1529c90c29db1 inotify: Fix fsnotify_mark refcount leak in inotify_update_existing_watch()
 
 CVEs fixed in 5.0.10:
   CVE-2019-11599: 1eb719f09f7e319e79f6abf2b9e8c0dcc1c477b5 coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
   CVE-2019-15214: 6ef122eb79569df65f7199c5026033250670ac85 ALSA: core: Fix card races between register and disconnect
+  CVE-2019-15918: 9582ba401ef08e92f328001a813835a464258e7d cifs: Fix lease buffer length error
+  CVE-2019-15919: e8ac406c749ea5d2a583854667a20d8e7fe38070 cifs: Fix use-after-free in SMB2_write
+  CVE-2019-15920: 76dbd554c2730ce0b324e54bac9d8a9056b1ffdc cifs: Fix use-after-free in SMB2_read
   CVE-2019-3892: 1eb719f09f7e319e79f6abf2b9e8c0dcc1c477b5 coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
 
 CVEs fixed in 5.0.11:
+  CVE-2019-15924: a92526e257a5d752a37f0d148fc6182a517b5ce4 fm10k: Fix a potential NULL pointer dereference
   CVE-2019-3882: 16df9424ffaa5bdbeeebd6427606d3b8cc176be1 vfio/type1: Limit DMA mappings per container
 
 CVEs fixed in 5.0.12:
@@ -145,6 +154,7 @@ Outstanding CVEs:
   CVE-2019-15505: (unk)  
   CVE-2019-15538: (unk) xfs: fix missing ILOCK unlock when xfs_setattr_nonsize fails due to EDQUOT 
   CVE-2019-15807: (unk) scsi: libsas: delete sas port if expander discover failed 
+  CVE-2019-15902: (unk)  
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-3846: (unk) mwifiex: Fix possible buffer overflows at parsing bss descriptor 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
