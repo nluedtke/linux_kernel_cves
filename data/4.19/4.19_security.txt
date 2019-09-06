@@ -28,8 +28,12 @@ CVEs fixed in 4.19.13:
   CVE-2018-16882: 1972ca04708330b0edd52956e644e3974065a613 KVM: Fix UAF in nested posted interrupt processing
   CVE-2018-19985: 8f980122236c1fc8e11ffb57ec73315d01dc88e0 USB: hso: Fix OOB memory access in hso_probe/hso_get_config_data
 
+CVEs fixed in 4.19.14:
+  CVE-2019-9245: 5036fcd9b14516f62efae6ed0c42dfbb9798b643 f2fs: sanity check of xattr entry size
+
 CVEs fixed in 4.19.15:
   CVE-2018-20784: dc8408ea0b22ab181ee541f3786b4fd6161e0ce3 sched/fair: Fix infinite loop in update_blocked_averages() by reverting a9e7f6544b9c
+  CVE-2019-15927: 8ee6f180d56fe760b275ab7f060c7b12fc05d7b7 ALSA: usb-audio: Avoid access before bLength check in build_audio_procunit()
   CVE-2019-6133: bc999b5099d70030a9cb1aff2c48b073f65e0f8f fork: record start_time late
 
 CVEs fixed in 4.19.16:
@@ -64,6 +68,7 @@ CVEs fixed in 4.19.27:
 
 CVEs fixed in 4.19.28:
   CVE-2019-12818: f132b3f5f1ad1cbe818474ab8d0b555ff39369d5 net: nfc: Fix NULL dereference on nfc_llcp_build_tlv fails
+  CVE-2019-15916: 7ce2a517fd8b7742e381d3b3551b9b03e667ad79 net-sysfs: Fix mem leak in netdev_register_kobject
   CVE-2019-8980: b60d90b2d3d14c426693a0a34041db11be66d29e exec: Fix mem leak in kernel_read_file
 
 CVEs fixed in 4.19.29:
@@ -75,8 +80,13 @@ CVEs fixed in 4.19.30:
 CVEs fixed in 4.19.31:
   CVE-2019-10124: 234c0cc982211bb5539db632f31490bf0ad54827 mm: hwpoison: fix thp split handing in soft_offline_in_use_page()
   CVE-2019-11811: a441fdaf8c3034436fb6045ee285e515628fc555 ipmi_si: fix use-after-free of resource->name
+  CVE-2019-9455: 573d423a9bd76b396954ddf847ff24d97658453d media: videobuf2-v4l2: drop WARN_ON in vb2_warn_zero_bytesused()
+
+CVEs fixed in 4.19.32:
+  CVE-2019-15917: e365b94086f9dec02ddfcc193dcad72858c6d973 Bluetooth: hci_ldisc: Postpone HCI_UART_PROTO_READY bit set in hci_uart_set_proto()
 
 CVEs fixed in 4.19.33:
+  CVE-2019-15921: 9b8ef421b481d6e648438131d867986c649c297c genetlink: Fix a memory leak on error path
   CVE-2019-3459: 15d6538a0d6e0f6de5116081a948cba7cc3e1d3d Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
   CVE-2019-3460: 2318c0e4b87e590c9d8e88db185477cfac18abe2 Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
 
@@ -96,10 +106,13 @@ CVEs fixed in 4.19.36:
 CVEs fixed in 4.19.37:
   CVE-2019-11599: 6ff17bc5936e5fab33de8064dc0690f6c8c789ca coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
   CVE-2019-15214: b50e435df2d8b9a1d3e956e1c767dfc7e30a441b ALSA: core: Fix card races between register and disconnect
+  CVE-2019-15919: 8fb89b43b65fcd35f15d982712904b96fc64c68a cifs: Fix use-after-free in SMB2_write
+  CVE-2019-15920: c69330a855ab4342d304f67f8c1e7d1fa2686bec cifs: Fix use-after-free in SMB2_read
   CVE-2019-3892: 6ff17bc5936e5fab33de8064dc0690f6c8c789ca coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
 
 CVEs fixed in 4.19.38:
   CVE-2019-10125: d6b2615f7d31d8e58b685d42dbafcc7dc1204bbd aio: simplify - and fix - fget/fput for io_submit()
+  CVE-2019-15924: 9b9b0df4e7882638e53c55e8f556aa78915418b9 fm10k: Fix a potential NULL pointer dereference
   CVE-2019-3882: f7b467ad1be0478f0341afa8a9ac112732def088 vfio/type1: Limit DMA mappings per container
 
 CVEs fixed in 4.19.39:
@@ -150,11 +163,14 @@ CVEs fixed in 4.19.52:
 
 CVEs fixed in 4.19.53:
   CVE-2019-15090: f3a7a1137ffc69e1f460eb9e1b5f4fd09d3c4ea9 scsi: qedi: remove memset/memcpy to nfunc and use func instead
+  CVE-2019-9453: ae3787d433f7b87ebf6b916e524c6e280e4e5804 f2fs: fix to avoid accessing xattr across the boundary
 
 CVEs fixed in 4.19.54:
   CVE-2019-12984: 4bb4ba362cc1ed3acb181a6d0b68c6de22be78e2 nfc: Ensure presence of required attributes in the deactivate_target handler
+  CVE-2019-15807: 114e8135ae0031556ead1bcb67249ecb84b804de scsi: libsas: delete sas port if expander discover failed
 
 CVEs fixed in 4.19.56:
+  CVE-2019-0136: 0e879ef1cb5baddebe1f12a9a3940a87d8e61558 mac80211: drop robust management frames from unknown TA
   CVE-2019-12615: 7b460a9bb13db3f442f153c2ab8a9ff8520c368c mdesc: fix a missing-check bug in get_vdev_port_node_info()
   CVE-2019-12817: cd3e49394cb0f45c8dbf3c17c0818cd3d30b1332 powerpc/mm/64s/hash: Reallocate context ids on fork
 
@@ -172,6 +188,8 @@ CVEs fixed in 4.19.61:
   CVE-2019-13631: d657077eda7b5572d86f2f618391bb016b5d9a64 Input: gtco - bounds check collection indent level
   CVE-2019-14283: ff54c44f103825a426e46d08b5d3d76e44791a87 floppy: fix out-of-bounds read in copy_buffer
   CVE-2019-14284: 6e34fd07484a0622a17b40e0ca89ed451260ef45 floppy: fix div-by-zero in setup_format_params
+  CVE-2019-15925: 26d86b29e806769adba91bd6fc1f077b94e9b64b net: hns3: add some error checking in hclge_tm module
+  CVE-2019-15926: 83c911f4bd6846397017aa38c32dd18dc532f754 ath6kl: add some bounds checking
 
 CVEs fixed in 4.19.63:
   CVE-2019-12382: 2a18d76592e0d86c7fddcc6a7aa52509a2900f9d drm/edid: Fix a missing-check bug in drm_load_edid_firmware()
@@ -179,6 +197,7 @@ CVEs fixed in 4.19.63:
 
 CVEs fixed in 4.19.64:
   CVE-2019-10207: 56966212e23f82ced10831f7cca02f7339147428 Bluetooth: hci_uart: check for missing tty operations
+  CVE-2019-15211: b3836af8560e27cd0d27940ff9c5a08b90b8d256 media: radio-raremono: change devm_k*alloc to k*alloc
   CVE-2019-15215: 8b44cc225e6024174508164931cab9f01c79dca2 media: cpia2_usb: first wake up, then free in disconnect
   CVE-2019-3900: 3af3b843aee41ed22343b011a4cf3812a80d2f38 vhost_net: fix possible infinite loop
 
@@ -188,6 +207,9 @@ CVEs fixed in 4.19.65:
 CVEs fixed in 4.19.68:
   CVE-2019-15117: 58b9f19ee438990f6406e61943d0bc7c875a0921 ALSA: usb-audio: Fix an OOB bug in parse_audio_mixer_unit
   CVE-2019-15118: 46f9a1bc60a4c15a14a6504168cee1c2e0bf3ab4 ALSA: usb-audio: Fix a stack buffer overflow bug in check_input_term
+
+CVEs fixed in 4.19.69:
+  CVE-2019-15538: 11f85d4d77afb8f1cb1989f1565b26df21280118 xfs: fix missing ILOCK unlock when xfs_setattr_nonsize fails due to EDQUOT
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -210,7 +232,6 @@ Outstanding CVEs:
   CVE-2018-12931: (unk)  
   CVE-2018-17977: (unk)  
   CVE-2018-20669: (unk) make 'user_access_begin()' do 'access_ok()' 
-  CVE-2019-10140: (unk)  
   CVE-2019-11191: (unk)  
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
   CVE-2019-12379: (unk) consolemap: Fix a memory leaking bug in drivers/tty/vt/consolemap.c 
@@ -220,9 +241,11 @@ Outstanding CVEs:
   CVE-2019-12456: (unk)  
   CVE-2019-12614: (unk) powerpc/pseries/dlpar: Fix a missing check in dlpar_parse_cc_property() 
   CVE-2019-12881: (unk)  
+  CVE-2019-14814: (unk)  
+  CVE-2019-14815: (unk)  
+  CVE-2019-14816: (unk)  
   CVE-2019-15098: (unk)  
   CVE-2019-15099: (unk)  
-  CVE-2019-15211: (unk) media: radio-raremono: change devm_k*alloc to k*alloc 
   CVE-2019-15213: (unk)  
   CVE-2019-15217: (unk) media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap 
   CVE-2019-15239: (unk)  
@@ -230,6 +253,8 @@ Outstanding CVEs:
   CVE-2019-15291: (unk)  
   CVE-2019-15504: (unk)  
   CVE-2019-15505: (unk)  
-  CVE-2019-15538: (unk) xfs: fix missing ILOCK unlock when xfs_setattr_nonsize fails due to EDQUOT 
+  CVE-2019-15902: (unk)  
+  CVE-2019-15918: (unk) cifs: Fix lease buffer length error 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
+  CVE-2019-9444: (unk)  

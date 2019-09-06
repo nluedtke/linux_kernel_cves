@@ -11,6 +11,7 @@ CVEs fixed in 4.12.3:
   CVE-2017-11089: b9582dbe58ebcbd9b415d3d10ef5d990ddba720c cfg80211: Define nla_policy for NL80211_ATTR_LOCAL_MESH_POWER_MODE
   CVE-2017-7541: f888b9ad79954af0c11d3a646129f1d70b951eec brcmfmac: fix possible buffer overflow in brcmf_cfg80211_mgmt_tx()
   CVE-2018-14634: c1152f1638c53af9ec782d77f3f2e6f6c8fb9b0a exec: Limit arg stack to at most 75% of _STK_LIM
+  CVE-2019-9457: c1152f1638c53af9ec782d77f3f2e6f6c8fb9b0a exec: Limit arg stack to at most 75% of _STK_LIM
 
 CVEs fixed in 4.12.4:
   CVE-2017-10663: 55df2e68c21714444fc3056c5636531ee9d1bc58 f2fs: sanity check checkpoint segno and blkoff
@@ -159,6 +160,7 @@ Outstanding CVEs:
   CVE-2017-18549: (unk) scsi: aacraid: Don't copy uninitialized stack memory to userspace 
   CVE-2017-18550: (unk) scsi: aacraid: Don't copy uninitialized stack memory to userspace 
   CVE-2017-18551: (unk) i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA 
+  CVE-2017-18595: (unk) tracing: Fix possible double free on failure of allocating trace buffer 
   CVE-2017-5715: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5754: (unk) x86/cpufeatures: Add Intel feature bits for Speculation Control 
@@ -263,6 +265,7 @@ Outstanding CVEs:
   CVE-2018-20856: (unk) block: blk_init_allocated_queue() set q->fq as NULL in the fail case 
   CVE-2018-20961: (unk) USB: gadget: f_midi: fixing a possible double-free in f_midi 
   CVE-2018-20976: (unk) xfs: clear sb->s_fs_info on mount failure 
+  CVE-2018-21008: (unk) rsi: add fix for crash during assertions 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3639: (unk) x86/nospec: Simplify alternative_msr_write() 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
@@ -304,9 +307,9 @@ Outstanding CVEs:
   CVE-2018-9517: (unk) l2tp: pass tunnel pointer to ->session_create() 
   CVE-2018-9518: (unk) NFC: llcp: Limit size of SDP URI 
   CVE-2018-9568: (unk) net: Set sk_prot_creator when cloning sockets to the right proto 
+  CVE-2019-0136: (unk) mac80211: drop robust management frames from unknown TA 
   CVE-2019-10124: (unk) mm: hwpoison: fix thp split handing in soft_offline_in_use_page() 
   CVE-2019-10126: (unk) mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies() 
-  CVE-2019-10140: (unk)  
   CVE-2019-10142: (unk) drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl 
   CVE-2019-10207: (unk) Bluetooth: hci_uart: check for missing tty operations 
   CVE-2019-10638: (unk) inet: switch IP ID generator to siphash 
@@ -343,13 +346,15 @@ Outstanding CVEs:
   CVE-2019-14283: (unk) floppy: fix out-of-bounds read in copy_buffer 
   CVE-2019-14284: (unk) floppy: fix div-by-zero in setup_format_params 
   CVE-2019-14763: (unk) usb: dwc3: gadget: never call ->complete() from ->ep_queue() 
+  CVE-2019-14814: (unk)  
+  CVE-2019-14815: (unk)  
+  CVE-2019-14816: (unk)  
   CVE-2019-15090: (unk) scsi: qedi: remove memset/memcpy to nfunc and use func instead 
   CVE-2019-15098: (unk)  
   CVE-2019-15117: (unk) ALSA: usb-audio: Fix an OOB bug in parse_audio_mixer_unit 
   CVE-2019-15118: (unk) ALSA: usb-audio: Fix a stack buffer overflow bug in check_input_term 
   CVE-2019-15211: (unk) media: radio-raremono: change devm_k*alloc to k*alloc 
   CVE-2019-15212: (unk) USB: rio500: refuse more than one device at a time 
-  CVE-2019-15213: (unk)  
   CVE-2019-15214: (unk) ALSA: core: Fix card races between register and disconnect 
   CVE-2019-15215: (unk) media: cpia2_usb: first wake up, then free in disconnect 
   CVE-2019-15216: (unk) USB: yurex: Fix protection fault after device removal 
@@ -362,14 +367,22 @@ Outstanding CVEs:
   CVE-2019-15290: (unk)  
   CVE-2019-15291: (unk)  
   CVE-2019-15292: (unk) appletalk: Fix use-after-free in atalk_proc_exit 
-  CVE-2019-15504: (unk)  
   CVE-2019-15505: (unk)  
   CVE-2019-15538: (unk) xfs: fix missing ILOCK unlock when xfs_setattr_nonsize fails due to EDQUOT 
   CVE-2019-15666: (unk) xfrm: policy: Fix out-of-bound array accesses in __xfrm_policy_unlink 
+  CVE-2019-15807: (unk) scsi: libsas: delete sas port if expander discover failed 
+  CVE-2019-15902: (unk)  
+  CVE-2019-15916: (unk) net-sysfs: Fix mem leak in netdev_register_kobject 
+  CVE-2019-15917: (unk) Bluetooth: hci_ldisc: Postpone HCI_UART_PROTO_READY bit set in hci_uart_set_proto() 
+  CVE-2019-15921: (unk) genetlink: Fix a memory leak on error path 
+  CVE-2019-15924: (unk) fm10k: Fix a potential NULL pointer dereference 
+  CVE-2019-15926: (unk) ath6kl: add some bounds checking 
+  CVE-2019-15927: (unk) ALSA: usb-audio: Avoid access before bLength check in build_audio_procunit() 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2024: (unk) media: em28xx: Fix use-after-free when disconnecting 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
   CVE-2019-2101: (unk) media: uvcvideo: Fix 'type' check leading to overflow 
+  CVE-2019-2182: (unk) arm64: Enforce BBM for huge IO/VMAP mappings 
   CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
   CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
   CVE-2019-3701: (unk) can: gw: ensure DLC boundaries after CAN frame modification 
@@ -387,6 +400,13 @@ Outstanding CVEs:
   CVE-2019-8912: (unk) net: crypto set sk to NULL when af_alg_release. 
   CVE-2019-8980: (unk) exec: Fix mem leak in kernel_read_file 
   CVE-2019-9213: (unk) mm: enforce min addr even if capable() in expand_downwards() 
+  CVE-2019-9245: (unk) f2fs: sanity check of xattr entry size 
+  CVE-2019-9444: (unk)  
+  CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
+  CVE-2019-9454: (unk) i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA 
+  CVE-2019-9455: (unk) media: videobuf2-v4l2: drop WARN_ON in vb2_warn_zero_bytesused() 
+  CVE-2019-9456: (unk) usb: usbmon: Read text within supplied buffer size 
+  CVE-2019-9458: (unk) media: v4l: event: Prevent freeing event subscriptions while accessed 
   CVE-2019-9500: (unk) brcmfmac: assure SSID length from firmware is limited 
   CVE-2019-9503: (unk) brcmfmac: add subtype check for event handling in data path 
   CVE-2019-9506: (unk) Bluetooth: Fix faulty expression for minimum encryption key size check 

@@ -4,6 +4,7 @@ CVEs fixed in 5.0:
   CVE-2019-9213: 0a1d52994d440e21def1c2174932410b4f2a98a1 mm: enforce min addr even if capable() in expand_downwards()
 
 CVEs fixed in 5.0.1:
+  CVE-2019-15916: 1ba2882157049c54324cd703060a11dc4e493efe net-sysfs: Fix mem leak in netdev_register_kobject
   CVE-2019-8980: a9bda122bd77a784933edde4120e12a28847aafd exec: Fix mem leak in kernel_read_file
 
 CVEs fixed in 5.0.2:
@@ -15,8 +16,10 @@ CVEs fixed in 5.0.4:
 
 CVEs fixed in 5.0.5:
   CVE-2019-10125: a179695eddd9f94e89ede2cbbf2b27cf748d5070 aio: simplify - and fix - fget/fput for io_submit()
+  CVE-2019-15917: 35228ce61a8160199d1ea4ced956116bba686192 Bluetooth: hci_ldisc: Postpone HCI_UART_PROTO_READY bit set in hci_uart_set_proto()
 
 CVEs fixed in 5.0.6:
+  CVE-2019-15921: bd60a788b10b6b10cc7d53a41a8a53a300705690 genetlink: Fix a memory leak on error path
   CVE-2019-3459: a556547bae00528f24b42786b41a14047db14b84 Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
   CVE-2019-3460: 8dac9b8d27b504734429cb0be541425a216ccba2 Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
 
@@ -36,9 +39,13 @@ CVEs fixed in 5.0.9:
 CVEs fixed in 5.0.10:
   CVE-2019-11599: 1eb719f09f7e319e79f6abf2b9e8c0dcc1c477b5 coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
   CVE-2019-15214: 6ef122eb79569df65f7199c5026033250670ac85 ALSA: core: Fix card races between register and disconnect
+  CVE-2019-15918: 9582ba401ef08e92f328001a813835a464258e7d cifs: Fix lease buffer length error
+  CVE-2019-15919: e8ac406c749ea5d2a583854667a20d8e7fe38070 cifs: Fix use-after-free in SMB2_write
+  CVE-2019-15920: 76dbd554c2730ce0b324e54bac9d8a9056b1ffdc cifs: Fix use-after-free in SMB2_read
   CVE-2019-3892: 1eb719f09f7e319e79f6abf2b9e8c0dcc1c477b5 coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
 
 CVEs fixed in 5.0.11:
+  CVE-2019-15924: a92526e257a5d752a37f0d148fc6182a517b5ce4 fm10k: Fix a potential NULL pointer dereference
   CVE-2019-3882: 16df9424ffaa5bdbeeebd6427606d3b8cc176be1 vfio/type1: Limit DMA mappings per container
 
 CVEs fixed in 5.0.12:
@@ -95,8 +102,8 @@ Outstanding CVEs:
   CVE-2018-12930: (unk)  
   CVE-2018-12931: (unk)  
   CVE-2018-17977: (unk)  
+  CVE-2019-0136: (unk) mac80211: drop robust management frames from unknown TA 
   CVE-2019-10126: (unk) mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies() 
-  CVE-2019-10140: (unk)  
   CVE-2019-10207: (unk) Bluetooth: hci_uart: check for missing tty operations 
   CVE-2019-11191: (unk)  
   CVE-2019-1125: (unk) x86/speculation: Prepare entry code for Spectre v1 swapgs mitigations 
@@ -121,6 +128,9 @@ Outstanding CVEs:
   CVE-2019-13648: (unk) powerpc/tm: Fix oops on sigreturn on systems without TM 
   CVE-2019-14283: (unk) floppy: fix out-of-bounds read in copy_buffer 
   CVE-2019-14284: (unk) floppy: fix div-by-zero in setup_format_params 
+  CVE-2019-14814: (unk)  
+  CVE-2019-14815: (unk)  
+  CVE-2019-14816: (unk)  
   CVE-2019-15090: (unk) scsi: qedi: remove memset/memcpy to nfunc and use func instead 
   CVE-2019-15098: (unk)  
   CVE-2019-15099: (unk)  
@@ -141,8 +151,14 @@ Outstanding CVEs:
   CVE-2019-15504: (unk)  
   CVE-2019-15505: (unk)  
   CVE-2019-15538: (unk) xfs: fix missing ILOCK unlock when xfs_setattr_nonsize fails due to EDQUOT 
+  CVE-2019-15807: (unk) scsi: libsas: delete sas port if expander discover failed 
+  CVE-2019-15902: (unk)  
+  CVE-2019-15925: (unk) net: hns3: add some error checking in hclge_tm module 
+  CVE-2019-15926: (unk) ath6kl: add some bounds checking 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-3846: (unk) mwifiex: Fix possible buffer overflows at parsing bss descriptor 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-3900: (unk) vhost_net: fix possible infinite loop 
+  CVE-2019-9444: (unk)  
+  CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
   CVE-2019-9506: (unk) Bluetooth: Fix faulty expression for minimum encryption key size check 
