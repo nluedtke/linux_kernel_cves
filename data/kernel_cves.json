@@ -42024,8 +42024,8 @@
         }
     },
     "CVE-2019-15926": {
-        "affected_versions": "unk to v5.3-rc1",
-        "breaks": "",
+        "affected_versions": "v3.2-rc1 to v5.3-rc1",
+        "breaks": "bdcd81707973cf8aa9305337166f8ee842a050d4",
         "cmt_msg": "ath6kl: add some bounds checking",
         "cvss2": {
             "Access Complexity": "Low",
@@ -42049,7 +42049,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "5d6751eaff672ea77642e74e92e6c0ac7f9709ab",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.2.3. Out of bounds access exists in the functions ath6kl_wmi_pstream_timeout_event_rx and ath6kl_wmi_cac_event_rx in the file drivers/net/wireless/ath/ath6kl/wmi.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15926",
@@ -42061,8 +42061,8 @@
         }
     },
     "CVE-2019-15927": {
-        "affected_versions": "unk to v5.0-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.0-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ALSA: usb-audio: Avoid access before bLength check in build_audio_procunit()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -42086,7 +42086,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "f4351a199cc120ff9d59e06d02e8657d08e6cc46",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.20.2. An out-of-bounds access exists in the function build_audio_procunit in the file sound/usb/mixer.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15927",
@@ -42095,6 +42095,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15927",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-15927",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15927"
+        }
+    },
+    "CVE-2019-16089": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-09-07",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.2.13. nbd_genl_status in drivers/block/nbd.c does not check the nla_nest_start_noflag return value.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16089",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-16089",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-16089",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16089",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-16089",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16089"
         }
     },
     "CVE-2019-1999": {
@@ -42287,7 +42302,8 @@
         "breaks": "324420bf91f60582bb481133db9547111768ef17",
         "cmt_msg": "arm64: Enforce BBM for huge IO/VMAP mappings",
         "fixes": "15122ee2c515a253b0c66a3e618bc7ebe35105eb",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
+        "nvd_text": "In the Android kernel in the kernel MMU code there is a possible execution path leaving some kernel text and rodata pages writable. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2182",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2182",
@@ -43206,7 +43222,8 @@
         "breaks": "ba38c27eb93e2d36bf940ca65c145f6e2aaa6d5c",
         "cmt_msg": "f2fs: sanity check of xattr entry size",
         "fixes": "64beba0558fce7b59e9a8a7afd77290e82a22163",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
+        "nvd_text": "In the Android kernel in the f2fs driver there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9245",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9245",
@@ -43220,7 +43237,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
+        "nvd_text": "In the Android kernel in sync debug fs driver there is a kernel pointer leak due to the usage of printf with %p. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9444",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9444",
@@ -43235,7 +43253,8 @@
         "breaks": "dd9cfe236f95bbda9ceb5a4ca419b9fb574c95f9",
         "cmt_msg": "f2fs: fix to avoid accessing xattr across the boundary",
         "fixes": "2777e654371dd4207a3a7f4fb5fa39550053a080",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
+        "nvd_text": "In the Android kernel in F2FS touch driver there is a possible out of bounds read due to improper input validation. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9453",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9453",
@@ -43250,7 +43269,8 @@
         "breaks": "",
         "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA",
         "fixes": "89c6efa61f5709327ecfa24bff18e57a4e80c7fa",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
+        "nvd_text": "In the Android kernel in i2c driver there is a possible out of bounds write due to memory corruption. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9454",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9454",
@@ -43265,7 +43285,8 @@
         "breaks": "77a3c6fd90c94f635edb00d4a65f485687538791",
         "cmt_msg": "media: videobuf2-v4l2: drop WARN_ON in vb2_warn_zero_bytesused()",
         "fixes": "5e99456c20f712dcc13d9f6ca4278937d5367355",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
+        "nvd_text": "In the Android kernel in the video driver there is a kernel pointer leak due to a WARN_ON statement. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9455",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9455",
@@ -43280,7 +43301,8 @@
         "breaks": "",
         "cmt_msg": "usb: usbmon: Read text within supplied buffer size",
         "fixes": "a5f596830e27e15f7a0ecd6be55e433d776986d8",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
+        "nvd_text": "In the Android kernel in Pixel C USB monitor driver there is a possible OOB write due to a missing bounds check. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9456",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9456",
@@ -43295,7 +43317,8 @@
         "breaks": "",
         "cmt_msg": "exec: Limit arg stack to at most 75% of _STK_LIM",
         "fixes": "da029c11e6b12f321f36dac8771e833b65cec962",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
+        "nvd_text": "In the Android kernel in ELF file loading there is possible memory corruption due to an integer overflow. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9457",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9457",
@@ -43310,7 +43333,8 @@
         "breaks": "",
         "cmt_msg": "media: v4l: event: Prevent freeing event subscriptions while accessed",
         "fixes": "ad608fbcf166fec809e402d548761768f602702c",
-        "last_modified": "2019-09-05",
+        "last_modified": "2019-09-07",
+        "nvd_text": "In the Android kernel in the video driver there is a use after free due to a race condition. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9458",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9458",
