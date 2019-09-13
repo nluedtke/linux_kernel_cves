@@ -40658,7 +40658,8 @@
         "breaks": "f48e91e87e67b56bef63393d1a02c6e22c1d7078",
         "cmt_msg": "powerpc/tm: Fix FP/VMX unavailable exceptions inside a transaction",
         "fixes": "8205d5d98ef7f155de211f5e2eb6ca03d95a5a60",
-        "last_modified": "2019-09-11",
+        "last_modified": "2019-09-13",
+        "nvd_text": "In the Linux kernel through 5.2.14 on the powerpc platform, a local user can read vector registers of other users' processes via a Facility Unavailable exception. To exploit the venerability, a local user starts a transaction (via the hardware transactional memory instruction tbegin) and then accesses vector registers. At some point, the vector registers will be corrupted with the values from a different local Linux process because of a missing arch/powerpc/kernel/process.c check.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15030",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15030",
@@ -40673,7 +40674,8 @@
         "breaks": "a7771176b4392fbc3a17399c51a8c11f2f681afe",
         "cmt_msg": "powerpc/tm: Fix restoring FP/VMX facility incorrectly on interrupts",
         "fixes": "a8318c13e79badb92bc6640704a64cc022a6eb97",
-        "last_modified": "2019-09-11",
+        "last_modified": "2019-09-13",
+        "nvd_text": "In the Linux kernel through 5.2.14 on the powerpc platform, a local user can read vector registers of other users' processes via an interrupt. To exploit the venerability, a local user starts a transaction (via the hardware transactional memory instruction tbegin) and then accesses vector registers. At some point, the vector registers will be corrupted with the values from a different local Linux process, because MSR_TM_ACTIVE is misused in arch/powerpc/kernel/process.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15031",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15031",
@@ -41274,7 +41276,9 @@
     },
     "CVE-2019-15222": {
         "affected_versions": "v5.3-rc1 to v5.3-rc3",
+        "backport": true,
         "breaks": "801ebf1043ae7b182588554cc9b9ad3c14bc2ab5",
+        "cmt_msg": "ALSA: usb-audio: Fix gpf in snd_usb_pipe_sanity_check",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -41297,7 +41301,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "5d78e1c2b7f4be00bbe62141603a631dc7812f35",
-        "last_modified": "2019-08-22",
+        "last_modified": "2019-09-13",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.2.8. There is a NULL pointer dereference caused by a malicious USB device in the sound/usb/helper.c (motu_microbookii) driver.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15222",
@@ -41345,8 +41349,9 @@
         }
     },
     "CVE-2019-15239": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.17-rc7 to unk",
+        "backport": true,
+        "breaks": "7f582b248d0a86bae5788c548d7bb5bca6f7691a",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -41368,8 +41373,8 @@
             "score": "7.8"
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2019-09-02",
+        "fixes": "dbbf2d1e4077bab0c65ece2765d3fc69cf7d610f",
+        "last_modified": "2019-09-13",
         "nvd_text": "In the Linux kernel, a certain net/ipv4/tcp_output.c change, which was properly incorporated into 4.16.12, was incorrectly backported to the earlier longterm kernels, introducing a new vulnerability that was potentially more severe than the issue that was intended to be fixed by backporting. Specifically, by adding to a write queue between disconnection and re-connection, a local attacker can trigger multiple use-after-free conditions. This can result in a kernel crash, or potentially in privilege escalation. NOTE: this affects (for example) Linux distributions that use 4.9.x longterm kernels before 4.9.190 or 4.14.x longterm kernels before 4.14.139.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15239",
@@ -42191,8 +42196,29 @@
     "CVE-2019-16229": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "",
-        "last_modified": "2019-09-12",
+        "last_modified": "2019-09-13",
         "nvd_text": "drivers/gpu/drm/amd/amdkfd/kfd_interrupt.c in the Linux kernel 5.2.14 does not check the alloc_workqueue return value, leading to a NULL pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16229",
@@ -42206,8 +42232,29 @@
     "CVE-2019-16230": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "",
-        "last_modified": "2019-09-12",
+        "last_modified": "2019-09-13",
         "nvd_text": "drivers/gpu/drm/radeon/radeon_display.c in the Linux kernel 5.2.14 does not check the alloc_workqueue return value, leading to a NULL pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16230",
@@ -42221,8 +42268,29 @@
     "CVE-2019-16231": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "",
-        "last_modified": "2019-09-12",
+        "last_modified": "2019-09-13",
         "nvd_text": "drivers/net/fjes/fjes_main.c in the Linux kernel 5.2.14 does not check the alloc_workqueue return value, leading to a NULL pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16231",
