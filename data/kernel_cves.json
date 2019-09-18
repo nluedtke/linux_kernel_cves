@@ -40657,11 +40657,33 @@
         }
     },
     "CVE-2019-14835": {
-        "affected_versions": "unk to v5.3",
-        "breaks": "",
+        "affected_versions": "v2.6.34-rc1 to v5.3",
+        "breaks": "3a4d5c94e959359ece6d6b55045c3f046677f55c",
         "cmt_msg": "vhost: make sure log_num < in_num",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "060423bfdee3f8bc6e2c1bac97de24d5415e2bc4",
-        "last_modified": "2019-09-17",
+        "last_modified": "2019-09-18",
+        "nvd_text": "A buffer overflow flaw was found, in versions from 2.6.34 to 5.2.x, in the way Linux kernel's vhost functionality that translates virtqueue buffers to IOVs, logged the buffer descriptors during migration. A privileged guest user able to pass descriptors with invalid length to the host when migration is underway, could use this flaw to increase their privileges on the host.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14835",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14835",
