@@ -41041,8 +41041,9 @@
         }
     },
     "CVE-2019-15213": {
-        "affected_versions": "v4.19-rc1 to unk",
+        "affected_versions": "v4.19-rc1 to v5.3-rc1",
         "breaks": "299c7007e93645067e1d2743f4e50156de78c4ff",
+        "cmt_msg": "media: dvb: usb: fix use after free in dvb_usb_device_exit",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -41064,8 +41065,8 @@
             "score": "4.6"
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2019-08-28",
+        "fixes": "6cf97230cd5f36b7665099083272595c55d72be7",
+        "last_modified": "2019-09-19",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.2.3. There is a use-after-free caused by a malicious USB device in the drivers/media/usb/dvb-usb/dvb-usb-init.c driver.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15213",
@@ -41412,7 +41413,9 @@
     },
     "CVE-2019-15223": {
         "affected_versions": "v5.2-rc1 to v5.2-rc3",
+        "backport": true,
         "breaks": "7f84ff68be05ec7a5d2acf8fdc734fe5897af48f",
+        "cmt_msg": "ALSA: line6: Assure canceling delayed work at disconnection",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -41435,7 +41438,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "0b074ab7fc0d575247b9cc9f93bb7e007ca38840",
-        "last_modified": "2019-08-23",
+        "last_modified": "2019-09-19",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.1.8. There is a NULL pointer dereference caused by a malicious USB device in the sound/usb/line6/driver.c driver.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15223",
