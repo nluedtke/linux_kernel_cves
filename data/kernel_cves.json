@@ -40662,6 +40662,7 @@
         "cmt_msg": "KVM: coalesced_mmio: add bounds checking",
         "fixes": "b60fe990c6b07ef6d4df67bc0530c7c90a62623a",
         "last_modified": "2019-09-19",
+        "nvd_text": "An out-of-bounds access issue was found in the Linux kernel, all versions through 5.3, in the way Linux kernel's KVM hypervisor implements the Coalesced MMIO write operation. It operates on an MMIO ring buffer 'struct kvm_coalesced_mmio' object, wherein write indices 'ring-&gt;first' and 'ring-&gt;last' value could be supplied by a host user-space process. An unprivileged host user or process with access to '/dev/kvm' device could use this flaw to crash the host kernel, resulting in a denial of service or potentially escalating privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14821",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14821",
@@ -42516,6 +42517,27 @@
         "affected_versions": "unk to v5.1-rc1",
         "breaks": "",
         "cmt_msg": "9p: use inode->i_lock to protect i_size_write() under 32-bit",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Loop with Unreachable Exit Condition ('Infinite Loop')",
         "fixes": "5e3cc1ee1405a7eb3487ed24f786dec01b4cbe1f",
         "last_modified": "2019-09-19",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.0.4. The 9p filesystem did not protect i_size_write() properly, which causes an i_size_read() infinite loop and denial of service on SMP systems.",
