@@ -40656,6 +40656,21 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-14816"
         }
     },
+    "CVE-2019-14821": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "KVM: coalesced_mmio: add bounds checking",
+        "fixes": "b60fe990c6b07ef6d4df67bc0530c7c90a62623a",
+        "last_modified": "2019-09-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14821",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14821",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-14821",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-14821",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-14821",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-14821"
+        }
+    },
     "CVE-2019-14835": {
         "affected_versions": "v2.6.34-rc1 to v5.3",
         "breaks": "3a4d5c94e959359ece6d6b55045c3f046677f55c",
@@ -40807,6 +40822,7 @@
     "CVE-2019-15098": {
         "affected_versions": "v3.5-rc1 to unk",
         "breaks": "9cbee358687edf0359e29ac683ec25835134f059",
+        "cmt_msg": "ath6kl: fix a NULL-ptr-deref bug in ath6kl_usb_alloc_urb_from_pipe()",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -40828,8 +40844,8 @@
             "score": "5.5"
         },
         "cwe": "NULL Pointer Dereference",
-        "fixes": "",
-        "last_modified": "2019-08-26",
+        "fixes": "39d170b3cb62ba98567f5c4f40c27b5864b304e5",
+        "last_modified": "2019-09-19",
         "nvd_text": "drivers/net/wireless/ath/ath6kl/usb.c in the Linux kernel through 5.2.8 has a NULL pointer dereference via an incomplete address in an endpoint descriptor.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15098",
@@ -41603,7 +41619,7 @@
         },
         "cwe": "Double Free",
         "fixes": "8b51dc7291473093c821195c4b6af85fadedbc2f",
-        "last_modified": "2019-09-16",
+        "last_modified": "2019-09-19",
         "nvd_text": "drivers/net/wireless/rsi/rsi_91x_usb.c in the Linux kernel through 5.2.9 has a Double Free via crafted USB device traffic (which may be remote via usbip or usbredir).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15504",
@@ -42491,6 +42507,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16234",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-16234",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16234"
+        }
+    },
+    "CVE-2019-16413": {
+        "affected_versions": "unk to v5.1-rc1",
+        "breaks": "",
+        "cmt_msg": "9p: use inode->i_lock to protect i_size_write() under 32-bit",
+        "fixes": "5e3cc1ee1405a7eb3487ed24f786dec01b4cbe1f",
+        "last_modified": "2019-09-19",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.4. The 9p filesystem did not protect i_size_write() properly, which causes an i_size_read() infinite loop and denial of service on SMP systems.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16413",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-16413",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-16413",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16413",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-16413",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16413"
         }
     },
     "CVE-2019-1999": {
@@ -43730,8 +43762,9 @@
         }
     },
     "CVE-2019-9445": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.1-rc1",
         "breaks": "",
+        "cmt_msg": "f2fs: check if file namelen exceeds max value",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -43753,8 +43786,8 @@
             "score": "4.4"
         },
         "cwe": "Out-of-bounds Read",
-        "fixes": "",
-        "last_modified": "2019-09-17",
+        "fixes": "720db068634c91553a8e1d9a0fcd8c7050e06d2b",
+        "last_modified": "2019-09-19",
         "nvd_text": "In the Android kernel in F2FS driver there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9445",
