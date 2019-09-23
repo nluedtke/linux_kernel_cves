@@ -40615,8 +40615,29 @@
         "affected_versions": "v3.7-rc1 to v5.3",
         "breaks": "a3c2c4f6d8bcd473a7016db93da4f10b3f10f25f",
         "cmt_msg": "mwifiex: Fix three heap overflow at parsing element in cfg80211_ap_settings",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "7caac62ed598a196d6ddf8d9c121e12e082cac3a",
-        "last_modified": "2019-09-21",
+        "last_modified": "2019-09-23",
         "nvd_text": "There is heap-based buffer overflow in Linux kernel, all versions up to, excluding 5.3, in the marvell wifi chip driver in Linux kernel, that allows local users to cause a denial of service(system crash) or possibly execute arbitrary code.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14814",
@@ -40646,8 +40667,29 @@
         "affected_versions": "v3.7-rc1 to v5.3",
         "breaks": "8a6e231766bdd2e1d228a14af89e36dc190be3a6",
         "cmt_msg": "mwifiex: Fix three heap overflow at parsing element in cfg80211_ap_settings",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "7caac62ed598a196d6ddf8d9c121e12e082cac3a",
-        "last_modified": "2019-09-21",
+        "last_modified": "2019-09-23",
         "nvd_text": "There is heap-based buffer overflow in kernel, all versions up to, excluding 5.3, in the marvell wifi chip driver in Linux kernel, that allows local users to cause a denial of service(system crash) or possibly execute arbitrary code.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14816",
@@ -42538,8 +42580,8 @@
         }
     },
     "CVE-2019-16413": {
-        "affected_versions": "unk to v5.1-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.32-rc1 to v5.1-rc1",
+        "breaks": "7549ae3e81cc45908cbeee54a52b24f247fb0a2d",
         "cmt_msg": "9p: use inode->i_lock to protect i_size_write() under 32-bit",
         "cvss2": {
             "Access Complexity": "Low",
@@ -42563,7 +42605,7 @@
         },
         "cwe": "Loop with Unreachable Exit Condition ('Infinite Loop')",
         "fixes": "5e3cc1ee1405a7eb3487ed24f786dec01b4cbe1f",
-        "last_modified": "2019-09-19",
+        "last_modified": "2019-09-23",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.0.4. The 9p filesystem did not protect i_size_write() properly, which causes an i_size_read() infinite loop and denial of service on SMP systems.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16413",
@@ -42572,6 +42614,43 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16413",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-16413",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16413"
+        }
+    },
+    "CVE-2019-16714": {
+        "affected_versions": "unk to v5.3-rc7",
+        "breaks": "",
+        "cmt_msg": "net/rds: Fix info leak in rds6_inc_info_copy()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Information Exposure",
+        "fixes": "7d0a06586b2686ba80c4a2da5f91cb10ffbea736",
+        "last_modified": "2019-09-23",
+        "nvd_text": "In the Linux kernel before 5.2.14, rds6_inc_info_copy in net/rds/recv.c allows attackers to obtain sensitive information from kernel stack memory because tos and flags fields are not initialized.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16714",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-16714",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-16714",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16714",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-16714",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16714"
         }
     },
     "CVE-2019-1999": {
