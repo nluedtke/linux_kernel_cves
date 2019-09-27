@@ -39281,8 +39281,9 @@
         }
     },
     "CVE-2019-11191": {
-        "affected_versions": "v2.6.12-rc2 to unk",
+        "affected_versions": "v2.6.12-rc2 to v5.1-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "x86: Deprecate a.out support",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Local Access",
@@ -39304,8 +39305,8 @@
             "score": "4.7"
         },
         "cwe": "Race Conditions",
-        "fixes": "",
-        "last_modified": "2019-04-18",
+        "fixes": "eac616557050737a8d6ef6fe0322d0980ff0ffde",
+        "last_modified": "2019-09-27",
         "nvd_text": "The Linux kernel through 5.0.7, when CONFIG_IA32_AOUT is enabled and ia32_aout is loaded, allows local users to bypass ASLR on setuid a.out programs (if any exist) because install_exec_creds() is called too late in load_aout_binary() in fs/binfmt_aout.c, and thus the ptrace_may_access() check has a race condition when reading /proc/pid/stat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-11191",
@@ -42687,6 +42688,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16746",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-16746",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16746"
+        }
+    },
+    "CVE-2019-16921": {
+        "affected_versions": "unk to v4.17-rc1",
+        "breaks": "",
+        "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext",
+        "fixes": "df7e40425813c50cd252e6f5e348a81ef1acae56",
+        "last_modified": "2019-09-27",
+        "nvd_text": "In the Linux kernel before 4.17, hns_roce_alloc_ucontext in drivers/infiniband/hw/hns/hns_roce_main.c does not initialize the resp data structure, which might allow attackers to obtain sensitive information from kernel stack memory, aka CID-df7e40425813.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16921",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-16921",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-16921",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16921",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-16921",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16921"
         }
     },
     "CVE-2019-1999": {
