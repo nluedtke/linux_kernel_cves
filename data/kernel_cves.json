@@ -42694,8 +42694,29 @@
         "affected_versions": "unk to v4.17-rc1",
         "breaks": "",
         "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.5"
+        },
+        "cwe": "Improper Initialization",
         "fixes": "df7e40425813c50cd252e6f5e348a81ef1acae56",
-        "last_modified": "2019-09-27",
+        "last_modified": "2019-09-28",
         "nvd_text": "In the Linux kernel before 4.17, hns_roce_alloc_ucontext in drivers/infiniband/hw/hns/hns_roce_main.c does not initialize the resp data structure, which might allow attackers to obtain sensitive information from kernel stack memory, aka CID-df7e40425813.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16921",
