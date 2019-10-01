@@ -37063,7 +37063,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "abd39c6ded9db53aa44c2540092bdd5fb6590fa8",
-        "last_modified": "2019-09-06",
+        "last_modified": "2019-10-01",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.16.7. A use-after-free can be caused by the function rsi_mac80211_detach in the file drivers/net/wireless/rsi/rsi_91x_mac80211.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-21008",
@@ -40702,7 +40702,7 @@
         }
     },
     "CVE-2019-14821": {
-        "affected_versions": "v2.6.27-rc1 to unk",
+        "affected_versions": "v2.6.27-rc1 to v5.4-rc1",
         "breaks": "5f94c1741bdc7a336553122036e8a779e616ccbf",
         "cmt_msg": "KVM: coalesced_mmio: add bounds checking",
         "cvss2": {
@@ -40727,7 +40727,7 @@
         },
         "cwe": "Out-of-bounds Write",
         "fixes": "b60fe990c6b07ef6d4df67bc0530c7c90a62623a",
-        "last_modified": "2019-09-21",
+        "last_modified": "2019-10-01",
         "nvd_text": "An out-of-bounds access issue was found in the Linux kernel, all versions through 5.3, in the way Linux kernel's KVM hypervisor implements the Coalesced MMIO write operation. It operates on an MMIO ring buffer 'struct kvm_coalesced_mmio' object, wherein write indices 'ring-&gt;first' and 'ring-&gt;last' value could be supplied by a host user-space process. An unprivileged host user or process with access to '/dev/kvm' device could use this flaw to crash the host kernel, resulting in a denial of service or potentially escalating privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14821",
@@ -40887,7 +40887,7 @@
         }
     },
     "CVE-2019-15098": {
-        "affected_versions": "v3.5-rc1 to unk",
+        "affected_versions": "v3.5-rc1 to v5.4-rc1",
         "breaks": "9cbee358687edf0359e29ac683ec25835134f059",
         "cmt_msg": "ath6kl: fix a NULL-ptr-deref bug in ath6kl_usb_alloc_urb_from_pipe()",
         "cvss2": {
@@ -40912,7 +40912,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "39d170b3cb62ba98567f5c4f40c27b5864b304e5",
-        "last_modified": "2019-09-19",
+        "last_modified": "2019-10-01",
         "nvd_text": "drivers/net/wireless/ath/ath6kl/usb.c in the Linux kernel through 5.2.8 has a NULL pointer dereference via an incomplete address in an endpoint descriptor.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15098",
@@ -40924,7 +40924,7 @@
         }
     },
     "CVE-2019-15099": {
-        "affected_versions": "v4.14-rc1 to unk",
+        "affected_versions": "v4.14-rc1 to v5.4-rc1",
         "breaks": "4db66499df91b9398435e2dbee0e42cd6df0bc27",
         "cmt_msg": "ath6kl: fix a NULL-ptr-deref bug in ath6kl_usb_alloc_urb_from_pipe()",
         "cvss2": {
@@ -40949,7 +40949,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "39d170b3cb62ba98567f5c4f40c27b5864b304e5",
-        "last_modified": "2019-09-29",
+        "last_modified": "2019-10-01",
         "nvd_text": "drivers/net/wireless/ath/ath10k/usb.c in the Linux kernel through 5.2.8 has a NULL pointer dereference via an incomplete address in an endpoint descriptor.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15099",
@@ -41702,7 +41702,7 @@
         }
     },
     "CVE-2019-15505": {
-        "affected_versions": "v2.6.39-rc1 to unk",
+        "affected_versions": "v2.6.39-rc1 to v5.4-rc1",
         "breaks": "739ff04f63ba6498b287021649cb999e639c3c83",
         "cmt_msg": "media: technisat-usb2: break out of loop at end of buffer",
         "cvss2": {
@@ -41727,7 +41727,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "0c4df39e504bf925ab666132ac3c98d6cbbe380b",
-        "last_modified": "2019-09-22",
+        "last_modified": "2019-10-01",
         "nvd_text": "drivers/media/usb/dvb-usb/technisat-usb2.c in the Linux kernel through 5.2.9 has an out-of-bounds read via crafted USB device traffic (which may be remote via usbip or usbredir).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15505",
@@ -42726,6 +42726,38 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16921",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-16921",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16921"
+        }
+    },
+    "CVE-2019-16994": {
+        "affected_versions": "unk to v5.0",
+        "breaks": "",
+        "cmt_msg": "net: sit: fix memory leak in sit_init_net()",
+        "fixes": "07f12b26e21ab359261bf75cfcb424fdc7daeb6d",
+        "last_modified": "2019-10-01",
+        "nvd_text": "In the Linux kernel before 5.0, a memory leak exists in sit_init_net() in net/ipv6/sit.c when register_netdev() fails to register sitn-&gt;fb_tunnel_dev, which may cause denial of service, aka CID-07f12b26e21a.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16994",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-16994",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-16994",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16994",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-16994",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16994"
+        }
+    },
+    "CVE-2019-16995": {
+        "affected_versions": "unk to v5.1-rc1",
+        "breaks": "",
+        "cmt_msg": "net: hsr: fix memory leak in hsr_dev_finalize()",
+        "fixes": "6caabe7f197d3466d238f70915d65301f1716626",
+        "last_modified": "2019-10-01",
+        "nvd_text": "In the Linux kernel before 5.0.3, a memory leak exits in hsr_dev_finalize() in net/hsr/hsr_device.c if hsr_add_port fails to add a port, which may cause denial of service, aka CID-6caabe7f197d.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16995",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-16995",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-16995",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16995",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-16995",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16995"
         }
     },
     "CVE-2019-1999": {
