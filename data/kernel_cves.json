@@ -42692,8 +42692,8 @@
         }
     },
     "CVE-2019-16921": {
-        "affected_versions": "unk to v4.17-rc1",
-        "breaks": "",
+        "affected_versions": "v4.17-rc1 to v4.17-rc1",
+        "breaks": "e088a685eae94a0607b8f7b99949a0e14d748813",
         "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext",
         "cvss2": {
             "Access Complexity": "Low",
@@ -42717,7 +42717,7 @@
         },
         "cwe": "Improper Initialization",
         "fixes": "df7e40425813c50cd252e6f5e348a81ef1acae56",
-        "last_modified": "2019-09-28",
+        "last_modified": "2019-10-01",
         "nvd_text": "In the Linux kernel before 4.17, hns_roce_alloc_ucontext in drivers/infiniband/hw/hns/hns_roce_main.c does not initialize the resp data structure, which might allow attackers to obtain sensitive information from kernel stack memory, aka CID-df7e40425813.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16921",
@@ -42758,6 +42758,86 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-16995",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-16995",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-16995"
+        }
+    },
+    "CVE-2019-17052": {
+        "affected_versions": "unk to v5.4-rc1",
+        "breaks": "",
+        "cmt_msg": "ax25: enforce CAP_NET_RAW for raw sockets",
+        "fixes": "0614e2b73768b502fc32a75349823356d98aae2c",
+        "last_modified": "2019-10-01",
+        "nvd_text": "ax25_create in net/ax25/af_ax25.c in the AF_AX25 network module in the Linux kernel through 5.3.2 does not enforce CAP_NET_RAW, which means that unprivileged users can create a raw socket, aka CID-0614e2b73768.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-17052",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-17052",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-17052",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-17052",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-17052",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-17052"
+        }
+    },
+    "CVE-2019-17053": {
+        "affected_versions": "unk to v5.4-rc1",
+        "breaks": "",
+        "cmt_msg": "ieee802154: enforce CAP_NET_RAW for raw sockets",
+        "fixes": "e69dbd4619e7674c1679cba49afd9dd9ac347eef",
+        "last_modified": "2019-10-01",
+        "nvd_text": "ieee802154_create in net/ieee802154/socket.c in the AF_IEEE802154 network module in the Linux kernel through 5.3.2 does not enforce CAP_NET_RAW, which means that unprivileged users can create a raw socket, aka CID-e69dbd4619e7.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-17053",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-17053",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-17053",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-17053",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-17053",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-17053"
+        }
+    },
+    "CVE-2019-17054": {
+        "affected_versions": "unk to v5.4-rc1",
+        "breaks": "",
+        "cmt_msg": "appletalk: enforce CAP_NET_RAW for raw sockets",
+        "fixes": "6cc03e8aa36c51f3b26a0d21a3c4ce2809c842ac",
+        "last_modified": "2019-10-01",
+        "nvd_text": "atalk_create in net/appletalk/ddp.c in the AF_APPLETALK network module in the Linux kernel through 5.3.2 does not enforce CAP_NET_RAW, which means that unprivileged users can create a raw socket, aka CID-6cc03e8aa36c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-17054",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-17054",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-17054",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-17054",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-17054",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-17054"
+        }
+    },
+    "CVE-2019-17055": {
+        "affected_versions": "unk to v5.4-rc1",
+        "breaks": "",
+        "cmt_msg": "mISDN: enforce CAP_NET_RAW for raw sockets",
+        "fixes": "b91ee4aa2a2199ba4d4650706c272985a5a32d80",
+        "last_modified": "2019-10-01",
+        "nvd_text": "base_sock_create in drivers/isdn/mISDN/socket.c in the AF_ISDN network module in the Linux kernel through 5.3.2 does not enforce CAP_NET_RAW, which means that unprivileged users can create a raw socket, aka CID-b91ee4aa2a21.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-17055",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-17055",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-17055",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-17055",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-17055",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-17055"
+        }
+    },
+    "CVE-2019-17056": {
+        "affected_versions": "unk to v5.4-rc1",
+        "breaks": "",
+        "cmt_msg": "nfc: enforce CAP_NET_RAW for raw sockets",
+        "fixes": "3a359798b176183ef09efb7a3dc59abad1cc7104",
+        "last_modified": "2019-10-01",
+        "nvd_text": "llcp_sock_create in net/nfc/llcp_sock.c in the AF_NFC network module in the Linux kernel through 5.3.2 does not enforce CAP_NET_RAW, which means that unprivileged users can create a raw socket, aka CID-3a359798b176.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-17056",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-17056",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-17056",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-17056",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-17056",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-17056"
         }
     },
     "CVE-2019-1999": {
