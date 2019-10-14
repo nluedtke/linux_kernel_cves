@@ -42989,8 +42989,9 @@
         }
     },
     "CVE-2019-17075": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.4-rc3",
         "breaks": "",
+        "cmt_msg": "RDMA/cxgb4: Do not dma memory off of the stack",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -43012,8 +43013,8 @@
             "score": "7.5"
         },
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
-        "fixes": "",
-        "last_modified": "2019-10-09",
+        "fixes": "3840c5b78803b2b6cc1ff820100a74a092c40cbb",
+        "last_modified": "2019-10-14",
         "nvd_text": "An issue was discovered in write_tpt_entry in drivers/infiniband/hw/cxgb4/mem.c in the Linux kernel through 5.3.2. The cxgb4 driver is directly calling dma_map_single (a DMA function) from a stack variable. This could allow an attacker to trigger a Denial of Service, exploitable if this driver is used on an architecture for which this stack/DMA interaction has security relevance.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-17075",
