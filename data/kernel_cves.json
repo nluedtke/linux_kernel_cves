@@ -43026,8 +43026,9 @@
         }
     },
     "CVE-2019-17133": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.4-rc4",
         "breaks": "",
+        "cmt_msg": "cfg80211: wext: avoid copying malformed SSIDs",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -43049,8 +43050,8 @@
             "score": "9.8"
         },
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
-        "fixes": "",
-        "last_modified": "2019-10-11",
+        "fixes": "4ac2813cc867ae563a1ba5a9414bfb554e5796fa",
+        "last_modified": "2019-10-21",
         "nvd_text": "In the Linux kernel through 5.3.2, cfg80211_mgd_wext_giwessid in net/wireless/wext-sme.c does not reject a long SSID IE, leading to a Buffer Overflow.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-17133",
@@ -43101,8 +43102,29 @@
     "CVE-2019-17666": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "8.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "8.8"
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "",
-        "last_modified": "2019-10-17",
+        "last_modified": "2019-10-21",
         "nvd_text": "rtl_p2p_noa_ie in drivers/net/wireless/realtek/rtlwifi/ps.c in the Linux kernel through 5.3.6 lacks a certain upper-bound check, leading to a buffer overflow.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-17666",
