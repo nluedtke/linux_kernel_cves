@@ -43139,8 +43139,29 @@
         "affected_versions": "unk to v5.4-rc1",
         "breaks": "",
         "cmt_msg": "ipv6: do not free rt if FIB_LOOKUP_NOREF is set on suppress rule",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "7.8"
+        },
+        "cwe": "Missing Release of Resource after Effective Lifetime",
         "fixes": "ca7a03c4175366a92cee0ccc4fec0038c3266e26",
-        "last_modified": "2019-10-19",
+        "last_modified": "2019-10-27",
         "nvd_text": "In the Linux kernel before 5.3.4, a reference count usage error in the fib6_rule_suppress() function in the fib6 suppression feature of net/ipv6/fib6_rules.c, when handling the FIB_LOOKUP_NOREF flag, can be exploited by a local attacker to corrupt memory, aka CID-ca7a03c41753.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18198",
