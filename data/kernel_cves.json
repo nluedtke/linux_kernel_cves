@@ -7592,6 +7592,22 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2014/CVE-2014-3153"
         }
     },
+    "CVE-2014-3180": {
+        "affected_versions": "unk to v3.17-rc4",
+        "breaks": "",
+        "cmt_msg": "compat: nanosleep: Clarify error handling",
+        "fixes": "849151dd5481bc8acb1d287a299b5d6a4ca9f1c3",
+        "last_modified": "2019-11-07",
+        "nvd_text": "** DISPUTED ** In kernel/compat.c in the Linux kernel before 3.17, as used in Google Chrome OS and other products, there is a possible out-of-bounds read. restart_syscall uses uninitialized data when restarting compat_sys_nanosleep. NOTE: this is disputed because the code path is unreachable.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2014-3180",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2014-3180",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2014-3180",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2014-3180",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2014-3180",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2014/CVE-2014-3180"
+        }
+    },
     "CVE-2014-3181": {
         "affected_versions": "v2.6.37-rc1 to v3.17-rc3",
         "breaks": "a462230e16acc8664145216da3c928d03556691a",
@@ -9362,6 +9378,8 @@
     "CVE-2014-8181": {
         "breaks": "",
         "fixes": "",
+        "last_modified": "2019-11-07",
+        "nvd_text": "The kernel in Red Hat Enterprise Linux 7 and MRG-2 does not clear garbage data for SG_IO buffer, which may leaking sensitive information to userspace.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2014-8181",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2014-8181",
@@ -40912,7 +40930,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "39d170b3cb62ba98567f5c4f40c27b5864b304e5",
-        "last_modified": "2019-10-01",
+        "last_modified": "2019-11-07",
         "nvd_text": "drivers/net/wireless/ath/ath6kl/usb.c in the Linux kernel through 5.2.8 has a NULL pointer dereference via an incomplete address in an endpoint descriptor.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15098",
@@ -40949,7 +40967,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "39d170b3cb62ba98567f5c4f40c27b5864b304e5",
-        "last_modified": "2019-10-01",
+        "last_modified": "2019-11-07",
         "nvd_text": "drivers/net/wireless/ath/ath10k/usb.c in the Linux kernel through 5.2.8 has a NULL pointer dereference via an incomplete address in an endpoint descriptor.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15099",
@@ -43226,8 +43244,29 @@
     "CVE-2019-18786": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "score": "5.5"
+        },
+        "cwe": "Information Exposure",
         "fixes": "",
-        "last_modified": "2019-11-06",
+        "last_modified": "2019-11-07",
         "nvd_text": "In the Linux kernel through 5.3.8, f-&gt;fmt.sdr.reserved is uninitialized in rcar_drif_g_fmt_sdr_cap in drivers/media/platform/rcar_drif.c, which could cause a memory disclosure problem.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18786",
@@ -43495,6 +43534,36 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-2182",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-2182",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-2182"
+        }
+    },
+    "CVE-2019-2213": {
+        "affected_versions": "unk to v5.2-rc6",
+        "breaks": "",
+        "cmt_msg": "binder: fix possible UAF when freeing buffer",
+        "fixes": "a370003cc301d4361bae20c9ef615f89bf8d1e8a",
+        "last_modified": "2019-11-07",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2213",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2213",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-2213",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-2213",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-2213",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-2213"
+        }
+    },
+    "CVE-2019-2214": {
+        "affected_versions": "unk to v5.3-rc2",
+        "breaks": "",
+        "cmt_msg": "binder: Set end of SG buffer area properly.",
+        "fixes": "a56587065094fd96eb4c2b5ad65571daad32156d",
+        "last_modified": "2019-11-07",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2214",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-2214",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-2214",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-2214",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-2214",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-2214"
         }
     },
     "CVE-2019-2215": {
@@ -44768,6 +44837,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-9458",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-9458",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-9458"
+        }
+    },
+    "CVE-2019-9466": {
+        "affected_versions": "unk to v5.1-rc1",
+        "breaks": "",
+        "cmt_msg": "brcmfmac: add subtype check for event handling in data path",
+        "fixes": "a4176ec356c73a46c07c181c6d04039fafa34a9f",
+        "last_modified": "2019-11-07",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9466",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-9466",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-9466",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-9466",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-9466",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-9466"
         }
     },
     "CVE-2019-9500": {
