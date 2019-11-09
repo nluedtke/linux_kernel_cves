@@ -7596,8 +7596,31 @@
         "affected_versions": "unk to v3.17-rc4",
         "breaks": "",
         "cmt_msg": "compat: nanosleep: Clarify error handling",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+            "score": "6.4"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+            "score": "9.1"
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "849151dd5481bc8acb1d287a299b5d6a4ca9f1c3",
-        "last_modified": "2019-11-07",
+        "last_modified": "2019-11-08",
         "nvd_text": "** DISPUTED ** In kernel/compat.c in the Linux kernel before 3.17, as used in Google Chrome OS and other products, there is a possible out-of-bounds read. restart_syscall uses uninitialized data when restarting compat_sys_nanosleep. NOTE: this is disputed because the code path is unreachable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2014-3180",
@@ -43229,8 +43252,31 @@
     "CVE-2019-18683": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.0"
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "",
-        "last_modified": "2019-11-04",
+        "last_modified": "2019-11-08",
         "nvd_text": "An issue was discovered in drivers/media/platform/vivid in the Linux kernel through 5.3.8. It is exploitable for privilege escalation on some Linux distributions where local users have /dev/video0 access, but only if the driver happens to be loaded. There are multiple race conditions during streaming stopping in this driver (part of the V4L2 subsystem). These issues are caused by wrong mutex locking in vivid_stop_generating_vid_cap(), vivid_stop_generating_vid_out(), sdr_cap_stop_streaming(), and the corresponding kthreads. At least one of these race conditions leads to a use-after-free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18683",
@@ -43275,6 +43321,391 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18786",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-18786",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18786"
+        }
+    },
+    "CVE-2019-18805": {
+        "affected_versions": "unk to v5.1-rc7",
+        "breaks": "",
+        "cmt_msg": "ipv4: set the tcp_min_rtt_wlen range from 0 to one day",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+            "score": "7.5"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": "9.8"
+        },
+        "cwe": "Integer Overflow or Wraparound",
+        "fixes": "19fad20d15a6494f47f85d869f00b11343ee5c78",
+        "last_modified": "2019-11-08",
+        "nvd_text": "An issue was discovered in net/ipv4/sysctl_net_ipv4.c in the Linux kernel before 5.0.11. There is a net/ipv4/tcp_input.c signed integer overflow in tcp_ack_update_rtt() when userspace writes a very large integer to /proc/sys/net/ipv4/tcp_min_rtt_wlen, leading to a denial of service or possibly unspecified other impact, aka CID-19fad20d15a6.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18805",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18805",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18805",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18805",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18805",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18805"
+        }
+    },
+    "CVE-2019-18806": {
+        "affected_versions": "unk to v5.4-rc2",
+        "breaks": "",
+        "cmt_msg": "net: qlogic: Fix memory leak in ql_alloc_large_buffers",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
+        "fixes": "1acb8f2a7a9f10543868ddd737e37424d5c36cf4",
+        "last_modified": "2019-11-08",
+        "nvd_text": "A memory leak in the ql_alloc_large_buffers() function in drivers/net/ethernet/qlogic/qla3xxx.c in the Linux kernel before 5.3.5 allows local users to cause a denial of service (memory consumption) by triggering pci_dma_mapping_error() failures, aka CID-1acb8f2a7a9f.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18806",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18806",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18806",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18806",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18806",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18806"
+        }
+    },
+    "CVE-2019-18807": {
+        "affected_versions": "unk to v5.4-rc2",
+        "breaks": "",
+        "cmt_msg": "net: dsa: sja1105: Prevent leaking memory",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
+        "fixes": "68501df92d116b760777a2cfda314789f926476f",
+        "last_modified": "2019-11-08",
+        "nvd_text": "Two memory leaks in the sja1105_static_config_upload() function in drivers/net/dsa/sja1105/sja1105_spi.c in the Linux kernel before 5.3.5 allow attackers to cause a denial of service (memory consumption) by triggering static_config_buf_prepare_for_upload() or sja1105_inhibit_tx() failures, aka CID-68501df92d11.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18807",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18807",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18807",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18807",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18807",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18807"
+        }
+    },
+    "CVE-2019-18808": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
+        "fixes": "",
+        "last_modified": "2019-11-08",
+        "nvd_text": "A memory leak in the ccp_run_sha_cmd() function in drivers/crypto/ccp/ccp-ops.c in the Linux kernel through 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-128c66429247.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18808",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18808",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18808",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18808",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18808",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18808"
+        }
+    },
+    "CVE-2019-18809": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
+        "fixes": "",
+        "last_modified": "2019-11-08",
+        "nvd_text": "A memory leak in the af9005_identify_state() function in drivers/media/usb/dvb-usb/af9005.c in the Linux kernel through 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-2289adbfa559.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18809",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18809",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18809",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18809",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18809",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18809"
+        }
+    },
+    "CVE-2019-18810": {
+        "affected_versions": "unk to v5.4-rc2",
+        "breaks": "",
+        "cmt_msg": "drm/komeda: prevent memory leak in komeda_wb_connector_add",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
+        "fixes": "a0ecd6fdbf5d648123a7315c695fb6850d702835",
+        "last_modified": "2019-11-08",
+        "nvd_text": "A memory leak in the komeda_wb_connector_add() function in drivers/gpu/drm/arm/display/komeda/komeda_wb_connector.c in the Linux kernel before 5.3.8 allows attackers to cause a denial of service (memory consumption) by triggering drm_writeback_connector_init() failures, aka CID-a0ecd6fdbf5d.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18810",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18810",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18810",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18810",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18810",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18810"
+        }
+    },
+    "CVE-2019-18811": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
+        "fixes": "",
+        "last_modified": "2019-11-08",
+        "nvd_text": "A memory leak in the sof_set_get_large_ctrl_data() function in sound/soc/sof/ipc.c in the Linux kernel through 5.3.9 allows attackers to cause a denial of service (memory consumption) by triggering sof_get_ctrl_copy_params() failures, aka CID-45c1380358b1.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18811",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18811",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18811",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18811",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18811",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18811"
+        }
+    },
+    "CVE-2019-18812": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
+        "fixes": "",
+        "last_modified": "2019-11-08",
+        "nvd_text": "A memory leak in the sof_dfsentry_write() function in sound/soc/sof/debug.c in the Linux kernel through 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-c0a333d842ef.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18812",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18812",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18812",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18812",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18812",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18812"
+        }
+    },
+    "CVE-2019-18813": {
+        "affected_versions": "unk to v5.4-rc6",
+        "breaks": "",
+        "cmt_msg": "usb: dwc3: pci: prevent memory leak in dwc3_pci_probe",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "7.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
+        "fixes": "9bbfceea12a8f145097a27d7c7267af25893c060",
+        "last_modified": "2019-11-08",
+        "nvd_text": "A memory leak in the dwc3_pci_probe() function in drivers/usb/dwc3/dwc3-pci.c in the Linux kernel through 5.3.9 allows attackers to cause a denial of service (memory consumption) by triggering platform_device_add_properties() failures, aka CID-9bbfceea12a8.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18813",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18813",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18813",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18813",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18813",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18813"
+        }
+    },
+    "CVE-2019-18814": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+            "score": "7.5"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": "9.8"
+        },
+        "cwe": "Use After Free",
+        "fixes": "",
+        "last_modified": "2019-11-08",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.3.9. There is a use-after-free when aa_label_parse() fails in aa_audit_rule_init() in security/apparmor/audit.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18814",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18814",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18814",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18814",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18814",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18814"
         }
     },
     "CVE-2019-1999": {
@@ -44545,8 +44976,9 @@
         }
     },
     "CVE-2019-9444": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v4.15-rc2",
         "breaks": "",
+        "cmt_msg": "printk: hash addresses printed with %p",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -44568,8 +45000,8 @@
             "score": "4.4"
         },
         "cwe": "Information Exposure",
-        "fixes": "",
-        "last_modified": "2019-09-09",
+        "fixes": "ad67b74d2469d9b82aaa572d76474c95bc484d57",
+        "last_modified": "2019-11-08",
         "nvd_text": "In the Android kernel in sync debug fs driver there is a kernel pointer leak due to the usage of printf with %p. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9444",
