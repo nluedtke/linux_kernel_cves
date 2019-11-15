@@ -1,25 +1,37 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 12Nov19 17:03
+## Last Update - 15Nov19 07:21
 
 ### **New CVEs Added:**
 
-[CVE-2018-12207](cves/CVE-2018-12207)  
-[CVE-2019-0154](cves/CVE-2019-0154)  
-[CVE-2019-0155](cves/CVE-2019-0155)  
-[CVE-2019-11135](cves/CVE-2019-11135)  
+[CVE-2019-15791](cves/CVE-2019-15791)  
+[CVE-2019-15792](cves/CVE-2019-15792)  
+[CVE-2019-15793](cves/CVE-2019-15793)  
+[CVE-2019-18885](cves/CVE-2019-18885)  
 
 
 ### **New Versions Checked:**
 
-[4.14.154](streams/4.14)  
-[4.19.84](streams/4.19)  
-[4.4.201](streams/4.4)  
-[4.9.201](streams/4.9)  
-[5.3.11](streams/5.3)  
+[3.16.77](streams/3.16)  
 
 
 ### **Updated CVEs:**
 
-[CVE-2019-18813](cves/CVE-2019-18813)  
+[CVE-2019-11135](cves/CVE-2019-11135)  
+[CVE-2019-15098](cves/CVE-2019-15098)  
+[CVE-2019-15217](cves/CVE-2019-15217)  
+[CVE-2019-15505](cves/CVE-2019-15505)  
+[CVE-2019-17052](cves/CVE-2019-17052)  
+[CVE-2019-17053](cves/CVE-2019-17053)  
+[CVE-2019-17054](cves/CVE-2019-17054)  
+[CVE-2019-17055](cves/CVE-2019-17055)  
+[CVE-2019-17056](cves/CVE-2019-17056)  
+[CVE-2019-17133](cves/CVE-2019-17133)  
+[CVE-2019-17666](cves/CVE-2019-17666)  
+[CVE-2018-12207](cves/CVE-2018-12207)  
+[CVE-2019-0154](cves/CVE-2019-0154)  
+[CVE-2019-0155](cves/CVE-2019-0155)  
+[CVE-2019-2213](cves/CVE-2019-2213)  
+[CVE-2019-2214](cves/CVE-2019-2214)  
+[CVE-2019-9466](cves/CVE-2019-9466)  

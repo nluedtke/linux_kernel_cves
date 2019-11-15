@@ -635,6 +635,19 @@ CVEs fixed in 3.16.74:
   CVE-2019-15926: 65e2043814c7d6096521199ae8e18d5b40254a3e ath6kl: add some bounds checking
   CVE-2019-9506: e683e0c25ce62690fb5445ac1156c68b785d186e Bluetooth: Fix faulty expression for minimum encryption key size check
 
+CVEs fixed in 3.16.77:
+  CVE-2019-11135: 6608a10cecfd899b4e8650aa9149ca5a6171fc43 x86/msr: Add the IA32_TSX_CTRL MSR
+  CVE-2019-15098: 3e8e6f9a952c9a7e0be92518906dcdb7c8d1ca29 ath6kl: fix a NULL-ptr-deref bug in ath6kl_usb_alloc_urb_from_pipe()
+  CVE-2019-15217: 4accfbf9527ed191513f4d2d738caf15ad4e8657 media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap
+  CVE-2019-15505: 2389a6543a1c2b3bd1ab5dae04d23c3ed9c95752 media: technisat-usb2: break out of loop at end of buffer
+  CVE-2019-17052: 2c675dab816278a1724c1e93b384c2f05a11cb31 ax25: enforce CAP_NET_RAW for raw sockets
+  CVE-2019-17053: b8a15d59a9b26a734f6d8d5f10376f336f7d021b ieee802154: enforce CAP_NET_RAW for raw sockets
+  CVE-2019-17054: 2d4020439bd19f2a498a7fccd8755521a90b2886 appletalk: enforce CAP_NET_RAW for raw sockets
+  CVE-2019-17055: f49bd6510620b9cd434b87bea639f07dfde56f09 mISDN: enforce CAP_NET_RAW for raw sockets
+  CVE-2019-17056: bc3d2e9cfdc5c1b7e5ed34eb5279e47d462b4d5c nfc: enforce CAP_NET_RAW for raw sockets
+  CVE-2019-17133: e70efb76ea2eb9f08dc627d93d35a8e5c065346d cfg80211: wext: avoid copying malformed SSIDs
+  CVE-2019-17666: b78c8469ceff4288d1092e22bfb277d3bd0d7147 rtlwifi: Fix potential overflow on P2P code
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -736,7 +749,6 @@ Outstanding CVEs:
   CVE-2019-0154: (unk) drm/i915: Lower RM timeout to avoid DSI hard hangs 
   CVE-2019-0155: (unk) drm/i915: Rename gen7 cmdparser tables 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
-  CVE-2019-11135: (unk) x86/msr: Add the IA32_TSX_CTRL MSR 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
   CVE-2019-11487: (unk) fs: prevent page refcount overflow in pipe_buf_get 
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
@@ -749,14 +761,14 @@ Outstanding CVEs:
   CVE-2019-12614: (unk) powerpc/pseries/dlpar: Fix a missing check in dlpar_parse_cc_property() 
   CVE-2019-12615: (unk) mdesc: fix a missing-check bug in get_vdev_port_node_info() 
   CVE-2019-12881: (unk)  
-  CVE-2019-15098: (unk) ath6kl: fix a NULL-ptr-deref bug in ath6kl_usb_alloc_urb_from_pipe() 
-  CVE-2019-15217: (unk) media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap 
   CVE-2019-15222: (unk) ALSA: usb-audio: Fix gpf in snd_usb_pipe_sanity_check 
   CVE-2019-15223: (unk) ALSA: line6: Assure canceling delayed work at disconnection 
   CVE-2019-15239: (unk)  
   CVE-2019-15290: (unk)  
   CVE-2019-15291: (unk)  
-  CVE-2019-15505: (unk) media: technisat-usb2: break out of loop at end of buffer 
+  CVE-2019-15791: (unk)  
+  CVE-2019-15792: (unk)  
+  CVE-2019-15793: (unk)  
   CVE-2019-15902: (unk)  
   CVE-2019-16230: (unk)  
   CVE-2019-16232: (unk)  
@@ -764,14 +776,7 @@ Outstanding CVEs:
   CVE-2019-16746: (unk) nl80211: validate beacon head 
   CVE-2019-16994: (unk) net: sit: fix memory leak in sit_init_net() 
   CVE-2019-16995: (unk) net: hsr: fix memory leak in hsr_dev_finalize() 
-  CVE-2019-17052: (unk) ax25: enforce CAP_NET_RAW for raw sockets 
-  CVE-2019-17053: (unk) ieee802154: enforce CAP_NET_RAW for raw sockets 
-  CVE-2019-17054: (unk) appletalk: enforce CAP_NET_RAW for raw sockets 
-  CVE-2019-17055: (unk) mISDN: enforce CAP_NET_RAW for raw sockets 
-  CVE-2019-17056: (unk) nfc: enforce CAP_NET_RAW for raw sockets 
   CVE-2019-17075: (unk) RDMA/cxgb4: Do not dma memory off of the stack 
-  CVE-2019-17133: (unk) cfg80211: wext: avoid copying malformed SSIDs 
-  CVE-2019-17666: (unk) rtlwifi: Fix potential overflow on P2P code 
   CVE-2019-18198: (unk) ipv6: do not free rt if FIB_LOOKUP_NOREF is set on suppress rule 
   CVE-2019-18680: (unk)  
   CVE-2019-18683: (unk)  
@@ -786,6 +791,7 @@ Outstanding CVEs:
   CVE-2019-18812: (unk) ASoC: SOF: Fix memory leak in sof_dfsentry_write 
   CVE-2019-18813: (unk) usb: dwc3: pci: prevent memory leak in dwc3_pci_probe 
   CVE-2019-18814: (unk)  
+  CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
   CVE-2019-2054: (unk) arm/ptrace: run seccomp after ptrace 
