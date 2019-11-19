@@ -5,6 +5,10 @@ CVEs fixed in 5.3:
   CVE-2019-14816: 7caac62ed598a196d6ddf8d9c121e12e082cac3a mwifiex: Fix three heap overflow at parsing element in cfg80211_ap_settings
   CVE-2019-14835: 060423bfdee3f8bc6e2c1bac97de24d5415e2bc4 vhost: make sure log_num < in_num
   CVE-2019-15504: 8b51dc7291473093c821195c4b6af85fadedbc2f rsi: fix a double free bug in rsi_91x_deinit()
+  CVE-2019-19079: a21b7f0cff1906a93a0130b74713b15a0b36481d net: qrtr: fix memort leak in qrtr_tun_write_iter
+
+CVEs fixed in 5.3-rc1:
+  CVE-2019-19083: 9ea29a1f8b9da52d8eca8b0996f1d84eac548d3b drm/amd/display: memory leak
 
 CVEs fixed in 5.3.1:
   CVE-2019-14821: 6a2503b7ae2d58f52c3d1f47978abc4d2fd1b049 KVM: coalesced_mmio: add bounds checking
@@ -17,6 +21,8 @@ CVEs fixed in 5.3.4:
   CVE-2019-17055: 4a307942fd0cc0430e48dd79cc218d09935abe00 mISDN: enforce CAP_NET_RAW for raw sockets
   CVE-2019-17056: 1d34ee30a424a97a9caede7880a845fedb60a690 nfc: enforce CAP_NET_RAW for raw sockets
   CVE-2019-18198: ecc265624956ea784cb2bd2b31a95bd54c4f5f13 ipv6: do not free rt if FIB_LOOKUP_NOREF is set on suppress rule
+  CVE-2019-19080: 96996f7118c7896a1bc7191ec2c253f038ab611c nfp: flower: prevent memory leak in nfp_flower_spawn_phy_reprs
+  CVE-2019-19081: 5c95791bd704bd04a7c89629880afbb49b4037b8 nfp: flower: fix memory leak in nfp_flower_spawn_vnic_reprs
 
 CVEs fixed in 5.3.5:
   CVE-2019-18806: 8dde3868b536a684d7ff5c2f9da9dd48bd71baa0 net: qlogic: Fix memory leak in ql_alloc_large_buffers
@@ -24,17 +30,27 @@ CVEs fixed in 5.3.5:
 
 CVEs fixed in 5.3.6:
   CVE-2019-16746: 92d042bd3ff4375204b4681f3f4b3ed948d6f087 nl80211: validate beacon head
+  CVE-2019-19076: eab54b91ad373fc59c37acd22cc912cff98f41c7 nfp: abm: fix memory leak in nfp_abm_u32_knode_replace
 
 CVEs fixed in 5.3.8:
   CVE-2019-17075: bbe837675455975d4a52ccfcc47006107b12a893 RDMA/cxgb4: Do not dma memory off of the stack
   CVE-2019-17133: 9f053a9643bdc36645165b9979e849810d4063eb cfg80211: wext: avoid copying malformed SSIDs
   CVE-2019-18810: b1fad53d75b17c19e04d4ecaf1e9b01da1d7c77c drm/komeda: prevent memory leak in komeda_wb_connector_add
+  CVE-2019-19067: 56ec75797dd2b1e394cbc76e0863b4f63c43945d drm/amdgpu: fix multiple memory leaks in acp_hw_init
+  CVE-2019-19075: 9295316e05812ca44838b1cf0a4ab0a91d1c7fd7 ieee802154: ca8210: prevent memory leak
 
 CVEs fixed in 5.3.9:
   CVE-2019-15098: 22d8d00c3346bf2443d995d1070da320d460e352 ath6kl: fix a NULL-ptr-deref bug in ath6kl_usb_alloc_urb_from_pipe()
   CVE-2019-15099: 22d8d00c3346bf2443d995d1070da320d460e352 ath6kl: fix a NULL-ptr-deref bug in ath6kl_usb_alloc_urb_from_pipe()
   CVE-2019-17666: c1b81d88fae832f985473451949b2f05338c3109 rtlwifi: Fix potential overflow on P2P code
   CVE-2019-19048: 2ef37b2c9c6820db58c6c5c782e032ff3463f319 virt: vbox: fix memory leak in hgcm_call_preprocess_linaddr
+  CVE-2019-19060: 1694a7a95c1f79d974c7b5397300535af3b4a4bb iio: imu: adis16400: release allocated memory on failure
+  CVE-2019-19061: e3589dddef826696e8c073179748833b026330ad iio: imu: adis16400: fix memory leak
+  CVE-2019-19065: 933a1d0b6c7557d116fad31110a30ec08e99078b RDMA/hfi1: Prevent memory leak in sdma_init
+  CVE-2019-19069: 5de5b6d281c2e2549030b2be1824a5033154a504 misc: fastrpc: prevent memory leak in fastrpc_dma_buf_attach
+
+CVEs fixed in 5.3.10:
+  CVE-2019-19049: eec2a09f89ffe4285a783775b9c967601c993cd0 of: unittest: fix memory leak in unittest_data_add
 
 CVEs fixed in 5.3.11:
   CVE-2018-12207: 1655a277fe4aed4cab0590fa712961993d56e936 kvm: x86, powerpc: do not allow clearing largepages debugfs entry
@@ -44,6 +60,8 @@ CVEs fixed in 5.3.11:
   CVE-2019-18813: 65b4a421e657ed09d3585a5bf75d4b2625aa1ba6 usb: dwc3: pci: prevent memory leak in dwc3_pci_probe
   CVE-2019-19044: 43ed09d84c7def99b38075b4f553d543b68afcd7 drm/v3d: Fix memory leak in v3d_submit_cl_ioctl
   CVE-2019-19045: 666adb04e4f98a073017e9b3f5a0483a326b9587 net/mlx5: prevent memory leak in mlx5_fpga_conn_create_cq
+  CVE-2019-19051: cb89b0ed2a2dc651aa306fb0c48bc59da70d772c wimax: i2400: Fix memory leak in i2400m_op_rfkill_sw_toggle
+  CVE-2019-19052: 55b11d219350255d2afef08716bf08821c4486d5 can: gs_usb: gs_can_open(): prevent memory leak
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -92,3 +110,24 @@ Outstanding CVEs:
   CVE-2019-19043: (unk)  
   CVE-2019-19046: (unk)  
   CVE-2019-19047: (unk)  
+  CVE-2019-19050: (unk)  
+  CVE-2019-19053: (unk)  
+  CVE-2019-19054: (unk)  
+  CVE-2019-19055: (unk) nl80211: fix memory leak in nl80211_get_ftm_responder_stats 
+  CVE-2019-19056: (unk)  
+  CVE-2019-19057: (unk)  
+  CVE-2019-19058: (unk) iwlwifi: dbg_ini: fix memory leak in alloc_sgtable 
+  CVE-2019-19059: (unk) iwlwifi: pcie: fix memory leaks in iwl_pcie_ctxt_info_gen3_init 
+  CVE-2019-19062: (unk)  
+  CVE-2019-19063: (unk)  
+  CVE-2019-19064: (unk)  
+  CVE-2019-19066: (unk)  
+  CVE-2019-19068: (unk)  
+  CVE-2019-19070: (unk)  
+  CVE-2019-19071: (unk)  
+  CVE-2019-19072: (unk) tracing: Have error path in predicate_parse() free its allocated memory 
+  CVE-2019-19073: (unk) ath9k_htc: release allocated buffer if timed out 
+  CVE-2019-19074: (unk) ath9k: release allocated buffer if timed out 
+  CVE-2019-19077: (unk) RDMA: Fix goto target to release the allocated memory 
+  CVE-2019-19078: (unk)  
+  CVE-2019-19082: (unk) drm/amd/display: prevent memory leak 
