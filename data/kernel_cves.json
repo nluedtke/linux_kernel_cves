@@ -39017,8 +39017,31 @@
         "affected_versions": "unk to v5.4-rc8",
         "breaks": "",
         "cmt_msg": "drm/i915: Rename gen7 cmdparser tables",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Improper Privilege Management",
         "fixes": "0a2f661b6c21815a7fa60e30babe975fee8e73c6",
-        "last_modified": "2019-11-18",
+        "last_modified": "2019-11-21",
         "nvd_text": "Insufficient access control in a subsystem for Intel (R) processor graphics in 6th, 7th, 8th and 9th Generation Intel(R) Core(TM) Processor Families; Intel(R) Pentium(R) Processor J, N, Silver and Gold Series; Intel(R) Celeron(R) Processor J, N, G3900 and G4900 Series; Intel(R) Atom(R) Processor A and E3900 Series; Intel(R) Xeon(R) Processor E3-1500 v5 and v6, E-2100 and E-2200 Processor Families; Intel(R) Graphics Driver for Windows before 26.20.100.6813 (DCH) or 26.20.100.6812 and before 21.20.x.5077 (aka15.45.5077), i915 Linux Driver for Intel(R) Processor Graphics before versions 5.4-rc7, 5.3.11, 4.19.84, 4.14.154, 4.9.201, 4.4.201 may allow an authenticated user to potentially enable escalation of privilege via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-0155",
@@ -43923,6 +43946,51 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18885",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-18885",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18885"
+        }
+    },
+    "CVE-2019-19036": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-11-21",
+        "nvd_text": "btrfs_root_node in fs/btrfs/ctree.c in the Linux kernel through 5.3.12 allows a NULL pointer dereference because rcu_dereference(root-&gt;node) can be zero.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19036",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19036",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19036",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19036",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19036",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19036"
+        }
+    },
+    "CVE-2019-19037": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-11-21",
+        "nvd_text": "ext4_empty_dir in fs/ext4/namei.c in the Linux kernel through 5.3.12 allows a NULL pointer dereference because ext4_read_dirblock(inode,0,DIRENT_HTREE) can be zero.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19037",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19037",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19037",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19037",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19037",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19037"
+        }
+    },
+    "CVE-2019-19039": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-11-21",
+        "nvd_text": "__btrfs_free_extent in fs/btrfs/extent-tree.c in the Linux kernel through 5.3.12 calls btrfs_print_leaf in a certain ENOENT case, which allows local users to obtain potentially sensitive information about register values via the dmesg program.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19039",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19039",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19039",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19039",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19039",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19039"
         }
     },
     "CVE-2019-19043": {
