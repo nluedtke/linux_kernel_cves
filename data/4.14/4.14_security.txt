@@ -6,6 +6,7 @@ CVEs fixed in 4.14:
 
 CVEs fixed in 4.14-rc1:
   CVE-2017-1000410: e860d2c904d1a9f38a24eb44c9f34b8f915a6ea3 Bluetooth: Properly check L2CAP config option output buffer length
+  CVE-2019-19078: 5f4761dda2ba3743ceb5eb5b5e7483172927831a ath10k: fix memory leak
 
 CVEs fixed in 4.14.1:
   CVE-2017-16537: 16edf1a6a8a52040841e3e875c76bad0aa28f85f media: imon: Fix null-ptr-deref in imon_probe
@@ -525,6 +526,11 @@ CVEs fixed in 4.14.154:
   CVE-2019-19045: d905f0cea5e0f29b8aced5a38b1ce243051887de net/mlx5: prevent memory leak in mlx5_fpga_conn_create_cq
   CVE-2019-19052: 3f5e99731cd55f9be6468e9af7985a838ce7255b can: gs_usb: gs_can_open(): prevent memory leak
 
+CVEs fixed in 4.14.157:
+  CVE-2019-15291: 9a611c200ee2777bb3551ee1d979bf923b93653a media: b2c2-flexcop-usb: add sanity checking
+  CVE-2019-18660: bc06abfb2bc7e5856f997ebc57c361caa08cd961 powerpc/book3s64: Fix link stack flush on context switch
+  CVE-2019-18683: 4a2c9b037a08b8496f04a76987332ca6f19bd794 media: vivid: Fix wrong locking that causes race conditions on streaming stop
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -558,6 +564,7 @@ Outstanding CVEs:
   CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
   CVE-2018-21008: (unk) rsi: add fix for crash during assertions 
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
+  CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
   CVE-2019-12379: (unk) consolemap: Fix a memory leaking bug in drivers/tty/vt/consolemap.c 
@@ -576,7 +583,6 @@ Outstanding CVEs:
   CVE-2019-15222: (unk) ALSA: usb-audio: Fix gpf in snd_usb_pipe_sanity_check 
   CVE-2019-15223: (unk) ALSA: line6: Assure canceling delayed work at disconnection 
   CVE-2019-15290: (unk)  
-  CVE-2019-15291: (unk)  
   CVE-2019-15791: (unk)  
   CVE-2019-15792: (unk)  
   CVE-2019-15793: (unk)  
@@ -591,7 +597,6 @@ Outstanding CVEs:
   CVE-2019-18198: (unk) ipv6: do not free rt if FIB_LOOKUP_NOREF is set on suppress rule 
   CVE-2019-18675: (unk)  
   CVE-2019-18680: (unk)  
-  CVE-2019-18683: (unk)  
   CVE-2019-18786: (unk)  
   CVE-2019-18807: (unk) net: dsa: sja1105: Prevent leaking memory 
   CVE-2019-18808: (unk)  
@@ -605,37 +610,36 @@ Outstanding CVEs:
   CVE-2019-19036: (unk)  
   CVE-2019-19037: (unk)  
   CVE-2019-19039: (unk)  
-  CVE-2019-19043: (unk)  
+  CVE-2019-19043: (unk) i40e: prevent memory leak in i40e_setup_macvlans 
   CVE-2019-19044: (unk) drm/v3d: Fix memory leak in v3d_submit_cl_ioctl 
-  CVE-2019-19046: (unk)  
+  CVE-2019-19046: (unk) ipmi: Fix memory leak in __ipmi_bmc_register 
   CVE-2019-19047: (unk)  
   CVE-2019-19048: (unk) virt: vbox: fix memory leak in hgcm_call_preprocess_linaddr 
-  CVE-2019-19050: (unk)  
+  CVE-2019-19050: (unk) crypto: user - fix memory leak in crypto_reportstat 
   CVE-2019-19051: (unk) wimax: i2400: Fix memory leak in i2400m_op_rfkill_sw_toggle 
   CVE-2019-19053: (unk)  
-  CVE-2019-19054: (unk)  
+  CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19055: (unk) nl80211: fix memory leak in nl80211_get_ftm_responder_stats 
-  CVE-2019-19056: (unk)  
-  CVE-2019-19057: (unk)  
+  CVE-2019-19056: (unk) mwifiex: pcie: Fix memory leak in mwifiex_pcie_alloc_cmdrsp_buf 
+  CVE-2019-19057: (unk) mwifiex: pcie: Fix memory leak in mwifiex_pcie_init_evt_ring 
   CVE-2019-19058: (unk) iwlwifi: dbg_ini: fix memory leak in alloc_sgtable 
   CVE-2019-19059: (unk) iwlwifi: pcie: fix memory leaks in iwl_pcie_ctxt_info_gen3_init 
   CVE-2019-19060: (unk) iio: imu: adis16400: release allocated memory on failure 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
-  CVE-2019-19062: (unk)  
-  CVE-2019-19063: (unk)  
-  CVE-2019-19064: (unk)  
+  CVE-2019-19062: (unk) crypto: user - fix memory leak in crypto_report 
+  CVE-2019-19063: (unk) rtlwifi: prevent memory leak in rtl_usb_probe 
+  CVE-2019-19064: (unk) spi: lpspi: fix memory leak in fsl_lpspi_probe 
   CVE-2019-19066: (unk)  
   CVE-2019-19067: (unk) drm/amdgpu: fix multiple memory leaks in acp_hw_init 
-  CVE-2019-19068: (unk)  
+  CVE-2019-19068: (unk) rtl8xxxu: prevent leaking urb 
   CVE-2019-19069: (unk) misc: fastrpc: prevent memory leak in fastrpc_dma_buf_attach 
-  CVE-2019-19070: (unk)  
-  CVE-2019-19071: (unk)  
+  CVE-2019-19070: (unk) spi: gpio: prevent memory leak in spi_gpio_probe 
+  CVE-2019-19071: (unk) rsi: release skb if rsi_prepare_beacon fails 
   CVE-2019-19072: (unk) tracing: Have error path in predicate_parse() free its allocated memory 
   CVE-2019-19073: (unk) ath9k_htc: release allocated buffer if timed out 
   CVE-2019-19074: (unk) ath9k: release allocated buffer if timed out 
   CVE-2019-19076: (unk) nfp: abm: fix memory leak in nfp_abm_u32_knode_replace 
   CVE-2019-19077: (unk) RDMA: Fix goto target to release the allocated memory 
-  CVE-2019-19078: (unk)  
   CVE-2019-19079: (unk) net: qrtr: fix memort leak in qrtr_tun_write_iter 
   CVE-2019-19080: (unk) nfp: flower: prevent memory leak in nfp_flower_spawn_phy_reprs 
   CVE-2019-19081: (unk) nfp: flower: fix memory leak in nfp_flower_spawn_vnic_reprs 
@@ -643,6 +647,11 @@ Outstanding CVEs:
   CVE-2019-19083: (unk) drm/amd/display: memory leak 
   CVE-2019-19227: (unk) appletalk: Fix potential NULL pointer dereference in unregister_snap_client 
   CVE-2019-19252: (unk)  
+  CVE-2019-19318: (unk)  
+  CVE-2019-19319: (unk)  
+  CVE-2019-19377: (unk)  
+  CVE-2019-19378: (unk)  
+  CVE-2019-19462: (unk)  
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-2182: (unk) arm64: Enforce BBM for huge IO/VMAP mappings 
   CVE-2019-2214: (unk) binder: Set end of SG buffer area properly. 
