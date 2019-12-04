@@ -414,6 +414,7 @@ CVEs fixed in 4.14.122:
   CVE-2019-15666: 1a2bb5125acb5be09ac8dcbf0f1e47ec28468fdc xfrm: policy: Fix out-of-bound array accesses in __xfrm_policy_unlink
 
 CVEs fixed in 4.14.123:
+  CVE-2019-19543: f1c9f1f3665635d86e4d507312f4d114d0d738e3 media: serial_ir: Fix use-after-free in serial_ir_init_module
   CVE-2019-9466: 7c9290b56da477b54fab5dc48e1d21cfb8dc46f4 brcmfmac: add subtype check for event handling in data path
   CVE-2019-9500: f9ba91b5d1bfb6124640e00dca6562f69b71ca19 brcmfmac: assure SSID length from firmware is limited
   CVE-2019-9503: 7c9290b56da477b54fab5dc48e1d21cfb8dc46f4 brcmfmac: add subtype check for event handling in data path
@@ -470,6 +471,16 @@ CVEs fixed in 4.14.136:
 CVEs fixed in 4.14.137:
   CVE-2019-1125: 83e6e48e70a133a5ea6167bf152ce2b274008b3d x86/speculation: Prepare entry code for Spectre v1 swapgs mitigations
 
+CVEs fixed in 4.14.139:
+  CVE-2019-19531: f0d684599b4f2525a6a7fe0cde8dff6800d16a22 usb: yurex: Fix use-after-free in yurex_delete
+  CVE-2019-19535: 15312ff709e6a5598a33edb3d31882951233d765 can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices
+  CVE-2019-19536: dc741536d5d04065217a8402c52ad49df4cf134c can: peak_usb: pcan_usb_pro: Fix info-leaks to USB devices
+
+CVEs fixed in 4.14.140:
+  CVE-2019-19527: d65ca54d05c209571cf2b3913277f75ab477e214 HID: hiddev: do cleanup in failure of opening a device
+  CVE-2019-19530: e630f38040b5d2ecc56920742f7bafd57834cd2a usb: cdc-acm: make sure a refcount is taken early enough
+  CVE-2019-19537: 282a771475c2016ef77871f4438d9aaf9c8aa2b7 USB: core: Fix races in character device registration and deregistraion
+
 CVEs fixed in 4.14.141:
   CVE-2019-15538: 044d098441df8fabffba3b084a70beba0e77f8d4 xfs: fix missing ILOCK unlock when xfs_setattr_nonsize fails due to EDQUOT
 
@@ -494,15 +505,19 @@ CVEs fixed in 4.14.147:
   CVE-2019-17054: 272f46fe19daa1a18c0243cc8ac150e291ea51fd appletalk: enforce CAP_NET_RAW for raw sockets
   CVE-2019-17055: 371af137855d633d7c6226f659bbb6dcceb21322 mISDN: enforce CAP_NET_RAW for raw sockets
   CVE-2019-17056: b6a2d6c11272b3cf5d2d902bb9aaf7558560a5eb nfc: enforce CAP_NET_RAW for raw sockets
+  CVE-2019-19533: 580ee4a521ddc18aad5c750cc84bf43171599b29 media: ttusb-dec: Fix info-leak in ttusb_dec_send_command()
 
 CVEs fixed in 4.14.148:
   CVE-2019-18806: dca8aabd7198e1aa7210ff2de081befba79d0d41 net: qlogic: Fix memory leak in ql_alloc_large_buffers
 
 CVEs fixed in 4.14.149:
   CVE-2019-16746: 01ec813e457954d8eeaf768d57d625752d245bc9 nl80211: validate beacon head
+  CVE-2019-19525: 481376cc2ccb32113a2492ed1f8de32b5c777b00 ieee802154: atusb: fix use-after-free at disconnect
 
 CVEs fixed in 4.14.150:
   CVE-2018-20976: 6921174cd2fb5f2d0608770fe23056ab128b6d97 xfs: clear sb->s_fs_info on mount failure
+  CVE-2019-19523: b074263b69bc7683d5ac595cb135b4b5dfd04813 USB: adutux: fix use-after-free on disconnect
+  CVE-2019-19528: 10b0e388a18353d224ccf17cc46a57f1070abb2b USB: iowarrior: fix use-after-free on disconnect
 
 CVEs fixed in 4.14.151:
   CVE-2019-17075: 1db19d6805d9dc5c79f8a19dddde324dbf0a33f9 RDMA/cxgb4: Do not dma memory off of the stack
@@ -514,6 +529,8 @@ CVEs fixed in 4.14.152:
   CVE-2019-15099: ce1dee3c1a88a534f561310f16e2eed3e686f28a ath6kl: fix a NULL-ptr-deref bug in ath6kl_usb_alloc_urb_from_pipe()
   CVE-2019-17666: 1b940dd55d42133791d7ba4841adfcf436fab98e rtlwifi: Fix potential overflow on P2P code
   CVE-2019-19065: 8f7b8f1d14d714181b35e69f4cb73f02ea8f0156 RDMA/hfi1: Prevent memory leak in sdma_init
+  CVE-2019-19526: 2a571bd399084762a67519f35ef586407fbd3cb2 NFC: pn533: fix use-after-free and memleaks
+  CVE-2019-19532: e13a3d84494ca7b560551a9927231e7ecf27d96a HID: Fix assumption that devices have inputs
 
 CVEs fixed in 4.14.153:
   CVE-2019-19049: 9f4ca715dae36ff5b737d56165df1b7964a2cb3e of: unittest: fix memory leak in unittest_data_add
@@ -525,6 +542,11 @@ CVEs fixed in 4.14.154:
   CVE-2019-11135: 74bccd0ec712fdff716cec80ba1553d41bc887b8 x86/msr: Add the IA32_TSX_CTRL MSR
   CVE-2019-19045: d905f0cea5e0f29b8aced5a38b1ce243051887de net/mlx5: prevent memory leak in mlx5_fpga_conn_create_cq
   CVE-2019-19052: 3f5e99731cd55f9be6468e9af7985a838ce7255b can: gs_usb: gs_can_open(): prevent memory leak
+  CVE-2019-19529: 72e535208bc328e0617a8adb242bf8d89cdfd7d4 can: mcba_usb: fix use-after-free on disconnect
+  CVE-2019-19534: 89a23a5d03956b44eac1a778806449577d690c6c can: peak_usb: fix slab info leak
+
+CVEs fixed in 4.14.155:
+  CVE-2019-19524: 5edab14154213a4b6bcc527f60adb6124034a0be Input: ff-memless - kill timer in destroy()
 
 CVEs fixed in 4.14.157:
   CVE-2019-15291: 9a611c200ee2777bb3551ee1d979bf923b93653a media: b2c2-flexcop-usb: add sanity checking

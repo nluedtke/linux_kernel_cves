@@ -693,6 +693,12 @@ CVEs fixed in 4.9.189:
 
 CVEs fixed in 4.9.190:
   CVE-2019-10638: b97a2f3d58f439d11ececb2faa21dac775d63c5c inet: switch IP ID generator to siphash
+  CVE-2019-19527: 963a14fb9c43f0a6b38fbe3da0b894a147c71388 HID: hiddev: do cleanup in failure of opening a device
+  CVE-2019-19530: fccd6134d5addf2be1407e3250efdc854b5c5d8a usb: cdc-acm: make sure a refcount is taken early enough
+  CVE-2019-19531: e253114f73134cf6f29b453176fb537441e12371 usb: yurex: Fix use-after-free in yurex_delete
+  CVE-2019-19535: 127ab64c38e21c55adf8781ca92f7dc9d1a9903e can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices
+  CVE-2019-19536: 0cad79bfb5aa596b9449fe66b0edf69a8344326c can: peak_usb: pcan_usb_pro: Fix info-leaks to USB devices
+  CVE-2019-19537: 741b832658b98463d619fe4c320f8ab11b2ad4ee USB: core: Fix races in character device registration and deregistraion
   CVE-2019-3900: 4b586288578a3a2aa4efb969feed86f2d760f082 vhost_net: fix possible infinite loop
 
 CVEs fixed in 4.9.191:
@@ -715,6 +721,7 @@ CVEs fixed in 4.9.195:
   CVE-2019-17054: 08d2af9358c1937acf97417dba9a03a40149c4d2 appletalk: enforce CAP_NET_RAW for raw sockets
   CVE-2019-17055: bb439ee217acbf7835af634f08875540c514632f mISDN: enforce CAP_NET_RAW for raw sockets
   CVE-2019-17056: 45a9e9bc5d6742988df799dafbf26dca8e0dada3 nfc: enforce CAP_NET_RAW for raw sockets
+  CVE-2019-19533: 70d5b96a1ed385a0ef520a44a18fbf6d795f1b84 media: ttusb-dec: Fix info-leak in ttusb_dec_send_command()
 
 CVEs fixed in 4.9.196:
   CVE-2019-18806: 3ae6d4c9473378d57bcad5a6e102c8ba42efd014 net: qlogic: Fix memory leak in ql_alloc_large_buffers
@@ -723,6 +730,9 @@ CVEs fixed in 4.9.196:
 CVEs fixed in 4.9.197:
   CVE-2018-20976: e6e3f36b1ac9c439d3bc0b2c2aaf1663ad705ac0 xfs: clear sb->s_fs_info on mount failure
   CVE-2019-16746: a873afd7d888f7349bfabc9191afeb20eb1d3a45 nl80211: validate beacon head
+  CVE-2019-19523: aa1b499d5f706c67a0acbe184e0ec32e8c47489b USB: adutux: fix use-after-free on disconnect
+  CVE-2019-19525: 2f2f3ffa761793f2db2f3b0bc6476a069061cb9c ieee802154: atusb: fix use-after-free at disconnect
+  CVE-2019-19528: 323f425a7618fdb0b961dec2c58685fa32eafa1b USB: iowarrior: fix use-after-free on disconnect
 
 CVEs fixed in 4.9.198:
   CVE-2019-17075: 84f5b67df81a9f333afa81855f6fa3fdcd954463 RDMA/cxgb4: Do not dma memory off of the stack
@@ -731,6 +741,7 @@ CVEs fixed in 4.9.198:
 CVEs fixed in 4.9.199:
   CVE-2019-15098: 3c7f02d13b8d72dbb1dd9b0fe858459d263b1fbd ath6kl: fix a NULL-ptr-deref bug in ath6kl_usb_alloc_urb_from_pipe()
   CVE-2019-17666: 4a2fbab9e82fb662ad3419525742a1ddfc29a7b9 rtlwifi: Fix potential overflow on P2P code
+  CVE-2019-19532: 7b5e3ad5d582e252d971ee599a3f63f30b70ccb1 HID: Fix assumption that devices have inputs
 
 CVEs fixed in 4.9.200:
   CVE-2019-19049: 0228cd262dda0916948b52a74b88fa1f8b3cc810 of: unittest: fix memory leak in unittest_data_add
@@ -739,10 +750,14 @@ CVEs fixed in 4.9.201:
   CVE-2019-0154: ebd6ded190ed0920c16eb63f274b50ca050e46fb drm/i915: Lower RM timeout to avoid DSI hard hangs
   CVE-2019-0155: 64003d092ec9b9ecf03984513aee106c15b411e7 drm/i915: Rename gen7 cmdparser tables
   CVE-2019-19052: b46a2067f36d7c5f2f259c4ed476359e6e9d668f can: gs_usb: gs_can_open(): prevent memory leak
+  CVE-2019-19534: da281558d20bfbf82823cab457ba7d343ba6b0a0 can: peak_usb: fix slab info leak
 
 CVEs fixed in 4.9.202:
   CVE-2019-11135: 2fc508384968d5796e005bf85d2daf2f16510119 x86/msr: Add the IA32_TSX_CTRL MSR
   CVE-2019-15917: 3858f013de0ae5a19b8276944e12fd01b0cac979 Bluetooth: hci_ldisc: Postpone HCI_UART_PROTO_READY bit set in hci_uart_set_proto()
+
+CVEs fixed in 4.9.203:
+  CVE-2019-19524: 1ce4561d12a08be9de2f2ef8ace700e55fc4835c Input: ff-memless - kill timer in destroy()
 
 CVEs fixed in 4.9.204:
   CVE-2019-15291: 2ab1da610f23d72ab53c3951876fa44ed85e1f99 media: b2c2-flexcop-usb: add sanity checking
@@ -887,6 +902,9 @@ Outstanding CVEs:
   CVE-2019-19377: (unk)  
   CVE-2019-19378: (unk)  
   CVE-2019-19462: (unk)  
+  CVE-2019-19526: (unk) NFC: pn533: fix use-after-free and memleaks 
+  CVE-2019-19529: (unk) can: mcba_usb: fix use-after-free on disconnect 
+  CVE-2019-19543: (unk) media: serial_ir: Fix use-after-free in serial_ir_init_module 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
