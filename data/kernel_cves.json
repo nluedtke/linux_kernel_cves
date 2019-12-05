@@ -40383,7 +40383,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "efa9ace68e487ddd29c2b4d6dd23242158f1f607",
-        "last_modified": "2019-07-22",
+        "last_modified": "2019-12-05",
         "nvd_text": "An issue was discovered in dlpar_parse_cc_property in arch/powerpc/platforms/pseries/dlpar.c in the Linux kernel through 5.1.6. There is an unchecked kstrdup of prop-&gt;name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12614",
@@ -43728,6 +43728,7 @@
     "CVE-2019-18786": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "media: rcar_drif: fix a memory disclosure",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -43749,8 +43750,8 @@
             "score": "5.5"
         },
         "cwe": "Information Exposure",
-        "fixes": "",
-        "last_modified": "2019-11-07",
+        "fixes": "d39083234c60519724c6ed59509a2129fd2aed41",
+        "last_modified": "2019-12-05",
         "nvd_text": "In the Linux kernel through 5.3.8, f-&gt;fmt.sdr.reserved is uninitialized in rcar_drif_g_fmt_sdr_cap in drivers/media/platform/rcar_drif.c, which could cause a memory disclosure problem.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18786",
@@ -43919,6 +43920,7 @@
     "CVE-2019-18809": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "media: usb: fix memory leak in af9005_identify_state",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -43942,8 +43944,8 @@
             "score": "7.5"
         },
         "cwe": "Uncontrolled Resource Consumption",
-        "fixes": "",
-        "last_modified": "2019-11-08",
+        "fixes": "2289adbfa559050d2a38bcd9caac1c18b800e928",
+        "last_modified": "2019-12-05",
         "nvd_text": "A memory leak in the af9005_identify_state() function in drivers/media/usb/dvb-usb/af9005.c in the Linux kernel through 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-2289adbfa559.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18809",
@@ -44021,7 +44023,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "45c1380358b12bf2d1db20a5874e9544f56b34ab",
-        "last_modified": "2019-11-12",
+        "last_modified": "2019-12-05",
         "nvd_text": "A memory leak in the sof_set_get_large_ctrl_data() function in sound/soc/sof/ipc.c in the Linux kernel through 5.3.9 allows attackers to cause a denial of service (memory consumption) by triggering sof_get_ctrl_copy_params() failures, aka CID-45c1380358b1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18811",
@@ -44693,6 +44695,7 @@
     "CVE-2019-19053": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "rpmsg: char: release allocated memory",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -44716,8 +44719,8 @@
             "score": "7.5"
         },
         "cwe": "Uncontrolled Resource Consumption",
-        "fixes": "",
-        "last_modified": "2019-11-20",
+        "fixes": "bbe692e349e2a1edf3fe0a29a0e05899c9c94d51",
+        "last_modified": "2019-12-05",
         "nvd_text": "A memory leak in the rpmsg_eptdev_write_iter() function in drivers/rpmsg/rpmsg_char.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering copy_from_iter_full() failures, aka CID-bbe692e349e2.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19053",
@@ -45199,6 +45202,7 @@
     "CVE-2019-19066": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "scsi: bfa: release allocated memory in case of error",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -45222,8 +45226,8 @@
             "score": "7.5"
         },
         "cwe": "Uncontrolled Resource Consumption",
-        "fixes": "",
-        "last_modified": "2019-11-20",
+        "fixes": "0e62395da2bd5166d7c9e14cbc7503b256a34cb0",
+        "last_modified": "2019-12-05",
         "nvd_text": "A memory leak in the bfad_im_get_stats() function in drivers/scsi/bfa/bfad_attr.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering bfa_port_get_stats() failures, aka CID-0e62395da2bd.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19066",
@@ -45901,8 +45905,31 @@
         "affected_versions": "unk to v5.1-rc3",
         "breaks": "",
         "cmt_msg": "appletalk: Fix potential NULL pointer dereference in unregister_snap_client",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "9804501fa1228048857910a6bf23e085aade37cc",
-        "last_modified": "2019-11-25",
+        "last_modified": "2019-12-05",
         "nvd_text": "In the AppleTalk subsystem in the Linux kernel before 5.1, there is a potential NULL pointer dereference because register_snap_client may return NULL. This will lead to denial of service in net/appletalk/aarp.c and net/appletalk/ddp.c, as demonstrated by unregister_snap_client, aka CID-9804501fa122.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19227",
@@ -45931,8 +45958,31 @@
     "CVE-2019-19318": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "score": "4.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2019-12-03",
+        "last_modified": "2019-12-05",
         "nvd_text": "In the Linux kernel 5.3.11, mounting a crafted btrfs image twice can cause an rwsem_down_write_slowpath use-after-free because (in rwsem_can_spin_on_owner in kernel/locking/rwsem.c) rwsem_owner_flags returns an already freed pointer,",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19318",
@@ -45958,11 +46008,49 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19319"
         }
     },
+    "CVE-2019-19332": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332)",
+        "fixes": "433f4ba1904100da65a311033f17a9bf586b287e",
+        "last_modified": "2019-12-05",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19332",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19332",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19332",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19332",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19332",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19332"
+        }
+    },
     "CVE-2019-19377": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "score": "6.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2019-12-03",
+        "last_modified": "2019-12-05",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image, performing some operations, and unmounting can lead to a use-after-free in btrfs_queue_work in fs/btrfs/async-thread.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19377",
@@ -45976,8 +46064,31 @@
     "CVE-2019-19378": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "score": "6.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "",
-        "last_modified": "2019-12-03",
+        "last_modified": "2019-12-05",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image can lead to slab-out-of-bounds write access in index_rbio_pages in fs/btrfs/raid56.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19378",
@@ -46257,6 +46368,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19543",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-19543",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19543"
+        }
+    },
+    "CVE-2019-19602": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "x86/fpu: Don't cache access to fpu_fpregs_owner_ctx",
+        "fixes": "59c4bd853abcea95eccc167a7d7fd5f1a5f47b98",
+        "last_modified": "2019-12-05",
+        "nvd_text": "fpregs_state_valid in arch/x86/include/asm/fpu/internal.h in the Linux kernel before 5.4.2, when GCC 9 is used, allows context-dependent attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact because of incorrect fpu_fpregs_owner_ctx caching, as demonstrated by mishandling of signal-based non-cooperative preemption in Go 1.14 prereleases on amd64, aka CID-59c4bd853abc.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19602",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19602",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19602",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19602",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19602",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19602"
         }
     },
     "CVE-2019-1999": {
