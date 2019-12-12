@@ -654,6 +654,26 @@ CVEs fixed in 3.16.78:
   CVE-2019-19536: 06d7546f7b115a266a9bb81887479f38e166964e can: peak_usb: pcan_usb_pro: Fix info-leaks to USB devices
   CVE-2019-19537: 7e0af4e53ee2cf9b5e4ee761bd8dc4f25a9c885a USB: core: Fix races in character device registration and deregistraion
 
+CVEs fixed in 3.16.79:
+  CVE-2019-15291: 470a2d36f614f40b7f032071cfa6662dfcc1eda4 media: b2c2-flexcop-usb: add sanity checking
+  CVE-2019-16746: 9eec2aca63328997846b52e91e88dab94ccd1414 nl80211: validate beacon head
+  CVE-2019-19051: 311edf1932ef820b3e101d52f2d79f371fd4d186 wimax: i2400: Fix memory leak in i2400m_op_rfkill_sw_toggle
+  CVE-2019-19052: f26d980434a06f44b693a26a87aa5300fa4016fd can: gs_usb: gs_can_open(): prevent memory leak
+  CVE-2019-19056: f0eed3b1a34f1e7d8b2c06ad5ddf0ea60aea71ca mwifiex: pcie: Fix memory leak in mwifiex_pcie_alloc_cmdrsp_buf
+  CVE-2019-19057: 914927c7bac4ecd2351bdee0cd5b2b1c11150342 mwifiex: pcie: Fix memory leak in mwifiex_pcie_init_evt_ring
+  CVE-2019-19062: 52373b487ee420c43e1d9d01b4b8c11bb6e9bdbf crypto: user - fix memory leak in crypto_report
+  CVE-2019-19066: 0669f62b66de87c6628edc6b5e7e7b317a4b8876 scsi: bfa: release allocated memory in case of error
+  CVE-2019-19227: 1551894964c90588b285d3a4f7da516e0ee9025a appletalk: Fix potential NULL pointer dereference in unregister_snap_client
+  CVE-2019-19332: 21377f88c2757c6ee3e28407fb1c44b4bdf7e6b2 KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332)
+  CVE-2019-19523: 22cbb8fb12b3b5101260915162ad2b0b56a9284d USB: adutux: fix use-after-free on disconnect
+  CVE-2019-19524: 8145f2181955c7c95f42a7f71b81ff91bc9e7b8c Input: ff-memless - kill timer in destroy()
+  CVE-2019-19527: a2133df2ca08f0d320e651f682f66a1097e6b752 HID: hiddev: do cleanup in failure of opening a device
+  CVE-2019-19528: bc5b704c76044bf22be57e5adcd100d6005115cc USB: iowarrior: fix use-after-free on disconnect
+  CVE-2019-19532: f703c175f8e428959a33cdadb3e09986f14390ce HID: Fix assumption that devices have inputs
+  CVE-2019-19533: 89577bea6adf8cd2a1b97c91f7266bb56aa181b0 media: ttusb-dec: Fix info-leak in ttusb_dec_send_command()
+  CVE-2019-19534: f13615187cd8069c0f1c492e8f244a0c69d0663e can: peak_usb: fix slab info leak
+  CVE-2019-2215: 3a593dd8bd7505f9acbc7b6f8928ec6b7978c125 ANDROID: binder: remove waitqueue when thread exits.
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -777,7 +797,6 @@ Outstanding CVEs:
   CVE-2019-15223: (unk) ALSA: line6: Assure canceling delayed work at disconnection 
   CVE-2019-15239: (unk)  
   CVE-2019-15290: (unk)  
-  CVE-2019-15291: (unk) media: b2c2-flexcop-usb: add sanity checking 
   CVE-2019-15791: (unk)  
   CVE-2019-15792: (unk)  
   CVE-2019-15793: (unk)  
@@ -785,7 +804,6 @@ Outstanding CVEs:
   CVE-2019-16230: (unk)  
   CVE-2019-16232: (unk)  
   CVE-2019-16233: (unk)  
-  CVE-2019-16746: (unk) nl80211: validate beacon head 
   CVE-2019-16994: (unk) net: sit: fix memory leak in sit_init_net() 
   CVE-2019-16995: (unk) net: hsr: fix memory leak in hsr_dev_finalize() 
   CVE-2019-17075: (unk) RDMA/cxgb4: Do not dma memory off of the stack 
@@ -817,22 +835,16 @@ Outstanding CVEs:
   CVE-2019-19048: (unk) virt: vbox: fix memory leak in hgcm_call_preprocess_linaddr 
   CVE-2019-19049: (unk) of: unittest: fix memory leak in unittest_data_add 
   CVE-2019-19050: (unk) crypto: user - fix memory leak in crypto_reportstat 
-  CVE-2019-19051: (unk) wimax: i2400: Fix memory leak in i2400m_op_rfkill_sw_toggle 
-  CVE-2019-19052: (unk) can: gs_usb: gs_can_open(): prevent memory leak 
   CVE-2019-19053: (unk) rpmsg: char: release allocated memory 
   CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19055: (unk) nl80211: fix memory leak in nl80211_get_ftm_responder_stats 
-  CVE-2019-19056: (unk) mwifiex: pcie: Fix memory leak in mwifiex_pcie_alloc_cmdrsp_buf 
-  CVE-2019-19057: (unk) mwifiex: pcie: Fix memory leak in mwifiex_pcie_init_evt_ring 
   CVE-2019-19058: (unk) iwlwifi: dbg_ini: fix memory leak in alloc_sgtable 
   CVE-2019-19059: (unk) iwlwifi: pcie: fix memory leaks in iwl_pcie_ctxt_info_gen3_init 
   CVE-2019-19060: (unk) iio: imu: adis16400: release allocated memory on failure 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
-  CVE-2019-19062: (unk) crypto: user - fix memory leak in crypto_report 
   CVE-2019-19063: (unk) rtlwifi: prevent memory leak in rtl_usb_probe 
   CVE-2019-19064: (unk) spi: lpspi: fix memory leak in fsl_lpspi_probe 
   CVE-2019-19065: (unk) RDMA/hfi1: Prevent memory leak in sdma_init 
-  CVE-2019-19066: (unk) scsi: bfa: release allocated memory in case of error 
   CVE-2019-19067: (unk) drm/amdgpu: fix multiple memory leaks in acp_hw_init 
   CVE-2019-19068: (unk) rtl8xxxu: prevent leaking urb 
   CVE-2019-19069: (unk) misc: fastrpc: prevent memory leak in fastrpc_dma_buf_attach 
@@ -850,27 +862,19 @@ Outstanding CVEs:
   CVE-2019-19081: (unk) nfp: flower: fix memory leak in nfp_flower_spawn_vnic_reprs 
   CVE-2019-19082: (unk) drm/amd/display: prevent memory leak 
   CVE-2019-19083: (unk) drm/amd/display: memory leak 
-  CVE-2019-19227: (unk) appletalk: Fix potential NULL pointer dereference in unregister_snap_client 
   CVE-2019-19252: (unk) vcs: prevent write access to vcsu devices 
   CVE-2019-19318: (unk)  
   CVE-2019-19319: (unk)  
-  CVE-2019-19332: (unk) KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332) 
+  CVE-2019-19338: (unk) KVM: x86: fix presentation of TSX feature in ARCH_CAPABILITIES 
   CVE-2019-19377: (unk)  
   CVE-2019-19378: (unk)  
   CVE-2019-19447: (unk)  
   CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
   CVE-2019-19462: (unk)  
-  CVE-2019-19523: (unk) USB: adutux: fix use-after-free on disconnect 
-  CVE-2019-19524: (unk) Input: ff-memless - kill timer in destroy() 
   CVE-2019-19525: (unk) ieee802154: atusb: fix use-after-free at disconnect 
   CVE-2019-19526: (unk) NFC: pn533: fix use-after-free and memleaks 
-  CVE-2019-19527: (unk) HID: hiddev: do cleanup in failure of opening a device 
-  CVE-2019-19528: (unk) USB: iowarrior: fix use-after-free on disconnect 
   CVE-2019-19529: (unk) can: mcba_usb: fix use-after-free on disconnect 
-  CVE-2019-19532: (unk) HID: Fix assumption that devices have inputs 
-  CVE-2019-19533: (unk) media: ttusb-dec: Fix info-leak in ttusb_dec_send_command() 
-  CVE-2019-19534: (unk) can: peak_usb: fix slab info leak 
   CVE-2019-19535: (unk) can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices 
   CVE-2019-19543: (unk) media: serial_ir: Fix use-after-free in serial_ir_init_module 
   CVE-2019-19602: (unk) x86/fpu: Don't cache access to fpu_fpregs_owner_ctx 
@@ -880,7 +884,6 @@ Outstanding CVEs:
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-2213: (unk) binder: fix possible UAF when freeing buffer 
   CVE-2019-2214: (unk) binder: Set end of SG buffer area properly. 
-  CVE-2019-2215: (unk) ANDROID: binder: remove waitqueue when thread exits. 
   CVE-2019-3837: (unk) net_dma: simple removal 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 

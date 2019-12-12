@@ -42020,7 +42020,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "1b976fc6d684e3282914cdbe7a8d68fdce19095c",
-        "last_modified": "2019-12-09",
+        "last_modified": "2019-12-11",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.2.9. There is a NULL pointer dereference caused by a malicious USB device in the flexcop_usb_probe function in the drivers/media/usb/b2c2/flexcop-usb.c driver.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15291",
@@ -43127,7 +43127,7 @@
         },
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "f88eb7c0d002a67ef31aeb7850b42ff69abc46dc",
-        "last_modified": "2019-10-17",
+        "last_modified": "2019-12-11",
         "nvd_text": "An issue was discovered in net/wireless/nl80211.c in the Linux kernel through 5.2.17. It does not check the length of variable elements in a beacon head, leading to a buffer overflow.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16746",
@@ -43623,8 +43623,31 @@
         "affected_versions": "unk to v5.5-rc1",
         "breaks": "",
         "cmt_msg": "powerpc/book3s64: Fix link stack flush on context switch",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": "5.5"
+        },
+        "cwe": "Information Exposure",
         "fixes": "39e72bf96f5847ba87cc5bd7a3ce0fed813dc9ad",
-        "last_modified": "2019-12-09",
+        "last_modified": "2019-12-11",
         "nvd_text": "The Linux kernel through 5.3.13 on powerpc allows Information Exposure because the Spectre-RSB mitigation is not in place for all applicable CPUs, aka CID-39e72bf96f58. This is related to arch/powerpc/kernel/entry_64.S and arch/powerpc/kernel/security.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18660",
@@ -43638,8 +43661,31 @@
     "CVE-2019-18675": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Integer Overflow or Wraparound",
         "fixes": "",
-        "last_modified": "2019-11-25",
+        "last_modified": "2019-12-11",
         "nvd_text": "The Linux kernel through 5.3.13 has a start_offset+size Integer Overflow in cpia2_remap_buffer in drivers/media/usb/cpia2/cpia2_core.c because cpia2 has its own mmap implementation. This allows local users (with /dev/video0 access) to obtain read and write permissions on kernel physical pages, which can possibly result in a privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18675",
@@ -44642,7 +44688,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "6f3ef5c25cc762687a7341c18cbea5af54461407",
-        "last_modified": "2019-11-20",
+        "last_modified": "2019-12-11",
         "nvd_text": "A memory leak in the i2400m_op_rfkill_sw_toggle() function in drivers/net/wimax/i2400m/op-rfkill.c in the Linux kernel before 5.3.11 allows attackers to cause a denial of service (memory consumption), aka CID-6f3ef5c25cc7.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19051",
@@ -44681,7 +44727,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "fb5be6a7b4863ecc44963bb80ca614584b6c7817",
-        "last_modified": "2019-11-20",
+        "last_modified": "2019-12-11",
         "nvd_text": "A memory leak in the gs_can_open() function in drivers/net/can/usb/gs_usb.c in the Linux kernel before 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering usb_submit_urb() failures, aka CID-fb5be6a7b486.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19052",
@@ -44837,7 +44883,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "db8fd2cde93227e566a412cf53173ffa227998bc",
-        "last_modified": "2019-12-09",
+        "last_modified": "2019-12-11",
         "nvd_text": "A memory leak in the mwifiex_pcie_alloc_cmdrsp_buf() function in drivers/net/wireless/marvell/mwifiex/pcie.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering mwifiex_map_pci_memory() failures, aka CID-db8fd2cde932.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19056",
@@ -44876,7 +44922,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "d10dcb615c8e29d403a24d35f8310a7a53e3050c",
-        "last_modified": "2019-12-09",
+        "last_modified": "2019-12-11",
         "nvd_text": "Two memory leaks in the mwifiex_pcie_init_evt_ring() function in drivers/net/wireless/marvell/mwifiex/pcie.c in the Linux kernel through 5.3.11 allow attackers to cause a denial of service (memory consumption) by triggering mwifiex_map_pci_memory() failures, aka CID-d10dcb615c8e.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19057",
@@ -45071,7 +45117,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "ffdde5932042600c6807d46c1550b28b0db6a3bc",
-        "last_modified": "2019-12-09",
+        "last_modified": "2019-12-11",
         "nvd_text": "A memory leak in the crypto_report() function in crypto/crypto_user_base.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering crypto_report_alg() failures, aka CID-ffdde5932042.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19062",
@@ -45227,7 +45273,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "0e62395da2bd5166d7c9e14cbc7503b256a34cb0",
-        "last_modified": "2019-12-09",
+        "last_modified": "2019-12-11",
         "nvd_text": "A memory leak in the bfad_im_get_stats() function in drivers/scsi/bfa/bfad_attr.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering bfa_port_get_stats() failures, aka CID-0e62395da2bd.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19066",
@@ -45929,7 +45975,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "9804501fa1228048857910a6bf23e085aade37cc",
-        "last_modified": "2019-12-05",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the AppleTalk subsystem in the Linux kernel before 5.1, there is a potential NULL pointer dereference because register_snap_client may return NULL. This will lead to denial of service in net/appletalk/aarp.c and net/appletalk/ddp.c, as demonstrated by unregister_snap_client, aka CID-9804501fa122.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19227",
@@ -45944,8 +45990,31 @@
         "affected_versions": "unk to v5.5-rc1",
         "breaks": "",
         "cmt_msg": "vcs: prevent write access to vcsu devices",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "0c9acb1af77a3cb8707e43f45b72c95266903cee",
-        "last_modified": "2019-12-09",
+        "last_modified": "2019-12-11",
         "nvd_text": "vcs_write in drivers/tty/vt/vc_screen.c in the Linux kernel through 5.3.13 does not prevent write access to vcsu devices.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19252",
@@ -45997,8 +46066,31 @@
     "CVE-2019-19319": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "score": "6.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "",
-        "last_modified": "2019-12-03",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel 5.0.21, a setxattr operation, after a mount of a crafted ext4 image, can cause a slab-out-of-bounds write access because of an ext4_xattr_set_entry use-after-free in fs/ext4/xattr.c when a large old_size value is used in a memset call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19319",
@@ -46014,7 +46106,7 @@
         "breaks": "",
         "cmt_msg": "KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332)",
         "fixes": "433f4ba1904100da65a311033f17a9bf586b287e",
-        "last_modified": "2019-12-09",
+        "last_modified": "2019-12-11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19332",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19332",
@@ -46022,6 +46114,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19332",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-19332",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19332"
+        }
+    },
+    "CVE-2019-19338": {
+        "affected_versions": "unk to v5.5-rc1",
+        "breaks": "",
+        "cmt_msg": "KVM: x86: fix presentation of TSX feature in ARCH_CAPABILITIES",
+        "fixes": "cbbaa2727aa3ae9e0a844803da7cef7fd3b94f2b",
+        "last_modified": "2019-12-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19338",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19338",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19338",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19338",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19338",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19338"
         }
     },
     "CVE-2019-19377": {
@@ -46103,8 +46210,31 @@
     "CVE-2019-19447": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "score": "6.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2019-12-08",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted ext4 filesystem image, performing some operations, and unmounting can lead to a use-after-free in ext4_put_super in fs/ext4/super.c, related to dump_orphan_list in fs/ext4/super.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19447",
@@ -46118,8 +46248,31 @@
     "CVE-2019-19448": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "score": "6.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2019-12-08",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel 5.0.21 and 5.3.11, mounting a crafted btrfs filesystem image, performing some operations, and then making a syncfs system call can lead to a use-after-free in try_merge_free_space in fs/btrfs/free-space-cache.c because the pointer to a left data structure can be the same as the pointer to a right data structure.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19448",
@@ -46133,8 +46286,31 @@
     "CVE-2019-19449": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+            "score": "6.8"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "",
-        "last_modified": "2019-12-08",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted f2fs filesystem image can lead to slab-out-of-bounds read access in f2fs_build_segment_manager in fs/f2fs/segment.c, related to init_min_max_mtime in fs/f2fs/segment.c (because the second argument to get_seg_entry is not validated).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19449",
@@ -46148,8 +46324,31 @@
     "CVE-2019-19462": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "",
-        "last_modified": "2019-12-03",
+        "last_modified": "2019-12-11",
         "nvd_text": "relay_open in kernel/relay.c in the Linux kernel through 5.4.1 allows local users to cause a denial of service (such as relay blockage) by triggering a NULL alloc_percpu result.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19462",
@@ -46165,7 +46364,7 @@
         "breaks": "",
         "cmt_msg": "USB: adutux: fix use-after-free on disconnect",
         "fixes": "44efc269db7929f6275a1fa927ef082e533ecde0",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.3.7, there is a use-after-free bug that can be caused by a malicious USB device in the drivers/usb/misc/adutux.c driver, aka CID-44efc269db79.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19523",
@@ -46181,7 +46380,7 @@
         "breaks": "",
         "cmt_msg": "Input: ff-memless - kill timer in destroy()",
         "fixes": "fa3a5a1880c91bb92594ad42dfe9eedad7996b86",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.3.12, there is a use-after-free bug that can be caused by a malicious USB device in the drivers/input/ff-memless.c driver, aka CID-fa3a5a1880c9.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19524",
@@ -46229,7 +46428,7 @@
         "breaks": "",
         "cmt_msg": "HID: hiddev: do cleanup in failure of opening a device",
         "fixes": "6d4472d7bec39917b54e4e80245784ea5d60ce49",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.2.10, there is a use-after-free bug that can be caused by a malicious USB device in the drivers/hid/usbhid/hiddev.c driver, aka CID-9c09b214f30e.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19527",
@@ -46245,7 +46444,7 @@
         "breaks": "",
         "cmt_msg": "USB: iowarrior: fix use-after-free on disconnect",
         "fixes": "edc4746f253d907d048de680a621e121517f484b",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.3.7, there is a use-after-free bug that can be caused by a malicious USB device in the drivers/usb/misc/iowarrior.c driver, aka CID-edc4746f253d.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19528",
@@ -46292,8 +46491,31 @@
         "affected_versions": "unk to v5.3-rc4",
         "breaks": "",
         "cmt_msg": "usb: yurex: Fix use-after-free in yurex_delete",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": "6.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "fc05481b2fcabaaeccf63e32ac1baab54e5b6963",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.2.9, there is a use-after-free bug that can be caused by a malicious USB device in the drivers/usb/misc/yurex.c driver, aka CID-fc05481b2fca.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19531",
@@ -46309,7 +46531,7 @@
         "breaks": "",
         "cmt_msg": "HID: Fix assumption that devices have inputs",
         "fixes": "d9d4b1e46d9543a82c23f6df03f4ad697dab361b",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.3.9, there are multiple out-of-bounds write bugs that can be caused by a malicious USB device in the Linux kernel HID drivers, aka CID-d9d4b1e46d95. This affects drivers/hid/hid-axff.c, drivers/hid/hid-dr.c, drivers/hid/hid-emsff.c, drivers/hid/hid-gaff.c, drivers/hid/hid-holtekff.c, drivers/hid/hid-lg2ff.c, drivers/hid/hid-lg3ff.c, drivers/hid/hid-lg4ff.c, drivers/hid/hid-lgff.c, drivers/hid/hid-logitech-hidpp.c, drivers/hid/hid-microsoft.c, drivers/hid/hid-sony.c, drivers/hid/hid-tmff.c, and drivers/hid/hid-zpff.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19532",
@@ -46325,7 +46547,7 @@
         "breaks": "",
         "cmt_msg": "media: ttusb-dec: Fix info-leak in ttusb_dec_send_command()",
         "fixes": "a10feaf8c464c3f9cfdd3a8a7ce17e1c0d498da1",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.3.4, there is an info-leak bug that can be caused by a malicious USB device in the drivers/media/usb/ttusb-dec/ttusb_dec.c driver, aka CID-a10feaf8c464.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19533",
@@ -46341,7 +46563,7 @@
         "breaks": "",
         "cmt_msg": "can: peak_usb: fix slab info leak",
         "fixes": "f7a1337f0d29b98733c8824e165fca3371d7d4fd",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.3.11, there is an info-leak bug that can be caused by a malicious USB device in the drivers/net/can/usb/peak_usb/pcan_usb_core.c driver, aka CID-f7a1337f0d29.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19534",
@@ -46356,8 +46578,31 @@
         "affected_versions": "unk to v5.3-rc4",
         "breaks": "",
         "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": "4.6"
+        },
+        "cwe": "Information Exposure",
         "fixes": "30a8beeb3042f49d0537b7050fd21b490166a3d9",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.2.9, there is an info-leak bug that can be caused by a malicious USB device in the drivers/net/can/usb/peak_usb/pcan_usb_fd.c driver, aka CID-30a8beeb3042.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19535",
@@ -46372,8 +46617,31 @@
         "affected_versions": "unk to v5.3-rc4",
         "breaks": "",
         "cmt_msg": "can: peak_usb: pcan_usb_pro: Fix info-leaks to USB devices",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": "4.6"
+        },
+        "cwe": "Information Exposure",
         "fixes": "ead16e53c2f0ed946d82d4037c630e2f60f4ab69",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.2.9, there is an info-leak bug that can be caused by a malicious USB device in the drivers/net/can/usb/peak_usb/pcan_usb_pro.c driver, aka CID-ead16e53c2f0.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19536",
@@ -46404,8 +46672,31 @@
         "affected_versions": "unk to v5.2-rc1",
         "breaks": "",
         "cmt_msg": "media: serial_ir: Fix use-after-free in serial_ir_init_module",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "56cd26b618855c9af48c8301aa6754ced8dd0beb",
-        "last_modified": "2019-12-04",
+        "last_modified": "2019-12-11",
         "nvd_text": "In the Linux kernel before 5.1.6, there is a use-after-free in serial_ir_init_module() in drivers/media/rc/serial_ir.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19543",
@@ -46795,7 +47086,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "f5cb779ba16334b45ba8946d6bfa6d9834d1527f",
-        "last_modified": "2019-10-23",
+        "last_modified": "2019-12-11",
         "nvd_text": "A use-after-free in binder.c allows an elevation of privilege from an application to the Linux Kernel. No user interaction is required to exploit this vulnerability, however exploitation does require either the installation of a malicious local application or a separate vulnerability in a network facing application.Product: AndroidAndroid ID: A-141720095",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2215",
