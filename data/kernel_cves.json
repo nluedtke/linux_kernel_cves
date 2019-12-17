@@ -46987,8 +46987,31 @@
         "affected_versions": "unk to v5.5-rc1",
         "breaks": "",
         "cmt_msg": "x86/fpu: Don't cache access to fpu_fpregs_owner_ctx",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Incorrect Permission Assignment for Critical Resource",
         "fixes": "59c4bd853abcea95eccc167a7d7fd5f1a5f47b98",
-        "last_modified": "2019-12-09",
+        "last_modified": "2019-12-17",
         "nvd_text": "fpregs_state_valid in arch/x86/include/asm/fpu/internal.h in the Linux kernel before 5.4.2, when GCC 9 is used, allows context-dependent attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact because of incorrect fpu_fpregs_owner_ctx caching, as demonstrated by mishandling of signal-based non-cooperative preemption in Go 1.14 prereleases on amd64, aka CID-59c4bd853abc.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19602",
@@ -47064,8 +47087,31 @@
         "affected_versions": "unk to v5.4-rc7",
         "breaks": "",
         "cmt_msg": "ALSA: timer: Fix incorrectly assigned timer instance",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "Use After Free",
         "fixes": "e7af6307a8a54f0b873960b32b6a644f2d0fbd97",
-        "last_modified": "2019-12-16",
+        "last_modified": "2019-12-17",
         "nvd_text": "In the Linux kernel before 5.3.11, sound/core/timer.c has a use-after-free caused by erroneous code refactoring, aka CID-e7af6307a8a5. This is related to snd_timer_open and snd_timer_close_locked. The timeri variable was originally intended to be for a newly created timer instance, but was used for a different purpose after refactoring.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19807",
@@ -47074,6 +47120,66 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19807",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-19807",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19807"
+        }
+    },
+    "CVE-2019-19813": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-12-17",
+        "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image, performing some operations, and then making a syncfs system call can lead to a use-after-free in __mutex_lock in kernel/locking/mutex.c. This is related to mutex_can_spin_on_owner in kernel/locking/mutex.c, __btrfs_qgroup_free_meta in fs/btrfs/qgroup.c, and btrfs_insert_delayed_items in fs/btrfs/delayed-inode.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19813",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19813",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19813",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19813",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19813",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19813"
+        }
+    },
+    "CVE-2019-19814": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-12-17",
+        "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted f2fs filesystem image can cause __remove_dirty_segment slab-out-of-bounds write access because an array is bounded by the number of dirty types (8) but the array index can exceed this.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19814",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19814",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19814",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19814",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19814",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19814"
+        }
+    },
+    "CVE-2019-19815": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-12-17",
+        "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted f2fs filesystem image can cause a NULL pointer dereference in f2fs_recover_fsync_data in fs/f2fs/recovery.c. This is related to F2FS_P_SB in fs/f2fs/f2fs.h.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19815",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19815",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19815",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19815",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19815",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19815"
+        }
+    },
+    "CVE-2019-19816": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-12-17",
+        "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image and performing some operations can cause slab-out-of-bounds write access in __btrfs_map_block in fs/btrfs/volumes.c, because a value of 1 for the number of data stripes is mishandled.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19816",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19816",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19816",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19816",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19816",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19816"
         }
     },
     "CVE-2019-1999": {
