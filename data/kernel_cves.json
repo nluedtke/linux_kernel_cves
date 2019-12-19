@@ -45117,7 +45117,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "ffdde5932042600c6807d46c1550b28b0db6a3bc",
-        "last_modified": "2019-12-13",
+        "last_modified": "2019-12-19",
         "nvd_text": "A memory leak in the crypto_report() function in crypto/crypto_user_base.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering crypto_report_alg() failures, aka CID-ffdde5932042.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19062",
@@ -45468,7 +45468,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "d563131ef23cbc756026f839a82598c8445bc45f",
-        "last_modified": "2019-12-13",
+        "last_modified": "2019-12-19",
         "nvd_text": "A memory leak in the rsi_send_beacon() function in drivers/net/wireless/rsi/rsi_91x_mgmt.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering rsi_prepare_beacon() failures, aka CID-d563131ef23c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19071",
@@ -45975,7 +45975,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "9804501fa1228048857910a6bf23e085aade37cc",
-        "last_modified": "2019-12-13",
+        "last_modified": "2019-12-19",
         "nvd_text": "In the AppleTalk subsystem in the Linux kernel before 5.1, there is a potential NULL pointer dereference because register_snap_client may return NULL. This will lead to denial of service in net/appletalk/aarp.c and net/appletalk/ddp.c, as demonstrated by unregister_snap_client, aka CID-9804501fa122.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19227",
@@ -45984,6 +45984,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19227",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-19227",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19227"
+        }
+    },
+    "CVE-2019-19241": {
+        "affected_versions": "unk to v5.5-rc1",
+        "breaks": "",
+        "cmt_msg": "io_uring: async workers should inherit the user creds",
+        "fixes": "181e448d8709e517c9c7b523fcd209f24eb38ca7",
+        "last_modified": "2019-12-19",
+        "nvd_text": "In the Linux kernel before 5.4.2, the io_uring feature leads to requests that inadvertently have UID 0 and full capabilities, aka CID-181e448d8709. This is related to fs/io-wq.c, fs/io_uring.c, and net/socket.c. For example, an attacker can bypass intended restrictions on adding an IPv4 address to the loopback interface. This occurs because IORING_OP_SENDMSG operations, although requested in the context of an unprivileged user, are sometimes performed by a kernel worker thread without considering that context.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19241",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19241",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19241",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19241",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19241",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19241"
         }
     },
     "CVE-2019-19252": {
@@ -46106,7 +46122,7 @@
         "breaks": "",
         "cmt_msg": "KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332)",
         "fixes": "433f4ba1904100da65a311033f17a9bf586b287e",
-        "last_modified": "2019-12-13",
+        "last_modified": "2019-12-19",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19332",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19332",
@@ -46121,7 +46137,7 @@
         "breaks": "",
         "cmt_msg": "KVM: x86: fix presentation of TSX feature in ARCH_CAPABILITIES",
         "fixes": "cbbaa2727aa3ae9e0a844803da7cef7fd3b94f2b",
-        "last_modified": "2019-12-13",
+        "last_modified": "2019-12-19",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19338",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19338",
@@ -47041,8 +47057,31 @@
     "CVE-2019-19768": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2019-12-13",
+        "last_modified": "2019-12-19",
         "nvd_text": "In the Linux kernel 5.4.0-rc2, there is a use-after-free (read) in the __blk_add_trace function in kernel/trace/blktrace.c (which is used to fill out a blk_io_trace structure and place it in a per-cpu sub-buffer).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19768",
@@ -47056,8 +47095,31 @@
     "CVE-2019-19769": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2019-12-13",
+        "last_modified": "2019-12-19",
         "nvd_text": "In the Linux kernel 5.3.10, there is a use-after-free (read) in the perf_trace_lock_acquire function (related to include/trace/events/lock.h).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19769",
@@ -47111,7 +47173,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "e7af6307a8a54f0b873960b32b6a644f2d0fbd97",
-        "last_modified": "2019-12-17",
+        "last_modified": "2019-12-19",
         "nvd_text": "In the Linux kernel before 5.3.11, sound/core/timer.c has a use-after-free caused by erroneous code refactoring, aka CID-e7af6307a8a5. This is related to snd_timer_open and snd_timer_close_locked. The timeri variable was originally intended to be for a newly created timer instance, but was used for a different purpose after refactoring.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19807",
@@ -47125,8 +47187,31 @@
     "CVE-2019-19813": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+            "score": "9.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2019-12-17",
+        "last_modified": "2019-12-19",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image, performing some operations, and then making a syncfs system call can lead to a use-after-free in __mutex_lock in kernel/locking/mutex.c. This is related to mutex_can_spin_on_owner in kernel/locking/mutex.c, __btrfs_qgroup_free_meta in fs/btrfs/qgroup.c, and btrfs_insert_delayed_items in fs/btrfs/delayed-inode.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19813",
@@ -47140,8 +47225,31 @@
     "CVE-2019-19814": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+            "score": "9.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "",
-        "last_modified": "2019-12-17",
+        "last_modified": "2019-12-19",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted f2fs filesystem image can cause __remove_dirty_segment slab-out-of-bounds write access because an array is bounded by the number of dirty types (8) but the array index can exceed this.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19814",
@@ -47155,8 +47263,31 @@
     "CVE-2019-19815": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+            "score": "7.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "",
-        "last_modified": "2019-12-17",
+        "last_modified": "2019-12-19",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted f2fs filesystem image can cause a NULL pointer dereference in f2fs_recover_fsync_data in fs/f2fs/recovery.c. This is related to F2FS_P_SB in fs/f2fs/f2fs.h.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19815",
@@ -47170,8 +47301,31 @@
     "CVE-2019-19816": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+            "score": "9.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "",
-        "last_modified": "2019-12-17",
+        "last_modified": "2019-12-19",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image and performing some operations can cause slab-out-of-bounds write access in __btrfs_map_block in fs/btrfs/volumes.c, because a value of 1 for the number of data stripes is mishandled.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19816",
