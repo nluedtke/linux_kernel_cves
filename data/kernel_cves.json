@@ -41053,8 +41053,9 @@
         }
     },
     "CVE-2019-14895": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.5-rc3",
         "breaks": "",
+        "cmt_msg": "mwifiex: fix possible heap overflow in mwifiex_process_country_ie()",
         "cvss3": {
             "Attack Complexity": "Low",
             "Attack Vector": "Adjacent",
@@ -41068,8 +41069,8 @@
             "score": "8.0"
         },
         "cwe": "Heap-based Buffer Overflow",
-        "fixes": "",
-        "last_modified": "2019-12-03",
+        "fixes": "3d94a4a8373bf5f45cf5f939e88b8354dbf2311b",
+        "last_modified": "2019-12-23",
         "nvd_text": "A heap-based buffer overflow was discovered in the Linux kernel, all versions 3.x.x and 4.x.x before 4.18.0, in Marvell WiFi chip driver. The flaw could occur when the station attempts a connection negotiation during the handling of the remote devices country settings. This could allow the remote device to cause a denial of service (system crash) or possibly execute arbitrary code.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14895",
@@ -42220,7 +42221,7 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2019-11-15",
+        "last_modified": "2019-12-23",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15791",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15791",
@@ -42228,13 +42229,14 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15791",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-15791",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15791"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2019-15792": {
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2019-11-15",
+        "last_modified": "2019-12-23",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15792",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15792",
@@ -42242,13 +42244,14 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15792",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-15792",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15792"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2019-15793": {
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2019-11-15",
+        "last_modified": "2019-12-23",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15793",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15793",
@@ -42256,7 +42259,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-15793",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-15793",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-15793"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2019-15807": {
         "affected_versions": "v2.6.19-rc1 to v5.2-rc3",
@@ -44274,8 +44278,9 @@
         }
     },
     "CVE-2019-19037": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.5-rc3",
         "breaks": "",
+        "cmt_msg": "ext4: fix ext4_empty_dir() for directories with holes",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -44299,8 +44304,8 @@
             "score": "5.5"
         },
         "cwe": "NULL Pointer Dereference",
-        "fixes": "",
-        "last_modified": "2019-11-25",
+        "fixes": "64d4ce892383b2ad6d782e080d25502f91bf2a38",
+        "last_modified": "2019-12-23",
         "nvd_text": "ext4_empty_dir in fs/ext4/namei.c in the Linux kernel through 5.3.12 allows a NULL pointer dereference because ext4_read_dirblock(inode,0,DIRENT_HTREE) can be zero.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19037",
@@ -47357,6 +47362,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19816",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-19816",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19816"
+        }
+    },
+    "CVE-2019-19922": {
+        "affected_versions": "unk to v5.4-rc1",
+        "breaks": "",
+        "cmt_msg": "sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices",
+        "fixes": "de53fd7aedb100f03e5d2231cfce0e4993282425",
+        "last_modified": "2019-12-23",
+        "nvd_text": "kernel/sched/fair.c in the Linux kernel before 5.3.9, when cpu.cfs_quota_us is used (e.g., with Kubernetes), allows attackers to cause a denial of service against non-cpu-bound applications by generating a workload that triggers unwanted slice expiration, aka CID-de53fd7aedb1. (In other words, although this slice expiration would typically be seen with benign workloads, it is possible that an attacker could calculate how many stray requests are required to force an entire Kubernetes cluster into a low-performance state caused by slice expiration, and ensure that a DDoS attack sent that number of stray requests. An attack does not affect the stability of the kernel; it only causes mismanagement of application execution.)",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19922",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19922",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19922",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19922",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-19922",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19922"
         }
     },
     "CVE-2019-1999": {
