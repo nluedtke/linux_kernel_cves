@@ -47070,8 +47070,31 @@
         "affected_versions": "unk to v5.5-rc1",
         "breaks": "",
         "cmt_msg": "ext4: add more paranoia checking in ext4_expand_extra_isize handling",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+            "score": "4.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "Use After Free",
         "fixes": "4ea99936a1630f51fc3a2d61a58ec4a1c4b7d55a",
-        "last_modified": "2019-12-13",
+        "last_modified": "2019-12-28",
         "nvd_text": "The Linux kernel before 5.4.2 mishandles ext4_expand_extra_isize, as demonstrated by use-after-free errors in __ext4_expand_extra_isize and ext4_xattr_set_entry, related to fs/ext4/inode.c and fs/ext4/super.c, aka CID-4ea99936a163.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19767",
@@ -47161,8 +47184,31 @@
     "CVE-2019-19770": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2019-12-13",
+        "last_modified": "2019-12-28",
         "nvd_text": "In the Linux kernel 4.19.83, there is a use-after-free (read) in the debugfs_remove function in fs/debugfs/inode.c (which is used to remove a file or directory in debugfs that was previously created with a call to another debugfs function such as debugfs_create_file).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19770",
@@ -47463,6 +47509,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-1999",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-1999",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-1999"
+        }
+    },
+    "CVE-2019-20054": {
+        "affected_versions": "unk to v5.1-rc3",
+        "breaks": "",
+        "cmt_msg": "fs/proc/proc_sysctl.c: fix NULL pointer dereference in put_links",
+        "fixes": "23da9588037ecdd4901db76a5b79a42b529c4ec3",
+        "last_modified": "2019-12-28",
+        "nvd_text": "In the Linux kernel before 5.0.6, there is a NULL pointer dereference in drop_sysctl_table() in fs/proc/proc_sysctl.c, related to put_links, aka CID-23da9588037e.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20054",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20054",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-20054",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-20054",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-20054",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-20054"
         }
     },
     "CVE-2019-2024": {
@@ -48259,6 +48321,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-3901",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-3901",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-3901"
+        }
+    },
+    "CVE-2019-5108": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2019-12-28",
+        "nvd_text": "An exploitable denial-of-service vulnerability exists in the Linux kernel prior to mainline 5.3. An attacker could exploit this vulnerability by triggering AP to send IAPP location updates for stations before the required authentication process has completed. This could lead to different denial-of-service scenarios, either by causing CAM table attacks, or by leading to traffic flapping if faking already existing clients in other nearby APs of the same wireless infrastructure. An attacker can forge Authentication and Association Request packets to trigger this vulnerability.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-5108",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-5108",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-5108",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-5108",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-5108",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-5108"
         }
     },
     "CVE-2019-5489": {
