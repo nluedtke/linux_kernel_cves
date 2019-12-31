@@ -152,6 +152,7 @@ CVEs fixed in 4.19.46:
 CVEs fixed in 4.19.47:
   CVE-2019-19543: aec118ecf579a6c70e505b39fc6eb6a2d878c89e media: serial_ir: Fix use-after-free in serial_ir_init_module
   CVE-2019-19966: bdf3da72ae79f0cfb88c720dedabe16b0d67334b media: cpia2: Fix use-after-free in cpia2_exit
+  CVE-2019-20095: a27ce4840f89acd1e23efe2b4dfc0d512aa5b38a mwifiex: Fix mem leak in mwifiex_tm_cmd
   CVE-2019-9466: 8783c4128c371668e401eee2f2ba3918c6211b81 brcmfmac: add subtype check for event handling in data path
   CVE-2019-9500: cc240e057c1d48665dde8036144114854bae058c brcmfmac: assure SSID length from firmware is limited
   CVE-2019-9503: 8783c4128c371668e401eee2f2ba3918c6211b81 brcmfmac: add subtype check for event handling in data path
@@ -324,6 +325,13 @@ CVEs fixed in 4.19.89:
   CVE-2019-19332: 5119ffd480b644d8bc9af741cc8ef435a7ec5ff7 KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332)
   CVE-2019-19338: 6a10f818a9adbe394eb36d223814e207e5121236 KVM: x86: fix presentation of TSX feature in ARCH_CAPABILITIES
 
+CVEs fixed in 4.19.92:
+  CVE-2019-18786: debdd16cbd99ffc767227685e2738e5b495b7c54 media: rcar_drif: fix a memory disclosure
+  CVE-2019-19037: 1e62ac6b1307129c0f9ca68e9db4227239b4ab19 ext4: fix ext4_empty_dir() for directories with holes
+  CVE-2019-19057: 1b3e52db38471d5ac896eb9be111565e3734d5b5 mwifiex: pcie: Fix memory leak in mwifiex_pcie_init_evt_ring
+  CVE-2019-19063: 3717a450f83945c481059a6921440e5e6fe3c856 rtlwifi: prevent memory leak in rtl_usb_probe
+  CVE-2019-19947: 9ed59600c3524f12144b30cfc1d86734cfb3927b can: kvaser_usb: kvaser_usb_leaf: Fix some info-leaks to USB devices
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -374,7 +382,6 @@ Outstanding CVEs:
   CVE-2019-18198: (unk) ipv6: do not free rt if FIB_LOOKUP_NOREF is set on suppress rule 
   CVE-2019-18675: (unk)  
   CVE-2019-18680: (unk)  
-  CVE-2019-18786: (unk) media: rcar_drif: fix a memory disclosure 
   CVE-2019-18807: (unk) net: dsa: sja1105: Prevent leaking memory 
   CVE-2019-18808: (unk)  
   CVE-2019-18809: (unk) media: usb: fix memory leak in af9005_identify_state 
@@ -384,7 +391,6 @@ Outstanding CVEs:
   CVE-2019-18814: (unk)  
   CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
   CVE-2019-19036: (unk)  
-  CVE-2019-19037: (unk) ext4: fix ext4_empty_dir() for directories with holes 
   CVE-2019-19039: (unk)  
   CVE-2019-19043: (unk) i40e: prevent memory leak in i40e_setup_macvlans 
   CVE-2019-19044: (unk) drm/v3d: Fix memory leak in v3d_submit_cl_ioctl 
@@ -396,11 +402,9 @@ Outstanding CVEs:
   CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19055: (unk) nl80211: fix memory leak in nl80211_get_ftm_responder_stats 
   CVE-2019-19056: (unk) mwifiex: pcie: Fix memory leak in mwifiex_pcie_alloc_cmdrsp_buf 
-  CVE-2019-19057: (unk) mwifiex: pcie: Fix memory leak in mwifiex_pcie_init_evt_ring 
   CVE-2019-19058: (unk) iwlwifi: dbg_ini: fix memory leak in alloc_sgtable 
   CVE-2019-19059: (unk) iwlwifi: pcie: fix memory leaks in iwl_pcie_ctxt_info_gen3_init 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
-  CVE-2019-19063: (unk) rtlwifi: prevent memory leak in rtl_usb_probe 
   CVE-2019-19064: (unk) spi: lpspi: fix memory leak in fsl_lpspi_probe 
   CVE-2019-19066: (unk) scsi: bfa: release allocated memory in case of error 
   CVE-2019-19067: (unk) drm/amdgpu: fix multiple memory leaks in acp_hw_init 
@@ -430,8 +434,9 @@ Outstanding CVEs:
   CVE-2019-19814: (unk)  
   CVE-2019-19815: (unk)  
   CVE-2019-19816: (unk)  
-  CVE-2019-19947: (unk) can: kvaser_usb: kvaser_usb_leaf: Fix some info-leaks to USB devices 
+  CVE-2019-19927: (unk)  
   CVE-2019-19965: (unk) scsi: libsas: stop discovering if oob mode is disconnected 
+  CVE-2019-20096: (unk) dccp: Fix memleak in __feat_register_sp 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-2214: (unk) binder: Set end of SG buffer area properly. 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
