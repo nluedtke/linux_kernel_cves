@@ -568,6 +568,7 @@ CVEs fixed in 4.14.159:
   CVE-2019-19227: 39de8cc3678f5cd1f4e0ae274c20acabbd85a8b1 appletalk: Fix potential NULL pointer dereference in unregister_snap_client
   CVE-2019-19332: f70609f898d63973388b36adf3650489311b13b9 KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332)
   CVE-2019-19338: cd606fb8f575ec2eaca138d9b3ba3b5131d9a875 KVM: x86: fix presentation of TSX feature in ARCH_CAPABILITIES
+  CVE-2019-19447: d5a2955049171e48feba628e60f15206689bba94 ext4: work around deleting a file with i_nlink == 0 safely
 
 CVEs fixed in 4.14.161:
   CVE-2019-18786: 3feec89682118fad5139e745c3453a4cf8580ef0 media: rcar_drif: fix a memory disclosure
@@ -578,6 +579,16 @@ CVEs fixed in 4.14.161:
 CVEs fixed in 4.14.163:
   CVE-2019-18809: 2d7c27957cac081eeacea7c38d8c9c59049883dc media: usb: fix memory leak in af9005_identify_state
   CVE-2019-19965: 82df1d3fa11bc7b25789efa4232bf0c188c8bc72 scsi: libsas: stop discovering if oob mode is disconnected
+
+CVEs fixed in 4.14.164:
+  CVE-2019-14901: ec3bb975c6013aa2f5e8a96a0bee2c8d39618e89 mwifiex: Fix heap overflow in mmwifiex_process_tdls_action_frame()
+
+CVEs fixed in 4.14.165:
+  CVE-2019-14615: 39465647eda707db7c7561006da3a8450ca634b9 drm/i915/gen9: Clear residual context state on context switch
+  CVE-2019-14895: c2544fb30080aecc3fff99f2e97999ce8e625f45 mwifiex: fix possible heap overflow in mwifiex_process_country_ie()
+  CVE-2019-19056: 6ddbe82681d911534f460e6afd297fcf7f388049 mwifiex: pcie: Fix memory leak in mwifiex_pcie_alloc_cmdrsp_buf
+  CVE-2019-19066: f4e8c78fad1294c785de5e92562862dbef1e9c1e scsi: bfa: release allocated memory in case of error
+  CVE-2019-19068: 32079b0c59f4620fdf7a5576af7502b0d05fcb01 rtl8xxxu: prevent leaking urb
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -621,11 +632,9 @@ Outstanding CVEs:
   CVE-2019-12455: (unk) clk-sunxi: fix a missing-check bug in sunxi_divs_clk_setup() 
   CVE-2019-12456: (unk)  
   CVE-2019-12881: (unk)  
-  CVE-2019-14895: (unk) mwifiex: fix possible heap overflow in mwifiex_process_country_ie() 
   CVE-2019-14896: (unk)  
   CVE-2019-14897: (unk)  
   CVE-2019-14898: (unk)  
-  CVE-2019-14901: (unk)  
   CVE-2019-15217: (unk) media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap 
   CVE-2019-15222: (unk) ALSA: usb-audio: Fix gpf in snd_usb_pipe_sanity_check 
   CVE-2019-15223: (unk) ALSA: line6: Assure canceling delayed work at disconnection 
@@ -661,15 +670,12 @@ Outstanding CVEs:
   CVE-2019-19053: (unk) rpmsg: char: release allocated memory 
   CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19055: (unk) nl80211: fix memory leak in nl80211_get_ftm_responder_stats 
-  CVE-2019-19056: (unk) mwifiex: pcie: Fix memory leak in mwifiex_pcie_alloc_cmdrsp_buf 
   CVE-2019-19058: (unk) iwlwifi: dbg_ini: fix memory leak in alloc_sgtable 
   CVE-2019-19059: (unk) iwlwifi: pcie: fix memory leaks in iwl_pcie_ctxt_info_gen3_init 
   CVE-2019-19060: (unk) iio: imu: adis16400: release allocated memory on failure 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
   CVE-2019-19064: (unk) spi: lpspi: fix memory leak in fsl_lpspi_probe 
-  CVE-2019-19066: (unk) scsi: bfa: release allocated memory in case of error 
   CVE-2019-19067: (unk) drm/amdgpu: fix multiple memory leaks in acp_hw_init 
-  CVE-2019-19068: (unk) rtl8xxxu: prevent leaking urb 
   CVE-2019-19069: (unk) misc: fastrpc: prevent memory leak in fastrpc_dma_buf_attach 
   CVE-2019-19070: (unk) spi: gpio: prevent memory leak in spi_gpio_probe 
   CVE-2019-19072: (unk) tracing: Have error path in predicate_parse() free its allocated memory 
@@ -688,7 +694,6 @@ Outstanding CVEs:
   CVE-2019-19319: (unk)  
   CVE-2019-19377: (unk)  
   CVE-2019-19378: (unk)  
-  CVE-2019-19447: (unk)  
   CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
   CVE-2019-19462: (unk)  
@@ -698,17 +703,19 @@ Outstanding CVEs:
   CVE-2019-19770: (unk)  
   CVE-2019-19813: (unk)  
   CVE-2019-19814: (unk)  
-  CVE-2019-19815: (unk)  
+  CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
   CVE-2019-19816: (unk)  
-  CVE-2019-19927: (unk)  
+  CVE-2019-19927: (unk) drm/ttm: fix incrementing the page pointer for huge pages 
   CVE-2019-19947: (unk) can: kvaser_usb: kvaser_usb_leaf: Fix some info-leaks to USB devices 
   CVE-2019-20096: (unk) dccp: Fix memleak in __feat_register_sp 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-2182: (unk) arm64: Enforce BBM for huge IO/VMAP mappings 
   CVE-2019-2214: (unk) binder: Set end of SG buffer area properly. 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
-  CVE-2019-5108: (unk)  
+  CVE-2019-5108: (unk) mac80211: Do not send Layer 2 Update frame before authorization 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2019-9245: (unk) f2fs: sanity check of xattr entry size 
   CVE-2019-9445: (unk) f2fs: check if file namelen exceeds max value 
   CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
+  CVE-2020-0009: (unk)  
+  CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
