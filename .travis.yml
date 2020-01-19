@@ -4,9 +4,9 @@ branches:
   - staging
 language: node_js
 node_js:
-  - node
+  - "node"
 before_install:
-- npm install -g @vue/cli@3.7.0
+- npm install -g @vue/cli
 before_script:
 - cd ui
 - if [ "$TRAVIS_BRANCH" = "staging" ]; then sed -i "s/\/master\//\/staging\//g" src/main.js ; fi
