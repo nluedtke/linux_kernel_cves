@@ -6,12 +6,11 @@ language: node_js
 node_js:
   - "node"
 before_install:
-- npm install -g @vue/cli
+- npm install -g @vue/cli@1.3.1
 before_script:
 - cd ui
 - if [ "$TRAVIS_BRANCH" = "staging" ]; then sed -i "s/\/master\//\/staging\//g" src/main.js ; fi
 - npm install
-- npm install @vue/cli-service@1.3.1
 script: npm run build
 deploy:
   - provider: s3
