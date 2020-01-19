@@ -11,7 +11,7 @@ before_script:
 - cd ui
 - if [ "$TRAVIS_BRANCH" = "staging" ]; then sed -i "s/\/master\//\/staging\//g" src/main.js ; fi
 - npm install
-- npm install --save-dev @vue/cli-service@4.1.2
+- npm install @vue/cli-service@1.3.1
 script: npm run build
 deploy:
   - provider: s3
