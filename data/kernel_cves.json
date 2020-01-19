@@ -37182,7 +37182,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "abd39c6ded9db53aa44c2540092bdd5fb6590fa8",
-        "last_modified": "2019-10-01",
+        "last_modified": "2020-01-19",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.16.7. A use-after-free can be caused by the function rsi_mac80211_detach in the file drivers/net/wireless/rsi/rsi_91x_mac80211.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-21008",
@@ -41718,7 +41718,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "5d2e73a5f80a5b5aff3caf1ec6d39b5b3f54b26e",
-        "last_modified": "2019-11-15",
+        "last_modified": "2020-01-19",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.2.3. There is a NULL pointer dereference caused by a malicious USB device in the drivers/media/usb/zr364xx/zr364xx.c driver.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15217",
@@ -42467,7 +42467,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "b57a55e2200ede754e4dc9cce4ba9402544b9365",
-        "last_modified": "2019-09-16",
+        "last_modified": "2020-01-19",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.0.10. SMB2_negotiate in fs/cifs/smb2pdu.c has an out-of-bounds read because data structures are incompletely updated after a change from smb30 to smb21.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15918",
@@ -43655,6 +43655,21 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18198"
         }
     },
+    "CVE-2019-18282": {
+        "affected_versions": "unk to v5.4-rc6",
+        "breaks": "",
+        "cmt_msg": "net/flow_dissector: switch to siphash",
+        "fixes": "55667441c84fa5e0911a0aac44fb059c15ba6da2",
+        "last_modified": "2020-01-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18282",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-18282",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-18282",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-18282",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-18282",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-18282"
+        }
+    },
     "CVE-2019-18660": {
         "affected_versions": "unk to v5.5-rc1",
         "breaks": "",
@@ -43695,8 +43710,9 @@
         }
     },
     "CVE-2019-18675": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v4.17-rc5",
         "breaks": "",
+        "cmt_msg": "mmap: introduce sane default mmap limits",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -43720,8 +43736,8 @@
             "score": "7.8"
         },
         "cwe": "Integer Overflow or Wraparound",
-        "fixes": "",
-        "last_modified": "2019-12-11",
+        "fixes": "be83bbf806822b1b89e0a0f23cd87cddc409e429",
+        "last_modified": "2020-01-19",
         "nvd_text": "The Linux kernel through 5.3.13 has a start_offset+size Integer Overflow in cpia2_remap_buffer in drivers/media/usb/cpia2/cpia2_core.c because cpia2 has its own mmap implementation. This allows local users (with /dev/video0 access) to obtain read and write permissions on kernel physical pages, which can possibly result in a privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18675",
@@ -44726,7 +44742,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "6f3ef5c25cc762687a7341c18cbea5af54461407",
-        "last_modified": "2019-12-11",
+        "last_modified": "2020-01-19",
         "nvd_text": "A memory leak in the i2400m_op_rfkill_sw_toggle() function in drivers/net/wimax/i2400m/op-rfkill.c in the Linux kernel before 5.3.11 allows attackers to cause a denial of service (memory consumption), aka CID-6f3ef5c25cc7.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19051",
@@ -44999,7 +45015,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "b4b814fec1a5a849383f7b3886b654a13abbda7d",
-        "last_modified": "2019-11-20",
+        "last_modified": "2020-01-19",
         "nvd_text": "A memory leak in the alloc_sgtable() function in drivers/net/wireless/intel/iwlwifi/fw/dbg.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering alloc_page() failures, aka CID-b4b814fec1a5.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19058",
@@ -45038,7 +45054,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "0f4f199443faca715523b0659aa536251d8b978f",
-        "last_modified": "2019-11-20",
+        "last_modified": "2020-01-19",
         "nvd_text": "Multiple memory leaks in the iwl_pcie_ctxt_info_gen3_init() function in drivers/net/wireless/intel/iwlwifi/pcie/ctxt-info-gen3.c in the Linux kernel through 5.3.11 allow attackers to cause a denial of service (memory consumption) by triggering iwl_pcie_init_fw_sec() or dma_alloc_coherent() failures, aka CID-0f4f199443fa.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19059",
@@ -45233,7 +45249,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "057b8945f78f76d0b04eeb5c27cd9225e5e7ad86",
-        "last_modified": "2019-12-09",
+        "last_modified": "2020-01-19",
         "nvd_text": "** DISPUTED ** A memory leak in the fsl_lpspi_probe() function in drivers/spi/spi-fsl-lpspi.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering pm_runtime_get_sync() failures, aka CID-057b8945f78f. NOTE: third parties dispute the relevance of this because an attacker cannot realistically control these failures at probe time.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19064",
@@ -45740,7 +45756,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "4a9d46a9fe14401f21df69cea97c62396d5fb053",
-        "last_modified": "2019-11-20",
+        "last_modified": "2020-01-19",
         "nvd_text": "A memory leak in the bnxt_re_create_srq() function in drivers/infiniband/hw/bnxt_re/ib_verbs.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering copy to udata failures, aka CID-4a9d46a9fe14.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19077",
@@ -47466,7 +47482,7 @@
         "breaks": "",
         "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages",
         "fixes": "453393369dc9806d2455151e329c599684762428",
-        "last_modified": "2020-01-15",
+        "last_modified": "2020-01-19",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19927",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19927",
@@ -47597,7 +47613,7 @@
         "breaks": "",
         "cmt_msg": "dccp: Fix memleak in __feat_register_sp",
         "fixes": "1d3ff0950e2b40dc861b1739029649d03f591820",
-        "last_modified": "2019-12-31",
+        "last_modified": "2020-01-19",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20096",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20096",
@@ -47818,7 +47834,7 @@
         },
         "cwe": "Permissions, Privileges, and Access Controls",
         "fixes": "15122ee2c515a253b0c66a3e618bc7ebe35105eb",
-        "last_modified": "2019-09-10",
+        "last_modified": "2020-01-19",
         "nvd_text": "In the Android kernel in the kernel MMU code there is a possible execution path leaving some kernel text and rodata pages writable. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2182",
@@ -48409,7 +48425,7 @@
         "breaks": "",
         "cmt_msg": "mac80211: Do not send Layer 2 Update frame before authorization",
         "fixes": "3e493173b7841259a08c5c8e5cbe90adb349da7e",
-        "last_modified": "2020-01-15",
+        "last_modified": "2020-01-19",
         "nvd_text": "An exploitable denial-of-service vulnerability exists in the Linux kernel prior to mainline 5.3. An attacker could exploit this vulnerability by triggering AP to send IAPP location updates for stations before the required authentication process has completed. This could lead to different denial-of-service scenarios, either by causing CAM table attacks, or by leading to traffic flapping if faking already existing clients in other nearby APs of the same wireless infrastructure. An attacker can forge Authentication and Association Request packets to trigger this vulnerability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-5108",
@@ -48965,7 +48981,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "720db068634c91553a8e1d9a0fcd8c7050e06d2b",
-        "last_modified": "2019-09-19",
+        "last_modified": "2020-01-19",
         "nvd_text": "In the Android kernel in F2FS driver there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9445",

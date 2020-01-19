@@ -178,6 +178,9 @@ CVEs fixed in 4.14.45:
   CVE-2018-7754: 9fe2e97e6f2da8fb47bf842741cf9d508c9897f8 printk: hash addresses printed with %p
   CVE-2018-9518: 54881db3251a48f9a27ac8b7223a9b421757d395 NFC: llcp: Limit size of SDP URI
 
+CVEs fixed in 4.14.49:
+  CVE-2019-18675: 16d7ceb04b554207aa68dd27c1bc11f8933813fd mmap: introduce sane default mmap limits
+
 CVEs fixed in 4.14.50:
   CVE-2018-10853: 53e4b19fcd0ce08933e0f7a7fe11654f6eac1f19 kvm: x86: use correct privilege level for sgdt/sidt/fxsave/fxrstor access
   CVE-2018-12904: b1bd9caf5e98d8111361f53367fece3444b0a7c2 kvm: nVMX: Enforce cpl=0 for VMX instructions
@@ -536,6 +539,7 @@ CVEs fixed in 4.14.152:
   CVE-2019-19532: e13a3d84494ca7b560551a9927231e7ecf27d96a HID: Fix assumption that devices have inputs
 
 CVEs fixed in 4.14.153:
+  CVE-2019-18282: a9de6f42e945cdb24b59c7ab7ebad1eba6cb5875 net/flow_dissector: switch to siphash
   CVE-2019-19049: 9f4ca715dae36ff5b737d56165df1b7964a2cb3e of: unittest: fix memory leak in unittest_data_add
 
 CVEs fixed in 4.14.154:
@@ -590,6 +594,16 @@ CVEs fixed in 4.14.165:
   CVE-2019-19066: f4e8c78fad1294c785de5e92562862dbef1e9c1e scsi: bfa: release allocated memory in case of error
   CVE-2019-19068: 32079b0c59f4620fdf7a5576af7502b0d05fcb01 rtl8xxxu: prevent leaking urb
 
+CVEs fixed in 4.14.166:
+  CVE-2018-21008: ba8bbddaa188235df007411fdead5832f9e0cb59 rsi: add fix for crash during assertions
+  CVE-2019-15217: ffe76c896fbc91af8859aaea15b75b0b887960f3 media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap
+  CVE-2019-15918: 1059b758b6fb0fb6949b8c0474d5db27ea269b01 cifs: Fix lease buffer length error
+  CVE-2019-19051: 67a8c1b6bc85dfe2d2ae5d86d1ea8d00b1b29493 wimax: i2400: Fix memory leak in i2400m_op_rfkill_sw_toggle
+  CVE-2019-19058: db1fb5a39747a680a4cc182c8bb4648b845a841f iwlwifi: dbg_ini: fix memory leak in alloc_sgtable
+  CVE-2019-20096: d0c15c1e8f9223552818fe5340b0427483b34f22 dccp: Fix memleak in __feat_register_sp
+  CVE-2019-2182: 68a066f6ff13e7029d54da9d322ad686694c7039 arm64: Enforce BBM for huge IO/VMAP mappings
+  CVE-2019-5108: 57e1b5f6b55acb655358bd62c7e2f14d8af90e0a mac80211: Do not send Layer 2 Update frame before authorization
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -622,7 +636,6 @@ Outstanding CVEs:
   CVE-2018-17977: (unk)  
   CVE-2018-20669: (unk) make 'user_access_begin()' do 'access_ok()' 
   CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
-  CVE-2018-21008: (unk) rsi: add fix for crash during assertions 
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
   CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
@@ -636,12 +649,10 @@ Outstanding CVEs:
   CVE-2019-14896: (unk)  
   CVE-2019-14897: (unk)  
   CVE-2019-14898: (unk)  
-  CVE-2019-15217: (unk) media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap 
   CVE-2019-15222: (unk) ALSA: usb-audio: Fix gpf in snd_usb_pipe_sanity_check 
   CVE-2019-15223: (unk) ALSA: line6: Assure canceling delayed work at disconnection 
   CVE-2019-15290: (unk)  
   CVE-2019-15902: (unk)  
-  CVE-2019-15918: (unk) cifs: Fix lease buffer length error 
   CVE-2019-16089: (unk)  
   CVE-2019-16230: (unk)  
   CVE-2019-16231: (unk)  
@@ -649,7 +660,6 @@ Outstanding CVEs:
   CVE-2019-16233: (unk)  
   CVE-2019-16234: (unk)  
   CVE-2019-18198: (unk) ipv6: do not free rt if FIB_LOOKUP_NOREF is set on suppress rule 
-  CVE-2019-18675: (unk)  
   CVE-2019-18680: (unk)  
   CVE-2019-18807: (unk) net: dsa: sja1105: Prevent leaking memory 
   CVE-2019-18808: (unk)  
@@ -667,11 +677,9 @@ Outstanding CVEs:
   CVE-2019-19047: (unk) net/mlx5: fix memory leak in mlx5_fw_fatal_reporter_dump 
   CVE-2019-19048: (unk) virt: vbox: fix memory leak in hgcm_call_preprocess_linaddr 
   CVE-2019-19050: (unk) crypto: user - fix memory leak in crypto_reportstat 
-  CVE-2019-19051: (unk) wimax: i2400: Fix memory leak in i2400m_op_rfkill_sw_toggle 
   CVE-2019-19053: (unk) rpmsg: char: release allocated memory 
   CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19055: (unk) nl80211: fix memory leak in nl80211_get_ftm_responder_stats 
-  CVE-2019-19058: (unk) iwlwifi: dbg_ini: fix memory leak in alloc_sgtable 
   CVE-2019-19059: (unk) iwlwifi: pcie: fix memory leaks in iwl_pcie_ctxt_info_gen3_init 
   CVE-2019-19060: (unk) iio: imu: adis16400: release allocated memory on failure 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
@@ -708,12 +716,9 @@ Outstanding CVEs:
   CVE-2019-19816: (unk)  
   CVE-2019-19927: (unk) drm/ttm: fix incrementing the page pointer for huge pages 
   CVE-2019-19947: (unk) can: kvaser_usb: kvaser_usb_leaf: Fix some info-leaks to USB devices 
-  CVE-2019-20096: (unk) dccp: Fix memleak in __feat_register_sp 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
-  CVE-2019-2182: (unk) arm64: Enforce BBM for huge IO/VMAP mappings 
   CVE-2019-2214: (unk) binder: Set end of SG buffer area properly. 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
-  CVE-2019-5108: (unk) mac80211: Do not send Layer 2 Update frame before authorization 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2019-9245: (unk) f2fs: sanity check of xattr entry size 
   CVE-2019-9445: (unk) f2fs: check if file namelen exceeds max value 
