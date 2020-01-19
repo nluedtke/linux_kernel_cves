@@ -6,7 +6,7 @@ language: node_js
 node_js:
   - "node"
 before_install:
-- npm install -g @vue/cli
+- npm install -g @vue/cli@3.12.1
 before_script:
 - cd ui
 - if [ "$TRAVIS_BRANCH" = "staging" ]; then sed -i "s/\/master\//\/staging\//g" src/main.js ; fi
