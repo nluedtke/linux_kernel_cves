@@ -205,8 +205,31 @@
     "CVE-2007-4774": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+            "score": "4.3"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "score": "5.9"
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "",
-        "last_modified": "2020-01-16",
+        "last_modified": "2020-01-23",
         "nvd_text": "The Linux kernel before 2.4.36-rc1 has a race condition. It was possible to bypass systrace policies by flooding the ptraced process with SIGCONT signals, which can can wake up a PTRACED process.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2007-4774",
@@ -38047,7 +38070,7 @@
         "cwe": "Use After Free",
         "fixes": "abd39c6ded9db53aa44c2540092bdd5fb6590fa8",
         "last_affected_version": "4.14.165",
-        "last_modified": "2020-01-19",
+        "last_modified": "2020-01-23",
         "nvd_text": "An issue was discovered in the Linux kernel before 4.16.7. A use-after-free can be caused by the function rsi_mac80211_detach in the file drivers/net/wireless/rsi/rsi_91x_mac80211.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-21008",
@@ -42690,7 +42713,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "5d2e73a5f80a5b5aff3caf1ec6d39b5b3f54b26e",
         "last_affected_version": "5.2.2",
-        "last_modified": "2020-01-19",
+        "last_modified": "2020-01-23",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.2.3. There is a NULL pointer dereference caused by a malicious USB device in the drivers/media/usb/zr364xx/zr364xx.c driver.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15217",
@@ -42804,7 +42827,7 @@
         "cwe": "Use After Free",
         "fixes": "6e41e2257f1094acc37618bf6c856115374c6922",
         "last_affected_version": "5.2.0",
-        "last_modified": "2019-10-06",
+        "last_modified": "2020-01-23",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.2.1. There is a use-after-free caused by a malicious USB device in the drivers/net/wireless/intersil/p54/p54usb.c driver.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15220",
@@ -42842,7 +42865,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "3450121997ce872eb7f1248417225827ea249710",
         "last_affected_version": "5.1",
-        "last_modified": "2019-10-06",
+        "last_modified": "2020-01-23",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.1.17. There is a NULL pointer dereference caused by a malicious USB device in the sound/usb/line6/pcm.c driver.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15221",
@@ -44581,7 +44604,7 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "a1078e821b605813b63bf6bca414a85f804d5c66",
         "last_affected_version": "5.2.2",
-        "last_modified": "2019-10-11",
+        "last_modified": "2020-01-23",
         "nvd_text": "An issue was discovered in drivers/xen/balloon.c in the Linux kernel before 5.2.3, as used in Xen through 4.12.x, allowing guest OS users to cause a denial of service because of unrestricted resource consumption during the mapping of guest memory, aka CID-6ef36ab967c7.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-17351",
@@ -45456,7 +45479,8 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "27d461333459d282ffa4a2bdb6b215a59d493a8f",
-        "last_modified": "2020-01-08",
+        "last_affected_version": "5.4.13",
+        "last_modified": "2020-01-23",
         "nvd_text": "A memory leak in the i40e_setup_macvlans() function in drivers/net/ethernet/intel/i40e/i40e_main.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering i40e_setup_channel() failures, aka CID-27d461333459.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19043",
@@ -45775,7 +45799,7 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "6f3ef5c25cc762687a7341c18cbea5af54461407",
         "last_affected_version": "5.3.10",
-        "last_modified": "2020-01-19",
+        "last_modified": "2020-01-23",
         "nvd_text": "A memory leak in the i2400m_op_rfkill_sw_toggle() function in drivers/net/wimax/i2400m/op-rfkill.c in the Linux kernel before 5.3.11 allows attackers to cause a denial of service (memory consumption), aka CID-6f3ef5c25cc7.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19051",
@@ -48227,7 +48251,7 @@
         "cwe": "Use After Free",
         "fixes": "4ea99936a1630f51fc3a2d61a58ec4a1c4b7d55a",
         "last_affected_version": "5.4.1",
-        "last_modified": "2020-01-12",
+        "last_modified": "2020-01-23",
         "nvd_text": "The Linux kernel before 5.4.2 mishandles ext4_expand_extra_isize, as demonstrated by use-after-free errors in __ext4_expand_extra_isize and ext4_xattr_set_entry, related to fs/ext4/inode.c and fs/ext4/super.c, aka CID-4ea99936a163.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19767",
@@ -48706,7 +48730,7 @@
         "cmt_msg": "dccp: Fix memleak in __feat_register_sp",
         "fixes": "1d3ff0950e2b40dc861b1739029649d03f591820",
         "last_affected_version": "4.19.96",
-        "last_modified": "2020-01-19",
+        "last_modified": "2020-01-23",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20096",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20096",
@@ -48931,7 +48955,7 @@
         "cwe": "Permissions, Privileges, and Access Controls",
         "fixes": "15122ee2c515a253b0c66a3e618bc7ebe35105eb",
         "last_affected_version": "4.14.165",
-        "last_modified": "2020-01-19",
+        "last_modified": "2020-01-23",
         "nvd_text": "In the Android kernel in the kernel MMU code there is a possible execution path leaving some kernel text and rodata pages writable. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-2182",
@@ -49536,7 +49560,7 @@
         "cmt_msg": "mac80211: Do not send Layer 2 Update frame before authorization",
         "fixes": "3e493173b7841259a08c5c8e5cbe90adb349da7e",
         "last_affected_version": "5.2",
-        "last_modified": "2020-01-19",
+        "last_modified": "2020-01-23",
         "nvd_text": "An exploitable denial-of-service vulnerability exists in the Linux kernel prior to mainline 5.3. An attacker could exploit this vulnerability by triggering AP to send IAPP location updates for stations before the required authentication process has completed. This could lead to different denial-of-service scenarios, either by causing CAM table attacks, or by leading to traffic flapping if faking already existing clients in other nearby APs of the same wireless infrastructure. An attacker can forge Authentication and Association Request packets to trigger this vulnerability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-5108",
