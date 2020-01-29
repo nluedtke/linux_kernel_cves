@@ -62,6 +62,7 @@ CVEs fixed in 5.3.9:
   CVE-2019-19922: 2bd11026299bdcb6d4b751d584913433b6d9b0b6 sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices
 
 CVEs fixed in 5.3.10:
+  CVE-2019-16233: 8669ff2e8537e4eaf0427737c4e95b51daf904fe scsi: qla2xxx: fix a potential NULL pointer dereference
   CVE-2019-18282: 76b4d8952ff119a143c25159bbf58417f2b548b4 net/flow_dissector: switch to siphash
   CVE-2019-19049: eec2a09f89ffe4285a783775b9c967601c993cd0 of: unittest: fix memory leak in unittest_data_add
 
@@ -70,6 +71,7 @@ CVEs fixed in 5.3.11:
   CVE-2019-0154: 343c1b3bb8284af4dccd5c47a9818eb40be8c39a drm/i915: Lower RM timeout to avoid DSI hard hangs
   CVE-2019-0155: 0d185a9932c9e42344106af1ce8287d8f2b6c4ec drm/i915: Rename gen7 cmdparser tables
   CVE-2019-11135: b5b1f0297258207ac438525fe81d97a6f9ab1363 x86/msr: Add the IA32_TSX_CTRL MSR
+  CVE-2019-16231: 9fb4fd110885c90944c7cc1b88414590e489a209 fjes: Handle workqueue allocation failure
   CVE-2019-18813: 65b4a421e657ed09d3585a5bf75d4b2625aa1ba6 usb: dwc3: pci: prevent memory leak in dwc3_pci_probe
   CVE-2019-19044: 43ed09d84c7def99b38075b4f553d543b68afcd7 drm/v3d: Fix memory leak in v3d_submit_cl_ioctl
   CVE-2019-19045: 666adb04e4f98a073017e9b3f5a0483a326b9587 net/mlx5: prevent memory leak in mlx5_fpga_conn_create_cq
@@ -90,7 +92,6 @@ CVEs fixed in 5.3.14:
 
 CVEs fixed in 5.3.15:
   CVE-2019-18811: 621111112e6e21bcd7a6bee7cb86756c8c52da35 ASoC: SOF: ipc: Fix memory leak in sof_set_get_large_ctrl_data
-  CVE-2019-19241: ad700a7eb17dc3fc1f96152b4291532e5ba5a7ad io_uring: async workers should inherit the user creds
   CVE-2019-19602: 4a94795bd29e90045053107a6cd79942d2b02ccd x86/fpu: Don't cache access to fpu_fpregs_owner_ctx
   CVE-2019-19767: fb7bc3a2bb987865e149f6baa2a3d22dd18b201e ext4: add more paranoia checking in ext4_expand_extra_isize handling
 
@@ -100,7 +101,6 @@ CVEs fixed in 5.3.16:
   CVE-2019-19071: 9c11993ad2542c314023f282efea363996b378a0 rsi: release skb if rsi_prepare_beacon fails
   CVE-2019-19252: a006855c86ede879fd57b6a944cd9a5b89a9cdce vcs: prevent write access to vcsu devices
   CVE-2019-19332: 9e4bc1ba9f02d31b5f727f7c0a49f82dca0875b7 KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332)
-  CVE-2019-19338: e2416da8c1ef201d3685442a0821f4ffb19727ad KVM: x86: fix presentation of TSX feature in ARCH_CAPABILITIES
 
 CVEs fixed in 5.3.17:
   CVE-2019-19447: ea46b9e9aa340496aec70ff401b4e922df54f244 ext4: work around deleting a file with i_nlink == 0 safely
@@ -108,7 +108,6 @@ CVEs fixed in 5.3.17:
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
-  CVE-2007-4774: (unk)  
   CVE-2008-2544: (unk)  
   CVE-2008-4609: (unk)  
   CVE-2010-4563: (unk)  
@@ -139,15 +138,13 @@ Outstanding CVEs:
   CVE-2019-15290: (unk)  
   CVE-2019-15902: (unk)  
   CVE-2019-16089: (unk)  
-  CVE-2019-16229: (unk)  
-  CVE-2019-16230: (unk)  
-  CVE-2019-16231: (unk)  
-  CVE-2019-16232: (unk)  
-  CVE-2019-16233: (unk)  
-  CVE-2019-16234: (unk)  
+  CVE-2019-16229: (unk) drm/amdkfd: fix a potential NULL pointer dereference (v2) 
+  CVE-2019-16230: (unk) drm/amdkfd: fix a potential NULL pointer dereference (v2) 
+  CVE-2019-16232: (unk) libertas: fix a potential NULL pointer dereference 
+  CVE-2019-16234: (unk) iwlwifi: pcie: fix rb_allocator workqueue allocation 
   CVE-2019-18680: (unk)  
   CVE-2019-18786: (unk) media: rcar_drif: fix a memory disclosure 
-  CVE-2019-18808: (unk)  
+  CVE-2019-18808: (unk) crypto: ccp - Release all allocated memory if sha type is invalid 
   CVE-2019-18809: (unk) media: usb: fix memory leak in af9005_identify_state 
   CVE-2019-18812: (unk) ASoC: SOF: Fix memory leak in sof_dfsentry_write 
   CVE-2019-18814: (unk)  

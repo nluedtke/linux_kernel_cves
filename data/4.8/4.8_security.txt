@@ -56,7 +56,6 @@ CVEs fixed in 4.8.17:
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
-  CVE-2007-4774: (unk)  
   CVE-2008-2544: (unk)  
   CVE-2008-4609: (unk)  
   CVE-2010-4563: (unk)  
@@ -496,14 +495,13 @@ Outstanding CVEs:
   CVE-2019-15924: (unk) fm10k: Fix a potential NULL pointer dereference 
   CVE-2019-15926: (unk) ath6kl: add some bounds checking 
   CVE-2019-15927: (unk) ALSA: usb-audio: Avoid access before bLength check in build_audio_procunit() 
-  CVE-2019-16230: (unk)  
-  CVE-2019-16231: (unk)  
-  CVE-2019-16232: (unk)  
-  CVE-2019-16233: (unk)  
-  CVE-2019-16234: (unk)  
+  CVE-2019-16230: (unk) drm/amdkfd: fix a potential NULL pointer dereference (v2) 
+  CVE-2019-16231: (unk) fjes: Handle workqueue allocation failure 
+  CVE-2019-16232: (unk) libertas: fix a potential NULL pointer dereference 
+  CVE-2019-16233: (unk) scsi: qla2xxx: fix a potential NULL pointer dereference 
+  CVE-2019-16234: (unk) iwlwifi: pcie: fix rb_allocator workqueue allocation 
   CVE-2019-16413: (unk) 9p: use inode->i_lock to protect i_size_write() under 32-bit 
   CVE-2019-16746: (unk) nl80211: validate beacon head 
-  CVE-2019-16994: (unk) net: sit: fix memory leak in sit_init_net() 
   CVE-2019-16995: (unk) net: hsr: fix memory leak in hsr_dev_finalize() 
   CVE-2019-17052: (unk) ax25: enforce CAP_NET_RAW for raw sockets 
   CVE-2019-17053: (unk) ieee802154: enforce CAP_NET_RAW for raw sockets 
@@ -514,88 +512,44 @@ Outstanding CVEs:
   CVE-2019-17133: (unk) cfg80211: wext: avoid copying malformed SSIDs 
   CVE-2019-17351: (unk) xen: let alloc_xenballooned_pages() fail if not enough memory free 
   CVE-2019-17666: (unk) rtlwifi: Fix potential overflow on P2P code 
-  CVE-2019-18198: (unk) ipv6: do not free rt if FIB_LOOKUP_NOREF is set on suppress rule 
   CVE-2019-18282: (unk) net/flow_dissector: switch to siphash 
   CVE-2019-18660: (unk) powerpc/book3s64: Fix link stack flush on context switch 
   CVE-2019-18675: (unk) mmap: introduce sane default mmap limits 
   CVE-2019-18680: (unk)  
   CVE-2019-18683: (unk) media: vivid: Fix wrong locking that causes race conditions on streaming stop 
-  CVE-2019-18786: (unk) media: rcar_drif: fix a memory disclosure 
-  CVE-2019-18805: (unk) ipv4: set the tcp_min_rtt_wlen range from 0 to one day 
   CVE-2019-18806: (unk) net: qlogic: Fix memory leak in ql_alloc_large_buffers 
-  CVE-2019-18807: (unk) net: dsa: sja1105: Prevent leaking memory 
-  CVE-2019-18808: (unk)  
-  CVE-2019-18809: (unk) media: usb: fix memory leak in af9005_identify_state 
-  CVE-2019-18810: (unk) drm/komeda: prevent memory leak in komeda_wb_connector_add 
-  CVE-2019-18811: (unk) ASoC: SOF: ipc: Fix memory leak in sof_set_get_large_ctrl_data 
-  CVE-2019-18812: (unk) ASoC: SOF: Fix memory leak in sof_dfsentry_write 
-  CVE-2019-18813: (unk) usb: dwc3: pci: prevent memory leak in dwc3_pci_probe 
-  CVE-2019-18814: (unk)  
   CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
   CVE-2019-19036: (unk)  
   CVE-2019-19037: (unk) ext4: fix ext4_empty_dir() for directories with holes 
   CVE-2019-19039: (unk)  
-  CVE-2019-19043: (unk) i40e: prevent memory leak in i40e_setup_macvlans 
-  CVE-2019-19044: (unk) drm/v3d: Fix memory leak in v3d_submit_cl_ioctl 
-  CVE-2019-19045: (unk) net/mlx5: prevent memory leak in mlx5_fpga_conn_create_cq 
-  CVE-2019-19046: (unk) ipmi: Fix memory leak in __ipmi_bmc_register 
-  CVE-2019-19047: (unk) net/mlx5: fix memory leak in mlx5_fw_fatal_reporter_dump 
-  CVE-2019-19048: (unk) virt: vbox: fix memory leak in hgcm_call_preprocess_linaddr 
   CVE-2019-19049: (unk) of: unittest: fix memory leak in unittest_data_add 
-  CVE-2019-19050: (unk) crypto: user - fix memory leak in crypto_reportstat 
-  CVE-2019-19051: (unk) wimax: i2400: Fix memory leak in i2400m_op_rfkill_sw_toggle 
   CVE-2019-19052: (unk) can: gs_usb: gs_can_open(): prevent memory leak 
-  CVE-2019-19053: (unk) rpmsg: char: release allocated memory 
   CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
-  CVE-2019-19055: (unk) nl80211: fix memory leak in nl80211_get_ftm_responder_stats 
   CVE-2019-19056: (unk) mwifiex: pcie: Fix memory leak in mwifiex_pcie_alloc_cmdrsp_buf 
   CVE-2019-19057: (unk) mwifiex: pcie: Fix memory leak in mwifiex_pcie_init_evt_ring 
-  CVE-2019-19058: (unk) iwlwifi: dbg_ini: fix memory leak in alloc_sgtable 
-  CVE-2019-19059: (unk) iwlwifi: pcie: fix memory leaks in iwl_pcie_ctxt_info_gen3_init 
   CVE-2019-19060: (unk) iio: imu: adis16400: release allocated memory on failure 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
   CVE-2019-19062: (unk) crypto: user - fix memory leak in crypto_report 
   CVE-2019-19063: (unk) rtlwifi: prevent memory leak in rtl_usb_probe 
-  CVE-2019-19064: (unk) spi: lpspi: fix memory leak in fsl_lpspi_probe 
-  CVE-2019-19065: (unk) RDMA/hfi1: Prevent memory leak in sdma_init 
   CVE-2019-19066: (unk) scsi: bfa: release allocated memory in case of error 
   CVE-2019-19067: (unk) drm/amdgpu: fix multiple memory leaks in acp_hw_init 
   CVE-2019-19068: (unk) rtl8xxxu: prevent leaking urb 
-  CVE-2019-19069: (unk) misc: fastrpc: prevent memory leak in fastrpc_dma_buf_attach 
-  CVE-2019-19070: (unk) spi: gpio: prevent memory leak in spi_gpio_probe 
-  CVE-2019-19071: (unk) rsi: release skb if rsi_prepare_beacon fails 
-  CVE-2019-19072: (unk) tracing: Have error path in predicate_parse() free its allocated memory 
   CVE-2019-19073: (unk) ath9k_htc: release allocated buffer if timed out 
   CVE-2019-19074: (unk) ath9k: release allocated buffer if timed out 
-  CVE-2019-19075: (unk) ieee802154: ca8210: prevent memory leak 
-  CVE-2019-19076: (unk) nfp: abm: fix memory leak in nfp_abm_u32_knode_replace 
-  CVE-2019-19077: (unk) RDMA: Fix goto target to release the allocated memory 
-  CVE-2019-19078: (unk) ath10k: fix memory leak 
-  CVE-2019-19079: (unk) net: qrtr: fix memort leak in qrtr_tun_write_iter 
-  CVE-2019-19080: (unk) nfp: flower: prevent memory leak in nfp_flower_spawn_phy_reprs 
-  CVE-2019-19081: (unk) nfp: flower: fix memory leak in nfp_flower_spawn_vnic_reprs 
-  CVE-2019-19082: (unk) drm/amd/display: prevent memory leak 
-  CVE-2019-19083: (unk) drm/amd/display: memory leak 
   CVE-2019-19227: (unk) appletalk: Fix potential NULL pointer dereference in unregister_snap_client 
-  CVE-2019-19241: (unk) io_uring: async workers should inherit the user creds 
-  CVE-2019-19252: (unk) vcs: prevent write access to vcsu devices 
   CVE-2019-19318: (unk)  
   CVE-2019-19319: (unk)  
   CVE-2019-19332: (unk) KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332) 
-  CVE-2019-19338: (unk) KVM: x86: fix presentation of TSX feature in ARCH_CAPABILITIES 
   CVE-2019-19377: (unk)  
   CVE-2019-19378: (unk)  
   CVE-2019-19447: (unk) ext4: work around deleting a file with i_nlink == 0 safely 
   CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
-  CVE-2019-19462: (unk)  
   CVE-2019-19523: (unk) USB: adutux: fix use-after-free on disconnect 
   CVE-2019-19524: (unk) Input: ff-memless - kill timer in destroy() 
   CVE-2019-19525: (unk) ieee802154: atusb: fix use-after-free at disconnect 
-  CVE-2019-19526: (unk) NFC: pn533: fix use-after-free and memleaks 
   CVE-2019-19527: (unk) HID: hiddev: do cleanup in failure of opening a device 
   CVE-2019-19528: (unk) USB: iowarrior: fix use-after-free on disconnect 
-  CVE-2019-19529: (unk) can: mcba_usb: fix use-after-free on disconnect 
   CVE-2019-19530: (unk) usb: cdc-acm: make sure a refcount is taken early enough 
   CVE-2019-19531: (unk) usb: yurex: Fix use-after-free in yurex_delete 
   CVE-2019-19532: (unk) HID: Fix assumption that devices have inputs 
@@ -604,25 +558,17 @@ Outstanding CVEs:
   CVE-2019-19535: (unk) can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices 
   CVE-2019-19536: (unk) can: peak_usb: pcan_usb_pro: Fix info-leaks to USB devices 
   CVE-2019-19537: (unk) USB: core: Fix races in character device registration and deregistraion 
-  CVE-2019-19543: (unk) media: serial_ir: Fix use-after-free in serial_ir_init_module 
-  CVE-2019-19602: (unk) x86/fpu: Don't cache access to fpu_fpregs_owner_ctx 
-  CVE-2019-19767: (unk) ext4: add more paranoia checking in ext4_expand_extra_isize handling 
   CVE-2019-19768: (unk)  
   CVE-2019-19769: (unk)  
   CVE-2019-19770: (unk)  
-  CVE-2019-19807: (unk) ALSA: timer: Fix incorrectly assigned timer instance 
   CVE-2019-19813: (unk)  
   CVE-2019-19814: (unk)  
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
   CVE-2019-19816: (unk)  
-  CVE-2019-19922: (unk) sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices 
-  CVE-2019-19927: (unk) drm/ttm: fix incrementing the page pointer for huge pages 
-  CVE-2019-19947: (unk) can: kvaser_usb: kvaser_usb_leaf: Fix some info-leaks to USB devices 
   CVE-2019-19965: (unk) scsi: libsas: stop discovering if oob mode is disconnected 
   CVE-2019-19966: (unk) media: cpia2: Fix use-after-free in cpia2_exit 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-20054: (unk) fs/proc/proc_sysctl.c: fix NULL pointer dereference in put_links 
-  CVE-2019-20095: (unk) mwifiex: Fix mem leak in mwifiex_tm_cmd 
   CVE-2019-20096: (unk) dccp: Fix memleak in __feat_register_sp 
   CVE-2019-2024: (unk) media: em28xx: Fix use-after-free when disconnecting 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
@@ -631,7 +577,6 @@ Outstanding CVEs:
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-2182: (unk) arm64: Enforce BBM for huge IO/VMAP mappings 
   CVE-2019-2213: (unk) binder: fix possible UAF when freeing buffer 
-  CVE-2019-2214: (unk) binder: Set end of SG buffer area properly. 
   CVE-2019-2215: (unk) ANDROID: binder: remove waitqueue when thread exits. 
   CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
   CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
@@ -663,4 +608,3 @@ Outstanding CVEs:
   CVE-2019-9503: (unk) brcmfmac: add subtype check for event handling in data path 
   CVE-2019-9506: (unk) Bluetooth: Fix faulty expression for minimum encryption key size check 
   CVE-2020-0009: (unk)  
-  CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
