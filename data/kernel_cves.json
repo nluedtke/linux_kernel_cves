@@ -761,8 +761,31 @@
     "CVE-2011-4915": {
         "affected_versions": "v2.6.28-rc1 to v3.2-rc1",
         "breaks": "4a2b5fddd53b80efcb3266ee36e23b8de28e761a",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": "5.5"
+        },
+        "cwe": "Information Exposure",
         "fixes": "c290f8358acaeffd8e0c551ddcc24d1206143376",
-        "last_modified": "2020-02-22",
+        "last_modified": "2020-02-26",
         "nvd_text": "fs/proc/base.c in the Linux kernel through 3.1 allows local users to obtain sensitive keystroke information via access to /proc/interrupts.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2011-4915",
@@ -50600,6 +50623,21 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0030"
         }
     },
+    "CVE-2020-2732": {
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "KVM: nVMX: Don't emulate instructions in guest mode",
+        "fixes": "07721feee46b4b248402133228235318199b05ec",
+        "last_modified": "2020-02-26",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-2732",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-2732",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-2732",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-2732",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-2732",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-2732"
+        }
+    },
     "CVE-2020-7053": {
         "affected_versions": "v4.14-rc1 to v5.2-rc1",
         "breaks": "1acfc104cdf8a3408f0e83b4115d4419c6315005",
@@ -50646,10 +50684,11 @@
         }
     },
     "CVE-2020-8648": {
-        "affected_versions": "v2.6.12-rc2 to unk",
+        "affected_versions": "v2.6.12-rc2 to v5.6-rc3",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
-        "fixes": "",
-        "last_modified": "2020-02-13",
+        "cmt_msg": "vt: selection, close sel_buffer race",
+        "fixes": "07e6124a1a46b4b5a9b3cacc0c306b50da87abf5",
+        "last_modified": "2020-02-26",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-8648",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-8648",
@@ -50687,6 +50726,36 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-8992",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-8992",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-8992"
+        }
+    },
+    "CVE-2020-9383": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "floppy: check FDC index for errors before assigning it",
+        "fixes": "2e90ca68b0d2f5548804f22f0dd61145516171e3",
+        "last_modified": "2020-02-26",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-9383",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-9383",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-9383",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-9383",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-9383",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-9383"
+        }
+    },
+    "CVE-2020-9391": {
+        "affected_versions": "unk to v5.6-rc3",
+        "breaks": "",
+        "cmt_msg": "mm: Avoid creating virtual address aliases in brk()/mmap()/mremap()",
+        "fixes": "dcde237319e626d1ec3c9d8b7613032f0fd4663a",
+        "last_modified": "2020-02-26",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-9391",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-9391",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-9391",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-9391",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-9391",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-9391"
         }
     }
 }
