@@ -45416,8 +45416,8 @@
         }
     },
     "CVE-2019-19037": {
-        "affected_versions": "unk to v5.5-rc3",
-        "breaks": "",
+        "affected_versions": "v5.3-rc1 to v5.5-rc3",
+        "breaks": "4e19d6b65fb4fc42e352ce9883649e049da14743",
         "cmt_msg": "ext4: fix ext4_empty_dir() for directories with holes",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -45444,7 +45444,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "64d4ce892383b2ad6d782e080d25502f91bf2a38",
         "last_affected_version": "5.4.6",
-        "last_modified": "2020-01-04",
+        "last_modified": "2020-03-03",
         "nvd_text": "ext4_empty_dir in fs/ext4/namei.c in the Linux kernel through 5.3.12 allows a NULL pointer dereference because ext4_read_dirblock(inode,0,DIRENT_HTREE) can be zero.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19037",
@@ -47432,8 +47432,8 @@
         }
     },
     "CVE-2019-19447": {
-        "affected_versions": "unk to v5.5-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.5-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ext4: work around deleting a file with i_nlink == 0 safely",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -47460,7 +47460,7 @@
         "cwe": "Use After Free",
         "fixes": "c7df4a1ecb8579838ec8c56b2bb6a6716e974f37",
         "last_affected_version": "5.4.3",
-        "last_modified": "2020-02-13",
+        "last_modified": "2020-03-03",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted ext4 filesystem image, performing some operations, and unmounting can lead to a use-after-free in ext4_put_super in fs/ext4/super.c, related to dump_orphan_list in fs/ext4/super.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19447",
@@ -48306,8 +48306,9 @@
         }
     },
     "CVE-2019-19768": {
-        "affected_versions": "v2.6.17-rc1 to unk",
+        "affected_versions": "v2.6.17-rc1 to v5.6-rc4",
         "breaks": "2056a782f8e7e65fd4bfd027506b4ce1c5e9ccd4",
+        "cmt_msg": "blktrace: Protect q->blk_trace with RCU",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -48331,8 +48332,8 @@
             "score": "7.5"
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2020-02-13",
+        "fixes": "c780e86dd48ef6467a1146cf7d0fe1e05a635039",
+        "last_modified": "2020-03-03",
         "nvd_text": "In the Linux kernel 5.4.0-rc2, there is a use-after-free (read) in the __blk_add_trace function in kernel/trace/blktrace.c (which is used to fill out a blk_io_trace structure and place it in a per-cpu sub-buffer).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19768",
@@ -50730,12 +50731,12 @@
         }
     },
     "CVE-2020-9383": {
-        "affected_versions": "unk to v5.6-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.6-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "floppy: check FDC index for errors before assigning it",
         "fixes": "2e90ca68b0d2f5548804f22f0dd61145516171e3",
         "last_affected_version": "5.5.6",
-        "last_modified": "2020-03-02",
+        "last_modified": "2020-03-03",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-9383",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-9383",
