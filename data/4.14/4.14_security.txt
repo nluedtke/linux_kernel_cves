@@ -91,7 +91,6 @@ CVEs fixed in 4.14.17:
 
 CVEs fixed in 4.14.18:
   CVE-2017-5754: 343c91242d092852ab22411780f886317d7001aa x86/cpufeatures: Add Intel feature bits for Speculation Control
-  CVE-2018-7273: 67eb59b8ecfb319438706cee2cb67a3045b54494 printk: hash addresses printed with %p
 
 CVEs fixed in 4.14.20:
   CVE-2017-13166: ea96d8f676dd3caeb77e3dc509c880cc81d303a6 media: v4l2-ioctl.c: use check_fmt for enum/g/s/try_fmt
@@ -173,10 +172,7 @@ CVEs fixed in 4.14.44:
 CVEs fixed in 4.14.45:
   CVE-2017-13695: 1d1646c408f62148fd2bbc399927bdc5381cb3ba ACPICA: acpi: acpica: fix acpi operand cache leak in nseval.c
   CVE-2018-11506: 2a039b93679fb2e974bedf5b0d76da81731474ba sr: pass down correctly sized SCSI sense buffer
-  CVE-2018-5953: 9fe2e97e6f2da8fb47bf842741cf9d508c9897f8 printk: hash addresses printed with %p
-  CVE-2018-5995: 9fe2e97e6f2da8fb47bf842741cf9d508c9897f8 printk: hash addresses printed with %p
   CVE-2018-6412: ccf92117d49d77f3d88ad81d63ea5c0d02a94e3f fbdev: Fixing arbitrary kernel leak in case FBIOGETCMAP_SPARC in sbusfb_ioctl_helper().
-  CVE-2018-7754: 9fe2e97e6f2da8fb47bf842741cf9d508c9897f8 printk: hash addresses printed with %p
   CVE-2018-9518: 54881db3251a48f9a27ac8b7223a9b421757d395 NFC: llcp: Limit size of SDP URI
 
 CVEs fixed in 4.14.49:
@@ -356,7 +352,6 @@ CVEs fixed in 4.14.107:
   CVE-2019-16995: 1aa1e0a3f6dde5c37bb5d6a9121847b95b255c1f net: hsr: fix memory leak in hsr_dev_finalize()
 
 CVEs fixed in 4.14.108:
-  CVE-2018-20449: a8cae6144a25054875d0ab6e31f550af7e531500 printk: hash addresses printed with %p
   CVE-2019-10124: c02fd076842636fb7506d4ca8a2bb3f91faf1af3 mm: hwpoison: fix thp split handing in soft_offline_in_use_page()
   CVE-2019-16413: be0b155c2b2f8c39adaa1641f3f6a4be47277993 9p: use inode->i_lock to protect i_size_write() under 32-bit
   CVE-2019-9455: 8d6df5097c0005320ab6f3cd8dda2ef31db6c6d1 media: videobuf2-v4l2: drop WARN_ON in vb2_warn_zero_bytesused()
@@ -386,7 +381,6 @@ CVEs fixed in 4.14.114:
   CVE-2019-11599: bb461ad8e6e0653fc6bd0f26d9173bab0aec235b coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
   CVE-2019-15214: d11a33e9ba584bb6f5cc74df9d74b26156ba9bb2 ALSA: core: Fix card races between register and disconnect
   CVE-2019-3892: bb461ad8e6e0653fc6bd0f26d9173bab0aec235b coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
-  CVE-2019-9444: 47ad82a34560ea70e85d2eb56be0ada03dc4fd35 printk: hash addresses printed with %p
 
 CVEs fixed in 4.14.115:
   CVE-2019-15924: 2617f9af19ce93c509ebf3fd3ce26048b8f85216 fm10k: Fix a potential NULL pointer dereference
@@ -610,6 +604,12 @@ CVEs fixed in 4.14.172:
   CVE-2020-2732: ee1238c0285f40d8297e70f3aaa0d8a981ea0b53 KVM: nVMX: Don't emulate instructions in guest mode
   CVE-2020-9383: e4c587650f64608fcd3506fa2cb47f81c0f88348 floppy: check FDC index for errors before assigning it
 
+CVEs fixed in 4.14.173:
+  CVE-2019-16234: 864ef06aaef5b164669a5292eb822c454c46dd69 iwlwifi: pcie: fix rb_allocator workqueue allocation
+  CVE-2020-8647: 1855aaccd74cb9528c24ceb6bc15358a411f65ff vgacon: Fix a UAF in vgacon_invert_region
+  CVE-2020-8648: 432ef54c0444e7cab85a291347bfc1f69ee6257a vt: selection, close sel_buffer race
+  CVE-2020-8649: 1855aaccd74cb9528c24ceb6bc15358a411f65ff vgacon: Fix a UAF in vgacon_invert_region
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -639,8 +639,13 @@ Outstanding CVEs:
   CVE-2018-12931: (unk)  
   CVE-2018-13095: (unk) xfs: More robust inode extent count validation 
   CVE-2018-17977: (unk)  
+  CVE-2018-20449: (unk) printk: hash addresses printed with %p 
   CVE-2018-20669: (unk) make 'user_access_begin()' do 'access_ok()' 
   CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
+  CVE-2018-5953: (unk) printk: hash addresses printed with %p 
+  CVE-2018-5995: (unk) printk: hash addresses printed with %p 
+  CVE-2018-7273: (unk) printk: hash addresses printed with %p 
+  CVE-2018-7754: (unk) printk: hash addresses printed with %p 
   CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
   CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
@@ -657,7 +662,6 @@ Outstanding CVEs:
   CVE-2019-15902: (unk)  
   CVE-2019-16089: (unk)  
   CVE-2019-16230: (unk) drm/amdkfd: fix a potential NULL pointer dereference (v2) 
-  CVE-2019-16234: (unk) iwlwifi: pcie: fix rb_allocator workqueue allocation 
   CVE-2019-18680: (unk)  
   CVE-2019-18808: (unk) crypto: ccp - Release all allocated memory if sha type is invalid 
   CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
@@ -688,12 +692,9 @@ Outstanding CVEs:
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2019-9245: (unk) f2fs: sanity check of xattr entry size 
+  CVE-2019-9444: (unk) printk: hash addresses printed with %p 
   CVE-2019-9445: (unk) f2fs: check if file namelen exceeds max value 
   CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
   CVE-2020-0009: (unk)  
-  CVE-2020-0041: (unk) binder: fix incorrect calculation for num_valid 
   CVE-2020-1749: (unk) net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup 
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
-  CVE-2020-8647: (unk) vgacon: Fix a UAF in vgacon_invert_region 
-  CVE-2020-8648: (unk) vt: selection, close sel_buffer race 
-  CVE-2020-8649: (unk) vgacon: Fix a UAF in vgacon_invert_region 
