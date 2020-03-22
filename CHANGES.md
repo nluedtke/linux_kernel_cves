@@ -1,15 +1,12 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 20Mar20 07:12
+## Last Update - 22Mar20 15:06
 
 ### **New Versions Checked:**
 
-[4.14.174](streams/4.14)  
-[4.4.217](streams/4.4)  
-[4.9.217](streams/4.9)  
+[4.19.112](streams/4.19)  
+[5.4.27](streams/5.4)  
+[5.5.11](streams/5.5)  
 
 
-### **Updated CVEs:**
-
-[CVE-2019-14901](cves/CVE-2019-14901)  
