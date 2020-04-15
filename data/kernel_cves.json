@@ -40255,6 +40255,16 @@
         "affected_versions": "v2.6.12-rc2 to v5.4-rc2",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Convert filldir[64]() from __put_user() to unsafe_put_user()",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+            "score": "9.3"
+        },
         "cvss3": {
             "Attack Complexity": "Low",
             "Attack Vector": "Network",
@@ -40269,7 +40279,7 @@
         },
         "cwe": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
         "fixes": "9f79b78ef74436c7507bac6bfb7b8b989263bccb",
-        "last_modified": "2020-01-28",
+        "last_modified": "2020-04-15",
         "nvd_text": "Linux kernel CIFS implementation, version 4.9.0 is vulnerable to a relative paths injection in directory entry lists.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10220",
@@ -48617,6 +48627,7 @@
     },
     "CVE-2019-19922": {
         "affected_versions": "v4.18-rc4 to v5.4-rc1",
+        "backport": true,
         "breaks": "512ac999d2755d2b7109e996a76b6fb8b888631d",
         "cmt_msg": "sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices",
         "fixes": "de53fd7aedb100f03e5d2231cfce0e4993282425",
