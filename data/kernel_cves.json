@@ -47428,8 +47428,9 @@
         }
     },
     "CVE-2019-19319": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.2-rc1",
         "breaks": "",
+        "cmt_msg": "ext4: protect journal inode's blocks using block_validity",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -47453,8 +47454,9 @@
             "score": "7.8"
         },
         "cwe": "Out-of-bounds Write",
-        "fixes": "",
-        "last_modified": "2019-12-11",
+        "fixes": "345c0dbf3a30872d9b204db96b5857cd00808cae",
+        "last_affected_version": "4.19.72",
+        "last_modified": "2020-04-21",
         "nvd_text": "In the Linux kernel 5.0.21, a setxattr operation, after a mount of a crafted ext4 image, can cause a slab-out-of-bounds write access because of an ext4_xattr_set_entry use-after-free in fs/ext4/xattr.c when a large old_size value is used in a memset call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19319",
