@@ -43391,8 +43391,10 @@
     "CVE-2019-15791": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cwe": "Operation on a Resource after Expiration or Release",
         "fixes": "",
-        "last_modified": "2019-12-23",
+        "last_modified": "2020-04-24",
+        "nvd_text": "In shiftfs, a non-upstream patch to the Linux kernel included in the Ubuntu 5.0 and 5.3 kernel series, shiftfs_btrfs_ioctl_fd_replace() installs an fd referencing a file from the lower filesystem without taking an additional reference to that file. After the btrfs ioctl completes this fd is closed, which then puts a reference to that file, leading to a refcount underflow.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15791",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15791",
@@ -43406,8 +43408,10 @@
     "CVE-2019-15792": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cwe": "Access of Resource Using Incompatible Type ('Type Confusion')",
         "fixes": "",
-        "last_modified": "2019-12-23",
+        "last_modified": "2020-04-24",
+        "nvd_text": "In shiftfs, a non-upstream patch to the Linux kernel included in the Ubuntu 5.0 and 5.3 kernel series, shiftfs_btrfs_ioctl_fd_replace() calls fdget(oldfd), then without further checks passes the resulting file* into shiftfs_real_fdget(), which casts file-&gt;private_data, a void* that points to a filesystem-dependent type, to a \"struct shiftfs_file_info *\". As the private_data is not required to be a pointer, an attacker can use this to cause a denial of service or possibly execute arbitrary code.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15792",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15792",
@@ -43421,8 +43425,10 @@
     "CVE-2019-15793": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cwe": "Insertion of Sensitive Information into Externally-Accessible File or Directory",
         "fixes": "",
-        "last_modified": "2019-12-23",
+        "last_modified": "2020-04-24",
+        "nvd_text": "In shiftfs, a non-upstream patch to the Linux kernel included in the Ubuntu 5.0 and 5.3 kernel series, several locations which shift ids translate user/group ids before performing operations in the lower filesystem were translating them into init_user_ns, whereas they should have been translated into the s_user_ns for the lower filesystem. This resulted in using ids other than the intended ones in the lower fs, which likely did not map into the shifts s_user_ns. A local attacker could use this to possibly bypass discretionary access control permissions.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15793",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15793",
@@ -43436,8 +43442,10 @@
     "CVE-2019-15794": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cwe": "Operation on a Resource after Expiration or Release",
         "fixes": "",
-        "last_modified": "2020-03-19",
+        "last_modified": "2020-04-24",
+        "nvd_text": "Overlayfs in the Linux kernel and shiftfs, a non-upstream patch to the Linux kernel included in the Ubuntu 5.0 and 5.3 kernel series, both replace vma-&gt;vm_file in their mmap handlers. On error the original value is not restored, and the reference is put for the file to which vm_file points. On upstream kernels this is not an issue, as no callers dereference vm_file following after call_mmap() returns an error. However, the aufs patchs change mmap_region() to replace the fput() using a local variable with vma_fput(), which will fput() vm_file, leading to a refcount underflow.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15794",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-15794",
@@ -47390,8 +47398,8 @@
         }
     },
     "CVE-2019-19318": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v5.3-rc2 to unk",
+        "breaks": "78134300579a45f527ca173ec8fdb4701b69f16e",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -47416,7 +47424,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2019-12-05",
+        "last_modified": "2020-04-24",
         "nvd_text": "In the Linux kernel 5.3.11, mounting a crafted btrfs image twice can cause an rwsem_down_write_slowpath use-after-free because (in rwsem_can_spin_on_owner in kernel/locking/rwsem.c) rwsem_owner_flags returns an already freed pointer,",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19318",
@@ -48516,8 +48524,8 @@
         }
     },
     "CVE-2019-19769": {
-        "affected_versions": "unk to v5.6-rc5",
-        "breaks": "",
+        "affected_versions": "v5.0-rc1 to v5.6-rc5",
+        "breaks": "16306a61d3b7c433c7a127ec6224867b88ece687",
         "cmt_msg": "locks: fix a potential use-after-free problem when wakeup a waiter",
         "cvss2": {
             "Access Complexity": "Low",
@@ -48544,7 +48552,7 @@
         "cwe": "Use After Free",
         "fixes": "6d390e4b5d48ec03bb87e63cf0a2bff5f4e116da",
         "last_affected_version": "5.5.11",
-        "last_modified": "2020-03-25",
+        "last_modified": "2020-04-24",
         "nvd_text": "In the Linux kernel 5.3.10, there is a use-after-free (read) in the perf_trace_lock_acquire function (related to include/trace/events/lock.h).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19769",
@@ -51234,8 +51242,32 @@
         "affected_versions": "v3.8-rc1 to v5.5-rc1",
         "breaks": "af48b85b8cd3fbb12c9b6759c16db6d69c0b03da",
         "cmt_msg": "f2fs: fix to avoid memory leakage in f2fs_listxattr",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+            "score": "4.4"
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "688078e7f36c293dae25b338ddc9e0a2790f6e06",
-        "last_modified": "2020-04-14",
+        "last_modified": "2020-04-24",
+        "nvd_text": "In f2fs_xattr_generic_list of xattr.c, there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with System execution privileges needed. User interaction is not required for exploitation.Product: Android. Versions: Android kernel. Android ID: A-120551147.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0067",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0067",
@@ -51243,6 +51275,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0067",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-0067",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0067"
+        }
+    },
+    "CVE-2020-10690": {
+        "affected_versions": "unk to v5.5-rc5",
+        "breaks": "",
+        "cmt_msg": "ptp: fix the race between the release of ptp_clock and cdev",
+        "fixes": "a33121e5487b424339636b25c35d3a180eaa5f5e",
+        "last_affected_version": "5.4.7",
+        "last_modified": "2020-04-24",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10690",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10690",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10690",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10690",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10690",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10690"
         }
     },
     "CVE-2020-10708": {
@@ -51528,7 +51576,7 @@
         "cwe": "Insufficient Information",
         "fixes": "53a712bae5dd919521a58d7bad773b949358add0",
         "last_affected_version": "4.19.115",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-24",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.2 on the powerpc platform. arch/powerpc/kernel/idle_book3s.S does not have save/restore functionality for PNV_POWERSAVE_AMR, PNV_POWERSAVE_UAMOR, and PNV_POWERSAVE_AMOR, aka CID-53a712bae5dd.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11669",
