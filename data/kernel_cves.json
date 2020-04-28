@@ -15425,6 +15425,7 @@
         "cwe": "Race Conditions",
         "fixes": "ea3d7209ca01da209cda6f0dea8be9cc4b7a933b",
         "last_affected_version": "4.4.8",
+        "last_modified": "2020-04-28",
         "nvd_text": "Multiple race conditions in the ext4 filesystem implementation in the Linux kernel before 4.5 allow local users to cause a denial of service (disk corruption) by writing to a page that is associated with a different user's file after unsynchronized hole punching and page-fault handling.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8839",
@@ -35846,7 +35847,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "514c7dca85a0bf40be984dab0b477403a6db901f",
         "last_affected_version": "4.14.85",
-        "last_modified": "2019-01-16",
+        "last_modified": "2020-04-28",
         "nvd_text": "An issue was discovered in the Linux kernel through 4.17.10. There is out-of-bounds access in write_extent_buffer() when mounting and operating a crafted btrfs image, because of a lack of verification that each block group has a corresponding chunk at mount time, within btrfs_read_block_groups in fs/btrfs/extent-tree.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14610",
@@ -35884,7 +35885,7 @@
         "cwe": "Use After Free",
         "fixes": "315409b0098fb2651d86553f0436b70502b29bb2",
         "last_affected_version": "4.14.85",
-        "last_modified": "2019-01-16",
+        "last_modified": "2020-04-28",
         "nvd_text": "An issue was discovered in the Linux kernel through 4.17.10. There is a use-after-free in try_merge_free_space() when mounting a crafted btrfs image, because of a lack of chunk type flag checks in btrfs_check_chunk_valid in fs/btrfs/volumes.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14611",
@@ -35922,7 +35923,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "ba480dd4db9f1798541eb2d1c423fc95feee8d36",
         "last_affected_version": "4.18.7",
-        "last_modified": "2019-01-16",
+        "last_modified": "2020-04-28",
         "nvd_text": "An issue was discovered in the Linux kernel through 4.17.10. There is an invalid pointer dereference in btrfs_root_node() when mounting a crafted btrfs image, because of a lack of chunk block group mapping validation in btrfs_read_block_groups in fs/btrfs/extent-tree.c, and a lack of empty-tree checks in check_leaf in fs/btrfs/tree-checker.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14612",
@@ -35960,7 +35961,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "fce466eab7ac6baa9d2dcd88abcf945be3d4a089",
         "last_affected_version": "4.14.85",
-        "last_modified": "2019-01-16",
+        "last_modified": "2020-04-28",
         "nvd_text": "An issue was discovered in the Linux kernel through 4.17.10. There is an invalid pointer dereference in io_ctl_map_page() when mounting and operating a crafted btrfs image, because of a lack of block group item validation in check_leaf_item in fs/btrfs/tree-checker.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14613",
@@ -42216,7 +42217,7 @@
         "cwe": "Heap-based Buffer Overflow",
         "fixes": "e5e884b42639c74b5b57dc277909915c0aefc8bb",
         "last_affected_version": "5.4",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "A heap-based buffer overflow vulnerability was found in the Linux kernel, version kernel-2.6.32, in Marvell WiFi chip driver. A remote attacker could cause a denial of service (system crash) or, possibly execute arbitrary code, when the lbs_ibss_join_existing function is called after a STA connects to an AP.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14896",
@@ -42256,7 +42257,7 @@
         "cwe": "Stack-based Buffer Overflow",
         "fixes": "e5e884b42639c74b5b57dc277909915c0aefc8bb",
         "last_affected_version": "5.4",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "A stack-based buffer overflow was found in the Linux kernel, version kernel-2.6.32, in Marvell WiFi chip driver. An attacker is able to cause a denial of service (system crash) or, possibly execute arbitrary code, when a STA works in IBSS mode (allows connecting stations together without the use of an AP) and connects to another STA.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14897",
@@ -42311,7 +42312,7 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "1e58252e334dc3f3756f424a157d1b7484464c40",
         "last_affected_version": "5.4.10",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "A heap overflow flaw was found in the Linux kernel, all versions 3.x.x and 4.x.x before 4.18.0, in Marvell WiFi chip driver. The vulnerability allows a remote attacker to cause a system crash, resulting in a denial of service, or execute arbitrary code. The highest threat with this vulnerability is with the availability of the system. If code execution occurs, the code will run with the permissions of root. This will affect both confidentiality and integrity of files on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14901",
@@ -48512,7 +48513,7 @@
         "cwe": "Use After Free",
         "fixes": "c780e86dd48ef6467a1146cf7d0fe1e05a635039",
         "last_affected_version": "5.5.7",
-        "last_modified": "2020-03-08",
+        "last_modified": "2020-04-28",
         "nvd_text": "In the Linux kernel 5.4.0-rc2, there is a use-after-free (read) in the __blk_add_trace function in kernel/trace/blktrace.c (which is used to fill out a blk_io_trace structure and place it in a per-cpu sub-buffer).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19768",
@@ -49335,7 +49336,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "cb222aed03d798fc074be55e59d9a112338ee784",
         "last_affected_version": "5.4.11",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "In the Linux kernel before 5.4.12, drivers/input/input.c has out-of-bounds writes via a crafted keycode table, as demonstrated by input_set_keycode, aka CID-cb222aed03d7.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20636",
@@ -50116,7 +50117,7 @@
         "cwe": "Improper Input Validation",
         "fixes": "3e493173b7841259a08c5c8e5cbe90adb349da7e",
         "last_affected_version": "5.2",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "An exploitable denial-of-service vulnerability exists in the Linux kernel prior to mainline 5.3. An attacker could exploit this vulnerability by triggering AP to send IAPP location updates for stations before the required authentication process has completed. This could lead to different denial-of-service scenarios, either by causing CAM table attacks, or by leading to traffic flapping if faking already existing clients in other nearby APs of the same wireless infrastructure. An attacker can forge Authentication and Association Request packets to trigger this vulnerability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-5108",
@@ -51154,7 +51155,7 @@
         "cwe": "Incorrect Default Permissions",
         "fixes": "6d67b0290b4b84c477e6a2fc6e005e174d3c7786",
         "last_affected_version": "5.5.6",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "In calc_vm_may_flags of ashmem.c, there is a possible arbitrary write to shared memory due to a permissions bypass. This could lead to local escalation of privilege by corrupting memory shared between processes, with no additional execution privileges needed. User interaction is not needed for exploitation. Product: Android Versions: Android kernel Android ID: A-142938932",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0009",
@@ -51330,7 +51331,7 @@
         "cmt_msg": "ptp: fix the race between the release of ptp_clock and cdev",
         "fixes": "a33121e5487b424339636b25c35d3a180eaa5f5e",
         "last_affected_version": "5.4.7",
-        "last_modified": "2020-04-24",
+        "last_modified": "2020-04-28",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10690",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10690",
@@ -51383,7 +51384,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "42d84c8490f9f0931786f1623191fcab397c3d64",
         "last_affected_version": "5.5.7",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "In the Linux kernel before 5.5.8, get_raw_socket in drivers/vhost/net.c lacks validation of an sk_family field, which might allow attackers to trigger kernel stack corruption via crafted system calls.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10942",
@@ -51423,7 +51424,7 @@
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "b9258a2cece4ec1f020715fe3554bc2e360f6264",
         "last_affected_version": "5.6.3",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "An issue was discovered in slc_bump in drivers/net/can/slcan.c in the Linux kernel through 5.6.2. It allows attackers to read uninitialized can_frame data, potentially containing sensitive information from kernel stack memory, if the configuration lacks CONFIG_INIT_STACK_ALL, aka CID-b9258a2cece4.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11494",
@@ -51463,7 +51464,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "aa9f7d5172fac9bf1f09e678c35e287a40a7b7dd",
         "last_affected_version": "5.6.2",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "** DISPUTED ** An issue was discovered in the Linux kernel through 5.6.2. mpol_parse_str in mm/mempolicy.c has a stack-based out-of-bounds write because an empty nodelist is mishandled during mount option parsing, aka CID-aa9f7d5172fa. NOTE: Someone in the security community disagrees that this is a vulnerability because the issue “is a bug in parsing mount options which can only be specified by a privileged user, so triggering the bug does not grant any powers not already held.”.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11565",
@@ -51503,7 +51504,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "998912346c0da53a6dbb71fab3a138586b596b30",
         "last_affected_version": "5.6.0",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.6.1. drivers/media/usb/gspca/ov519.c allows NULL pointer dereferences in ov511_mode_init_regs and ov518_mode_init_regs when there are zero endpoints, aka CID-998912346c0d.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11608",
@@ -51543,7 +51544,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "485b06aadb933190f4bc44e006076bc27a23f205",
         "last_affected_version": "5.6.0",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "An issue was discovered in the stv06xx subsystem in the Linux kernel before 5.6.1. drivers/media/usb/gspca/stv06xx/stv06xx.c and drivers/media/usb/gspca/stv06xx/stv06xx_pb0100.c mishandle invalid descriptors, as demonstrated by a NULL pointer dereference, aka CID-485b06aadb93.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11609",
@@ -51583,7 +51584,7 @@
         "cwe": "Improper Input Validation",
         "fixes": "a246b4d547708f33ff4d4b9a7a5dbac741dc89d8",
         "last_affected_version": "5.6.0",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "In the Linux kernel before 5.6.1, drivers/media/usb/gspca/xirlink_cit.c (aka the Xirlink camera USB driver) mishandles invalid descriptors, aka CID-a246b4d54770.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11668",
@@ -51678,7 +51679,7 @@
         "cmt_msg": "net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup",
         "fixes": "6c8991f41546c3c472503dff1ea9daaddf9331c2",
         "last_affected_version": "5.4.4",
-        "last_modified": "2020-03-11",
+        "last_modified": "2020-04-28",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-1749",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-1749",
@@ -51717,7 +51718,7 @@
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "07721feee46b4b248402133228235318199b05ec",
         "last_affected_version": "5.5.6",
-        "last_modified": "2020-04-27",
+        "last_modified": "2020-04-28",
         "nvd_text": "A flaw was discovered in the way that the KVM hypervisor handled instruction emulation for an L2 guest when nested virtualisation is enabled. Under some circumstances, an L2 guest may trick the L0 guest into accessing sensitive L1 resources that should be inaccessible to the L2 guest.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-2732",
@@ -51836,7 +51837,7 @@
         "cwe": "Use After Free",
         "fixes": "513dc792d6060d5ef572e43852683097a8420f56",
         "last_affected_version": "5.5.8",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "There is a use-after-free vulnerability in the Linux kernel through 5.5.2 in the vc_do_resize function in drivers/tty/vt/vt.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-8647",
@@ -51876,7 +51877,7 @@
         "cwe": "Use After Free",
         "fixes": "07e6124a1a46b4b5a9b3cacc0c306b50da87abf5",
         "last_affected_version": "5.5.8",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "There is a use-after-free vulnerability in the Linux kernel through 5.5.2 in the n_tty_receive_buf_common function in drivers/tty/n_tty.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-8648",
@@ -51916,7 +51917,7 @@
         "cwe": "Use After Free",
         "fixes": "513dc792d6060d5ef572e43852683097a8420f56",
         "last_affected_version": "5.5.8",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-04-28",
         "nvd_text": "There is a use-after-free vulnerability in the Linux kernel through 5.5.2 in the vgacon_invert_region function in drivers/video/console/vgacon.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-8649",
@@ -52113,7 +52114,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "2e90ca68b0d2f5548804f22f0dd61145516171e3",
         "last_affected_version": "5.5.6",
-        "last_modified": "2020-04-27",
+        "last_modified": "2020-04-28",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.5.6. set_fdc in drivers/block/floppy.c leads to a wait_til_ready out-of-bounds read because the FDC index is not checked for errors before assigning it, aka CID-2e90ca68b0d2.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-9383",
