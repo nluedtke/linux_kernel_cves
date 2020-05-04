@@ -43443,9 +43443,31 @@
     "CVE-2019-15794": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
         "cwe": "Operation on a Resource after Expiration or Release",
         "fixes": "",
-        "last_modified": "2020-04-24",
+        "last_modified": "2020-05-04",
         "nvd_text": "Overlayfs in the Linux kernel and shiftfs, a non-upstream patch to the Linux kernel included in the Ubuntu 5.0 and 5.3 kernel series, both replace vma-&gt;vm_file in their mmap handlers. On error the original value is not restored, and the reference is put for the file to which vm_file points. On upstream kernels this is not an issue, as no callers dereference vm_file following after call_mmap() returns an error. However, the aufs patchs change mmap_region() to replace the fput() using a local variable with vma_fput(), which will fput() vm_file, leading to a refcount underflow.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15794",
@@ -47465,7 +47487,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "345c0dbf3a30872d9b204db96b5857cd00808cae",
         "last_affected_version": "4.19.72",
-        "last_modified": "2020-04-21",
+        "last_modified": "2020-05-04",
         "nvd_text": "In the Linux kernel 5.0.21, a setxattr operation, after a mount of a crafted ext4 image, can cause a slab-out-of-bounds write access because of an ext4_xattr_set_entry use-after-free in fs/ext4/xattr.c when a large old_size value is used in a memset call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19319",
@@ -51691,12 +51713,12 @@
         }
     },
     "CVE-2020-11884": {
-        "affected_versions": "v4.15-rc1 to unk",
+        "affected_versions": "v4.15-rc1 to v5.7-rc4",
         "breaks": "0aaba41b58bc5f3074c0c0a6136b9500b5e29e19",
         "cmt_msg": "s390/mm: fix page table upgrade vs 2ndary address mode accesses",
         "fixes": "316ec154810960052d4586b634156c54d0778f74",
         "last_affected_version": "5.6.7",
-        "last_modified": "2020-04-30",
+        "last_modified": "2020-05-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11884",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-11884",
@@ -51706,13 +51728,29 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-11884"
         }
     },
+    "CVE-2020-12114": {
+        "affected_versions": "unk to v5.3-rc1",
+        "breaks": "",
+        "cmt_msg": "make struct mountpoint bear the dentry reference to mountpoint, not struct mount",
+        "fixes": "4edbe133f851c9e3a2f2a1db367e826b01e72594",
+        "last_modified": "2020-05-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12114",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12114",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-12114",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12114",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-12114",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12114"
+        }
+    },
     "CVE-2020-12464": {
         "affected_versions": "unk to v5.7-rc3",
         "breaks": "",
         "cmt_msg": "USB: core: Fix free-while-in-use bug in the USB S-Glibrary",
         "fixes": "056ad39ee9253873522f6469c3364964a322912b",
         "last_affected_version": "5.6.7",
-        "last_modified": "2020-04-30",
+        "last_modified": "2020-05-04",
+        "nvd_text": "usb_sg_cancel in drivers/usb/core/message.c in the Linux kernel before 5.6.8 has a use-after-free because a transfer occurs without a reference, aka CID-056ad39ee925.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12464",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12464",
@@ -51728,7 +51766,8 @@
         "cmt_msg": "mt76: fix array overflow on receiving too many fragments for a packet",
         "fixes": "b102f0c522cf668c8382c56a4f771b37d011cda2",
         "last_affected_version": "5.5.9",
-        "last_modified": "2020-04-30",
+        "last_modified": "2020-05-04",
+        "nvd_text": "An array overflow was discovered in mt76_add_fragment in drivers/net/wireless/mediatek/mt76/dma.c in the Linux kernel before 5.5.10, aka CID-b102f0c522cf. An oversized packet with too many rx fragments can corrupt memory of adjacent pages.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12465",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12465",
