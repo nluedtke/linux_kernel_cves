@@ -43392,9 +43392,31 @@
     "CVE-2019-15791": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
         "cwe": "Operation on a Resource after Expiration or Release",
         "fixes": "",
-        "last_modified": "2020-04-24",
+        "last_modified": "2020-05-06",
         "nvd_text": "In shiftfs, a non-upstream patch to the Linux kernel included in the Ubuntu 5.0 and 5.3 kernel series, shiftfs_btrfs_ioctl_fd_replace() installs an fd referencing a file from the lower filesystem without taking an additional reference to that file. After the btrfs ioctl completes this fd is closed, which then puts a reference to that file, leading to a refcount underflow.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15791",
@@ -43409,9 +43431,31 @@
     "CVE-2019-15792": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
         "cwe": "Access of Resource Using Incompatible Type ('Type Confusion')",
         "fixes": "",
-        "last_modified": "2020-04-24",
+        "last_modified": "2020-05-06",
         "nvd_text": "In shiftfs, a non-upstream patch to the Linux kernel included in the Ubuntu 5.0 and 5.3 kernel series, shiftfs_btrfs_ioctl_fd_replace() calls fdget(oldfd), then without further checks passes the resulting file* into shiftfs_real_fdget(), which casts file-&gt;private_data, a void* that points to a filesystem-dependent type, to a \"struct shiftfs_file_info *\". As the private_data is not required to be a pointer, an attacker can use this to cause a denial of service or possibly execute arbitrary code.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15792",
@@ -43426,9 +43470,31 @@
     "CVE-2019-15793": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Changed",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+            "score": "8.8"
+        },
         "cwe": "Insertion of Sensitive Information into Externally-Accessible File or Directory",
         "fixes": "",
-        "last_modified": "2020-04-24",
+        "last_modified": "2020-05-06",
         "nvd_text": "In shiftfs, a non-upstream patch to the Linux kernel included in the Ubuntu 5.0 and 5.3 kernel series, several locations which shift ids translate user/group ids before performing operations in the lower filesystem were translating them into init_user_ns, whereas they should have been translated into the s_user_ns for the lower filesystem. This resulted in using ids other than the intended ones in the lower fs, which likely did not map into the shifts s_user_ns. A local attacker could use this to possibly bypass discretionary access control permissions.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15793",
@@ -51394,6 +51460,20 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10720"
         }
     },
+    "CVE-2020-10732": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-05-06",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10732",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10732",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10732",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10732",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10732",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10732"
+        }
+    },
     "CVE-2020-10942": {
         "affected_versions": "v2.6.34-rc1 to v5.6-rc4",
         "breaks": "3a4d5c94e959359ece6d6b55045c3f046677f55c",
@@ -51718,7 +51798,8 @@
         "cmt_msg": "s390/mm: fix page table upgrade vs 2ndary address mode accesses",
         "fixes": "316ec154810960052d4586b634156c54d0778f74",
         "last_affected_version": "5.6.7",
-        "last_modified": "2020-05-04",
+        "last_modified": "2020-05-06",
+        "nvd_text": "In the Linux kernel through 5.6.7 on the s390 platform, code execution may occur because of a race condition, as demonstrated by code in enable_sacf_uaccess in arch/s390/lib/uaccess.c that fails to protect against a concurrent page table upgrade, aka CID-3f777e19d171. A crash could also occur.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11884",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-11884",
@@ -51733,7 +51814,8 @@
         "breaks": "",
         "cmt_msg": "make struct mountpoint bear the dentry reference to mountpoint, not struct mount",
         "fixes": "4edbe133f851c9e3a2f2a1db367e826b01e72594",
-        "last_modified": "2020-05-04",
+        "last_modified": "2020-05-06",
+        "nvd_text": "A pivot_root race condition in fs/namespace.c in the Linux kernel 4.4.x before 4.4.221, 4.9.x before 4.9.221, 4.14.x before 4.14.178, 4.19.x before 4.19.119, and 5.x before 5.3 allows local users to cause a denial of service (panic) by corrupting a mountpoint reference counter.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12114",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12114",
@@ -51775,6 +51857,122 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12465",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-12465",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12465"
+        }
+    },
+    "CVE-2020-12652": {
+        "affected_versions": "unk to v5.5-rc7",
+        "breaks": "",
+        "cmt_msg": "scsi: mptfusion: Fix double fetch bug in ioctl",
+        "fixes": "28d76df18f0ad5bcf5fa48510b225f0ed262a99b",
+        "last_affected_version": "5.4.13",
+        "last_modified": "2020-05-06",
+        "nvd_text": "The __mptctl_ioctl function in drivers/message/fusion/mptctl.c in the Linux kernel before 5.4.14 allows local users to hold an incorrect lock during the ioctl operation and trigger a race condition, i.e., a \"double fetch\" vulnerability, aka CID-28d76df18f0a. NOTE: the vendor states \"The security impact of this bug is not as bad as it could have been because these operations are all privileged and root already has enormous destructive power.\"",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12652",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12652",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-12652",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12652",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-12652",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12652"
+        }
+    },
+    "CVE-2020-12653": {
+        "affected_versions": "unk to v5.6-rc1",
+        "breaks": "",
+        "cmt_msg": "mwifiex: Fix possible buffer overflows in mwifiex_cmd_append_vsie_tlv()",
+        "fixes": "b70261a288ea4d2f4ac7cd04be08a9f0f2de4f4d",
+        "last_affected_version": "5.5.3",
+        "last_modified": "2020-05-06",
+        "nvd_text": "An issue was found in Linux kernel before 5.5.4. The mwifiex_cmd_append_vsie_tlv() function in drivers/net/wireless/marvell/mwifiex/scan.c allows local users to gain privileges or cause a denial of service because of an incorrect memcpy and buffer overflow, aka CID-b70261a288ea.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12653",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12653",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-12653",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12653",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-12653",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12653"
+        }
+    },
+    "CVE-2020-12654": {
+        "affected_versions": "unk to v5.6-rc1",
+        "breaks": "",
+        "cmt_msg": "mwifiex: Fix possible buffer overflows in mwifiex_ret_wmm_get_status()",
+        "fixes": "3a9b153c5591548612c3955c9600a98150c81875",
+        "last_affected_version": "5.5.3",
+        "last_modified": "2020-05-06",
+        "nvd_text": "An issue was found in Linux kernel before 5.5.4. mwifiex_ret_wmm_get_status() in drivers/net/wireless/marvell/mwifiex/wmm.c allows a remote AP to trigger a heap-based buffer overflow because of an incorrect memcpy, aka CID-3a9b153c5591.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12654",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12654",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-12654",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12654",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-12654",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12654"
+        }
+    },
+    "CVE-2020-12655": {
+        "affected_versions": "unk to v5.7-rc1",
+        "breaks": "",
+        "cmt_msg": "xfs: add agf freeblocks verify in xfs_agf_verify",
+        "fixes": "d0c7feaf87678371c2c09b3709400be416b2dc62",
+        "last_modified": "2020-05-06",
+        "nvd_text": "An issue was discovered in xfs_agf_verify in fs/xfs/libxfs/xfs_alloc.c in the Linux kernel through 5.6.10. Attackers may trigger a sync of excessive duration via an XFS v5 image with crafted metadata, aka CID-d0c7feaf8767.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12655",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12655",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-12655",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12655",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-12655",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12655"
+        }
+    },
+    "CVE-2020-12656": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-05-06",
+        "nvd_text": "gss_mech_free in net/sunrpc/auth_gss/gss_mech_switch.c in the rpcsec_gss_krb5 implementation in the Linux kernel through 5.6.10 lacks certain domain_release calls, leading to a memory leak.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12656",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12656",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-12656",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12656",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-12656",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12656"
+        }
+    },
+    "CVE-2020-12657": {
+        "affected_versions": "unk to v5.7-rc1",
+        "breaks": "",
+        "cmt_msg": "block, bfq: fix use-after-free in bfq_idle_slice_timer_body",
+        "fixes": "2f95fa5c955d0a9987ffdc3a095e2f4e62c5f2a9",
+        "last_affected_version": "5.6.4",
+        "last_modified": "2020-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.6.5. There is a use-after-free in block/bfq-iosched.c related to bfq_idle_slice_timer_body.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12657",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12657",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-12657",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12657",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-12657",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12657"
+        }
+    },
+    "CVE-2020-12659": {
+        "affected_versions": "unk to v5.7-rc2",
+        "breaks": "",
+        "cmt_msg": "xsk: Add missing check on user supplied headroom size",
+        "fixes": "99e3a236dd43d06c65af0a2ef9cb44306aef6e02",
+        "last_affected_version": "5.6.6",
+        "last_modified": "2020-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.6.7. xdp_umem_reg in net/xdp/xdp_umem.c has an out-of-bounds write (by a user with the CAP_NET_ADMIN capability) because of a lack of headroom validation.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12659",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12659",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-12659",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12659",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-12659",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12659"
         }
     },
     "CVE-2020-1749": {
