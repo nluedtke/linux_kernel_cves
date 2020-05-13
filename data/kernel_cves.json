@@ -51451,9 +51451,11 @@
         "affected_versions": "unk to v5.5-rc5",
         "breaks": "",
         "cmt_msg": "ptp: fix the race between the release of ptp_clock and cdev",
+        "cwe": "Use After Free",
         "fixes": "a33121e5487b424339636b25c35d3a180eaa5f5e",
         "last_affected_version": "5.4.7",
-        "last_modified": "2020-04-28",
+        "last_modified": "2020-05-13",
+        "nvd_text": "There is a use-after-free in kernel versions before 5.5 due to a race condition between the release of ptp_clock and cdev while resource deallocation. When a (high privileged) process allocates a ptp device file (like /dev/ptpX) and voluntarily goes to sleep. During this time if the underlying device is removed, it can cause an exploitable condition as the process wakes up to terminate and clean all attached files. The system crashes due to the cdev structure being invalid (as already freed) which is pointed to by the inode.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10690",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10690",
@@ -51477,6 +51479,20 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10708"
         }
     },
+    "CVE-2020-10711": {
+        "affected_versions": "v3.17-rc1 to unk",
+        "breaks": "4b8feff251da3d7058b5779e21b33a85c686b974",
+        "fixes": "",
+        "last_modified": "2020-05-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10711",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10711",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10711",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10711",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10711",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10711"
+        }
+    },
     "CVE-2020-10720": {
         "affected_versions": "unk to v5.2-rc3",
         "breaks": "",
@@ -51494,10 +51510,10 @@
         }
     },
     "CVE-2020-10732": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.25-rc1 to unk",
+        "breaks": "4206d3aa1978e44f58bfa4e1c9d8d35cbf19c187",
         "fixes": "",
-        "last_modified": "2020-05-06",
+        "last_modified": "2020-05-13",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10732",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10732",
@@ -51866,8 +51882,8 @@
         }
     },
     "CVE-2020-12114": {
-        "affected_versions": "unk to v5.3-rc1",
-        "breaks": "",
+        "affected_versions": "v3.10-rc1 to v5.3-rc1",
+        "breaks": "84d17192d2afd52aeba88c71ae4959a015f56a38",
         "cmt_msg": "make struct mountpoint bear the dentry reference to mountpoint, not struct mount",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -51893,7 +51909,7 @@
         },
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "4edbe133f851c9e3a2f2a1db367e826b01e72594",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-05-13",
         "nvd_text": "A pivot_root race condition in fs/namespace.c in the Linux kernel 4.4.x before 4.4.221, 4.9.x before 4.9.221, 4.14.x before 4.14.178, 4.19.x before 4.19.119, and 5.x before 5.3 allows local users to cause a denial of service (panic) by corrupting a mountpoint reference counter.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12114",
@@ -51905,8 +51921,8 @@
         }
     },
     "CVE-2020-12464": {
-        "affected_versions": "unk to v5.7-rc3",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.7-rc3",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "USB: core: Fix free-while-in-use bug in the USB S-Glibrary",
         "cvss2": {
             "Access Complexity": "Low",
@@ -51933,7 +51949,7 @@
         "cwe": "Use After Free",
         "fixes": "056ad39ee9253873522f6469c3364964a322912b",
         "last_affected_version": "5.6.7",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-05-13",
         "nvd_text": "usb_sg_cancel in drivers/usb/core/message.c in the Linux kernel before 5.6.8 has a use-after-free because a transfer occurs without a reference, aka CID-056ad39ee925.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12464",
@@ -51945,8 +51961,8 @@
         }
     },
     "CVE-2020-12465": {
-        "affected_versions": "unk to v5.6-rc6",
-        "breaks": "",
+        "affected_versions": "v4.16-rc1 to v5.6-rc6",
+        "breaks": "17f1de56df051229988aab37e01971c9713c4a31",
         "cmt_msg": "mt76: fix array overflow on receiving too many fragments for a packet",
         "cvss2": {
             "Access Complexity": "Low",
@@ -51973,7 +51989,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "b102f0c522cf668c8382c56a4f771b37d011cda2",
         "last_affected_version": "5.5.9",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-05-13",
         "nvd_text": "An array overflow was discovered in mt76_add_fragment in drivers/net/wireless/mediatek/mt76/dma.c in the Linux kernel before 5.5.10, aka CID-b102f0c522cf. An oversized packet with too many rx fragments can corrupt memory of adjacent pages.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12465",
@@ -52262,11 +52278,11 @@
         }
     },
     "CVE-2020-12768": {
-        "affected_versions": "unk to v5.6-rc4",
-        "breaks": "",
+        "affected_versions": "v4.16-rc1 to v5.6-rc4",
+        "breaks": "70cd94e60c733e3afc18b0e6aab789c13b5571da",
         "cmt_msg": "KVM: SVM: Fix potential memory leak in svm_cpu_init()",
         "fixes": "d80b64ff297e40c2b6f7d7abc1b3eba70d22a068",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-05-13",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.6. svm_cpu_uninit in arch/x86/kvm/svm.c has a memory leak, aka CID-d80b64ff297e.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12768",
@@ -52278,12 +52294,12 @@
         }
     },
     "CVE-2020-12769": {
-        "affected_versions": "unk to v5.5-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.33-rc1 to v5.5-rc6",
+        "breaks": "e24c745272072fd2abe55209f1949b7b7ee602a7",
         "cmt_msg": "spi: spi-dw: Add lock protect dw_spi rx/tx to prevent concurrent calls",
         "fixes": "19b61392c5a852b4e8a0bf35aecb969983c5932d",
         "last_affected_version": "5.4.16",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-05-13",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.4.17. drivers/spi/spi-dw.c allows attackers to cause a panic via concurrent calls to dw_spi_irq and dw_spi_transfer_one, aka CID-19b61392c5a8.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12769",
@@ -52295,12 +52311,12 @@
         }
     },
     "CVE-2020-12770": {
-        "affected_versions": "unk to v5.7-rc3",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.7-rc3",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "scsi: sg: add sg_remove_request in sg_write",
         "fixes": "83c6f2390040f188cc25b270b4befeb5628c1aee",
         "last_affected_version": "5.6.11",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-05-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.6.11. sg_write lacks an sg_remove_request call in a certain failure case, aka CID-83c6f2390040.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12770",
@@ -52312,10 +52328,10 @@
         }
     },
     "CVE-2020-12771": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v3.15-rc1 to unk",
+        "breaks": "2a285686c109816ba71a00b9278262cf02648258",
         "fixes": "",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-05-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.6.11. btree_gc_coalesce in drivers/md/bcache/btree.c has a deadlock if a coalescing operation fails.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12771",
@@ -52324,6 +52340,23 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12771",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-12771",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12771"
+        }
+    },
+    "CVE-2020-12826": {
+        "affected_versions": "unk to v5.7-rc1",
+        "breaks": "",
+        "cmt_msg": "signal: Extend exec_id to 64bits",
+        "fixes": "d1e7fd6462ca9fc76650fbe6ca800e35b24267da",
+        "last_affected_version": "5.6.4",
+        "last_modified": "2020-05-13",
+        "nvd_text": "A signal access-control issue was discovered in the Linux kernel before 5.6.5, aka CID-7395ea4e65c2. Because exec_id in include/linux/sched.h is only 32 bits, an integer overflow can interfere with a do_notify_parent protection mechanism. A child process can send an arbitrary signal to a parent process in a different security domain. Exploitation limitations include the amount of elapsed time before an integer overflow occurs, and the lack of scenarios where signals to a parent process present a substantial operational threat.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12826",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12826",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-12826",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12826",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-12826",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12826"
         }
     },
     "CVE-2020-1749": {
