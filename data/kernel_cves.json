@@ -42271,9 +42271,31 @@
     "CVE-2019-14898": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.0"
+        },
         "cwe": "Improper Locking",
         "fixes": "",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-05-18",
         "nvd_text": "The fix for CVE-2019-11599, affecting the Linux kernel before 5.0.10 was not complete. A local user could use this flaw to obtain sensitive information, cause a denial of service, or possibly have other unspecified impacts by triggering a race condition with mmget_not_zero or get_task_mm calls.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14898",
@@ -49440,8 +49462,31 @@
     "CVE-2019-20794": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
         "fixes": "",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-05-18",
         "nvd_text": "An issue was discovered in the Linux kernel 4.18 through 5.6.11 when unprivileged user namespaces are allowed. A user can create their own PID namespace, and mount a FUSE filesystem. Upon interaction with this FUSE filesystem, if the userspace component is terminated via a kill of the PID namespace's pid 1, it will result in a hung task, and resources being permanently locked up until system reboot. This can result in resource exhaustion.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20794",
@@ -51448,13 +51493,13 @@
         }
     },
     "CVE-2020-10690": {
-        "affected_versions": "unk to v5.5-rc5",
-        "breaks": "",
+        "affected_versions": "v3.0-rc1 to v5.5-rc5",
+        "breaks": "d94ba80ebbea17f036cecb104398fbcd788aa742",
         "cmt_msg": "ptp: fix the race between the release of ptp_clock and cdev",
         "cwe": "Use After Free",
         "fixes": "a33121e5487b424339636b25c35d3a180eaa5f5e",
         "last_affected_version": "5.4.7",
-        "last_modified": "2020-05-13",
+        "last_modified": "2020-05-18",
         "nvd_text": "There is a use-after-free in kernel versions before 5.5 due to a race condition between the release of ptp_clock and cdev while resource deallocation. When a (high privileged) process allocates a ptp device file (like /dev/ptpX) and voluntarily goes to sleep. During this time if the underlying device is removed, it can cause an exploitable condition as the process wakes up to terminate and clean all attached files. The system crashes due to the cdev structure being invalid (as already freed) which is pointed to by the inode.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10690",
@@ -51494,12 +51539,12 @@
         }
     },
     "CVE-2020-10720": {
-        "affected_versions": "unk to v5.2-rc3",
-        "breaks": "",
+        "affected_versions": "v3.15-rc1 to v5.2-rc3",
+        "breaks": "a50e233c50dbc881abaa0e4070789064e8d12d70",
         "cmt_msg": "net-gro: fix use-after-free read in napi_gro_frags()",
         "fixes": "a4270d6795b0580287453ea55974d948393e66ef",
         "last_affected_version": "5.1.6",
-        "last_modified": "2020-04-30",
+        "last_modified": "2020-05-18",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10720",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10720",
@@ -51521,6 +51566,20 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10732",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-10732",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10732"
+        }
+    },
+    "CVE-2020-10742": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-05-18",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10742",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10742",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10742",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10742",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10742",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10742"
         }
     },
     "CVE-2020-10942": {
@@ -52186,8 +52245,8 @@
         },
         "cwe": "Missing Release of Resource after Effective Lifetime",
         "fixes": "",
-        "last_modified": "2020-05-07",
-        "nvd_text": "gss_mech_free in net/sunrpc/auth_gss/gss_mech_switch.c in the rpcsec_gss_krb5 implementation in the Linux kernel through 5.6.10 lacks certain domain_release calls, leading to a memory leak.",
+        "last_modified": "2020-05-18",
+        "nvd_text": "** DISPUTED ** gss_mech_free in net/sunrpc/auth_gss/gss_mech_switch.c in the rpcsec_gss_krb5 implementation in the Linux kernel through 5.6.10 lacks certain domain_release calls, leading to a memory leak. Note: This was disputed with the assertion that the issue does not grant any access not already available. It is a problem that on unloading a specific kernel module some memory is leaked, but loading kernel modules is a privileged operation. A user could also write a kernel module to consume any amount of memory they like and load that replicating the effect of this bug.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12656",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12656",
@@ -52281,8 +52340,31 @@
         "affected_versions": "v4.16-rc1 to v5.6-rc4",
         "breaks": "70cd94e60c733e3afc18b0e6aab789c13b5571da",
         "cmt_msg": "KVM: SVM: Fix potential memory leak in svm_cpu_init()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "Missing Release of Resource after Effective Lifetime",
         "fixes": "d80b64ff297e40c2b6f7d7abc1b3eba70d22a068",
-        "last_modified": "2020-05-13",
+        "last_modified": "2020-05-18",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.6. svm_cpu_uninit in arch/x86/kvm/svm.c has a memory leak, aka CID-d80b64ff297e.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12768",
@@ -52330,8 +52412,31 @@
     "CVE-2020-12771": {
         "affected_versions": "v3.15-rc1 to unk",
         "breaks": "2a285686c109816ba71a00b9278262cf02648258",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "Improper Input Validation",
         "fixes": "",
-        "last_modified": "2020-05-13",
+        "last_modified": "2020-05-18",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.6.11. btree_gc_coalesce in drivers/md/bcache/btree.c has a deadlock if a coalescing operation fails.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12771",
@@ -52343,12 +52448,12 @@
         }
     },
     "CVE-2020-12826": {
-        "affected_versions": "unk to v5.7-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.7-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "signal: Extend exec_id to 64bits",
         "fixes": "d1e7fd6462ca9fc76650fbe6ca800e35b24267da",
         "last_affected_version": "5.6.4",
-        "last_modified": "2020-05-13",
+        "last_modified": "2020-05-18",
         "nvd_text": "A signal access-control issue was discovered in the Linux kernel before 5.6.5, aka CID-7395ea4e65c2. Because exec_id in include/linux/sched.h is only 32 bits, an integer overflow can interfere with a do_notify_parent protection mechanism. A child process can send an arbitrary signal to a parent process in a different security domain. Exploitation limitations include the amount of elapsed time before an integer overflow occurs, and the lack of scenarios where signals to a parent process present a substantial operational threat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12826",
@@ -52357,6 +52462,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12826",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-12826",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12826"
+        }
+    },
+    "CVE-2020-12888": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-05-18",
+        "nvd_text": "The VFIO PCI driver in the Linux kernel through 5.6.13 mishandles attempts to access disabled memory space.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12888",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12888",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-12888",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-12888",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-12888",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-12888"
         }
     },
     "CVE-2020-1749": {
