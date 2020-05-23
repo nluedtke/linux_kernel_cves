@@ -48625,7 +48625,7 @@
         "cwe": "Use After Free",
         "fixes": "c780e86dd48ef6467a1146cf7d0fe1e05a635039",
         "last_affected_version": "5.5.7",
-        "last_modified": "2020-04-30",
+        "last_modified": "2020-05-23",
         "nvd_text": "In the Linux kernel 5.4.0-rc2, there is a use-after-free (read) in the __blk_add_trace function in kernel/trace/blktrace.c (which is used to fill out a blk_io_trace structure and place it in a per-cpu sub-buffer).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19768",
@@ -50761,7 +50761,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "64beba0558fce7b59e9a8a7afd77290e82a22163",
         "last_affected_version": "4.20.0",
-        "last_modified": "2019-09-10",
+        "last_modified": "2020-05-23",
         "nvd_text": "In the Android kernel in the f2fs driver there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9245",
@@ -50876,7 +50876,7 @@
         "cwe": "Improper Input Validation",
         "fixes": "2777e654371dd4207a3a7f4fb5fa39550053a080",
         "last_affected_version": "5.1.11",
-        "last_modified": "2019-09-10",
+        "last_modified": "2020-05-23",
         "nvd_text": "In the Android kernel in F2FS touch driver there is a possible out of bounds read due to improper input validation. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9453",
@@ -51465,7 +51465,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "688078e7f36c293dae25b338ddc9e0a2790f6e06",
         "last_affected_version": "5.4.35",
-        "last_modified": "2020-04-30",
+        "last_modified": "2020-05-23",
         "nvd_text": "In f2fs_xattr_generic_list of xattr.c, there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with System execution privileges needed. User interaction is not required for exploitation.Product: Android. Versions: Android kernel. Android ID: A-120551147.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0067",
@@ -51492,6 +51492,20 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0110"
         }
     },
+    "CVE-2020-10135": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-05-23",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10135",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10135",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10135",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10135",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10135",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10135"
+        }
+    },
     "CVE-2020-10690": {
         "affected_versions": "v3.0-rc1 to v5.5-rc5",
         "breaks": "d94ba80ebbea17f036cecb104398fbcd788aa742",
@@ -51499,7 +51513,7 @@
         "cwe": "Use After Free",
         "fixes": "a33121e5487b424339636b25c35d3a180eaa5f5e",
         "last_affected_version": "5.4.7",
-        "last_modified": "2020-05-18",
+        "last_modified": "2020-05-23",
         "nvd_text": "There is a use-after-free in kernel versions before 5.5 due to a race condition between the release of ptp_clock and cdev while resource deallocation. When a (high privileged) process allocates a ptp device file (like /dev/ptpX) and voluntarily goes to sleep. During this time if the underlying device is removed, it can cause an exploitable condition as the process wakes up to terminate and clean all attached files. The system crashes due to the cdev structure being invalid (as already freed) which is pointed to by the inode.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10690",
@@ -51529,7 +51543,8 @@
         "breaks": "4b8feff251da3d7058b5779e21b33a85c686b974",
         "cmt_msg": "netlabel: cope with NULL catmap",
         "fixes": "eead1c2ea2509fd754c6da893a94f0e69e83ebe4",
-        "last_modified": "2020-05-18",
+        "last_affected_version": "5.6.13",
+        "last_modified": "2020-05-23",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10711",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10711",
@@ -52382,7 +52397,7 @@
         "cmt_msg": "spi: spi-dw: Add lock protect dw_spi rx/tx to prevent concurrent calls",
         "fixes": "19b61392c5a852b4e8a0bf35aecb969983c5932d",
         "last_affected_version": "5.4.16",
-        "last_modified": "2020-05-13",
+        "last_modified": "2020-05-23",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.4.17. drivers/spi/spi-dw.c allows attackers to cause a panic via concurrent calls to dw_spi_irq and dw_spi_transfer_one, aka CID-19b61392c5a8.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12769",
@@ -52399,7 +52414,7 @@
         "cmt_msg": "scsi: sg: add sg_remove_request in sg_write",
         "fixes": "83c6f2390040f188cc25b270b4befeb5628c1aee",
         "last_affected_version": "5.6.11",
-        "last_modified": "2020-05-13",
+        "last_modified": "2020-05-23",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.6.11. sg_write lacks an sg_remove_request call in a certain failure case, aka CID-83c6f2390040.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12770",
@@ -52481,11 +52496,12 @@
         }
     },
     "CVE-2020-13143": {
-        "affected_versions": "unk to v5.7-rc6",
-        "breaks": "",
+        "affected_versions": "v3.10-rc1 to v5.7-rc6",
+        "breaks": "88af8bbe4ef781031ad3370847553f3b42ba0076",
         "cmt_msg": "USB: gadget: fix illegal array access in binding with UDC",
         "fixes": "15753588bcd4bbffae1cca33c8ced5722477fe1f",
-        "last_modified": "2020-05-19",
+        "last_affected_version": "5.6.13",
+        "last_modified": "2020-05-23",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-13143",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-13143",
@@ -52501,7 +52517,7 @@
         "cmt_msg": "net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup",
         "fixes": "6c8991f41546c3c472503dff1ea9daaddf9331c2",
         "last_affected_version": "5.4.4",
-        "last_modified": "2020-04-30",
+        "last_modified": "2020-05-23",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-1749",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-1749",
