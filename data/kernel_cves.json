@@ -4018,8 +4018,8 @@
         }
     },
     "CVE-2013-2596": {
-        "affected_versions": "unk to v3.9-rc8",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v3.9-rc8",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "vm: convert fb_mmap to vm_iomap_memory() helper",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -4033,6 +4033,7 @@
         "cwe": "Numeric Errors",
         "fixes": "fc9bbca8f650e5f738af8806317c0a041a48ae4a",
         "last_affected_version": "3.2.44",
+        "last_modified": "2020-05-27",
         "nvd_text": "Integer overflow in the fb_mmap function in drivers/video/fbmem.c in the Linux kernel before 3.8.9, as used in a certain Motorola build of Android 4.1.2 and other products, allows local users to create a read-write memory mapping for the entirety of kernel memory, and consequently gain privileges, via crafted /dev/graphics/fb0 mmap2 system calls, as demonstrated by the Motochopper pwn program.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2013-2596",
@@ -23431,8 +23432,8 @@
         }
     },
     "CVE-2017-0786": {
-        "affected_versions": "unk to v4.14-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.14-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "brcmfmac: add length check in brcmf_cfg80211_escan_handler()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -23457,6 +23458,7 @@
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "17df6453d4be17910456e99c5a85025aa1b7a246",
         "last_affected_version": "4.13.5",
+        "last_modified": "2020-05-27",
         "nvd_text": "A elevation of privilege vulnerability in the Broadcom wi-fi driver. Product: Android. Versions: Android kernel. Android ID: A-37351060. References: B-V2017060101.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-0786",
@@ -32894,8 +32896,8 @@
         }
     },
     "CVE-2017-9725": {
-        "affected_versions": "unk to v4.3-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.3-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "mm: cma: fix incorrect type conversion for size during dma allocation",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -32920,7 +32922,7 @@
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "67a2e213e7e937c41c52ab5bc46bf3f4de469f6e",
         "last_affected_version": "3.18.68",
-        "last_modified": "2019-03-25",
+        "last_modified": "2020-05-27",
         "nvd_text": "In all Qualcomm products with Android releases from CAF using the Linux kernel, during DMA allocation, due to wrong data type of size, allocation size gets truncated which makes allocation succeed when it should fail.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-9725",
@@ -38668,8 +38670,8 @@
         }
     },
     "CVE-2018-5848": {
-        "affected_versions": "unk to v4.16-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.16-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "wil6210: missing length check in wmi_set_ie",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38694,6 +38696,7 @@
         "cwe": "Buffer Errors",
         "fixes": "b5a8ffcae4103a9d823ea3aa3a761f65779fbe2a",
         "last_affected_version": "4.14.85",
+        "last_modified": "2020-05-27",
         "nvd_text": "In the function wmi_set_ie(), the length validation code does not handle unsigned integer overflow properly. As a result, a large value of the 'ie_len' argument can cause a buffer overflow in all Android releases from CAF (Android for MSM, Firefox OS for MSM, QRD Android) using the Linux Kernel.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5848",
@@ -47549,8 +47552,8 @@
         }
     },
     "CVE-2019-19319": {
-        "affected_versions": "unk to v5.2-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ext4: protect journal inode's blocks using block_validity",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -47577,7 +47580,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "345c0dbf3a30872d9b204db96b5857cd00808cae",
         "last_affected_version": "4.19.72",
-        "last_modified": "2020-05-04",
+        "last_modified": "2020-05-27",
         "nvd_text": "In the Linux kernel 5.0.21, a setxattr operation, after a mount of a crafted ext4 image, can cause a slab-out-of-bounds write access because of an ext4_xattr_set_entry use-after-free in fs/ext4/xattr.c when a large old_size value is used in a memset call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19319",
@@ -50773,8 +50776,8 @@
         }
     },
     "CVE-2019-9444": {
-        "affected_versions": "unk to v4.15-rc2",
-        "breaks": "",
+        "affected_versions": "v4.9-rc1 to v4.15-rc2",
+        "breaks": "35538d7822e86cb38015c21bb708a433f8814af0",
         "cmt_msg": "printk: hash addresses printed with %p",
         "cvss2": {
             "Access Complexity": "Low",
@@ -50800,7 +50803,7 @@
         },
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "ad67b74d2469d9b82aaa572d76474c95bc484d57",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-05-27",
         "nvd_text": "In the Android kernel in sync debug fs driver there is a kernel pointer leak due to the usage of printf with %p. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9444",
@@ -50812,8 +50815,8 @@
         }
     },
     "CVE-2019-9445": {
-        "affected_versions": "unk to v5.1-rc1",
-        "breaks": "",
+        "affected_versions": "v3.8-rc1 to v5.1-rc1",
+        "breaks": "6b4ea0160ae236a6561defa28e19f973aedda9ff",
         "cmt_msg": "f2fs: check if file namelen exceeds max value",
         "cvss2": {
             "Access Complexity": "Low",
@@ -50838,7 +50841,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "720db068634c91553a8e1d9a0fcd8c7050e06d2b",
         "last_affected_version": "4.19.96",
-        "last_modified": "2020-01-19",
+        "last_modified": "2020-05-27",
         "nvd_text": "In the Android kernel in F2FS driver there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9445",
@@ -50888,8 +50891,8 @@
         }
     },
     "CVE-2019-9454": {
-        "affected_versions": "unk to v4.15-rc9",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc9",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA",
         "cvss2": {
             "Access Complexity": "Low",
@@ -50914,7 +50917,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "89c6efa61f5709327ecfa24bff18e57a4e80c7fa",
         "last_affected_version": "4.14.14",
-        "last_modified": "2019-09-10",
+        "last_modified": "2020-05-27",
         "nvd_text": "In the Android kernel in i2c driver there is a possible out of bounds write due to memory corruption. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9454",
@@ -50964,8 +50967,8 @@
         }
     },
     "CVE-2019-9456": {
-        "affected_versions": "unk to v4.16-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.16-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "usb: usbmon: Read text within supplied buffer size",
         "cvss2": {
             "Access Complexity": "Low",
@@ -50990,7 +50993,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "a5f596830e27e15f7a0ecd6be55e433d776986d8",
         "last_affected_version": "4.15.10",
-        "last_modified": "2019-09-10",
+        "last_modified": "2020-05-27",
         "nvd_text": "In the Android kernel in Pixel C USB monitor driver there is a possible OOB write due to a missing bounds check. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9456",
@@ -51041,8 +51044,8 @@
         "rejected": true
     },
     "CVE-2019-9458": {
-        "affected_versions": "unk to v4.19-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.35-rc1 to v4.19-rc7",
+        "breaks": "c3b5b0241f620a356c97d8f43343e721c718806d",
         "cmt_msg": "media: v4l: event: Prevent freeing event subscriptions while accessed",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -51067,7 +51070,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "ad608fbcf166fec809e402d548761768f602702c",
         "last_affected_version": "4.18.11",
-        "last_modified": "2019-09-10",
+        "last_modified": "2020-05-27",
         "nvd_text": "In the Android kernel in the video driver there is a use after free due to a race condition. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9458",
@@ -51596,6 +51599,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10742",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-10742",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10742"
+        }
+    },
+    "CVE-2020-10751": {
+        "affected_versions": "unk to v5.7-rc4",
+        "breaks": "",
+        "cmt_msg": "selinux: properly handle multiple messages in selinux_netlink_send()",
+        "fixes": "fb73974172ffaaf57a7c42f35424d9aece1a5af6",
+        "last_affected_version": "5.6.10",
+        "last_modified": "2020-05-27",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10751",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10751",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10751",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10751",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10751",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10751"
         }
     },
     "CVE-2020-10942": {
