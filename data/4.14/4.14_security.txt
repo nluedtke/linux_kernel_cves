@@ -362,6 +362,7 @@ CVEs fixed in 4.14.109:
 CVEs fixed in 4.14.110:
   CVE-2019-15921: 111fdc6e948b36115e29cf3b1981058d033ffd54 genetlink: Fix a memory leak on error path
   CVE-2019-20054: 0d9ef3f5b07e4b6fe6105a45603de1e133e4df49 fs/proc/proc_sysctl.c: fix NULL pointer dereference in put_links
+  CVE-2019-20811: e331c9066901dfe40bea4647521b86e9fb9901bb net-sysfs: call dev_hold if kobject_init_and_add success
   CVE-2019-3459: 2b59d36f22622c92c0b06aee7571f0a86a217188 Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
   CVE-2019-3460: 82868814a87236b17ac588fbb779c87616e99345 Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
 
@@ -574,6 +575,7 @@ CVEs fixed in 4.14.161:
   CVE-2019-18786: 3feec89682118fad5139e745c3453a4cf8580ef0 media: rcar_drif: fix a memory disclosure
   CVE-2019-19057: 1cdafe368ec4ad7e878eddc30ea0d11a0f57b222 mwifiex: pcie: Fix memory leak in mwifiex_pcie_init_evt_ring
   CVE-2019-19063: 9c84ba30947a9d8ac2c67abaafc17087ead04426 rtlwifi: prevent memory leak in rtl_usb_probe
+  CVE-2019-20812: 665c9af8987880414e141e623bf7e6481d1c1696 af_packet: set defaule value for tmo
 
 CVEs fixed in 4.14.162:
   CVE-2020-10690: 2dece4d6d13fe179ee3a5991811712725a56e2f7 ptp: fix the race between the release of ptp_clock and cdev
@@ -663,6 +665,9 @@ CVEs fixed in 4.14.181:
   CVE-2020-13143: 3d1e9fbbfb888ef59697766561e982524c0a6a03 USB: gadget: fix illegal array access in binding with UDC
   CVE-2020-1749: 8ab8786f78c3fc930f9abf6d6d85e95567de4e1f net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup
 
+CVEs fixed in 4.14.183:
+  CVE-2020-10732: 61ce1733b30fdcf45e31308bc7795b6dc7f2ffba fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -737,6 +742,7 @@ Outstanding CVEs:
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
   CVE-2019-19816: (unk)  
   CVE-2019-20794: (unk)  
+  CVE-2019-20810: (unk) media: go7007: fix a miss of snd_card_free 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-3016: (unk) x86/kvm: Be careful not to clear KVM_VCPU_FLUSH_TLB bit 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
@@ -745,7 +751,6 @@ Outstanding CVEs:
   CVE-2019-9445: (unk) f2fs: check if file namelen exceeds max value 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
-  CVE-2020-10732: (unk)  
   CVE-2020-11725: (unk)  
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
   CVE-2020-12655: (unk) xfs: add agf freeblocks verify in xfs_agf_verify 

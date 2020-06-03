@@ -95,6 +95,7 @@ CVEs fixed in 4.19.32:
 CVEs fixed in 4.19.33:
   CVE-2019-15921: 9b8ef421b481d6e648438131d867986c649c297c genetlink: Fix a memory leak on error path
   CVE-2019-20054: 07d0d2bd957ad922cf571e7cabb6c34067142b93 fs/proc/proc_sysctl.c: fix NULL pointer dereference in put_links
+  CVE-2019-20811: d9d215be3a3aa8b3638f2705826f52a7fb84cf24 net-sysfs: call dev_hold if kobject_init_and_add success
   CVE-2019-3459: 15d6538a0d6e0f6de5116081a948cba7cc3e1d3d Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
   CVE-2019-3460: 2318c0e4b87e590c9d8e88db185477cfac18abe2 Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
 
@@ -342,6 +343,7 @@ CVEs fixed in 4.19.92:
   CVE-2019-19057: 1b3e52db38471d5ac896eb9be111565e3734d5b5 mwifiex: pcie: Fix memory leak in mwifiex_pcie_init_evt_ring
   CVE-2019-19063: 3717a450f83945c481059a6921440e5e6fe3c856 rtlwifi: prevent memory leak in rtl_usb_probe
   CVE-2019-19947: 9ed59600c3524f12144b30cfc1d86734cfb3927b can: kvaser_usb: kvaser_usb_leaf: Fix some info-leaks to USB devices
+  CVE-2019-20812: e99af2cb552e3fe1ec6157fc15856a89a6388886 af_packet: set defaule value for tmo
 
 CVEs fixed in 4.19.93:
   CVE-2020-10690: 0393b8720128d5b39db8523e5bfbfc689f18c37c ptp: fix the race between the release of ptp_clock and cdev
@@ -444,6 +446,9 @@ CVEs fixed in 4.19.124:
 CVEs fixed in 4.19.125:
   CVE-2020-12768: 008708152ebb229c29e065135599984fa9c4a51c KVM: SVM: Fix potential memory leak in svm_cpu_init()
 
+CVEs fixed in 4.19.126:
+  CVE-2020-10732: d16b0abe2687f7f0a2f6343a09797e8aac045c86 fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -504,12 +509,12 @@ Outstanding CVEs:
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
   CVE-2019-19816: (unk)  
   CVE-2019-20794: (unk)  
+  CVE-2019-20810: (unk) media: go7007: fix a miss of snd_card_free 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
-  CVE-2020-10732: (unk)  
   CVE-2020-11725: (unk)  
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
   CVE-2020-12655: (unk) xfs: add agf freeblocks verify in xfs_agf_verify 
