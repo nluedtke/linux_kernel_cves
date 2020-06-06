@@ -30,6 +30,7 @@ CVEs fixed in 5.0.5:
 CVEs fixed in 5.0.6:
   CVE-2019-15921: bd60a788b10b6b10cc7d53a41a8a53a300705690 genetlink: Fix a memory leak on error path
   CVE-2019-20054: 79d8bdf334d6079133133c7f45135980e38c0196 fs/proc/proc_sysctl.c: fix NULL pointer dereference in put_links
+  CVE-2019-20811: 566e793d051fe42834ba5e80c573f6c65506c7b9 net-sysfs: call dev_hold if kobject_init_and_add success
   CVE-2019-3459: a556547bae00528f24b42786b41a14047db14b84 Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer
   CVE-2019-3460: 8dac9b8d27b504734429cb0be541425a216ccba2 Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt
 
@@ -96,6 +97,7 @@ CVEs fixed in 5.0.20:
 
 CVEs fixed in 5.0.21:
   CVE-2019-10638: 8d9b786e1124253738e992a845af24d9d95eac68 inet: switch IP ID generator to siphash
+  CVE-2020-10720: 90bb6fef55bd24d0e85a07f4b1fe0b7ea2df4bd6 net-gro: fix use-after-free read in napi_gro_frags()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -182,6 +184,7 @@ Outstanding CVEs:
   CVE-2019-15504: (unk) rsi: fix a double free bug in rsi_91x_deinit() 
   CVE-2019-15505: (unk) media: technisat-usb2: break out of loop at end of buffer 
   CVE-2019-15538: (unk) xfs: fix missing ILOCK unlock when xfs_setattr_nonsize fails due to EDQUOT 
+  CVE-2019-15794: (unk)  
   CVE-2019-15807: (unk) scsi: libsas: delete sas port if expander discover failed 
   CVE-2019-15902: (unk) unknown 
   CVE-2019-15925: (unk) net: hns3: add some error checking in hclge_tm module 
@@ -251,15 +254,14 @@ Outstanding CVEs:
   CVE-2019-19082: (unk) drm/amd/display: prevent memory leak 
   CVE-2019-19227: (unk) appletalk: Fix potential NULL pointer dereference in unregister_snap_client 
   CVE-2019-19252: (unk) vcs: prevent write access to vcsu devices 
-  CVE-2019-19318: (unk)  
-  CVE-2019-19319: (unk)  
+  CVE-2019-19319: (unk) ext4: protect journal inode's blocks using block_validity 
   CVE-2019-19332: (unk) KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332) 
-  CVE-2019-19377: (unk)  
+  CVE-2019-19377: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19378: (unk)  
   CVE-2019-19447: (unk) ext4: work around deleting a file with i_nlink == 0 safely 
   CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
-  CVE-2019-19462: (unk)  
+  CVE-2019-19462: (unk) kernel/relay.c: handle alloc_percpu returning NULL in relay_open 
   CVE-2019-19523: (unk) USB: adutux: fix use-after-free on disconnect 
   CVE-2019-19524: (unk) Input: ff-memless - kill timer in destroy() 
   CVE-2019-19525: (unk) ieee802154: atusb: fix use-after-free at disconnect 
@@ -288,6 +290,11 @@ Outstanding CVEs:
   CVE-2019-19965: (unk) scsi: libsas: stop discovering if oob mode is disconnected 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-20096: (unk) dccp: Fix memleak in __feat_register_sp 
+  CVE-2019-20636: (unk) Input: add safety guards to input_set_keycode() 
+  CVE-2019-20794: (unk)  
+  CVE-2019-20806: (unk) media: tw5864: Fix possible NULL pointer dereference in tw5864_handle_frame 
+  CVE-2019-20810: (unk) media: go7007: fix a miss of snd_card_free 
+  CVE-2019-20812: (unk) af_packet: set defaule value for tmo 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-2213: (unk) binder: fix possible UAF when freeing buffer 
   CVE-2019-3016: (unk) x86/kvm: Be careful not to clear KVM_VCPU_FLUSH_TLB bit 
@@ -298,7 +305,41 @@ Outstanding CVEs:
   CVE-2019-9445: (unk) f2fs: check if file namelen exceeds max value 
   CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
   CVE-2019-9506: (unk) Bluetooth: Fix faulty expression for minimum encryption key size check 
-  CVE-2020-0009: (unk)  
+  CVE-2020-0009: (unk) staging: android: ashmem: Disallow ashmem memory from being remapped 
+  CVE-2020-0067: (unk) f2fs: fix to avoid memory leakage in f2fs_listxattr 
+  CVE-2020-10135: (unk)  
+  CVE-2020-10690: (unk) ptp: fix the race between the release of ptp_clock and cdev 
+  CVE-2020-10708: (unk)  
+  CVE-2020-10711: (unk) netlabel: cope with NULL catmap 
+  CVE-2020-10732: (unk) fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info() 
+  CVE-2020-10751: (unk) selinux: properly handle multiple messages in selinux_netlink_send() 
+  CVE-2020-10757: (unk) mm: Fix mremap not considering huge pmd devmap 
+  CVE-2020-10942: (unk) vhost: Check docket sk_family instead of call getname 
+  CVE-2020-11494: (unk) slcan: Don't transmit uninitialized stack data in padding 
+  CVE-2020-11565: (unk) mm: mempolicy: require at least one nodeid for MPOL_PREFERRED 
+  CVE-2020-11608: (unk) media: ov519: add missing endpoint sanity checks 
+  CVE-2020-11609: (unk) media: stv06xx: add missing descriptor sanity checks 
+  CVE-2020-11668: (unk) media: xirlink_cit: add missing descriptor sanity checks 
+  CVE-2020-11669: (unk) powerpc/powernv/idle: Restore AMR/UAMOR/AMOR after idle 
+  CVE-2020-11725: (unk)  
+  CVE-2020-11884: (unk) s390/mm: fix page table upgrade vs 2ndary address mode accesses 
+  CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
+  CVE-2020-12464: (unk) USB: core: Fix free-while-in-use bug in the USB S-Glibrary 
+  CVE-2020-12465: (unk) mt76: fix array overflow on receiving too many fragments for a packet 
+  CVE-2020-12652: (unk) scsi: mptfusion: Fix double fetch bug in ioctl 
+  CVE-2020-12653: (unk) mwifiex: Fix possible buffer overflows in mwifiex_cmd_append_vsie_tlv() 
+  CVE-2020-12654: (unk) mwifiex: Fix possible buffer overflows in mwifiex_ret_wmm_get_status() 
+  CVE-2020-12655: (unk) xfs: add agf freeblocks verify in xfs_agf_verify 
+  CVE-2020-12656: (unk)  
+  CVE-2020-12657: (unk) block, bfq: fix use-after-free in bfq_idle_slice_timer_body 
+  CVE-2020-12659: (unk) xsk: Add missing check on user supplied headroom size 
+  CVE-2020-12768: (unk) KVM: SVM: Fix potential memory leak in svm_cpu_init() 
+  CVE-2020-12769: (unk) spi: spi-dw: Add lock protect dw_spi rx/tx to prevent concurrent calls 
+  CVE-2020-12770: (unk) scsi: sg: add sg_remove_request in sg_write 
+  CVE-2020-12771: (unk)  
+  CVE-2020-12826: (unk) signal: Extend exec_id to 64bits 
+  CVE-2020-12888: (unk)  
+  CVE-2020-13143: (unk) USB: gadget: fix illegal array access in binding with UDC 
   CVE-2020-1749: (unk) net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup 
   CVE-2020-2732: (unk) KVM: nVMX: Don't emulate instructions in guest mode 
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
@@ -306,4 +347,5 @@ Outstanding CVEs:
   CVE-2020-8647: (unk) vgacon: Fix a UAF in vgacon_invert_region 
   CVE-2020-8648: (unk) vt: selection, close sel_buffer race 
   CVE-2020-8649: (unk) vgacon: Fix a UAF in vgacon_invert_region 
+  CVE-2020-8832: (unk)  
   CVE-2020-9383: (unk) floppy: check FDC index for errors before assigning it 

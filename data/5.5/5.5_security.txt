@@ -7,21 +7,51 @@ CVEs fixed in 5.5:
 CVEs fixed in 5.5.3:
   CVE-2019-3016: 06b34107899d1b004462c9d2e52ff5a146ee9898 x86/kvm: Be careful not to clear KVM_VCPU_FLUSH_TLB bit
 
+CVEs fixed in 5.5.4:
+  CVE-2020-12653: fe078681043f0958d7956d221ffd3f480a691b62 mwifiex: Fix possible buffer overflows in mwifiex_cmd_append_vsie_tlv()
+  CVE-2020-12654: f3a6883c5acbb81be8f1eb87fdd045c2dc59a901 mwifiex: Fix possible buffer overflows in mwifiex_ret_wmm_get_status()
+
 CVEs fixed in 5.5.5:
   CVE-2020-8992: 9bc7647fe62823bfb6921e98ba40196706eca89a ext4: add cond_resched() to ext4_protect_reserved_inode
 
 CVEs fixed in 5.5.7:
+  CVE-2020-0009: aa5122eaa89d875bec5f27d3be1fecd5504ca507 staging: android: ashmem: Disallow ashmem memory from being remapped
+  CVE-2020-0110: 9ce51fc82bbc8632cb55643ce309bd6732b3d5db sched/psi: Fix OOB write when writing 0 bytes to PSI files
   CVE-2020-2732: bfdac9d7632d29fab54cb4488d208a89c9ac48c7 KVM: nVMX: Don't emulate instructions in guest mode
   CVE-2020-9383: 3604f164a31e6acb38ef2fa7588db18bbcd644fe floppy: check FDC index for errors before assigning it
   CVE-2020-9391: c1947a09073350073f73e7024bda4cfdc240dc8f mm: Avoid creating virtual address aliases in brk()/mmap()/mremap()
 
 CVEs fixed in 5.5.8:
   CVE-2019-19768: ed1832ea0518339d702a2212a0a7fd37f5d169c0 blktrace: Protect q->blk_trace with RCU
+  CVE-2020-10942: 54cd3ad4d9ccad89b986248a670eab359ef9b8dd vhost: Check docket sk_family instead of call getname
 
 CVEs fixed in 5.5.9:
   CVE-2020-8647: 270059ce5063ff98e2229d6cabe56927513f4ca6 vgacon: Fix a UAF in vgacon_invert_region
   CVE-2020-8648: 7b2eea176b28f9ff3ab1c6cae2332defe94fd1e9 vt: selection, close sel_buffer race
   CVE-2020-8649: 270059ce5063ff98e2229d6cabe56927513f4ca6 vgacon: Fix a UAF in vgacon_invert_region
+
+CVEs fixed in 5.5.10:
+  CVE-2020-12465: fc09229baaaf75e068302b060f7f21548ba2ded6 mt76: fix array overflow on receiving too many fragments for a packet
+
+CVEs fixed in 5.5.12:
+  CVE-2019-19769: 5e62fb2c5d44e82ee7fae8c7fe946c7116489281 locks: fix a potential use-after-free problem when wakeup a waiter
+
+CVEs fixed in 5.5.14:
+  CVE-2020-11608: 773972d6e95a714a08b0653bcd5f5f57caa6b8b6 media: ov519: add missing endpoint sanity checks
+  CVE-2020-11609: 7d565c3bbc5c1255a79d63641ac5fbbfb819216d media: stv06xx: add missing descriptor sanity checks
+  CVE-2020-11668: 10b65719f712f0f823e2b961837aa7300347645a media: xirlink_cit: add missing descriptor sanity checks
+  CVE-2020-8835: 0ebc01466d98d016eb6a3780ec8edb0c86fa48bc bpf: Undo incorrect __reg_bound_offset32 handling
+
+CVEs fixed in 5.5.16:
+  CVE-2020-11565: d541416601eed8f771488386dc49d91ce677e3a9 mm: mempolicy: require at least one nodeid for MPOL_PREFERRED
+
+CVEs fixed in 5.5.17:
+  CVE-2020-11494: 51fafff685ba3b1228e1def7d79094a951585574 slcan: Don't transmit uninitialized stack data in padding
+
+CVEs fixed in 5.5.18:
+  CVE-2019-19377: 49a9f499e847b3d4efbede21f541d61d079f9773 btrfs: Don't submit any btree write bio if the fs has errors
+  CVE-2020-12657: a8cb63998d1d41830d3e400ab9d0795771e57e87 block, bfq: fix use-after-free in bfq_idle_slice_timer_body
+  CVE-2020-12826: d65376ec3f4713fbd47e1837228394d06c7ada2a signal: Extend exec_id to 64bits
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -47,6 +77,7 @@ Outstanding CVEs:
   CVE-2019-12881: (unk)  
   CVE-2019-15239: (unk) unknown 
   CVE-2019-15290: (unk)  
+  CVE-2019-15794: (unk)  
   CVE-2019-15902: (unk) unknown 
   CVE-2019-16089: (unk)  
   CVE-2019-18680: (unk)  
@@ -54,15 +85,31 @@ Outstanding CVEs:
   CVE-2019-19036: (unk)  
   CVE-2019-19039: (unk)  
   CVE-2019-19318: (unk)  
-  CVE-2019-19319: (unk)  
-  CVE-2019-19377: (unk)  
   CVE-2019-19378: (unk)  
   CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
-  CVE-2019-19462: (unk)  
-  CVE-2019-19769: (unk) locks: fix a potential use-after-free problem when wakeup a waiter 
+  CVE-2019-19462: (unk) kernel/relay.c: handle alloc_percpu returning NULL in relay_open 
   CVE-2019-19770: (unk)  
   CVE-2019-19813: (unk)  
   CVE-2019-19814: (unk)  
   CVE-2019-19816: (unk)  
-  CVE-2020-0009: (unk)  
+  CVE-2019-20794: (unk)  
+  CVE-2019-20810: (unk) media: go7007: fix a miss of snd_card_free 
+  CVE-2020-10135: (unk)  
+  CVE-2020-10708: (unk)  
+  CVE-2020-10711: (unk) netlabel: cope with NULL catmap 
+  CVE-2020-10732: (unk) fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info() 
+  CVE-2020-10751: (unk) selinux: properly handle multiple messages in selinux_netlink_send() 
+  CVE-2020-10757: (unk) mm: Fix mremap not considering huge pmd devmap 
+  CVE-2020-11725: (unk)  
+  CVE-2020-11884: (unk) s390/mm: fix page table upgrade vs 2ndary address mode accesses 
+  CVE-2020-12464: (unk) USB: core: Fix free-while-in-use bug in the USB S-Glibrary 
+  CVE-2020-12655: (unk) xfs: add agf freeblocks verify in xfs_agf_verify 
+  CVE-2020-12656: (unk)  
+  CVE-2020-12659: (unk) xsk: Add missing check on user supplied headroom size 
+  CVE-2020-12768: (unk) KVM: SVM: Fix potential memory leak in svm_cpu_init() 
+  CVE-2020-12770: (unk) scsi: sg: add sg_remove_request in sg_write 
+  CVE-2020-12771: (unk)  
+  CVE-2020-12888: (unk)  
+  CVE-2020-13143: (unk) USB: gadget: fix illegal array access in binding with UDC 
+  CVE-2020-8832: (unk)  
