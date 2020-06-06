@@ -47844,6 +47844,7 @@
     "CVE-2019-19462": {
         "affected_versions": "v4.9-rc1 to unk",
         "breaks": "017c59c042d01fc84cae7a8ea475861e702c77ab",
+        "cmt_msg": "kernel/relay.c: handle alloc_percpu returning NULL in relay_open",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -47867,8 +47868,8 @@
             "score": "5.5"
         },
         "cwe": "NULL Pointer Dereference",
-        "fixes": "",
-        "last_modified": "2020-01-28",
+        "fixes": "54e200ab40fc14c863bcc80a51e20b7906608fce",
+        "last_modified": "2020-06-06",
         "nvd_text": "relay_open in kernel/relay.c in the Linux kernel through 5.4.1 allows local users to cause a denial of service (such as relay blockage) by triggering a NULL alloc_percpu result.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19462",
@@ -49504,9 +49505,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "media: tw5864: Fix possible NULL pointer dereference in tw5864_handle_frame",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": "5.0"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "7.5"
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "2e7682ebfc750177a4944eeb56e97a3f05734528",
         "last_affected_version": "4.19.98",
-        "last_modified": "2020-05-29",
+        "last_modified": "2020-06-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.2. There is a NULL pointer dereference in tw5864_handle_frame() in drivers/media/pci/tw5864/tw5864-video.c, which may cause denial of service, aka CID-2e7682ebfc75.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20806",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20806",
@@ -49517,11 +49542,11 @@
         }
     },
     "CVE-2019-20810": {
-        "affected_versions": "unk to v5.6-rc1",
-        "breaks": "",
+        "affected_versions": "v3.15-rc1 to v5.6-rc1",
+        "breaks": "a4f2473d39eb72915d37d65bdd8dd734c7ee4f8a",
         "cmt_msg": "media: go7007: fix a miss of snd_card_free",
         "fixes": "9453264ef58638ce8976121ac44c07a3ef375983",
-        "last_modified": "2020-06-03",
+        "last_modified": "2020-06-06",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20810",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20810",
@@ -49532,12 +49557,12 @@
         }
     },
     "CVE-2019-20811": {
-        "affected_versions": "unk to v5.1-rc3",
-        "breaks": "",
+        "affected_versions": "v2.6.38-rc1 to v5.1-rc3",
+        "breaks": "fe8222406c8277a21172479d3a8283d31c209028",
         "cmt_msg": "net-sysfs: call dev_hold if kobject_init_and_add success",
         "fixes": "a3e23f719f5c4a38ffb3d30c8d7632a4ed8ccd9e",
         "last_affected_version": "5.0.5",
-        "last_modified": "2020-06-03",
+        "last_modified": "2020-06-06",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20811",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20811",
@@ -49548,12 +49573,36 @@
         }
     },
     "CVE-2019-20812": {
-        "affected_versions": "unk to v5.5-rc3",
-        "breaks": "",
+        "affected_versions": "v3.2-rc1 to v5.5-rc3",
+        "breaks": "f6fb8f100b807378fda19e83e5ac6828b638603a",
         "cmt_msg": "af_packet: set defaule value for tmo",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "Uncontrolled Resource Consumption",
         "fixes": "b43d1f9f7067c6759b1051e8ecb84e82cef569fe",
         "last_affected_version": "5.4.6",
-        "last_modified": "2020-06-03",
+        "last_modified": "2020-06-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.4.7. The prb_calc_retire_blk_tmo() function in net/packet/af_packet.c can result in a denial of service (CPU consumption and soft lockup) in a certain failure case involving TPACKET_V3, aka CID-b43d1f9f7067.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20812",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20812",
@@ -51751,6 +51800,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10751",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-10751",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10751"
+        }
+    },
+    "CVE-2020-10757": {
+        "affected_versions": "v4.5-rc1 to unk",
+        "breaks": "5c7fb56e5e3f7035dd798a8e1adee639f87043e5",
+        "cmt_msg": "mm: Fix mremap not considering huge pmd devmap",
+        "fixes": "5bfea2d9b17f1034a68147a8b03b9789af5700f9",
+        "last_modified": "2020-06-06",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10757",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10757",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10757",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10757",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10757",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10757"
         }
     },
     "CVE-2020-10942": {
