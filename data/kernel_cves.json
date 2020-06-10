@@ -47869,7 +47869,8 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "54e200ab40fc14c863bcc80a51e20b7906608fce",
-        "last_modified": "2020-06-06",
+        "last_affected_version": "5.7.0",
+        "last_modified": "2020-06-10",
         "nvd_text": "relay_open in kernel/relay.c in the Linux kernel through 5.4.1 allows local users to cause a denial of service (such as relay blockage) by triggering a NULL alloc_percpu result.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19462",
@@ -49545,8 +49546,32 @@
         "affected_versions": "v3.15-rc1 to v5.6-rc1",
         "breaks": "a4f2473d39eb72915d37d65bdd8dd734c7ee4f8a",
         "cmt_msg": "media: go7007: fix a miss of snd_card_free",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": "4.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": "5.5"
+        },
+        "cwe": "Missing Release of Resource after Effective Lifetime",
         "fixes": "9453264ef58638ce8976121ac44c07a3ef375983",
-        "last_modified": "2020-06-06",
+        "last_modified": "2020-06-10",
+        "nvd_text": "go7007_snd_init in drivers/media/usb/go7007/snd-go7007.c in the Linux kernel before 5.6 does not call snd_card_free for a failure path, which causes a memory leak, aka CID-9453264ef586.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20810",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20810",
@@ -49560,9 +49585,33 @@
         "affected_versions": "v2.6.38-rc1 to v5.1-rc3",
         "breaks": "fe8222406c8277a21172479d3a8283d31c209028",
         "cmt_msg": "net-sysfs: call dev_hold if kobject_init_and_add success",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+            "score": "2.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "score": "5.5"
+        },
+        "cwe": "Other",
         "fixes": "a3e23f719f5c4a38ffb3d30c8d7632a4ed8ccd9e",
         "last_affected_version": "5.0.5",
-        "last_modified": "2020-06-06",
+        "last_modified": "2020-06-10",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.0.6. In rx_queue_add_kobject() and netdev_queue_add_kobject() in net/core/net-sysfs.c, a reference count is mishandled, aka CID-a3e23f719f5c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20811",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20811",
@@ -51392,8 +51441,8 @@
         }
     },
     "CVE-2020-0009": {
-        "affected_versions": "unk to v5.6-rc3",
-        "breaks": "",
+        "affected_versions": "v3.3-rc1 to v5.6-rc3",
+        "breaks": "11980c2ac4ccfad21a5f8ee9e12059f1e687bb40",
         "cmt_msg": "staging: android: ashmem: Disallow ashmem memory from being remapped",
         "cvss2": {
             "Access Complexity": "Low",
@@ -51420,7 +51469,7 @@
         "cwe": "Incorrect Default Permissions",
         "fixes": "6d67b0290b4b84c477e6a2fc6e005e174d3c7786",
         "last_affected_version": "5.5.6",
-        "last_modified": "2020-04-28",
+        "last_modified": "2020-06-10",
         "nvd_text": "In calc_vm_may_flags of ashmem.c, there is a possible arbitrary write to shared memory due to a permissions bypass. This could lead to local escalation of privilege by corrupting memory shared between processes, with no additional execution privileges needed. User interaction is not needed for exploitation. Product: Android Versions: Android kernel Android ID: A-142938932",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0009",
@@ -51631,11 +51680,38 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0110"
         }
     },
+    "CVE-2020-0543": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "x86/cpu: Add 'table' argument to cpu_matches()",
+        "fixes": "93920f61c2ad7edb01e63323832585796af75fc9",
+        "last_modified": "2020-06-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0543",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0543",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-0543",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0543",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-0543",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0543"
+        }
+    },
     "CVE-2020-10135": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:A/AC:L/Au:N/C:P/I:P/A:N",
+            "score": "4.8"
+        },
+        "cwe": "Improper Authentication",
         "fixes": "",
-        "last_modified": "2020-05-23",
+        "last_modified": "2020-06-10",
+        "nvd_text": "Legacy pairing and secure-connections pairing authentication in Bluetooth® BR/EDR Core Specification v5.2 and earlier may allow an unauthenticated user to complete authentication without pairing credentials via adjacent access. An unauthenticated, adjacent attacker could impersonate a Bluetooth BR/EDR master or slave to pair with a previously paired remote device to successfully complete the authentication procedure without knowing the link key.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10135",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10135",
@@ -51760,8 +51836,8 @@
         "breaks": "4206d3aa1978e44f58bfa4e1c9d8d35cbf19c187",
         "cmt_msg": "fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()",
         "fixes": "1d605416fb7175e1adf094251466caa52093b413",
-        "last_affected_version": "5.6.15",
-        "last_modified": "2020-06-03",
+        "last_affected_version": "5.6",
+        "last_modified": "2020-06-10",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10732",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10732",
@@ -51790,9 +51866,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.7-rc4",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "selinux: properly handle multiple messages in selinux_netlink_send()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:N",
+            "score": "3.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "Low",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+            "score": "6.1"
+        },
+        "cwe": "Insufficient Verification of Data Authenticity",
         "fixes": "fb73974172ffaaf57a7c42f35424d9aece1a5af6",
         "last_affected_version": "5.6.10",
-        "last_modified": "2020-05-29",
+        "last_modified": "2020-06-10",
+        "nvd_text": "A flaw was found in the Linux kernels SELinux LSM hook implementation before version 5.7, where it incorrectly assumed that an skb would only contain a single netlink message. The hook would incorrectly only validate the first netlink message in the skb and allow or deny the rest of the messages within the skb with the granted permission without further processing.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10751",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10751",
@@ -51807,7 +51907,9 @@
         "breaks": "5c7fb56e5e3f7035dd798a8e1adee639f87043e5",
         "cmt_msg": "mm: Fix mremap not considering huge pmd devmap",
         "fixes": "5bfea2d9b17f1034a68147a8b03b9789af5700f9",
-        "last_modified": "2020-06-06",
+        "last_affected_version": "5.7.0",
+        "last_modified": "2020-06-10",
+        "nvd_text": "A flaw was found in the Linux Kernel in versions after 4.5-rc1 in the way mremap handled DAX Huge Pages. This flaw allows a local attacker with access to a DAX enabled storage to escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10757",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10757",
@@ -52655,9 +52757,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.7-rc3",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "scsi: sg: add sg_remove_request in sg_write",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": "4.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": "6.7"
+        },
+        "cwe": "Insufficient Information",
         "fixes": "83c6f2390040f188cc25b270b4befeb5628c1aee",
         "last_affected_version": "5.6.11",
-        "last_modified": "2020-05-23",
+        "last_modified": "2020-06-10",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.6.11. sg_write lacks an sg_remove_request call in a certain failure case, aka CID-83c6f2390040.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12770",
@@ -52749,6 +52874,7 @@
     "CVE-2020-12888": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "vfio-pci: Invalidate mmaps and block MMIO access on disabled memory",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Local Access",
@@ -52772,8 +52898,8 @@
             "score": "5.3"
         },
         "cwe": "Improper Handling of Exceptional Conditions",
-        "fixes": "",
-        "last_modified": "2020-05-29",
+        "fixes": "abafbc551fddede3e0a08dee1dcde08fc0eb8476",
+        "last_modified": "2020-06-10",
         "nvd_text": "The VFIO PCI driver in the Linux kernel through 5.6.13 mishandles attempts to access disabled memory space.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12888",
@@ -52822,6 +52948,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-13143",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-13143",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-13143"
+        }
+    },
+    "CVE-2020-13974": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "vt: keyboard: avoid signed integer overflow in k_ascii",
+        "fixes": "b86dab054059b970111b5516ae548efaae5b3aae",
+        "last_modified": "2020-06-10",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.7.1. drivers/tty/vt/keyboard.c has an integer overflow if k_ascii is called several times in a row, aka CID-b86dab054059.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-13974",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-13974",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-13974",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-13974",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-13974",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-13974"
         }
     },
     "CVE-2020-1749": {
