@@ -718,6 +718,20 @@ CVEs fixed in 3.16.83:
 CVEs fixed in 3.16.84:
   CVE-2020-12769: f358118d34cdd7e898685205bb62e41e9a3246aa spi: spi-dw: Add lock protect dw_spi rx/tx to prevent concurrent calls
 
+CVEs fixed in 3.16.85:
+  CVE-2017-14991: f37de82d22dc41e9748b788655fab4bfea465a02 scsi: sg: fixup infoleak when using SG_GET_REQUEST_TABLE
+  CVE-2019-19319: 51890201da4d654f6ca131bc45a0e892bb10de1d ext4: protect journal inode's blocks using block_validity
+  CVE-2020-0543: 98a637c406eefe95f2428739c1397f250bb7fadd x86/cpu: Add 'table' argument to cpu_matches()
+  CVE-2020-10732: d03daec2e50aa2a0b6de2c3572af5e1d61f9d132 fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()
+  CVE-2020-10751: 9592b90cdc99f58e0674e64037c422ea7e9aa367 selinux: properly handle multiple messages in selinux_netlink_send()
+  CVE-2020-12464: 575f200adca1fe48df15063b1a5673a9b5f713bd USB: core: Fix free-while-in-use bug in the USB S-Glibrary
+  CVE-2020-12652: a226f907bd999713e9349bc35aa133cf519a864e scsi: mptfusion: Fix double fetch bug in ioctl
+  CVE-2020-12653: f0c210c885dbc5000d3c3e27723beedda5988cee mwifiex: Fix possible buffer overflows in mwifiex_cmd_append_vsie_tlv()
+  CVE-2020-12654: 60a613dc22ee9932c3ba67eadb08de357e36f01f mwifiex: Fix possible buffer overflows in mwifiex_ret_wmm_get_status()
+  CVE-2020-12770: f5eb337df20a24a9f9c7f96181ace9d61b590def scsi: sg: add sg_remove_request in sg_write
+  CVE-2020-12826: 303c5366d664e0b860041e0647952dafcd71c5a1 signal: Extend exec_id to 64bits
+  CVE-2020-13143: d126cf46f829d146dde3e6a8963e095ac6cfcd1c USB: gadget: fix illegal array access in binding with UDC
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -757,7 +771,6 @@ Outstanding CVEs:
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
   CVE-2017-13695: (unk) ACPICA: acpi: acpica: fix acpi operand cache leak in nseval.c 
-  CVE-2017-14991: (unk) scsi: sg: fixup infoleak when using SG_GET_REQUEST_TABLE 
   CVE-2017-15116: (unk) crypto: rng - Remove old low-level rng interface 
   CVE-2017-15537: (unk) x86/fpu: Don't let userspace set bogus xcomp_bv 
   CVE-2017-16528: (unk) ALSA: seq: Cancel pending autoload work at unbinding device 
@@ -852,7 +865,6 @@ Outstanding CVEs:
   CVE-2019-19063: (unk) rtlwifi: prevent memory leak in rtl_usb_probe 
   CVE-2019-19073: (unk) ath9k_htc: release allocated buffer if timed out 
   CVE-2019-19074: (unk) ath9k: release allocated buffer if timed out 
-  CVE-2019-19319: (unk) ext4: protect journal inode's blocks using block_validity 
   CVE-2019-19377: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19378: (unk)  
   CVE-2019-19448: (unk)  
@@ -878,23 +890,16 @@ Outstanding CVEs:
   CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
   CVE-2020-0030: (unk) ANDROID: binder: synchronize_rcu() when using POLLFREE. 
   CVE-2020-0067: (unk) f2fs: fix to avoid memory leakage in f2fs_listxattr 
-  CVE-2020-0543: (unk) x86/cpu: Add 'table' argument to cpu_matches() 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
-  CVE-2020-10732: (unk) fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info() 
-  CVE-2020-10751: (unk) selinux: properly handle multiple messages in selinux_netlink_send() 
+  CVE-2020-10766: (unk) x86/speculation: Prevent rogue cross-process SSBD shutdown 
+  CVE-2020-10767: (unk) x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS. 
+  CVE-2020-10768: (unk) x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches. 
   CVE-2020-11669: (unk) powerpc/powernv/idle: Restore AMR/UAMOR/AMOR after idle 
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
-  CVE-2020-12464: (unk) USB: core: Fix free-while-in-use bug in the USB S-Glibrary 
-  CVE-2020-12652: (unk) scsi: mptfusion: Fix double fetch bug in ioctl 
-  CVE-2020-12653: (unk) mwifiex: Fix possible buffer overflows in mwifiex_cmd_append_vsie_tlv() 
-  CVE-2020-12654: (unk) mwifiex: Fix possible buffer overflows in mwifiex_ret_wmm_get_status() 
   CVE-2020-12655: (unk) xfs: add agf freeblocks verify in xfs_agf_verify 
   CVE-2020-12656: (unk)  
-  CVE-2020-12770: (unk) scsi: sg: add sg_remove_request in sg_write 
   CVE-2020-12771: (unk)  
-  CVE-2020-12826: (unk) signal: Extend exec_id to 64bits 
   CVE-2020-12888: (unk) vfio-pci: Invalidate mmaps and block MMIO access on disabled memory 
-  CVE-2020-13143: (unk) USB: gadget: fix illegal array access in binding with UDC 
   CVE-2020-13974: (unk) vt: keyboard: avoid signed integer overflow in k_ascii 
   CVE-2020-8832: (unk)  

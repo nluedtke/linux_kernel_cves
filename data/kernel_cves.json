@@ -25726,6 +25726,7 @@
         "cwe": "Information Leak / Disclosure",
         "fixes": "3e0097499839e0fe3af380410eababe5a47c4cf9",
         "last_affected_version": "4.13.3",
+        "last_modified": "2020-06-13",
         "nvd_text": "The sg_ioctl function in drivers/scsi/sg.c in the Linux kernel before 4.13.4 allows local users to obtain sensitive information from uninitialized kernel heap-memory locations via an SG_GET_REQUEST_TABLE ioctl call for /dev/sg0.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-14991",
@@ -47580,7 +47581,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "345c0dbf3a30872d9b204db96b5857cd00808cae",
         "last_affected_version": "4.19.72",
-        "last_modified": "2020-05-27",
+        "last_modified": "2020-06-13",
         "nvd_text": "In the Linux kernel 5.0.21, a setxattr operation, after a mount of a crafted ext4 image, can cause a slab-out-of-bounds write access because of an ext4_xattr_set_entry use-after-free in fs/ext4/xattr.c when a large old_size value is used in a memset call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19319",
@@ -47870,7 +47871,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "54e200ab40fc14c863bcc80a51e20b7906608fce",
         "last_affected_version": "5.7.0",
-        "last_modified": "2020-06-10",
+        "last_modified": "2020-06-13",
         "nvd_text": "relay_open in kernel/relay.c in the Linux kernel through 5.4.1 allows local users to cause a denial of service (such as relay blockage) by triggering a NULL alloc_percpu result.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19462",
@@ -51685,7 +51686,8 @@
         "breaks": "",
         "cmt_msg": "x86/cpu: Add 'table' argument to cpu_matches()",
         "fixes": "93920f61c2ad7edb01e63323832585796af75fc9",
-        "last_modified": "2020-06-10",
+        "last_affected_version": "5.7.1",
+        "last_modified": "2020-06-13",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0543",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0543",
@@ -51837,7 +51839,7 @@
         "cmt_msg": "fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()",
         "fixes": "1d605416fb7175e1adf094251466caa52093b413",
         "last_affected_version": "5.6",
-        "last_modified": "2020-06-10",
+        "last_modified": "2020-06-13",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10732",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10732",
@@ -51891,7 +51893,7 @@
         "cwe": "Insufficient Verification of Data Authenticity",
         "fixes": "fb73974172ffaaf57a7c42f35424d9aece1a5af6",
         "last_affected_version": "5.6.10",
-        "last_modified": "2020-06-10",
+        "last_modified": "2020-06-13",
         "nvd_text": "A flaw was found in the Linux kernels SELinux LSM hook implementation before version 5.7, where it incorrectly assumed that an skb would only contain a single netlink message. The hook would incorrectly only validate the first netlink message in the skb and allow or deny the rest of the messages within the skb with the granted permission without further processing.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10751",
@@ -51908,7 +51910,7 @@
         "cmt_msg": "mm: Fix mremap not considering huge pmd devmap",
         "fixes": "5bfea2d9b17f1034a68147a8b03b9789af5700f9",
         "last_affected_version": "5.7.0",
-        "last_modified": "2020-06-10",
+        "last_modified": "2020-06-13",
         "nvd_text": "A flaw was found in the Linux Kernel in versions after 4.5-rc1 in the way mremap handled DAX Huge Pages. This flaw allows a local attacker with access to a DAX enabled storage to escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10757",
@@ -51917,6 +51919,51 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10757",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-10757",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10757"
+        }
+    },
+    "CVE-2020-10766": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "x86/speculation: Prevent rogue cross-process SSBD shutdown",
+        "fixes": "dbbe2ad02e9df26e372f38cc3e70dab9222c832e",
+        "last_modified": "2020-06-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10766",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10766",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10766",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10766",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10766",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10766"
+        }
+    },
+    "CVE-2020-10767": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS.",
+        "fixes": "21998a351512eba4ed5969006f0c55882d995ada",
+        "last_modified": "2020-06-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10767",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10767",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10767",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10767",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10767",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10767"
+        }
+    },
+    "CVE-2020-10768": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches.",
+        "fixes": "4d8df8cbb9156b0a0ab3f802b80cb5db57acc0bf",
+        "last_modified": "2020-06-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10768",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10768",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10768",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10768",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10768",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10768"
         }
     },
     "CVE-2020-10942": {
@@ -52345,7 +52392,7 @@
         "cwe": "Use After Free",
         "fixes": "056ad39ee9253873522f6469c3364964a322912b",
         "last_affected_version": "5.6.7",
-        "last_modified": "2020-05-13",
+        "last_modified": "2020-06-13",
         "nvd_text": "usb_sg_cancel in drivers/usb/core/message.c in the Linux kernel before 5.6.8 has a use-after-free because a transfer occurs without a reference, aka CID-056ad39ee925.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12464",
@@ -52425,7 +52472,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "28d76df18f0ad5bcf5fa48510b225f0ed262a99b",
         "last_affected_version": "5.4.13",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-06-13",
         "nvd_text": "The __mptctl_ioctl function in drivers/message/fusion/mptctl.c in the Linux kernel before 5.4.14 allows local users to hold an incorrect lock during the ioctl operation and trigger a race condition, i.e., a \"double fetch\" vulnerability, aka CID-28d76df18f0a. NOTE: the vendor states \"The security impact of this bug is not as bad as it could have been because these operations are all privileged and root already has enormous destructive power.\"",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12652",
@@ -52465,7 +52512,7 @@
         "cwe": "Improper Privilege Management",
         "fixes": "b70261a288ea4d2f4ac7cd04be08a9f0f2de4f4d",
         "last_affected_version": "5.5.3",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-06-13",
         "nvd_text": "An issue was found in Linux kernel before 5.5.4. The mwifiex_cmd_append_vsie_tlv() function in drivers/net/wireless/marvell/mwifiex/scan.c allows local users to gain privileges or cause a denial of service because of an incorrect memcpy and buffer overflow, aka CID-b70261a288ea.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12653",
@@ -52505,7 +52552,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "3a9b153c5591548612c3955c9600a98150c81875",
         "last_affected_version": "5.5.3",
-        "last_modified": "2020-05-11",
+        "last_modified": "2020-06-13",
         "nvd_text": "An issue was found in Linux kernel before 5.5.4. mwifiex_ret_wmm_get_status() in drivers/net/wireless/marvell/mwifiex/wmm.c allows a remote AP to trigger a heap-based buffer overflow because of an incorrect memcpy, aka CID-3a9b153c5591.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12654",
@@ -52782,7 +52829,7 @@
         "cwe": "Insufficient Information",
         "fixes": "83c6f2390040f188cc25b270b4befeb5628c1aee",
         "last_affected_version": "5.6.11",
-        "last_modified": "2020-06-10",
+        "last_modified": "2020-06-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.6.11. sg_write lacks an sg_remove_request call in a certain failure case, aka CID-83c6f2390040.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12770",
@@ -52860,7 +52907,7 @@
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "d1e7fd6462ca9fc76650fbe6ca800e35b24267da",
         "last_affected_version": "5.6.4",
-        "last_modified": "2020-05-29",
+        "last_modified": "2020-06-13",
         "nvd_text": "A signal access-control issue was discovered in the Linux kernel before 5.6.5, aka CID-7395ea4e65c2. Because exec_id in include/linux/sched.h is only 32 bits, an integer overflow can interfere with a do_notify_parent protection mechanism. A child process can send an arbitrary signal to a parent process in a different security domain. Exploitation limitations include the amount of elapsed time before an integer overflow occurs, and the lack of scenarios where signals to a parent process present a substantial operational threat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12826",
@@ -52939,7 +52986,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "15753588bcd4bbffae1cca33c8ced5722477fe1f",
         "last_affected_version": "5.6.13",
-        "last_modified": "2020-05-29",
+        "last_modified": "2020-06-13",
         "nvd_text": "gadget_dev_desc_UDC_store in drivers/usb/gadget/configfs.c in the Linux kernel through 5.6.13 relies on kstrdup without considering the possibility of an internal '\\0' value, which allows attackers to trigger an out-of-bounds read, aka CID-15753588bcd4.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-13143",
@@ -52955,7 +53002,8 @@
         "breaks": "",
         "cmt_msg": "vt: keyboard: avoid signed integer overflow in k_ascii",
         "fixes": "b86dab054059b970111b5516ae548efaae5b3aae",
-        "last_modified": "2020-06-10",
+        "last_affected_version": "5.7.1",
+        "last_modified": "2020-06-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.7.1. drivers/tty/vt/keyboard.c has an integer overflow if k_ascii is called several times in a row, aka CID-b86dab054059.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-13974",
