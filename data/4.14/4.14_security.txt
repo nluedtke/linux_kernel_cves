@@ -668,6 +668,12 @@ CVEs fixed in 4.14.181:
 CVEs fixed in 4.14.183:
   CVE-2020-10732: 61ce1733b30fdcf45e31308bc7795b6dc7f2ffba fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()
 
+CVEs fixed in 4.14.184:
+  CVE-2019-19462: 7821131c16cb2d32a5014009b50d362317418556 kernel/relay.c: handle alloc_percpu returning NULL in relay_open
+  CVE-2020-0543: 9c98ba3f69b156c9fee72b71260d51f623a4a457 x86/cpu: Add 'table' argument to cpu_matches()
+  CVE-2020-10757: 469ef673629d36d8ed5912b52f5d87ecc0309b3c mm: Fix mremap not considering huge pmd devmap
+  CVE-2020-13974: 26079af52bf616bc492acc1fe41dce53fe199456 vt: keyboard: avoid signed integer overflow in k_ascii
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -735,7 +741,6 @@ Outstanding CVEs:
   CVE-2019-19378: (unk)  
   CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
-  CVE-2019-19462: (unk) kernel/relay.c: handle alloc_percpu returning NULL in relay_open 
   CVE-2019-19770: (unk)  
   CVE-2019-19813: (unk)  
   CVE-2019-19814: (unk)  
@@ -751,13 +756,16 @@ Outstanding CVEs:
   CVE-2019-9445: (unk) f2fs: check if file namelen exceeds max value 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
-  CVE-2020-10757: (unk) mm: Fix mremap not considering huge pmd devmap 
+  CVE-2020-10766: (unk) x86/speculation: Prevent rogue cross-process SSBD shutdown 
+  CVE-2020-10767: (unk) x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS. 
+  CVE-2020-10768: (unk) x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches. 
+  CVE-2020-10773: (unk)  
   CVE-2020-11725: (unk)  
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
   CVE-2020-12655: (unk) xfs: add agf freeblocks verify in xfs_agf_verify 
   CVE-2020-12656: (unk)  
   CVE-2020-12771: (unk)  
-  CVE-2020-12888: (unk)  
+  CVE-2020-12888: (unk) vfio-pci: Invalidate mmaps and block MMIO access on disabled memory 
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
   CVE-2020-8832: (unk)  
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
