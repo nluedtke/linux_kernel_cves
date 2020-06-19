@@ -45645,8 +45645,9 @@
         }
     },
     "CVE-2019-19036": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.4-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "btrfs: Detect unbalanced tree with empty leaf before crashing btree operations",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -45670,8 +45671,9 @@
             "score": "5.5"
         },
         "cwe": "NULL Pointer Dereference",
-        "fixes": "",
-        "last_modified": "2019-11-25",
+        "fixes": "62fdaa52a3d00a875da771719b6dc537ca79fce1",
+        "last_affected_version": "5.3.3",
+        "last_modified": "2020-06-18",
         "nvd_text": "btrfs_root_node in fs/btrfs/ctree.c in the Linux kernel through 5.3.12 allows a NULL pointer dereference because rcu_dereference(root-&gt;node) can be zero.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19036",
@@ -45723,8 +45725,9 @@
         }
     },
     "CVE-2019-19039": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.7-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "btrfs: Don't submit any btree write bio if the fs has errors",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Local Access",
@@ -45748,8 +45751,9 @@
             "score": "5.5"
         },
         "cwe": "Information Exposure",
-        "fixes": "",
-        "last_modified": "2020-04-17",
+        "fixes": "b3ff8f1d380e65dddd772542aa9bff6c86bf715a",
+        "last_affected_version": "5.6.4",
+        "last_modified": "2020-06-18",
         "nvd_text": "** DISPUTED ** __btrfs_free_extent in fs/btrfs/extent-tree.c in the Linux kernel through 5.3.12 calls btrfs_print_leaf in a certain ENOENT case, which allows local users to obtain potentially sensitive information about register values via the dmesg program. NOTE: The BTRFS development team disputes this issues as not being a vulnerability because “1) The kernel provide facilities to restrict access to dmesg - dmesg_restrict=1 sysctl option. So it's really up to the system administrator to judge whether dmesg access shall be disallowed or not. 2) WARN/WARN_ON are widely used macros in the linux kernel. If this CVE is considered valid this would mean there are literally thousands CVE lurking in the kernel - something which clearly is not the case.”",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19039",
@@ -47515,8 +47519,9 @@
         }
     },
     "CVE-2019-19318": {
-        "affected_versions": "v5.3-rc2 to unk",
+        "affected_versions": "v5.3-rc2 to v5.4-rc1",
         "breaks": "78134300579a45f527ca173ec8fdb4701b69f16e",
+        "cmt_msg": "Btrfs: fix selftests failure due to uninitialized i_mode in test inodes",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -47540,8 +47545,9 @@
             "score": "5.5"
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2020-04-24",
+        "fixes": "9f7fec0ba89108b9385f1b9fb167861224912a4a",
+        "last_affected_version": "5.3.5",
+        "last_modified": "2020-06-18",
         "nvd_text": "In the Linux kernel 5.3.11, mounting a crafted btrfs image twice can cause an rwsem_down_write_slowpath use-after-free because (in rwsem_can_spin_on_owner in kernel/locking/rwsem.c) rwsem_owner_flags returns an already freed pointer,",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19318",
@@ -48761,8 +48767,9 @@
         }
     },
     "CVE-2019-19813": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "btrfs: inode: Verify inode mode to avoid NULL pointer dereference",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -48786,8 +48793,8 @@
             "score": "7.8"
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2019-12-19",
+        "fixes": "6bf9e4bd6a277840d3fe8c5d5d530a1fbd3db592",
+        "last_modified": "2020-06-18",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image, performing some operations, and then making a syncfs system call can lead to a use-after-free in __mutex_lock in kernel/locking/mutex.c. This is related to mutex_can_spin_on_owner in kernel/locking/mutex.c, __btrfs_qgroup_free_meta in fs/btrfs/qgroup.c, and btrfs_insert_delayed_items in fs/btrfs/delayed-inode.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19813",
@@ -48876,8 +48883,9 @@
         }
     },
     "CVE-2019-19816": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "btrfs: inode: Verify inode mode to avoid NULL pointer dereference",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -48901,8 +48909,8 @@
             "score": "7.8"
         },
         "cwe": "Out-of-bounds Write",
-        "fixes": "",
-        "last_modified": "2019-12-19",
+        "fixes": "6bf9e4bd6a277840d3fe8c5d5d530a1fbd3db592",
+        "last_modified": "2020-06-18",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image and performing some operations can cause slab-out-of-bounds write access in __btrfs_map_block in fs/btrfs/volumes.c, because a value of 1 for the number of data stripes is mishandled.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19816",
@@ -51926,7 +51934,8 @@
         "breaks": "",
         "cmt_msg": "x86/speculation: Prevent rogue cross-process SSBD shutdown",
         "fixes": "dbbe2ad02e9df26e372f38cc3e70dab9222c832e",
-        "last_modified": "2020-06-16",
+        "last_affected_version": "5.7.2",
+        "last_modified": "2020-06-18",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10766",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10766",
@@ -51941,7 +51950,8 @@
         "breaks": "",
         "cmt_msg": "x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS.",
         "fixes": "21998a351512eba4ed5969006f0c55882d995ada",
-        "last_modified": "2020-06-16",
+        "last_affected_version": "5.7.2",
+        "last_modified": "2020-06-18",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10767",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10767",
@@ -51956,7 +51966,8 @@
         "breaks": "",
         "cmt_msg": "x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches.",
         "fixes": "4d8df8cbb9156b0a0ab3f802b80cb5db57acc0bf",
-        "last_modified": "2020-06-16",
+        "last_affected_version": "5.7.2",
+        "last_modified": "2020-06-18",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10768",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10768",
@@ -51978,6 +51989,20 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10773",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-10773",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10773"
+        }
+    },
+    "CVE-2020-10781": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-06-18",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10781",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10781",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10781",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10781",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10781",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10781"
         }
     },
     "CVE-2020-10942": {
@@ -53026,6 +53051,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-13974",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-13974",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-13974"
+        }
+    },
+    "CVE-2020-14416": {
+        "affected_versions": "unk to v5.5",
+        "breaks": "",
+        "cmt_msg": "can, slip: Protect tty->disc_data in write_wakeup and close with RCU",
+        "fixes": "0ace17d56824165c7f4c68785d6b58971db954dd",
+        "last_affected_version": "5.4",
+        "last_modified": "2020-06-18",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14416",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14416",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-14416",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-14416",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-14416",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14416"
         }
     },
     "CVE-2020-1749": {

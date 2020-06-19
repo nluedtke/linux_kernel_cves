@@ -382,6 +382,7 @@ CVEs fixed in 4.19.99:
 CVEs fixed in 4.19.100:
   CVE-2019-14896: cbd56515be5a8ea97134ef762b7a2923b94cb9c4 libertas: Fix two buffer overflows at parsing bss descriptor
   CVE-2019-14897: cbd56515be5a8ea97134ef762b7a2923b94cb9c4 libertas: Fix two buffer overflows at parsing bss descriptor
+  CVE-2020-14416: bd1448458c6a67782d4e82c181b5540b5727546b can, slip: Protect tty->disc_data in write_wakeup and close with RCU
   CVE-2020-8428: 752f72edea55f9b7c6fd019e71365def13a0f2b6 do_last(): fetch directory ->i_mode and ->i_uid before it's too late
 
 CVEs fixed in 4.19.101:
@@ -496,8 +497,8 @@ Outstanding CVEs:
   CVE-2019-18808: (unk) crypto: ccp - Release all allocated memory if sha type is invalid 
   CVE-2019-18814: (unk)  
   CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
-  CVE-2019-19036: (unk)  
-  CVE-2019-19039: (unk)  
+  CVE-2019-19036: (unk) btrfs: Detect unbalanced tree with empty leaf before crashing btree operations 
+  CVE-2019-19039: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
   CVE-2019-19067: (unk) drm/amdgpu: fix multiple memory leaks in acp_hw_init 
@@ -511,10 +512,10 @@ Outstanding CVEs:
   CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
   CVE-2019-19770: (unk)  
-  CVE-2019-19813: (unk)  
+  CVE-2019-19813: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19814: (unk)  
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
-  CVE-2019-19816: (unk)  
+  CVE-2019-19816: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-20794: (unk)  
   CVE-2019-20810: (unk) media: go7007: fix a miss of snd_card_free 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
@@ -526,6 +527,7 @@ Outstanding CVEs:
   CVE-2020-10767: (unk) x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS. 
   CVE-2020-10768: (unk) x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches. 
   CVE-2020-10773: (unk)  
+  CVE-2020-10781: (unk)  
   CVE-2020-11725: (unk)  
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
   CVE-2020-12655: (unk) xfs: add agf freeblocks verify in xfs_agf_verify 

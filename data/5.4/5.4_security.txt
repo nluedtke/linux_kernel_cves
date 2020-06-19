@@ -70,6 +70,7 @@ CVEs fixed in 5.4.15:
 CVEs fixed in 5.4.16:
   CVE-2019-14896: 40b1747b03684f03827b6323a17e4aa67af1e307 libertas: Fix two buffer overflows at parsing bss descriptor
   CVE-2019-14897: 40b1747b03684f03827b6323a17e4aa67af1e307 libertas: Fix two buffer overflows at parsing bss descriptor
+  CVE-2020-14416: 34545cad8e0476aa6843f132e1177fe1517b2814 can, slip: Protect tty->disc_data in write_wakeup and close with RCU
   CVE-2020-8428: 454759886d0b463213fad0f1c733469e2c501ab9 do_last(): fetch directory ->i_mode and ->i_uid before it's too late
 
 CVEs fixed in 5.4.17:
@@ -119,6 +120,7 @@ CVEs fixed in 5.4.32:
   CVE-2020-11494: fdb6a094ba41e985d9fb14ae2bfc180e3e983720 slcan: Don't transmit uninitialized stack data in padding
 
 CVEs fixed in 5.4.33:
+  CVE-2019-19039: 941dabde6c1a56908696d6642229521a125dd77e btrfs: Don't submit any btree write bio if the fs has errors
   CVE-2019-19377: 941dabde6c1a56908696d6642229521a125dd77e btrfs: Don't submit any btree write bio if the fs has errors
   CVE-2020-12657: b37de1b1e882fa3741d252333e5745eea444483b block, bfq: fix use-after-free in bfq_idle_slice_timer_body
   CVE-2020-12826: 5f2d04139aa5ed04eab54b84e8a25bab87a2449c signal: Extend exec_id to 64bits
@@ -153,6 +155,11 @@ CVEs fixed in 5.4.46:
   CVE-2020-0543: dab0161b8a0bc6a86319412e39b221670ca758ca x86/cpu: Add 'table' argument to cpu_matches()
   CVE-2020-13974: 9619c2f746f7991486d556789e8675f1d1a0a67d vt: keyboard: avoid signed integer overflow in k_ascii
 
+CVEs fixed in 5.4.47:
+  CVE-2020-10766: 9d1dcba6dd48cf7c5801d8aee12852ca41110896 x86/speculation: Prevent rogue cross-process SSBD shutdown
+  CVE-2020-10767: 6d60d5462a91eb46fb88b016508edfa8ee0bc7c8 x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS.
+  CVE-2020-10768: e1545848ad5510e82eb75717c1f5757b984014cb x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches.
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -183,25 +190,18 @@ Outstanding CVEs:
   CVE-2019-18680: (unk)  
   CVE-2019-18808: (unk) crypto: ccp - Release all allocated memory if sha type is invalid 
   CVE-2019-18814: (unk)  
-  CVE-2019-19036: (unk)  
-  CVE-2019-19039: (unk)  
   CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
-  CVE-2019-19318: (unk)  
   CVE-2019-19378: (unk)  
   CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
   CVE-2019-19770: (unk)  
-  CVE-2019-19813: (unk)  
   CVE-2019-19814: (unk)  
-  CVE-2019-19816: (unk)  
   CVE-2019-20794: (unk)  
   CVE-2019-20810: (unk) media: go7007: fix a miss of snd_card_free 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
-  CVE-2020-10766: (unk) x86/speculation: Prevent rogue cross-process SSBD shutdown 
-  CVE-2020-10767: (unk) x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS. 
-  CVE-2020-10768: (unk) x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches. 
   CVE-2020-10773: (unk)  
+  CVE-2020-10781: (unk)  
   CVE-2020-11725: (unk)  
   CVE-2020-12655: (unk) xfs: add agf freeblocks verify in xfs_agf_verify 
   CVE-2020-12656: (unk)  

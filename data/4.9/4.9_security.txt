@@ -805,6 +805,7 @@ CVEs fixed in 4.9.212:
   CVE-2019-14896: b5e6f199de3b7f16b641c4ec5ac92906af1a9232 libertas: Fix two buffer overflows at parsing bss descriptor
   CVE-2019-14897: b5e6f199de3b7f16b641c4ec5ac92906af1a9232 libertas: Fix two buffer overflows at parsing bss descriptor
   CVE-2019-20806: e4188ad85032f130b84702d39755840afec4b9b4 media: tw5864: Fix possible NULL pointer dereference in tw5864_handle_frame
+  CVE-2020-14416: 0beba1d7e8e164694ae1743238f1bdf4de4f1f34 can, slip: Protect tty->disc_data in write_wakeup and close with RCU
 
 CVEs fixed in 4.9.214:
   CVE-2020-12653: 7a4d6a45f2fad3ddc07f98cf85790344ea72cd69 mwifiex: Fix possible buffer overflows in mwifiex_cmd_append_vsie_tlv()
@@ -935,8 +936,8 @@ Outstanding CVEs:
   CVE-2019-18680: (unk)  
   CVE-2019-18808: (unk) crypto: ccp - Release all allocated memory if sha type is invalid 
   CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
-  CVE-2019-19036: (unk)  
-  CVE-2019-19039: (unk)  
+  CVE-2019-19036: (unk) btrfs: Detect unbalanced tree with empty leaf before crashing btree operations 
+  CVE-2019-19039: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19060: (unk) iio: imu: adis16400: release allocated memory on failure 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
@@ -948,10 +949,10 @@ Outstanding CVEs:
   CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
   CVE-2019-19770: (unk)  
-  CVE-2019-19813: (unk)  
+  CVE-2019-19813: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19814: (unk)  
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
-  CVE-2019-19816: (unk)  
+  CVE-2019-19816: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19922: (unk) sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
@@ -973,6 +974,7 @@ Outstanding CVEs:
   CVE-2020-10767: (unk) x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS. 
   CVE-2020-10768: (unk) x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches. 
   CVE-2020-10773: (unk)  
+  CVE-2020-10781: (unk)  
   CVE-2020-11669: (unk) powerpc/powernv/idle: Restore AMR/UAMOR/AMOR after idle 
   CVE-2020-11725: (unk)  
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
