@@ -37797,7 +37797,8 @@
         },
         "cwe": "Input Validation",
         "fixes": "594cc251fdd0d231d342d88b2fdff4bc42fb0690",
-        "last_modified": "2019-03-27",
+        "last_affected_version": "4.19.128",
+        "last_modified": "2020-06-23",
         "nvd_text": "An issue where a provided address with access_ok() is not checked was discovered in i915_gem_execbuffer2_ioctl in drivers/gpu/drm/i915/i915_gem_execbuffer.c in the Linux kernel through 4.19.13. A local attacker can craft a malicious IOCTL function call to overwrite arbitrary kernel memory, resulting in a Denial of Service or privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-20669",
@@ -45633,7 +45634,8 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "09ba3bc9dd150457c506e4661380a6183af651c1",
-        "last_modified": "2020-01-28",
+        "last_affected_version": "4.19.128",
+        "last_modified": "2020-06-23",
         "nvd_text": "fs/btrfs/volumes.c in the Linux kernel before 5.1 allows a btrfs_verify_dev_extents NULL pointer dereference via a crafted btrfs image because fs_devices-&gt;devices is mishandled within find_device, aka CID-09ba3bc9dd15.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18885",
@@ -45673,7 +45675,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "62fdaa52a3d00a875da771719b6dc537ca79fce1",
         "last_affected_version": "5.3.3",
-        "last_modified": "2020-06-18",
+        "last_modified": "2020-06-23",
         "nvd_text": "btrfs_root_node in fs/btrfs/ctree.c in the Linux kernel through 5.3.12 allows a NULL pointer dereference because rcu_dereference(root-&gt;node) can be zero.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19036",
@@ -49579,7 +49581,8 @@
         },
         "cwe": "Missing Release of Resource after Effective Lifetime",
         "fixes": "9453264ef58638ce8976121ac44c07a3ef375983",
-        "last_modified": "2020-06-10",
+        "last_affected_version": "5.4.47",
+        "last_modified": "2020-06-23",
         "nvd_text": "go7007_snd_init in drivers/media/usb/go7007/snd-go7007.c in the Linux kernel before 5.6 does not call snd_card_free for a failure path, which causes a memory leak, aka CID-9453264ef586.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20810",
@@ -51695,7 +51698,8 @@
         "cmt_msg": "x86/cpu: Add 'table' argument to cpu_matches()",
         "fixes": "3798cc4d106e91382bfe016caa2edada27c2bb3f",
         "last_affected_version": "5.7.1",
-        "last_modified": "2020-06-16",
+        "last_modified": "2020-06-23",
+        "nvd_text": "Incomplete cleanup from specific special register read operations in some Intel(R) Processors may allow an authenticated user to potentially enable information disclosure via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0543",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0543",
@@ -51775,7 +51779,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-06-23",
+        "nvd_text": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10708",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10708",
@@ -51783,7 +51788,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10708",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-10708",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10708"
-        }
+        },
+        "rejected": true
     },
     "CVE-2020-10711": {
         "affected_versions": "v3.17-rc1 to v5.7-rc6",
@@ -51845,9 +51851,33 @@
         "affected_versions": "v2.6.25-rc1 to v5.7",
         "breaks": "4206d3aa1978e44f58bfa4e1c9d8d35cbf19c187",
         "cmt_msg": "fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+            "score": "3.6"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "Low",
+            "Confidentiality": "Low",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L",
+            "score": "4.4"
+        },
+        "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "1d605416fb7175e1adf094251466caa52093b413",
         "last_affected_version": "5.6",
-        "last_modified": "2020-06-13",
+        "last_modified": "2020-06-23",
+        "nvd_text": "A flaw was found in the Linux kernel's implementation of Userspace core dumps. This flaw allows an attacker with a local account to crash a trivial program and exfiltrate private kernel data.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10732",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10732",
@@ -51916,9 +51946,32 @@
         "affected_versions": "v4.5-rc1 to v5.8-rc1",
         "breaks": "5c7fb56e5e3f7035dd798a8e1adee639f87043e5",
         "cmt_msg": "mm: Fix mremap not considering huge pmd devmap",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": "6.9"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "5bfea2d9b17f1034a68147a8b03b9789af5700f9",
         "last_affected_version": "5.7.0",
-        "last_modified": "2020-06-16",
+        "last_modified": "2020-06-23",
         "nvd_text": "A flaw was found in the Linux Kernel in versions after 4.5-rc1 in the way mremap handled DAX Huge Pages. This flaw allows a local attacker with access to a DAX enabled storage to escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10757",
@@ -51935,7 +51988,7 @@
         "cmt_msg": "x86/speculation: Prevent rogue cross-process SSBD shutdown",
         "fixes": "dbbe2ad02e9df26e372f38cc3e70dab9222c832e",
         "last_affected_version": "5.7.2",
-        "last_modified": "2020-06-18",
+        "last_modified": "2020-06-23",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10766",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10766",
@@ -51951,7 +52004,7 @@
         "cmt_msg": "x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS.",
         "fixes": "21998a351512eba4ed5969006f0c55882d995ada",
         "last_affected_version": "5.7.2",
-        "last_modified": "2020-06-18",
+        "last_modified": "2020-06-23",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10767",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10767",
@@ -51967,7 +52020,7 @@
         "cmt_msg": "x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches.",
         "fixes": "4d8df8cbb9156b0a0ab3f802b80cb5db57acc0bf",
         "last_affected_version": "5.7.2",
-        "last_modified": "2020-06-18",
+        "last_modified": "2020-06-23",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10768",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10768",
@@ -51975,6 +52028,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10768",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-10768",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10768"
+        }
+    },
+    "CVE-2020-10769": {
+        "affected_versions": "unk to v5.0-rc3",
+        "breaks": "",
+        "cmt_msg": "crypto: authenc - fix parsing key with misaligned rta_len",
+        "fixes": "8f9c469348487844328e162db57112f7d347c49f",
+        "last_affected_version": "4.20.3",
+        "last_modified": "2020-06-23",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10769",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10769",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10769",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10769",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10769",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10769"
         }
     },
     "CVE-2020-10773": {
@@ -51989,6 +52058,20 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10773",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-10773",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10773"
+        }
+    },
+    "CVE-2020-10774": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-06-23",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10774",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10774",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-10774",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10774",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-10774",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10774"
         }
     },
     "CVE-2020-10781": {
@@ -53040,10 +53123,33 @@
         "affected_versions": "unk to v5.8-rc1",
         "breaks": "",
         "cmt_msg": "vt: keyboard: avoid signed integer overflow in k_ascii",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": "7.2"
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": "7.8"
+        },
+        "cwe": "Integer Overflow or Wraparound",
         "fixes": "b86dab054059b970111b5516ae548efaae5b3aae",
         "last_affected_version": "5.7.1",
-        "last_modified": "2020-06-16",
-        "nvd_text": "An issue was discovered in the Linux kernel through 5.7.1. drivers/tty/vt/keyboard.c has an integer overflow if k_ascii is called several times in a row, aka CID-b86dab054059.",
+        "last_modified": "2020-06-23",
+        "nvd_text": "** DISPUTED ** An issue was discovered in the Linux kernel through 5.7.1. drivers/tty/vt/keyboard.c has an integer overflow if k_ascii is called several times in a row, aka CID-b86dab054059. NOTE: Members in the community argue that the integer overflow does not lead to a security issue in this case.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-13974",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-13974",
@@ -53057,9 +53163,33 @@
         "affected_versions": "unk to v5.5",
         "breaks": "",
         "cmt_msg": "can, slip: Protect tty->disc_data in write_wakeup and close with RCU",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+            "score": "7.1"
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": "5.9"
+        },
+        "cwe": "Use After Free",
         "fixes": "0ace17d56824165c7f4c68785d6b58971db954dd",
         "last_affected_version": "5.4",
-        "last_modified": "2020-06-18",
+        "last_modified": "2020-06-23",
+        "nvd_text": "In the Linux kernel before 5.4.16, a race condition in tty-&gt;disc_data handling in the slip and slcan line discipline could lead to a use-after-free, aka CID-0ace17d56824. This affects drivers/net/slip/slip.c and drivers/net/can/slcan.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14416",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14416",

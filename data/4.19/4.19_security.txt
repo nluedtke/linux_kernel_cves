@@ -46,6 +46,7 @@ CVEs fixed in 4.19.16:
 CVEs fixed in 4.19.17:
   CVE-2019-11085: ac8b9e8e7ddd69f3efa91e8a99312de5729382c0 drm/i915/gvt: Fix mmap range check
   CVE-2019-3701: 8db82a6f2b76d42ec2615f8def6e797e064e7822 can: gw: ensure DLC boundaries after CAN frame modification
+  CVE-2020-10769: 44c67402c3f738b7048de4464c02461bc8d0fd37 crypto: authenc - fix parsing key with misaligned rta_len
 
 CVEs fixed in 4.19.18:
   CVE-2019-9003: 1c393ca118cfaf36c95270b9bed295bba109fafa ipmi: fix use-after-free of user->release_barrier.rda
@@ -458,6 +459,15 @@ CVEs fixed in 4.19.128:
   CVE-2020-0543: 6682fe2fca22e45153e69f5b7ce7282bcba3565f x86/cpu: Add 'table' argument to cpu_matches()
   CVE-2020-13974: 18059925dbb6a7b6be1c0166ecca29d6b7977c9a vt: keyboard: avoid signed integer overflow in k_ascii
 
+CVEs fixed in 4.19.129:
+  CVE-2018-20669: 216284c4a126b28469eb0bf4994c669e251f47ba make 'user_access_begin()' do 'access_ok()'
+  CVE-2019-18885: 8cb9b069fa631b613bbbd6f63887190e55cafa3c btrfs: merge btrfs_find_device and find_device
+  CVE-2019-19036: 227af79e6cb0ee3faeb8c70be4bc0aec0b09ea25 btrfs: Detect unbalanced tree with empty leaf before crashing btree operations
+  CVE-2019-20810: 95b58c96a28e6174661dcd5bc543618973fc43d3 media: go7007: fix a miss of snd_card_free
+  CVE-2020-10766: 5aaf72a0dcb82d5c98f3b7df149baf4c7cf63e19 x86/speculation: Prevent rogue cross-process SSBD shutdown
+  CVE-2020-10767: 5d9d55cf4733c5ced8e1d19ea242a128ab9612d2 x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS.
+  CVE-2020-10768: 52c419ba4c96880abd61b38e6e08e4ecd17350f3 x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches.
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -478,7 +488,6 @@ Outstanding CVEs:
   CVE-2018-12930: (unk)  
   CVE-2018-12931: (unk)  
   CVE-2018-17977: (unk)  
-  CVE-2018-20669: (unk) make 'user_access_begin()' do 'access_ok()' 
   CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
@@ -496,8 +505,6 @@ Outstanding CVEs:
   CVE-2019-18680: (unk)  
   CVE-2019-18808: (unk) crypto: ccp - Release all allocated memory if sha type is invalid 
   CVE-2019-18814: (unk)  
-  CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
-  CVE-2019-19036: (unk) btrfs: Detect unbalanced tree with empty leaf before crashing btree operations 
   CVE-2019-19039: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
@@ -517,16 +524,13 @@ Outstanding CVEs:
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
   CVE-2019-19816: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-20794: (unk)  
-  CVE-2019-20810: (unk) media: go7007: fix a miss of snd_card_free 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
-  CVE-2020-10766: (unk) x86/speculation: Prevent rogue cross-process SSBD shutdown 
-  CVE-2020-10767: (unk) x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS. 
-  CVE-2020-10768: (unk) x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches. 
   CVE-2020-10773: (unk)  
+  CVE-2020-10774: (unk)  
   CVE-2020-10781: (unk)  
   CVE-2020-11725: (unk)  
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
