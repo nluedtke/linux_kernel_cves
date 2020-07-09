@@ -53242,6 +53242,20 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14305"
         }
     },
+    "CVE-2020-14314": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-07-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14314",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14314",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-14314",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-14314",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-14314",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14314"
+        }
+    },
     "CVE-2020-14416": {
         "affected_versions": "v2.6.12-rc2 to v5.5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -53286,8 +53300,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.8-rc3",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "usb: usbtest: fix missing kfree(dev->buf) in usbtest_disconnect",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Missing Release of Resource after Effective Lifetime",
         "fixes": "28ebeb8db77035e058a510ce9bd17c2b9a009dba",
-        "last_modified": "2020-07-02",
+        "last_affected_version": "5.7.7",
+        "last_modified": "2020-07-09",
+        "nvd_text": "In the Linux kernel through 5.7.6, usbtest_disconnect in drivers/usb/misc/usbtest.c has a memory leak, aka CID-28ebeb8db770.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15393",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-15393",
