@@ -52084,9 +52084,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.0-rc3",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "crypto: authenc - fix parsing key with misaligned rta_len",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "8f9c469348487844328e162db57112f7d347c49f",
         "last_affected_version": "4.20.3",
-        "last_modified": "2020-07-06",
+        "last_modified": "2020-07-14",
         "nvd_text": "A buffer over-read flaw was found in RH kernel versions before 5.0 in crypto_authenc_extractkeys in crypto/authenc.c in the IPsec Cryptographic algorithm's module, authenc. When a payload longer than 4 bytes, and is not following 4-byte alignment boundary guidelines, it causes a buffer over-read threat, leading to a system crash. This flaw allows a local attacker with user privileges to cause a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10769",
@@ -52098,10 +52121,12 @@
         }
     },
     "CVE-2020-10773": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.4-rc6",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2020-06-16",
+        "cmt_msg": "s390/cmm: fix information leak in cmm_timeout_handler()",
+        "fixes": "b8e51a6a9db94bc1fb18ae831b3dab106b5a4b5f",
+        "last_affected_version": "5.3.8",
+        "last_modified": "2020-07-14",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10773",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10773",
@@ -52777,8 +52802,9 @@
         }
     },
     "CVE-2020-12656": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.8-rc1",
         "breaks": "",
+        "cmt_msg": "sunrpc: check that domain table is empty at module unload.",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -52802,8 +52828,8 @@
             "score": "5.5"
         },
         "cwe": "Missing Release of Resource after Effective Lifetime",
-        "fixes": "",
-        "last_modified": "2020-05-18",
+        "fixes": "f45db2b909c7e76f35850e78f017221f30282b8e",
+        "last_modified": "2020-07-14",
         "nvd_text": "** DISPUTED ** gss_mech_free in net/sunrpc/auth_gss/gss_mech_switch.c in the rpcsec_gss_krb5 implementation in the Linux kernel through 5.6.10 lacks certain domain_release calls, leading to a memory leak. Note: This was disputed with the assertion that the issue does not grant any access not already available. It is a problem that on unloading a specific kernel module some memory is leaked, but loading kernel modules is a privileged operation. A user could also write a kernel module to consume any amount of memory they like and load that replicating the effect of this bug.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12656",
