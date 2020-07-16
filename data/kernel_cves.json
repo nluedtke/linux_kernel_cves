@@ -47661,7 +47661,8 @@
         "cmt_msg": "KVM: x86: fix presentation of TSX feature in ARCH_CAPABILITIES",
         "fixes": "cbbaa2727aa3ae9e0a844803da7cef7fd3b94f2b",
         "last_affected_version": "5.4.2",
-        "last_modified": "2020-01-28",
+        "last_modified": "2020-07-16",
+        "nvd_text": "A flaw was found in the fix for CVE-2019-11135, in the Linux upstream kernel versions before 5.5 where, the way Intel CPUs handle speculative execution of instructions when a TSX Asynchronous Abort (TAA) error occurs. When a guest is running on a host CPU affected by the TAA flaw (TAA_NO=0), but is not affected by the MDS issue (MDS_NO=1), the guest was to clear the affected buffers by using a VERW instruction mechanism. But when the MDS_NO=1 bit was exported to the guests, the guests did not use the VERW mechanism to clear the affected buffers. This issue affects guests running on Cascade Lake CPUs and requires that host has 'TSX' enabled. Confidentiality of data is the highest threat associated with this vulnerability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19338",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19338",
@@ -49686,6 +49687,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-20812",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-20812",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-20812"
+        }
+    },
+    "CVE-2019-20908": {
+        "affected_versions": "unk to v5.4-rc1",
+        "breaks": "",
+        "cmt_msg": "efi: Restrict efivar_ssdt_load when the kernel is locked down",
+        "fixes": "1957a85b0032a81e6482ca4aab883643b8dae06e",
+        "last_modified": "2020-07-16",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20908",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20908",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-20908",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-20908",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-20908",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-20908"
         }
     },
     "CVE-2019-2101": {
@@ -53360,6 +53376,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-15393",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-15393",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-15393"
+        }
+    },
+    "CVE-2020-15780": {
+        "affected_versions": "unk to v5.8-rc3",
+        "breaks": "",
+        "cmt_msg": "ACPI: configfs: Disallow loading ACPI tables when locked down",
+        "fixes": "75b0cea7bf307f362057cc778efe89af4c615354",
+        "last_affected_version": "5.7.6",
+        "last_modified": "2020-07-16",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15780",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-15780",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-15780",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-15780",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-15780",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-15780"
         }
     },
     "CVE-2020-1749": {
