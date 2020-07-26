@@ -47661,9 +47661,32 @@
         "affected_versions": "v5.4-rc8 to v5.5-rc1",
         "breaks": "1b42f017415b46c317e71d41c34ec088417a1883",
         "cmt_msg": "KVM: x86: fix presentation of TSX feature in ARCH_CAPABILITIES",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Observable Discrepancy",
         "fixes": "cbbaa2727aa3ae9e0a844803da7cef7fd3b94f2b",
         "last_affected_version": "5.4.2",
-        "last_modified": "2020-07-16",
+        "last_modified": "2020-07-26",
         "nvd_text": "A flaw was found in the fix for CVE-2019-11135, in the Linux upstream kernel versions before 5.5 where, the way Intel CPUs handle speculative execution of instructions when a TSX Asynchronous Abort (TAA) error occurs. When a guest is running on a host CPU affected by the TAA flaw (TAA_NO=0), but is not affected by the MDS issue (MDS_NO=1), the guest was to clear the affected buffers by using a VERW instruction mechanism. But when the MDS_NO=1 bit was exported to the guests, the guests did not use the VERW mechanism to clear the affected buffers. This issue affects guests running on Cascade Lake CPUs and requires that host has 'TSX' enabled. Confidentiality of data is the highest threat associated with this vulnerability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19338",
@@ -51727,10 +51750,35 @@
         }
     },
     "CVE-2020-0305": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.5-rc6",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2020-07-23",
+        "cmt_msg": "chardev: Avoid potential use-after-free in 'chrdev_open()'",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.4
+        },
+        "cwe": "Use After Free",
+        "fixes": "68faa679b8be1a74e6663c21c3a9d25d32f1c079",
+        "last_affected_version": "5.4.11",
+        "last_modified": "2020-07-26",
         "nvd_text": "In cdev_get of char_dev.c, there is a possible use-after-free due to a race condition. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android-10Android ID: A-153467744",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0305",
