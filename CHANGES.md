@@ -1,20 +1,21 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 16Jun20 06:51
+## Last Update - 31Jul20 07:22
 
 ### **New CVEs Added:**
 
-[CVE-2020-10773](cves/CVE-2020-10773)  
+[CVE-2020-16166](cves/CVE-2020-16166)  
+
+
+### **New Versions Checked:**
+
+[4.14.190](streams/4.14)  
+[4.19.135](streams/4.19)  
+[5.4.54](streams/5.4)  
+[5.7.11](streams/5.7)  
 
 
 ### **Updated CVEs:**
 
-[CVE-2019-19462](cves/CVE-2019-19462)  
-[CVE-2020-0543](cves/CVE-2020-0543)  
-[CVE-2020-10757](cves/CVE-2020-10757)  
-[CVE-2020-10766](cves/CVE-2020-10766)  
-[CVE-2020-10767](cves/CVE-2020-10767)  
-[CVE-2020-10768](cves/CVE-2020-10768)  
-[CVE-2020-12888](cves/CVE-2020-12888)  
-[CVE-2020-13974](cves/CVE-2020-13974)  
+[CVE-2020-14331](cves/CVE-2020-14331)  

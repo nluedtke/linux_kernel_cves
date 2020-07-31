@@ -569,6 +569,7 @@ CVEs fixed in 3.16.66:
   CVE-2019-9213: c90030281dc8b6a25ac8850e98e15877f80b8d66 mm: enforce min addr even if capable() in expand_downwards()
   CVE-2019-9466: 52b1af5e74cc3f4d513eacf49f71d9855a9ccbec brcmfmac: add subtype check for event handling in data path
   CVE-2019-9503: 52b1af5e74cc3f4d513eacf49f71d9855a9ccbec brcmfmac: add subtype check for event handling in data path
+  CVE-2020-10769: ccd67cd15b3e3b2f3d1b03fd4336ea7ab5d35211 crypto: authenc - fix parsing key with misaligned rta_len
 
 CVEs fixed in 3.16.67:
   CVE-2019-10639: 8b197d3ce585d6777197e0633d71e5af7d98cb35 netns: provide pure entropy for net_hash_mix()
@@ -678,6 +679,9 @@ CVEs fixed in 3.16.79:
   CVE-2019-19534: f13615187cd8069c0f1c492e8f244a0c69d0663e can: peak_usb: fix slab info leak
   CVE-2019-2215: 3a593dd8bd7505f9acbc7b6f8928ec6b7978c125 ANDROID: binder: remove waitqueue when thread exits.
 
+CVEs fixed in 3.16.80:
+  CVE-2020-10773: c97d5d87f654979c81a36fbd75844a41e5a82cdc s390/cmm: fix information leak in cmm_timeout_handler()
+
 CVEs fixed in 3.16.81:
   CVE-2019-14895: 3b2f9bd867e1a288b470da440992a908c5972644 mwifiex: fix possible heap overflow in mwifiex_process_country_ie()
   CVE-2019-18806: e1db96134ab329054b73c4075949053e43ac7208 net: qlogic: Fix memory leak in ql_alloc_large_buffers
@@ -701,6 +705,7 @@ CVEs fixed in 3.16.83:
   CVE-2019-20812: 8c1a8e6dba6a09d65ec7eef54ac13e36b7be9536 af_packet: set defaule value for tmo
   CVE-2019-5108: 93864704f211e55eddec0c03ca300b1cf6414d8c mac80211: Do not send Layer 2 Update frame before authorization
   CVE-2020-0009: 85216b0a3fc5f3eb08e68750175f8507d5608e37 staging: android: ashmem: Disallow ashmem memory from being remapped
+  CVE-2020-0305: 6a0a5980a6092c82258858c7588f8bbb36df6026 chardev: Avoid potential use-after-free in 'chrdev_open()'
   CVE-2020-10690: 5230ef61882d2d14deb846eb6b48370694816e4c ptp: fix the race between the release of ptp_clock and cdev
   CVE-2020-10942: e4d98e5299b19e1caad03f0b38fd41b046d0de56 vhost: Check docket sk_family instead of call getname
   CVE-2020-11494: 08fadc32ce6239dc75fd5e869590e29bc62bbc28 slcan: Don't transmit uninitialized stack data in padding
@@ -708,6 +713,7 @@ CVEs fixed in 3.16.83:
   CVE-2020-11608: 39a4c51860e9695369b640962be4eb6984175384 media: ov519: add missing endpoint sanity checks
   CVE-2020-11609: 98d33c0103b16e64a6a4788cf81e22baf229f48e media: stv06xx: add missing descriptor sanity checks
   CVE-2020-11668: 9e236e2465ff5858bed537b94b15134e3ba55e75 media: xirlink_cit: add missing descriptor sanity checks
+  CVE-2020-14416: 10912babe0dff14eea532492a6b9c55f1471fd75 can, slip: Protect tty->disc_data in write_wakeup and close with RCU
   CVE-2020-1749: b9f3e457098ea76f2d69bfc369bae1fd0cf2a6e5 net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup
   CVE-2020-2732: 5d7476c40cd352ec82aec26f6c6d8c413eb2b17b KVM: nVMX: Don't emulate instructions in guest mode
   CVE-2020-8647: bca2e2e83484ff63ca82c9c2c905d4e580f1a35a vgacon: Fix a UAF in vgacon_invert_region
@@ -857,8 +863,8 @@ Outstanding CVEs:
   CVE-2019-18660: (unk) powerpc/book3s64: Fix link stack flush on context switch 
   CVE-2019-18680: (unk)  
   CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
-  CVE-2019-19036: (unk)  
-  CVE-2019-19039: (unk)  
+  CVE-2019-19036: (unk) btrfs: Detect unbalanced tree with empty leaf before crashing btree operations 
+  CVE-2019-19039: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19060: (unk) iio: imu: adis16400: release allocated memory on failure 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
@@ -870,9 +876,9 @@ Outstanding CVEs:
   CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
   CVE-2019-19770: (unk)  
-  CVE-2019-19813: (unk)  
+  CVE-2019-19813: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19814: (unk)  
-  CVE-2019-19816: (unk)  
+  CVE-2019-19816: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19922: (unk) sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
@@ -880,6 +886,7 @@ Outstanding CVEs:
   CVE-2019-20794: (unk)  
   CVE-2019-20806: (unk) media: tw5864: Fix possible NULL pointer dereference in tw5864_handle_frame 
   CVE-2019-20810: (unk) media: go7007: fix a miss of snd_card_free 
+  CVE-2019-20908: (unk) efi: Restrict efivar_ssdt_load when the kernel is locked down 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-2213: (unk) binder: fix possible UAF when freeing buffer 
   CVE-2019-3837: (unk) net_dma: simple removal 
@@ -892,15 +899,18 @@ Outstanding CVEs:
   CVE-2020-0067: (unk) f2fs: fix to avoid memory leakage in f2fs_listxattr 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
-  CVE-2020-10766: (unk) x86/speculation: Prevent rogue cross-process SSBD shutdown 
-  CVE-2020-10767: (unk) x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS. 
-  CVE-2020-10768: (unk) x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches. 
-  CVE-2020-10773: (unk)  
+  CVE-2020-10774: (unk)  
   CVE-2020-11669: (unk) powerpc/powernv/idle: Restore AMR/UAMOR/AMOR after idle 
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
   CVE-2020-12655: (unk) xfs: add agf freeblocks verify in xfs_agf_verify 
-  CVE-2020-12656: (unk)  
-  CVE-2020-12771: (unk)  
+  CVE-2020-12656: (unk) sunrpc: check that domain table is empty at module unload. 
+  CVE-2020-12771: (unk) bcache: fix potential deadlock problem in btree_gc_coalesce 
   CVE-2020-12888: (unk) vfio-pci: Invalidate mmaps and block MMIO access on disabled memory 
   CVE-2020-13974: (unk) vt: keyboard: avoid signed integer overflow in k_ascii 
-  CVE-2020-8832: (unk)  
+  CVE-2020-14304: (unk)  
+  CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
+  CVE-2020-14314: (unk)  
+  CVE-2020-15393: (unk) usb: usbtest: fix missing kfree(dev->buf) in usbtest_disconnect 
+  CVE-2020-15852: (unk) x86/ioperm: Fix io bitmap invalidation on Xen PV 
+  CVE-2020-16166: (unk) random32: update the net random state on interrupt and activity 
+  CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
