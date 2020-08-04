@@ -33488,7 +33488,8 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "2c4306f719b083d17df2963bc761777576b8ad1b",
-        "last_affected_version": "3.16.57",
+        "last_affected_version": "4.14.190",
+        "last_modified": "2020-08-03",
         "nvd_text": "The xfs_bmap_extents_to_btree function in fs/xfs/libxfs/xfs_bmap.c in the Linux kernel through 4.16.3 allows local users to cause a denial of service (xfs_bmapi_write NULL pointer dereference) via a crafted xfs image.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-10323",
@@ -49718,8 +49719,31 @@
         "affected_versions": "v2.6.12-rc2 to v5.4-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "efi: Restrict efivar_ssdt_load when the kernel is locked down",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.7
+        },
+        "cwe": "Incorrect Default Permissions",
         "fixes": "1957a85b0032a81e6482ca4aab883643b8dae06e",
-        "last_modified": "2020-07-21",
+        "last_modified": "2020-08-03",
         "nvd_text": "An issue was discovered in drivers/firmware/efi/efi.c in the Linux kernel before 5.4. Incorrect access permissions for the efivar_ssdt ACPI variable could be used by attackers to bypass lockdown or secure boot restrictions, aka CID-1957a85b0032.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20908",
@@ -53541,11 +53565,12 @@
         }
     },
     "CVE-2020-16166": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.8",
         "breaks": "",
         "cmt_msg": "random32: update the net random state on interrupt and activity",
         "fixes": "f227e3ec3b5cad859ad15666874405e8c1bbc1d4",
-        "last_modified": "2020-07-31",
+        "last_modified": "2020-08-03",
+        "nvd_text": "The Linux kernel through 5.7.11 allows remote attackers to make observations that help to obtain sensitive information about the internal state of the network RNG, aka CID-f227e3ec3b5c. This is related to drivers/char/random.c and kernel/time/timer.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16166",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-16166",
