@@ -1406,8 +1406,21 @@
             "Integrity Impact": "None",
             "score": "5.4"
         },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.9
+        },
         "cwe": "Race Conditions",
         "fixes": "f6d8bd051c391c1c0458a30b2a7abcd939329259",
+        "last_modified": "2020-08-04",
         "nvd_text": "Race condition in the IP implementation in the Linux kernel before 3.0 might allow remote attackers to cause a denial of service (slab corruption and system crash) by sending packets to an application that sets socket options during the handling of network traffic.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2012-3552",
@@ -48735,6 +48748,7 @@
     "CVE-2019-19770": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "blktrace: fix debugfs use after free",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -48758,8 +48772,8 @@
             "score": "7.5"
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2020-04-17",
+        "fixes": "bad8e64fb19d3a0de5e564d9a7271c31bd684369",
+        "last_modified": "2020-08-04",
         "nvd_text": "** DISPUTED ** In the Linux kernel 4.19.83, there is a use-after-free (read) in the debugfs_remove function in fs/debugfs/inode.c (which is used to remove a file or directory in debugfs that was previously created with a call to another debugfs function such as debugfs_create_file). NOTE: Linux kernel developers dispute this issue as not being an issue with debugfs, instead this is an issue with misuse of debugfs within blktrace.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19770",
@@ -51773,6 +51787,20 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0110"
         }
     },
+    "CVE-2020-0255": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-08-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0255",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0255",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-0255",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0255",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-0255",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0255"
+        }
+    },
     "CVE-2020-0305": {
         "affected_versions": "unk to v5.5-rc6",
         "breaks": "",
@@ -53569,7 +53597,8 @@
         "breaks": "",
         "cmt_msg": "random32: update the net random state on interrupt and activity",
         "fixes": "f227e3ec3b5cad859ad15666874405e8c1bbc1d4",
-        "last_modified": "2020-08-03",
+        "last_affected_version": "5.7",
+        "last_modified": "2020-08-04",
         "nvd_text": "The Linux kernel through 5.7.11 allows remote attackers to make observations that help to obtain sensitive information about the internal state of the network RNG, aka CID-f227e3ec3b5c. This is related to drivers/char/random.c and kernel/time/timer.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16166",
