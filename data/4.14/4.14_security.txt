@@ -657,6 +657,7 @@ CVEs fixed in 4.14.178:
   CVE-2020-12464: b49aa64f1d2526de71ae0354d37026e5861ccb4b USB: core: Fix free-while-in-use bug in the USB S-Glibrary
 
 CVEs fixed in 4.14.179:
+  CVE-2020-0255: 90d4469b0aefac7695e48a641551f74a38f55613 selinux: properly handle multiple messages in selinux_netlink_send()
   CVE-2020-10751: 90d4469b0aefac7695e48a641551f74a38f55613 selinux: properly handle multiple messages in selinux_netlink_send()
 
 CVEs fixed in 4.14.181:
@@ -697,6 +698,17 @@ CVEs fixed in 4.14.189:
 CVEs fixed in 4.14.191:
   CVE-2018-10323: 8a443ffcf7b572c071398644d35cf9cc55cfa2cb xfs: set format back to extents if xfs_bmap_extents_to_btree
 
+CVEs fixed in 4.14.192:
+  CVE-2017-18232: 3a156abd24346a3188eb7e88cf86386a409e0d02 scsi: libsas: direct call probe and destruct
+  CVE-2018-8043: 9e06953ee2a406c4bf4ff08c700d3ce1254974d1 net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe()
+  CVE-2019-18808: a42f149865da48f25e5a49ca344dbcad61b66ae1 crypto: ccp - Release all allocated memory if sha type is invalid
+  CVE-2019-19054: 12273ec840cc67b2ec469ee5f5214559357436bb media: rc: prevent memory leak in cx23888_ir_probe
+  CVE-2019-19061: 8d75cc141d702ebc280dde2b32b50cfdea3a02b3 iio: imu: adis16400: fix memory leak
+  CVE-2019-19073: 5502de13f91db625b063cb9d0793c7391f38452d ath9k_htc: release allocated buffer if timed out
+  CVE-2019-19074: 83c212df7794563a2f45a3be8fbc097e352b2c3a ath9k: release allocated buffer if timed out
+  CVE-2019-3016: fd4a641bb5731c0ce5397698560a823602dbaac2 x86/kvm: Be careful not to clear KVM_VCPU_FLUSH_TLB bit
+  CVE-2019-9445: 6a27f426266ac0d29faa95bed8934afeef1f9d13 f2fs: check if file namelen exceeds max value
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -713,7 +725,6 @@ Outstanding CVEs:
   CVE-2017-1000405: (unk) mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d() 
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
-  CVE-2017-18232: (unk) scsi: libsas: direct call probe and destruct 
   CVE-2017-5715: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-9986: (unk) sound: Retire OSS 
@@ -731,7 +742,6 @@ Outstanding CVEs:
   CVE-2018-5995: (unk) printk: hash addresses printed with %p 
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
-  CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
   CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
@@ -748,16 +758,11 @@ Outstanding CVEs:
   CVE-2019-16089: (unk)  
   CVE-2019-16230: (unk) drm/amdkfd: fix a potential NULL pointer dereference (v2) 
   CVE-2019-18680: (unk)  
-  CVE-2019-18808: (unk) crypto: ccp - Release all allocated memory if sha type is invalid 
   CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
   CVE-2019-19036: (unk) btrfs: Detect unbalanced tree with empty leaf before crashing btree operations 
   CVE-2019-19039: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
-  CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19060: (unk) iio: imu: adis16400: release allocated memory on failure 
-  CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
   CVE-2019-19067: (unk) drm/amdgpu: fix multiple memory leaks in acp_hw_init 
-  CVE-2019-19073: (unk) ath9k_htc: release allocated buffer if timed out 
-  CVE-2019-19074: (unk) ath9k: release allocated buffer if timed out 
   CVE-2019-19377: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19378: (unk)  
   CVE-2019-19448: (unk)  
@@ -770,12 +775,9 @@ Outstanding CVEs:
   CVE-2019-20794: (unk)  
   CVE-2019-20908: (unk) efi: Restrict efivar_ssdt_load when the kernel is locked down 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
-  CVE-2019-3016: (unk) x86/kvm: Be careful not to clear KVM_VCPU_FLUSH_TLB bit 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2019-9444: (unk) printk: hash addresses printed with %p 
-  CVE-2019-9445: (unk) f2fs: check if file namelen exceeds max value 
-  CVE-2020-0255: (unk)  
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
   CVE-2020-10774: (unk)  

@@ -3365,8 +3365,21 @@
             "Integrity Impact": "Complete",
             "score": "6.9"
         },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "cwe": "Input Validation",
         "fixes": "fa3d315a4ce2c0891cdde262562e710d95fba19e",
+        "last_modified": "2020-08-05",
         "nvd_text": "The KVM subsystem in the Linux kernel before 3.0 does not check whether kernel addresses are specified during allocation of memory slots for use in a guest's physical address space, which allows local users to gain privileges or obtain sensitive information from kernel memory via a crafted application, related to arch/x86/kvm/paging_tmpl.h and virt/kvm/kvm_main.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2013-1943",
@@ -3610,8 +3623,21 @@
             "Integrity Impact": "None",
             "score": "4.9"
         },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
         "cwe": "Buffer Errors",
         "fixes": "baff42ab1494528907bf4d5870359e31711746ae",
+        "last_modified": "2020-08-05",
         "nvd_text": "The tcp_read_sock function in net/ipv4/tcp.c in the Linux kernel before 2.6.34 does not properly manage skb consumption, which allows local users to cause a denial of service (system crash) via a crafted splice system call for a TCP socket.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2013-2128",
@@ -28857,6 +28883,8 @@
         },
         "cwe": "Error Handling",
         "fixes": "0558f33c06bb910e2879e355192227a8e8f0219d",
+        "last_affected_version": "4.14.191",
+        "last_modified": "2020-08-05",
         "nvd_text": "The Serial Attached SCSI (SAS) implementation in the Linux kernel through 4.15.9 mishandles a mutex within libsas, which allows local users to cause a denial of service (deadlock) by triggering certain error-handling code.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-18232",
@@ -39478,7 +39506,8 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "297a6961ffb8ff4dc66c9fbf53b924bd1dda05d5",
-        "last_modified": "2019-03-05",
+        "last_affected_version": "4.14.191",
+        "last_modified": "2020-08-05",
         "nvd_text": "The unimac_mdio_probe function in drivers/net/phy/mdio-bcm-unimac.c in the Linux kernel through 4.15.8 does not validate certain resource availability, which allows local users to cause a denial of service (NULL pointer dereference).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-8043",
@@ -45387,7 +45416,8 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "128c66429247add5128c03dc1e144ca56f05a4e2",
-        "last_modified": "2020-01-28",
+        "last_affected_version": "5.4.55",
+        "last_modified": "2020-08-05",
         "nvd_text": "A memory leak in the ccp_run_sha_cmd() function in drivers/crypto/ccp/ccp-ops.c in the Linux kernel through 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-128c66429247.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18808",
@@ -46265,7 +46295,8 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "a7b2df76b42bdd026e3106cf2ba97db41345a177",
-        "last_modified": "2020-01-28",
+        "last_affected_version": "5.4.55",
+        "last_modified": "2020-08-05",
         "nvd_text": "A memory leak in the cx23888_ir_probe() function in drivers/media/pci/cx23885/cx23888-ir.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering kfifo_alloc() failures, aka CID-a7b2df76b42b.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19054",
@@ -46544,7 +46575,7 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "9c0530e898f384c5d279bfcebd8bb17af1105873",
         "last_affected_version": "5.3.8",
-        "last_modified": "2020-01-28",
+        "last_modified": "2020-08-05",
         "nvd_text": "A memory leak in the adis_update_scan_mode_burst() function in drivers/iio/imu/adis_buffer.c in the Linux kernel before 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-9c0530e898f3.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19061",
@@ -46784,7 +46815,7 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "57be09c6e8747bf48704136d9e3f92bfb93f5725",
         "last_affected_version": "5.3.7",
-        "last_modified": "2020-01-28",
+        "last_modified": "2020-08-05",
         "nvd_text": "** DISPUTED ** Four memory leaks in the acp_hw_init() function in drivers/gpu/drm/amd/amdgpu/amdgpu_acp.c in the Linux kernel before 5.3.8 allow attackers to cause a denial of service (memory consumption) by triggering mfd_add_hotplug_devices() or pm_genpd_add_device() failures, aka CID-57be09c6e874. NOTE: third parties dispute the relevance of this because the attacker must already have privileges for module loading.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19067",
@@ -46983,7 +47014,8 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "96c5c6e6a5b6db592acae039fed54b5c8844cd35",
-        "last_modified": "2020-01-28",
+        "last_affected_version": "4.19.136",
+        "last_modified": "2020-08-05",
         "nvd_text": "A memory leak in the predicate_parse() function in kernel/trace/trace_events_filter.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption), aka CID-96c5c6e6a5b6.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19072",
@@ -47022,7 +47054,8 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "853acf7caf10b828102d92d05b5c101666a6142b",
-        "last_modified": "2020-01-28",
+        "last_affected_version": "4.19.136",
+        "last_modified": "2020-08-05",
         "nvd_text": "Memory leaks in drivers/net/wireless/ath/ath9k/htc_hst.c in the Linux kernel through 5.3.11 allow attackers to cause a denial of service (memory consumption) by triggering wait_for_completion_timeout() failures. This affects the htc_config_pipe_credits() function, the htc_setup_complete() function, and the htc_connect_service() function, aka CID-853acf7caf10.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19073",
@@ -47061,7 +47094,8 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "728c1e2a05e4b5fc52fab3421dce772a806612a2",
-        "last_modified": "2020-01-28",
+        "last_affected_version": "4.19.136",
+        "last_modified": "2020-08-05",
         "nvd_text": "A memory leak in the ath9k_wmi_cmd() function in drivers/net/wireless/ath/ath9k/wmi.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption), aka CID-728c1e2a05e4.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19074",
@@ -47380,7 +47414,8 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "104c307147ad379617472dd91a5bcb368d72bd6d",
-        "last_modified": "2020-01-28",
+        "last_affected_version": "4.19.136",
+        "last_modified": "2020-08-05",
         "nvd_text": "Memory leaks in *create_resource_pool() functions under drivers/gpu/drm/amd/display/dc in the Linux kernel through 5.3.11 allow attackers to cause a denial of service (memory consumption). This affects the dce120_create_resource_pool() function in drivers/gpu/drm/amd/display/dc/dce120/dce120_resource.c, the dce110_create_resource_pool() function in drivers/gpu/drm/amd/display/dc/dce110/dce110_resource.c, the dce100_create_resource_pool() function in drivers/gpu/drm/amd/display/dc/dce100/dce100_resource.c, the dcn10_create_resource_pool() function in drivers/gpu/drm/amd/display/dc/dcn10/dcn10_resource.c, and the dce112_create_resource_pool() function in drivers/gpu/drm/amd/display/dc/dce112/dce112_resource.c, aka CID-104c307147ad.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19082",
@@ -48852,7 +48887,8 @@
         },
         "cwe": "Use After Free",
         "fixes": "6bf9e4bd6a277840d3fe8c5d5d530a1fbd3db592",
-        "last_modified": "2020-06-18",
+        "last_affected_version": "4.19.136",
+        "last_modified": "2020-08-05",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image, performing some operations, and then making a syncfs system call can lead to a use-after-free in __mutex_lock in kernel/locking/mutex.c. This is related to mutex_can_spin_on_owner in kernel/locking/mutex.c, __btrfs_qgroup_free_meta in fs/btrfs/qgroup.c, and btrfs_insert_delayed_items in fs/btrfs/delayed-inode.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19813",
@@ -48968,7 +49004,8 @@
         },
         "cwe": "Out-of-bounds Write",
         "fixes": "6bf9e4bd6a277840d3fe8c5d5d530a1fbd3db592",
-        "last_modified": "2020-06-18",
+        "last_affected_version": "4.19.136",
+        "last_modified": "2020-08-05",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image and performing some operations can cause slab-out-of-bounds write access in __btrfs_map_block in fs/btrfs/volumes.c, because a value of 1 for the number of data stripes is mishandled.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19816",
@@ -50028,7 +50065,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "8c6de56a42e0c657955e12b882a81ef07d1d073e",
         "last_affected_version": "5.5.2",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-08-05",
         "nvd_text": "In a Linux KVM guest that has PV TLB enabled, a process in the guest kernel may be able to read memory locations from another process in the same guest. This problem is limit to the host running linux kernel 4.10 with a guest running linux kernel 4.16 or later. The problem mainly affects AMD processors but Intel CPUs cannot be ruled out.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3016",
@@ -50292,7 +50329,8 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "1033990ac5b2ab6cee93734cb6d301aa3a35bcaa",
-        "last_modified": "2019-05-20",
+        "last_affected_version": "4.19.136",
+        "last_modified": "2020-08-05",
         "nvd_text": "The SCTP socket buffer used by a userspace application is not accounted by the cgroups subsystem. An attacker can use this flaw to cause a denial of service attack. Kernel 3.10.x and 4.18.x branches are believed to be vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3874",
@@ -51109,7 +51147,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "720db068634c91553a8e1d9a0fcd8c7050e06d2b",
         "last_affected_version": "4.19.96",
-        "last_modified": "2020-05-27",
+        "last_modified": "2020-08-05",
         "nvd_text": "In the Android kernel in F2FS driver there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-9445",
@@ -51788,10 +51826,12 @@
         }
     },
     "CVE-2020-0255": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.7-rc4",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2020-08-04",
+        "cmt_msg": "selinux: properly handle multiple messages in selinux_netlink_send()",
+        "fixes": "fb73974172ffaaf57a7c42f35424d9aece1a5af6",
+        "last_affected_version": "5.6.10",
+        "last_modified": "2020-08-05",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0255",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0255",
@@ -52965,7 +53005,8 @@
         },
         "cwe": "Missing Release of Resource after Effective Lifetime",
         "fixes": "f45db2b909c7e76f35850e78f017221f30282b8e",
-        "last_modified": "2020-07-14",
+        "last_affected_version": "5.7.12",
+        "last_modified": "2020-08-05",
         "nvd_text": "** DISPUTED ** gss_mech_free in net/sunrpc/auth_gss/gss_mech_switch.c in the rpcsec_gss_krb5 implementation in the Linux kernel through 5.6.10 lacks certain domain_release calls, leading to a memory leak. Note: This was disputed with the assertion that the issue does not grant any access not already available. It is a problem that on unloading a specific kernel module some memory is leaked, but loading kernel modules is a privileged operation. A user could also write a kernel module to consume any amount of memory they like and load that replicating the effect of this bug.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12656",
@@ -53422,7 +53463,7 @@
         "affected_versions": "v5.8-rc7 to unk",
         "breaks": "92ed301919932f777713b9172e525674157e983d",
         "fixes": "",
-        "last_modified": "2020-07-31",
+        "last_modified": "2020-08-05",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14331",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14331",
@@ -53593,12 +53634,12 @@
         }
     },
     "CVE-2020-16166": {
-        "affected_versions": "unk to v5.8",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.8",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "random32: update the net random state on interrupt and activity",
         "fixes": "f227e3ec3b5cad859ad15666874405e8c1bbc1d4",
         "last_affected_version": "5.7",
-        "last_modified": "2020-08-04",
+        "last_modified": "2020-08-05",
         "nvd_text": "The Linux kernel through 5.7.11 allows remote attackers to make observations that help to obtain sensitive information about the internal state of the network RNG, aka CID-f227e3ec3b5c. This is related to drivers/char/random.c and kernel/time/timer.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16166",
