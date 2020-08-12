@@ -51839,12 +51839,12 @@
         }
     },
     "CVE-2020-0255": {
-        "affected_versions": "unk to v5.7-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.7-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "selinux: properly handle multiple messages in selinux_netlink_send()",
         "fixes": "fb73974172ffaaf57a7c42f35424d9aece1a5af6",
         "last_affected_version": "5.6.10",
-        "last_modified": "2020-08-05",
+        "last_modified": "2020-08-11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0255",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0255",
@@ -53459,10 +53459,10 @@
         }
     },
     "CVE-2020-14314": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.23-rc7 to unk",
+        "breaks": "ef2b02d3e617cb0400eedf2668f86215e1b0e6af",
         "fixes": "",
-        "last_modified": "2020-07-09",
+        "last_modified": "2020-08-11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14314",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14314",
@@ -53475,8 +53475,10 @@
     "CVE-2020-14331": {
         "affected_versions": "v5.8-rc7 to unk",
         "breaks": "92ed301919932f777713b9172e525674157e983d",
-        "fixes": "",
-        "last_modified": "2020-08-05",
+        "cmt_msg": "vgacon: Fix for missing check in scrollback handling",
+        "fixes": "ebfdfeeae8c01fcb2b3b74ffaf03876e20835d2d",
+        "last_affected_version": "5.8.0",
+        "last_modified": "2020-08-11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14331",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14331",
@@ -53484,6 +53486,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-14331",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-14331",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14331"
+        }
+    },
+    "CVE-2020-14353": {
+        "affected_versions": "v2.6.26-rc1 to v4.14-rc3",
+        "breaks": "69664cf16af4f31cd54d77948a4baf9c7e0ca7b9",
+        "cmt_msg": "KEYS: prevent creating a different user's keyrings",
+        "fixes": "237bbd29f7a049d310d907f4b2716a7feef9abf3",
+        "last_affected_version": "4.13.4",
+        "last_modified": "2020-08-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14353",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14353",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-14353",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-14353",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-14353",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14353"
         }
     },
     "CVE-2020-14416": {
@@ -53607,8 +53625,8 @@
         }
     },
     "CVE-2020-15852": {
-        "affected_versions": "unk to v5.8-rc6",
-        "breaks": "",
+        "affected_versions": "v5.5-rc1 to v5.8-rc6",
+        "breaks": "22fe5b0439dd53643fd6f4c582c46c6dba0fde53",
         "cmt_msg": "x86/ioperm: Fix io bitmap invalidation on Xen PV",
         "cvss2": {
             "Access Complexity": "Low",
@@ -53635,7 +53653,7 @@
         "cwe": "Incorrect Default Permissions",
         "fixes": "cadfad870154e14f745ec845708bc17d166065f2",
         "last_affected_version": "5.7.9",
-        "last_modified": "2020-07-28",
+        "last_modified": "2020-08-11",
         "nvd_text": "An issue was discovered in the Linux kernel 5.5 through 5.7.9, as used in Xen through 4.13.x for x86 PV guests. An attacker may be granted the I/O port permissions of an unrelated task. This occurs because tss_invalidate_io_bitmap mishandling causes a loss of synchronization between the I/O bitmaps of TSS and Xen, aka CID-cadfad870154.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15852",
@@ -53650,9 +53668,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.8",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "random32: update the net random state on interrupt and activity",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
+        },
+        "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "f227e3ec3b5cad859ad15666874405e8c1bbc1d4",
         "last_affected_version": "5.7",
-        "last_modified": "2020-08-05",
+        "last_modified": "2020-08-11",
         "nvd_text": "The Linux kernel through 5.7.11 allows remote attackers to make observations that help to obtain sensitive information about the internal state of the network RNG, aka CID-f227e3ec3b5c. This is related to drivers/char/random.c and kernel/time/timer.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16166",
