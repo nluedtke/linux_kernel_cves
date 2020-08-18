@@ -8256,9 +8256,22 @@
             "Integrity Impact": "None",
             "score": "4.9"
         },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.7
+        },
         "cwe": "Race Conditions",
         "fixes": "2febc839133280d5a5e8e1179c94ea674489dae2",
         "last_affected_version": "3.16.34",
+        "last_modified": "2020-08-18",
         "nvd_text": "Race condition in the __kvm_migrate_pit_timer function in arch/x86/kvm/i8254.c in the KVM subsystem in the Linux kernel through 3.17.2 allows guest OS users to cause a denial of service (host OS crash) by leveraging incorrect PIT emulation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2014-3611",
@@ -48833,7 +48846,7 @@
         }
     },
     "CVE-2019-19770": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.9-rc1",
         "breaks": "",
         "cmt_msg": "blktrace: fix debugfs use after free",
         "cvss2": {
@@ -48860,7 +48873,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "bad8e64fb19d3a0de5e564d9a7271c31bd684369",
-        "last_modified": "2020-08-04",
+        "last_modified": "2020-08-18",
         "nvd_text": "** DISPUTED ** In the Linux kernel 4.19.83, there is a use-after-free (read) in the debugfs_remove function in fs/debugfs/inode.c (which is used to remove a file or directory in debugfs that was previously created with a call to another debugfs function such as debugfs_create_file). NOTE: Linux kernel developers dispute this issue as not being an issue with debugfs, instead this is an issue with misuse of debugfs within blktrace.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19770",
@@ -52347,12 +52360,12 @@
         }
     },
     "CVE-2020-10773": {
-        "affected_versions": "unk to v5.4-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.4-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "s390/cmm: fix information leak in cmm_timeout_handler()",
         "fixes": "b8e51a6a9db94bc1fb18ae831b3dab106b5a4b5f",
         "last_affected_version": "5.3.8",
-        "last_modified": "2020-07-14",
+        "last_modified": "2020-08-18",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10773",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10773",
@@ -53030,8 +53043,8 @@
         }
     },
     "CVE-2020-12656": {
-        "affected_versions": "unk to v5.8-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.8-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "sunrpc: check that domain table is empty at module unload.",
         "cvss2": {
             "Access Complexity": "Low",
@@ -53058,7 +53071,7 @@
         "cwe": "Missing Release of Resource after Effective Lifetime",
         "fixes": "f45db2b909c7e76f35850e78f017221f30282b8e",
         "last_affected_version": "5.7.12",
-        "last_modified": "2020-08-05",
+        "last_modified": "2020-08-18",
         "nvd_text": "** DISPUTED ** gss_mech_free in net/sunrpc/auth_gss/gss_mech_switch.c in the rpcsec_gss_krb5 implementation in the Linux kernel through 5.6.10 lacks certain domain_release calls, leading to a memory leak. Note: This was disputed with the assertion that the issue does not grant any access not already available. It is a problem that on unloading a specific kernel module some memory is leaked, but loading kernel modules is a privileged operation. A user could also write a kernel module to consume any amount of memory they like and load that replicating the effect of this bug.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12656",
@@ -53483,11 +53496,11 @@
         }
     },
     "CVE-2020-14305": {
-        "affected_versions": "unk to v4.12-rc1",
-        "breaks": "",
+        "affected_versions": "v3.6-rc1 to v4.12-rc1",
+        "breaks": "1afc56794e03229fa53cfa3c5012704d226e1dec",
         "cmt_msg": "netfilter: helpers: remove data_len usage for inkernel helpers",
         "fixes": "9f0f3ebeda47a5518817f33c40f6d3ea9c0275b8",
-        "last_modified": "2020-06-25",
+        "last_modified": "2020-08-18",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14305",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14305",
@@ -53512,12 +53525,12 @@
         }
     },
     "CVE-2020-14331": {
-        "affected_versions": "v5.8-rc7 to unk",
+        "affected_versions": "v5.8-rc7 to v5.9-rc1",
         "breaks": "92ed301919932f777713b9172e525674157e983d",
         "cmt_msg": "vgacon: Fix for missing check in scrollback handling",
         "fixes": "ebfdfeeae8c01fcb2b3b74ffaf03876e20835d2d",
         "last_affected_version": "5.8.0",
-        "last_modified": "2020-08-11",
+        "last_modified": "2020-08-18",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14331",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14331",
