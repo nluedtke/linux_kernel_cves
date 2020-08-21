@@ -888,6 +888,17 @@ CVEs fixed in 4.9.231:
 CVEs fixed in 4.9.232:
   CVE-2018-10323: 8e5f820e14e93ebfc7fcf2a099817eb9c7c3be04 xfs: set format back to extents if xfs_bmap_extents_to_btree
 
+CVEs fixed in 4.9.233:
+  CVE-2018-13093: 42c59d544af976f4736640ef25ff791e2188aed3 xfs: validate cached inodes are free when allocated
+  CVE-2018-13094: beff051fa566f6ed93da74171b30fb049038b23d xfs: don't call xfs_da_shrink_inode with NULL bp
+  CVE-2018-8043: a7efa804e0f4053b21356a0d40bd0942c77fe8d1 net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe()
+  CVE-2019-18808: 65d77c8771d2246fafb8e57dd260c8fa7224a576 crypto: ccp - Release all allocated memory if sha type is invalid
+  CVE-2019-19054: fa5ac0514ec1f66c2c04c6486a9f090d4ddfdac9 media: rc: prevent memory leak in cx23888_ir_probe
+  CVE-2019-19073: 86c3e3e5937f7496d08eb7bc498ee3c10095d23c ath9k_htc: release allocated buffer if timed out
+  CVE-2019-19074: f0b65fee921fe7efda2889d1a3eea69137682402 ath9k: release allocated buffer if timed out
+  CVE-2019-9445: 7745e3c67b80865bd0bc0812fda9f6292c8dc2fb f2fs: check if file namelen exceeds max value
+  CVE-2020-16166: 5aa78397e208b6871a8bdec7fa2bd6992b1f3e4b random32: update the net random state on interrupt and activity
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -923,8 +934,6 @@ Outstanding CVEs:
   CVE-2018-12929: (unk)  
   CVE-2018-12930: (unk)  
   CVE-2018-12931: (unk)  
-  CVE-2018-13093: (unk) xfs: validate cached inodes are free when allocated 
-  CVE-2018-13094: (unk) xfs: don't call xfs_da_shrink_inode with NULL bp 
   CVE-2018-13095: (unk) xfs: More robust inode extent count validation 
   CVE-2018-13098: (unk) f2fs: fix to do sanity check with extra_attr feature 
   CVE-2018-17977: (unk)  
@@ -935,7 +944,6 @@ Outstanding CVEs:
   CVE-2018-5995: (unk) printk: hash addresses printed with %p 
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
-  CVE-2018-8043: (unk) net: phy: mdio-bcm-unimac: fix potential NULL dereference in unimac_mdio_probe() 
   CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
@@ -954,16 +962,12 @@ Outstanding CVEs:
   CVE-2019-15794: (unk)  
   CVE-2019-16230: (unk) drm/amdkfd: fix a potential NULL pointer dereference (v2) 
   CVE-2019-18680: (unk)  
-  CVE-2019-18808: (unk) crypto: ccp - Release all allocated memory if sha type is invalid 
   CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
   CVE-2019-19036: (unk) btrfs: Detect unbalanced tree with empty leaf before crashing btree operations 
   CVE-2019-19039: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
-  CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19060: (unk) iio: imu: adis16400: release allocated memory on failure 
   CVE-2019-19061: (unk) iio: imu: adis16400: fix memory leak 
   CVE-2019-19067: (unk) drm/amdgpu: fix multiple memory leaks in acp_hw_init 
-  CVE-2019-19073: (unk) ath9k_htc: release allocated buffer if timed out 
-  CVE-2019-19074: (unk) ath9k: release allocated buffer if timed out 
   CVE-2019-19377: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19378: (unk)  
   CVE-2019-19448: (unk)  
@@ -985,7 +989,6 @@ Outstanding CVEs:
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2019-7308: (unk) bpf: fix sanitation of alu op with pointer / scalar type from different paths 
   CVE-2019-9444: (unk) printk: hash addresses printed with %p 
-  CVE-2019-9445: (unk) f2fs: check if file namelen exceeds max value 
   CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
   CVE-2020-0067: (unk) f2fs: fix to avoid memory leakage in f2fs_listxattr 
   CVE-2020-10135: (unk)  
@@ -993,6 +996,7 @@ Outstanding CVEs:
   CVE-2020-10774: (unk)  
   CVE-2020-11669: (unk) powerpc/powernv/idle: Restore AMR/UAMOR/AMOR after idle 
   CVE-2020-11725: (unk)  
+  CVE-2020-11935: (unk)  
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
   CVE-2020-12656: (unk) sunrpc: check that domain table is empty at module unload. 
   CVE-2020-12888: (unk) vfio-pci: Invalidate mmaps and block MMIO access on disabled memory 
@@ -1000,6 +1004,5 @@ Outstanding CVEs:
   CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
   CVE-2020-14314: (unk)  
   CVE-2020-15780: (unk) ACPI: configfs: Disallow loading ACPI tables when locked down 
-  CVE-2020-16166: (unk) random32: update the net random state on interrupt and activity 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 

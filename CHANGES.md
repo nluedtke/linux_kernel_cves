@@ -1,31 +1,34 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 20Aug20 12:26
+## Last Update - 21Aug20 10:51
+
+### **New CVEs Added:**
+
+[CVE-2020-11935](cves/CVE-2020-11935)  
+[CVE-2020-24394](cves/CVE-2020-24394)  
+
 
 ### **New Versions Checked:**
 
-[4.19.140](streams/4.19)  
-[5.4.59](streams/5.4)  
-[5.7.16](streams/5.7)  
-[5.8.2](streams/5.8)  
+[4.14.194](streams/4.14)  
+[4.19.141](streams/4.19)  
+[4.4.233](streams/4.4)  
+[4.9.233](streams/4.9)  
+[5.4.60](streams/5.4)  
+[5.7.17](streams/5.7)  
+[5.8.3](streams/5.8)  
 
 
 ### **Updated CVEs:**
 
-[CVE-2019-19770](cves/CVE-2019-19770)  
-[CVE-2014-3610](cves/CVE-2014-3610)  
-[CVE-2014-3646](cves/CVE-2014-3646)  
-[CVE-2014-3647](cves/CVE-2014-3647)  
-[CVE-2014-3690](cves/CVE-2014-3690)  
-[CVE-2014-7825](cves/CVE-2014-7825)  
-[CVE-2014-7826](cves/CVE-2014-7826)  
-[CVE-2014-7970](cves/CVE-2014-7970)  
-[CVE-2014-7975](cves/CVE-2014-7975)  
-[CVE-2014-8086](cves/CVE-2014-8086)  
-[CVE-2014-8134](cves/CVE-2014-8134)  
-[CVE-2014-8369](cves/CVE-2014-8369)  
-[CVE-2014-8559](cves/CVE-2014-8559)  
-[CVE-2014-9322](cves/CVE-2014-9322)  
-[CVE-2020-0255](cves/CVE-2020-0255)  
-[CVE-2020-14353](cves/CVE-2020-14353)  
+[CVE-2018-13093](cves/CVE-2018-13093)  
+[CVE-2018-13094](cves/CVE-2018-13094)  
+[CVE-2018-8043](cves/CVE-2018-8043)  
+[CVE-2019-18808](cves/CVE-2019-18808)  
+[CVE-2019-19054](cves/CVE-2019-19054)  
+[CVE-2019-19073](cves/CVE-2019-19073)  
+[CVE-2019-19074](cves/CVE-2019-19074)  
+[CVE-2019-9445](cves/CVE-2019-9445)  
+[CVE-2020-16166](cves/CVE-2020-16166)  
+[CVE-2020-14356](cves/CVE-2020-14356)  
