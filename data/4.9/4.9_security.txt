@@ -896,6 +896,7 @@ CVEs fixed in 4.9.233:
   CVE-2019-19054: fa5ac0514ec1f66c2c04c6486a9f090d4ddfdac9 media: rc: prevent memory leak in cx23888_ir_probe
   CVE-2019-19073: 86c3e3e5937f7496d08eb7bc498ee3c10095d23c ath9k_htc: release allocated buffer if timed out
   CVE-2019-19074: f0b65fee921fe7efda2889d1a3eea69137682402 ath9k: release allocated buffer if timed out
+  CVE-2019-19448: 802dff14b904b37a985ab287db546d872f950f05 btrfs: only search for left_info if there is no right_info in try_merge_free_space
   CVE-2019-9445: 7745e3c67b80865bd0bc0812fda9f6292c8dc2fb f2fs: check if file namelen exceeds max value
   CVE-2020-16166: 5aa78397e208b6871a8bdec7fa2bd6992b1f3e4b random32: update the net random state on interrupt and activity
 
@@ -970,7 +971,6 @@ Outstanding CVEs:
   CVE-2019-19067: (unk) drm/amdgpu: fix multiple memory leaks in acp_hw_init 
   CVE-2019-19377: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19378: (unk)  
-  CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
   CVE-2019-19770: (unk) blktrace: fix debugfs use after free 
   CVE-2019-19813: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
@@ -1002,7 +1002,7 @@ Outstanding CVEs:
   CVE-2020-12888: (unk) vfio-pci: Invalidate mmaps and block MMIO access on disabled memory 
   CVE-2020-14304: (unk)  
   CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
-  CVE-2020-14314: (unk)  
+  CVE-2020-14314: (unk) ext4: fix potential negative array index in do_split() 
   CVE-2020-15780: (unk) ACPI: configfs: Disallow loading ACPI tables when locked down 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 

@@ -48100,8 +48100,9 @@
         }
     },
     "CVE-2019-19448": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.9-rc1",
         "breaks": "",
+        "cmt_msg": "btrfs: only search for left_info if there is no right_info in try_merge_free_space",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -48125,8 +48126,9 @@
             "score": "7.8"
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2019-12-11",
+        "fixes": "bf53d4687b8f3f6b752f091eb85f62369a515dfd",
+        "last_affected_version": "5.8.2",
+        "last_modified": "2020-08-25",
         "nvd_text": "In the Linux kernel 5.0.21 and 5.3.11, mounting a crafted btrfs filesystem image, performing some operations, and then making a syncfs system call can lead to a use-after-free in try_merge_free_space in fs/btrfs/free-space-cache.c because the pointer to a left data structure can be the same as the pointer to a right data structure.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19448",
@@ -53698,10 +53700,11 @@
         }
     },
     "CVE-2020-14314": {
-        "affected_versions": "v2.6.23-rc7 to unk",
+        "affected_versions": "v2.6.23-rc7 to v5.9-rc2",
         "breaks": "ef2b02d3e617cb0400eedf2668f86215e1b0e6af",
-        "fixes": "",
-        "last_modified": "2020-08-11",
+        "cmt_msg": "ext4: fix potential negative array index in do_split()",
+        "fixes": "5872331b3d91820e14716632ebb56b1399b34fe1",
+        "last_modified": "2020-08-25",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14314",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14314",
