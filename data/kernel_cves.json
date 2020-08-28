@@ -52942,7 +52942,7 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2020-08-21",
+        "last_modified": "2020-08-28",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11935",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-11935",
@@ -52950,7 +52950,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-11935",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-11935",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-11935"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2020-12114": {
         "affected_versions": "v3.10-rc1 to v5.3-rc1",
@@ -53753,9 +53754,32 @@
         "affected_versions": "unk to v5.8-rc5",
         "breaks": "",
         "cmt_msg": "cgroup: fix cgroup_sk_alloc() for sk_clone_lock()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "ad0f75e5f57ccbceec13274e1e242f2b5a6397ed",
         "last_affected_version": "5.7.9",
-        "last_modified": "2020-08-21",
+        "last_modified": "2020-08-28",
         "nvd_text": "A flaw null pointer dereference in the Linux kernel cgroupv2 subsystem in versions before 5.7.10 was found in the way when reboot the system. A local user could use this flaw to crash the system or escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14356",
@@ -53986,9 +54010,32 @@
         "affected_versions": "v4.10-rc1 to v5.8-rc4",
         "breaks": "47057abde515155a4fee53038e7772d6b387e0aa",
         "cmt_msg": "nfsd: apply umask on fs without ACL support",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Incorrect Default Permissions",
         "fixes": "22cf8419f1319ff87ec759d0ebdff4cbafaee832",
         "last_affected_version": "5.7.7",
-        "last_modified": "2020-08-21",
+        "last_modified": "2020-08-28",
         "nvd_text": "In the Linux kernel before 5.7.8, fs/nfsd/vfs.c (in the NFS server) can set incorrect permissions on new filesystem objects when the filesystem lacks ACL support, aka CID-22cf8419f131. This occurs because the current umask is not considered.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24394",
