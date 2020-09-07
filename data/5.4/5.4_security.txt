@@ -108,6 +108,7 @@ CVEs fixed in 5.4.26:
 
 CVEs fixed in 5.4.28:
   CVE-2019-19769: 384e15fc4226551a45b54226dc57bca7e23db9d8 locks: fix a potential use-after-free problem when wakeup a waiter
+  CVE-2020-14381: 553d46b07dc4813e1d8e6a3b3d6eb8603b4dda74 futex: Fix inode life-time issue
 
 CVEs fixed in 5.4.29:
   CVE-2020-11608: e4af1cf37b901839320e40515d9a60a1c8b51f3a media: ov519: add missing endpoint sanity checks
@@ -135,6 +136,7 @@ CVEs fixed in 5.4.36:
   CVE-2020-12464: b48193a7c303272d357b27dd7d72cbf89f7b2d35 USB: core: Fix free-while-in-use bug in the USB S-Glibrary
 
 CVEs fixed in 5.4.39:
+  CVE-2020-0255: eeef0d9fd40df3c033dca68bca8249e5951660ac selinux: properly handle multiple messages in selinux_netlink_send()
   CVE-2020-10751: eeef0d9fd40df3c033dca68bca8249e5951660ac selinux: properly handle multiple messages in selinux_netlink_send()
 
 CVEs fixed in 5.4.42:
@@ -174,9 +176,27 @@ CVEs fixed in 5.4.50:
 
 CVEs fixed in 5.4.51:
   CVE-2020-15393: 3dca0a299ff43204a69c9a7a00ce2b3e7ab3088c usb: usbtest: fix missing kfree(dev->buf) in usbtest_disconnect
+  CVE-2020-24394: fe05e114d0fde7f644ac9ab5edfce3fa65650875 nfsd: apply umask on fs without ACL support
 
 CVEs fixed in 5.4.53:
   CVE-2020-10781: 72648019cd52488716891c2cbb096ad1023ab83e Revert "zram: convert remaining CLASS_ATTR() to CLASS_ATTR_RO()"
+
+CVEs fixed in 5.4.56:
+  CVE-2019-18808: ecfa7fa198fc66731ded5dabefccc8e9e2f3b311 crypto: ccp - Release all allocated memory if sha type is invalid
+  CVE-2019-19054: 84da97713b9112c9529a941b230219b759e6f206 media: rc: prevent memory leak in cx23888_ir_probe
+  CVE-2020-12656: 98cef10fbcca40e70f9f389a4bea42384376376b sunrpc: check that domain table is empty at module unload.
+
+CVEs fixed in 5.4.57:
+  CVE-2020-16166: c15a77bdda2c4f8acaa3e436128630a81f904ae7 random32: update the net random state on interrupt and activity
+
+CVEs fixed in 5.4.59:
+  CVE-2019-19770: 6a291f9c21e4acf3429aacfa2e019d9965806c51 blktrace: fix debugfs use after free
+
+CVEs fixed in 5.4.60:
+  CVE-2019-19448: 7bbf647dbb5a28e754633512065146763a35ff77 btrfs: only search for left_info if there is no right_info in try_merge_free_space
+
+CVEs fixed in 5.4.61:
+  CVE-2020-14314: ea54176e5821936d109bb45dc2c19bd53559e735 ext4: fix potential negative array index in do_split()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -206,21 +226,13 @@ Outstanding CVEs:
   CVE-2019-15902: (unk) unknown 
   CVE-2019-16089: (unk)  
   CVE-2019-18680: (unk)  
-  CVE-2019-18808: (unk) crypto: ccp - Release all allocated memory if sha type is invalid 
-  CVE-2019-19054: (unk) media: rc: prevent memory leak in cx23888_ir_probe 
   CVE-2019-19378: (unk)  
-  CVE-2019-19448: (unk)  
   CVE-2019-19449: (unk)  
-  CVE-2019-19770: (unk)  
   CVE-2019-19814: (unk)  
   CVE-2019-20794: (unk)  
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
   CVE-2020-10774: (unk)  
   CVE-2020-11725: (unk)  
-  CVE-2020-12656: (unk) sunrpc: check that domain table is empty at module unload. 
   CVE-2020-12888: (unk) vfio-pci: Invalidate mmaps and block MMIO access on disabled memory 
   CVE-2020-14304: (unk)  
-  CVE-2020-14314: (unk)  
-  CVE-2020-15852: (unk) x86/ioperm: Fix io bitmap invalidation on Xen PV 
-  CVE-2020-16166: (unk) random32: update the net random state on interrupt and activity 

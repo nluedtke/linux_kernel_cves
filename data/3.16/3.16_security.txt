@@ -423,6 +423,7 @@ CVEs fixed in 3.16.52:
   CVE-2017-18270: 9d62d5d2f4130bd7c6986cfde8becb4fa0cf4f7f KEYS: prevent creating a different user's keyrings
   CVE-2017-8824: 37e923d49eb8219cab4e49237d026755276484a0 dccp: CVE-2017-8824: use-after-free in DCCP code
   CVE-2018-7191: ff31768dd6814abefb7724fa6dc0976b33edce0e tun: call dev_get_valid_name() before register_netdevice()
+  CVE-2020-14353: 9d62d5d2f4130bd7c6986cfde8becb4fa0cf4f7f KEYS: prevent creating a different user's keyrings
 
 CVEs fixed in 3.16.54:
   CVE-2017-13216: 63aa20e4f4760249339c7771bd7e4a01d82a95ad staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl
@@ -713,6 +714,7 @@ CVEs fixed in 3.16.83:
   CVE-2020-11608: 39a4c51860e9695369b640962be4eb6984175384 media: ov519: add missing endpoint sanity checks
   CVE-2020-11609: 98d33c0103b16e64a6a4788cf81e22baf229f48e media: stv06xx: add missing descriptor sanity checks
   CVE-2020-11668: 9e236e2465ff5858bed537b94b15134e3ba55e75 media: xirlink_cit: add missing descriptor sanity checks
+  CVE-2020-14381: 87903c4d3a9b422cd1d254b693e84b95f9df0706 futex: Fix inode life-time issue
   CVE-2020-14416: 10912babe0dff14eea532492a6b9c55f1471fd75 can, slip: Protect tty->disc_data in write_wakeup and close with RCU
   CVE-2020-1749: b9f3e457098ea76f2d69bfc369bae1fd0cf2a6e5 net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup
   CVE-2020-2732: 5d7476c40cd352ec82aec26f6c6d8c413eb2b17b KVM: nVMX: Don't emulate instructions in guest mode
@@ -727,6 +729,7 @@ CVEs fixed in 3.16.84:
 CVEs fixed in 3.16.85:
   CVE-2017-14991: f37de82d22dc41e9748b788655fab4bfea465a02 scsi: sg: fixup infoleak when using SG_GET_REQUEST_TABLE
   CVE-2019-19319: 51890201da4d654f6ca131bc45a0e892bb10de1d ext4: protect journal inode's blocks using block_validity
+  CVE-2020-0255: 9592b90cdc99f58e0674e64037c422ea7e9aa367 selinux: properly handle multiple messages in selinux_netlink_send()
   CVE-2020-0543: 98a637c406eefe95f2428739c1397f250bb7fadd x86/cpu: Add 'table' argument to cpu_matches()
   CVE-2020-10732: d03daec2e50aa2a0b6de2c3572af5e1d61f9d132 fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()
   CVE-2020-10751: 9592b90cdc99f58e0674e64037c422ea7e9aa367 selinux: properly handle multiple messages in selinux_netlink_send()
@@ -873,9 +876,9 @@ Outstanding CVEs:
   CVE-2019-19074: (unk) ath9k: release allocated buffer if timed out 
   CVE-2019-19377: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19378: (unk)  
-  CVE-2019-19448: (unk)  
+  CVE-2019-19448: (unk) btrfs: only search for left_info if there is no right_info in try_merge_free_space 
   CVE-2019-19449: (unk)  
-  CVE-2019-19770: (unk)  
+  CVE-2019-19770: (unk) blktrace: fix debugfs use after free 
   CVE-2019-19813: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19814: (unk)  
   CVE-2019-19816: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
@@ -909,8 +912,7 @@ Outstanding CVEs:
   CVE-2020-13974: (unk) vt: keyboard: avoid signed integer overflow in k_ascii 
   CVE-2020-14304: (unk)  
   CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
-  CVE-2020-14314: (unk)  
+  CVE-2020-14314: (unk) ext4: fix potential negative array index in do_split() 
   CVE-2020-15393: (unk) usb: usbtest: fix missing kfree(dev->buf) in usbtest_disconnect 
-  CVE-2020-15852: (unk) x86/ioperm: Fix io bitmap invalidation on Xen PV 
   CVE-2020-16166: (unk) random32: update the net random state on interrupt and activity 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
