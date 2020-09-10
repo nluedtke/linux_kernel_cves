@@ -24356,9 +24356,9 @@
         }
     },
     "CVE-2017-1000410": {
-        "affected_versions": "v3.3-rc1 to v4.15-rc8",
-        "breaks": "42dceae2819b5ac6fc9a0d414ae05a8960e2a1d9",
-        "cmt_msg": "Bluetooth: Properly check L2CAP config option output buffer length",
+        "affected_versions": "unk to v4.15-rc8",
+        "breaks": "",
+        "cmt_msg": "Bluetooth: Prevent stack info leak from the EFS element.",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -24366,7 +24366,8 @@
             "Availability Impact": "None",
             "Confidentiality Impact": "Partial",
             "Integrity Impact": "None",
-            "score": "5.0"
+            "raw": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 5.0
         },
         "cvss3": {
             "Attack Complexity": "Low",
@@ -24377,12 +24378,13 @@
             "Privileges Required": "None",
             "Scope": "Unchanged",
             "User Interaction": "None",
-            "score": "7.5"
+            "raw": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
         },
-        "cwe": "Information Leak / Disclosure",
+        "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "06e7e776ca4d36547e503279aeff996cbb292c16",
         "last_affected_version": "None",
-        "last_modified": "2020-06-25",
+        "last_modified": "2020-09-10",
         "nvd_text": "The Linux kernel version 3.3-rc1 and later is affected by a vulnerability lies in the processing of incoming L2CAP commands - ConfigRequest, and ConfigResponse messages. This info leak is a result of uninitialized stack variables that may be returned to an attacker in their uninitialized state. By manipulating the code flows that precede the handling of these configuration messages, an attacker can also gain some control over which data will be held in the uninitialized stack variables. This can allow him to bypass KASLR, and stack canaries protection - as both pointers and stack canaries may be leaked in this manner. Combining this vulnerability (for example) with the previously disclosed RCE vulnerability in L2CAP configuration parsing (CVE-2017-1000251) may allow an attacker to exploit the RCE against kernels which were built with the above mitigations. These are the specifics of this vulnerability: In the function l2cap_parse_conf_rsp and in the function l2cap_parse_conf_req the following variable is declared without initialization: struct l2cap_conf_efs efs; In addition, when parsing input configuration parameters in both of these functions, the switch case for handling EFS elements may skip the memcpy call that will write to the efs variable: ... case L2CAP_CONF_EFS: if (olen == sizeof(efs)) memcpy(&efs, (void *)val, olen); ... The olen in the above if is attacker controlled, and regardless of that if, in both of these functions the efs variable would eventually be added to the outgoing configuration request that is being built: l2cap_add_conf_opt(&ptr, L2CAP_CONF_EFS, sizeof(efs), (unsigned long) &efs); So by sending a configuration request, or response, that contains an L2CAP_CONF_EFS element, but with an element length that is not sizeof(efs) - the memcpy to the uninitialized efs variable can be avoided, and the uninitialized variable would be returned to the attacker (16 bytes).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-1000410",
@@ -53925,12 +53927,12 @@
         }
     },
     "CVE-2020-14331": {
-        "affected_versions": "v5.8-rc7 to v5.9-rc1",
-        "breaks": "92ed301919932f777713b9172e525674157e983d",
+        "affected_versions": "v2.6.17-rc1 to v5.9-rc1",
+        "breaks": "15bdab959c9bb909c0317480dd9b35748a8f7887",
         "cmt_msg": "vgacon: Fix for missing check in scrollback handling",
         "fixes": "ebfdfeeae8c01fcb2b3b74ffaf03876e20835d2d",
         "last_affected_version": "5.8.0",
-        "last_modified": "2020-08-18",
+        "last_modified": "2020-09-10",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14331",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14331",
@@ -53959,8 +53961,8 @@
         "rejected": true
     },
     "CVE-2020-14356": {
-        "affected_versions": "v5.8-rc5 to v5.8-rc5",
-        "breaks": "ad0f75e5f57ccbceec13274e1e242f2b5a6397ed",
+        "affected_versions": "v4.5-rc1 to v5.8-rc5",
+        "breaks": "bd1060a1d67128bb8fbe2e1384c518912cbe54e7",
         "cmt_msg": "cgroup: fix cgroup_sk_alloc() for sk_clone_lock()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -53987,7 +53989,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "ad0f75e5f57ccbceec13274e1e242f2b5a6397ed",
         "last_affected_version": "5.7.9",
-        "last_modified": "2020-09-02",
+        "last_modified": "2020-09-10",
         "nvd_text": "A flaw null pointer dereference in the Linux kernel cgroupv2 subsystem in versions before 5.7.10 was found in the way when reboot the system. A local user could use this flaw to crash the system or escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14356",
@@ -54300,6 +54302,50 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-24394",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-24394",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-24394"
+        }
+    },
+    "CVE-2020-25211": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "1cc5ef91d2ff94d2bf2de3b3585423e8a1051cb6",
+        "last_modified": "2020-09-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25211",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25211",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25211",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25211",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25211",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25211"
+        }
+    },
+    "CVE-2020-25212": {
+        "affected_versions": "unk to v5.9-rc1",
+        "breaks": "",
+        "cmt_msg": "nfs: Fix getxattr kernel panic and memory overflow",
+        "fixes": "b4487b93545214a9db8cbf32e86411677b0cca21",
+        "last_affected_version": "5.8.2",
+        "last_modified": "2020-09-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25212",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25212",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25212",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25212",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25212",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25212"
+        }
+    },
+    "CVE-2020-25220": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-09-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25220",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25220",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25220",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25220",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25220",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25220"
         }
     },
     "CVE-2020-2732": {

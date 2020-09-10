@@ -201,7 +201,7 @@ CVEs fixed in 4.9.48:
 
 CVEs fixed in 4.9.50:
   CVE-2017-1000251: 6300c8bfafe032187f3cbaa43dbf7d306650c5ed Bluetooth: Properly check L2CAP config option output buffer length
-  CVE-2017-1000410: 6300c8bfafe032187f3cbaa43dbf7d306650c5ed Bluetooth: Properly check L2CAP config option output buffer length
+  CVE-2017-1000410: 6300c8bfafe032187f3cbaa43dbf7d306650c5ed Bluetooth: Prevent stack info leak from the EFS element.
   CVE-2017-14340: 5b82e0e938af5d9dfb038e2483cb2a84e24584fd xfs: XFS_IS_REALTIME_INODE() should be false if no rt device present
   CVE-2017-9984: 03bea515b9a2f2a48d46a5a4bcc69be264afb6af ALSA: msnd: Optimize / harden DSP and MIDI loops
   CVE-2017-9985: 03bea515b9a2f2a48d46a5a4bcc69be264afb6af ALSA: msnd: Optimize / harden DSP and MIDI loops
@@ -884,6 +884,9 @@ CVEs fixed in 4.9.229:
 CVEs fixed in 4.9.230:
   CVE-2020-15393: 4ea5c9091d62e9516819c7bcb7c09658bde85acc usb: usbtest: fix missing kfree(dev->buf) in usbtest_disconnect
 
+CVEs fixed in 4.9.231:
+  CVE-2020-14356: 51fbad61b1dc2a082c7f7dbc3b1299a1e40c061a cgroup: fix cgroup_sk_alloc() for sk_clone_lock()
+
 CVEs fixed in 4.9.232:
   CVE-2018-10323: 8e5f820e14e93ebfc7fcf2a099817eb9c7c3be04 xfs: set format back to extents if xfs_bmap_extents_to_btree
 
@@ -897,7 +900,9 @@ CVEs fixed in 4.9.233:
   CVE-2019-19074: f0b65fee921fe7efda2889d1a3eea69137682402 ath9k: release allocated buffer if timed out
   CVE-2019-19448: 802dff14b904b37a985ab287db546d872f950f05 btrfs: only search for left_info if there is no right_info in try_merge_free_space
   CVE-2019-9445: 7745e3c67b80865bd0bc0812fda9f6292c8dc2fb f2fs: check if file namelen exceeds max value
+  CVE-2020-14331: 8c19b606e78a2b08e1ea69eebd5c290913c89612 vgacon: Fix for missing check in scrollback handling
   CVE-2020-16166: 5aa78397e208b6871a8bdec7fa2bd6992b1f3e4b random32: update the net random state on interrupt and activity
+  CVE-2020-25212: 8973046648c4f0392f50d915ea1bdb639e930519 nfs: Fix getxattr kernel panic and memory overflow
 
 CVEs fixed in 4.9.234:
   CVE-2020-14314: 539ae3e03875dacaa9c388aff141ccbb4ef4ecb5 ext4: fix potential negative array index in do_split()
@@ -1010,5 +1015,7 @@ Outstanding CVEs:
   CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
   CVE-2020-14386: (unk) net/packet: fix overflow in tpacket_rcv 
   CVE-2020-15780: (unk) ACPI: configfs: Disallow loading ACPI tables when locked down 
+  CVE-2020-25211: (unk)  
+  CVE-2020-25220: (unk)  
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
