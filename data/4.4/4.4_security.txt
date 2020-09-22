@@ -362,7 +362,6 @@ CVEs fixed in 4.4.87:
 
 CVEs fixed in 4.4.88:
   CVE-2017-1000251: f7ec367c8ea7021517c9c04b0022c225d2d0785a Bluetooth: Properly check L2CAP config option output buffer length
-  CVE-2017-1000410: f7ec367c8ea7021517c9c04b0022c225d2d0785a Bluetooth: Properly check L2CAP config option output buffer length
   CVE-2017-14340: ad3903434142953a03b84ec8719ce80373a62266 xfs: XFS_IS_REALTIME_INODE() should be false if no rt device present
   CVE-2017-9984: 55681470154567b4a8a30ec8b35a8ebd5a4f3608 ALSA: msnd: Optimize / harden DSP and MIDI loops
   CVE-2017-9985: 55681470154567b4a8a30ec8b35a8ebd5a4f3608 ALSA: msnd: Optimize / harden DSP and MIDI loops
@@ -465,6 +464,7 @@ CVEs fixed in 4.4.111:
   CVE-2017-18075: 3ad85176e78d6671ede52eed588c3588d087b587 crypto: pcrypt - fix freeing pcrypt instances
 
 CVEs fixed in 4.4.112:
+  CVE-2017-1000410: 0ae86454c435e554d01c51535c3cd4312577cc74 Bluetooth: Prevent stack info leak from the EFS element.
   CVE-2017-13216: b4106c55b574fe37900b02ddf89cbe4b9d971392 staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl
   CVE-2017-17741: eb91461daa77eb0ddb4c24aa427051f3669ba1f3 KVM: Fix stack-out-of-bounds read in write_mmio
   CVE-2018-5332: 10d06ed9a1899fcc1ecb7a1573f0f95b92dc470c RDS: Heap OOB write in rds_message_alloc_sgs()
@@ -887,7 +887,11 @@ CVEs fixed in 4.4.212:
   CVE-2019-14897: 4d7f4d383230f6ef4f8a32e1fbfa4eb7c682522f libertas: Fix two buffer overflows at parsing bss descriptor
   CVE-2020-14416: 6169e11e1f14dd272ec9c746050820e5cc2cf853 can, slip: Protect tty->disc_data in write_wakeup and close with RCU
 
+CVEs fixed in 4.4.213:
+  CVE-2020-0432: 917c8fe39f4d42c3850b22d6a0bf3ffab1466d19 staging: most: net: fix buffer overflow
+
 CVEs fixed in 4.4.214:
+  CVE-2020-0404: f941047b5e5abd73be6c058a67a06533728c3422 media: uvcvideo: Avoid cyclic entity chains due to malformed USB descriptors
   CVE-2020-12653: 4dd90d14f902074f18238dc104868debbd3cd250 mwifiex: Fix possible buffer overflows in mwifiex_cmd_append_vsie_tlv()
   CVE-2020-12654: 91b836b01c788932d86a448d26561740d22e7c9b mwifiex: Fix possible buffer overflows in mwifiex_ret_wmm_get_status()
 
@@ -931,6 +935,7 @@ CVEs fixed in 4.4.222:
 
 CVEs fixed in 4.4.224:
   CVE-2019-19768: 3d5d64aea941a45efda1bd02c0ec8dd57e8ce4ca blktrace: Protect q->blk_trace with RCU
+  CVE-2020-0433: fa9355afd5b07707e15a5f75b854f04a9c14a798 blk-mq: sync the update nr_hw_queues with blk_mq_queue_tag_busy_iter
   CVE-2020-10690: 6f5e3bb7879ee1eb71c6c3cbaaffbb0da6cd7d57 ptp: fix the race between the release of ptp_clock and cdev
   CVE-2020-10711: b8ff52e4bdaabfee050ae4e8c721305a924a8633 netlabel: cope with NULL catmap
   CVE-2020-12769: 3549e7aaa20947df2338305509c534c79c43e765 spi: spi-dw: Add lock protect dw_spi rx/tx to prevent concurrent calls
@@ -968,10 +973,15 @@ CVEs fixed in 4.4.233:
   CVE-2019-19074: 94e3650b2568ae7a06e10c282f588ddede5df1d6 ath9k: release allocated buffer if timed out
   CVE-2019-19448: b086fe8442d20dbd660812337f152ec868c64c0e btrfs: only search for left_info if there is no right_info in try_merge_free_space
   CVE-2019-9445: 559eff3dca325947bc3d88d17f4c454111884be5 f2fs: check if file namelen exceeds max value
+  CVE-2020-14331: cd44c411a441d994b234605f51f0d1ee5740e353 vgacon: Fix for missing check in scrollback handling
   CVE-2020-16166: 40713057d1d11fc86f0ed02383373281d87841a3 random32: update the net random state on interrupt and activity
+  CVE-2020-25212: db61fb8278925f54ccb0172471164aeb56ec6537 nfs: Fix getxattr kernel panic and memory overflow
 
 CVEs fixed in 4.4.234:
   CVE-2020-14314: 059b1480105478c5f68cf664301545b8cad6a7cf ext4: fix potential negative array index in do_split()
+
+CVEs fixed in 4.4.236:
+  CVE-2020-25285: 9c9757b4a2cd8039dddc01e8b589d9157f5d756a mm/hugetlb: fix a race between hugetlb sysctl handlers
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1029,6 +1039,11 @@ Outstanding CVEs:
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
   CVE-2018-9465: (unk) binder: fix proc->files use-after-free 
+  CVE-2019-0145: (unk)  
+  CVE-2019-0146: (unk)  
+  CVE-2019-0147: (unk)  
+  CVE-2019-0148: (unk)  
+  CVE-2019-0149: (unk)  
   CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
@@ -1077,6 +1092,7 @@ Outstanding CVEs:
   CVE-2019-7308: (unk) bpf: fix sanitation of alu op with pointer / scalar type from different paths 
   CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
   CVE-2020-0067: (unk) f2fs: fix to avoid memory leakage in f2fs_listxattr 
+  CVE-2020-0435: (unk) f2fs: fix to do sanity check with i_extra_isize 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
   CVE-2020-10774: (unk)  
@@ -1088,4 +1104,11 @@ Outstanding CVEs:
   CVE-2020-12888: (unk) vfio-pci: Invalidate mmaps and block MMIO access on disabled memory 
   CVE-2020-14304: (unk)  
   CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
+  CVE-2020-14351: (unk)  
+  CVE-2020-14390: (unk) fbcon: remove soft scrollback code 
+  CVE-2020-15802: (unk)  
+  CVE-2020-25211: (unk)  
+  CVE-2020-25220: (unk)  
+  CVE-2020-25221: (unk) mm: fix pin vs. gup mismatch with gate pages 
+  CVE-2020-25284: (unk) rbd: require global CAP_SYS_ADMIN for mapping and unmapping 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 

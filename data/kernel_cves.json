@@ -24356,9 +24356,9 @@
         }
     },
     "CVE-2017-1000410": {
-        "affected_versions": "v3.3-rc1 to v4.15-rc8",
-        "breaks": "42dceae2819b5ac6fc9a0d414ae05a8960e2a1d9",
-        "cmt_msg": "Bluetooth: Properly check L2CAP config option output buffer length",
+        "affected_versions": "unk to v4.15-rc8",
+        "breaks": "",
+        "cmt_msg": "Bluetooth: Prevent stack info leak from the EFS element.",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -24366,7 +24366,8 @@
             "Availability Impact": "None",
             "Confidentiality Impact": "Partial",
             "Integrity Impact": "None",
-            "score": "5.0"
+            "raw": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 5.0
         },
         "cvss3": {
             "Attack Complexity": "Low",
@@ -24377,12 +24378,13 @@
             "Privileges Required": "None",
             "Scope": "Unchanged",
             "User Interaction": "None",
-            "score": "7.5"
+            "raw": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
         },
-        "cwe": "Information Leak / Disclosure",
+        "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "06e7e776ca4d36547e503279aeff996cbb292c16",
-        "last_affected_version": "None",
-        "last_modified": "2020-06-25",
+        "last_affected_version": "4.14.13",
+        "last_modified": "2020-09-13",
         "nvd_text": "The Linux kernel version 3.3-rc1 and later is affected by a vulnerability lies in the processing of incoming L2CAP commands - ConfigRequest, and ConfigResponse messages. This info leak is a result of uninitialized stack variables that may be returned to an attacker in their uninitialized state. By manipulating the code flows that precede the handling of these configuration messages, an attacker can also gain some control over which data will be held in the uninitialized stack variables. This can allow him to bypass KASLR, and stack canaries protection - as both pointers and stack canaries may be leaked in this manner. Combining this vulnerability (for example) with the previously disclosed RCE vulnerability in L2CAP configuration parsing (CVE-2017-1000251) may allow an attacker to exploit the RCE against kernels which were built with the above mitigations. These are the specifics of this vulnerability: In the function l2cap_parse_conf_rsp and in the function l2cap_parse_conf_req the following variable is declared without initialization: struct l2cap_conf_efs efs; In addition, when parsing input configuration parameters in both of these functions, the switch case for handling EFS elements may skip the memcpy call that will write to the efs variable: ... case L2CAP_CONF_EFS: if (olen == sizeof(efs)) memcpy(&efs, (void *)val, olen); ... The olen in the above if is attacker controlled, and regardless of that if, in both of these functions the efs variable would eventually be added to the outgoing configuration request that is being built: l2cap_add_conf_opt(&ptr, L2CAP_CONF_EFS, sizeof(efs), (unsigned long) &efs); So by sending a configuration request, or response, that contains an L2CAP_CONF_EFS element, but with an element length that is not sizeof(efs) - the memcpy to the uninitialized efs variable can be avoided, and the uninitialized variable would be returned to the attacker (16 bytes).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-1000410",
@@ -40275,6 +40277,196 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-0136"
         }
     },
+    "CVE-2019-0145": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+        "fixes": "",
+        "last_modified": "2020-09-09",
+        "nvd_text": "Buffer overflow in i40e driver for Intel(R) Ethernet 700 Series Controllers versions before 7.0 may allow an authenticated user to potentially enable an escalation of privilege via local access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-0145",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-0145",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-0145",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-0145",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-0145",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-0145"
+        }
+    },
+    "CVE-2019-0146": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Missing Release of Resource after Effective Lifetime",
+        "fixes": "",
+        "last_modified": "2020-09-09",
+        "nvd_text": "Resource leak in i40e driver for Intel(R) Ethernet 700 Series Controllers versions before 2.8.43 may allow an authenticated user to potentially enable a denial of service via local access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-0146",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-0146",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-0146",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-0146",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-0146",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-0146"
+        }
+    },
+    "CVE-2019-0147": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Improper Input Validation",
+        "fixes": "",
+        "last_modified": "2020-09-09",
+        "nvd_text": "Insufficient input validation in i40e driver for Intel(R) Ethernet 700 Series Controllers versions before 7.0 may allow an authenticated user to potentially enable a denial of service via local access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-0147",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-0147",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-0147",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-0147",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-0147",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-0147"
+        }
+    },
+    "CVE-2019-0148": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Missing Release of Resource after Effective Lifetime",
+        "fixes": "",
+        "last_modified": "2020-09-09",
+        "nvd_text": "Resource leak in i40e driver for Intel(R) Ethernet 700 Series Controllers versions before 7.0 may allow an authenticated user to potentially enable a denial of service via local access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-0148",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-0148",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-0148",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-0148",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-0148",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-0148"
+        }
+    },
+    "CVE-2019-0149": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Improper Input Validation",
+        "fixes": "",
+        "last_modified": "2020-09-09",
+        "nvd_text": "Insufficient input validation in i40e driver for Intel(R) Ethernet 700 Series Controllers versions before 2.8.43 may allow an authenticated user to potentially enable a denial of service via local access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-0149",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-0149",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-0149",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-0149",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-0149",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-0149"
+        }
+    },
     "CVE-2019-0154": {
         "affected_versions": "v2.6.12-rc2 to v5.4-rc8",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -52121,6 +52313,70 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0305"
         }
     },
+    "CVE-2020-0404": {
+        "affected_versions": "unk to v5.6-rc1",
+        "breaks": "",
+        "cmt_msg": "media: uvcvideo: Avoid cyclic entity chains due to malformed USB descriptors",
+        "fixes": "68035c80e129c4cfec659aac4180354530b26527",
+        "last_affected_version": "5.5.2",
+        "last_modified": "2020-09-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0404",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0404",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-0404",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0404",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-0404",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0404"
+        }
+    },
+    "CVE-2020-0432": {
+        "affected_versions": "unk to v5.6-rc1",
+        "breaks": "",
+        "cmt_msg": "staging: most: net: fix buffer overflow",
+        "fixes": "4d1356ac12f4d5180d0df345d85ff0ee42b89c72",
+        "last_affected_version": "5.5.0",
+        "last_modified": "2020-09-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0432",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0432",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-0432",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0432",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-0432",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0432"
+        }
+    },
+    "CVE-2020-0433": {
+        "affected_versions": "unk to v4.19-rc1",
+        "breaks": "",
+        "cmt_msg": "blk-mq: sync the update nr_hw_queues with blk_mq_queue_tag_busy_iter",
+        "fixes": "f5bbbbe4d63577026f908a809f22f5fd5a90ea1f",
+        "last_affected_version": "4.14.175",
+        "last_modified": "2020-09-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0433",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0433",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-0433",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0433",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-0433",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0433"
+        }
+    },
+    "CVE-2020-0435": {
+        "affected_versions": "unk to v4.19-rc1",
+        "breaks": "",
+        "cmt_msg": "f2fs: fix to do sanity check with i_extra_isize",
+        "fixes": "18dd6470c2d14d10f5a2dd926925dc80dbd3abfd",
+        "last_affected_version": "4.14.85",
+        "last_modified": "2020-09-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0435",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0435",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-0435",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0435",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-0435",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0435"
+        }
+    },
     "CVE-2020-0543": {
         "affected_versions": "unk to v5.8-rc1",
         "breaks": "",
@@ -52299,9 +52555,33 @@
         "affected_versions": "v3.15-rc1 to v5.2-rc3",
         "breaks": "a50e233c50dbc881abaa0e4070789064e8d12d70",
         "cmt_msg": "net-gro: fix use-after-free read in napi_gro_frags()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Use After Free",
         "fixes": "a4270d6795b0580287453ea55974d948393e66ef",
         "last_affected_version": "5.1.6",
-        "last_modified": "2020-05-18",
+        "last_modified": "2020-09-13",
+        "nvd_text": "A flaw was found in the Linux kernel's implementation of GRO in versions before 5.2. This flaw allows an attacker with local access to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10720",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10720",
@@ -52452,7 +52732,8 @@
         "cmt_msg": "x86/speculation: Prevent rogue cross-process SSBD shutdown",
         "fixes": "dbbe2ad02e9df26e372f38cc3e70dab9222c832e",
         "last_affected_version": "5.7.2",
-        "last_modified": "2020-06-29",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A logic bug flaw was found in Linux kernel before 5.8-rc1 in the implementation of SSBD. A bug in the logic handling allows an attacker with a local account to disable SSBD protection during a context switch when additional speculative execution mitigations are in place. This issue was introduced when the per task/process conditional STIPB switching was added on top of the existing SSBD switching. The highest threat from this vulnerability is to confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10766",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10766",
@@ -52468,7 +52749,8 @@
         "cmt_msg": "x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS.",
         "fixes": "21998a351512eba4ed5969006f0c55882d995ada",
         "last_affected_version": "5.7.2",
-        "last_modified": "2020-06-29",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A flaw was found in the Linux kernel before 5.8-rc1 in the implementation of the Enhanced IBPB (Indirect Branch Prediction Barrier). The IBPB mitigation will be disabled when STIBP is not available or when the Enhanced Indirect Branch Restricted Speculation (IBRS) is available. This flaw allows a local attacker to perform a Spectre V2 style attack when this configuration is active. The highest threat from this vulnerability is to confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10767",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10767",
@@ -52484,7 +52766,8 @@
         "cmt_msg": "x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches.",
         "fixes": "4d8df8cbb9156b0a0ab3f802b80cb5db57acc0bf",
         "last_affected_version": "5.7.2",
-        "last_modified": "2020-06-29",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A flaw was found in the Linux Kernel before 5.8-rc1 in the prctl() function, where it can be used to enable indirect branch speculation after it has been disabled. This call incorrectly reports it as being 'force disabled' when it is not and opens the system to Spectre v2 attacks. The highest threat from this vulnerability is to confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10768",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10768",
@@ -52538,9 +52821,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.4-rc6",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "s390/cmm: fix information leak in cmm_timeout_handler()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.4
+        },
+        "cwe": "Interpretation Conflict",
         "fixes": "b8e51a6a9db94bc1fb18ae831b3dab106b5a4b5f",
         "last_affected_version": "5.3.8",
-        "last_modified": "2020-08-18",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A stack information leak flaw was found in s390/s390x in the Linux kernel’s memory manager functionality, where it incorrectly writes to the /proc/sys/vm/cmm_timeout file. This flaw allows a local user to see the kernel data.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10773",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10773",
@@ -52570,7 +52877,8 @@
         "cmt_msg": "Revert \"zram: convert remaining CLASS_ATTR() to CLASS_ATTR_RO()\"",
         "fixes": "853eab68afc80f59f36bbdeb715e5c88c501e680",
         "last_affected_version": "5.7.9",
-        "last_modified": "2020-07-23",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A flaw was found in the Linux Kernel before 5.8-rc6 in the ZRAM kernel module, where a user with a local account and the ability to read the /sys/class/zram-control/hot_add file can create ZRAM device nodes in the /dev/ directory. This read allocates kernel memory and is not accounted for a user that triggers the creation of that ZRAM device. With this vulnerability, continually reading the device may consume a large amount of system memory and cause the Out-of-Memory (OOM) killer to activate and terminate random userspace processes, possibly making the system inoperable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10781",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10781",
@@ -53580,7 +53888,8 @@
         },
         "cwe": "Improper Handling of Exceptional Conditions",
         "fixes": "abafbc551fddede3e0a08dee1dcde08fc0eb8476",
-        "last_modified": "2020-06-29",
+        "last_affected_version": "5.4.63",
+        "last_modified": "2020-09-13",
         "nvd_text": "The VFIO PCI driver in the Linux kernel through 5.6.13 mishandles attempts to access disabled memory space.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12888",
@@ -53675,7 +53984,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2020-06-24",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A memory disclosure flaw was found in the Linux kernel's ethernet drivers, in the way it read data from the EEPROM of the device. This flaw allows a local user to read uninitialized values from the kernel memory. The highest threat from this vulnerability is to confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14304",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14304",
@@ -53706,7 +54016,8 @@
         "cmt_msg": "ext4: fix potential negative array index in do_split()",
         "fixes": "5872331b3d91820e14716632ebb56b1399b34fe1",
         "last_affected_version": "5.8.3",
-        "last_modified": "2020-08-27",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A memory out-of-bounds read flaw was found in the Linux kernel before 5.9-rc2 with the ext3/ext4 file system, in the way it accesses a directory with broken indexing. This flaw allows a local user to crash the system if the directory exists. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14314",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14314",
@@ -53717,12 +54028,13 @@
         }
     },
     "CVE-2020-14331": {
-        "affected_versions": "v5.8-rc7 to v5.9-rc1",
-        "breaks": "92ed301919932f777713b9172e525674157e983d",
+        "affected_versions": "v2.6.17-rc1 to v5.9-rc1",
+        "breaks": "15bdab959c9bb909c0317480dd9b35748a8f7887",
         "cmt_msg": "vgacon: Fix for missing check in scrollback handling",
         "fixes": "ebfdfeeae8c01fcb2b3b74ffaf03876e20835d2d",
         "last_affected_version": "5.8.0",
-        "last_modified": "2020-08-18",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A flaw was found in the Linux kernel’s implementation of the invert video code on VGA consoles when a local attacker attempts to resize the console, calling an ioctl VT_RESIZE, which causes an out-of-bounds write to occur. This flaw allows a local user with access to the VGA console to crash the system, potentially escalating their privileges on the system. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14331",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14331",
@@ -53730,6 +54042,20 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-14331",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-14331",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14331"
+        }
+    },
+    "CVE-2020-14351": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-09-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14351",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14351",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-14351",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-14351",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-14351",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14351"
         }
     },
     "CVE-2020-14353": {
@@ -53751,8 +54077,8 @@
         "rejected": true
     },
     "CVE-2020-14356": {
-        "affected_versions": "v5.8-rc5 to v5.8-rc5",
-        "breaks": "ad0f75e5f57ccbceec13274e1e242f2b5a6397ed",
+        "affected_versions": "v4.5-rc1 to v5.8-rc5",
+        "breaks": "bd1060a1d67128bb8fbe2e1384c518912cbe54e7",
         "cmt_msg": "cgroup: fix cgroup_sk_alloc() for sk_clone_lock()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -53779,7 +54105,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "ad0f75e5f57ccbceec13274e1e242f2b5a6397ed",
         "last_affected_version": "5.7.9",
-        "last_modified": "2020-09-02",
+        "last_modified": "2020-09-10",
         "nvd_text": "A flaw null pointer dereference in the Linux kernel cgroupv2 subsystem in versions before 5.7.10 was found in the way when reboot the system. A local user could use this flaw to crash the system or escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14356",
@@ -53791,12 +54117,12 @@
         }
     },
     "CVE-2020-14381": {
-        "affected_versions": "unk to v5.6-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.6-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "futex: Fix inode life-time issue",
         "fixes": "8019ad13ef7f64be44d4f892af9c840179009254",
         "last_affected_version": "5.5.11",
-        "last_modified": "2020-09-02",
+        "last_modified": "2020-09-08",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14381",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14381",
@@ -53804,6 +54130,56 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-14381",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-14381",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14381"
+        }
+    },
+    "CVE-2020-14385": {
+        "affected_versions": "v4.16-rc1 to v5.9-rc4",
+        "breaks": "1e1bbd8e7ee0624034e9bf1e91ac11a7aaa2f8a6",
+        "cmt_msg": "xfs: fix boundary test in xfs_attr_shortform_verify",
+        "fixes": "f4020438fab05364018c91f7e02ebdd192085933",
+        "last_affected_version": "5.8.7",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A flaw was found in the Linux kernel before 5.9-rc4. A failure of the file system metadata validator in XFS can cause an inode with a valid, user-creatable extended attribute to be flagged as corrupt. This can lead to the filesystem being shutdown, or otherwise rendered inaccessible until it is remounted, leading to a denial of service. The highest threat from this vulnerability is to system availability.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14385",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14385",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-14385",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-14385",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-14385",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14385"
+        }
+    },
+    "CVE-2020-14386": {
+        "affected_versions": "v4.6-rc1 to v5.9-rc4",
+        "breaks": "58d19b19cd99b438541eea4cdbf5c171900b25e5",
+        "cmt_msg": "net/packet: fix overflow in tpacket_rcv",
+        "fixes": "acf69c946233259ab4d64f8869d4037a198c7f06",
+        "last_affected_version": "5.8.7",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A flaw was found in the Linux kernel before 5.9-rc4. Memory corruption can be exploited to gain root privileges from unprivileged processes. The highest threat from this vulnerability is to data confidentiality and integrity.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14386",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14386",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-14386",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-14386",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-14386",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14386"
+        }
+    },
+    "CVE-2020-14390": {
+        "affected_versions": "unk to v5.9-rc6",
+        "breaks": "",
+        "cmt_msg": "fbcon: remove soft scrollback code",
+        "fixes": "50145474f6ef4a9c19205b173da6264a644c7489",
+        "last_affected_version": "5.8.9",
+        "last_modified": "2020-09-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14390",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14390",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-14390",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-14390",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-14390",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-14390"
         }
     },
     "CVE-2020-14416": {
@@ -53926,6 +54302,44 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-15780"
         }
     },
+    "CVE-2020-15802": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+            "score": 4.3
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "score": 5.9
+        },
+        "cwe": "Improper Authentication",
+        "fixes": "",
+        "last_modified": "2020-09-21",
+        "nvd_text": "Devices supporting Bluetooth before 5.1 may allow man-in-the-middle attacks, aka BLURtooth. Cross Transport Key Derivation in Bluetooth Core Specification v4.2 and v5.0 may permit an unauthenticated user to establish a bonding with one transport, either LE or BR/EDR, and replace a bonding already established on the opposing transport, BR/EDR or LE, potentially overwriting an authenticated key with an unauthenticated key, or a key with greater entropy with one with less.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15802",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-15802",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-15802",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-15802",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-15802",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-15802"
+        }
+    },
     "CVE-2020-15852": {
         "affected_versions": "v5.5-rc1 to v5.8-rc6",
         "breaks": "22fe5b0439dd53643fd6f4c582c46c6dba0fde53",
@@ -54010,9 +54424,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.5-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
+        },
+        "cwe": "Cleartext Transmission of Sensitive Information",
         "fixes": "6c8991f41546c3c472503dff1ea9daaddf9331c2",
         "last_affected_version": "5.4.4",
-        "last_modified": "2020-05-23",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A flaw was found in the Linux kernel's implementation of some networking protocols in IPsec, such as VXLAN and GENEVE tunnels over IPv6. When an encrypted tunnel is created between two hosts, the kernel isn't correctly routing tunneled data over the encrypted link; rather sending the data unencrypted. This would allow anyone in between the two endpoints to read the traffic unencrypted. The main threat from this vulnerability is to data confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-1749",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-1749",
@@ -54060,6 +54498,196 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-24394",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-24394",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-24394"
+        }
+    },
+    "CVE-2020-25211": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+            "score": 3.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+            "score": 7.1
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+        "fixes": "1cc5ef91d2ff94d2bf2de3b3585423e8a1051cb6",
+        "last_modified": "2020-09-21",
+        "nvd_text": "In the Linux kernel through 5.8.7, local attackers able to inject conntrack netlink configuration could overflow a local buffer, causing crashes or triggering use of incorrect protocol numbers in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c, aka CID-1cc5ef91d2ff.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25211",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25211",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25211",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25211",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25211",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25211"
+        }
+    },
+    "CVE-2020-25212": {
+        "affected_versions": "unk to v5.9-rc1",
+        "breaks": "",
+        "cmt_msg": "nfs: Fix getxattr kernel panic and memory overflow",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Time-of-check Time-of-use (TOCTOU) Race Condition",
+        "fixes": "b4487b93545214a9db8cbf32e86411677b0cca21",
+        "last_affected_version": "5.8.2",
+        "last_modified": "2020-09-21",
+        "nvd_text": "A TOCTOU mismatch in the NFS client code in the Linux kernel before 5.8.3 could be used by local attackers to corrupt memory or possibly have unspecified other impact because a size check is in fs/nfs/nfs4proc.c instead of fs/nfs/nfs4xdr.c, aka CID-b4487b935452.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25212",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25212",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25212",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25212",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25212",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25212"
+        }
+    },
+    "CVE-2020-25220": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
+        "fixes": "",
+        "last_modified": "2020-09-21",
+        "nvd_text": "The Linux kernel 4.9.x before 4.9.233, 4.14.x before 4.14.194, and 4.19.x before 4.19.140 has a use-after-free because skcd->no_refcnt was not considered during a backport of a CVE-2020-14356 patch. This is related to the cgroups feature.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25220",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25220",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25220",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25220",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25220",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25220"
+        }
+    },
+    "CVE-2020-25221": {
+        "affected_versions": "unk to v5.9-rc4",
+        "breaks": "",
+        "cmt_msg": "mm: fix pin vs. gup mismatch with gate pages",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Operation on a Resource after Expiration or Release",
+        "fixes": "9fa2dd946743ae6f30dc4830da19147bf100a7f2",
+        "last_affected_version": "5.8.6",
+        "last_modified": "2020-09-21",
+        "nvd_text": "get_gate_page in mm/gup.c in the Linux kernel 5.7.x and 5.8.x before 5.8.7 allows privilege escalation because of incorrect reference counting (caused by gate page mishandling) of the struct page that backs the vsyscall page. The result is a refcount underflow. This can be triggered by any 64-bit process that can use ptrace() or process_vm_readv(), aka CID-9fa2dd946743.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25221",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25221",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25221",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25221",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25221",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25221"
+        }
+    },
+    "CVE-2020-25284": {
+        "affected_versions": "unk to v5.9-rc5",
+        "breaks": "",
+        "cmt_msg": "rbd: require global CAP_SYS_ADMIN for mapping and unmapping",
+        "fixes": "f44d04e696feaf13d192d942c4f14ad2e117065a",
+        "last_affected_version": "5.8.9",
+        "last_modified": "2020-09-17",
+        "nvd_text": "The rbd block device driver in drivers/block/rbd.c in the Linux kernel through 5.8.9 used incomplete permission checking for access to rbd devices, which could be leveraged by local attackers to map or unmap rbd block devices, aka CID-f44d04e696fe.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25284",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25284",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25284",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25284",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25284",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25284"
+        }
+    },
+    "CVE-2020-25285": {
+        "affected_versions": "unk to v5.9-rc4",
+        "breaks": "",
+        "cmt_msg": "mm/hugetlb: fix a race between hugetlb sysctl handlers",
+        "fixes": "17743798d81238ab13050e8e2833699b54e15467",
+        "last_affected_version": "5.8.7",
+        "last_modified": "2020-09-17",
+        "nvd_text": "A race condition between hugetlb sysctl handlers in mm/hugetlb.c in the Linux kernel before 5.8.8 could be used by local attackers to corrupt memory, cause a NULL pointer dereference, or possibly have unspecified other impact, aka CID-17743798d812.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25285",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25285",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25285",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25285",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25285",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25285"
         }
     },
     "CVE-2020-2732": {

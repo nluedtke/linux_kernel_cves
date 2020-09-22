@@ -364,7 +364,6 @@ CVEs fixed in 3.16.48:
 
 CVEs fixed in 3.16.49:
   CVE-2017-1000251: 8a7b081660857a80c3efc463b3da790c4fa0c801 Bluetooth: Properly check L2CAP config option output buffer length
-  CVE-2017-1000410: 8a7b081660857a80c3efc463b3da790c4fa0c801 Bluetooth: Properly check L2CAP config option output buffer length
   CVE-2017-11089: 2a5d2a519162f5c52121c1053439535f2de705af cfg80211: Define nla_policy for NL80211_ATTR_LOCAL_MESH_POWER_MODE
   CVE-2017-12153: ed2305f2eba403d41dc4213746f60d47273980f6 nl80211: check for the required netlink attributes presence
   CVE-2017-12154: 423a7a81efb8da25dbbcfe7a33bd8bfdce34150b kvm: nVMX: Don't allow L2 to access the hardware CR8
@@ -426,6 +425,7 @@ CVEs fixed in 3.16.52:
   CVE-2020-14353: 9d62d5d2f4130bd7c6986cfde8becb4fa0cf4f7f KEYS: prevent creating a different user's keyrings
 
 CVEs fixed in 3.16.54:
+  CVE-2017-1000410: bf101edbb0ad37a6cd970cb98a9f1ae950b719f1 Bluetooth: Prevent stack info leak from the EFS element.
   CVE-2017-13216: 63aa20e4f4760249339c7771bd7e4a01d82a95ad staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl
   CVE-2017-16911: 789998181fc4fe5d48d1b95d796e8b62df17c1d9 usbip: prevent vhci_hcd driver from leaking a socket pointer address
   CVE-2017-16912: 65060ba29cc54b3d5f76ceacf3c820f2087c35e6 usbip: fix stub_rx: get_pipe() to validate endpoint number
@@ -724,6 +724,7 @@ CVEs fixed in 3.16.83:
   CVE-2020-9383: 2f9ac30a54dc0181ddac3705cdcf4775d863c530 floppy: check FDC index for errors before assigning it
 
 CVEs fixed in 3.16.84:
+  CVE-2020-0404: 320230e4875672908b1ec29251b13548e16af1ef media: uvcvideo: Avoid cyclic entity chains due to malformed USB descriptors
   CVE-2020-12769: f358118d34cdd7e898685205bb62e41e9a3246aa spi: spi-dw: Add lock protect dw_spi rx/tx to prevent concurrent calls
 
 CVEs fixed in 3.16.85:
@@ -837,6 +838,11 @@ Outstanding CVEs:
   CVE-2018-7480: (unk) blkcg: fix double free of new_blkg in blkcg_init_queue 
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
   CVE-2018-9465: (unk) binder: fix proc->files use-after-free 
+  CVE-2019-0145: (unk)  
+  CVE-2019-0146: (unk)  
+  CVE-2019-0147: (unk)  
+  CVE-2019-0148: (unk)  
+  CVE-2019-0149: (unk)  
   CVE-2019-0154: (unk) drm/i915: Lower RM timeout to avoid DSI hard hangs 
   CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
@@ -900,6 +906,9 @@ Outstanding CVEs:
   CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
   CVE-2020-0030: (unk) ANDROID: binder: synchronize_rcu() when using POLLFREE. 
   CVE-2020-0067: (unk) f2fs: fix to avoid memory leakage in f2fs_listxattr 
+  CVE-2020-0432: (unk) staging: most: net: fix buffer overflow 
+  CVE-2020-0433: (unk) blk-mq: sync the update nr_hw_queues with blk_mq_queue_tag_busy_iter 
+  CVE-2020-0435: (unk) f2fs: fix to do sanity check with i_extra_isize 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
   CVE-2020-10774: (unk)  
@@ -913,6 +922,16 @@ Outstanding CVEs:
   CVE-2020-14304: (unk)  
   CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
   CVE-2020-14314: (unk) ext4: fix potential negative array index in do_split() 
+  CVE-2020-14331: (unk) vgacon: Fix for missing check in scrollback handling 
+  CVE-2020-14351: (unk)  
+  CVE-2020-14390: (unk) fbcon: remove soft scrollback code 
   CVE-2020-15393: (unk) usb: usbtest: fix missing kfree(dev->buf) in usbtest_disconnect 
+  CVE-2020-15802: (unk)  
   CVE-2020-16166: (unk) random32: update the net random state on interrupt and activity 
+  CVE-2020-25211: (unk)  
+  CVE-2020-25212: (unk) nfs: Fix getxattr kernel panic and memory overflow 
+  CVE-2020-25220: (unk)  
+  CVE-2020-25221: (unk) mm: fix pin vs. gup mismatch with gate pages 
+  CVE-2020-25284: (unk) rbd: require global CAP_SYS_ADMIN for mapping and unmapping 
+  CVE-2020-25285: (unk) mm/hugetlb: fix a race between hugetlb sysctl handlers 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 

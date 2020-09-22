@@ -276,7 +276,6 @@ CVEs fixed in 4.1.44:
 CVEs fixed in 4.1.45:
   CVE-2017-0627: 1e3bbc18904041cd230725cf711e12a888efa49f media: uvcvideo: Prevent heap overflow when accessing mapped controls
   CVE-2017-1000251: 361e3cc44419cb9387c48ea993d0ba3f381667de Bluetooth: Properly check L2CAP config option output buffer length
-  CVE-2017-1000410: 361e3cc44419cb9387c48ea993d0ba3f381667de Bluetooth: Properly check L2CAP config option output buffer length
   CVE-2017-11600: ded415d815a17597d6de4555524f89ed7ea08923 xfrm: policy: check policy direction value
   CVE-2017-14051: d1c2fe7dc88d9bc3a477d9dfc2aa623f9776372e scsi: qla2xxx: Fix an integer overflow in sysfs code
   CVE-2017-14106: ea08a5642d93fd963d376c10c9fd9664373771b6 tcp: initialize rcv_mss to TCP_MIN_MSS instead of 0
@@ -350,6 +349,7 @@ CVEs fixed in 4.1.49:
 CVEs fixed in 4.1.50:
   CVE-2016-10318: e68557814c7e9e4943caca924ff5537952bb3b4e fscrypto: add authorization check for setting encryption policy
   CVE-2016-9793: f99fb439e6aff4e9f8b91a80d48b2a2d97aa2248 net: avoid signed overflows for SO_{SND|RCV}BUFFORCE
+  CVE-2017-1000410: 395cba875fa35b1a23d2bd1951c555d3d0a5d5be Bluetooth: Prevent stack info leak from the EFS element.
   CVE-2017-13216: 700dbec6cafafbe5e018a90e8e92a4762c19884d staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl
   CVE-2017-13305: 1f338384b46b16f9682c8e01f8d158e90e5d6cc2 KEYS: encrypted: fix buffer overread in valid_master_desc()
   CVE-2017-16538: 596a157dfeef68f30e38d3a38e21b9d4d4c6b644 media: dvb-usb-v2: lmedm04: Improve logic checking of warm start
@@ -607,6 +607,11 @@ Outstanding CVEs:
   CVE-2018-9517: (unk) l2tp: pass tunnel pointer to ->session_create() 
   CVE-2018-9518: (unk) NFC: llcp: Limit size of SDP URI 
   CVE-2019-0136: (unk) mac80211: drop robust management frames from unknown TA 
+  CVE-2019-0145: (unk)  
+  CVE-2019-0146: (unk)  
+  CVE-2019-0147: (unk)  
+  CVE-2019-0148: (unk)  
+  CVE-2019-0149: (unk)  
   CVE-2019-0154: (unk) drm/i915: Lower RM timeout to avoid DSI hard hangs 
   CVE-2019-0155: (unk) drm/i915: Rename gen7 cmdparser tables 
   CVE-2019-10126: (unk) mwifiex: Fix heap overflow in mwifiex_uap_parse_tail_ies() 
@@ -794,6 +799,10 @@ Outstanding CVEs:
   CVE-2020-0067: (unk) f2fs: fix to avoid memory leakage in f2fs_listxattr 
   CVE-2020-0255: (unk) selinux: properly handle multiple messages in selinux_netlink_send() 
   CVE-2020-0305: (unk) chardev: Avoid potential use-after-free in 'chrdev_open()' 
+  CVE-2020-0404: (unk) media: uvcvideo: Avoid cyclic entity chains due to malformed USB descriptors 
+  CVE-2020-0432: (unk) staging: most: net: fix buffer overflow 
+  CVE-2020-0433: (unk) blk-mq: sync the update nr_hw_queues with blk_mq_queue_tag_busy_iter 
+  CVE-2020-0435: (unk) f2fs: fix to do sanity check with i_extra_isize 
   CVE-2020-0543: (unk) x86/cpu: Add 'table' argument to cpu_matches() 
   CVE-2020-10135: (unk)  
   CVE-2020-10690: (unk) ptp: fix the race between the release of ptp_clock and cdev 
@@ -830,11 +839,21 @@ Outstanding CVEs:
   CVE-2020-14304: (unk)  
   CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
   CVE-2020-14314: (unk) ext4: fix potential negative array index in do_split() 
+  CVE-2020-14331: (unk) vgacon: Fix for missing check in scrollback handling 
+  CVE-2020-14351: (unk)  
   CVE-2020-14381: (unk) futex: Fix inode life-time issue 
+  CVE-2020-14390: (unk) fbcon: remove soft scrollback code 
   CVE-2020-14416: (unk) can, slip: Protect tty->disc_data in write_wakeup and close with RCU 
   CVE-2020-15393: (unk) usb: usbtest: fix missing kfree(dev->buf) in usbtest_disconnect 
+  CVE-2020-15802: (unk)  
   CVE-2020-16166: (unk) random32: update the net random state on interrupt and activity 
   CVE-2020-1749: (unk) net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup 
+  CVE-2020-25211: (unk)  
+  CVE-2020-25212: (unk) nfs: Fix getxattr kernel panic and memory overflow 
+  CVE-2020-25220: (unk)  
+  CVE-2020-25221: (unk) mm: fix pin vs. gup mismatch with gate pages 
+  CVE-2020-25284: (unk) rbd: require global CAP_SYS_ADMIN for mapping and unmapping 
+  CVE-2020-25285: (unk) mm/hugetlb: fix a race between hugetlb sysctl handlers 
   CVE-2020-2732: (unk) KVM: nVMX: Don't emulate instructions in guest mode 
   CVE-2020-8647: (unk) vgacon: Fix a UAF in vgacon_invert_region 
   CVE-2020-8648: (unk) vt: selection, close sel_buffer race 

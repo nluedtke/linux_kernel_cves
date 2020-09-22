@@ -389,10 +389,12 @@ CVEs fixed in 4.19.100:
   CVE-2020-8428: 752f72edea55f9b7c6fd019e71365def13a0f2b6 do_last(): fetch directory ->i_mode and ->i_uid before it's too late
 
 CVEs fixed in 4.19.101:
+  CVE-2020-0432: 9dab6bbc9462c43001a88ee933a491a1502fa6f5 staging: most: net: fix buffer overflow
   CVE-2020-12769: 6fb12237c51e73e65899f9b1df69cd3999b4d90a spi: spi-dw: Add lock protect dw_spi rx/tx to prevent concurrent calls
 
 CVEs fixed in 4.19.103:
   CVE-2019-3016: 25a7898937f4a9f32ca2d1e9b7f5f07176af8037 x86/kvm: Be careful not to clear KVM_VCPU_FLUSH_TLB bit
+  CVE-2020-0404: 3ceb3fcd6d1a6a65e7bf3873a63009d01ba4b05f media: uvcvideo: Avoid cyclic entity chains due to malformed USB descriptors
 
 CVEs fixed in 4.19.104:
   CVE-2020-12653: 48247f7e14911a4d18e9c774ba3a1d368f5d8a6f mwifiex: Fix possible buffer overflows in mwifiex_cmd_append_vsie_tlv()
@@ -484,6 +486,7 @@ CVEs fixed in 4.19.132:
 
 CVEs fixed in 4.19.134:
   CVE-2020-10781: 81a91bf266dd7f2dd56fc3472b7bb54348ac62c7 Revert "zram: convert remaining CLASS_ATTR() to CLASS_ATTR_RO()"
+  CVE-2020-14356: 0505cc4c908f46a4d22c4994dbbe7bc489d0c52d cgroup: fix cgroup_sk_alloc() for sk_clone_lock()
 
 CVEs fixed in 4.19.137:
   CVE-2019-18808: 167edeeb034f65f57790ff70b1af84a501274d15 crypto: ccp - Release all allocated memory if sha type is invalid
@@ -501,11 +504,24 @@ CVEs fixed in 4.19.137:
 CVEs fixed in 4.19.138:
   CVE-2020-16166: 29204c846894d73108f87e78aea4757a8ec52c74 random32: update the net random state on interrupt and activity
 
+CVEs fixed in 4.19.139:
+  CVE-2020-14331: 61219546f3036d2b4a1898be7a38da22e97a3b62 vgacon: Fix for missing check in scrollback handling
+
 CVEs fixed in 4.19.141:
   CVE-2019-19448: 627fa9d8071daad6aa84316c1fcb114a62db914f btrfs: only search for left_info if there is no right_info in try_merge_free_space
+  CVE-2020-25212: a906b868953a9c9bba44649a8fe760e818dd7224 nfs: Fix getxattr kernel panic and memory overflow
 
 CVEs fixed in 4.19.142:
   CVE-2020-14314: b3ddf6ba5e28a57729fff1605ae08e21be5c92e3 ext4: fix potential negative array index in do_split()
+
+CVEs fixed in 4.19.144:
+  CVE-2020-12888: da7aea6eb5608695f590dcd72523536b709d0399 vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
+  CVE-2020-14385: 017265f1421529a473c25dc46a0cee98facbb1a3 xfs: fix boundary test in xfs_attr_shortform_verify
+  CVE-2020-25285: 221ea9a3da9169dc3c9a364a5f938e215db6419e mm/hugetlb: fix a race between hugetlb sysctl handlers
+
+CVEs fixed in 4.19.146:
+  CVE-2020-14390: 770adb5d2b8ebe94a92e4c9510f4f2517f4204eb fbcon: remove soft scrollback code
+  CVE-2020-25284: 0070f9906d7190d4c69e338403db4abfec81fe7f rbd: require global CAP_SYS_ADMIN for mapping and unmapping
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -527,6 +543,11 @@ Outstanding CVEs:
   CVE-2018-12930: (unk)  
   CVE-2018-12931: (unk)  
   CVE-2018-17977: (unk)  
+  CVE-2019-0145: (unk)  
+  CVE-2019-0146: (unk)  
+  CVE-2019-0147: (unk)  
+  CVE-2019-0148: (unk)  
+  CVE-2019-0149: (unk)  
   CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
   CVE-2019-12378: (unk) ipv6_sockglue: Fix a missing-check bug in ip6_ra_control() 
@@ -560,7 +581,12 @@ Outstanding CVEs:
   CVE-2020-11725: (unk)  
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
   CVE-2020-12656: (unk) sunrpc: check that domain table is empty at module unload. 
-  CVE-2020-12888: (unk) vfio-pci: Invalidate mmaps and block MMIO access on disabled memory 
   CVE-2020-14304: (unk)  
+  CVE-2020-14351: (unk)  
+  CVE-2020-14386: (unk) net/packet: fix overflow in tpacket_rcv 
   CVE-2020-15780: (unk) ACPI: configfs: Disallow loading ACPI tables when locked down 
+  CVE-2020-15802: (unk)  
+  CVE-2020-25211: (unk)  
+  CVE-2020-25220: (unk)  
+  CVE-2020-25221: (unk) mm: fix pin vs. gup mismatch with gate pages 
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 

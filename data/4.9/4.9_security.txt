@@ -201,7 +201,6 @@ CVEs fixed in 4.9.48:
 
 CVEs fixed in 4.9.50:
   CVE-2017-1000251: 6300c8bfafe032187f3cbaa43dbf7d306650c5ed Bluetooth: Properly check L2CAP config option output buffer length
-  CVE-2017-1000410: 6300c8bfafe032187f3cbaa43dbf7d306650c5ed Bluetooth: Properly check L2CAP config option output buffer length
   CVE-2017-14340: 5b82e0e938af5d9dfb038e2483cb2a84e24584fd xfs: XFS_IS_REALTIME_INODE() should be false if no rt device present
   CVE-2017-9984: 03bea515b9a2f2a48d46a5a4bcc69be264afb6af ALSA: msnd: Optimize / harden DSP and MIDI loops
   CVE-2017-9985: 03bea515b9a2f2a48d46a5a4bcc69be264afb6af ALSA: msnd: Optimize / harden DSP and MIDI loops
@@ -323,6 +322,7 @@ CVEs fixed in 4.9.76:
   CVE-2017-18075: c195a4c0230d7a1dafb53cdbd5eed4dea4493504 crypto: pcrypt - fix freeing pcrypt instances
 
 CVEs fixed in 4.9.77:
+  CVE-2017-1000410: 6aebc2670ebfdda0762a6b471fbf8ca18dcf44f2 Bluetooth: Prevent stack info leak from the EFS element.
   CVE-2017-13216: c51d23dffc2e9ca05d611c86c440f9055541c62d staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl
   CVE-2017-17741: c781e3be97a1cbeef8c853101e8f266db556b0a3 KVM: Fix stack-out-of-bounds read in write_mmio
   CVE-2018-5332: cebb382931c4fb341162eae80b696650260e4a2b RDS: Heap OOB write in rds_message_alloc_sgs()
@@ -811,7 +811,11 @@ CVEs fixed in 4.9.212:
   CVE-2019-20806: e4188ad85032f130b84702d39755840afec4b9b4 media: tw5864: Fix possible NULL pointer dereference in tw5864_handle_frame
   CVE-2020-14416: 0beba1d7e8e164694ae1743238f1bdf4de4f1f34 can, slip: Protect tty->disc_data in write_wakeup and close with RCU
 
+CVEs fixed in 4.9.213:
+  CVE-2020-0432: 8b6487d85ca9f9bfa9d75917451969a1d097a815 staging: most: net: fix buffer overflow
+
 CVEs fixed in 4.9.214:
+  CVE-2020-0404: f873437547ac3d092c433cc0a996b946eb2803b6 media: uvcvideo: Avoid cyclic entity chains due to malformed USB descriptors
   CVE-2020-12653: 7a4d6a45f2fad3ddc07f98cf85790344ea72cd69 mwifiex: Fix possible buffer overflows in mwifiex_cmd_append_vsie_tlv()
   CVE-2020-12654: 0a996849d8042833860fd7c9ff3dcd24e61fd416 mwifiex: Fix possible buffer overflows in mwifiex_ret_wmm_get_status()
 
@@ -838,6 +842,7 @@ CVEs fixed in 4.9.218:
   CVE-2020-14381: fb099f3bb477a0ee2d0669a753f7ffcdf8884c2d futex: Fix inode life-time issue
 
 CVEs fixed in 4.9.219:
+  CVE-2020-0433: f530afb974c2e82047bd6220303a2dbe30eff304 blk-mq: sync the update nr_hw_queues with blk_mq_queue_tag_busy_iter
   CVE-2020-11494: 925c631e84d77a72188101258878ac58a646d540 slcan: Don't transmit uninitialized stack data in padding
   CVE-2020-11565: c5544e72014cdb0a739f6971fb3dd4fb641b392c mm: mempolicy: require at least one nodeid for MPOL_PREFERRED
 
@@ -883,6 +888,9 @@ CVEs fixed in 4.9.229:
 CVEs fixed in 4.9.230:
   CVE-2020-15393: 4ea5c9091d62e9516819c7bcb7c09658bde85acc usb: usbtest: fix missing kfree(dev->buf) in usbtest_disconnect
 
+CVEs fixed in 4.9.231:
+  CVE-2020-14356: 51fbad61b1dc2a082c7f7dbc3b1299a1e40c061a cgroup: fix cgroup_sk_alloc() for sk_clone_lock()
+
 CVEs fixed in 4.9.232:
   CVE-2018-10323: 8e5f820e14e93ebfc7fcf2a099817eb9c7c3be04 xfs: set format back to extents if xfs_bmap_extents_to_btree
 
@@ -896,10 +904,16 @@ CVEs fixed in 4.9.233:
   CVE-2019-19074: f0b65fee921fe7efda2889d1a3eea69137682402 ath9k: release allocated buffer if timed out
   CVE-2019-19448: 802dff14b904b37a985ab287db546d872f950f05 btrfs: only search for left_info if there is no right_info in try_merge_free_space
   CVE-2019-9445: 7745e3c67b80865bd0bc0812fda9f6292c8dc2fb f2fs: check if file namelen exceeds max value
+  CVE-2020-14331: 8c19b606e78a2b08e1ea69eebd5c290913c89612 vgacon: Fix for missing check in scrollback handling
   CVE-2020-16166: 5aa78397e208b6871a8bdec7fa2bd6992b1f3e4b random32: update the net random state on interrupt and activity
+  CVE-2020-25212: 8973046648c4f0392f50d915ea1bdb639e930519 nfs: Fix getxattr kernel panic and memory overflow
 
 CVEs fixed in 4.9.234:
   CVE-2020-14314: 539ae3e03875dacaa9c388aff141ccbb4ef4ecb5 ext4: fix potential negative array index in do_split()
+
+CVEs fixed in 4.9.236:
+  CVE-2020-12888: 5f2c69e2ef24a79b6909a6dc6b249a17909965f8 vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
+  CVE-2020-25285: 47b1be395352d54f888f4331fa291dc9199fff4c mm/hugetlb: fix a race between hugetlb sysctl handlers
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -946,6 +960,11 @@ Outstanding CVEs:
   CVE-2018-5995: (unk) printk: hash addresses printed with %p 
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
+  CVE-2019-0145: (unk)  
+  CVE-2019-0146: (unk)  
+  CVE-2019-0147: (unk)  
+  CVE-2019-0148: (unk)  
+  CVE-2019-0149: (unk)  
   CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
@@ -992,6 +1011,7 @@ Outstanding CVEs:
   CVE-2019-9444: (unk) printk: hash addresses printed with %p 
   CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
   CVE-2020-0067: (unk) f2fs: fix to avoid memory leakage in f2fs_listxattr 
+  CVE-2020-0435: (unk) f2fs: fix to do sanity check with i_extra_isize 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
   CVE-2020-10774: (unk)  
@@ -999,9 +1019,16 @@ Outstanding CVEs:
   CVE-2020-11725: (unk)  
   CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
   CVE-2020-12656: (unk) sunrpc: check that domain table is empty at module unload. 
-  CVE-2020-12888: (unk) vfio-pci: Invalidate mmaps and block MMIO access on disabled memory 
   CVE-2020-14304: (unk)  
   CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
+  CVE-2020-14351: (unk)  
+  CVE-2020-14386: (unk) net/packet: fix overflow in tpacket_rcv 
+  CVE-2020-14390: (unk) fbcon: remove soft scrollback code 
   CVE-2020-15780: (unk) ACPI: configfs: Disallow loading ACPI tables when locked down 
+  CVE-2020-15802: (unk)  
+  CVE-2020-25211: (unk)  
+  CVE-2020-25220: (unk)  
+  CVE-2020-25221: (unk) mm: fix pin vs. gup mismatch with gate pages 
+  CVE-2020-25284: (unk) rbd: require global CAP_SYS_ADMIN for mapping and unmapping 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
