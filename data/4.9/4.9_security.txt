@@ -796,6 +796,7 @@ CVEs fixed in 4.9.210:
   CVE-2019-19068: 2c00bebd0b959fe8bec6d4a1a07010394b8008e4 rtl8xxxu: prevent leaking urb
   CVE-2019-20636: 5f27f97dfed4aa29fb95b98bf5911763bd3ef038 Input: add safety guards to input_set_keycode()
   CVE-2020-0305: d2c9ee451ea8e8256fb1903a04ebaa26cb74d6f5 chardev: Avoid potential use-after-free in 'chrdev_open()'
+  CVE-2020-0431: 661967b7623b88985bdd3aeb171feb83d753aea9 HID: hid-input: clear unmapped usages
 
 CVEs fixed in 4.9.211:
   CVE-2018-21008: 65b32fd4eabc5209019894627b1bda65611fd1cb rsi: add fix for crash during assertions
@@ -842,6 +843,7 @@ CVEs fixed in 4.9.218:
   CVE-2020-14381: fb099f3bb477a0ee2d0669a753f7ffcdf8884c2d futex: Fix inode life-time issue
 
 CVEs fixed in 4.9.219:
+  CVE-2020-0429: e8b9cf5574e8154a6db2505d028682e830c9f620 l2tp: fix race between l2tp_session_delete() and l2tp_tunnel_closeall()
   CVE-2020-0433: f530afb974c2e82047bd6220303a2dbe30eff304 blk-mq: sync the update nr_hw_queues with blk_mq_queue_tag_busy_iter
   CVE-2020-11494: 925c631e84d77a72188101258878ac58a646d540 slcan: Don't transmit uninitialized stack data in padding
   CVE-2020-11565: c5544e72014cdb0a739f6971fb3dd4fb641b392c mm: mempolicy: require at least one nodeid for MPOL_PREFERRED
@@ -914,6 +916,10 @@ CVEs fixed in 4.9.234:
 CVEs fixed in 4.9.236:
   CVE-2020-12888: 5f2c69e2ef24a79b6909a6dc6b249a17909965f8 vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
   CVE-2020-25285: 47b1be395352d54f888f4331fa291dc9199fff4c mm/hugetlb: fix a race between hugetlb sysctl handlers
+
+CVEs fixed in 4.9.237:
+  CVE-2020-14390: c7e41b00de99932f189d8af3a40caee31a385788 fbcon: remove soft scrollback code
+  CVE-2020-25284: 774519ed39da09471abe2c02a7f293c380759cc3 rbd: require global CAP_SYS_ADMIN for mapping and unmapping
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1011,6 +1017,9 @@ Outstanding CVEs:
   CVE-2019-9444: (unk) printk: hash addresses printed with %p 
   CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
   CVE-2020-0067: (unk) f2fs: fix to avoid memory leakage in f2fs_listxattr 
+  CVE-2020-0347: (unk)  
+  CVE-2020-0427: (unk) pinctrl: devicetree: Avoid taking direct reference to device name string 
+  CVE-2020-0430: (unk) bpf: reject passing modified ctx to helper functions 
   CVE-2020-0435: (unk) f2fs: fix to do sanity check with i_extra_isize 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
@@ -1023,12 +1032,11 @@ Outstanding CVEs:
   CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
   CVE-2020-14351: (unk)  
   CVE-2020-14386: (unk) net/packet: fix overflow in tpacket_rcv 
-  CVE-2020-14390: (unk) fbcon: remove soft scrollback code 
   CVE-2020-15780: (unk) ACPI: configfs: Disallow loading ACPI tables when locked down 
   CVE-2020-15802: (unk)  
-  CVE-2020-25211: (unk)  
+  CVE-2020-25211: (unk) netfilter: ctnetlink: add a range check for l3/l4 protonum 
   CVE-2020-25220: (unk)  
   CVE-2020-25221: (unk) mm: fix pin vs. gup mismatch with gate pages 
-  CVE-2020-25284: (unk) rbd: require global CAP_SYS_ADMIN for mapping and unmapping 
+  CVE-2020-25639: (unk)  
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 

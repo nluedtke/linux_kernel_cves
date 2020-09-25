@@ -579,6 +579,7 @@ CVEs fixed in 4.14.161:
   CVE-2019-19057: 1cdafe368ec4ad7e878eddc30ea0d11a0f57b222 mwifiex: pcie: Fix memory leak in mwifiex_pcie_init_evt_ring
   CVE-2019-19063: 9c84ba30947a9d8ac2c67abaafc17087ead04426 rtlwifi: prevent memory leak in rtl_usb_probe
   CVE-2019-20812: 665c9af8987880414e141e623bf7e6481d1c1696 af_packet: set defaule value for tmo
+  CVE-2020-0427: 679c4f27b8958b65bb51d1c3dfdbf3befe4a33a3 pinctrl: devicetree: Avoid taking direct reference to device name string
 
 CVEs fixed in 4.14.162:
   CVE-2020-10690: 2dece4d6d13fe179ee3a5991811712725a56e2f7 ptp: fix the race between the release of ptp_clock and cdev
@@ -589,6 +590,7 @@ CVEs fixed in 4.14.163:
 
 CVEs fixed in 4.14.164:
   CVE-2019-14901: ec3bb975c6013aa2f5e8a96a0bee2c8d39618e89 mwifiex: Fix heap overflow in mmwifiex_process_tdls_action_frame()
+  CVE-2020-0430: 7fed98f4a1e6eb77a5d66ecfdf9345e21df6ac82 bpf: reject passing modified ctx to helper functions
 
 CVEs fixed in 4.14.165:
   CVE-2019-14615: 39465647eda707db7c7561006da3a8450ca634b9 drm/i915/gen9: Clear residual context state on context switch
@@ -598,6 +600,7 @@ CVEs fixed in 4.14.165:
   CVE-2019-19068: 32079b0c59f4620fdf7a5576af7502b0d05fcb01 rtl8xxxu: prevent leaking urb
   CVE-2019-20636: af62c38b0f86539504dc5c0e5dcfc7613b1150a5 Input: add safety guards to input_set_keycode()
   CVE-2020-0305: c807f43500e14ed24599106745bb6005665f74d6 chardev: Avoid potential use-after-free in 'chrdev_open()'
+  CVE-2020-0431: cb0a3edf8d00740303e5b42e9c0e72d924fc23d2 HID: hid-input: clear unmapped usages
 
 CVEs fixed in 4.14.166:
   CVE-2018-21008: ba8bbddaa188235df007411fdead5832f9e0cb59 rsi: add fix for crash during assertions
@@ -733,6 +736,10 @@ CVEs fixed in 4.14.197:
 CVEs fixed in 4.14.198:
   CVE-2020-12888: 1356c3e8539ac48b9362e60b1fa80ec06bb960ec vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
 
+CVEs fixed in 4.14.199:
+  CVE-2020-14390: 6e2e0735dadecc1c1657e458e8f88e0ca6a4ec04 fbcon: remove soft scrollback code
+  CVE-2020-25284: af4a88994936474294b2f484be01117dc7550e68 rbd: require global CAP_SYS_ADMIN for mapping and unmapping
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -806,6 +813,7 @@ Outstanding CVEs:
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2019-9444: (unk) printk: hash addresses printed with %p 
+  CVE-2020-0347: (unk)  
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
   CVE-2020-10774: (unk)  
@@ -815,13 +823,12 @@ Outstanding CVEs:
   CVE-2020-14304: (unk)  
   CVE-2020-14351: (unk)  
   CVE-2020-14386: (unk) net/packet: fix overflow in tpacket_rcv 
-  CVE-2020-14390: (unk) fbcon: remove soft scrollback code 
   CVE-2020-15780: (unk) ACPI: configfs: Disallow loading ACPI tables when locked down 
   CVE-2020-15802: (unk)  
-  CVE-2020-25211: (unk)  
+  CVE-2020-25211: (unk) netfilter: ctnetlink: add a range check for l3/l4 protonum 
   CVE-2020-25220: (unk)  
   CVE-2020-25221: (unk) mm: fix pin vs. gup mismatch with gate pages 
-  CVE-2020-25284: (unk) rbd: require global CAP_SYS_ADMIN for mapping and unmapping 
+  CVE-2020-25639: (unk)  
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
