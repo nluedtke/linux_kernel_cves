@@ -52595,9 +52595,32 @@
         "affected_versions": "unk to v4.19-rc1",
         "breaks": "",
         "cmt_msg": "blk-mq: sync the update nr_hw_queues with blk_mq_queue_tag_busy_iter",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "f5bbbbe4d63577026f908a809f22f5fd5a90ea1f",
         "last_affected_version": "4.14.175",
-        "last_modified": "2020-09-24",
+        "last_modified": "2020-10-05",
         "nvd_text": "In blk_mq_queue_tag_busy_iter of blk-mq-tag.c, there is a possible use after free due to improper locking. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-151939299",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0433",
@@ -52614,8 +52637,8 @@
         "cmt_msg": "f2fs: fix to do sanity check with i_extra_isize",
         "fixes": "18dd6470c2d14d10f5a2dd926925dc80dbd3abfd",
         "last_affected_version": "4.14.85",
-        "last_modified": "2020-09-24",
-        "nvd_text": "In inline_data_addr of f2fs.h, there is a possible out of bounds write due to an integer overflow. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-133762747",
+        "last_modified": "2020-10-05",
+        "nvd_text": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2018-14615. Reason: This candidate is a duplicate of CVE-2018-14615. Notes: All CVE users should reference CVE-2018-14615 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0435",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0435",
@@ -52623,7 +52646,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0435",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-0435",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0435"
-        }
+        },
+        "rejected": true
     },
     "CVE-2020-0543": {
         "affected_versions": "unk to v5.8-rc1",
@@ -54323,8 +54347,31 @@
     "CVE-2020-14304": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.4
+        },
+        "cwe": "Improper Handling of Exceptional Conditions",
         "fixes": "",
-        "last_modified": "2020-09-21",
+        "last_modified": "2020-10-05",
         "nvd_text": "A memory disclosure flaw was found in the Linux kernel's ethernet drivers, in the way it read data from the EEPROM of the device. This flaw allows a local user to read uninitialized values from the kernel memory. The highest threat from this vulnerability is to confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14304",
@@ -54354,9 +54401,32 @@
         "affected_versions": "v2.6.23-rc7 to v5.9-rc2",
         "breaks": "ef2b02d3e617cb0400eedf2668f86215e1b0e6af",
         "cmt_msg": "ext4: fix potential negative array index in do_split()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "5872331b3d91820e14716632ebb56b1399b34fe1",
         "last_affected_version": "5.8.3",
-        "last_modified": "2020-09-21",
+        "last_modified": "2020-10-05",
         "nvd_text": "A memory out-of-bounds read flaw was found in the Linux kernel before 5.9-rc2 with the ext3/ext4 file system, in the way it accesses a directory with broken indexing. This flaw allows a local user to crash the system if the directory exists. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14314",
@@ -54938,7 +55008,8 @@
         },
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "1cc5ef91d2ff94d2bf2de3b3585423e8a1051cb6",
-        "last_modified": "2020-09-28",
+        "last_affected_version": "5.8.12",
+        "last_modified": "2020-10-05",
         "nvd_text": "In the Linux kernel through 5.8.7, local attackers able to inject conntrack netlink configuration could overflow a local buffer, causing crashes or triggering use of incorrect protocol numbers in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c, aka CID-1cc5ef91d2ff.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25211",
@@ -55177,13 +55248,30 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25641"
         }
     },
+    "CVE-2020-25643": {
+        "affected_versions": "unk to v5.9-rc7",
+        "breaks": "",
+        "cmt_msg": "hdlc_ppp: add range checks in ppp_cp_parse_cr()",
+        "fixes": "66d42ed8b25b64eb63111a2b8582c5afc8bf1105",
+        "last_affected_version": "5.8.11",
+        "last_modified": "2020-10-05",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25643",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25643",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25643",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25643",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25643",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25643"
+        }
+    },
     "CVE-2020-26088": {
         "affected_versions": "unk to v5.9-rc1",
         "breaks": "",
         "cmt_msg": "net/nfc/rawsock.c: add CAP_NET_RAW check.",
         "fixes": "26896f01467a28651f7a536143fe5ac8449d4041",
         "last_affected_version": "5.8.1",
-        "last_modified": "2020-09-28",
+        "last_modified": "2020-10-05",
+        "nvd_text": "A missing CAP_NET_RAW check in NFC socket creation in net/nfc/rawsock.c in the Linux kernel before 5.8.2 could be used by local attackers to create raw sockets, bypassing security mechanisms, aka CID-26896f01467a.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26088",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-26088",
@@ -55191,6 +55279,20 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-26088",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-26088",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-26088"
+        }
+    },
+    "CVE-2020-26541": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-10-05",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26541",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-26541",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-26541",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-26541",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-26541",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-26541"
         }
     },
     "CVE-2020-2732": {
