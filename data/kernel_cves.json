@@ -54634,7 +54634,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "acf69c946233259ab4d64f8869d4037a198c7f06",
         "last_affected_version": "5.8.7",
-        "last_modified": "2020-09-28",
+        "last_modified": "2020-10-08",
         "nvd_text": "A flaw was found in the Linux kernel before 5.9-rc4. Memory corruption can be exploited to gain root privileges from unprivileged processes. The highest threat from this vulnerability is to data confidentiality and integrity.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14386",
@@ -54649,10 +54649,33 @@
         "affected_versions": "unk to v5.9-rc6",
         "breaks": "",
         "cmt_msg": "fbcon: remove soft scrollback code",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "Low",
+            "Integrity": "Low",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:H",
+            "score": 5.6
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "50145474f6ef4a9c19205b173da6264a644c7489",
         "last_affected_version": "5.8.9",
-        "last_modified": "2020-09-24",
-        "nvd_text": "A flaw was found in the Linux kernel in versions from 2.2.3 through 5.9.rc5. When changing screen size, an out-of-bounds memory write can occur leading to memory corruption or a denial of service. This highest threat from this vulnerability is to system availability.",
+        "last_modified": "2020-10-08",
+        "nvd_text": "A flaw was found in the Linux kernel in versions before 5.9-rc6. When changing screen size, an out-of-bounds memory write can occur leading to memory corruption or a denial of service. Due to the nature of the flaw, privilege escalation cannot be fully ruled out.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14390",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14390",
@@ -55009,7 +55032,7 @@
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "1cc5ef91d2ff94d2bf2de3b3585423e8a1051cb6",
         "last_affected_version": "5.8.12",
-        "last_modified": "2020-10-05",
+        "last_modified": "2020-10-08",
         "nvd_text": "In the Linux kernel through 5.8.7, local attackers able to inject conntrack netlink configuration could overflow a local buffer, causing crashes or triggering use of incorrect protocol numbers in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c, aka CID-1cc5ef91d2ff.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25211",
@@ -55284,8 +55307,32 @@
     "CVE-2020-26541": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+            "score": 6.5
+        },
+        "cwe": "Unspecified",
         "fixes": "",
-        "last_modified": "2020-10-05",
+        "last_modified": "2020-10-08",
+        "nvd_text": "The Linux kernel through 5.8.13 does not properly enforce the Secure Boot Forbidden Signature Database (aka dbx) protection mechanism. This affects certs/blacklist.c and certs/system_keyring.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26541",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-26541",
