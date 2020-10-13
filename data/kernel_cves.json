@@ -55261,7 +55261,8 @@
         "cmt_msg": "block: allow for_each_bvec to support zero len bvec",
         "fixes": "7e24969022cbd61ddc586f14824fc205661bb124",
         "last_affected_version": "5.8.7",
-        "last_modified": "2020-09-28",
+        "last_modified": "2020-10-13",
+        "nvd_text": "A flaw was found in the Linux kernel's implementation of biovecs in versions before 5.9-rc7. A zero-length biovec request issued by the block subsystem could cause the kernel to enter an infinite loop, causing a denial of service. This flaw allows a local attacker with basic privileges to issue requests to a block device, resulting in a denial of service. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25641",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25641",
@@ -55277,7 +55278,8 @@
         "cmt_msg": "hdlc_ppp: add range checks in ppp_cp_parse_cr()",
         "fixes": "66d42ed8b25b64eb63111a2b8582c5afc8bf1105",
         "last_affected_version": "5.8.11",
-        "last_modified": "2020-10-05",
+        "last_modified": "2020-10-13",
+        "nvd_text": "A flaw was found in the HDLC_PPP module of the Linux kernel in versions before 5.9-rc7. Memory corruption and a read overflow is caused by improper input validation in the ppp_cp_parse_cr function which can cause the system to crash or cause a denial of service. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25643",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25643",
@@ -55287,13 +55289,52 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25643"
         }
     },
+    "CVE-2020-25645": {
+        "affected_versions": "unk to v5.9-rc7",
+        "breaks": "",
+        "cmt_msg": "geneve: add transport ports in route lookup for geneve",
+        "fixes": "34beb21594519ce64a55a498c2fe7d567bc1ca20",
+        "last_affected_version": "5.8.11",
+        "last_modified": "2020-10-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25645",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25645",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25645",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25645",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25645",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25645"
+        }
+    },
     "CVE-2020-26088": {
         "affected_versions": "unk to v5.9-rc1",
         "breaks": "",
         "cmt_msg": "net/nfc/rawsock.c: add CAP_NET_RAW check.",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "score": 5.5
+        },
+        "cwe": "Incorrect Default Permissions",
         "fixes": "26896f01467a28651f7a536143fe5ac8449d4041",
         "last_affected_version": "5.8.1",
-        "last_modified": "2020-10-05",
+        "last_modified": "2020-10-13",
         "nvd_text": "A missing CAP_NET_RAW check in NFC socket creation in net/nfc/rawsock.c in the Linux kernel before 5.8.2 could be used by local attackers to create raw sockets, bypassing security mechanisms, aka CID-26896f01467a.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26088",
