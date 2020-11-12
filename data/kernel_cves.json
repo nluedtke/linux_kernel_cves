@@ -46243,7 +46243,7 @@
         "cwe": "Information Exposure",
         "fixes": "b3ff8f1d380e65dddd772542aa9bff6c86bf715a",
         "last_affected_version": "5.6.4",
-        "last_modified": "2020-06-18",
+        "last_modified": "2020-11-12",
         "nvd_text": "** DISPUTED ** __btrfs_free_extent in fs/btrfs/extent-tree.c in the Linux kernel through 5.3.12 calls btrfs_print_leaf in a certain ENOENT case, which allows local users to obtain potentially sensitive information about register values via the dmesg program. NOTE: The BTRFS development team disputes this issues as not being a vulnerability because “1) The kernel provide facilities to restrict access to dmesg - dmesg_restrict=1 sysctl option. So it's really up to the system administrator to judge whether dmesg access shall be disallowed or not. 2) WARN/WARN_ON are widely used macros in the linux kernel. If this CVE is considered valid this would mean there are literally thousands CVE lurking in the kernel - something which clearly is not the case.”",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19039",
@@ -48202,7 +48202,7 @@
         "cwe": "Use After Free",
         "fixes": "b3ff8f1d380e65dddd772542aa9bff6c86bf715a",
         "last_affected_version": "5.6.4",
-        "last_modified": "2020-04-17",
+        "last_modified": "2020-11-12",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image, performing some operations, and unmounting can lead to a use-after-free in btrfs_queue_work in fs/btrfs/async-thread.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19377",
@@ -49238,7 +49238,7 @@
         "cwe": "Use After Free",
         "fixes": "bad8e64fb19d3a0de5e564d9a7271c31bd684369",
         "last_affected_version": "5.8.1",
-        "last_modified": "2020-08-20",
+        "last_modified": "2020-11-12",
         "nvd_text": "** DISPUTED ** In the Linux kernel 4.19.83, there is a use-after-free (read) in the debugfs_remove function in fs/debugfs/inode.c (which is used to remove a file or directory in debugfs that was previously created with a call to another debugfs function such as debugfs_create_file). NOTE: Linux kernel developers dispute this issue as not being an issue with debugfs, instead this is an issue with misuse of debugfs within blktrace.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19770",
@@ -55500,7 +55500,7 @@
         "cmt_msg": "vt: keyboard, extend func_buf_lock to readers",
         "fixes": "82e61c3909db51d91b9d3e2071557b6435018b80",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-11-09",
+        "last_modified": "2020-11-12",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25656",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25656",
@@ -55514,7 +55514,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2020-11-09",
+        "last_modified": "2020-11-12",
+        "nvd_text": "A Red Hat only CVE-2020-12351 regression issue was found in the way the Linux kernel's Bluetooth implementation handled L2CAP packets with A2MP CID. This flaw allows a remote attacker in an adjacent range to crash the system, causing a denial of service or potentially executing arbitrary code on the system by sending a specially crafted L2CAP packet. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25661",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25661",
@@ -55528,7 +55529,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2020-11-09",
+        "last_modified": "2020-11-12",
+        "nvd_text": "A Red Hat only CVE-2020-12352 regression issue was found in the way the Linux kernel's Bluetooth stack implementation handled the initialization of stack memory when handling certain AMP packets. This flaw allows a remote attacker in an adjacent range to leak small portions of stack memory on the system by sending specially crafted AMP packets. The highest threat from this vulnerability is to data confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25662",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25662",
@@ -55544,7 +55546,7 @@
         "cmt_msg": "tty: make FONTX ioctl use the tty pointer they were actually passed",
         "fixes": "90bfdeef83f1d6c696039b6a917190dcbbad3220",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-11-09",
+        "last_modified": "2020-11-12",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25668",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25668",
@@ -55622,6 +55624,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25673",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-25673",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25673"
+        }
+    },
+    "CVE-2020-25704": {
+        "affected_versions": "unk to v5.10-rc3",
+        "breaks": "",
+        "cmt_msg": "perf/core: Fix a memory leak in perf_event_parse_addr_filter()",
+        "fixes": "7bdb157cdebbf95a1cd94ed2e01b338714075d00",
+        "last_affected_version": "5.9.6",
+        "last_modified": "2020-11-12",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25704",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25704",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-25704",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25704",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-25704",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25704"
         }
     },
     "CVE-2020-26088": {
@@ -55708,7 +55726,8 @@
         "cmt_msg": "KVM: ioapic: break infinite recursion on lazy EOI",
         "fixes": "77377064c3a94911339f13ce113b3abf265e06da",
         "last_affected_version": "5.9.1",
-        "last_modified": "2020-10-30",
+        "last_modified": "2020-11-12",
+        "nvd_text": "An issue was discovered in ioapic_lazy_update_eoi in arch/x86/kvm/ioapic.c in the Linux kernel before 5.9.2. It has an infinite loop related to improper interaction between a resampler and edge triggering, aka CID-77377064c3a9.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27152",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27152",
@@ -55842,9 +55861,32 @@
         "affected_versions": "unk to v5.10-rc1",
         "breaks": "",
         "cmt_msg": "xen/events: avoid removing an event channel while handling it",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:N/I:N/A:C",
+            "score": 4.7
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.7
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "073d0552ead5bfc7a3a9c01de590e924f11b5dd2",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-11-09",
+        "last_modified": "2020-11-12",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.9.1, as used with Xen through 4.14.x. drivers/xen/events/events_base.c allows event-channel removal during the event-handling loop (a race condition). This can cause a use-after-free or NULL pointer dereference, as demonstrated by a dom0 crash via events for an in-reconfiguration paravirtualized device, aka CID-073d0552ead5.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27675",
@@ -56052,6 +56094,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-8649",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-8649",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-8649"
+        }
+    },
+    "CVE-2020-8694": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "powercap: restrict energy meter to root access",
+        "fixes": "949dd0104c496fa7c14991a23c03c62e44637e71",
+        "last_affected_version": "5.9.7",
+        "last_modified": "2020-11-12",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-8694",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-8694",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-8694",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-8694",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-8694",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-8694"
         }
     },
     "CVE-2020-8832": {
