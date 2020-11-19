@@ -52460,7 +52460,7 @@
         "cwe": "Use After Free",
         "fixes": "be4c60b563edee3712d392aaeb0943a768df7023",
         "last_affected_version": "5.4.6",
-        "last_modified": "2020-09-28",
+        "last_modified": "2020-11-19",
         "nvd_text": "In create_pinctrl of core.c, there is a possible out of bounds read due to a use after free. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-140550171",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0427",
@@ -54341,7 +54341,8 @@
         "breaks": "",
         "cmt_msg": "hwmon: (amd_energy) modify the visibility of the counters",
         "fixes": "60268b0e8258fdea9a3c9f4b51e161c123571db3",
-        "last_modified": "2020-11-18",
+        "last_affected_version": "5.9.8",
+        "last_modified": "2020-11-19",
         "nvd_text": "A potential vulnerability in the AMD extension to Linux \"hwmon\" service may allow an attacker to use the Linux-based Running Average Power Limit (RAPL) interface to show various side channel attacks. In line with industry partners, AMD has updated the RAPL interface to require privileged access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12912",
@@ -54571,7 +54572,7 @@
         "cmt_msg": "perf/core: Fix race in the perf_mmap_close() function",
         "fixes": "f91072ed1b7283b13ca57fcfbece5a3b92726143",
         "last_affected_version": "5.9.1",
-        "last_modified": "2020-10-30",
+        "last_modified": "2020-11-19",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14351",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-14351",
@@ -55499,7 +55500,7 @@
         "cwe": "Cleartext Transmission of Sensitive Information",
         "fixes": "34beb21594519ce64a55a498c2fe7d567bc1ca20",
         "last_affected_version": "5.8.11",
-        "last_modified": "2020-10-20",
+        "last_modified": "2020-11-19",
         "nvd_text": "A flaw was found in the Linux kernel in versions before 5.9-rc7. Traffic between two Geneve endpoints may be unencrypted when IPsec is configured to encrypt traffic for the specific UDP port used by the GENEVE tunnel allowing anyone between the two endpoints to read the traffic unencrypted. The main threat from this vulnerability is to data confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25645",
@@ -55648,7 +55649,7 @@
         "cmt_msg": "perf/core: Fix a memory leak in perf_event_parse_addr_filter()",
         "fixes": "7bdb157cdebbf95a1cd94ed2e01b338714075d00",
         "last_affected_version": "5.9.6",
-        "last_modified": "2020-11-12",
+        "last_modified": "2020-11-19",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25704",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25704",
@@ -55664,7 +55665,8 @@
         "cmt_msg": "icmp: randomize the global rate limiter",
         "fixes": "b38e7819cae946e2edf869e604af1e65a5d241c5",
         "last_affected_version": "5.9.1",
-        "last_modified": "2020-11-13",
+        "last_modified": "2020-11-19",
+        "nvd_text": "A flaw in the way reply ICMP packets are limited in the Linux kernel functionality was found that allows to quickly scan open UDP ports. This flaw allows an off-path remote user to effectively bypassing source port UDP randomization. The highest threat from this vulnerability is to confidentiality and possibly integrity, because software that relies on UDP source port randomization are indirectly affected as well. Kernel versions before 5.10 may be vulnerable to this issue.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25705",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25705",
@@ -55756,9 +55758,32 @@
         "affected_versions": "unk to v5.10-rc1",
         "breaks": "",
         "cmt_msg": "KVM: ioapic: break infinite recursion on lazy EOI",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Loop with Unreachable Exit Condition ('Infinite Loop')",
         "fixes": "77377064c3a94911339f13ce113b3abf265e06da",
         "last_affected_version": "5.9.1",
-        "last_modified": "2020-11-12",
+        "last_modified": "2020-11-19",
         "nvd_text": "An issue was discovered in ioapic_lazy_update_eoi in arch/x86/kvm/ioapic.c in the Linux kernel before 5.9.2. It has an infinite loop related to improper interaction between a resampler and edge triggering, aka CID-77377064c3a9.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27152",
@@ -55878,7 +55903,7 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "4d3fe31bd993ef504350989786858aefdb877daa",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-11-09",
+        "last_modified": "2020-11-19",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.9.1, as used with Xen through 4.14.x. Guest OS users can cause a denial of service (host OS hang) via a high rate of events to dom0, aka CID-e99502f76271.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27673",
@@ -55918,7 +55943,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "073d0552ead5bfc7a3a9c01de590e924f11b5dd2",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-11-12",
+        "last_modified": "2020-11-19",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.9.1, as used with Xen through 4.14.x. drivers/xen/events/events_base.c allows event-channel removal during the event-handling loop (a race condition). This can cause a use-after-free or NULL pointer dereference, as demonstrated by a dom0 crash via events for an in-reconfiguration paravirtualized device, aka CID-073d0552ead5.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27675",
@@ -55927,6 +55952,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27675",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-27675",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27675"
+        }
+    },
+    "CVE-2020-28915": {
+        "affected_versions": "unk to v5.9",
+        "breaks": "",
+        "cmt_msg": "fbcon: Fix global-out-of-bounds read in fbcon_get_font()",
+        "fixes": "5af08640795b2b9a940c9266c0260455377ae262",
+        "last_affected_version": "5.8",
+        "last_modified": "2020-11-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28915",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-28915",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-28915",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-28915",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-28915",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-28915"
         }
     },
     "CVE-2020-7053": {
