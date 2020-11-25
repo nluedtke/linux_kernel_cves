@@ -173,6 +173,7 @@ CVEs fixed in 5.4.48:
 
 CVEs fixed in 5.4.49:
   CVE-2020-12771: f651e94899ed08b1766bda30f410d33fdd3970ff bcache: fix potential deadlock problem in btree_gc_coalesce
+  CVE-2020-15436: b3dc33946a742256ad9d2ccac848c9e3c2aaafef block: Fix use-after-free in blkdev_get()
 
 CVEs fixed in 5.4.50:
   CVE-2020-12655: ffd40b7962d463daa531a8110e5b708bcb5c6da7 xfs: add agf freeblocks verify in xfs_agf_verify
@@ -185,6 +186,9 @@ CVEs fixed in 5.4.51:
 CVEs fixed in 5.4.53:
   CVE-2020-10781: 72648019cd52488716891c2cbb096ad1023ab83e Revert "zram: convert remaining CLASS_ATTR() to CLASS_ATTR_RO()"
   CVE-2020-14356: 94886c86e833dbc8995202b6c6aaff592b7abd24 cgroup: fix cgroup_sk_alloc() for sk_clone_lock()
+
+CVEs fixed in 5.4.54:
+  CVE-2020-15437: af811869db0698b587aa5418eab05c9f7e0bea3c serial: 8250: fix null-ptr-deref in serial8250_start_tx()
 
 CVEs fixed in 5.4.56:
   CVE-2019-18808: ecfa7fa198fc66731ded5dabefccc8e9e2f3b311 crypto: ccp - Release all allocated memory if sha type is invalid
@@ -243,6 +247,7 @@ CVEs fixed in 5.4.75:
   CVE-2020-25668: c2313d7818b979f8b3751f052a8db34a7ed26780 tty: make FONTX ioctl use the tty pointer they were actually passed
   CVE-2020-27673: 4bea575a10691a99b03d5e9055f3079040b59868 xen/events: add a proper barrier to 2-level uevent unmasking
   CVE-2020-27675: a01379671d67d34f254cc81f42cf854aa628f3a3 xen/events: avoid removing an event channel while handling it
+  CVE-2020-27777: 240baebeda09e1e010fff58acc9183992f41f638 powerpc/rtas: Restrict RTAS requests from userspace
 
 CVEs fixed in 5.4.76:
   CVE-2020-25704: b7f7474b392194530d1ec07203c8668e81b7fdb9 perf/core: Fix a memory leak in perf_event_parse_addr_filter()
@@ -257,6 +262,9 @@ CVEs fixed in 5.4.78:
 CVEs fixed in 5.4.79:
   CVE-2020-25669: df33054114475477b5e7810aa0efb26916220474 Input: sunkbd - avoid use-after-free in teardown paths
   CVE-2020-4788: bcf7f2d3fcec8a47ddfee6d8801ab57162922480 selftests/powerpc: rfi_flush: disable entry flush if present
+
+CVEs fixed in 5.4.80:
+  CVE-2020-28941: 3b78db264675e47ad3cf9c1e809e85d02fe1de90 speakup: Do not let the line discipline be used several times
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -317,4 +325,3 @@ Outstanding CVEs:
   CVE-2020-26541: (unk)  
   CVE-2020-27152: (unk) KVM: ioapic: break infinite recursion on lazy EOI 
   CVE-2020-27194: (unk) bpf: Fix scalar32_min_max_or bounds tracking 
-  CVE-2020-28941: (unk)  

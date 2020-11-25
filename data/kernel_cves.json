@@ -54856,6 +54856,38 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-15393"
         }
     },
+    "CVE-2020-15436": {
+        "affected_versions": "unk to v5.8-rc2",
+        "breaks": "",
+        "cmt_msg": "block: Fix use-after-free in blkdev_get()",
+        "fixes": "2d3a8e2deddea6c89961c422ec0c5b851e648c14",
+        "last_affected_version": "5.7.5",
+        "last_modified": "2020-11-25",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15436",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-15436",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-15436",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-15436",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-15436",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-15436"
+        }
+    },
+    "CVE-2020-15437": {
+        "affected_versions": "unk to v5.8-rc7",
+        "breaks": "",
+        "cmt_msg": "serial: 8250: fix null-ptr-deref in serial8250_start_tx()",
+        "fixes": "f4c23a140d80ef5e6d3d1f8f57007649014b60fa",
+        "last_affected_version": "5.7.10",
+        "last_modified": "2020-11-25",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15437",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-15437",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-15437",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-15437",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-15437",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-15437"
+        }
+    },
     "CVE-2020-15780": {
         "affected_versions": "v4.8-rc1 to v5.8-rc3",
         "breaks": "0bf54fcd95042bd178cb25368422cf4474fc8492",
@@ -55530,8 +55562,31 @@
     "CVE-2020-25661": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:A/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 8.3
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 8.8
+        },
+        "cwe": "Access of Resource Using Incompatible Type ('Type Confusion')",
         "fixes": "",
-        "last_modified": "2020-11-12",
+        "last_modified": "2020-11-25",
         "nvd_text": "A Red Hat only CVE-2020-12351 regression issue was found in the way the Linux kernel's Bluetooth implementation handled L2CAP packets with A2MP CID. This flaw allows a remote attacker in an adjacent range to crash the system, causing a denial of service or potentially executing arbitrary code on the system by sending a specially crafted L2CAP packet. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25661",
@@ -55545,8 +55600,31 @@
     "CVE-2020-25662": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:A/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 3.3
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 6.5
+        },
+        "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "",
-        "last_modified": "2020-11-12",
+        "last_modified": "2020-11-25",
         "nvd_text": "A Red Hat only CVE-2020-12352 regression issue was found in the way the Linux kernel's Bluetooth stack implementation handled the initialization of stack memory when handling certain AMP packets. This flaw allows a remote attacker in an adjacent range to leak small portions of stack memory on the system by sending specially crafted AMP packets. The highest threat from this vulnerability is to data confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25662",
@@ -55574,12 +55652,12 @@
         }
     },
     "CVE-2020-25669": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.10-rc5",
         "breaks": "",
         "cmt_msg": "Input: sunkbd - avoid use-after-free in teardown paths",
         "fixes": "77e70d351db7de07a46ac49b87a6c3c7a60fca7e",
         "last_affected_version": "5.9.9",
-        "last_modified": "2020-11-22",
+        "last_modified": "2020-11-25",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25669",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25669",
@@ -55956,6 +56034,22 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27675"
         }
     },
+    "CVE-2020-27777": {
+        "affected_versions": "unk to v5.10-rc1",
+        "breaks": "",
+        "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace",
+        "fixes": "bd59380c5ba4147dcbaad3e582b55ccfd120b764",
+        "last_affected_version": "5.9.4",
+        "last_modified": "2020-11-25",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27777",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27777",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-27777",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27777",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-27777",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27777"
+        }
+    },
     "CVE-2020-28915": {
         "affected_versions": "unk to v5.9",
         "breaks": "",
@@ -55974,10 +56068,13 @@
         }
     },
     "CVE-2020-28941": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.10-rc5",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2020-11-22",
+        "cmt_msg": "speakup: Do not let the line discipline be used several times",
+        "fixes": "d4122754442799187d5d537a9c039a49a67e57f1",
+        "last_affected_version": "5.9.10",
+        "last_modified": "2020-11-25",
+        "nvd_text": "An issue was discovered in drivers/accessibility/speakup/spk_ttyio.c in the Linux kernel through 5.9.9. Local attackers on systems with the speakup driver could cause a local denial of service attack, aka CID-d41227544427. This occurs because of an invalid free when the line discipline is used more than once.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28941",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-28941",
@@ -55993,7 +56090,8 @@
         "cmt_msg": "vt: Disable KD_FONT_OP_COPY",
         "fixes": "3c4e0dff2095c579b142d5a0693257f1c58b4804",
         "last_affected_version": "5.9.6",
-        "last_modified": "2020-11-22",
+        "last_modified": "2020-11-25",
+        "nvd_text": "A slab-out-of-bounds read in fbcon in the Linux kernel before 5.9.7 could be used by local attackers to read privileged information or potentially crash the kernel, aka CID-3c4e0dff2095. This occurs because KD_FONT_OP_COPY in drivers/tty/vt/vt.c can be used for manipulations such as font height.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28974",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-28974",
@@ -56004,12 +56102,13 @@
         }
     },
     "CVE-2020-4788": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.10-rc5",
         "breaks": "",
         "cmt_msg": "selftests/powerpc: rfi_flush: disable entry flush if present",
         "fixes": "fcb48454c23c5679d1a2e252f127642e91b05cbe",
         "last_affected_version": "5.9.9",
-        "last_modified": "2020-11-22",
+        "last_modified": "2020-11-25",
+        "nvd_text": "IBM Power9 (AIX 7.1, 7.2, and VIOS 3.1) processors could allow a local user to obtain sensitive information from the data in the L1 cache under extenuating circumstances. IBM X-Force ID: 189296.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-4788",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-4788",
@@ -56222,9 +56321,32 @@
         "affected_versions": "unk to v5.10-rc4",
         "breaks": "",
         "cmt_msg": "powercap: restrict energy meter to root access",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
         "fixes": "949dd0104c496fa7c14991a23c03c62e44637e71",
         "last_affected_version": "5.9.7",
-        "last_modified": "2020-11-18",
+        "last_modified": "2020-11-25",
         "nvd_text": "Insufficient access control in the Linux kernel driver for some Intel(R) Processors may allow an authenticated user to potentially enable information disclosure via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-8694",
