@@ -218,6 +218,7 @@ CVEs fixed in 4.19.64:
   CVE-2019-10207: 56966212e23f82ced10831f7cca02f7339147428 Bluetooth: hci_uart: check for missing tty operations
   CVE-2019-15211: b3836af8560e27cd0d27940ff9c5a08b90b8d256 media: radio-raremono: change devm_k*alloc to k*alloc
   CVE-2019-15215: 8b44cc225e6024174508164931cab9f01c79dca2 media: cpia2_usb: first wake up, then free in disconnect
+  CVE-2019-20934: 48046e092ad557a01d7daf53205624944793b19d sched/fair: Don't free p->numa_faults with concurrent readers
   CVE-2019-2213: 22068d49d09d2b3890e19d7b2048a33340f992da binder: fix possible UAF when freeing buffer
   CVE-2019-3900: 3af3b843aee41ed22343b011a4cf3812a80d2f38 vhost_net: fix possible infinite loop
 
@@ -419,6 +420,9 @@ CVEs fixed in 4.19.109:
 CVEs fixed in 4.19.111:
   CVE-2020-12465: 319478cbd2be90995b011ca6adbd834121eb7acf mt76: fix array overflow on receiving too many fragments for a packet
 
+CVEs fixed in 4.19.112:
+  CVE-2020-29370: 30f6cae722654caef2ab4bacb2e910bfd766866b mm: slub: add missing TID bump in kmem_cache_alloc_bulk()
+
 CVEs fixed in 4.19.113:
   CVE-2020-14381: e6d506cd2243aa8f6e19fdb4dc61d85275c2c918 futex: Fix inode life-time issue
 
@@ -475,6 +479,7 @@ CVEs fixed in 4.19.129:
   CVE-2019-18885: 8cb9b069fa631b613bbbd6f63887190e55cafa3c btrfs: merge btrfs_find_device and find_device
   CVE-2019-19036: 227af79e6cb0ee3faeb8c70be4bc0aec0b09ea25 btrfs: Detect unbalanced tree with empty leaf before crashing btree operations
   CVE-2019-20810: 95b58c96a28e6174661dcd5bc543618973fc43d3 media: go7007: fix a miss of snd_card_free
+  CVE-2020-29368: 453d8a481b127edfa7fb76af1bc7586b7a63bdd2 mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked()
 
 CVEs fixed in 4.19.130:
   CVE-2020-12771: 2ee8f6e72269eb06649ebab3da6bbf59aed3eabe bcache: fix potential deadlock problem in btree_gc_coalesce
@@ -523,6 +528,7 @@ CVEs fixed in 4.19.141:
 
 CVEs fixed in 4.19.142:
   CVE-2020-14314: b3ddf6ba5e28a57729fff1605ae08e21be5c92e3 ext4: fix potential negative array index in do_split()
+  CVE-2020-29371: 9660983738399465fd0e3b1977a61bbd29b2e5be romfs: fix uninitialized memory leak in romfs_dev_read()
 
 CVEs fixed in 4.19.144:
   CVE-2020-12888: da7aea6eb5608695f590dcd72523536b709d0399 vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
@@ -653,5 +659,9 @@ Outstanding CVEs:
   CVE-2020-26541: (unk)  
   CVE-2020-27152: (unk) KVM: ioapic: break infinite recursion on lazy EOI 
   CVE-2020-27194: (unk) bpf: Fix scalar32_min_max_or bounds tracking 
+  CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
+  CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
+  CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
+  CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 

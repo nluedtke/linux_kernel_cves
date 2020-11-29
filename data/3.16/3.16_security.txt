@@ -660,6 +660,7 @@ CVEs fixed in 3.16.78:
   CVE-2019-19531: 8f6204f2adba5354b65bd0f37b8d930e49df6420 usb: yurex: Fix use-after-free in yurex_delete
   CVE-2019-19536: 06d7546f7b115a266a9bb81887479f38e166964e can: peak_usb: pcan_usb_pro: Fix info-leaks to USB devices
   CVE-2019-19537: 7e0af4e53ee2cf9b5e4ee761bd8dc4f25a9c885a USB: core: Fix races in character device registration and deregistraion
+  CVE-2019-20934: e65d89d6e78cf1463e755a33e013bde15b894cf5 sched/fair: Don't free p->numa_faults with concurrent readers
 
 CVEs fixed in 3.16.79:
   CVE-2019-15291: 470a2d36f614f40b7f032071cfa6662dfcc1eda4 media: b2c2-flexcop-usb: add sanity checking
@@ -973,6 +974,13 @@ Outstanding CVEs:
   CVE-2020-28915: (unk) fbcon: Fix global-out-of-bounds read in fbcon_get_font() 
   CVE-2020-28941: (unk) speakup: Do not let the line discipline be used several times 
   CVE-2020-28974: (unk) vt: Disable KD_FONT_OP_COPY 
+  CVE-2020-29368: (unk) mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked() 
+  CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
+  CVE-2020-29370: (unk) mm: slub: add missing TID bump in kmem_cache_alloc_bulk() 
+  CVE-2020-29371: (unk) romfs: fix uninitialized memory leak in romfs_dev_read() 
+  CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
+  CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
+  CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-8694: (unk) powercap: restrict energy meter to root access 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 

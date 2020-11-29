@@ -30,6 +30,7 @@ CVEs fixed in 5.2.6:
   CVE-2019-10207: 785b5dc6c06083a874d7bda593de06a01ac7fe6a Bluetooth: hci_uart: check for missing tty operations
   CVE-2019-15211: d373454a8ce53f51a59bc4c1ef07e46901c8a077 media: radio-raremono: change devm_k*alloc to k*alloc
   CVE-2019-15215: 7951663c80a558ac97978e19ba893f9f6d3dec3d media: cpia2_usb: first wake up, then free in disconnect
+  CVE-2019-20934: 8004fa12d0287fd8d5bcf9143057432b2fe21262 sched/fair: Don't free p->numa_faults with concurrent readers
 
 CVEs fixed in 5.2.7:
   CVE-2019-1125: 6b5145c74f91dd46cb299f9e0a42a0b6df1055bd x86/speculation: Prepare entry code for Spectre v1 swapgs mitigations
@@ -332,6 +333,13 @@ Outstanding CVEs:
   CVE-2020-28915: (unk) fbcon: Fix global-out-of-bounds read in fbcon_get_font() 
   CVE-2020-28941: (unk) speakup: Do not let the line discipline be used several times 
   CVE-2020-28974: (unk) vt: Disable KD_FONT_OP_COPY 
+  CVE-2020-29368: (unk) mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked() 
+  CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
+  CVE-2020-29370: (unk) mm: slub: add missing TID bump in kmem_cache_alloc_bulk() 
+  CVE-2020-29371: (unk) romfs: fix uninitialized memory leak in romfs_dev_read() 
+  CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
+  CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
+  CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-8428: (unk) do_last(): fetch directory ->i_mode and ->i_uid before it's too late 
   CVE-2020-8647: (unk) vgacon: Fix a UAF in vgacon_invert_region 

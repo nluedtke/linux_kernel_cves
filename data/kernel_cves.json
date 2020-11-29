@@ -50235,6 +50235,22 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-20908"
         }
     },
+    "CVE-2019-20934": {
+        "affected_versions": "unk to v5.3-rc2",
+        "breaks": "",
+        "cmt_msg": "sched/fair: Don't free p->numa_faults with concurrent readers",
+        "fixes": "16d51a590a8ce3befb1308e0e7ab77f3b661af33",
+        "last_affected_version": "5.2.5",
+        "last_modified": "2020-11-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20934",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20934",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-20934",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-20934",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-20934",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-20934"
+        }
+    },
     "CVE-2019-2101": {
         "affected_versions": "v2.6.12-rc2 to v5.1-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -53710,7 +53726,8 @@
         "cmt_msg": "Bluetooth: L2CAP: Fix calling sk_filter on non-socket based channel",
         "fixes": "f19425641cb2572a33cb074d5e30283720bd4d22",
         "last_affected_version": "5.9.0",
-        "last_modified": "2020-10-26",
+        "last_modified": "2020-11-29",
+        "nvd_text": "Improper input validation in BlueZ may allow an unauthenticated user to potentially enable escalation of privilege via adjacent access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12351",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12351",
@@ -53726,7 +53743,8 @@
         "cmt_msg": "Bluetooth: A2MP: Fix not initializing all members",
         "fixes": "eddb7732119d53400f48a02536a84c509692faa8",
         "last_affected_version": "5.9.0",
-        "last_modified": "2020-10-26",
+        "last_modified": "2020-11-29",
+        "nvd_text": "Improper access control in BlueZ may allow an unauthenticated user to potentially enable information disclosure via adjacent access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12352",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12352",
@@ -54862,7 +54880,8 @@
         "cmt_msg": "block: Fix use-after-free in blkdev_get()",
         "fixes": "2d3a8e2deddea6c89961c422ec0c5b851e648c14",
         "last_affected_version": "5.7.5",
-        "last_modified": "2020-11-25",
+        "last_modified": "2020-11-29",
+        "nvd_text": "Use-after-free vulnerability in fs/block_dev.c in the Linux kernel before 5.8 allows local users to gain privileges or cause a denial of service by leveraging improper access to a certain error field.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15436",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-15436",
@@ -54878,7 +54897,8 @@
         "cmt_msg": "serial: 8250: fix null-ptr-deref in serial8250_start_tx()",
         "fixes": "f4c23a140d80ef5e6d3d1f8f57007649014b60fa",
         "last_affected_version": "5.7.10",
-        "last_modified": "2020-11-25",
+        "last_modified": "2020-11-29",
+        "nvd_text": "The Linux kernel before version 5.8 is vulnerable to a NULL pointer dereference in drivers/tty/serial/8250/8250_core.c:serial8250_isa_init_ports() that allows local users to cause a denial of service by using the p->serial_in pointer which uninitialized.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15437",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-15437",
@@ -56099,6 +56119,117 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-28974",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-28974",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-28974"
+        }
+    },
+    "CVE-2020-29368": {
+        "affected_versions": "unk to v5.8-rc1",
+        "breaks": "",
+        "cmt_msg": "mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked()",
+        "fixes": "c444eb564fb16645c172d550359cb3d75fe8a040",
+        "last_affected_version": "5.7.4",
+        "last_modified": "2020-11-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29368",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29368",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29368",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29368",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29368",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29368"
+        }
+    },
+    "CVE-2020-29369": {
+        "affected_versions": "unk to v5.8-rc7",
+        "breaks": "",
+        "cmt_msg": "mm/mmap.c: close race between munmap() and expand_upwards()/downwards()",
+        "fixes": "246c320a8cfe0b11d81a4af38fa9985ef0cc9a4c",
+        "last_affected_version": "5.7.10",
+        "last_modified": "2020-11-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29369",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29369",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29369",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29369",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29369",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29369"
+        }
+    },
+    "CVE-2020-29370": {
+        "affected_versions": "unk to v5.6-rc7",
+        "breaks": "",
+        "cmt_msg": "mm: slub: add missing TID bump in kmem_cache_alloc_bulk()",
+        "fixes": "fd4d9c7d0c71866ec0c2825189ebd2ce35bd95b8",
+        "last_affected_version": "5.5.10",
+        "last_modified": "2020-11-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29370",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29370",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29370",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29370",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29370",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29370"
+        }
+    },
+    "CVE-2020-29371": {
+        "affected_versions": "unk to v5.9-rc2",
+        "breaks": "",
+        "cmt_msg": "romfs: fix uninitialized memory leak in romfs_dev_read()",
+        "fixes": "bcf85fcedfdd17911982a3e3564fcfec7b01eebd",
+        "last_affected_version": "5.8.3",
+        "last_modified": "2020-11-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29371",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29371",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29371",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29371",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29371",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29371"
+        }
+    },
+    "CVE-2020-29372": {
+        "affected_versions": "unk to v5.7-rc3",
+        "breaks": "",
+        "cmt_msg": "mm: check that mm is still valid in madvise()",
+        "fixes": "bc0c4d1e176eeb614dc8734fc3ace34292771f11",
+        "last_affected_version": "5.6.7",
+        "last_modified": "2020-11-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29372",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29372",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29372",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29372",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29372",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29372"
+        }
+    },
+    "CVE-2020-29373": {
+        "affected_versions": "unk to v5.6-rc2",
+        "breaks": "",
+        "cmt_msg": "io_uring: grab ->fs as part of async preparation",
+        "fixes": "ff002b30181d30cdfbca316dadd099c3ca0d739c",
+        "last_modified": "2020-11-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29373",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29373",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29373",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29373",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29373",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29373"
+        }
+    },
+    "CVE-2020-29374": {
+        "affected_versions": "unk to v5.8-rc1",
+        "breaks": "",
+        "cmt_msg": "gup: document and work around \"COW can break either way\" issue",
+        "fixes": "17839856fd588f4ab6b789f482ed3ffd7c403e1f",
+        "last_affected_version": "5.7.2",
+        "last_modified": "2020-11-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29374",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29374",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29374",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29374",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29374",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29374"
         }
     },
     "CVE-2020-4788": {

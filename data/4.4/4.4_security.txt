@@ -762,6 +762,7 @@ CVEs fixed in 4.4.187:
   CVE-2019-15215: 63a80df0ea2b94813f60e8372f9ee93856bcfd5b media: cpia2_usb: first wake up, then free in disconnect
   CVE-2019-15239: 8f0b77b71f3fec09f86f80cd98c36a1a35109499 unknown
   CVE-2019-15926: c1e1288d2e61727c1a9b9f28d0cf61da592a76bc ath6kl: add some bounds checking
+  CVE-2019-20934: da358f365dab8fea00c6254621e2cfb2fd817d01 sched/fair: Don't free p->numa_faults with concurrent readers
 
 CVEs fixed in 4.4.189:
   CVE-2018-20856: e6ea77dd5a6a72583453e8703583ce0ef538aea4 block: blk_init_allocated_queue() set q->fq as NULL in the fail case
@@ -911,6 +912,7 @@ CVEs fixed in 4.4.216:
 
 CVEs fixed in 4.4.217:
   CVE-2019-14901: 4ca9ed6965cc0b9ace3758355ff13d71b97bf008 mwifiex: Fix heap overflow in mmwifiex_process_tdls_action_frame()
+  CVE-2020-29370: 3698fe758684cf3600a0aa91a5af3eba27722cfd mm: slub: add missing TID bump in kmem_cache_alloc_bulk()
 
 CVEs fixed in 4.4.218:
   CVE-2020-10942: 79152052fbb703ff5f66778b3e585c69b95d83d2 vhost: Check docket sk_family instead of call getname
@@ -984,6 +986,7 @@ CVEs fixed in 4.4.233:
 
 CVEs fixed in 4.4.234:
   CVE-2020-14314: 059b1480105478c5f68cf664301545b8cad6a7cf ext4: fix potential negative array index in do_split()
+  CVE-2020-29371: 2935e0a3cec1ffa558eea90db6279cff83aa3592 romfs: fix uninitialized memory leak in romfs_dev_read()
 
 CVEs fixed in 4.4.236:
   CVE-2020-25285: 9c9757b4a2cd8039dddc01e8b589d9157f5d756a mm/hugetlb: fix a race between hugetlb sysctl handlers
@@ -1169,5 +1172,10 @@ Outstanding CVEs:
   CVE-2020-27194: (unk) bpf: Fix scalar32_min_max_or bounds tracking 
   CVE-2020-27777: (unk) powerpc/rtas: Restrict RTAS requests from userspace 
   CVE-2020-28941: (unk) speakup: Do not let the line discipline be used several times 
+  CVE-2020-29368: (unk) mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked() 
+  CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
+  CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
+  CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
+  CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 

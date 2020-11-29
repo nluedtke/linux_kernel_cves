@@ -470,6 +470,7 @@ CVEs fixed in 4.14.136:
   CVE-2019-10207: 69f9c2bc3f754ad1d610b30b940681d678c8e684 Bluetooth: hci_uart: check for missing tty operations
   CVE-2019-15211: c4c213d9aadc85a2808b04d3676970ea5f90340e media: radio-raremono: change devm_k*alloc to k*alloc
   CVE-2019-15215: 3566a98e59b5cb19829d21bfe18cd396812ce15e media: cpia2_usb: first wake up, then free in disconnect
+  CVE-2019-20934: d0919216e468d5613cc8c53d4d0676026960fe39 sched/fair: Don't free p->numa_faults with concurrent readers
   CVE-2019-2213: a4a3c070b8760f71c8311399fa9bfe67c8629bca binder: fix possible UAF when freeing buffer
 
 CVEs fixed in 4.14.137:
@@ -644,6 +645,9 @@ CVEs fixed in 4.14.173:
   CVE-2020-8648: 432ef54c0444e7cab85a291347bfc1f69ee6257a vt: selection, close sel_buffer race
   CVE-2020-8649: 1855aaccd74cb9528c24ceb6bc15358a411f65ff vgacon: Fix a UAF in vgacon_invert_region
 
+CVEs fixed in 4.14.174:
+  CVE-2020-29370: 992a5c90af04da6e1e047f10c5ee5d6d8752a699 mm: slub: add missing TID bump in kmem_cache_alloc_bulk()
+
 CVEs fixed in 4.14.175:
   CVE-2020-11608: ea7d13d02a76c76dd3a0ee7bda97bb4361473b62 media: ov519: add missing endpoint sanity checks
   CVE-2020-11609: b4ac6fbe5b1a3cb83d84cb9f7ab8df71d104f535 media: stv06xx: add missing descriptor sanity checks
@@ -690,6 +694,7 @@ CVEs fixed in 4.14.184:
 CVEs fixed in 4.14.185:
   CVE-2018-20669: b25df2918ba94ccc0ae44b4bb53f0f76a4bb0e96 make 'user_access_begin()' do 'access_ok()'
   CVE-2019-20810: 033e86f47388583d460e1ea075fc4581d23c0fe1 media: go7007: fix a miss of snd_card_free
+  CVE-2020-29368: 3b6c93db0a02b843694cf91f8bacd94f8e7259c8 mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked()
 
 CVEs fixed in 4.14.186:
   CVE-2020-12771: 80d90125a3e1c98aafb6b13e62bd680fe9a4cd5a bcache: fix potential deadlock problem in btree_gc_coalesce
@@ -734,6 +739,7 @@ CVEs fixed in 4.14.194:
 
 CVEs fixed in 4.14.195:
   CVE-2020-14314: fbbfd55a40d5d0806b59ee0403c75d5ac517533f ext4: fix potential negative array index in do_split()
+  CVE-2020-29371: 89346bc395e7bc0a7d3c36c824782050b17d4fec romfs: fix uninitialized memory leak in romfs_dev_read()
 
 CVEs fixed in 4.14.197:
   CVE-2020-25285: c4b219136040bc57e9704afee8f5c5a9430795a5 mm/hugetlb: fix a race between hugetlb sysctl handlers
@@ -885,6 +891,10 @@ Outstanding CVEs:
   CVE-2020-26541: (unk)  
   CVE-2020-27152: (unk) KVM: ioapic: break infinite recursion on lazy EOI 
   CVE-2020-27194: (unk) bpf: Fix scalar32_min_max_or bounds tracking 
+  CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
+  CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
+  CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
+  CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 

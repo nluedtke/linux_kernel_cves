@@ -682,6 +682,7 @@ CVEs fixed in 4.9.187:
   CVE-2019-15239: 704533394e488a109fe46ab3693315376c3824d5 unknown
   CVE-2019-15926: 8e8b0ba1dc67d1cba76ac9cada76ae3a9732d1e3 ath6kl: add some bounds checking
   CVE-2019-17351: 259b0fc2caddc21a6b561b595747a8091102f7ff xen: let alloc_xenballooned_pages() fail if not enough memory free
+  CVE-2019-20934: 837ffc9723f04aeb5bf252ef926c16aea1f5a0ee sched/fair: Don't free p->numa_faults with concurrent readers
 
 CVEs fixed in 4.9.188:
   CVE-2019-11599: 16903f1a5ba7707c051edfdfa457620bba45e2c9 coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
@@ -835,6 +836,7 @@ CVEs fixed in 4.9.216:
 
 CVEs fixed in 4.9.217:
   CVE-2019-14901: cb87b895f1468df7a163a6c665bf106a4d26f8c1 mwifiex: Fix heap overflow in mmwifiex_process_tdls_action_frame()
+  CVE-2020-29370: ff58bb340c430da021875283f8bf251630c61183 mm: slub: add missing TID bump in kmem_cache_alloc_bulk()
 
 CVEs fixed in 4.9.218:
   CVE-2020-11608: 03e73c3ef017580482d8e4de2db2bac9505facca media: ov519: add missing endpoint sanity checks
@@ -882,6 +884,7 @@ CVEs fixed in 4.9.227:
 
 CVEs fixed in 4.9.228:
   CVE-2019-20810: 3e70f204f62f2198f3b88932c71e5ac29a5fbb10 media: go7007: fix a miss of snd_card_free
+  CVE-2020-29368: d93d7bd61072a03dde173d36ae5815488a585fc0 mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked()
 
 CVEs fixed in 4.9.229:
   CVE-2020-12655: 2bda23ca5b8186f7906dd29efd1c773bb8b84098 xfs: add agf freeblocks verify in xfs_agf_verify
@@ -915,6 +918,7 @@ CVEs fixed in 4.9.233:
 
 CVEs fixed in 4.9.234:
   CVE-2020-14314: 539ae3e03875dacaa9c388aff141ccbb4ef4ecb5 ext4: fix potential negative array index in do_split()
+  CVE-2020-29371: 6d26d08216475e5a40e4f6ade397c181a19dc524 romfs: fix uninitialized memory leak in romfs_dev_read()
 
 CVEs fixed in 4.9.236:
   CVE-2020-12888: 5f2c69e2ef24a79b6909a6dc6b249a17909965f8 vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
@@ -1088,6 +1092,10 @@ Outstanding CVEs:
   CVE-2020-27194: (unk) bpf: Fix scalar32_min_max_or bounds tracking 
   CVE-2020-27777: (unk) powerpc/rtas: Restrict RTAS requests from userspace 
   CVE-2020-28941: (unk) speakup: Do not let the line discipline be used several times 
+  CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
+  CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
+  CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
+  CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 

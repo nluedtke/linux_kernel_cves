@@ -23,6 +23,7 @@ CVEs fixed in 5.6.7:
 CVEs fixed in 5.6.8:
   CVE-2020-11884: 8a0e9d7867f59ca8067775fdaddb49aec8353268 s390/mm: fix page table upgrade vs 2ndary address mode accesses
   CVE-2020-12464: 00305f23aa666c814710d67631babb3300ce16c6 USB: core: Fix free-while-in-use bug in the USB S-Glibrary
+  CVE-2020-29372: 7f4be3c45ce1c1a3f3ff7ff46f9f3b0f3fd48b78 mm: check that mm is still valid in madvise()
 
 CVEs fixed in 5.6.11:
   CVE-2020-0255: eaa3a86bcb476c9172a62e58ecab86481eb477b9 selinux: properly handle multiple messages in selinux_netlink_send()
@@ -53,6 +54,7 @@ CVEs fixed in 5.6.19:
   CVE-2020-10766: bdfff7602c08463808a2f5417f83619f91473aa5 x86/speculation: Prevent rogue cross-process SSBD shutdown
   CVE-2020-10767: 1ed5e163b4ce60387849d77f1bea970e9de89819 x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS.
   CVE-2020-10768: 4e99f431cb2b82fb7ff11b3b6a410cbc527834c9 x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches.
+  CVE-2020-29374: 465121c2c982c9438b6760c2161b50bec603c6e1 gup: document and work around "COW can break either way" issue
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -157,5 +159,8 @@ Outstanding CVEs:
   CVE-2020-28915: (unk) fbcon: Fix global-out-of-bounds read in fbcon_get_font() 
   CVE-2020-28941: (unk) speakup: Do not let the line discipline be used several times 
   CVE-2020-28974: (unk) vt: Disable KD_FONT_OP_COPY 
+  CVE-2020-29368: (unk) mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked() 
+  CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
+  CVE-2020-29371: (unk) romfs: fix uninitialized memory leak in romfs_dev_read() 
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-8694: (unk) powercap: restrict energy meter to root access 

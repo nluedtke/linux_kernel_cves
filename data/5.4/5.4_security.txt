@@ -110,6 +110,9 @@ CVEs fixed in 5.4.25:
 CVEs fixed in 5.4.26:
   CVE-2020-12465: 02013734629bf57070525a3515509780092a63ab mt76: fix array overflow on receiving too many fragments for a packet
 
+CVEs fixed in 5.4.27:
+  CVE-2020-29370: ae119b7e12472517bc35c1c003d5abf26653674a mm: slub: add missing TID bump in kmem_cache_alloc_bulk()
+
 CVEs fixed in 5.4.28:
   CVE-2019-19769: 384e15fc4226551a45b54226dc57bca7e23db9d8 locks: fix a potential use-after-free problem when wakeup a waiter
   CVE-2020-14381: 553d46b07dc4813e1d8e6a3b3d6eb8603b4dda74 futex: Fix inode life-time issue
@@ -167,9 +170,11 @@ CVEs fixed in 5.4.47:
   CVE-2020-10766: 9d1dcba6dd48cf7c5801d8aee12852ca41110896 x86/speculation: Prevent rogue cross-process SSBD shutdown
   CVE-2020-10767: 6d60d5462a91eb46fb88b016508edfa8ee0bc7c8 x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS.
   CVE-2020-10768: e1545848ad5510e82eb75717c1f5757b984014cb x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches.
+  CVE-2020-29374: 1027dc04f557328eb7b7b7eea48698377a959157 gup: document and work around "COW can break either way" issue
 
 CVEs fixed in 5.4.48:
   CVE-2019-20810: 6e688a315acf9c2b9b6e8c3e3b7a0c2720f72cba media: go7007: fix a miss of snd_card_free
+  CVE-2020-29368: a88d8aaf9b8b5e0af163a235a3baa9fdcb7d430a mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked()
 
 CVEs fixed in 5.4.49:
   CVE-2020-12771: f651e94899ed08b1766bda30f410d33fdd3970ff bcache: fix potential deadlock problem in btree_gc_coalesce
@@ -189,6 +194,7 @@ CVEs fixed in 5.4.53:
 
 CVEs fixed in 5.4.54:
   CVE-2020-15437: af811869db0698b587aa5418eab05c9f7e0bea3c serial: 8250: fix null-ptr-deref in serial8250_start_tx()
+  CVE-2020-29369: 549bfc14270681cd776c6d9b78fe544cbd21673a mm/mmap.c: close race between munmap() and expand_upwards()/downwards()
 
 CVEs fixed in 5.4.56:
   CVE-2019-18808: ecfa7fa198fc66731ded5dabefccc8e9e2f3b311 crypto: ccp - Release all allocated memory if sha type is invalid
@@ -212,6 +218,7 @@ CVEs fixed in 5.4.60:
 
 CVEs fixed in 5.4.61:
   CVE-2020-14314: ea54176e5821936d109bb45dc2c19bd53559e735 ext4: fix potential negative array index in do_split()
+  CVE-2020-29371: 19a77c937a1914bdd655366e79a2a1b7d675f554 romfs: fix uninitialized memory leak in romfs_dev_read()
 
 CVEs fixed in 5.4.64:
   CVE-2020-12888: 8f747b0149c5a0c72626a87eb0dd2a5ec91f1a7d vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
@@ -325,3 +332,5 @@ Outstanding CVEs:
   CVE-2020-26541: (unk)  
   CVE-2020-27152: (unk) KVM: ioapic: break infinite recursion on lazy EOI 
   CVE-2020-27194: (unk) bpf: Fix scalar32_min_max_or bounds tracking 
+  CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
+  CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
