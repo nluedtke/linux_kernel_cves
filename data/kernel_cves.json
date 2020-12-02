@@ -50241,7 +50241,8 @@
         "cmt_msg": "sched/fair: Don't free p->numa_faults with concurrent readers",
         "fixes": "16d51a590a8ce3befb1308e0e7ab77f3b661af33",
         "last_affected_version": "5.2.5",
-        "last_modified": "2020-11-29",
+        "last_modified": "2020-12-01",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.2.6. On NUMA systems, the Linux fair scheduler has a use-after-free in show_numa_stats() because NUMA fault statistics are inappropriately freed, aka CID-16d51a590a8c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20934",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-20934",
@@ -56070,6 +56071,20 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27777"
         }
     },
+    "CVE-2020-27815": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-12-01",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27815",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27815",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-27815",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27815",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-27815",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27815"
+        }
+    },
     "CVE-2020-28915": {
         "affected_versions": "unk to v5.9",
         "breaks": "",
@@ -56127,7 +56142,8 @@
         "cmt_msg": "mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked()",
         "fixes": "c444eb564fb16645c172d550359cb3d75fe8a040",
         "last_affected_version": "5.7.4",
-        "last_modified": "2020-11-29",
+        "last_modified": "2020-12-01",
+        "nvd_text": "An issue was discovered in __split_huge_pmd in mm/huge_memory.c in the Linux kernel before 5.7.5. The copy-on-write implementation can grant unintended write access because of a race condition in a THP mapcount check, aka CID-c444eb564fb1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29368",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29368",
@@ -56143,7 +56159,8 @@
         "cmt_msg": "mm/mmap.c: close race between munmap() and expand_upwards()/downwards()",
         "fixes": "246c320a8cfe0b11d81a4af38fa9985ef0cc9a4c",
         "last_affected_version": "5.7.10",
-        "last_modified": "2020-11-29",
+        "last_modified": "2020-12-01",
+        "nvd_text": "An issue was discovered in mm/mmap.c in the Linux kernel before 5.7.11. There is a race condition between certain expand functions (expand_downwards and expand_upwards) and page-table free operations from an munmap call, aka CID-246c320a8cfe.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29369",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29369",
@@ -56159,7 +56176,8 @@
         "cmt_msg": "mm: slub: add missing TID bump in kmem_cache_alloc_bulk()",
         "fixes": "fd4d9c7d0c71866ec0c2825189ebd2ce35bd95b8",
         "last_affected_version": "5.5.10",
-        "last_modified": "2020-11-29",
+        "last_modified": "2020-12-01",
+        "nvd_text": "An issue was discovered in kmem_cache_alloc_bulk in mm/slub.c in the Linux kernel before 5.5.11. The slowpath lacks the required TID increment, aka CID-fd4d9c7d0c71.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29370",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29370",
@@ -56175,7 +56193,8 @@
         "cmt_msg": "romfs: fix uninitialized memory leak in romfs_dev_read()",
         "fixes": "bcf85fcedfdd17911982a3e3564fcfec7b01eebd",
         "last_affected_version": "5.8.3",
-        "last_modified": "2020-11-29",
+        "last_modified": "2020-12-01",
+        "nvd_text": "An issue was discovered in romfs_dev_read in fs/romfs/storage.c in the Linux kernel before 5.8.4. Uninitialized memory leaks to userspace, aka CID-bcf85fcedfdd.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29371",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29371",
@@ -56191,7 +56210,8 @@
         "cmt_msg": "mm: check that mm is still valid in madvise()",
         "fixes": "bc0c4d1e176eeb614dc8734fc3ace34292771f11",
         "last_affected_version": "5.6.7",
-        "last_modified": "2020-11-29",
+        "last_modified": "2020-12-01",
+        "nvd_text": "An issue was discovered in do_madvise in mm/madvise.c in the Linux kernel before 5.6.8. There is a race condition between coredump operations and the IORING_OP_MADVISE implementation, aka CID-bc0c4d1e176e.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29372",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29372",
@@ -56206,7 +56226,8 @@
         "breaks": "",
         "cmt_msg": "io_uring: grab ->fs as part of async preparation",
         "fixes": "ff002b30181d30cdfbca316dadd099c3ca0d739c",
-        "last_modified": "2020-11-29",
+        "last_modified": "2020-12-01",
+        "nvd_text": "An issue was discovered in fs/io_uring.c in the Linux kernel before 5.6. It unsafely handles the root directory during path lookups, and thus a process inside a mount namespace can escape to unintended filesystem locations, aka CID-ff002b30181d.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29373",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29373",
@@ -56222,7 +56243,8 @@
         "cmt_msg": "gup: document and work around \"COW can break either way\" issue",
         "fixes": "17839856fd588f4ab6b789f482ed3ffd7c403e1f",
         "last_affected_version": "5.7.2",
-        "last_modified": "2020-11-29",
+        "last_modified": "2020-12-01",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.7.3, related to mm/gup.c and mm/huge_memory.c. The get_user_pages (aka gup) implementation, when used for a copy-on-write page, does not properly consider the semantics of read operations and therefore can grant unintended write access, aka CID-17839856fd58.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29374",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29374",
