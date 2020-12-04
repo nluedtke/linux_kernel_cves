@@ -869,6 +869,7 @@ CVEs fixed in 4.9.224:
   CVE-2020-12770: 6950c2775e02e4be51b06901306ee641e8e5b3df scsi: sg: add sg_remove_request in sg_write
   CVE-2020-13143: 2056c78ee8abacaf71c89c999483183203e8441d USB: gadget: fix illegal array access in binding with UDC
   CVE-2020-1749: badbe56cb62faabe946fed8d7e8a25c009a95e3b net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup
+  CVE-2020-27786: c13f1463d84b86bedb664e509838bef37e6ea317 ALSA: rawmidi: Fix racy buffer resize under concurrent accesses
 
 CVEs fixed in 4.9.225:
   CVE-2018-9517: feaed88dccc4742805c41260040103fa8a7f0df2 l2tp: pass tunnel pointer to ->session_create()
@@ -964,6 +965,10 @@ CVEs fixed in 4.9.244:
 CVEs fixed in 4.9.245:
   CVE-2020-25669: 452e66f60880ac1fa1ca0a594fc1ebaee87fa35d Input: sunkbd - avoid use-after-free in teardown paths
 
+CVEs fixed in 4.9.247:
+  CVE-2019-19813: a93a374efd8e0c01abaec21fc808b1cb7fad0b49 btrfs: inode: Verify inode mode to avoid NULL pointer dereference
+  CVE-2019-19816: a93a374efd8e0c01abaec21fc808b1cb7fad0b49 btrfs: inode: Verify inode mode to avoid NULL pointer dereference
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1042,10 +1047,8 @@ Outstanding CVEs:
   CVE-2019-19378: (unk)  
   CVE-2019-19449: (unk)  
   CVE-2019-19770: (unk) blktrace: fix debugfs use after free 
-  CVE-2019-19813: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19814: (unk)  
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
-  CVE-2019-19816: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19922: (unk) sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
@@ -1092,11 +1095,14 @@ Outstanding CVEs:
   CVE-2020-27194: (unk) bpf: Fix scalar32_min_max_or bounds tracking 
   CVE-2020-27777: (unk) powerpc/rtas: Restrict RTAS requests from userspace 
   CVE-2020-27815: (unk)  
+  CVE-2020-27820: (unk)  
+  CVE-2020-28588: (unk) lib/syscall: fix syscall registers retrieval on 32-bit platforms 
   CVE-2020-28941: (unk) speakup: Do not let the line discipline be used several times 
   CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
   CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
   CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
   CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
+  CVE-2020-29534: (unk) io_uring: don't rely on weak ->files references 
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 

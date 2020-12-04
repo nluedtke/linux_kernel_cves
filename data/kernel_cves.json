@@ -49318,7 +49318,7 @@
         "cwe": "Use After Free",
         "fixes": "6bf9e4bd6a277840d3fe8c5d5d530a1fbd3db592",
         "last_affected_version": "4.19.136",
-        "last_modified": "2020-08-05",
+        "last_modified": "2020-12-04",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image, performing some operations, and then making a syncfs system call can lead to a use-after-free in __mutex_lock in kernel/locking/mutex.c. This is related to mutex_can_spin_on_owner in kernel/locking/mutex.c, __btrfs_qgroup_free_meta in fs/btrfs/qgroup.c, and btrfs_insert_delayed_items in fs/btrfs/delayed-inode.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19813",
@@ -49435,7 +49435,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "6bf9e4bd6a277840d3fe8c5d5d530a1fbd3db592",
         "last_affected_version": "4.19.136",
-        "last_modified": "2020-08-05",
+        "last_modified": "2020-12-04",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted btrfs filesystem image and performing some operations can cause slab-out-of-bounds write access in __btrfs_map_block in fs/btrfs/volumes.c, because a value of 1 for the number of data stripes is mishandled.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19816",
@@ -50239,9 +50239,32 @@
         "affected_versions": "unk to v5.3-rc2",
         "breaks": "",
         "cmt_msg": "sched/fair: Don't free p->numa_faults with concurrent readers",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+            "score": 1.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "Low",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+            "score": 2.5
+        },
+        "cwe": "Use After Free",
         "fixes": "16d51a590a8ce3befb1308e0e7ab77f3b661af33",
         "last_affected_version": "5.2.5",
-        "last_modified": "2020-12-01",
+        "last_modified": "2020-12-04",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.2.6. On NUMA systems, the Linux fair scheduler has a use-after-free in show_numa_stats() because NUMA fault statistics are inappropriately freed, aka CID-16d51a590a8c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20934",
@@ -53725,9 +53748,32 @@
         "affected_versions": "unk to v5.10-rc1",
         "breaks": "",
         "cmt_msg": "Bluetooth: L2CAP: Fix calling sk_filter on non-socket based channel",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:A/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 5.8
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 8.8
+        },
+        "cwe": "Improper Input Validation",
         "fixes": "f19425641cb2572a33cb074d5e30283720bd4d22",
         "last_affected_version": "5.9.0",
-        "last_modified": "2020-11-29",
+        "last_modified": "2020-12-04",
         "nvd_text": "Improper input validation in BlueZ may allow an unauthenticated user to potentially enable escalation of privilege via adjacent access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12351",
@@ -53742,9 +53788,32 @@
         "affected_versions": "unk to v5.10-rc1",
         "breaks": "",
         "cmt_msg": "Bluetooth: A2MP: Fix not initializing all members",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:A/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 3.3
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 6.5
+        },
+        "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "eddb7732119d53400f48a02536a84c509692faa8",
         "last_affected_version": "5.9.0",
-        "last_modified": "2020-11-29",
+        "last_modified": "2020-12-04",
         "nvd_text": "Improper access control in BlueZ may allow an unauthenticated user to potentially enable information disclosure via adjacent access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12352",
@@ -56071,6 +56140,22 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27777"
         }
     },
+    "CVE-2020-27786": {
+        "affected_versions": "unk to v5.7-rc6",
+        "breaks": "",
+        "cmt_msg": "ALSA: rawmidi: Fix racy buffer resize under concurrent accesses",
+        "fixes": "c1f6e3c818dd734c30f6a7eeebf232ba2cf3181d",
+        "last_affected_version": "5.6.13",
+        "last_modified": "2020-12-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27786",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27786",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-27786",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27786",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-27786",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27786"
+        }
+    },
     "CVE-2020-27815": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -56083,6 +56168,35 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27815",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-27815",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27815"
+        }
+    },
+    "CVE-2020-27820": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-12-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27820",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27820",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-27820",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27820",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-27820",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27820"
+        }
+    },
+    "CVE-2020-28588": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "lib/syscall: fix syscall registers retrieval on 32-bit platforms",
+        "fixes": "4f134b89a24b965991e7c345b9a4591821f7c2a6",
+        "last_modified": "2020-12-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28588",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-28588",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-28588",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-28588",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-28588",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-28588"
         }
     },
     "CVE-2020-28915": {
@@ -56252,6 +56366,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29374",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-29374",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29374"
+        }
+    },
+    "CVE-2020-29534": {
+        "affected_versions": "unk to v5.10-rc1",
+        "breaks": "",
+        "cmt_msg": "io_uring: don't rely on weak ->files references",
+        "fixes": "0f2122045b946241a9e549c2a76cea54fa58a7ff",
+        "last_affected_version": "5.9.2",
+        "last_modified": "2020-12-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29534",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29534",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29534",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29534",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29534",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29534"
         }
     },
     "CVE-2020-4788": {

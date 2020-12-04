@@ -681,6 +681,7 @@ CVEs fixed in 4.14.181:
   CVE-2020-12770: 3f743dd319951491d005ea51470e180f6df9125e scsi: sg: add sg_remove_request in sg_write
   CVE-2020-13143: 3d1e9fbbfb888ef59697766561e982524c0a6a03 USB: gadget: fix illegal array access in binding with UDC
   CVE-2020-1749: 8ab8786f78c3fc930f9abf6d6d85e95567de4e1f net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup
+  CVE-2020-27786: 8645ac3684a70e4e8a21c7c407c07a1a4316beec ALSA: rawmidi: Fix racy buffer resize under concurrent accesses
 
 CVEs fixed in 4.14.183:
   CVE-2020-10732: 61ce1733b30fdcf45e31308bc7795b6dc7f2ffba fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()
@@ -794,6 +795,10 @@ CVEs fixed in 4.14.208:
 CVEs fixed in 4.14.209:
   CVE-2020-28941: e712cefb3699ea978611edb3c2a5d3acd57d4004 speakup: Do not let the line discipline be used several times
 
+CVEs fixed in 4.14.210:
+  CVE-2019-19813: 3b68f5961224b7948004fd8a8e185867ecab7974 btrfs: inode: Verify inode mode to avoid NULL pointer dereference
+  CVE-2019-19816: 3b68f5961224b7948004fd8a8e185867ecab7974 btrfs: inode: Verify inode mode to avoid NULL pointer dereference
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -856,10 +861,8 @@ Outstanding CVEs:
   CVE-2019-19377: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19378: (unk)  
   CVE-2019-19449: (unk)  
-  CVE-2019-19813: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19814: (unk)  
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
-  CVE-2019-19816: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-20794: (unk)  
   CVE-2019-20908: (unk) efi: Restrict efivar_ssdt_load when the kernel is locked down 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
@@ -892,10 +895,13 @@ Outstanding CVEs:
   CVE-2020-27152: (unk) KVM: ioapic: break infinite recursion on lazy EOI 
   CVE-2020-27194: (unk) bpf: Fix scalar32_min_max_or bounds tracking 
   CVE-2020-27815: (unk)  
+  CVE-2020-27820: (unk)  
+  CVE-2020-28588: (unk) lib/syscall: fix syscall registers retrieval on 32-bit platforms 
   CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
   CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
   CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
   CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
+  CVE-2020-29534: (unk) io_uring: don't rely on weak ->files references 
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
