@@ -52729,6 +52729,54 @@
         },
         "rejected": true
     },
+    "CVE-2020-0444": {
+        "affected_versions": "unk to v5.6-rc4",
+        "breaks": "",
+        "cmt_msg": "audit: fix error handling in audit_data_to_entry()",
+        "fixes": "2ad3e17ebf94b7b7f3f64c050ff168f9915345eb",
+        "last_affected_version": "5.5.7",
+        "last_modified": "2020-12-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0444",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0444",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-0444",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0444",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-0444",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0444"
+        }
+    },
+    "CVE-2020-0465": {
+        "affected_versions": "unk to v5.9-rc4",
+        "breaks": "",
+        "cmt_msg": "HID: core: Sanitize event code and type when mapping input",
+        "fixes": "35556bed836f8dc07ac55f69c8d17dce3e7f0e25",
+        "last_affected_version": "5.8.6",
+        "last_modified": "2020-12-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0465",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0465",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-0465",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0465",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-0465",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0465"
+        }
+    },
+    "CVE-2020-0466": {
+        "affected_versions": "unk to v5.9-rc2",
+        "breaks": "",
+        "cmt_msg": "do_epoll_ctl(): clean the failure exits up a bit",
+        "fixes": "52c479697c9b73f628140dcdfcd39ea302d05482",
+        "last_affected_version": "5.8.3",
+        "last_modified": "2020-12-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0466",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-0466",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-0466",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-0466",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-0466",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-0466"
+        }
+    },
     "CVE-2020-0543": {
         "affected_versions": "unk to v5.8-rc1",
         "breaks": "",
@@ -54586,8 +54634,31 @@
         "affected_versions": "v3.6-rc1 to v4.12-rc1",
         "breaks": "1afc56794e03229fa53cfa3c5012704d226e1dec",
         "cmt_msg": "netfilter: helpers: remove data_len usage for inkernel helpers",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:L/Au:N/C:P/I:P/A:C",
+            "score": 9.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 9.8
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "9f0f3ebeda47a5518817f33c40f6d3ea9c0275b8",
-        "last_modified": "2020-12-08",
+        "last_modified": "2020-12-10",
         "nvd_text": "An out-of-bounds memory write flaw was found in how the Linux kernel’s Voice Over IP H.323 connection tracking functionality handled connections on ipv6 port 1720. This flaw allows an unauthenticated remote user to crash the system, causing a denial of service. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14305",
@@ -55709,9 +55780,32 @@
         "affected_versions": "unk to v5.10-rc2",
         "breaks": "",
         "cmt_msg": "vt: keyboard, extend func_buf_lock to readers",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+            "score": 1.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.1
+        },
+        "cwe": "Use After Free",
         "fixes": "82e61c3909db51d91b9d3e2071557b6435018b80",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-12-08",
+        "last_modified": "2020-12-10",
         "nvd_text": "A flaw was found in the Linux kernel. A use-after-free was found in the way the console subsystem was using ioctls KDGKBSENT and KDSKBSENT. A local user could use this flaw to get read memory access out of bounds. The highest threat from this vulnerability is to data confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25656",
@@ -55890,9 +55984,32 @@
         "affected_versions": "unk to v5.10-rc3",
         "breaks": "",
         "cmt_msg": "perf/core: Fix a memory leak in perf_event_parse_addr_filter()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Uncontrolled Resource Consumption",
         "fixes": "7bdb157cdebbf95a1cd94ed2e01b338714075d00",
         "last_affected_version": "5.9.6",
-        "last_modified": "2020-12-08",
+        "last_modified": "2020-12-10",
         "nvd_text": "A flaw memory leak in the Linux kernel performance monitoring subsystem was found in the way if using PERF_EVENT_IOC_SET_FILTER. A local user could use this flaw to starve the resources causing denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25704",
@@ -56019,6 +56136,38 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-26541",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-26541",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-26541"
+        }
+    },
+    "CVE-2020-27067": {
+        "affected_versions": "unk to v4.14-rc4",
+        "breaks": "",
+        "cmt_msg": "l2tp: fix l2tp_eth module loading",
+        "fixes": "9f775ead5e570e7e19015b9e4e2f3dd6e71a5935",
+        "last_affected_version": "4.13.5",
+        "last_modified": "2020-12-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27067",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27067",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-27067",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27067",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-27067",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27067"
+        }
+    },
+    "CVE-2020-27068": {
+        "affected_versions": "unk to v5.6-rc2",
+        "breaks": "",
+        "cmt_msg": "cfg80211: add missing policy for NL80211_ATTR_STATUS_CODE",
+        "fixes": "ea75080110a4c1fa011b0a73cb8f42227143ee3e",
+        "last_affected_version": "5.5.7",
+        "last_modified": "2020-12-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27068",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27068",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-27068",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27068",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-27068",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27068"
         }
     },
     "CVE-2020-27152": {
@@ -56294,6 +56443,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27830",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-27830",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27830"
+        }
+    },
+    "CVE-2020-27835": {
+        "affected_versions": "unk to v5.10-rc6",
+        "breaks": "",
+        "cmt_msg": "IB/hfi1: Ensure correct mm is used at all times",
+        "fixes": "3d2a9d642512c21a12d19b9250e7a835dcb41a79",
+        "last_affected_version": "5.9.11",
+        "last_modified": "2020-12-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27835",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27835",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-27835",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27835",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-27835",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27835"
         }
     },
     "CVE-2020-28588": {
@@ -56714,9 +56879,32 @@
         "affected_versions": "unk to v5.10-rc1",
         "breaks": "",
         "cmt_msg": "io_uring: don't rely on weak ->files references",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Unspecified",
         "fixes": "0f2122045b946241a9e549c2a76cea54fa58a7ff",
         "last_affected_version": "5.9.2",
-        "last_modified": "2020-12-08",
+        "last_modified": "2020-12-10",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.9.3. io_uring takes a non-refcounted reference to the files_struct of the process that submitted a request, causing execve() to incorrectly optimize unshare_fd(), aka CID-0f2122045b94.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29534",
@@ -56725,6 +56913,36 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29534",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-29534",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29534"
+        }
+    },
+    "CVE-2020-29660": {
+        "affected_versions": "unk to v5.10-rc7",
+        "breaks": "",
+        "cmt_msg": "tty: Fix ->session locking",
+        "fixes": "c8bcd9c5be24fb9e6132e97da5a35e55a83e36b9",
+        "last_modified": "2020-12-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29660",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29660",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29660",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29660",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29660",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29660"
+        }
+    },
+    "CVE-2020-29661": {
+        "affected_versions": "unk to v5.10-rc7",
+        "breaks": "",
+        "cmt_msg": "tty: Fix ->pgrp locking in tiocspgrp()",
+        "fixes": "54ffccbf053b5b6ca4f6e45094b942fab92a25fc",
+        "last_modified": "2020-12-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29661",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29661",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29661",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29661",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29661",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29661"
         }
     },
     "CVE-2020-4788": {

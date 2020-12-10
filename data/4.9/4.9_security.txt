@@ -829,7 +829,9 @@ CVEs fixed in 4.9.215:
 
 CVEs fixed in 4.9.216:
   CVE-2019-16234: 35c4725efddd669307d7c047cb385becc9c08bf3 iwlwifi: pcie: fix rb_allocator workqueue allocation
+  CVE-2020-0444: 145bd64d35822a62c4570bc75c5285acb1820fb3 audit: fix error handling in audit_data_to_entry()
   CVE-2020-10942: 7f574e92e4474f1b33425c4ee9ba48cd4fbe7d75 vhost: Check docket sk_family instead of call getname
+  CVE-2020-27068: 4d284a7a2ce3cbe918a9c1fac0679574a40fa7c8 cfg80211: add missing policy for NL80211_ATTR_STATUS_CODE
   CVE-2020-8647: 1f04adb4d691ed703b1fbc55d99f622b96cedecc vgacon: Fix a UAF in vgacon_invert_region
   CVE-2020-8648: 290a9381ccc16131c6ccc19940589141985db6b1 vt: selection, close sel_buffer race
   CVE-2020-8649: 1f04adb4d691ed703b1fbc55d99f622b96cedecc vgacon: Fix a UAF in vgacon_invert_region
@@ -873,6 +875,7 @@ CVEs fixed in 4.9.224:
 
 CVEs fixed in 4.9.225:
   CVE-2018-9517: feaed88dccc4742805c41260040103fa8a7f0df2 l2tp: pass tunnel pointer to ->session_create()
+  CVE-2020-27067: 1ede832fb82fbda56c1bd7c57fb581dfab9c6e49 l2tp: fix l2tp_eth module loading
 
 CVEs fixed in 4.9.226:
   CVE-2020-10732: d228bc4b19e0b1c35f3eb404acbf1d607c01e64c fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()
@@ -918,10 +921,12 @@ CVEs fixed in 4.9.233:
   CVE-2020-26088: 1b0eab4e8622183ff26230a589b33f533dfbf7b4 net/nfc/rawsock.c: add CAP_NET_RAW check.
 
 CVEs fixed in 4.9.234:
+  CVE-2020-0466: b3ce6ca929dc677f7e443eb3012dfc7a433b1161 do_epoll_ctl(): clean the failure exits up a bit
   CVE-2020-14314: 539ae3e03875dacaa9c388aff141ccbb4ef4ecb5 ext4: fix potential negative array index in do_split()
   CVE-2020-29371: 6d26d08216475e5a40e4f6ade397c181a19dc524 romfs: fix uninitialized memory leak in romfs_dev_read()
 
 CVEs fixed in 4.9.236:
+  CVE-2020-0465: ac48d8300edd1aa4ce0fbef0ff5136d363f44cdf HID: core: Sanitize event code and type when mapping input
   CVE-2020-12888: 5f2c69e2ef24a79b6909a6dc6b249a17909965f8 vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
   CVE-2020-25285: 47b1be395352d54f888f4331fa291dc9199fff4c mm/hugetlb: fix a race between hugetlb sysctl handlers
   CVE-2020-25641: 0c7cee63ec92b316f8b891b667177a080b670566 block: allow for_each_bvec to support zero len bvec
@@ -1097,6 +1102,7 @@ Outstanding CVEs:
   CVE-2020-27815: (unk)  
   CVE-2020-27820: (unk)  
   CVE-2020-27830: (unk) speakup: Reject setting the speakup line discipline outside of speakup 
+  CVE-2020-27835: (unk) IB/hfi1: Ensure correct mm is used at all times 
   CVE-2020-28588: (unk) lib/syscall: fix syscall registers retrieval on 32-bit platforms 
   CVE-2020-28941: (unk) speakup: Do not let the line discipline be used several times 
   CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
@@ -1104,6 +1110,8 @@ Outstanding CVEs:
   CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
   CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-29534: (unk) io_uring: don't rely on weak ->files references 
+  CVE-2020-29660: (unk) tty: Fix ->session locking 
+  CVE-2020-29661: (unk) tty: Fix ->pgrp locking in tiocspgrp() 
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 

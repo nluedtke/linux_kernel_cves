@@ -100,7 +100,9 @@ CVEs fixed in 5.4.23:
 
 CVEs fixed in 5.4.24:
   CVE-2019-19768: 6f9cff84dde800b4d9eab071810fbe284686601e blktrace: Protect q->blk_trace with RCU
+  CVE-2020-0444: 37f4c2775267c6fea23172f4d0461eb42c8497a6 audit: fix error handling in audit_data_to_entry()
   CVE-2020-10942: f09fbb1175cffdbbb36b28e2ff7db96dcc90de08 vhost: Check docket sk_family instead of call getname
+  CVE-2020-27068: f0593f5b1b64d3e08c67ee756c4253080e52afb2 cfg80211: add missing policy for NL80211_ATTR_STATUS_CODE
 
 CVEs fixed in 5.4.25:
   CVE-2020-8647: 5d230547476eea90b57ed9fda4bfe5307779abbb vgacon: Fix a UAF in vgacon_invert_region
@@ -218,8 +220,12 @@ CVEs fixed in 5.4.60:
   CVE-2020-25212: 75cf7f895f563e14c82c1aeea0362dc155b5baf3 nfs: Fix getxattr kernel panic and memory overflow
 
 CVEs fixed in 5.4.61:
+  CVE-2020-0466: 42694912aaf1d7fa426bd02b0b313f05601b6488 do_epoll_ctl(): clean the failure exits up a bit
   CVE-2020-14314: ea54176e5821936d109bb45dc2c19bd53559e735 ext4: fix potential negative array index in do_split()
   CVE-2020-29371: 19a77c937a1914bdd655366e79a2a1b7d675f554 romfs: fix uninitialized memory leak in romfs_dev_read()
+
+CVEs fixed in 5.4.63:
+  CVE-2020-0465: 4bae1afed43212ee3ec64f2bdc9e39e800974e7e HID: core: Sanitize event code and type when mapping input
 
 CVEs fixed in 5.4.64:
   CVE-2020-12888: 8f747b0149c5a0c72626a87eb0dd2a5ec91f1a7d vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
@@ -336,7 +342,10 @@ Outstanding CVEs:
   CVE-2020-27815: (unk)  
   CVE-2020-27820: (unk)  
   CVE-2020-27830: (unk) speakup: Reject setting the speakup line discipline outside of speakup 
+  CVE-2020-27835: (unk) IB/hfi1: Ensure correct mm is used at all times 
   CVE-2020-28588: (unk) lib/syscall: fix syscall registers retrieval on 32-bit platforms 
   CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
   CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
   CVE-2020-29534: (unk) io_uring: don't rely on weak ->files references 
+  CVE-2020-29660: (unk) tty: Fix ->session locking 
+  CVE-2020-29661: (unk) tty: Fix ->pgrp locking in tiocspgrp() 
