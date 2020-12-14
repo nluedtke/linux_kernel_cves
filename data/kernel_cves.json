@@ -54753,9 +54753,32 @@
         "affected_versions": "unk to v5.10-rc1",
         "breaks": "",
         "cmt_msg": "perf/core: Fix race in the perf_mmap_close() function",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "f91072ed1b7283b13ca57fcfbece5a3b92726143",
         "last_affected_version": "5.9.1",
-        "last_modified": "2020-12-08",
+        "last_modified": "2020-12-14",
         "nvd_text": "A flaw was found in the Linux kernel. A use-after-free memory flaw was found in the perf subsystem allowing a local attacker with permission to monitor perf events to corrupt memory and possibly escalate privileges. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14351",
@@ -54828,9 +54851,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.6-rc6",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "futex: Fix inode life-time issue",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "8019ad13ef7f64be44d4f892af9c840179009254",
         "last_affected_version": "5.5.11",
-        "last_modified": "2020-12-08",
+        "last_modified": "2020-12-14",
         "nvd_text": "A flaw was found in the Linux kernel’s futex implementation. This flaw allows a local attacker to corrupt system memory or escalate their privileges when creating a futex on a filesystem that is about to be unmounted. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14381",
@@ -56430,12 +56476,29 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27820"
         }
     },
+    "CVE-2020-27825": {
+        "affected_versions": "unk to v5.10-rc1",
+        "breaks": "",
+        "cmt_msg": "tracing: Fix race in trace_open and buffer resize call",
+        "fixes": "bbeb97464eefc65f506084fd9f18f21653e01137",
+        "last_affected_version": "5.9.4",
+        "last_modified": "2020-12-14",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27825",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27825",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-27825",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27825",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-27825",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27825"
+        }
+    },
     "CVE-2020-27830": {
         "affected_versions": "unk to v5.10-rc7",
         "breaks": "",
         "cmt_msg": "speakup: Reject setting the speakup line discipline outside of speakup",
         "fixes": "f0992098cadb4c9c6a00703b66cafe604e178fea",
-        "last_modified": "2020-12-08",
+        "last_affected_version": "5.9.13",
+        "last_modified": "2020-12-14",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27830",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27830",
@@ -56466,7 +56529,8 @@
         "breaks": "",
         "cmt_msg": "lib/syscall: fix syscall registers retrieval on 32-bit platforms",
         "fixes": "4f134b89a24b965991e7c345b9a4591821f7c2a6",
-        "last_modified": "2020-12-08",
+        "last_affected_version": "5.9.13",
+        "last_modified": "2020-12-14",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28588",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-28588",
@@ -56920,7 +56984,9 @@
         "breaks": "",
         "cmt_msg": "tty: Fix ->session locking",
         "fixes": "c8bcd9c5be24fb9e6132e97da5a35e55a83e36b9",
-        "last_modified": "2020-12-10",
+        "last_affected_version": "5.9.13",
+        "last_modified": "2020-12-14",
+        "nvd_text": "A locking inconsistency issue was discovered in the tty subsystem of the Linux kernel through 5.9.13. drivers/tty/tty_io.c and drivers/tty/tty_jobctrl.c may allow a read-after-free attack against TIOCGSID, aka CID-c8bcd9c5be24.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29660",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29660",
@@ -56935,7 +57001,9 @@
         "breaks": "",
         "cmt_msg": "tty: Fix ->pgrp locking in tiocspgrp()",
         "fixes": "54ffccbf053b5b6ca4f6e45094b942fab92a25fc",
-        "last_modified": "2020-12-10",
+        "last_affected_version": "5.9.13",
+        "last_modified": "2020-12-14",
+        "nvd_text": "A locking issue was discovered in the tty subsystem of the Linux kernel through 5.9.13. drivers/tty/tty_jobctrl.c allows a use-after-free attack against TIOCSPGRP, aka CID-54ffccbf053b.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29661",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29661",
