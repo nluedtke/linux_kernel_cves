@@ -42066,8 +42066,9 @@
         }
     },
     "CVE-2019-12881": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v4.18-rc1",
         "breaks": "",
+        "cmt_msg": "drm/i915/userptr: reject zero user_size",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -42089,8 +42090,9 @@
             "score": "7.8"
         },
         "cwe": "NULL Pointer Dereference",
-        "fixes": "",
-        "last_modified": "2019-06-21",
+        "fixes": "c11c7bfd213495784b22ef82a69b6489f8d0092f",
+        "last_affected_version": "None",
+        "last_modified": "2020-12-17",
         "nvd_text": "i915_gem_userptr_get_pages in drivers/gpu/drm/i915/i915_gem_userptr.c in the Linux kernel 4.15.0 on Ubuntu 18.04.2 allows local users to cause a denial of service (NULL pointer dereference and BUG) or possibly have unspecified other impact via crafted ioctl calls to /dev/dri/card0.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12881",
@@ -53128,6 +53130,7 @@
     },
     "CVE-2020-10766": {
         "affected_versions": "v4.20-rc5 to v5.8-rc1",
+        "backport": true,
         "breaks": "5bfbe3ad5840d941b89bcac54b821ba14f50a0ba",
         "cmt_msg": "x86/speculation: Prevent rogue cross-process SSBD shutdown",
         "cvss2": {
@@ -53155,7 +53158,7 @@
         "cwe": "Unspecified",
         "fixes": "dbbe2ad02e9df26e372f38cc3e70dab9222c832e",
         "last_affected_version": "5.7.2",
-        "last_modified": "2020-09-28",
+        "last_modified": "2020-12-17",
         "nvd_text": "A logic bug flaw was found in Linux kernel before 5.8-rc1 in the implementation of SSBD. A bug in the logic handling allows an attacker with a local account to disable SSBD protection during a context switch when additional speculative execution mitigations are in place. This issue was introduced when the per task/process conditional STIPB switching was added on top of the existing SSBD switching. The highest threat from this vulnerability is to confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10766",
@@ -56184,6 +56187,20 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-26541"
         }
     },
+    "CVE-2020-27066": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2020-12-17",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27066",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27066",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-27066",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-27066",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-27066",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-27066"
+        }
+    },
     "CVE-2020-27067": {
         "affected_versions": "unk to v4.14-rc4",
         "breaks": "",
@@ -56436,9 +56453,11 @@
         "affected_versions": "unk to v5.7-rc6",
         "breaks": "",
         "cmt_msg": "ALSA: rawmidi: Fix racy buffer resize under concurrent accesses",
+        "cwe": "Use After Free",
         "fixes": "c1f6e3c818dd734c30f6a7eeebf232ba2cf3181d",
         "last_affected_version": "5.6.13",
-        "last_modified": "2020-12-04",
+        "last_modified": "2020-12-17",
+        "nvd_text": "A flaw was found in the Linux kernels implementation of MIDI (kernel 5.7-rc6), where an attacker with a local account and the permissions to issue an ioctl commands to midi devices, could trigger a use-after-free. A write to this specific memory while freed and before use could cause the flow of execution to change and possibly allow for memory corruption or privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27786",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27786",
@@ -56480,9 +56499,11 @@
         "affected_versions": "unk to v5.10-rc1",
         "breaks": "",
         "cmt_msg": "tracing: Fix race in trace_open and buffer resize call",
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "bbeb97464eefc65f506084fd9f18f21653e01137",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-12-14",
+        "last_modified": "2020-12-17",
+        "nvd_text": "A use-after-free flaw was found in kernel/trace/ring_buffer.c in Linux kernel (5.10-rc1). There was a race problem in trace_open and resize of cpu buffer running in parallel on different cpus, may cause a denial of service problem (DOS). This flaw could even allow a local attacker with special user privilege to a kernel information leak threat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27825",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27825",
@@ -56979,13 +57000,66 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29534"
         }
     },
+    "CVE-2020-29568": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "xen/xenbus: Allow watches discard events before queueing",
+        "fixes": "fed1755b118147721f2c87b37b9d66e62c39b668",
+        "last_modified": "2020-12-17",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29568",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29568",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29568",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29568",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29568",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29568"
+        }
+    },
+    "CVE-2020-29569": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "xen-blkback: set ring->xenblkd to NULL after kthread_stop()",
+        "fixes": "1c728719a4da6e654afb9cc047164755072ed7c9",
+        "last_modified": "2020-12-17",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29569",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-29569",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-29569",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29569",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-29569",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29569"
+        }
+    },
     "CVE-2020-29660": {
         "affected_versions": "unk to v5.10-rc7",
         "breaks": "",
         "cmt_msg": "tty: Fix ->session locking",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Locking",
         "fixes": "c8bcd9c5be24fb9e6132e97da5a35e55a83e36b9",
         "last_affected_version": "5.9.13",
-        "last_modified": "2020-12-14",
+        "last_modified": "2020-12-17",
         "nvd_text": "A locking inconsistency issue was discovered in the tty subsystem of the Linux kernel through 5.9.13. drivers/tty/tty_io.c and drivers/tty/tty_jobctrl.c may allow a read-after-free attack against TIOCGSID, aka CID-c8bcd9c5be24.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29660",
@@ -57000,9 +57074,32 @@
         "affected_versions": "unk to v5.10-rc7",
         "breaks": "",
         "cmt_msg": "tty: Fix ->pgrp locking in tiocspgrp()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Locking",
         "fixes": "54ffccbf053b5b6ca4f6e45094b942fab92a25fc",
         "last_affected_version": "5.9.13",
-        "last_modified": "2020-12-14",
+        "last_modified": "2020-12-17",
         "nvd_text": "A locking issue was discovered in the tty subsystem of the Linux kernel through 5.9.13. drivers/tty/tty_jobctrl.c allows a use-after-free attack against TIOCSPGRP, aka CID-54ffccbf053b.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29661",
