@@ -53859,7 +53859,8 @@
         },
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "4edbe133f851c9e3a2f2a1db367e826b01e72594",
-        "last_modified": "2020-05-13",
+        "last_affected_version": "4.19.118",
+        "last_modified": "2021-01-05",
         "nvd_text": "A pivot_root race condition in fs/namespace.c in the Linux kernel 4.4.x before 4.4.221, 4.9.x before 4.9.221, 4.14.x before 4.14.178, 4.19.x before 4.19.119, and 5.x before 5.3 allows local users to cause a denial of service (panic) by corrupting a mountpoint reference counter.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12114",
@@ -56584,10 +56585,32 @@
         "affected_versions": "unk to v5.10-rc1",
         "breaks": "",
         "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.7
+        },
         "cwe": "Missing Authorization",
         "fixes": "bd59380c5ba4147dcbaad3e582b55ccfd120b764",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-12-21",
+        "last_modified": "2021-01-05",
         "nvd_text": "A flaw was found in the way RTAS handled memory accesses in userspace to kernel communication. On a locked down (usually due to Secure Boot) guest system running on top of PowerVM or KVM hypervisors (pseries platform) a root like local user could use this flaw to further increase their privileges to that of a running kernel.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27777",
@@ -56643,7 +56666,8 @@
         "breaks": "",
         "cmt_msg": "jfs: Fix array index bounds check in dbAdjTree",
         "fixes": "c61b3e4839007668360ed8b87d7da96d2e59fc6c",
-        "last_modified": "2020-12-29",
+        "last_affected_version": "5.4.85",
+        "last_modified": "2021-01-05",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27815",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27815",
@@ -57222,7 +57246,8 @@
         },
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "fed1755b118147721f2c87b37b9d66e62c39b668",
-        "last_modified": "2020-12-29",
+        "last_affected_version": "5.4.85",
+        "last_modified": "2021-01-05",
         "nvd_text": "An issue was discovered in Xen through 4.14.x. Some OSes (such as Linux, FreeBSD, and NetBSD) are processing watch events using a single thread. If the events are received faster than the thread is able to handle, they will get queued. As the queue is unbounded, a guest may be able to trigger an OOM in the backend. All systems with a FreeBSD, Linux, or NetBSD (any version) dom0 are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29568",
@@ -57261,7 +57286,8 @@
         },
         "cwe": "Unchecked Return Value",
         "fixes": "1c728719a4da6e654afb9cc047164755072ed7c9",
-        "last_modified": "2020-12-29",
+        "last_affected_version": "5.4.85",
+        "last_modified": "2021-01-05",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.10.1, as used with Xen through 4.14.x. The Linux kernel PV block backend expects the kernel thread handler to reset ring->xenblkd to NULL when stopped. However, the handler may not have time to run if the frontend quickly toggles between the states connect and disconnect. As a consequence, the block backend may re-use a pointer after it was freed. A misbehaving guest can trigger a dom0 crash by continuously connecting / disconnecting a block frontend. Privilege escalation and information leaks cannot be ruled out. This only affects systems with a Linux blkback.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29569",
@@ -57350,6 +57376,48 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-29661",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-29661",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-29661"
+        }
+    },
+    "CVE-2020-35499": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-01-05",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35499",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-35499",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-35499",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-35499",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-35499",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-35499"
+        }
+    },
+    "CVE-2020-35508": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-01-05",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35508",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-35508",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-35508",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-35508",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-35508",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-35508"
+        }
+    },
+    "CVE-2020-36158": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-01-05",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36158",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36158",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-36158",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-36158",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-36158",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-36158"
         }
     },
     "CVE-2020-4788": {

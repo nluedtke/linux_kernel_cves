@@ -449,6 +449,7 @@ CVEs fixed in 4.19.119:
   CVE-2019-19768: 473d7f5ed75b8c3750f0c6b442c8e23090d6da8f blktrace: Protect q->blk_trace with RCU
   CVE-2020-0067: ed523cbd4a6594edf123dc03ec9d70ea4f793671 f2fs: fix to avoid memory leakage in f2fs_listxattr
   CVE-2020-11884: 215d1f3928713d6eaec67244bcda72105b898000 s390/mm: fix page table upgrade vs 2ndary address mode accesses
+  CVE-2020-12114: f511dc75d22e0c000fc70b54f670c2c17f5fba9a make struct mountpoint bear the dentry reference to mountpoint, not struct mount
   CVE-2020-12464: 45ea77b75a604da875186519fea94997175c38e3 USB: core: Fix free-while-in-use bug in the USB S-Glibrary
   CVE-2020-1749: 5dd6835278454a7c7a045462253625de7c16b13e net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup
 
@@ -598,6 +599,11 @@ CVEs fixed in 4.19.163:
   CVE-2020-29660: 361e822b7d8a9d06d88f7cea0fdb0fb6e41c4d45 tty: Fix ->session locking
   CVE-2020-29661: 13f10a78097df2f14d4e1fd390dbaa3e28502ca7 tty: Fix ->pgrp locking in tiocspgrp()
 
+CVEs fixed in 4.19.164:
+  CVE-2020-27815: c7e31b2fecfe0ebd5bd6a8274b2fbfb9c9401738 jfs: Fix array index bounds check in dbAdjTree
+  CVE-2020-29568: 9039eb22f99545fa80a5897496452cf9962e3289 xen/xenbus: Allow watches discard events before queueing
+  CVE-2020-29569: 014ee1c7d184acb8986152014a570ba7c69d3616 xen-blkback: set ring->xenblkd to NULL after kthread_stop()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -651,7 +657,6 @@ Outstanding CVEs:
   CVE-2020-10708: (unk)  
   CVE-2020-10774: (unk)  
   CVE-2020-11725: (unk)  
-  CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
   CVE-2020-12656: (unk) sunrpc: check that domain table is empty at module unload. 
   CVE-2020-12912: (unk) hwmon: (amd_energy) modify the visibility of the counters 
   CVE-2020-14304: (unk)  
@@ -672,7 +677,6 @@ Outstanding CVEs:
   CVE-2020-27066: (unk)  
   CVE-2020-27152: (unk) KVM: ioapic: break infinite recursion on lazy EOI 
   CVE-2020-27194: (unk) bpf: Fix scalar32_min_max_or bounds tracking 
-  CVE-2020-27815: (unk) jfs: Fix array index bounds check in dbAdjTree 
   CVE-2020-27820: (unk)  
   CVE-2020-27825: (unk) tracing: Fix race in trace_open and buffer resize call 
   CVE-2020-27835: (unk) IB/hfi1: Ensure correct mm is used at all times 
@@ -682,7 +686,8 @@ Outstanding CVEs:
   CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
   CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-29534: (unk) io_uring: don't rely on weak ->files references 
-  CVE-2020-29568: (unk) xen/xenbus: Allow watches discard events before queueing 
-  CVE-2020-29569: (unk) xen-blkback: set ring->xenblkd to NULL after kthread_stop() 
+  CVE-2020-35499: (unk)  
+  CVE-2020-35508: (unk)  
+  CVE-2020-36158: (unk)  
   CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
