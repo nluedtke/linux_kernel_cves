@@ -26202,7 +26202,7 @@
     },
     "CVE-2017-15127": {
         "affected_versions": "v4.11-rc1 to v4.13-rc5",
-        "breaks": "8fb5debc5fcd450470cdd789c2d80ef95ebb8cf4",
+        "breaks": "1c9e8def43a3452e7af658b340f5f4f4ecde5c38",
         "cmt_msg": "userfaultfd: hugetlbfs: remove superfluous page unlock in VM_SHARED case",
         "cvss2": {
             "Access Complexity": "Low",
@@ -26226,6 +26226,7 @@
         },
         "cwe": "Data Handling",
         "fixes": "5af10dfd0afc559bb4b0f7e3e8227a1578333995",
+        "last_modified": "2021-01-12",
         "nvd_text": "A flaw was found in the hugetlb_mcopy_atomic_pte function in mm/hugetlb.c in the Linux kernel before 4.13. A superfluous implicit page unlock for VM_SHARED hugetlbfs mapping could trigger a local denial of service (BUG).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-15127",
@@ -45110,8 +45111,8 @@
         "cwe": "Incorrect Default Permissions",
         "fixes": "0614e2b73768b502fc32a75349823356d98aae2c",
         "last_affected_version": "5.3.3",
-        "last_modified": "2020-01-28",
-        "nvd_text": "ax25_create in net/ax25/af_ax25.c in the AF_AX25 network module in the Linux kernel through 5.3.2 does not enforce CAP_NET_RAW, which means that unprivileged users can create a raw socket, aka CID-0614e2b73768.",
+        "last_modified": "2021-01-12",
+        "nvd_text": "ax25_create in net/ax25/af_ax25.c in the AF_AX25 network module in the Linux kernel 3.16 through 5.3.2 does not enforce CAP_NET_RAW, which means that unprivileged users can create a raw socket, aka CID-0614e2b73768.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-17052",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-17052",
@@ -53526,8 +53527,8 @@
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "b9258a2cece4ec1f020715fe3554bc2e360f6264",
         "last_affected_version": "5.6.3",
-        "last_modified": "2020-04-28",
-        "nvd_text": "An issue was discovered in slc_bump in drivers/net/can/slcan.c in the Linux kernel through 5.6.2. It allows attackers to read uninitialized can_frame data, potentially containing sensitive information from kernel stack memory, if the configuration lacks CONFIG_INIT_STACK_ALL, aka CID-b9258a2cece4.",
+        "last_modified": "2021-01-12",
+        "nvd_text": "An issue was discovered in slc_bump in drivers/net/can/slcan.c in the Linux kernel 3.16 through 5.6.2. It allows attackers to read uninitialized can_frame data, potentially containing sensitive information from kernel stack memory, if the configuration lacks CONFIG_INIT_STACK_ALL, aka CID-b9258a2cece4.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11494",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-11494",
@@ -53804,8 +53805,8 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "316ec154810960052d4586b634156c54d0778f74",
         "last_affected_version": "5.6.7",
-        "last_modified": "2020-05-11",
-        "nvd_text": "In the Linux kernel through 5.6.7 on the s390 platform, code execution may occur because of a race condition, as demonstrated by code in enable_sacf_uaccess in arch/s390/lib/uaccess.c that fails to protect against a concurrent page table upgrade, aka CID-3f777e19d171. A crash could also occur.",
+        "last_modified": "2021-01-12",
+        "nvd_text": "In the Linux kernel 4.19 through 5.6.7 on the s390 platform, code execution may occur because of a race condition, as demonstrated by code in enable_sacf_uaccess in arch/s390/lib/uaccess.c that fails to protect against a concurrent page table upgrade, aka CID-3f777e19d171. A crash could also occur.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-11884",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-11884",
@@ -54620,8 +54621,8 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "15753588bcd4bbffae1cca33c8ced5722477fe1f",
         "last_affected_version": "5.6.13",
-        "last_modified": "2020-06-13",
-        "nvd_text": "gadget_dev_desc_UDC_store in drivers/usb/gadget/configfs.c in the Linux kernel through 5.6.13 relies on kstrdup without considering the possibility of an internal '\\0' value, which allows attackers to trigger an out-of-bounds read, aka CID-15753588bcd4.",
+        "last_modified": "2021-01-12",
+        "nvd_text": "gadget_dev_desc_UDC_store in drivers/usb/gadget/configfs.c in the Linux kernel 3.16 through 5.6.13 relies on kstrdup without considering the possibility of an internal '\\0' value, which allows attackers to trigger an out-of-bounds read, aka CID-15753588bcd4.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-13143",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-13143",
@@ -54660,8 +54661,8 @@
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "b86dab054059b970111b5516ae548efaae5b3aae",
         "last_affected_version": "5.7.1",
-        "last_modified": "2020-06-29",
-        "nvd_text": "** DISPUTED ** An issue was discovered in the Linux kernel through 5.7.1. drivers/tty/vt/keyboard.c has an integer overflow if k_ascii is called several times in a row, aka CID-b86dab054059. NOTE: Members in the community argue that the integer overflow does not lead to a security issue in this case.",
+        "last_modified": "2021-01-12",
+        "nvd_text": "An issue was discovered in the Linux kernel 4.4 through 5.7.1. drivers/tty/vt/keyboard.c has an integer overflow if k_ascii is called several times in a row, aka CID-b86dab054059. NOTE: Members in the community argue that the integer overflow does not lead to a security issue in this case.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-13974",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-13974",
@@ -55155,8 +55156,8 @@
         "cwe": "Missing Release of Resource after Effective Lifetime",
         "fixes": "28ebeb8db77035e058a510ce9bd17c2b9a009dba",
         "last_affected_version": "5.7.7",
-        "last_modified": "2020-07-09",
-        "nvd_text": "In the Linux kernel through 5.7.6, usbtest_disconnect in drivers/usb/misc/usbtest.c has a memory leak, aka CID-28ebeb8db770.",
+        "last_modified": "2021-01-12",
+        "nvd_text": "In the Linux kernel 4.4 through 5.7.6, usbtest_disconnect in drivers/usb/misc/usbtest.c has a memory leak, aka CID-28ebeb8db770.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15393",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-15393",
@@ -57247,7 +57248,7 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "fed1755b118147721f2c87b37b9d66e62c39b668",
         "last_affected_version": "5.4.85",
-        "last_modified": "2021-01-05",
+        "last_modified": "2021-01-12",
         "nvd_text": "An issue was discovered in Xen through 4.14.x. Some OSes (such as Linux, FreeBSD, and NetBSD) are processing watch events using a single thread. If the events are received faster than the thread is able to handle, they will get queued. As the queue is unbounded, a guest may be able to trigger an OOM in the backend. All systems with a FreeBSD, Linux, or NetBSD (any version) dom0 are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29568",
@@ -57379,10 +57380,11 @@
         }
     },
     "CVE-2020-35499": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.11-rc1",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-01-05",
+        "cmt_msg": "Bluetooth: sco: Fix crash when using BT_SNDMTU/BT_RCVMTU option",
+        "fixes": "f6b8c6b5543983e9de29dc14716bfa4eb3f157c4",
+        "last_modified": "2021-01-12",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35499",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-35499",
@@ -57407,10 +57409,13 @@
         }
     },
     "CVE-2020-36158": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.11-rc1",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-01-05",
+        "cmt_msg": "mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start",
+        "fixes": "5c455c5ab332773464d02ba17015acdca198f03d",
+        "last_affected_version": "5.4.87",
+        "last_modified": "2021-01-12",
+        "nvd_text": "mwifiex_cmd_802_11_ad_hoc_start in drivers/net/wireless/marvell/mwifiex/join.c in the Linux kernel through 5.10.4 might allow remote attackers to execute arbitrary code via a long SSID value, aka CID-5c455c5ab332.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36158",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36158",
@@ -57887,8 +57892,8 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "2e90ca68b0d2f5548804f22f0dd61145516171e3",
         "last_affected_version": "5.5.6",
-        "last_modified": "2020-04-28",
-        "nvd_text": "An issue was discovered in the Linux kernel through 5.5.6. set_fdc in drivers/block/floppy.c leads to a wait_til_ready out-of-bounds read because the FDC index is not checked for errors before assigning it, aka CID-2e90ca68b0d2.",
+        "last_modified": "2021-01-12",
+        "nvd_text": "An issue was discovered in the Linux kernel 3.16 through 5.5.6. set_fdc in drivers/block/floppy.c leads to a wait_til_ready out-of-bounds read because the FDC index is not checked for errors before assigning it, aka CID-2e90ca68b0d2.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-9383",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-9383",
@@ -57936,6 +57941,37 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-9391",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-9391",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-9391"
+        }
+    },
+    "CVE-2021-0342": {
+        "affected_versions": "unk to v5.8-rc1",
+        "breaks": "",
+        "cmt_msg": "tun: correct header offsets in napi frags mode",
+        "fixes": "96aa1b22bd6bb9fccf62f6261f390ed6f3e7967f",
+        "last_affected_version": "5.7.2",
+        "last_modified": "2021-01-12",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0342",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0342",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-0342",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0342",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-0342",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-0342"
+        }
+    },
+    "CVE-2021-20177": {
+        "affected_versions": "unk to v5.5-rc1",
+        "breaks": "",
+        "cmt_msg": "netfilter: add and use nf_hook_slow_list()",
+        "fixes": "ca58fbe06c54795f00db79e447f94c2028d30124",
+        "last_modified": "2021-01-12",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20177",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20177",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-20177",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20177",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-20177",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-20177"
         }
     }
 }
