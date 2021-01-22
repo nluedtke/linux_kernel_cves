@@ -55375,7 +55375,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2020-10-15",
+        "last_modified": "2021-01-22",
+        "nvd_text": "Use-after-free vulnerability in the Linux kernel exploitable by a local attacker due to reuse of a DCCP socket with an attached dccps_hc_tx_ccid object as a listener after being released. Fixed in Ubuntu Linux kernel 5.4.0-51.56, 5.3.0-68.63, 4.15.0-121.123, 4.4.0-193.224, 3.13.0.182.191 and 3.2.0-149.196.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16119",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-16119",
@@ -56673,8 +56674,8 @@
         "breaks": "",
         "cmt_msg": "jfs: Fix array index bounds check in dbAdjTree",
         "fixes": "c61b3e4839007668360ed8b87d7da96d2e59fc6c",
-        "last_affected_version": "5.4.85",
-        "last_modified": "2021-01-05",
+        "last_affected_version": "5.10.3",
+        "last_modified": "2021-01-22",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27815",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27815",
@@ -56758,10 +56759,32 @@
         "affected_versions": "unk to v5.10-rc6",
         "breaks": "",
         "cmt_msg": "IB/hfi1: Ensure correct mm is used at all times",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.4
+        },
         "cwe": "Use After Free",
         "fixes": "3d2a9d642512c21a12d19b9250e7a835dcb41a79",
         "last_affected_version": "5.9.11",
-        "last_modified": "2021-01-17",
+        "last_modified": "2021-01-22",
         "nvd_text": "A use after free in the Linux kernel infiniband hfi1 driver in versions prior to 5.10-rc6 was found in the way user calls Ioctl after open dev file and fork. A local user could use this flaw to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27835",
@@ -56773,12 +56796,13 @@
         }
     },
     "CVE-2020-28374": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.11-rc4",
         "breaks": "",
         "cmt_msg": "scsi: target: Fix XCOPY NAA identifier lookup",
         "fixes": "2896c93811e39d63a4d9b63ccf12a8fbc226e5e4",
-        "last_affected_version": "5.4.88",
-        "last_modified": "2021-01-17",
+        "last_affected_version": "5.10.6",
+        "last_modified": "2021-01-22",
+        "nvd_text": "In drivers/target/target_core_xcopy.c in the Linux kernel before 5.10.7, insufficient identifier checking in the LIO SCSI target code can be used by remote attackers to read or write files via directory traversal in an XCOPY request, aka CID-2896c93811e3. For example, an attack can occur over a network if the attacker has access to one iSCSI LUN. The attacker gains control over file access because I/O operations are proxied via an attacker-selected backstore.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28374",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-28374",
@@ -57271,8 +57295,8 @@
         },
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "fed1755b118147721f2c87b37b9d66e62c39b668",
-        "last_affected_version": "5.4.85",
-        "last_modified": "2021-01-12",
+        "last_affected_version": "5.10.3",
+        "last_modified": "2021-01-22",
         "nvd_text": "An issue was discovered in Xen through 4.14.x. Some OSes (such as Linux, FreeBSD, and NetBSD) are processing watch events using a single thread. If the events are received faster than the thread is able to handle, they will get queued. As the queue is unbounded, a guest may be able to trigger an OOM in the backend. All systems with a FreeBSD, Linux, or NetBSD (any version) dom0 are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29568",
@@ -57311,8 +57335,8 @@
         },
         "cwe": "Unchecked Return Value",
         "fixes": "1c728719a4da6e654afb9cc047164755072ed7c9",
-        "last_affected_version": "5.4.85",
-        "last_modified": "2021-01-05",
+        "last_affected_version": "5.10.3",
+        "last_modified": "2021-01-22",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.10.1, as used with Xen through 4.14.x. The Linux kernel PV block backend expects the kernel thread handler to reset ring->xenblkd to NULL when stopped. However, the handler may not have time to run if the frontend quickly toggles between the states connect and disconnect. As a consequence, the block backend may re-use a pointer after it was freed. A misbehaving guest can trigger a dom0 crash by continuously connecting / disconnecting a block frontend. Privilege escalation and information leaks cannot be ruled out. This only affects systems with a Linux blkback.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29569",
@@ -57408,7 +57432,8 @@
         "breaks": "",
         "cmt_msg": "Bluetooth: sco: Fix crash when using BT_SNDMTU/BT_RCVMTU option",
         "fixes": "f6b8c6b5543983e9de29dc14716bfa4eb3f157c4",
-        "last_modified": "2021-01-12",
+        "last_affected_version": "5.10.3",
+        "last_modified": "2021-01-22",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35499",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-35499",
@@ -57460,8 +57485,8 @@
         },
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "5c455c5ab332773464d02ba17015acdca198f03d",
-        "last_affected_version": "5.4.87",
-        "last_modified": "2021-01-17",
+        "last_affected_version": "5.10.5",
+        "last_modified": "2021-01-22",
         "nvd_text": "mwifiex_cmd_802_11_ad_hoc_start in drivers/net/wireless/marvell/mwifiex/join.c in the Linux kernel through 5.10.4 might allow remote attackers to execute arbitrary code via a long SSID value, aka CID-5c455c5ab332.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36158",
@@ -58019,6 +58044,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20177",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-20177",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-20177"
+        }
+    },
+    "CVE-2021-3178": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "nfsd4: readdirplus shouldn't return parent of export",
+        "fixes": "51b2ee7d006a736a9126e8111d1f24e4fd0afaa6",
+        "last_modified": "2021-01-22",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3178",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3178",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3178",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3178",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3178",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-3178"
         }
     }
 }
