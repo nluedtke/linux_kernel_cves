@@ -56799,9 +56799,32 @@
         "affected_versions": "unk to v5.11-rc4",
         "breaks": "",
         "cmt_msg": "scsi: target: Fix XCOPY NAA identifier lookup",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "Single",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+            "score": 5.5
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+            "score": 8.1
+        },
+        "cwe": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
         "fixes": "2896c93811e39d63a4d9b63ccf12a8fbc226e5e4",
         "last_affected_version": "5.10.6",
-        "last_modified": "2021-01-22",
+        "last_modified": "2021-01-26",
         "nvd_text": "In drivers/target/target_core_xcopy.c in the Linux kernel before 5.10.7, insufficient identifier checking in the LIO SCSI target code can be used by remote attackers to read or write files via directory traversal in an XCOPY request, aka CID-2896c93811e3. For example, an attack can occur over a network if the attacker has access to one iSCSI LUN. The attacker gains control over file access because I/O operations are proxied via an attacker-selected backstore.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28374",
@@ -57457,6 +57480,22 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-35508"
         }
     },
+    "CVE-2020-35513": {
+        "affected_versions": "unk to v4.17-rc1",
+        "breaks": "",
+        "cmt_msg": "nfsd: fix incorrect umasks",
+        "fixes": "880a3a5325489a143269a8e172e7563ebf9897bc",
+        "last_affected_version": "4.16.2",
+        "last_modified": "2021-01-26",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35513",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-35513",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-35513",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-35513",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-35513",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-35513"
+        }
+    },
     "CVE-2020-36158": {
         "affected_versions": "unk to v5.11-rc1",
         "breaks": "",
@@ -58047,11 +58086,12 @@
         }
     },
     "CVE-2021-3178": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.11-rc5",
         "breaks": "",
         "cmt_msg": "nfsd4: readdirplus shouldn't return parent of export",
         "fixes": "51b2ee7d006a736a9126e8111d1f24e4fd0afaa6",
-        "last_modified": "2021-01-22",
+        "last_affected_version": "5.10.9",
+        "last_modified": "2021-01-26",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3178",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3178",
