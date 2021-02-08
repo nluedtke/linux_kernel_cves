@@ -55550,7 +55550,8 @@
         "cmt_msg": "Bluetooth: fix kernel oops in store_pending_adv_report",
         "fixes": "a2ec905d1e160a33b2e210e45ad30445ef26ce0e",
         "last_affected_version": "5.7",
-        "last_modified": "2020-10-19",
+        "last_modified": "2021-02-08",
+        "nvd_text": "Improper buffer restrictions in BlueZ may allow an unauthenticated user to potentially enable denial of service via adjacent access. This affects all Linux kernel versions that support BlueZ.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24490",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-24490",
@@ -57490,10 +57491,12 @@
         }
     },
     "CVE-2020-35508": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.10-rc3",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-01-05",
+        "cmt_msg": "fork: fix copy_process(CLONE_PARENT) race with the exiting ->real_parent",
+        "fixes": "b4e00444cab4c3f3fec876dc0cccc8cbb0d1a948",
+        "last_affected_version": "5.9.6",
+        "last_modified": "2021-02-08",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35508",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-35508",
@@ -57507,10 +57510,32 @@
         "affected_versions": "unk to v4.17-rc1",
         "breaks": "",
         "cmt_msg": "nfsd: fix incorrect umasks",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "Single",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+            "score": 4.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.9
+        },
         "cwe": "Privilege Dropping / Lowering Errors",
         "fixes": "880a3a5325489a143269a8e172e7563ebf9897bc",
         "last_affected_version": "4.16.2",
-        "last_modified": "2021-02-05",
+        "last_modified": "2021-02-08",
         "nvd_text": "A flaw incorrect umask during file or directory modification in the Linux kernel NFS (network file system) functionality was found in the way user create and delete object using NFSv4.2 or newer if both simultaneously accessing the NFS by the other process that is not using new NFSv4.2. A user with access to the NFS could use this flaw to starve the resources causing denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35513",
@@ -58110,13 +58135,28 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-20177"
         }
     },
+    "CVE-2021-20226": {
+        "affected_versions": "unk to v5.10-rc1",
+        "breaks": "",
+        "cmt_msg": "io_uring: clean up ->files grabbing",
+        "fixes": "233295130e53c8dfe6dbef3f52634c3f7e44cd6a",
+        "last_modified": "2021-02-08",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20226",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20226",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-20226",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20226",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-20226",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-20226"
+        }
+    },
     "CVE-2021-26708": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.11-rc7",
         "breaks": "",
         "cmt_msg": "vsock: fix the race conditions in multi-transport support",
         "fixes": "c518adafa39f37858697ac9309c6cf1805581446",
         "last_affected_version": "5.10.12",
-        "last_modified": "2021-02-05",
+        "last_modified": "2021-02-08",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26708",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26708",
