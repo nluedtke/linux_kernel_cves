@@ -485,6 +485,9 @@ CVEs fixed in 4.9.125:
   CVE-2018-10938: e8e519f8ec33ce670abef2cfc0613ec26319841e Cipso: cipso_v4_optptr enter infinite loop
   CVE-2018-16658: b8c0e15469bab732065e64f7dffadab0b7103990 cdrom: Fix info leak/OOB read in cdrom_ioctl_drive_status
 
+CVEs fixed in 4.9.126:
+  CVE-2019-12881: f916daa615e1c0d67fb3b7a65572fbc56c6aaea6 drm/i915/userptr: reject zero user_size
+
 CVEs fixed in 4.9.127:
   CVE-2018-14609: 93d960de56cef4582088dfc0ba9494143351772f btrfs: relocation: Only remove reloc rb_trees if reloc control has been initialized
   CVE-2018-14617: 1cedd72d0f688b9c169836649ac9ec07a3c601d6 hfsplus: fix NULL dereference in hfsplus_lookup()
@@ -682,6 +685,7 @@ CVEs fixed in 4.9.187:
   CVE-2019-15239: 704533394e488a109fe46ab3693315376c3824d5 unknown
   CVE-2019-15926: 8e8b0ba1dc67d1cba76ac9cada76ae3a9732d1e3 ath6kl: add some bounds checking
   CVE-2019-17351: 259b0fc2caddc21a6b561b595747a8091102f7ff xen: let alloc_xenballooned_pages() fail if not enough memory free
+  CVE-2019-20934: 837ffc9723f04aeb5bf252ef926c16aea1f5a0ee sched/fair: Don't free p->numa_faults with concurrent readers
 
 CVEs fixed in 4.9.188:
   CVE-2019-11599: 16903f1a5ba7707c051edfdfa457620bba45e2c9 coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
@@ -796,6 +800,7 @@ CVEs fixed in 4.9.210:
   CVE-2019-19068: 2c00bebd0b959fe8bec6d4a1a07010394b8008e4 rtl8xxxu: prevent leaking urb
   CVE-2019-20636: 5f27f97dfed4aa29fb95b98bf5911763bd3ef038 Input: add safety guards to input_set_keycode()
   CVE-2020-0305: d2c9ee451ea8e8256fb1903a04ebaa26cb74d6f5 chardev: Avoid potential use-after-free in 'chrdev_open()'
+  CVE-2020-0431: 661967b7623b88985bdd3aeb171feb83d753aea9 HID: hid-input: clear unmapped usages
 
 CVEs fixed in 4.9.211:
   CVE-2018-21008: 65b32fd4eabc5209019894627b1bda65611fd1cb rsi: add fix for crash during assertions
@@ -827,13 +832,16 @@ CVEs fixed in 4.9.215:
 
 CVEs fixed in 4.9.216:
   CVE-2019-16234: 35c4725efddd669307d7c047cb385becc9c08bf3 iwlwifi: pcie: fix rb_allocator workqueue allocation
+  CVE-2020-0444: 145bd64d35822a62c4570bc75c5285acb1820fb3 audit: fix error handling in audit_data_to_entry()
   CVE-2020-10942: 7f574e92e4474f1b33425c4ee9ba48cd4fbe7d75 vhost: Check docket sk_family instead of call getname
+  CVE-2020-27068: 4d284a7a2ce3cbe918a9c1fac0679574a40fa7c8 cfg80211: add missing policy for NL80211_ATTR_STATUS_CODE
   CVE-2020-8647: 1f04adb4d691ed703b1fbc55d99f622b96cedecc vgacon: Fix a UAF in vgacon_invert_region
   CVE-2020-8648: 290a9381ccc16131c6ccc19940589141985db6b1 vt: selection, close sel_buffer race
   CVE-2020-8649: 1f04adb4d691ed703b1fbc55d99f622b96cedecc vgacon: Fix a UAF in vgacon_invert_region
 
 CVEs fixed in 4.9.217:
   CVE-2019-14901: cb87b895f1468df7a163a6c665bf106a4d26f8c1 mwifiex: Fix heap overflow in mmwifiex_process_tdls_action_frame()
+  CVE-2020-29370: ff58bb340c430da021875283f8bf251630c61183 mm: slub: add missing TID bump in kmem_cache_alloc_bulk()
 
 CVEs fixed in 4.9.218:
   CVE-2020-11608: 03e73c3ef017580482d8e4de2db2bac9505facca media: ov519: add missing endpoint sanity checks
@@ -842,6 +850,7 @@ CVEs fixed in 4.9.218:
   CVE-2020-14381: fb099f3bb477a0ee2d0669a753f7ffcdf8884c2d futex: Fix inode life-time issue
 
 CVEs fixed in 4.9.219:
+  CVE-2020-0429: e8b9cf5574e8154a6db2505d028682e830c9f620 l2tp: fix race between l2tp_session_delete() and l2tp_tunnel_closeall()
   CVE-2020-0433: f530afb974c2e82047bd6220303a2dbe30eff304 blk-mq: sync the update nr_hw_queues with blk_mq_queue_tag_busy_iter
   CVE-2020-11494: 925c631e84d77a72188101258878ac58a646d540 slcan: Don't transmit uninitialized stack data in padding
   CVE-2020-11565: c5544e72014cdb0a739f6971fb3dd4fb641b392c mm: mempolicy: require at least one nodeid for MPOL_PREFERRED
@@ -851,6 +860,7 @@ CVEs fixed in 4.9.220:
 
 CVEs fixed in 4.9.221:
   CVE-2019-19319: a9855260fe8d8680bf8c4f0d8303b696c861e99b ext4: protect journal inode's blocks using block_validity
+  CVE-2020-12114: 91e997939dda1a866f23ddfb043dcd4a3ff57524 make struct mountpoint bear the dentry reference to mountpoint, not struct mount
   CVE-2020-12464: ab20e851e49e75a9e653463853995076899a4e48 USB: core: Fix free-while-in-use bug in the USB S-Glibrary
 
 CVEs fixed in 4.9.222:
@@ -865,9 +875,11 @@ CVEs fixed in 4.9.224:
   CVE-2020-12770: 6950c2775e02e4be51b06901306ee641e8e5b3df scsi: sg: add sg_remove_request in sg_write
   CVE-2020-13143: 2056c78ee8abacaf71c89c999483183203e8441d USB: gadget: fix illegal array access in binding with UDC
   CVE-2020-1749: badbe56cb62faabe946fed8d7e8a25c009a95e3b net: ipv6_stub: use ip6_dst_lookup_flow instead of ip6_dst_lookup
+  CVE-2020-27786: c13f1463d84b86bedb664e509838bef37e6ea317 ALSA: rawmidi: Fix racy buffer resize under concurrent accesses
 
 CVEs fixed in 4.9.225:
   CVE-2018-9517: feaed88dccc4742805c41260040103fa8a7f0df2 l2tp: pass tunnel pointer to ->session_create()
+  CVE-2020-27067: 1ede832fb82fbda56c1bd7c57fb581dfab9c6e49 l2tp: fix l2tp_eth module loading
 
 CVEs fixed in 4.9.226:
   CVE-2020-10732: d228bc4b19e0b1c35f3eb404acbf1d607c01e64c fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()
@@ -880,10 +892,15 @@ CVEs fixed in 4.9.227:
 
 CVEs fixed in 4.9.228:
   CVE-2019-20810: 3e70f204f62f2198f3b88932c71e5ac29a5fbb10 media: go7007: fix a miss of snd_card_free
+  CVE-2020-10766: fc0abf5a64ea5d028af0cf5d37d5898afe6748c5 x86/speculation: Prevent rogue cross-process SSBD shutdown
+  CVE-2020-10767: 38be87f5e7a7a7378d4ef4528c13bd1d666ab867 x86/speculation: Avoid force-disabling IBPB based on STIBP and enhanced IBRS.
+  CVE-2020-10768: db39004352a40107213a70dc8e549936a6468fa9 x86/speculation: PR_SPEC_FORCE_DISABLE enforcement for indirect branches.
+  CVE-2020-29368: d93d7bd61072a03dde173d36ae5815488a585fc0 mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked()
 
 CVEs fixed in 4.9.229:
   CVE-2020-12655: 2bda23ca5b8186f7906dd29efd1c773bb8b84098 xfs: add agf freeblocks verify in xfs_agf_verify
   CVE-2020-12771: be676835b2250861d525b8e2a8e2bed8c1a9027d bcache: fix potential deadlock problem in btree_gc_coalesce
+  CVE-2020-15436: a54b15af2b495ed97660a6276710ef36e06ac6c9 block: Fix use-after-free in blkdev_get()
 
 CVEs fixed in 4.9.230:
   CVE-2020-15393: 4ea5c9091d62e9516819c7bcb7c09658bde85acc usb: usbtest: fix missing kfree(dev->buf) in usbtest_disconnect
@@ -893,6 +910,7 @@ CVEs fixed in 4.9.231:
 
 CVEs fixed in 4.9.232:
   CVE-2018-10323: 8e5f820e14e93ebfc7fcf2a099817eb9c7c3be04 xfs: set format back to extents if xfs_bmap_extents_to_btree
+  CVE-2020-15437: 81e57039ebbc2c0867f2c04bb3cb205b4edd0141 serial: 8250: fix null-ptr-deref in serial8250_start_tx()
 
 CVEs fixed in 4.9.233:
   CVE-2018-13093: 42c59d544af976f4736640ef25ff791e2188aed3 xfs: validate cached inodes are free when allocated
@@ -907,13 +925,83 @@ CVEs fixed in 4.9.233:
   CVE-2020-14331: 8c19b606e78a2b08e1ea69eebd5c290913c89612 vgacon: Fix for missing check in scrollback handling
   CVE-2020-16166: 5aa78397e208b6871a8bdec7fa2bd6992b1f3e4b random32: update the net random state on interrupt and activity
   CVE-2020-25212: 8973046648c4f0392f50d915ea1bdb639e930519 nfs: Fix getxattr kernel panic and memory overflow
+  CVE-2020-26088: 1b0eab4e8622183ff26230a589b33f533dfbf7b4 net/nfc/rawsock.c: add CAP_NET_RAW check.
 
 CVEs fixed in 4.9.234:
+  CVE-2020-0466: b3ce6ca929dc677f7e443eb3012dfc7a433b1161 do_epoll_ctl(): clean the failure exits up a bit
   CVE-2020-14314: 539ae3e03875dacaa9c388aff141ccbb4ef4ecb5 ext4: fix potential negative array index in do_split()
+  CVE-2020-29371: 6d26d08216475e5a40e4f6ade397c181a19dc524 romfs: fix uninitialized memory leak in romfs_dev_read()
 
 CVEs fixed in 4.9.236:
+  CVE-2020-0465: ac48d8300edd1aa4ce0fbef0ff5136d363f44cdf HID: core: Sanitize event code and type when mapping input
   CVE-2020-12888: 5f2c69e2ef24a79b6909a6dc6b249a17909965f8 vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
   CVE-2020-25285: 47b1be395352d54f888f4331fa291dc9199fff4c mm/hugetlb: fix a race between hugetlb sysctl handlers
+  CVE-2020-25641: 0c7cee63ec92b316f8b891b667177a080b670566 block: allow for_each_bvec to support zero len bvec
+
+CVEs fixed in 4.9.237:
+  CVE-2020-14390: c7e41b00de99932f189d8af3a40caee31a385788 fbcon: remove soft scrollback code
+  CVE-2020-25284: 774519ed39da09471abe2c02a7f293c380759cc3 rbd: require global CAP_SYS_ADMIN for mapping and unmapping
+
+CVEs fixed in 4.9.238:
+  CVE-2020-25643: 585e29541c29349420d5926026a74456e233a2b3 hdlc_ppp: add range checks in ppp_cp_parse_cr()
+
+CVEs fixed in 4.9.239:
+  CVE-2020-14386: 9a675ac9fe9794f0981db6e4b101503818f61622 net/packet: fix overflow in tpacket_rcv
+  CVE-2020-25211: 9c61977a713511c01abdf9b2a72693d21cb60556 netfilter: ctnetlink: add a range check for l3/l4 protonum
+  CVE-2020-28915: 6f1adb22fc0c567d65e8c56cc04d633d2fa1bfb4 fbcon: Fix global-out-of-bounds read in fbcon_get_font()
+
+CVEs fixed in 4.9.240:
+  CVE-2020-12351: 720369661674527c8aa999fae0e295eeea12174c Bluetooth: L2CAP: Fix calling sk_filter on non-socket based channel
+  CVE-2020-12352: 1a8da94d1c6ecc2a8db2a2477bef6945c0ba9c3e Bluetooth: A2MP: Fix not initializing all members
+  CVE-2020-24490: 65bd223b5f142f227b59acdbec2d5e0ab488fd97 Bluetooth: fix kernel oops in store_pending_adv_report
+
+CVEs fixed in 4.9.241:
+  CVE-2020-25705: df838165a187b7c699ec372a2a136f9873112776 icmp: randomize the global rate limiter
+
+CVEs fixed in 4.9.242:
+  CVE-2020-25656: 04a6e5aa75e7a9432df0443a17ab7c8dd005cc9b vt: keyboard, extend func_buf_lock to readers
+  CVE-2020-25668: ea5dd52c3568e0f7232c20fd4adf551fcad07c60 tty: make FONTX ioctl use the tty pointer they were actually passed
+  CVE-2020-28974: 5ca7f073e680ff2e56756a9b6bffcd55085d292c vt: Disable KD_FONT_OP_COPY
+  CVE-2020-35508: 66be43d81870c55637c2f32d8088d7184e93262a fork: fix copy_process(CLONE_PARENT) race with the exiting ->real_parent
+
+CVEs fixed in 4.9.243:
+  CVE-2020-8694: 04533793ac10b38103d3aefe1c4b5b1eaf009f35 powercap: restrict energy meter to root access
+
+CVEs fixed in 4.9.244:
+  CVE-2020-0427: 77440c3a37203e3f4667d06e37f76ef3968d2d8c pinctrl: devicetree: Avoid taking direct reference to device name string
+  CVE-2020-14351: 5a097d643717160d859f5bd4a29e2088f48a5fd3 perf/core: Fix race in the perf_mmap_close() function
+  CVE-2020-25645: 1200ebbd06c2f569421dcab4e10649f3e299867c geneve: add transport ports in route lookup for geneve
+  CVE-2020-25704: d59f7d676bfe2149662361fc3a1c0de9d011066d perf/core: Fix a memory leak in perf_event_parse_addr_filter()
+  CVE-2020-27673: d7b048485f6f71e55f32ce904ead727b187b3671 xen/events: add a proper barrier to 2-level uevent unmasking
+  CVE-2020-27675: e4ccd4b1a6e586659005a231e793af325e575e53 xen/events: avoid removing an event channel while handling it
+
+CVEs fixed in 4.9.245:
+  CVE-2020-25669: 452e66f60880ac1fa1ca0a594fc1ebaee87fa35d Input: sunkbd - avoid use-after-free in teardown paths
+
+CVEs fixed in 4.9.247:
+  CVE-2019-19813: a93a374efd8e0c01abaec21fc808b1cb7fad0b49 btrfs: inode: Verify inode mode to avoid NULL pointer dereference
+  CVE-2019-19816: a93a374efd8e0c01abaec21fc808b1cb7fad0b49 btrfs: inode: Verify inode mode to avoid NULL pointer dereference
+
+CVEs fixed in 4.9.248:
+  CVE-2020-29660: ac28e357fe00902bbc21655eaee6b56c850f80af tty: Fix ->session locking
+  CVE-2020-29661: 742f3062298ac1ae1d28de31b1f946f93db1eba1 tty: Fix ->pgrp locking in tiocspgrp()
+
+CVEs fixed in 4.9.249:
+  CVE-2020-27815: 2c7c903caef18d45bac879557861656aa30b8933 jfs: Fix array index bounds check in dbAdjTree
+  CVE-2020-29569: d67091e9d6ee81543344613927ea3516980ffc3f xen-blkback: set ring->xenblkd to NULL after kthread_stop()
+
+CVEs fixed in 4.9.250:
+  CVE-2020-29568: 7936eefdbec92aaa42281b82c07c6e0b843b7932 xen/xenbus: Allow watches discard events before queueing
+  CVE-2020-36158: 6ceb5b8e16dac9a041271bc3985ff155bdbb30b4 mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start
+
+CVEs fixed in 4.9.252:
+  CVE-2020-28374: 966e6d0786e64f4065b76116d7e9411c01761d30 scsi: target: Fix XCOPY NAA identifier lookup
+
+CVEs fixed in 4.9.253:
+  CVE-2021-3178: 2174b2cf3960b9091c2516feeb9e345fe24f8906 nfsd4: readdirplus shouldn't return parent of export
+
+CVEs fixed in 4.9.254:
+  CVE-2020-27825: 04f51df12ddaa0e2a38223da00e0d3ed02d62a01 tracing: Fix race in trace_open and buffer resize call
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -976,7 +1064,6 @@ Outstanding CVEs:
   CVE-2019-12455: (unk) clk-sunxi: fix a missing-check bug in sunxi_divs_clk_setup() 
   CVE-2019-12456: (unk)  
   CVE-2019-12615: (unk) mdesc: fix a missing-check bug in get_vdev_port_node_info() 
-  CVE-2019-12881: (unk)  
   CVE-2019-15222: (unk) ALSA: usb-audio: Fix gpf in snd_usb_pipe_sanity_check 
   CVE-2019-15223: (unk) ALSA: line6: Assure canceling delayed work at disconnection 
   CVE-2019-15290: (unk)  
@@ -993,10 +1080,8 @@ Outstanding CVEs:
   CVE-2019-19378: (unk)  
   CVE-2019-19449: (unk)  
   CVE-2019-19770: (unk) blktrace: fix debugfs use after free 
-  CVE-2019-19813: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19814: (unk)  
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
-  CVE-2019-19816: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19922: (unk) sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
@@ -1011,24 +1096,55 @@ Outstanding CVEs:
   CVE-2019-9444: (unk) printk: hash addresses printed with %p 
   CVE-2019-9453: (unk) f2fs: fix to avoid accessing xattr across the boundary 
   CVE-2020-0067: (unk) f2fs: fix to avoid memory leakage in f2fs_listxattr 
+  CVE-2020-0347: (unk)  
+  CVE-2020-0423: (unk) binder: fix UAF when releasing todo list 
+  CVE-2020-0430: (unk) bpf: reject passing modified ctx to helper functions 
   CVE-2020-0435: (unk) f2fs: fix to do sanity check with i_extra_isize 
   CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
   CVE-2020-10774: (unk)  
   CVE-2020-11669: (unk) powerpc/powernv/idle: Restore AMR/UAMOR/AMOR after idle 
   CVE-2020-11725: (unk)  
-  CVE-2020-12114: (unk) make struct mountpoint bear the dentry reference to mountpoint, not struct mount 
   CVE-2020-12656: (unk) sunrpc: check that domain table is empty at module unload. 
+  CVE-2020-12912: (unk) hwmon: (amd_energy) modify the visibility of the counters 
   CVE-2020-14304: (unk)  
   CVE-2020-14305: (unk) netfilter: helpers: remove data_len usage for inkernel helpers 
-  CVE-2020-14351: (unk)  
-  CVE-2020-14386: (unk) net/packet: fix overflow in tpacket_rcv 
-  CVE-2020-14390: (unk) fbcon: remove soft scrollback code 
   CVE-2020-15780: (unk) ACPI: configfs: Disallow loading ACPI tables when locked down 
   CVE-2020-15802: (unk)  
-  CVE-2020-25211: (unk)  
+  CVE-2020-16119: (unk)  
+  CVE-2020-16120: (unk) ovl: switch to mounter creds in readdir 
   CVE-2020-25220: (unk)  
   CVE-2020-25221: (unk) mm: fix pin vs. gup mismatch with gate pages 
-  CVE-2020-25284: (unk) rbd: require global CAP_SYS_ADMIN for mapping and unmapping 
+  CVE-2020-25639: (unk)  
+  CVE-2020-25661: (unk)  
+  CVE-2020-25662: (unk)  
+  CVE-2020-25670: (unk)  
+  CVE-2020-25671: (unk)  
+  CVE-2020-25672: (unk)  
+  CVE-2020-25673: (unk)  
+  CVE-2020-26541: (unk)  
+  CVE-2020-27066: (unk)  
+  CVE-2020-27152: (unk) KVM: ioapic: break infinite recursion on lazy EOI 
+  CVE-2020-27194: (unk) bpf: Fix scalar32_min_max_or bounds tracking 
+  CVE-2020-27777: (unk) powerpc/rtas: Restrict RTAS requests from userspace 
+  CVE-2020-27820: (unk)  
+  CVE-2020-27830: (unk) speakup: Reject setting the speakup line discipline outside of speakup 
+  CVE-2020-27835: (unk) IB/hfi1: Ensure correct mm is used at all times 
+  CVE-2020-28588: (unk) lib/syscall: fix syscall registers retrieval on 32-bit platforms 
+  CVE-2020-28941: (unk) speakup: Do not let the line discipline be used several times 
+  CVE-2020-29369: (unk) mm/mmap.c: close race between munmap() and expand_upwards()/downwards() 
+  CVE-2020-29372: (unk) mm: check that mm is still valid in madvise() 
+  CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
+  CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
+  CVE-2020-29534: (unk) io_uring: don't rely on weak ->files references 
+  CVE-2020-35499: (unk) Bluetooth: sco: Fix crash when using BT_SNDMTU/BT_RCVMTU option 
+  CVE-2020-35513: (unk) nfsd: fix incorrect umasks 
+  CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
+  CVE-2021-0342: (unk) tun: correct header offsets in napi frags mode 
+  CVE-2021-20177: (unk) netfilter: add and use nf_hook_slow_list() 
+  CVE-2021-20226: (unk) io_uring: clean up ->files grabbing 
+  CVE-2021-26708: (unk) vsock: fix the race conditions in multi-transport support 
+  CVE-2021-3347: (unk) futex: Ensure the correct return value from futex_lock_pi() 
+  CVE-2021-3348: (unk) nbd: freeze the queue while we're adding connections 
