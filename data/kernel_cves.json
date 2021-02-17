@@ -48091,8 +48091,8 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "345c0dbf3a30872d9b204db96b5857cd00808cae",
         "last_affected_version": "4.19.72",
-        "last_modified": "2020-06-13",
-        "nvd_text": "In the Linux kernel 5.0.21, a setxattr operation, after a mount of a crafted ext4 image, can cause a slab-out-of-bounds write access because of an ext4_xattr_set_entry use-after-free in fs/ext4/xattr.c when a large old_size value is used in a memset call.",
+        "last_modified": "2021-02-17",
+        "nvd_text": "In the Linux kernel before 5.2, a setxattr operation, after a mount of a crafted ext4 image, can cause a slab-out-of-bounds write access because of an ext4_xattr_set_entry use-after-free in fs/ext4/xattr.c when a large old_size value is used in a memset call, aka CID-345c0dbf3a30.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19319",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19319",
@@ -55456,7 +55456,8 @@
         "breaks": "",
         "cmt_msg": "ovl: switch to mounter creds in readdir",
         "fixes": "48bd024b8a40d73ad6b086de2615738da0c7004f",
-        "last_modified": "2020-10-15",
+        "last_modified": "2021-02-17",
+        "nvd_text": "Overlayfs did not properly perform permission checking when copying up files in an overlayfs and could be exploited from within a user namespace, if, for example, unprivileged user namespaces were allowed. It was possible to have a file not readable by an unprivileged user to be copied to a mountpoint controlled by the user, like a removable device. This was introduced in kernel version 4.19 by commit d1d04ef (\"ovl: stack file ops\"). This was fixed in kernel version 5.8 by commits 56230d9 (\"ovl: verify permissions in ovl_path_open()\"), 48bd024 (\"ovl: switch to mounter creds in readdir\") and 05acefb (\"ovl: check permission to open real file\"). Additionally, commits 130fdbc (\"ovl: pass correct flags for opening real directory\") and 292f902 (\"ovl: call secutiry hook in ovl_real_ioctl()\") in kernel 5.8 might also be desired or necessary. These additional commits introduced a regression in overlay mounts within user namespaces which prevented access to files with ownership outside of the user namespace. This regression was mitigated by subsequent commit b6650da (\"ovl: do not fail because of O_NOATIMEi\") in kernel 5.11.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16120",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-16120",
@@ -55590,9 +55591,32 @@
         "affected_versions": "unk to v5.8",
         "breaks": "",
         "cmt_msg": "Bluetooth: fix kernel oops in store_pending_adv_report",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:A/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 3.3
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 6.5
+        },
+        "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "a2ec905d1e160a33b2e210e45ad30445ef26ce0e",
         "last_affected_version": "5.7",
-        "last_modified": "2021-02-08",
+        "last_modified": "2021-02-17",
         "nvd_text": "Improper buffer restrictions in BlueZ may allow an unauthenticated user to potentially enable denial of service via adjacent access. This affects all Linux kernel versions that support BlueZ.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24490",
@@ -58238,6 +58262,62 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-26708",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-26708",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-26708"
+        }
+    },
+    "CVE-2021-26930": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-02-17",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26930",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26930",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-26930",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-26930",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-26930",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-26930"
+        }
+    },
+    "CVE-2021-26931": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-02-17",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26931",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26931",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-26931",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-26931",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-26931",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-26931"
+        }
+    },
+    "CVE-2021-26932": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-02-17",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26932",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26932",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-26932",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-26932",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-26932",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-26932"
+        }
+    },
+    "CVE-2021-26934": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-02-17",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26934",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26934",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-26934",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-26934",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-26934",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-26934"
         }
     },
     "CVE-2021-3178": {
