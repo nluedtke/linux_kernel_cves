@@ -53962,7 +53962,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2021-02-16",
+        "last_modified": "2021-02-25",
+        "nvd_text": "Integer overflow in the firmware for some Intel(R) Graphics Drivers for Windows * before version 26.20.100.7212 and before Linux kernel version 5.5 may allow a privileged user to potentially enable an escalation of privilege via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12362",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12362",
@@ -53976,7 +53977,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2021-02-16",
+        "last_modified": "2021-02-25",
+        "nvd_text": "Improper input validation in some Intel(R) Graphics Drivers for Windows* before version 26.20.100.7212 and before Linux kernel version 5.5 may allow a privileged user to potentially enable a denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12363",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12363",
@@ -53990,7 +53992,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2021-02-16",
+        "last_modified": "2021-02-25",
+        "nvd_text": "Null pointer reference in some Intel(R) Graphics Drivers for Windows* before version 26.20.100.7212 and before version Linux kernel version 5.5 may allow a privileged user to potentially enable a denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12364",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-12364",
@@ -55455,8 +55458,31 @@
         "affected_versions": "unk to v5.8-rc1",
         "breaks": "",
         "cmt_msg": "ovl: switch to mounter creds in readdir",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.4
+        },
+        "cwe": "Improper Privilege Management",
         "fixes": "48bd024b8a40d73ad6b086de2615738da0c7004f",
-        "last_modified": "2021-02-17",
+        "last_modified": "2021-02-25",
         "nvd_text": "Overlayfs did not properly perform permission checking when copying up files in an overlayfs and could be exploited from within a user namespace, if, for example, unprivileged user namespaces were allowed. It was possible to have a file not readable by an unprivileged user to be copied to a mountpoint controlled by the user, like a removable device. This was introduced in kernel version 4.19 by commit d1d04ef (\"ovl: stack file ops\"). This was fixed in kernel version 5.8 by commits 56230d9 (\"ovl: verify permissions in ovl_path_open()\"), 48bd024 (\"ovl: switch to mounter creds in readdir\") and 05acefb (\"ovl: check permission to open real file\"). Additionally, commits 130fdbc (\"ovl: pass correct flags for opening real directory\") and 292f902 (\"ovl: call secutiry hook in ovl_real_ioctl()\") in kernel 5.8 might also be desired or necessary. These additional commits introduced a regression in overlay mounts within user namespaces which prevented access to files with ownership outside of the user namespace. This regression was mitigated by subsequent commit b6650da (\"ovl: do not fail because of O_NOATIMEi\") in kernel 5.11.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16120",
@@ -55631,7 +55657,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2021-02-21",
+        "last_modified": "2021-02-25",
+        "nvd_text": "Improper input validation in some Intel(R) Ethernet E810 Adapter drivers for Linux before version 1.0.4 and before version 1.4.29.0 for Windows*, may allow an authenticated user to potentially enable a denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24502",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-24502",
@@ -55645,7 +55672,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2021-02-21",
+        "last_modified": "2021-02-25",
+        "nvd_text": "Insufficient access control in some Intel(R) Ethernet E810 Adapter drivers for Linux before version 1.0.4 may allow an authenticated user to potentially enable information disclosure via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24503",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-24503",
@@ -55659,7 +55687,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2021-02-21",
+        "last_modified": "2021-02-25",
+        "nvd_text": "Uncontrolled resource consumption in some Intel(R) Ethernet E810 Adapter drivers for Linux before version 1.0.4 may allow an authenticated user to potentially enable denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24504",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-24504",
@@ -57588,7 +57617,8 @@
         "cmt_msg": "Bluetooth: sco: Fix crash when using BT_SNDMTU/BT_RCVMTU option",
         "fixes": "f6b8c6b5543983e9de29dc14716bfa4eb3f157c4",
         "last_affected_version": "5.10.3",
-        "last_modified": "2021-01-22",
+        "last_modified": "2021-02-25",
+        "nvd_text": "A NULL pointer dereference flaw in kernel versions prior to 5.11 may be seen if sco_sock_getsockopt function in net/bluetooth/sco.c do not have a sanity check for a socket connection, when using BT_SNDMTU/BT_RCVMTU for SCO sockets. This could allow a local attacker with a special user privilege to crash the system (DOS) or leak kernel internal information.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35499",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-35499",
@@ -58323,8 +58353,10 @@
     "CVE-2021-26930": {
         "affected_versions": "unk to unk",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-02-17",
+        "cmt_msg": "xen-blkback: fix error handling in xen_blkbk_map()",
+        "fixes": "871997bc9e423f05c7da7c9178e62dde5df2a7f8",
+        "last_affected_version": "5.11.0",
+        "last_modified": "2021-02-25",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26930",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26930",
@@ -58337,8 +58369,10 @@
     "CVE-2021-26931": {
         "affected_versions": "unk to unk",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-02-17",
+        "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()",
+        "fixes": "5a264285ed1cd32e26d9de4f3c8c6855e467fd63",
+        "last_affected_version": "5.11.0",
+        "last_modified": "2021-02-25",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26931",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26931",
@@ -58351,8 +58385,10 @@
     "CVE-2021-26932": {
         "affected_versions": "unk to unk",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-02-17",
+        "cmt_msg": "Xen/x86: don't bail early from clear_foreign_p2m_mapping()",
+        "fixes": "a35f2ef3b7376bfd0a57f7844bd7454389aae1fc",
+        "last_affected_version": "5.11.0",
+        "last_modified": "2021-02-25",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26932",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26932",
@@ -58398,7 +58434,7 @@
         "cmt_msg": "futex: Ensure the correct return value from futex_lock_pi()",
         "fixes": "12bb3f7f1b03d5913b3f9d4236a488aa7774dfe9",
         "last_affected_version": "5.10.11",
-        "last_modified": "2021-02-01",
+        "last_modified": "2021-02-25",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3347",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3347",
