@@ -56075,10 +56075,11 @@
         }
     },
     "CVE-2020-25639": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.12-rc1",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2020-09-24",
+        "cmt_msg": "drm/nouveau: bail out of nouveau_channel_new if channel init fails",
+        "fixes": "eaba3b28401f50e22d64351caa8afe8d29509f27",
+        "last_modified": "2021-03-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25639",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25639",
@@ -57753,9 +57754,32 @@
         "affected_versions": "unk to v5.11-rc1",
         "breaks": "",
         "cmt_msg": "Bluetooth: sco: Fix crash when using BT_SNDMTU/BT_RCVMTU option",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.7
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "f6b8c6b5543983e9de29dc14716bfa4eb3f157c4",
         "last_affected_version": "5.10.3",
-        "last_modified": "2021-02-26",
+        "last_modified": "2021-03-02",
         "nvd_text": "A NULL pointer dereference flaw in Linux kernel versions prior to 5.11 may be seen if sco_sock_getsockopt function in net/bluetooth/sco.c do not have a sanity check for a socket connection, when using BT_SNDMTU/BT_RCVMTU for SCO sockets. This could allow a local attacker with a special user privilege to crash the system (DOS) or leak kernel internal information.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35499",
@@ -58410,6 +58434,52 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-0342"
         }
     },
+    "CVE-2021-0399": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-03-02",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0399",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0399",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-0399",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0399",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-0399",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-0399"
+        }
+    },
+    "CVE-2021-0447": {
+        "affected_versions": "unk to v4.15-rc1",
+        "breaks": "",
+        "cmt_msg": "l2tp: protect sock pointer of struct pppol2tp_session with RCU",
+        "fixes": "ee40fb2e1eb5bc0ddd3f2f83c6e39a454ef5a741",
+        "last_affected_version": "4.14.181",
+        "last_modified": "2021-03-02",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0447",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0447",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-0447",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0447",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-0447",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-0447"
+        }
+    },
+    "CVE-2021-0448": {
+        "affected_versions": "unk to v5.9-rc7",
+        "breaks": "",
+        "cmt_msg": "netfilter: ctnetlink: add a range check for l3/l4 protonum",
+        "fixes": "1cc5ef91d2ff94d2bf2de3b3585423e8a1051cb6",
+        "last_affected_version": "5.8.12",
+        "last_modified": "2021-03-02",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0448",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0448",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-0448",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0448",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-0448",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-0448"
+        }
+    },
     "CVE-2021-20177": {
         "affected_versions": "unk to v5.5-rc1",
         "breaks": "",
@@ -58489,12 +58559,12 @@
         }
     },
     "CVE-2021-26930": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.12-rc1",
         "breaks": "",
         "cmt_msg": "xen-blkback: fix error handling in xen_blkbk_map()",
         "fixes": "871997bc9e423f05c7da7c9178e62dde5df2a7f8",
         "last_affected_version": "5.11.0",
-        "last_modified": "2021-02-25",
+        "last_modified": "2021-03-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26930",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26930",
@@ -58505,12 +58575,12 @@
         }
     },
     "CVE-2021-26931": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.12-rc1",
         "breaks": "",
         "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()",
         "fixes": "5a264285ed1cd32e26d9de4f3c8c6855e467fd63",
         "last_affected_version": "5.11.0",
-        "last_modified": "2021-02-25",
+        "last_modified": "2021-03-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26931",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26931",
@@ -58521,12 +58591,12 @@
         }
     },
     "CVE-2021-26932": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.12-rc1",
         "breaks": "",
         "cmt_msg": "Xen/x86: don't bail early from clear_foreign_p2m_mapping()",
         "fixes": "a35f2ef3b7376bfd0a57f7844bd7454389aae1fc",
         "last_affected_version": "5.11.0",
-        "last_modified": "2021-02-25",
+        "last_modified": "2021-03-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26932",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26932",

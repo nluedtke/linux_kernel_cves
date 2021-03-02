@@ -880,6 +880,7 @@ CVEs fixed in 4.9.224:
 CVEs fixed in 4.9.225:
   CVE-2018-9517: feaed88dccc4742805c41260040103fa8a7f0df2 l2tp: pass tunnel pointer to ->session_create()
   CVE-2020-27067: 1ede832fb82fbda56c1bd7c57fb581dfab9c6e49 l2tp: fix l2tp_eth module loading
+  CVE-2021-0447: 5803ecd7f6ac6f747582e775caa62ac9d0489261 l2tp: protect sock pointer of struct pppol2tp_session with RCU
 
 CVEs fixed in 4.9.226:
   CVE-2020-10732: d228bc4b19e0b1c35f3eb404acbf1d607c01e64c fs/binfmt_elf.c: allocate initialized memory in fill_thread_core_info()
@@ -949,6 +950,7 @@ CVEs fixed in 4.9.239:
   CVE-2020-14386: 9a675ac9fe9794f0981db6e4b101503818f61622 net/packet: fix overflow in tpacket_rcv
   CVE-2020-25211: 9c61977a713511c01abdf9b2a72693d21cb60556 netfilter: ctnetlink: add a range check for l3/l4 protonum
   CVE-2020-28915: 6f1adb22fc0c567d65e8c56cc04d633d2fa1bfb4 fbcon: Fix global-out-of-bounds read in fbcon_get_font()
+  CVE-2021-0448: 9c61977a713511c01abdf9b2a72693d21cb60556 netfilter: ctnetlink: add a range check for l3/l4 protonum
 
 CVEs fixed in 4.9.240:
   CVE-2020-12351: 720369661674527c8aa999fae0e295eeea12174c Bluetooth: L2CAP: Fix calling sk_filter on non-socket based channel
@@ -1127,7 +1129,7 @@ Outstanding CVEs:
   CVE-2020-24504: (unk)  
   CVE-2020-25220: (unk)  
   CVE-2020-25221: (unk) mm: fix pin vs. gup mismatch with gate pages 
-  CVE-2020-25639: (unk)  
+  CVE-2020-25639: (unk) drm/nouveau: bail out of nouveau_channel_new if channel init fails 
   CVE-2020-25661: (unk)  
   CVE-2020-25662: (unk)  
   CVE-2020-25670: (unk)  
@@ -1156,6 +1158,7 @@ Outstanding CVEs:
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
   CVE-2021-0342: (unk) tun: correct header offsets in napi frags mode 
+  CVE-2021-0399: (unk)  
   CVE-2021-20177: (unk) netfilter: add and use nf_hook_slow_list() 
   CVE-2021-20194: (unk) bpf, cgroup: Fix optlen WARN_ON_ONCE toctou 
   CVE-2021-20226: (unk) io_uring: clean up ->files grabbing 
