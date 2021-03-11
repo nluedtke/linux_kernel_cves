@@ -56078,9 +56078,11 @@
         "affected_versions": "unk to v5.12-rc1",
         "breaks": "",
         "cmt_msg": "drm/nouveau: bail out of nouveau_channel_new if channel init fails",
+        "cwe": "NULL Pointer Dereference",
         "fixes": "eaba3b28401f50e22d64351caa8afe8d29509f27",
         "last_affected_version": "5.11.2",
-        "last_modified": "2021-03-07",
+        "last_modified": "2021-03-11",
+        "nvd_text": "A NULL pointer dereference flaw was found in the Linux kernel’s GPU Nouveau driver functionality in versions prior to 5.12-rc1 in the way the user calls ioctl DRM_IOCTL_NOUVEAU_CHANNEL_ALLOC. This flaw allows a local user to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25639",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25639",
@@ -56573,8 +56575,9 @@
         }
     },
     "CVE-2020-27066": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.6",
         "breaks": "",
+        "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -56598,8 +56601,9 @@
             "score": 6.7
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2020-12-21",
+        "fixes": "4c59406ed00379c8663f8663d82b2537467ce9d7",
+        "last_affected_version": "5.5",
+        "last_modified": "2021-03-11",
         "nvd_text": "In xfrm6_tunnel_free_spi of net/ipv6/xfrm6_tunnel.c, there is a possible use after free due to improper locking. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-168043318",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27066",
@@ -58541,6 +58545,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20239",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-20239",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-20239"
+        }
+    },
+    "CVE-2021-20261": {
+        "affected_versions": "unk to v4.5-rc5",
+        "breaks": "",
+        "cmt_msg": "floppy: fix lock_fdc() signal handling",
+        "fixes": "a0c80efe5956ccce9fe7ae5c78542578c07bc20a",
+        "last_modified": "2021-03-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20261",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20261",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-20261",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20261",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-20261",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-20261"
         }
     },
     "CVE-2021-20265": {
