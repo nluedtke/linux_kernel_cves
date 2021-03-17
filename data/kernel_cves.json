@@ -24356,8 +24356,8 @@
         }
     },
     "CVE-2017-1000410": {
-        "affected_versions": "unk to v4.15-rc8",
-        "breaks": "",
+        "affected_versions": "v3.3-rc1 to v4.15-rc8",
+        "breaks": "42dceae2819b5ac6fc9a0d414ae05a8960e2a1d9",
         "cmt_msg": "Bluetooth: Prevent stack info leak from the EFS element.",
         "cvss2": {
             "Access Complexity": "Low",
@@ -24384,7 +24384,7 @@
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "06e7e776ca4d36547e503279aeff996cbb292c16",
         "last_affected_version": "4.14.13",
-        "last_modified": "2020-09-13",
+        "last_modified": "2021-03-17",
         "nvd_text": "The Linux kernel version 3.3-rc1 and later is affected by a vulnerability lies in the processing of incoming L2CAP commands - ConfigRequest, and ConfigResponse messages. This info leak is a result of uninitialized stack variables that may be returned to an attacker in their uninitialized state. By manipulating the code flows that precede the handling of these configuration messages, an attacker can also gain some control over which data will be held in the uninitialized stack variables. This can allow him to bypass KASLR, and stack canaries protection - as both pointers and stack canaries may be leaked in this manner. Combining this vulnerability (for example) with the previously disclosed RCE vulnerability in L2CAP configuration parsing (CVE-2017-1000251) may allow an attacker to exploit the RCE against kernels which were built with the above mitigations. These are the specifics of this vulnerability: In the function l2cap_parse_conf_rsp and in the function l2cap_parse_conf_req the following variable is declared without initialization: struct l2cap_conf_efs efs; In addition, when parsing input configuration parameters in both of these functions, the switch case for handling EFS elements may skip the memcpy call that will write to the efs variable: ... case L2CAP_CONF_EFS: if (olen == sizeof(efs)) memcpy(&efs, (void *)val, olen); ... The olen in the above if is attacker controlled, and regardless of that if, in both of these functions the efs variable would eventually be added to the outgoing configuration request that is being built: l2cap_add_conf_opt(&ptr, L2CAP_CONF_EFS, sizeof(efs), (unsigned long) &efs); So by sending a configuration request, or response, that contains an L2CAP_CONF_EFS element, but with an element length that is not sizeof(efs) - the memcpy to the uninitialized efs variable can be avoided, and the uninitialized variable would be returned to the attacker (16 bytes).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-1000410",
@@ -40285,8 +40285,9 @@
         }
     },
     "CVE-2019-0145": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.6-rc1 to v5.2-rc1",
+        "breaks": "e3219ce6a775468368fb270fae3eb82a6787b436",
+        "cmt_msg": "i40e: add num_vectors checker in iwarp handler",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -40310,8 +40311,9 @@
             "score": 7.8
         },
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
-        "fixes": "",
-        "last_modified": "2020-09-09",
+        "fixes": "7015ca3df965378bcef072cca9cd63ed098665b5",
+        "last_affected_version": "4.19.138",
+        "last_modified": "2021-03-17",
         "nvd_text": "Buffer overflow in i40e driver for Intel(R) Ethernet 700 Series Controllers versions before 7.0 may allow an authenticated user to potentially enable an escalation of privilege via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-0145",
@@ -40361,8 +40363,9 @@
         }
     },
     "CVE-2019-0147": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.6-rc1 to v5.2-rc1",
+        "breaks": "e3219ce6a775468368fb270fae3eb82a6787b436",
+        "cmt_msg": "i40e: add num_vectors checker in iwarp handler",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -40386,8 +40389,9 @@
             "score": 5.5
         },
         "cwe": "Improper Input Validation",
-        "fixes": "",
-        "last_modified": "2020-09-09",
+        "fixes": "7015ca3df965378bcef072cca9cd63ed098665b5",
+        "last_affected_version": "4.19.138",
+        "last_modified": "2021-03-17",
         "nvd_text": "Insufficient input validation in i40e driver for Intel(R) Ethernet 700 Series Controllers versions before 7.0 may allow an authenticated user to potentially enable a denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-0147",
@@ -40399,8 +40403,9 @@
         }
     },
     "CVE-2019-0148": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v3.12-rc1 to v5.2-rc1",
+        "breaks": "5c3c48ac6bf56367c4e89f6453cd2d61e50375bd",
+        "cmt_msg": "i40e: Wrong truncation from u16 to u8",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -40424,8 +40429,9 @@
             "score": 5.5
         },
         "cwe": "Missing Release of Resource after Effective Lifetime",
-        "fixes": "",
-        "last_modified": "2020-09-09",
+        "fixes": "c004804dceee9ca384d97d9857ea2e2795c2651d",
+        "last_affected_version": "4.19.138",
+        "last_modified": "2021-03-17",
         "nvd_text": "Resource leak in i40e driver for Intel(R) Ethernet 700 Series Controllers versions before 7.0 may allow an authenticated user to potentially enable a denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-0148",
@@ -42073,8 +42079,8 @@
         }
     },
     "CVE-2019-12881": {
-        "affected_versions": "unk to v4.18-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.18-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "drm/i915/userptr: reject zero user_size",
         "cvss2": {
             "Access Complexity": "Low",
@@ -42099,7 +42105,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "c11c7bfd213495784b22ef82a69b6489f8d0092f",
         "last_affected_version": "None",
-        "last_modified": "2020-12-17",
+        "last_modified": "2021-03-17",
         "nvd_text": "i915_gem_userptr_get_pages in drivers/gpu/drm/i915/i915_gem_userptr.c in the Linux kernel 4.15.0 on Ubuntu 18.04.2 allows local users to cause a denial of service (NULL pointer dereference and BUG) or possibly have unspecified other impact via crafted ioctl calls to /dev/dri/card0.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12881",
@@ -44776,7 +44782,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "7da413a18583baaf35dd4a8eb414fa410367d7f2",
         "last_affected_version": "5.4.6",
-        "last_modified": "2020-01-28",
+        "last_modified": "2021-03-17",
         "nvd_text": "drivers/net/wireless/marvell/libertas/if_sdio.c in the Linux kernel 5.2.14 does not check the alloc_workqueue return value, leading to a NULL pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-16232",
@@ -46971,7 +46977,7 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "ab612b1daf415b62c58e130cb3d0f30b255a14d0",
         "last_affected_version": "5.3.8",
-        "last_modified": "2020-01-28",
+        "last_modified": "2021-03-17",
         "nvd_text": "A memory leak in the adis_update_scan_mode() function in drivers/iio/imu/adis_buffer.c in the Linux kernel before 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-ab612b1daf41.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19060",
@@ -47011,7 +47017,7 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "9c0530e898f384c5d279bfcebd8bb17af1105873",
         "last_affected_version": "5.3.8",
-        "last_modified": "2020-08-05",
+        "last_modified": "2021-03-17",
         "nvd_text": "A memory leak in the adis_update_scan_mode_burst() function in drivers/iio/imu/adis_buffer.c in the Linux kernel before 5.3.9 allows attackers to cause a denial of service (memory consumption), aka CID-9c0530e898f3.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19061",
@@ -48301,8 +48307,8 @@
         }
     },
     "CVE-2019-19448": {
-        "affected_versions": "unk to v5.9-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.31-rc5 to v5.9-rc1",
+        "breaks": "963030817060e4f109be1993b9ae8f81dbf5e11a",
         "cmt_msg": "btrfs: only search for left_info if there is no right_info in try_merge_free_space",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -48329,7 +48335,7 @@
         "cwe": "Use After Free",
         "fixes": "bf53d4687b8f3f6b752f091eb85f62369a515dfd",
         "last_affected_version": "5.8.2",
-        "last_modified": "2020-08-25",
+        "last_modified": "2021-03-17",
         "nvd_text": "In the Linux kernel 5.0.21 and 5.3.11, mounting a crafted btrfs filesystem image, performing some operations, and then making a syncfs system call can lead to a use-after-free in try_merge_free_space in fs/btrfs/free-space-cache.c because the pointer to a left data structure can be the same as the pointer to a right data structure.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19448",
@@ -49219,8 +49225,8 @@
         }
     },
     "CVE-2019-19770": {
-        "affected_versions": "unk to v5.9-rc1",
-        "breaks": "",
+        "affected_versions": "v4.11-rc1 to v5.9-rc1",
+        "breaks": "6ac93117ab009d3901ed5d3d0f79056eb5fc0afd",
         "cmt_msg": "blktrace: fix debugfs use after free",
         "cvss2": {
             "Access Complexity": "Low",
@@ -49247,7 +49253,7 @@
         "cwe": "Use After Free",
         "fixes": "bad8e64fb19d3a0de5e564d9a7271c31bd684369",
         "last_affected_version": "5.8.1",
-        "last_modified": "2020-11-12",
+        "last_modified": "2021-03-17",
         "nvd_text": "** DISPUTED ** In the Linux kernel 4.19.83, there is a use-after-free (read) in the debugfs_remove function in fs/debugfs/inode.c (which is used to remove a file or directory in debugfs that was previously created with a call to another debugfs function such as debugfs_create_file). NOTE: Linux kernel developers dispute this issue as not being an issue with debugfs, instead this is an issue with misuse of debugfs within blktrace.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19770",
@@ -50245,8 +50251,8 @@
         }
     },
     "CVE-2019-20934": {
-        "affected_versions": "unk to v5.3-rc2",
-        "breaks": "",
+        "affected_versions": "v3.13-rc1 to v5.3-rc2",
+        "breaks": "82727018b0d33d188e9916bcf76f18387484cb04",
         "cmt_msg": "sched/fair: Don't free p->numa_faults with concurrent readers",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -50273,7 +50279,7 @@
         "cwe": "Use After Free",
         "fixes": "16d51a590a8ce3befb1308e0e7ab77f3b661af33",
         "last_affected_version": "5.2.5",
-        "last_modified": "2020-12-04",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.2.6. On NUMA systems, the Linux fair scheduler has a use-after-free in show_numa_stats() because NUMA fault statistics are inappropriately freed, aka CID-16d51a590a8c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-20934",
@@ -52323,8 +52329,8 @@
         "rejected": true
     },
     "CVE-2020-0305": {
-        "affected_versions": "unk to v5.5-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.5-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "chardev: Avoid potential use-after-free in 'chrdev_open()'",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -52351,7 +52357,7 @@
         "cwe": "Use After Free",
         "fixes": "68faa679b8be1a74e6663c21c3a9d25d32f1c079",
         "last_affected_version": "5.4.11",
-        "last_modified": "2020-07-26",
+        "last_modified": "2021-03-17",
         "nvd_text": "In cdev_get of char_dev.c, there is a possible use-after-free due to a race condition. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android-10Android ID: A-153467744",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0305",
@@ -52401,8 +52407,8 @@
         }
     },
     "CVE-2020-0404": {
-        "affected_versions": "unk to v5.6-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.26-rc9 to v5.6-rc1",
+        "breaks": "c0efd232929c2cd87238de2cccdaf4e845be5b0c",
         "cmt_msg": "media: uvcvideo: Avoid cyclic entity chains due to malformed USB descriptors",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52429,7 +52435,7 @@
         "cwe": "Improper Privilege Management",
         "fixes": "68035c80e129c4cfec659aac4180354530b26527",
         "last_affected_version": "5.5.2",
-        "last_modified": "2020-09-28",
+        "last_modified": "2021-03-17",
         "nvd_text": "In uvc_scan_chain_forward of uvc_driver.c, there is a possible linked list corruption due to an unusual root cause. This could lead to local escalation of privilege in the kernel with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-111893654References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0404",
@@ -52441,8 +52447,8 @@
         }
     },
     "CVE-2020-0423": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v4.14-rc1 to v5.10-rc1",
+        "breaks": "72196393a5e3d28c21679e3b745c06dd4a5b24c9",
         "cmt_msg": "binder: fix UAF when releasing todo list",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52469,7 +52475,7 @@
         "cwe": "Improper Locking",
         "fixes": "f3277cbfba763cd2826396521b9296de67cf1bbc",
         "last_affected_version": "5.9.1",
-        "last_modified": "2020-10-30",
+        "last_modified": "2021-03-17",
         "nvd_text": "In binder_release_work of binder.c, there is a possible use-after-free due to improper locking. This could lead to local escalation of privilege in the kernel with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-161151868References: N/A",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0423",
@@ -52481,8 +52487,8 @@
         }
     },
     "CVE-2020-0427": {
-        "affected_versions": "unk to v5.5-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.5-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "pinctrl: devicetree: Avoid taking direct reference to device name string",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52509,7 +52515,7 @@
         "cwe": "Use After Free",
         "fixes": "be4c60b563edee3712d392aaeb0943a768df7023",
         "last_affected_version": "5.4.6",
-        "last_modified": "2020-11-19",
+        "last_modified": "2021-03-17",
         "nvd_text": "In create_pinctrl of core.c, there is a possible out of bounds read due to a use after free. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-140550171",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0427",
@@ -52521,8 +52527,8 @@
         }
     },
     "CVE-2020-0429": {
-        "affected_versions": "unk to v4.14-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.14-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "l2tp: fix race between l2tp_session_delete() and l2tp_tunnel_closeall()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52549,7 +52555,7 @@
         "cwe": "Use After Free",
         "fixes": "b228a94066406b6c456321d69643b0d7ce11cfa6",
         "last_affected_version": "4.9.218",
-        "last_modified": "2020-09-28",
+        "last_modified": "2021-03-17",
         "nvd_text": "In l2tp_session_delete and related functions of l2tp_core.c, there is possible memory corruption due to a use after free. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-152735806",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0429",
@@ -52561,8 +52567,8 @@
         }
     },
     "CVE-2020-0430": {
-        "affected_versions": "unk to v4.18-rc1",
-        "breaks": "",
+        "affected_versions": "v4.14-rc1 to v4.18-rc1",
+        "breaks": "f1174f77b50c94eecaa658fdc56fa69b421de4b8",
         "cmt_msg": "bpf: reject passing modified ctx to helper functions",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52589,7 +52595,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "58990d1ff3f7896ee341030e9a7c2e4002570683",
         "last_affected_version": "4.17.6",
-        "last_modified": "2020-09-28",
+        "last_modified": "2021-03-17",
         "nvd_text": "In skb_headlen of /include/linux/skbuff.h, there is a possible out of bounds read due to memory corruption. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-153881554",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0430",
@@ -52601,8 +52607,8 @@
         }
     },
     "CVE-2020-0431": {
-        "affected_versions": "unk to v5.5-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.5-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "HID: hid-input: clear unmapped usages",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52629,7 +52635,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "4f3882177240a1f55e45a3d241d3121341bead78",
         "last_affected_version": "5.4.11",
-        "last_modified": "2020-09-28",
+        "last_modified": "2021-03-17",
         "nvd_text": "In kbd_keycode of keyboard.c, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-144161459",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0431",
@@ -52641,8 +52647,8 @@
         }
     },
     "CVE-2020-0432": {
-        "affected_versions": "unk to v5.6-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.6-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "staging: most: net: fix buffer overflow",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52669,7 +52675,7 @@
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "4d1356ac12f4d5180d0df345d85ff0ee42b89c72",
         "last_affected_version": "5.5.0",
-        "last_modified": "2020-09-28",
+        "last_modified": "2021-03-17",
         "nvd_text": "In skb_to_mamac of networking.c, there is a possible out of bounds write due to an integer overflow. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-143560807",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0432",
@@ -52681,8 +52687,8 @@
         }
     },
     "CVE-2020-0433": {
-        "affected_versions": "unk to v4.19-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.19-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "blk-mq: sync the update nr_hw_queues with blk_mq_queue_tag_busy_iter",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52709,7 +52715,7 @@
         "cwe": "Use After Free",
         "fixes": "f5bbbbe4d63577026f908a809f22f5fd5a90ea1f",
         "last_affected_version": "4.14.175",
-        "last_modified": "2020-10-05",
+        "last_modified": "2021-03-17",
         "nvd_text": "In blk_mq_queue_tag_busy_iter of blk-mq-tag.c, there is a possible use after free due to improper locking. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-151939299",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0433",
@@ -52739,8 +52745,8 @@
         "rejected": true
     },
     "CVE-2020-0444": {
-        "affected_versions": "unk to v5.6-rc4",
-        "breaks": "",
+        "affected_versions": "v3.18-rc1 to v5.6-rc4",
+        "breaks": "219ca39427bf6c46c4e1473493e33bc00635e99b",
         "cmt_msg": "audit: fix error handling in audit_data_to_entry()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52767,7 +52773,7 @@
         "cwe": "Improper Privilege Management",
         "fixes": "2ad3e17ebf94b7b7f3f64c050ff168f9915345eb",
         "last_affected_version": "5.5.7",
-        "last_modified": "2020-12-21",
+        "last_modified": "2021-03-17",
         "nvd_text": "In audit_free_lsm_field of auditfilter.c, there is a possible bad kfree due to a logic error in audit_data_to_entry. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-150693166References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0444",
@@ -52779,8 +52785,8 @@
         }
     },
     "CVE-2020-0465": {
-        "affected_versions": "unk to v5.9-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.9-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "HID: core: Sanitize event code and type when mapping input",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52807,7 +52813,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "35556bed836f8dc07ac55f69c8d17dce3e7f0e25",
         "last_affected_version": "5.8.6",
-        "last_modified": "2020-12-21",
+        "last_modified": "2021-03-17",
         "nvd_text": "In various methods of hid-multitouch.c, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-162844689References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0465",
@@ -52819,8 +52825,8 @@
         }
     },
     "CVE-2020-0466": {
-        "affected_versions": "unk to v5.9-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.9-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "do_epoll_ctl(): clean the failure exits up a bit",
         "cvss2": {
             "Access Complexity": "Low",
@@ -52847,7 +52853,7 @@
         "cwe": "Use After Free",
         "fixes": "52c479697c9b73f628140dcdfcd39ea302d05482",
         "last_affected_version": "5.8.3",
-        "last_modified": "2020-12-21",
+        "last_modified": "2021-03-17",
         "nvd_text": "In do_epoll_ctl and ep_loop_check_proc of eventpoll.c, there is a possible use after free due to a logic error. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-147802478References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-0466",
@@ -52899,8 +52905,9 @@
         }
     },
     "CVE-2020-10135": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.8-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "Bluetooth: Consolidate encryption handling in hci_encrypt_cfm",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Adjacent Network",
@@ -52924,8 +52931,9 @@
             "score": 5.4
         },
         "cwe": "Improper Authentication",
-        "fixes": "",
-        "last_modified": "2020-11-09",
+        "fixes": "3ca44c16b0dcc764b641ee4ac226909f5c421aa3",
+        "last_affected_version": "5.4.71",
+        "last_modified": "2021-03-17",
         "nvd_text": "Legacy pairing and secure-connections pairing authentication in Bluetooth BR/EDR Core Specification v5.2 and earlier may allow an unauthenticated user to complete authentication without pairing credentials via adjacent access. An unauthenticated, adjacent attacker could impersonate a Bluetooth BR/EDR master or slave to pair with a previously paired remote device to successfully complete the authentication procedure without knowing the link key.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10135",
@@ -53879,8 +53887,8 @@
         }
     },
     "CVE-2020-12351": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v4.8-rc5 to v5.10-rc1",
+        "breaks": "dbb50887c8f619fc5c3489783ebc3122bc134a31",
         "cmt_msg": "Bluetooth: L2CAP: Fix calling sk_filter on non-socket based channel",
         "cvss2": {
             "Access Complexity": "Low",
@@ -53907,7 +53915,7 @@
         "cwe": "Improper Input Validation",
         "fixes": "f19425641cb2572a33cb074d5e30283720bd4d22",
         "last_affected_version": "5.9.0",
-        "last_modified": "2020-12-04",
+        "last_modified": "2021-03-17",
         "nvd_text": "Improper input validation in BlueZ may allow an unauthenticated user to potentially enable escalation of privilege via adjacent access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12351",
@@ -53919,8 +53927,8 @@
         }
     },
     "CVE-2020-12352": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v3.6-rc1 to v5.10-rc1",
+        "breaks": "47f2d97d38816aaca94c9b6961c6eff1cfcd0bd6",
         "cmt_msg": "Bluetooth: A2MP: Fix not initializing all members",
         "cvss2": {
             "Access Complexity": "Low",
@@ -53947,7 +53955,7 @@
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "eddb7732119d53400f48a02536a84c509692faa8",
         "last_affected_version": "5.9.0",
-        "last_modified": "2020-12-04",
+        "last_modified": "2021-03-17",
         "nvd_text": "Improper access control in BlueZ may allow an unauthenticated user to potentially enable information disclosure via adjacent access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12352",
@@ -53997,8 +54005,9 @@
         }
     },
     "CVE-2020-12363": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.11-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "drm/i915/guc: Update to use firmware v49.0.1",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -54022,8 +54031,8 @@
             "score": 5.5
         },
         "cwe": "Improper Input Validation",
-        "fixes": "",
-        "last_modified": "2021-02-26",
+        "fixes": "c784e5249e773689e38d2bc1749f08b986621a26",
+        "last_modified": "2021-03-17",
         "nvd_text": "Improper input validation in some Intel(R) Graphics Drivers for Windows* before version 26.20.100.7212 and before Linux kernel version 5.5 may allow a privileged user to potentially enable a denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12363",
@@ -54035,8 +54044,9 @@
         }
     },
     "CVE-2020-12364": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.11-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "drm/i915/guc: Update to use firmware v49.0.1",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -54060,8 +54070,8 @@
             "score": 5.5
         },
         "cwe": "NULL Pointer Dereference",
-        "fixes": "",
-        "last_modified": "2021-02-26",
+        "fixes": "c784e5249e773689e38d2bc1749f08b986621a26",
+        "last_modified": "2021-03-17",
         "nvd_text": "Null pointer reference in some Intel(R) Graphics Drivers for Windows* before version 26.20.100.7212 and before version Linux kernel version 5.5 may allow a privileged user to potentially enable a denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12364",
@@ -54673,8 +54683,8 @@
         }
     },
     "CVE-2020-12912": {
-        "affected_versions": "unk to v5.10-rc4",
-        "breaks": "",
+        "affected_versions": "v5.8-rc1 to v5.10-rc4",
+        "breaks": "8abee9566b7e8eecf566c4daf6be062a27369890",
         "cmt_msg": "hwmon: (amd_energy) modify the visibility of the counters",
         "cvss2": {
             "Access Complexity": "Low",
@@ -54701,7 +54711,7 @@
         "cwe": "Observable Differences in Behavior to Error Inputs",
         "fixes": "60268b0e8258fdea9a3c9f4b51e161c123571db3",
         "last_affected_version": "5.9.8",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "A potential vulnerability in the AMD extension to Linux \"hwmon\" service may allow an attacker to use the Linux-based Running Average Power Limit (RAPL) interface to show various side channel attacks. In line with industry partners, AMD has updated the RAPL interface to require privileged access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12912",
@@ -54950,8 +54960,8 @@
         }
     },
     "CVE-2020-14351": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v3.10-rc7 to v5.10-rc1",
+        "breaks": "9bb5d40cd93c9dd4be74834b1dcb1ba03629716b",
         "cmt_msg": "perf/core: Fix race in the perf_mmap_close() function",
         "cvss2": {
             "Access Complexity": "Low",
@@ -54978,7 +54988,7 @@
         "cwe": "Use After Free",
         "fixes": "f91072ed1b7283b13ca57fcfbece5a3b92726143",
         "last_affected_version": "5.9.1",
-        "last_modified": "2020-12-14",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw was found in the Linux kernel. A use-after-free memory flaw was found in the perf subsystem allowing a local attacker with permission to monitor perf events to corrupt memory and possibly escalate privileges. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14351",
@@ -55168,8 +55178,8 @@
         }
     },
     "CVE-2020-14390": {
-        "affected_versions": "unk to v5.9-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.9-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "fbcon: remove soft scrollback code",
         "cvss2": {
             "Access Complexity": "Low",
@@ -55196,7 +55206,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "50145474f6ef4a9c19205b173da6264a644c7489",
         "last_affected_version": "5.8.9",
-        "last_modified": "2020-10-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw was found in the Linux kernel in versions before 5.9-rc6. When changing screen size, an out-of-bounds memory write can occur leading to memory corruption or a denial of service. Due to the nature of the flaw, privilege escalation cannot be fully ruled out.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-14390",
@@ -55288,8 +55298,8 @@
         }
     },
     "CVE-2020-15436": {
-        "affected_versions": "unk to v5.8-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.38-rc1 to v5.8-rc2",
+        "breaks": "77ea887e433ad8389d416826936c110fa7910f80",
         "cmt_msg": "block: Fix use-after-free in blkdev_get()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -55316,7 +55326,7 @@
         "cwe": "Use After Free",
         "fixes": "2d3a8e2deddea6c89961c422ec0c5b851e648c14",
         "last_affected_version": "5.7.5",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "Use-after-free vulnerability in fs/block_dev.c in the Linux kernel before 5.8 allows local users to gain privileges or cause a denial of service by leveraging improper access to a certain error field.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15436",
@@ -55328,8 +55338,8 @@
         }
     },
     "CVE-2020-15437": {
-        "affected_versions": "unk to v5.8-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.8-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "serial: 8250: fix null-ptr-deref in serial8250_start_tx()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -55356,7 +55366,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "f4c23a140d80ef5e6d3d1f8f57007649014b60fa",
         "last_affected_version": "5.7.10",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "The Linux kernel before version 5.8 is vulnerable to a NULL pointer dereference in drivers/tty/serial/8250/8250_core.c:serial8250_isa_init_ports() that allows local users to cause a denial of service by using the p->serial_in pointer which uninitialized.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-15437",
@@ -55524,8 +55534,8 @@
         }
     },
     "CVE-2020-16120": {
-        "affected_versions": "unk to v5.8-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.8-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ovl: switch to mounter creds in readdir",
         "cvss2": {
             "Access Complexity": "Low",
@@ -55551,7 +55561,7 @@
         },
         "cwe": "Improper Privilege Management",
         "fixes": "48bd024b8a40d73ad6b086de2615738da0c7004f",
-        "last_modified": "2021-02-25",
+        "last_modified": "2021-03-17",
         "nvd_text": "Overlayfs did not properly perform permission checking when copying up files in an overlayfs and could be exploited from within a user namespace, if, for example, unprivileged user namespaces were allowed. It was possible to have a file not readable by an unprivileged user to be copied to a mountpoint controlled by the user, like a removable device. This was introduced in kernel version 4.19 by commit d1d04ef (\"ovl: stack file ops\"). This was fixed in kernel version 5.8 by commits 56230d9 (\"ovl: verify permissions in ovl_path_open()\"), 48bd024 (\"ovl: switch to mounter creds in readdir\") and 05acefb (\"ovl: check permission to open real file\"). Additionally, commits 130fdbc (\"ovl: pass correct flags for opening real directory\") and 292f902 (\"ovl: call secutiry hook in ovl_real_ioctl()\") in kernel 5.8 might also be desired or necessary. These additional commits introduced a regression in overlay mounts within user namespaces which prevented access to files with ownership outside of the user namespace. This regression was mitigated by subsequent commit b6650da (\"ovl: do not fail because of O_NOATIMEi\") in kernel 5.11.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16120",
@@ -55683,8 +55693,8 @@
         }
     },
     "CVE-2020-24490": {
-        "affected_versions": "unk to v5.8",
-        "breaks": "",
+        "affected_versions": "v4.19-rc1 to v5.8",
+        "breaks": "c215e9397b00b3045a668120ed7dbd89f2866e74",
         "cmt_msg": "Bluetooth: fix kernel oops in store_pending_adv_report",
         "cvss2": {
             "Access Complexity": "Low",
@@ -55711,7 +55721,7 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "a2ec905d1e160a33b2e210e45ad30445ef26ce0e",
         "last_affected_version": "5.7",
-        "last_modified": "2021-02-17",
+        "last_modified": "2021-03-17",
         "nvd_text": "Improper buffer restrictions in BlueZ may allow an unauthenticated user to potentially enable denial of service via adjacent access. This affects all Linux kernel versions that support BlueZ.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24490",
@@ -55837,8 +55847,8 @@
         }
     },
     "CVE-2020-25211": {
-        "affected_versions": "unk to v5.9-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.16-rc1 to v5.9-rc7",
+        "breaks": "c1d10adb4a521de5760112853f42aaeefcec96eb",
         "cmt_msg": "netfilter: ctnetlink: add a range check for l3/l4 protonum",
         "cvss2": {
             "Access Complexity": "Low",
@@ -55865,7 +55875,7 @@
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "1cc5ef91d2ff94d2bf2de3b3585423e8a1051cb6",
         "last_affected_version": "5.8.12",
-        "last_modified": "2020-10-15",
+        "last_modified": "2021-03-17",
         "nvd_text": "In the Linux kernel through 5.8.7, local attackers able to inject conntrack netlink configuration could overflow a local buffer, causing crashes or triggering use of incorrect protocol numbers in ctnetlink_parse_tuple_filter in net/netfilter/nf_conntrack_netlink.c, aka CID-1cc5ef91d2ff.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25211",
@@ -55877,8 +55887,8 @@
         }
     },
     "CVE-2020-25212": {
-        "affected_versions": "unk to v5.9-rc1",
-        "breaks": "",
+        "affected_versions": "v3.11-rc1 to v5.9-rc1",
+        "breaks": "aa9c2669626ca7e5e5bab28e6caeb583fd40099b",
         "cmt_msg": "nfs: Fix getxattr kernel panic and memory overflow",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -55905,7 +55915,7 @@
         "cwe": "Time-of-check Time-of-use (TOCTOU) Race Condition",
         "fixes": "b4487b93545214a9db8cbf32e86411677b0cca21",
         "last_affected_version": "5.8.2",
-        "last_modified": "2020-09-21",
+        "last_modified": "2021-03-17",
         "nvd_text": "A TOCTOU mismatch in the NFS client code in the Linux kernel before 5.8.3 could be used by local attackers to corrupt memory or possibly have unspecified other impact because a size check is in fs/nfs/nfs4proc.c instead of fs/nfs/nfs4xdr.c, aka CID-b4487b935452.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25212",
@@ -55918,7 +55928,7 @@
     },
     "CVE-2020-25220": {
         "affected_versions": "unk to unk",
-        "breaks": "",
+        "breaks": "23ec03076333eea8882343af3f82c8ef53350e8c",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -55942,8 +55952,8 @@
             "score": 7.8
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2020-09-21",
+        "fixes": "1bfba2f4270c64c912756fc76621bbce959ddf2e",
+        "last_modified": "2021-03-17",
         "nvd_text": "The Linux kernel 4.9.x before 4.9.233, 4.14.x before 4.14.194, and 4.19.x before 4.19.140 has a use-after-free because skcd->no_refcnt was not considered during a backport of a CVE-2020-14356 patch. This is related to the cgroups feature.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25220",
@@ -55955,8 +55965,8 @@
         }
     },
     "CVE-2020-25221": {
-        "affected_versions": "unk to v5.9-rc4",
-        "breaks": "",
+        "affected_versions": "v5.7-rc1 to v5.9-rc4",
+        "breaks": "3faa52c03f440d1b9ddef18c4f189f4790d52d7e",
         "cmt_msg": "mm: fix pin vs. gup mismatch with gate pages",
         "cvss2": {
             "Access Complexity": "Low",
@@ -55983,7 +55993,7 @@
         "cwe": "Operation on a Resource after Expiration or Release",
         "fixes": "9fa2dd946743ae6f30dc4830da19147bf100a7f2",
         "last_affected_version": "5.8.6",
-        "last_modified": "2020-09-21",
+        "last_modified": "2021-03-17",
         "nvd_text": "get_gate_page in mm/gup.c in the Linux kernel 5.7.x and 5.8.x before 5.8.7 allows privilege escalation because of incorrect reference counting (caused by gate page mishandling) of the struct page that backs the vsyscall page. The result is a refcount underflow. This can be triggered by any 64-bit process that can use ptrace() or process_vm_readv(), aka CID-9fa2dd946743.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25221",
@@ -55995,8 +56005,8 @@
         }
     },
     "CVE-2020-25284": {
-        "affected_versions": "unk to v5.9-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.37-rc1 to v5.9-rc5",
+        "breaks": "602adf400201636e95c3fed9f31fba54a3d7e844",
         "cmt_msg": "rbd: require global CAP_SYS_ADMIN for mapping and unmapping",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56023,7 +56033,7 @@
         "cwe": "Improper Preservation of Permissions",
         "fixes": "f44d04e696feaf13d192d942c4f14ad2e117065a",
         "last_affected_version": "5.8.9",
-        "last_modified": "2020-09-24",
+        "last_modified": "2021-03-17",
         "nvd_text": "The rbd block device driver in drivers/block/rbd.c in the Linux kernel through 5.8.9 used incomplete permission checking for access to rbd devices, which could be leveraged by local attackers to map or unmap rbd block devices, aka CID-f44d04e696fe.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25284",
@@ -56035,8 +56045,8 @@
         }
     },
     "CVE-2020-25285": {
-        "affected_versions": "unk to v5.9-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.27-rc1 to v5.9-rc4",
+        "breaks": "e5ff215941d59f8ae6bf58f6428dc5c26745a612",
         "cmt_msg": "mm/hugetlb: fix a race between hugetlb sysctl handlers",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -56063,7 +56073,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "17743798d81238ab13050e8e2833699b54e15467",
         "last_affected_version": "5.8.7",
-        "last_modified": "2020-09-24",
+        "last_modified": "2021-03-17",
         "nvd_text": "A race condition between hugetlb sysctl handlers in mm/hugetlb.c in the Linux kernel before 5.8.8 could be used by local attackers to corrupt memory, cause a NULL pointer dereference, or possibly have unspecified other impact, aka CID-17743798d812.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25285",
@@ -56075,8 +56085,8 @@
         }
     },
     "CVE-2020-25639": {
-        "affected_versions": "unk to v5.12-rc1",
-        "breaks": "",
+        "affected_versions": "v5.1-rc1 to v5.12-rc1",
+        "breaks": "eeaf06ac1a5584e41cf289f8351e446bb131374b",
         "cmt_msg": "drm/nouveau: bail out of nouveau_channel_new if channel init fails",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56103,7 +56113,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "eaba3b28401f50e22d64351caa8afe8d29509f27",
         "last_affected_version": "5.11.2",
-        "last_modified": "2021-03-15",
+        "last_modified": "2021-03-17",
         "nvd_text": "A NULL pointer dereference flaw was found in the Linux kernel's GPU Nouveau driver functionality in versions prior to 5.12-rc1 in the way the user calls ioctl DRM_IOCTL_NOUVEAU_CHANNEL_ALLOC. This flaw allows a local user to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25639",
@@ -56115,8 +56125,8 @@
         }
     },
     "CVE-2020-25641": {
-        "affected_versions": "unk to v5.9-rc4",
-        "breaks": "",
+        "affected_versions": "v4.8-rc1 to v5.9-rc4",
+        "breaks": "1bdc76aea1159a750846c2fc98e404403eb7d51c",
         "cmt_msg": "block: allow for_each_bvec to support zero len bvec",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56143,7 +56153,7 @@
         "cwe": "Loop with Unreachable Exit Condition ('Infinite Loop')",
         "fixes": "7e24969022cbd61ddc586f14824fc205661bb124",
         "last_affected_version": "5.8.7",
-        "last_modified": "2020-10-15",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw was found in the Linux kernel's implementation of biovecs in versions before 5.9-rc7. A zero-length biovec request issued by the block subsystem could cause the kernel to enter an infinite loop, causing a denial of service. This flaw allows a local attacker with basic privileges to issue requests to a block device, resulting in a denial of service. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25641",
@@ -56155,8 +56165,8 @@
         }
     },
     "CVE-2020-25643": {
-        "affected_versions": "unk to v5.9-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.29-rc1 to v5.9-rc7",
+        "breaks": "e022c2f07ae52bfbd92faa273db0db2f34eb28e8",
         "cmt_msg": "hdlc_ppp: add range checks in ppp_cp_parse_cr()",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -56183,7 +56193,7 @@
         "cwe": "Improper Input Validation",
         "fixes": "66d42ed8b25b64eb63111a2b8582c5afc8bf1105",
         "last_affected_version": "5.8.11",
-        "last_modified": "2020-10-20",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw was found in the HDLC_PPP module of the Linux kernel in versions before 5.9-rc7. Memory corruption and a read overflow is caused by improper input validation in the ppp_cp_parse_cr function which can cause the system to crash or cause a denial of service. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25643",
@@ -56195,8 +56205,8 @@
         }
     },
     "CVE-2020-25645": {
-        "affected_versions": "unk to v5.9-rc7",
-        "breaks": "",
+        "affected_versions": "v4.2-rc1 to v5.9-rc7",
+        "breaks": "2d07dc79fe04a43d82a346ced6bbf07bdb523f1b",
         "cmt_msg": "geneve: add transport ports in route lookup for geneve",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56223,7 +56233,7 @@
         "cwe": "Cleartext Transmission of Sensitive Information",
         "fixes": "34beb21594519ce64a55a498c2fe7d567bc1ca20",
         "last_affected_version": "5.8.11",
-        "last_modified": "2020-11-19",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw was found in the Linux kernel in versions before 5.9-rc7. Traffic between two Geneve endpoints may be unencrypted when IPsec is configured to encrypt traffic for the specific UDP port used by the GENEVE tunnel allowing anyone between the two endpoints to read the traffic unencrypted. The main threat from this vulnerability is to data confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25645",
@@ -56235,8 +56245,8 @@
         }
     },
     "CVE-2020-25656": {
-        "affected_versions": "unk to v5.10-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.10-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "vt: keyboard, extend func_buf_lock to readers",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -56263,7 +56273,7 @@
         "cwe": "Use After Free",
         "fixes": "82e61c3909db51d91b9d3e2071557b6435018b80",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-12-10",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw was found in the Linux kernel. A use-after-free was found in the way the console subsystem was using ioctls KDGKBSENT and KDSKBSENT. A local user could use this flaw to get read memory access out of bounds. The highest threat from this vulnerability is to data confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25656",
@@ -56351,12 +56361,12 @@
         }
     },
     "CVE-2020-25668": {
-        "affected_versions": "unk to v5.10-rc3",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.10-rc3",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "tty: make FONTX ioctl use the tty pointer they were actually passed",
         "fixes": "90bfdeef83f1d6c696039b6a917190dcbbad3220",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-11-12",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25668",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25668",
@@ -56367,12 +56377,12 @@
         }
     },
     "CVE-2020-25669": {
-        "affected_versions": "unk to v5.10-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.10-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Input: sunkbd - avoid use-after-free in teardown paths",
         "fixes": "77e70d351db7de07a46ac49b87a6c3c7a60fca7e",
         "last_affected_version": "5.9.9",
-        "last_modified": "2020-11-25",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25669",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25669",
@@ -56439,8 +56449,8 @@
         }
     },
     "CVE-2020-25704": {
-        "affected_versions": "unk to v5.10-rc3",
-        "breaks": "",
+        "affected_versions": "v4.7-rc1 to v5.10-rc3",
+        "breaks": "375637bc524952f1122ea22caf5a8f1fecad8228",
         "cmt_msg": "perf/core: Fix a memory leak in perf_event_parse_addr_filter()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56467,7 +56477,7 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "7bdb157cdebbf95a1cd94ed2e01b338714075d00",
         "last_affected_version": "5.9.6",
-        "last_modified": "2020-12-10",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw memory leak in the Linux kernel performance monitoring subsystem was found in the way if using PERF_EVENT_IOC_SET_FILTER. A local user could use this flaw to starve the resources causing denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25704",
@@ -56479,8 +56489,8 @@
         }
     },
     "CVE-2020-25705": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v3.18-rc1 to v5.10-rc1",
+        "breaks": "4cdf507d54525842dfd9f6313fdafba039084046",
         "cmt_msg": "icmp: randomize the global rate limiter",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56507,7 +56517,7 @@
         "cwe": "Use of Insufficiently Random Values",
         "fixes": "b38e7819cae946e2edf869e604af1e65a5d241c5",
         "last_affected_version": "5.9.1",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw in the way reply ICMP packets are limited in the Linux kernel functionality was found that allows to quickly scan open UDP ports. This flaw allows an off-path remote user to effectively bypassing source port UDP randomization. The highest threat from this vulnerability is to confidentiality and possibly integrity, because software that relies on UDP source port randomization are indirectly affected as well. Kernel versions before 5.10 may be vulnerable to this issue.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25705",
@@ -56519,8 +56529,8 @@
         }
     },
     "CVE-2020-26088": {
-        "affected_versions": "unk to v5.9-rc1",
-        "breaks": "",
+        "affected_versions": "v3.16-rc1 to v5.9-rc1",
+        "breaks": "57be1f3f3ec1ccab6432615ca161c4c9ece2a2aa",
         "cmt_msg": "net/nfc/rawsock.c: add CAP_NET_RAW check.",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56547,7 +56557,7 @@
         "cwe": "Incorrect Default Permissions",
         "fixes": "26896f01467a28651f7a536143fe5ac8449d4041",
         "last_affected_version": "5.8.1",
-        "last_modified": "2020-10-13",
+        "last_modified": "2021-03-17",
         "nvd_text": "A missing CAP_NET_RAW check in NFC socket creation in net/nfc/rawsock.c in the Linux kernel before 5.8.2 could be used by local attackers to create raw sockets, bypassing security mechanisms, aka CID-26896f01467a.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26088",
@@ -56597,8 +56607,8 @@
         }
     },
     "CVE-2020-27066": {
-        "affected_versions": "unk to v5.6",
-        "breaks": "",
+        "affected_versions": "v2.6.35-rc1 to v5.6",
+        "breaks": "ea2dea9dacc256fe927857feb423872051642ae7",
         "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56625,7 +56635,7 @@
         "cwe": "Use After Free",
         "fixes": "4c59406ed00379c8663f8663d82b2537467ce9d7",
         "last_affected_version": "5.5",
-        "last_modified": "2021-03-11",
+        "last_modified": "2021-03-17",
         "nvd_text": "In xfrm6_tunnel_free_spi of net/ipv6/xfrm6_tunnel.c, there is a possible use after free due to improper locking. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-168043318",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27066",
@@ -56637,8 +56647,8 @@
         }
     },
     "CVE-2020-27067": {
-        "affected_versions": "unk to v4.14-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.35-rc1 to v4.14-rc4",
+        "breaks": "d9e31d17ceba5f0736f5a34bbc236239cd42b420",
         "cmt_msg": "l2tp: fix l2tp_eth module loading",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -56665,7 +56675,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "9f775ead5e570e7e19015b9e4e2f3dd6e71a5935",
         "last_affected_version": "4.13.5",
-        "last_modified": "2020-12-21",
+        "last_modified": "2021-03-17",
         "nvd_text": "In the l2tp subsystem, there is a possible use after free due to a race condition. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-152409173",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27067",
@@ -56677,8 +56687,8 @@
         }
     },
     "CVE-2020-27068": {
-        "affected_versions": "unk to v5.6-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.6-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "cfg80211: add missing policy for NL80211_ATTR_STATUS_CODE",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56705,7 +56715,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "ea75080110a4c1fa011b0a73cb8f42227143ee3e",
         "last_affected_version": "5.5.7",
-        "last_modified": "2020-12-21",
+        "last_modified": "2021-03-17",
         "nvd_text": "In the nl80211_policy policy of nl80211.c, there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with System execution privileges needed. User interaction is not required for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-119770583",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27068",
@@ -56717,8 +56727,8 @@
         }
     },
     "CVE-2020-27152": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v5.6-rc1 to v5.10-rc1",
+        "breaks": "f458d039db7e8518041db4169d657407e3217008",
         "cmt_msg": "KVM: ioapic: break infinite recursion on lazy EOI",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56745,7 +56755,7 @@
         "cwe": "Loop with Unreachable Exit Condition ('Infinite Loop')",
         "fixes": "77377064c3a94911339f13ce113b3abf265e06da",
         "last_affected_version": "5.9.1",
-        "last_modified": "2020-11-19",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in ioapic_lazy_update_eoi in arch/x86/kvm/ioapic.c in the Linux kernel before 5.9.2. It has an infinite loop related to improper interaction between a resampler and edge triggering, aka CID-77377064c3a9.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27152",
@@ -56757,8 +56767,8 @@
         }
     },
     "CVE-2020-27194": {
-        "affected_versions": "unk to v5.9",
-        "breaks": "",
+        "affected_versions": "v5.7-rc1 to v5.9",
+        "breaks": "3f50f132d8400e129fc9eb68b5020167ef80a244",
         "cmt_msg": "bpf: Fix scalar32_min_max_or bounds tracking",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56785,7 +56795,7 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "5b9fbeb75b6a98955f628e205ac26689bcb1383e",
         "last_affected_version": "5.8",
-        "last_modified": "2020-11-03",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.8.15. scalar32_min_max_or in kernel/bpf/verifier.c mishandles bounds tracking during use of 64-bit values, aka CID-5b9fbeb75b6a.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27194",
@@ -56837,8 +56847,8 @@
         }
     },
     "CVE-2020-27673": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.10-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/events: add a proper barrier to 2-level uevent unmasking",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56865,7 +56875,7 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "4d3fe31bd993ef504350989786858aefdb877daa",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-11-19",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.9.1, as used with Xen through 4.14.x. Guest OS users can cause a denial of service (host OS hang) via a high rate of events to dom0, aka CID-e99502f76271.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27673",
@@ -56877,8 +56887,8 @@
         }
     },
     "CVE-2020-27675": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.10-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/events: avoid removing an event channel while handling it",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -56905,7 +56915,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "073d0552ead5bfc7a3a9c01de590e924f11b5dd2",
         "last_affected_version": "5.9.4",
-        "last_modified": "2020-11-19",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.9.1, as used with Xen through 4.14.x. drivers/xen/events/events_base.c allows event-channel removal during the event-handling loop (a race condition). This can cause a use-after-free or NULL pointer dereference, as demonstrated by a dom0 crash via events for an in-reconfiguration paravirtualized device, aka CID-073d0552ead5.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27675",
@@ -56917,8 +56927,8 @@
         }
     },
     "CVE-2020-27777": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.10-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56945,7 +56955,7 @@
         "cwe": "Missing Authorization",
         "fixes": "bd59380c5ba4147dcbaad3e582b55ccfd120b764",
         "last_affected_version": "5.9.4",
-        "last_modified": "2021-01-05",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw was found in the way RTAS handled memory accesses in userspace to kernel communication. On a locked down (usually due to Secure Boot) guest system running on top of PowerVM or KVM hypervisors (pseries platform) a root like local user could use this flaw to further increase their privileges to that of a running kernel.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27777",
@@ -56957,8 +56967,8 @@
         }
     },
     "CVE-2020-27786": {
-        "affected_versions": "unk to v5.7-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.7-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ALSA: rawmidi: Fix racy buffer resize under concurrent accesses",
         "cvss2": {
             "Access Complexity": "Low",
@@ -56985,7 +56995,7 @@
         "cwe": "Use After Free",
         "fixes": "c1f6e3c818dd734c30f6a7eeebf232ba2cf3181d",
         "last_affected_version": "5.6.13",
-        "last_modified": "2020-12-21",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw was found in the Linux kernels implementation of MIDI, where an attacker with a local account and the permissions to issue an ioctl commands to midi devices, could trigger a use-after-free. A write to this specific memory while freed and before use could cause the flow of execution to change and possibly allow for memory corruption or privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27786",
@@ -56997,12 +57007,12 @@
         }
     },
     "CVE-2020-27815": {
-        "affected_versions": "unk to v5.11-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.11-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "jfs: Fix array index bounds check in dbAdjTree",
         "fixes": "c61b3e4839007668360ed8b87d7da96d2e59fc6c",
         "last_affected_version": "5.10.3",
-        "last_modified": "2021-01-22",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27815",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27815",
@@ -57027,8 +57037,8 @@
         }
     },
     "CVE-2020-27825": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v5.9-rc1 to v5.10-rc1",
+        "breaks": "b23d7a5f4a07af02343cdd28fe1f7488bac3afda",
         "cmt_msg": "tracing: Fix race in trace_open and buffer resize call",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -57055,7 +57065,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "bbeb97464eefc65f506084fd9f18f21653e01137",
         "last_affected_version": "5.9.4",
-        "last_modified": "2021-02-01",
+        "last_modified": "2021-03-17",
         "nvd_text": "A use-after-free flaw was found in kernel/trace/ring_buffer.c in Linux kernel (before 5.10-rc1). There was a race problem in trace_open and resize of cpu buffer running parallely on different cpus, may cause a denial of service problem (DOS). This flaw could even allow a local attacker with special user privilege to a kernel information leak threat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27825",
@@ -57067,12 +57077,12 @@
         }
     },
     "CVE-2020-27830": {
-        "affected_versions": "unk to v5.10-rc7",
-        "breaks": "",
+        "affected_versions": "v4.13-rc1 to v5.10-rc7",
+        "breaks": "6b9ad1c742bf227b1005a41d8baa315b747e3e8d",
         "cmt_msg": "speakup: Reject setting the speakup line discipline outside of speakup",
         "fixes": "f0992098cadb4c9c6a00703b66cafe604e178fea",
         "last_affected_version": "5.9.13",
-        "last_modified": "2020-12-14",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27830",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27830",
@@ -57083,8 +57093,8 @@
         }
     },
     "CVE-2020-27835": {
-        "affected_versions": "unk to v5.10-rc6",
-        "breaks": "",
+        "affected_versions": "v4.8-rc4 to v5.10-rc6",
+        "breaks": "e0cf75deab8155334c8228eb7f097b15127d0a49",
         "cmt_msg": "IB/hfi1: Ensure correct mm is used at all times",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57111,7 +57121,7 @@
         "cwe": "Use After Free",
         "fixes": "3d2a9d642512c21a12d19b9250e7a835dcb41a79",
         "last_affected_version": "5.9.11",
-        "last_modified": "2021-01-22",
+        "last_modified": "2021-03-17",
         "nvd_text": "A use after free in the Linux kernel infiniband hfi1 driver in versions prior to 5.10-rc6 was found in the way user calls Ioctl after open dev file and fork. A local user could use this flaw to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27835",
@@ -57123,8 +57133,8 @@
         }
     },
     "CVE-2020-28374": {
-        "affected_versions": "unk to v5.11-rc4",
-        "breaks": "",
+        "affected_versions": "v3.12-rc1 to v5.11-rc4",
+        "breaks": "cbf031f425fd0b30ff10ba83b612753189a6bbbf",
         "cmt_msg": "scsi: target: Fix XCOPY NAA identifier lookup",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57151,7 +57161,7 @@
         "cwe": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
         "fixes": "2896c93811e39d63a4d9b63ccf12a8fbc226e5e4",
         "last_affected_version": "5.10.6",
-        "last_modified": "2021-01-26",
+        "last_modified": "2021-03-17",
         "nvd_text": "In drivers/target/target_core_xcopy.c in the Linux kernel before 5.10.7, insufficient identifier checking in the LIO SCSI target code can be used by remote attackers to read or write files via directory traversal in an XCOPY request, aka CID-2896c93811e3. For example, an attack can occur over a network if the attacker has access to one iSCSI LUN. The attacker gains control over file access because I/O operations are proxied via an attacker-selected backstore.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28374",
@@ -57163,12 +57173,12 @@
         }
     },
     "CVE-2020-28588": {
-        "affected_versions": "unk to v5.10-rc7",
-        "breaks": "",
+        "affected_versions": "v5.1-rc4 to v5.10-rc7",
+        "breaks": "631b7abacd02b88f4b0795c08b54ad4fc3e7c7c0",
         "cmt_msg": "lib/syscall: fix syscall registers retrieval on 32-bit platforms",
         "fixes": "4f134b89a24b965991e7c345b9a4591821f7c2a6",
         "last_affected_version": "5.9.13",
-        "last_modified": "2020-12-14",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28588",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-28588",
@@ -57179,8 +57189,8 @@
         }
     },
     "CVE-2020-28915": {
-        "affected_versions": "unk to v5.9",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.9",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "fbcon: Fix global-out-of-bounds read in fbcon_get_font()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57207,7 +57217,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "5af08640795b2b9a940c9266c0260455377ae262",
         "last_affected_version": "5.8",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "A buffer over-read (at the framebuffer layer) in the fbcon code in the Linux kernel before 5.8.15 could be used by local attackers to read kernel memory, aka CID-6735b4632def.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28915",
@@ -57219,8 +57229,8 @@
         }
     },
     "CVE-2020-28941": {
-        "affected_versions": "unk to v5.10-rc5",
-        "breaks": "",
+        "affected_versions": "v4.13-rc1 to v5.10-rc5",
+        "breaks": "6b9ad1c742bf227b1005a41d8baa315b747e3e8d",
         "cmt_msg": "speakup: Do not let the line discipline be used several times",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57247,7 +57257,7 @@
         "cwe": "Release of Invalid Pointer or Reference",
         "fixes": "d4122754442799187d5d537a9c039a49a67e57f1",
         "last_affected_version": "5.9.10",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in drivers/accessibility/speakup/spk_ttyio.c in the Linux kernel through 5.9.9. Local attackers on systems with the speakup driver could cause a local denial of service attack, aka CID-d41227544427. This occurs because of an invalid free when the line discipline is used more than once.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28941",
@@ -57259,8 +57269,8 @@
         }
     },
     "CVE-2020-28974": {
-        "affected_versions": "unk to v5.10-rc3",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.10-rc3",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "vt: Disable KD_FONT_OP_COPY",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57287,7 +57297,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "3c4e0dff2095c579b142d5a0693257f1c58b4804",
         "last_affected_version": "5.9.6",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "A slab-out-of-bounds read in fbcon in the Linux kernel before 5.9.7 could be used by local attackers to read privileged information or potentially crash the kernel, aka CID-3c4e0dff2095. This occurs because KD_FONT_OP_COPY in drivers/tty/vt/vt.c can be used for manipulations such as font height.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28974",
@@ -57299,8 +57309,8 @@
         }
     },
     "CVE-2020-29368": {
-        "affected_versions": "unk to v5.8-rc1",
-        "breaks": "",
+        "affected_versions": "v4.6 to v5.8-rc1",
+        "breaks": "6d0a07edd17cfc12fdc1f36de8072fa17cc3666f",
         "cmt_msg": "mm: thp: make the THP mapcount atomic against __split_huge_pmd_locked()",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -57327,7 +57337,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "c444eb564fb16645c172d550359cb3d75fe8a040",
         "last_affected_version": "5.7.4",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in __split_huge_pmd in mm/huge_memory.c in the Linux kernel before 5.7.5. The copy-on-write implementation can grant unintended write access because of a race condition in a THP mapcount check, aka CID-c444eb564fb1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29368",
@@ -57339,8 +57349,8 @@
         }
     },
     "CVE-2020-29369": {
-        "affected_versions": "unk to v5.8-rc7",
-        "breaks": "",
+        "affected_versions": "v4.20-rc1 to v5.8-rc7",
+        "breaks": "dd2283f2605e3b3e9c61bcae844b34f2afa4813f",
         "cmt_msg": "mm/mmap.c: close race between munmap() and expand_upwards()/downwards()",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -57367,7 +57377,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "246c320a8cfe0b11d81a4af38fa9985ef0cc9a4c",
         "last_affected_version": "5.7.10",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in mm/mmap.c in the Linux kernel before 5.7.11. There is a race condition between certain expand functions (expand_downwards and expand_upwards) and page-table free operations from an munmap call, aka CID-246c320a8cfe.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29369",
@@ -57379,8 +57389,8 @@
         }
     },
     "CVE-2020-29370": {
-        "affected_versions": "unk to v5.6-rc7",
-        "breaks": "",
+        "affected_versions": "v4.3-rc1 to v5.6-rc7",
+        "breaks": "ebe909e0fdb34b980c5cf636c495e4f0bb0dfda8",
         "cmt_msg": "mm: slub: add missing TID bump in kmem_cache_alloc_bulk()",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -57407,7 +57417,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "fd4d9c7d0c71866ec0c2825189ebd2ce35bd95b8",
         "last_affected_version": "5.5.10",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in kmem_cache_alloc_bulk in mm/slub.c in the Linux kernel before 5.5.11. The slowpath lacks the required TID increment, aka CID-fd4d9c7d0c71.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29370",
@@ -57419,8 +57429,8 @@
         }
     },
     "CVE-2020-29371": {
-        "affected_versions": "unk to v5.9-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.30-rc1 to v5.9-rc2",
+        "breaks": "da4458bda237aa0cb1688f6c359477f203788f6a",
         "cmt_msg": "romfs: fix uninitialized memory leak in romfs_dev_read()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57447,7 +57457,7 @@
         "cwe": "Use of Uninitialized Resource",
         "fixes": "bcf85fcedfdd17911982a3e3564fcfec7b01eebd",
         "last_affected_version": "5.8.3",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in romfs_dev_read in fs/romfs/storage.c in the Linux kernel before 5.8.4. Uninitialized memory leaks to userspace, aka CID-bcf85fcedfdd.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29371",
@@ -57459,8 +57469,8 @@
         }
     },
     "CVE-2020-29372": {
-        "affected_versions": "unk to v5.7-rc3",
-        "breaks": "",
+        "affected_versions": "v5.6-rc1 to v5.7-rc3",
+        "breaks": "c1ca757bd6f4632c510714631ddcc2d13030fe1e",
         "cmt_msg": "mm: check that mm is still valid in madvise()",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -57487,7 +57497,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "bc0c4d1e176eeb614dc8734fc3ace34292771f11",
         "last_affected_version": "5.6.7",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in do_madvise in mm/madvise.c in the Linux kernel before 5.6.8. There is a race condition between coredump operations and the IORING_OP_MADVISE implementation, aka CID-bc0c4d1e176e.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29372",
@@ -57499,8 +57509,8 @@
         }
     },
     "CVE-2020-29373": {
-        "affected_versions": "unk to v5.6-rc2",
-        "breaks": "",
+        "affected_versions": "v5.1-rc1 to v5.6-rc2",
+        "breaks": "2b188cc1bb857a9d4701ae59aa7768b5124e262e",
         "cmt_msg": "io_uring: grab ->fs as part of async preparation",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57526,7 +57536,7 @@
         },
         "cwe": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
         "fixes": "ff002b30181d30cdfbca316dadd099c3ca0d739c",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in fs/io_uring.c in the Linux kernel before 5.6. It unsafely handles the root directory during path lookups, and thus a process inside a mount namespace can escape to unintended filesystem locations, aka CID-ff002b30181d.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29373",
@@ -57538,8 +57548,8 @@
         }
     },
     "CVE-2020-29374": {
-        "affected_versions": "unk to v5.8-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.8-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "gup: document and work around \"COW can break either way\" issue",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -57566,7 +57576,7 @@
         "cwe": "Incorrect Authorization",
         "fixes": "17839856fd588f4ab6b789f482ed3ffd7c403e1f",
         "last_affected_version": "5.7.2",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.7.3, related to mm/gup.c and mm/huge_memory.c. The get_user_pages (aka gup) implementation, when used for a copy-on-write page, does not properly consider the semantics of read operations and therefore can grant unintended write access, aka CID-17839856fd58.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29374",
@@ -57578,8 +57588,8 @@
         }
     },
     "CVE-2020-29534": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v5.1-rc1 to v5.10-rc1",
+        "breaks": "2b188cc1bb857a9d4701ae59aa7768b5124e262e",
         "cmt_msg": "io_uring: don't rely on weak ->files references",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57606,7 +57616,7 @@
         "cwe": "Unspecified",
         "fixes": "0f2122045b946241a9e549c2a76cea54fa58a7ff",
         "last_affected_version": "5.9.2",
-        "last_modified": "2020-12-10",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.9.3. io_uring takes a non-refcounted reference to the files_struct of the process that submitted a request, causing execve() to incorrectly optimize unshare_fd(), aka CID-0f2122045b94.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29534",
@@ -57618,8 +57628,8 @@
         }
     },
     "CVE-2020-29568": {
-        "affected_versions": "unk to v5.11-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.11-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/xenbus: Allow watches discard events before queueing",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57646,7 +57656,7 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "fed1755b118147721f2c87b37b9d66e62c39b668",
         "last_affected_version": "5.10.3",
-        "last_modified": "2021-01-22",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in Xen through 4.14.x. Some OSes (such as Linux, FreeBSD, and NetBSD) are processing watch events using a single thread. If the events are received faster than the thread is able to handle, they will get queued. As the queue is unbounded, a guest may be able to trigger an OOM in the backend. All systems with a FreeBSD, Linux, or NetBSD (any version) dom0 are vulnerable.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29568",
@@ -57658,8 +57668,8 @@
         }
     },
     "CVE-2020-29569": {
-        "affected_versions": "unk to v5.11-rc1",
-        "breaks": "",
+        "affected_versions": "v4.12-rc7 to v5.11-rc1",
+        "breaks": "a24fa22ce22ae302b3bf8f7008896d52d5d57b8d",
         "cmt_msg": "xen-blkback: set ring->xenblkd to NULL after kthread_stop()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57686,7 +57696,7 @@
         "cwe": "Unchecked Return Value",
         "fixes": "1c728719a4da6e654afb9cc047164755072ed7c9",
         "last_affected_version": "5.10.3",
-        "last_modified": "2021-02-01",
+        "last_modified": "2021-03-17",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.10.1, as used with Xen through 4.14.x. The Linux kernel PV block backend expects the kernel thread handler to reset ring->xenblkd to NULL when stopped. However, the handler may not have time to run if the frontend quickly toggles between the states connect and disconnect. As a consequence, the block backend may re-use a pointer after it was freed. A misbehaving guest can trigger a dom0 crash by continuously connecting / disconnecting a block frontend. Privilege escalation and information leaks cannot be ruled out. This only affects systems with a Linux blkback.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29569",
@@ -57698,8 +57708,8 @@
         }
     },
     "CVE-2020-29660": {
-        "affected_versions": "unk to v5.10-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.10-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "tty: Fix ->session locking",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57726,7 +57736,7 @@
         "cwe": "Improper Locking",
         "fixes": "c8bcd9c5be24fb9e6132e97da5a35e55a83e36b9",
         "last_affected_version": "5.9.13",
-        "last_modified": "2020-12-17",
+        "last_modified": "2021-03-17",
         "nvd_text": "A locking inconsistency issue was discovered in the tty subsystem of the Linux kernel through 5.9.13. drivers/tty/tty_io.c and drivers/tty/tty_jobctrl.c may allow a read-after-free attack against TIOCGSID, aka CID-c8bcd9c5be24.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29660",
@@ -57738,8 +57748,8 @@
         }
     },
     "CVE-2020-29661": {
-        "affected_versions": "unk to v5.10-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.26-rc1 to v5.10-rc7",
+        "breaks": "47f86834bbd4193139d61d659bebf9ab9d691e37",
         "cmt_msg": "tty: Fix ->pgrp locking in tiocspgrp()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57766,7 +57776,7 @@
         "cwe": "Improper Locking",
         "fixes": "54ffccbf053b5b6ca4f6e45094b942fab92a25fc",
         "last_affected_version": "5.9.13",
-        "last_modified": "2020-12-17",
+        "last_modified": "2021-03-17",
         "nvd_text": "A locking issue was discovered in the tty subsystem of the Linux kernel through 5.9.13. drivers/tty/tty_jobctrl.c allows a use-after-free attack against TIOCSPGRP, aka CID-54ffccbf053b.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29661",
@@ -57778,8 +57788,8 @@
         }
     },
     "CVE-2020-35499": {
-        "affected_versions": "unk to v5.11-rc1",
-        "breaks": "",
+        "affected_versions": "v5.10-rc1 to v5.11-rc1",
+        "breaks": "0fc1a726f897acfa774b17eeb62b38480d1c9ea0",
         "cmt_msg": "Bluetooth: sco: Fix crash when using BT_SNDMTU/BT_RCVMTU option",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57806,7 +57816,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "f6b8c6b5543983e9de29dc14716bfa4eb3f157c4",
         "last_affected_version": "5.10.3",
-        "last_modified": "2021-03-02",
+        "last_modified": "2021-03-17",
         "nvd_text": "A NULL pointer dereference flaw in Linux kernel versions prior to 5.11 may be seen if sco_sock_getsockopt function in net/bluetooth/sco.c do not have a sanity check for a socket connection, when using BT_SNDMTU/BT_RCVMTU for SCO sockets. This could allow a local attacker with a special user privilege to crash the system (DOS) or leak kernel internal information.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35499",
@@ -57832,12 +57842,12 @@
         }
     },
     "CVE-2020-35508": {
-        "affected_versions": "unk to v5.10-rc3",
-        "breaks": "",
+        "affected_versions": "v3.4-rc1 to v5.10-rc3",
+        "breaks": "5f8aadd8b9966d71a77bba52b9d499cc2f38269f",
         "cmt_msg": "fork: fix copy_process(CLONE_PARENT) race with the exiting ->real_parent",
         "fixes": "b4e00444cab4c3f3fec876dc0cccc8cbb0d1a948",
         "last_affected_version": "5.9.6",
-        "last_modified": "2021-02-08",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35508",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-35508",
@@ -57848,8 +57858,8 @@
         }
     },
     "CVE-2020-35513": {
-        "affected_versions": "unk to v4.17-rc1",
-        "breaks": "",
+        "affected_versions": "v4.10-rc1 to v4.17-rc1",
+        "breaks": "47057abde515155a4fee53038e7772d6b387e0aa",
         "cmt_msg": "nfsd: fix incorrect umasks",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57876,7 +57886,7 @@
         "cwe": "Privilege Dropping / Lowering Errors",
         "fixes": "880a3a5325489a143269a8e172e7563ebf9897bc",
         "last_affected_version": "4.16.2",
-        "last_modified": "2021-02-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "A flaw incorrect umask during file or directory modification in the Linux kernel NFS (network file system) functionality was found in the way user create and delete object using NFSv4.2 or newer if both simultaneously accessing the NFS by the other process that is not using new NFSv4.2. A user with access to the NFS could use this flaw to starve the resources causing denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35513",
@@ -57888,8 +57898,8 @@
         }
     },
     "CVE-2020-36158": {
-        "affected_versions": "unk to v5.11-rc1",
-        "breaks": "",
+        "affected_versions": "v3.0-rc1 to v5.11-rc1",
+        "breaks": "5e6e3a92b9a4c9416b17f468fa5c7fa2233b8b4e",
         "cmt_msg": "mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start",
         "cvss2": {
             "Access Complexity": "Low",
@@ -57916,7 +57926,7 @@
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "5c455c5ab332773464d02ba17015acdca198f03d",
         "last_affected_version": "5.10.5",
-        "last_modified": "2021-01-22",
+        "last_modified": "2021-03-17",
         "nvd_text": "mwifiex_cmd_802_11_ad_hoc_start in drivers/net/wireless/marvell/mwifiex/join.c in the Linux kernel through 5.10.4 might allow remote attackers to execute arbitrary code via a long SSID value, aka CID-5c455c5ab332.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36158",
@@ -57928,8 +57938,8 @@
         }
     },
     "CVE-2020-4788": {
-        "affected_versions": "unk to v5.10-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.10-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "selftests/powerpc: rfi_flush: disable entry flush if present",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -57956,7 +57966,7 @@
         "cwe": "Unspecified",
         "fixes": "fcb48454c23c5679d1a2e252f127642e91b05cbe",
         "last_affected_version": "5.9.9",
-        "last_modified": "2020-12-08",
+        "last_modified": "2021-03-17",
         "nvd_text": "IBM Power9 (AIX 7.1, 7.2, and VIOS 3.1) processors could allow a local user to obtain sensitive information from the data in the L1 cache under extenuating circumstances. IBM X-Force ID: 189296.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-4788",
@@ -58167,8 +58177,8 @@
         }
     },
     "CVE-2020-8694": {
-        "affected_versions": "unk to v5.10-rc4",
-        "breaks": "",
+        "affected_versions": "v3.13-rc1 to v5.10-rc4",
+        "breaks": "2d281d8196e38dd3a4ee9af26621ddde8329f269",
         "cmt_msg": "powercap: restrict energy meter to root access",
         "cvss2": {
             "Access Complexity": "Low",
@@ -58195,7 +58205,7 @@
         "cwe": "Unspecified",
         "fixes": "949dd0104c496fa7c14991a23c03c62e44637e71",
         "last_affected_version": "5.9.7",
-        "last_modified": "2020-11-25",
+        "last_modified": "2021-03-17",
         "nvd_text": "Insufficient access control in the Linux kernel driver for some Intel(R) Processors may allow an authenticated user to potentially enable information disclosure via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-8694",
@@ -58446,12 +58456,12 @@
         }
     },
     "CVE-2021-0342": {
-        "affected_versions": "unk to v5.8-rc1",
-        "breaks": "",
+        "affected_versions": "v4.15-rc1 to v5.8-rc1",
+        "breaks": "90e33d45940793def6f773b2d528e9f3c84ffdc7",
         "cmt_msg": "tun: correct header offsets in napi frags mode",
         "fixes": "96aa1b22bd6bb9fccf62f6261f390ed6f3e7967f",
         "last_affected_version": "5.7.2",
-        "last_modified": "2021-01-12",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0342",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0342",
@@ -58476,12 +58486,12 @@
         }
     },
     "CVE-2021-0447": {
-        "affected_versions": "unk to v4.15-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.15-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "l2tp: protect sock pointer of struct pppol2tp_session with RCU",
         "fixes": "ee40fb2e1eb5bc0ddd3f2f83c6e39a454ef5a741",
         "last_affected_version": "4.14.181",
-        "last_modified": "2021-03-02",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0447",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0447",
@@ -58492,12 +58502,12 @@
         }
     },
     "CVE-2021-0448": {
-        "affected_versions": "unk to v5.9-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.16-rc1 to v5.9-rc7",
+        "breaks": "c1d10adb4a521de5760112853f42aaeefcec96eb",
         "cmt_msg": "netfilter: ctnetlink: add a range check for l3/l4 protonum",
         "fixes": "1cc5ef91d2ff94d2bf2de3b3585423e8a1051cb6",
         "last_affected_version": "5.8.12",
-        "last_modified": "2021-03-02",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0448",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0448",
@@ -58508,11 +58518,11 @@
         }
     },
     "CVE-2021-20177": {
-        "affected_versions": "unk to v5.5-rc1",
-        "breaks": "",
+        "affected_versions": "v4.19-rc1 to v5.5-rc1",
+        "breaks": "17266ee939849cb095ed7dd9edbec4162172226b",
         "cmt_msg": "netfilter: add and use nf_hook_slow_list()",
         "fixes": "ca58fbe06c54795f00db79e447f94c2028d30124",
-        "last_modified": "2021-01-12",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20177",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20177",
@@ -58523,12 +58533,12 @@
         }
     },
     "CVE-2021-20194": {
-        "affected_versions": "unk to v5.11-rc7",
-        "breaks": "",
-        "cmt_msg": "bpf, cgroup: Fix optlen WARN_ON_ONCE toctou",
-        "fixes": "bb8b81e396f7afbe7c50d789e2107512274d2a35",
+        "affected_versions": "unk to v5.10-rc1",
+        "breaks": " fcb323cc53e29d9cc696d606bb42736b32dd9825",
+        "cmt_msg": "io_uring: don't rely on weak ->files references",
+        "fixes": "0f2122045b946241a9e549c2a76cea54fa58a7ff",
         "last_affected_version": "5.10.14",
-        "last_modified": "2021-02-16",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20194",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20194",
@@ -58538,12 +58548,26 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-20194"
         }
     },
-    "CVE-2021-20226": {
-        "affected_versions": "unk to v5.10-rc1",
+    "CVE-2021-20219": {
+        "affected_versions": "unk to unk",
         "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-03-17",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20219",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20219",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-20219",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20219",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-20219",
+            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-20219"
+        }
+    },
+    "CVE-2021-20226": {
+        "affected_versions": "v5.5-rc1 to v5.10-rc1",
+        "breaks": "fcb323cc53e29d9cc696d606bb42736b32dd9825",
         "cmt_msg": "io_uring: clean up ->files grabbing",
         "fixes": "233295130e53c8dfe6dbef3f52634c3f7e44cd6a",
-        "last_modified": "2021-02-08",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20226",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20226",
@@ -58554,12 +58578,12 @@
         }
     },
     "CVE-2021-20239": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": "",
+        "affected_versions": "v5.3-rc1 to v5.10-rc1",
+        "breaks": "0d01da6afc5402f60325c5da31b22f7d56689b49",
         "cmt_msg": "Merge branch 'work.set_fs' of git://git.kernel.org/pub/scm/linux/kernel/git/viro/vfs",
         "fixes": "f56e65dff6ad52395ef45738799b4fb70ff43376",
         "last_affected_version": "None",
-        "last_modified": "2021-02-16",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20239",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20239",
@@ -58570,11 +58594,12 @@
         }
     },
     "CVE-2021-20261": {
-        "affected_versions": "unk to v4.5-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.5-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "floppy: fix lock_fdc() signal handling",
         "fixes": "a0c80efe5956ccce9fe7ae5c78542578c07bc20a",
-        "last_modified": "2021-03-11",
+        "last_affected_version": "4.4.261",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20261",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20261",
@@ -58585,12 +58610,12 @@
         }
     },
     "CVE-2021-20265": {
-        "affected_versions": "unk to v4.5-rc3",
-        "breaks": "",
+        "affected_versions": "v2.6.38 to v4.5-rc3",
+        "breaks": "b3ca9b02b00704053a38bfe4c31dbbb9c13595d0",
         "cmt_msg": "af_unix: fix struct pid memory leak",
         "fixes": "fa0dc04df259ba2df3ce1920e9690c7842f8fa4b",
         "last_affected_version": "4.4.3",
-        "last_modified": "2021-03-07",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20265",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20265",
@@ -58601,12 +58626,12 @@
         }
     },
     "CVE-2021-20268": {
-        "affected_versions": "unk to v5.11-rc5",
-        "breaks": "",
+        "affected_versions": "v5.7-rc1 to v5.11-rc5",
+        "breaks": "3f50f132d8400e129fc9eb68b5020167ef80a244",
         "cmt_msg": "bpf: Fix signed_{sub,add32}_overflows type handling",
         "fixes": "bc895e8b2a64e502fbba72748d59618272052a8b",
         "last_affected_version": "5.10.9",
-        "last_modified": "2021-03-07",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20268",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20268",
@@ -58617,12 +58642,12 @@
         }
     },
     "CVE-2021-26708": {
-        "affected_versions": "unk to v5.11-rc7",
-        "breaks": "",
+        "affected_versions": "v5.5-rc1 to v5.11-rc7",
+        "breaks": "c0cfa2d8a788fcf45df5bf4070ab2474c88d543a",
         "cmt_msg": "vsock: fix the race conditions in multi-transport support",
         "fixes": "c518adafa39f37858697ac9309c6cf1805581446",
         "last_affected_version": "5.10.12",
-        "last_modified": "2021-02-08",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26708",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26708",
@@ -58633,12 +58658,12 @@
         }
     },
     "CVE-2021-26930": {
-        "affected_versions": "unk to v5.12-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen-blkback: fix error handling in xen_blkbk_map()",
         "fixes": "871997bc9e423f05c7da7c9178e62dde5df2a7f8",
         "last_affected_version": "5.11.0",
-        "last_modified": "2021-03-02",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26930",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26930",
@@ -58649,12 +58674,12 @@
         }
     },
     "CVE-2021-26931": {
-        "affected_versions": "unk to v5.12-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()",
         "fixes": "5a264285ed1cd32e26d9de4f3c8c6855e467fd63",
         "last_affected_version": "5.11.0",
-        "last_modified": "2021-03-02",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26931",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26931",
@@ -58695,12 +58720,12 @@
         }
     },
     "CVE-2021-27363": {
-        "affected_versions": "unk to v5.12-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "scsi: iscsi: Restrict sessions and handles to admin capabilities",
         "fixes": "688e8128b7a92df982709a4137ea4588d16f24aa",
         "last_affected_version": "5.11.3",
-        "last_modified": "2021-03-07",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-27363",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-27363",
@@ -58711,12 +58736,12 @@
         }
     },
     "CVE-2021-27364": {
-        "affected_versions": "unk to v5.12-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "scsi: iscsi: Restrict sessions and handles to admin capabilities",
         "fixes": "688e8128b7a92df982709a4137ea4588d16f24aa",
         "last_affected_version": "5.11.3",
-        "last_modified": "2021-03-07",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-27364",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-27364",
@@ -58727,12 +58752,12 @@
         }
     },
     "CVE-2021-27365": {
-        "affected_versions": "unk to v5.12-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "scsi: iscsi: Ensure sysfs attributes are limited to PAGE_SIZE",
         "fixes": "ec98ea7070e94cc25a422ec97d1421e28d97b7ee",
         "last_affected_version": "5.11.3",
-        "last_modified": "2021-03-07",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-27365",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-27365",
@@ -58743,12 +58768,12 @@
         }
     },
     "CVE-2021-28038": {
-        "affected_versions": "unk to v5.12-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Xen/gnttab: handle p2m update errors on a per-slot basis",
         "fixes": "8310b77b48c5558c140e7a57a702e7819e62f04e",
         "last_affected_version": "5.11.3",
-        "last_modified": "2021-03-07",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28038",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28038",
@@ -58759,12 +58784,12 @@
         }
     },
     "CVE-2021-28039": {
-        "affected_versions": "unk to v5.12-rc2",
-        "breaks": "",
+        "affected_versions": "v5.9-rc4 to v5.12-rc2",
+        "breaks": "9e2369c06c8a181478039258a4598c1ddd2cadfa",
         "cmt_msg": "xen: fix p2m size in dom0 for disabled memory hotplug case",
         "fixes": "882213990d32fd224340a4533f6318dd152be4b2",
         "last_affected_version": "5.11.3",
-        "last_modified": "2021-03-07",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28039",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28039",
@@ -58775,11 +58800,12 @@
         }
     },
     "CVE-2021-28375": {
-        "affected_versions": "unk to v5.12-rc3",
-        "breaks": "",
+        "affected_versions": "v5.1-rc1 to v5.12-rc3",
+        "breaks": "c68cfb718c8f97b7f7a50ed66be5feb42d0c8988",
         "cmt_msg": "misc: fastrpc: restrict user apps from sending kernel RPC messages",
         "fixes": "20c40794eb85ea29852d7bc37c55713802a543d6",
-        "last_modified": "2021-03-15",
+        "last_affected_version": "5.11.6",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28375",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28375",
@@ -58790,12 +58816,12 @@
         }
     },
     "CVE-2021-3178": {
-        "affected_versions": "unk to v5.11-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.11-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "nfsd4: readdirplus shouldn't return parent of export",
         "fixes": "51b2ee7d006a736a9126e8111d1f24e4fd0afaa6",
         "last_affected_version": "5.10.9",
-        "last_modified": "2021-01-26",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3178",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3178",
@@ -58806,12 +58832,12 @@
         }
     },
     "CVE-2021-3347": {
-        "affected_versions": "unk to v5.11-rc6",
-        "breaks": "",
+        "affected_versions": "v4.15-rc9 to v5.11-rc6",
+        "breaks": "c1e2f0eaf015fb7076d51a339011f2383e6dd389",
         "cmt_msg": "futex: Ensure the correct return value from futex_lock_pi()",
         "fixes": "12bb3f7f1b03d5913b3f9d4236a488aa7774dfe9",
         "last_affected_version": "5.10.11",
-        "last_modified": "2021-03-07",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3347",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3347",
@@ -58822,12 +58848,12 @@
         }
     },
     "CVE-2021-3348": {
-        "affected_versions": "unk to v5.11-rc6",
-        "breaks": "",
+        "affected_versions": "v4.10-rc1 to v5.11-rc6",
+        "breaks": "9561a7ade0c205bc2ee035a2ac880478dcc1a024",
         "cmt_msg": "nbd: freeze the queue while we're adding connections",
         "fixes": "b98e762e3d71e893b221f871825dc64694cfb258",
         "last_affected_version": "5.10.12",
-        "last_modified": "2021-02-05",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3348",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3348",
@@ -58838,12 +58864,12 @@
         }
     },
     "CVE-2021-3411": {
-        "affected_versions": "unk to v5.10",
-        "breaks": "",
+        "affected_versions": "v5.5-rc1 to v5.10",
+        "breaks": "7705dc8557973d8ad8f10840f61d8ec805695e9e",
         "cmt_msg": "x86/kprobes: Fix optprobe to detect INT3 padding correctly",
         "fixes": "0d07c0ec4381f630c801539c79ad8dcc627f6e4a",
         "last_affected_version": "5.9",
-        "last_modified": "2021-02-21",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3411",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3411",
@@ -58854,10 +58880,12 @@
         }
     },
     "CVE-2021-3428": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.9-rc2",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-03-15",
+        "cmt_msg": "ext4: handle error of ext4_setup_system_zone() on remount",
+        "fixes": "d176b1f62f242ab259ff665a26fbac69db1aecba",
+        "last_affected_version": "5.8.5",
+        "last_modified": "2021-03-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3428",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3428",
