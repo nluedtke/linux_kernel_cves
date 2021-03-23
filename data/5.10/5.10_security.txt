@@ -1,4 +1,7 @@
 
+CVEs fixed in 5.10:
+  CVE-2021-3411: 0d07c0ec4381f630c801539c79ad8dcc627f6e4a x86/kprobes: Fix optprobe to detect INT3 padding correctly
+
 CVEs fixed in 5.10.4:
   CVE-2020-27815: c2032bf94ba4fb15db0c277614338d377fe430d2 jfs: Fix array index bounds check in dbAdjTree
   CVE-2020-29568: b4898bdd2020bae5391b1667fc6c9e27310c59fe xen/xenbus: Allow watches discard events before queueing
@@ -12,6 +15,7 @@ CVEs fixed in 5.10.7:
   CVE-2020-28374: 6f1e88527c1869de08632efa2cc796e0131850dc scsi: target: Fix XCOPY NAA identifier lookup
 
 CVEs fixed in 5.10.10:
+  CVE-2021-20268: 5f52a8a71b62418d62c736e5aa68aaba0a8da918 bpf: Fix signed_{sub,add32}_overflows type handling
   CVE-2021-3178: fdcaa4af5e70e2d984c9620a09e9dade067f2620 nfsd4: readdirplus shouldn't return parent of export
 
 CVEs fixed in 5.10.12:
@@ -20,6 +24,28 @@ CVEs fixed in 5.10.12:
 CVEs fixed in 5.10.13:
   CVE-2021-26708: 55d900415b81680bcd5f93be51f26ebfc51ac6fb vsock: fix the race conditions in multi-transport support
   CVE-2021-3348: 41f6f4a3143506ea1499cda2f14a16a2f82118a8 nbd: freeze the queue while we're adding connections
+
+CVEs fixed in 5.10.18:
+  CVE-2021-26930: 00805af45a21729e2901a37914992786a0d32c46 xen-blkback: fix error handling in xen_blkbk_map()
+  CVE-2021-26931: 8f8ebd6b1cb5cff96a11cd336027e745d48c2cab xen-blkback: don't "handle" error by BUG()
+  CVE-2021-26932: 740f4d9d0c34ea99279acf2fc99ae33c0142265a Xen/x86: don't bail early from clear_foreign_p2m_mapping()
+
+CVEs fixed in 5.10.20:
+  CVE-2020-25639: e3fcff9f45aa82dacad26e5828598340d2742f47 drm/nouveau: bail out of nouveau_channel_new if channel init fails
+
+CVEs fixed in 5.10.21:
+  CVE-2021-27363: c71edc5d2480774ec2fec62bb84064aed6d582bd scsi: iscsi: Restrict sessions and handles to admin capabilities
+  CVE-2021-27364: c71edc5d2480774ec2fec62bb84064aed6d582bd scsi: iscsi: Restrict sessions and handles to admin capabilities
+  CVE-2021-27365: 76d92bf293c36a52ea5552919ac645ef2edee55d scsi: iscsi: Ensure sysfs attributes are limited to PAGE_SIZE
+  CVE-2021-28038: 545c837d6789afcb23da5494a22e459952fb823f Xen/gnttab: handle p2m update errors on a per-slot basis
+  CVE-2021-28039: 9c62adb6e2fda38dc6045a853a6e50b2bbc75d2a xen: fix p2m size in dom0 for disabled memory hotplug case
+
+CVEs fixed in 5.10.24:
+  CVE-2021-28375: 52feb58f9b5b078b5a39ed8ba8ab3b4546e16ff2 misc: fastrpc: restrict user apps from sending kernel RPC messages
+  CVE-2021-28660: d972a516958dee489911d9f57ee7a177834ef248 staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan()
+
+CVEs fixed in 5.10.25:
+  CVE-2021-28950: d955f13ea2120269319d6133d0dd82b66d1eeca3 fuse: fix live lock in fuse_iget()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -41,10 +67,7 @@ Outstanding CVEs:
   CVE-2018-12930: (unk)  
   CVE-2018-12931: (unk)  
   CVE-2018-17977: (unk)  
-  CVE-2019-0145: (unk)  
   CVE-2019-0146: (unk)  
-  CVE-2019-0147: (unk)  
-  CVE-2019-0148: (unk)  
   CVE-2019-0149: (unk)  
   CVE-2019-12456: (unk)  
   CVE-2019-15239: (unk) unknown 
@@ -58,15 +81,19 @@ Outstanding CVEs:
   CVE-2019-19814: (unk)  
   CVE-2019-20794: (unk)  
   CVE-2020-0347: (unk)  
-  CVE-2020-10135: (unk)  
   CVE-2020-10708: (unk)  
   CVE-2020-10774: (unk)  
   CVE-2020-11725: (unk)  
+  CVE-2020-12362: (unk)  
+  CVE-2020-12363: (unk) drm/i915/guc: Update to use firmware v49.0.1 
+  CVE-2020-12364: (unk) drm/i915/guc: Update to use firmware v49.0.1 
   CVE-2020-14304: (unk)  
   CVE-2020-15802: (unk)  
   CVE-2020-16119: (unk)  
+  CVE-2020-24502: (unk)  
+  CVE-2020-24503: (unk)  
+  CVE-2020-24504: (unk)  
   CVE-2020-25220: (unk)  
-  CVE-2020-25639: (unk)  
   CVE-2020-25661: (unk)  
   CVE-2020-25662: (unk)  
   CVE-2020-25670: (unk)  
@@ -74,5 +101,13 @@ Outstanding CVEs:
   CVE-2020-25672: (unk)  
   CVE-2020-25673: (unk)  
   CVE-2020-26541: (unk)  
-  CVE-2020-27066: (unk)  
+  CVE-2020-27170: (unk)  
+  CVE-2020-27171: (unk)  
   CVE-2020-27820: (unk)  
+  CVE-2020-35501: (unk)  
+  CVE-2021-0399: (unk)  
+  CVE-2021-20219: (unk)  
+  CVE-2021-20292: (unk)  
+  CVE-2021-26934: (unk)  
+  CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
+  CVE-2021-28952: (unk) ASoC: qcom: sdm845: Fix array out of bounds access 
