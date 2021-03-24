@@ -1,6 +1,5 @@
 
 CVEs fixed in 4.17-rc1:
-  CVE-2019-19078: 5f4761dda2ba3743ceb5eb5b5e7483172927831a ath10k: fix memory leak
   CVE-2019-19083: 9ea29a1f8b9da52d8eca8b0996f1d84eac548d3b drm/amd/display: memory leak
 
 CVEs fixed in 4.17-rc6:
@@ -296,6 +295,7 @@ Outstanding CVEs:
   CVE-2019-19074: (unk) ath9k: release allocated buffer if timed out 
   CVE-2019-19075: (unk) ieee802154: ca8210: prevent memory leak 
   CVE-2019-19077: (unk) RDMA: Fix goto target to release the allocated memory 
+  CVE-2019-19078: (unk) ath10k: fix memory leak 
   CVE-2019-19082: (unk) drm/amd/display: prevent memory leak 
   CVE-2019-19227: (unk) appletalk: Fix potential NULL pointer dereference in unregister_snap_client 
   CVE-2019-19319: (unk) ext4: protect journal inode's blocks using block_validity 
@@ -525,7 +525,7 @@ Outstanding CVEs:
   CVE-2021-0448: (unk) netfilter: ctnetlink: add a range check for l3/l4 protonum 
   CVE-2021-20194: (unk) io_uring: don't rely on weak ->files references 
   CVE-2021-20219: (unk)  
-  CVE-2021-20292: (unk)  
+  CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-26930: (unk) xen-blkback: fix error handling in xen_blkbk_map() 
   CVE-2021-26931: (unk) xen-blkback: don't "handle" error by BUG() 
   CVE-2021-26932: (unk) Xen/x86: don't bail early from clear_foreign_p2m_mapping() 
@@ -535,10 +535,12 @@ Outstanding CVEs:
   CVE-2021-27365: (unk) scsi: iscsi: Ensure sysfs attributes are limited to PAGE_SIZE 
   CVE-2021-28038: (unk) Xen/gnttab: handle p2m update errors on a per-slot basis 
   CVE-2021-28660: (unk) staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan() 
-  CVE-2021-28950: (unk) fuse: fix live lock in fuse_iget() 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
-  CVE-2021-28952: (unk) ASoC: qcom: sdm845: Fix array out of bounds access 
+  CVE-2021-28964: (unk) btrfs: fix race when cloning extent buffer during rewind of an old root 
+  CVE-2021-28971: (unk) perf/x86/intel: Fix a crash caused by zero PEBS status 
+  CVE-2021-28972: (unk) PCI: rpadlpar: Fix potential drc_name corruption in store functions 
   CVE-2021-3178: (unk) nfsd4: readdirplus shouldn't return parent of export 
   CVE-2021-3347: (unk) futex: Ensure the correct return value from futex_lock_pi() 
   CVE-2021-3348: (unk) nbd: freeze the queue while we're adding connections 
   CVE-2021-3428: (unk) ext4: handle error of ext4_setup_system_zone() on remount 
+  CVE-2021-3444: (unk) bpf: Fix truncation handling for mod32 dst reg wrt zero 

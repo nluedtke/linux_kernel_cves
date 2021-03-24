@@ -47680,7 +47680,7 @@
             "Confidentiality Impact": "None",
             "Integrity Impact": "None",
             "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
-            "score": "7.8"
+            "score": 7.8
         },
         "cvss3": {
             "Attack Complexity": "Low",
@@ -47692,12 +47692,12 @@
             "Scope": "Unchanged",
             "User Interaction": "None",
             "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "score": "7.5"
+            "score": 7.5
         },
-        "cwe": "Uncontrolled Resource Consumption",
+        "cwe": "Missing Release of Memory after Effective Lifetime",
         "fixes": "b8d17e7d93d2beb89e4f34c59996376b8b544792",
         "last_affected_version": "None",
-        "last_modified": "2020-01-28",
+        "last_modified": "2021-03-24",
         "nvd_text": "A memory leak in the ath10k_usb_hif_tx_sg() function in drivers/net/wireless/ath/ath10k/usb.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering usb_submit_urb() failures, aka CID-b8d17e7d93d2.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19078",
@@ -47705,7 +47705,7 @@
             "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-19078",
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-19078",
             "SUSE": "https://www.suse.com/security/cve/CVE-2019-19078",
-            "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-19078"
+            "Ubuntu": "https://ubuntu.com/security/CVE-2019-19078"
         }
     },
     "CVE-2019-19079": {
@@ -56770,7 +56770,8 @@
         "affected_versions": "v5.10-rc1 to unk",
         "breaks": "7c6967326267bd5c0dded0a99541357d70dd11ac",
         "fixes": "f232326f6966cf2a1d1db7bc917a4ce5f9f55f76",
-        "last_modified": "2021-03-22",
+        "last_modified": "2021-03-24",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.11.8. kernel/bpf/verifier.c performs undesirable out-of-bounds speculation on pointer arithmetic, leading to side-channel attacks that defeat Spectre mitigations and obtain sensitive information from kernel memory, aka CID-f232326f6966. This affects pointer types that do not define a ptr_limit.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27170",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27170",
@@ -56784,7 +56785,8 @@
         "affected_versions": "v5.10-rc1 to unk",
         "breaks": "7c6967326267bd5c0dded0a99541357d70dd11ac",
         "fixes": "10d2bb2e6b1d8c4576c56a748f697dbeb8388899",
-        "last_modified": "2021-03-22",
+        "last_modified": "2021-03-24",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.11.8. kernel/bpf/verifier.c has an off-by-one error (with a resultant integer underflow) affecting out-of-bounds speculation on pointer arithmetic, leading to side-channel attacks that defeat Spectre mitigations and obtain sensitive information from kernel memory, aka CID-10d2bb2e6b1d.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27171",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27171",
@@ -58686,10 +58688,12 @@
         }
     },
     "CVE-2021-20292": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-03-22",
+        "affected_versions": "v2.6.12-rc2 to v5.9-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "drm/ttm/nouveau: don't call tt destroy callback on alloc failure.",
+        "fixes": "5de5b6ecf97a021f29403aa272cb4e03318ef586",
+        "last_affected_version": "5.8.1",
+        "last_modified": "2021-03-24",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20292",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20292",
@@ -58890,12 +58894,12 @@
         }
     },
     "CVE-2021-28950": {
-        "affected_versions": "unk to v5.12-rc4",
-        "breaks": "",
+        "affected_versions": "v5.11-rc1 to v5.12-rc4",
+        "breaks": "5d069dbe8aaf2a197142558b6fb2978189ba3454",
         "cmt_msg": "fuse: fix live lock in fuse_iget()",
         "fixes": "775c5033a0d164622d9d10dd0f0a5531639ed3ed",
         "last_affected_version": "5.11.7",
-        "last_modified": "2021-03-22",
+        "last_modified": "2021-03-24",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28950",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28950",
@@ -58906,11 +58910,11 @@
         }
     },
     "CVE-2021-28951": {
-        "affected_versions": "unk to v5.12-rc2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "io_uring: ensure that SQPOLL thread is started for exit",
         "fixes": "3ebba796fa251d042be42b929a2d916ee5c34a49",
-        "last_modified": "2021-03-22",
+        "last_modified": "2021-03-24",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28951",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28951",
@@ -58921,11 +58925,11 @@
         }
     },
     "CVE-2021-28952": {
-        "affected_versions": "unk to v5.12-rc4",
-        "breaks": "",
+        "affected_versions": "v5.7-rc1 to v5.12-rc4",
+        "breaks": "1b93a88431470ea0b943157999084d9c7e6e3bd3",
         "cmt_msg": "ASoC: qcom: sdm845: Fix array out of bounds access",
         "fixes": "1c668e1c0a0f74472469cd514f40c9012b324c31",
-        "last_modified": "2021-03-22",
+        "last_modified": "2021-03-24",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28952",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28952",
@@ -58933,6 +58937,54 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28952",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-28952",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-28952"
+        }
+    },
+    "CVE-2021-28964": {
+        "affected_versions": "v3.7-rc3 to v5.12-rc4",
+        "breaks": "834328a8493079d15f30866ace42489463f52571",
+        "cmt_msg": "btrfs: fix race when cloning extent buffer during rewind of an old root",
+        "fixes": "dbcc7d57bffc0c8cac9dac11bec548597d59a6a5",
+        "last_affected_version": "5.4.107",
+        "last_modified": "2021-03-24",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28964",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28964",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-28964",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28964",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-28964",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-28964"
+        }
+    },
+    "CVE-2021-28971": {
+        "affected_versions": "v4.5-rc1 to v5.12-rc4",
+        "breaks": "01330d7288e0050c5aaabc558059ff91589e67cd",
+        "cmt_msg": "perf/x86/intel: Fix a crash caused by zero PEBS status",
+        "fixes": "d88d05a9e0b6d9356e97129d4ff9942d765f46ea",
+        "last_affected_version": "5.4.107",
+        "last_modified": "2021-03-24",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28971",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28971",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-28971",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28971",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-28971",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-28971"
+        }
+    },
+    "CVE-2021-28972": {
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "PCI: rpadlpar: Fix potential drc_name corruption in store functions",
+        "fixes": "cc7a0bb058b85ea03db87169c60c7cfdd5d34678",
+        "last_affected_version": "5.4.107",
+        "last_modified": "2021-03-24",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28972",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28972",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-28972",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28972",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-28972",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-28972"
         }
     },
     "CVE-2021-3178": {
@@ -59005,7 +59057,7 @@
         "cmt_msg": "ext4: handle error of ext4_setup_system_zone() on remount",
         "fixes": "d176b1f62f242ab259ff665a26fbac69db1aecba",
         "last_affected_version": "5.8.5",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-03-24",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3428",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3428",
@@ -59013,6 +59065,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3428",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3428",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-3428"
+        }
+    },
+    "CVE-2021-3444": {
+        "affected_versions": "v4.15-rc5 to v5.12-rc1-dontuse",
+        "breaks": "468f6eafa6c44cb2c5d8aad35e12f06c240a812a",
+        "cmt_msg": "bpf: Fix truncation handling for mod32 dst reg wrt zero",
+        "fixes": "9b00f1b78809309163dda2d044d9e94a3c0248a3",
+        "last_affected_version": "5.11.1",
+        "last_modified": "2021-03-24",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3444",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3444",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3444",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3444",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3444",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3444"
         }
     }
 }

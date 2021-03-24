@@ -12,6 +12,7 @@ CVEs fixed in 5.8.1:
 CVEs fixed in 5.8.2:
   CVE-2019-19770: 00734ff000fc72cb48a1aec214f024824f8b7419 blktrace: fix debugfs use after free
   CVE-2020-26088: d556aa7ab7b71592fc60ecdc4b917644ecea2c92 net/nfc/rawsock.c: add CAP_NET_RAW check.
+  CVE-2021-20292: 3c374f0e63d7261dce2e556ac3df4e0541dd775a drm/ttm/nouveau: don't call tt destroy callback on alloc failure.
 
 CVEs fixed in 5.8.3:
   CVE-2019-19448: aa39db7b49ee73f10693c0ab7901c76e18031ebd btrfs: only search for left_info if there is no right_info in try_merge_free_space
@@ -150,7 +151,6 @@ Outstanding CVEs:
   CVE-2021-20219: (unk)  
   CVE-2021-20226: (unk) io_uring: don't rely on weak ->files references 
   CVE-2021-20268: (unk) bpf: Fix signed_{sub,add32}_overflows type handling 
-  CVE-2021-20292: (unk)  
   CVE-2021-26708: (unk) vsock: fix the race conditions in multi-transport support 
   CVE-2021-26930: (unk) xen-blkback: fix error handling in xen_blkbk_map() 
   CVE-2021-26931: (unk) xen-blkback: don't "handle" error by BUG() 
@@ -162,10 +162,13 @@ Outstanding CVEs:
   CVE-2021-28038: (unk) Xen/gnttab: handle p2m update errors on a per-slot basis 
   CVE-2021-28375: (unk) misc: fastrpc: restrict user apps from sending kernel RPC messages 
   CVE-2021-28660: (unk) staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan() 
-  CVE-2021-28950: (unk) fuse: fix live lock in fuse_iget() 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-28952: (unk) ASoC: qcom: sdm845: Fix array out of bounds access 
+  CVE-2021-28964: (unk) btrfs: fix race when cloning extent buffer during rewind of an old root 
+  CVE-2021-28971: (unk) perf/x86/intel: Fix a crash caused by zero PEBS status 
+  CVE-2021-28972: (unk) PCI: rpadlpar: Fix potential drc_name corruption in store functions 
   CVE-2021-3178: (unk) nfsd4: readdirplus shouldn't return parent of export 
   CVE-2021-3347: (unk) futex: Ensure the correct return value from futex_lock_pi() 
   CVE-2021-3348: (unk) nbd: freeze the queue while we're adding connections 
   CVE-2021-3411: (unk) x86/kprobes: Fix optprobe to detect INT3 padding correctly 
+  CVE-2021-3444: (unk) bpf: Fix truncation handling for mod32 dst reg wrt zero 
