@@ -56767,12 +56767,12 @@
         }
     },
     "CVE-2020-27170": {
-        "affected_versions": "v5.10-rc1 to unk",
+        "affected_versions": "v5.10-rc1 to v5.12-rc5",
         "breaks": "7c6967326267bd5c0dded0a99541357d70dd11ac",
         "cmt_msg": "bpf: Prohibit alu ops for pointer types not defining ptr_limit",
         "fixes": "f232326f6966cf2a1d1db7bc917a4ce5f9f55f76",
         "last_affected_version": "5.11.7",
-        "last_modified": "2021-03-25",
+        "last_modified": "2021-03-29",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.11.8. kernel/bpf/verifier.c performs undesirable out-of-bounds speculation on pointer arithmetic, leading to side-channel attacks that defeat Spectre mitigations and obtain sensitive information from kernel memory, aka CID-f232326f6966. This affects pointer types that do not define a ptr_limit.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27170",
@@ -56784,12 +56784,12 @@
         }
     },
     "CVE-2020-27171": {
-        "affected_versions": "v5.10-rc1 to unk",
+        "affected_versions": "v5.10-rc1 to v5.12-rc5",
         "breaks": "7c6967326267bd5c0dded0a99541357d70dd11ac",
         "cmt_msg": "bpf: Fix off-by-one for area size in creating mask to left",
         "fixes": "10d2bb2e6b1d8c4576c56a748f697dbeb8388899",
         "last_affected_version": "5.11.7",
-        "last_modified": "2021-03-25",
+        "last_modified": "2021-03-29",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.11.8. kernel/bpf/verifier.c has an off-by-one error (with a resultant integer underflow) affecting out-of-bounds speculation on pointer arithmetic, leading to side-channel attacks that defeat Spectre mitigations and obtain sensitive information from kernel memory, aka CID-10d2bb2e6b1d.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27171",
@@ -58882,12 +58882,12 @@
         }
     },
     "CVE-2021-28660": {
-        "affected_versions": "unk to v5.12-rc3",
-        "breaks": "",
+        "affected_versions": "v3.12-rc1 to v5.12-rc3",
+        "breaks": "a2c60d42d97cdbeee3c7371cd3502fca77f07d39",
         "cmt_msg": "staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan()",
         "fixes": "74b6b20df8cfe90ada777d621b54c32e69e27cd7",
         "last_affected_version": "5.11.6",
-        "last_modified": "2021-03-22",
+        "last_modified": "2021-03-29",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28660",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28660",
@@ -58993,6 +58993,53 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-28972"
         }
     },
+    "CVE-2021-29264": {
+        "affected_versions": "unk to v5.12-rc3",
+        "breaks": "",
+        "cmt_msg": "gianfar: fix jumbo packets+napi+rx overrun crash",
+        "fixes": "d8861bab48b6c1fc3cdbcab8ff9d1eaea43afe7f",
+        "last_modified": "2021-03-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29264",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29264",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29264",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29264",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29264",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29264"
+        }
+    },
+    "CVE-2021-29265": {
+        "affected_versions": "v2.6.39-rc1 to v5.12-rc3",
+        "breaks": "9720b4bc76a83807c68e00c62bfba575251bb73e",
+        "cmt_msg": "usbip: fix stub_dev usbip_sockfd_store() races leading to gpf",
+        "fixes": "9380afd6df70e24eacbdbde33afc6a3950965d22",
+        "last_affected_version": "5.11.6",
+        "last_modified": "2021-03-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29265",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29265",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29265",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29265",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29265",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29265"
+        }
+    },
+    "CVE-2021-29266": {
+        "affected_versions": "v5.8-rc1 to v5.12-rc4",
+        "breaks": "776f395004d829bbbf18c159ed9beb517a208c71",
+        "cmt_msg": "vhost-vdpa: fix use-after-free of v->config_ctx",
+        "fixes": "f6bbf0010ba004f5e90c7aefdebc0ee4bd3283b9",
+        "last_affected_version": "5.11.8",
+        "last_modified": "2021-03-29",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29266",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29266",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29266",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29266",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29266",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29266"
+        }
+    },
     "CVE-2021-3178": {
         "affected_versions": "v2.6.12-rc2 to v5.11-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -59058,12 +59105,12 @@
         }
     },
     "CVE-2021-3428": {
-        "affected_versions": "unk to v5.9-rc2",
-        "breaks": "",
+        "affected_versions": "v5.2-rc2 to v5.9-rc2",
+        "breaks": "0a944e8a6c66ca04c7afbaa17e22bf208a8b37f0",
         "cmt_msg": "ext4: handle error of ext4_setup_system_zone() on remount",
         "fixes": "d176b1f62f242ab259ff665a26fbac69db1aecba",
         "last_affected_version": "5.8.5",
-        "last_modified": "2021-03-24",
+        "last_modified": "2021-03-29",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3428",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3428",
