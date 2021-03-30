@@ -53422,7 +53422,7 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2020-06-23",
+        "last_modified": "2021-03-29",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10774",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10774",
@@ -53430,7 +53430,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-10774",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-10774",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-10774"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2020-10781": {
         "affected_versions": "v4.13-rc1 to v5.8-rc6",
@@ -56311,7 +56312,7 @@
         },
         "cwe": "Access of Resource Using Incompatible Type ('Type Confusion')",
         "fixes": "",
-        "last_modified": "2020-11-25",
+        "last_modified": "2021-03-29",
         "nvd_text": "A Red Hat only CVE-2020-12351 regression issue was found in the way the Linux kernel's Bluetooth implementation handled L2CAP packets with A2MP CID. This flaw allows a remote attacker in an adjacent range to crash the system, causing a denial of service or potentially executing arbitrary code on the system by sending a specially crafted L2CAP packet. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25661",
@@ -56320,7 +56321,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25661",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-25661",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25661"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2020-25662": {
         "affected_versions": "unk to unk",
@@ -56349,7 +56351,7 @@
         },
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "",
-        "last_modified": "2020-11-25",
+        "last_modified": "2021-03-29",
         "nvd_text": "A Red Hat only CVE-2020-12352 regression issue was found in the way the Linux kernel's Bluetooth stack implementation handled the initialization of stack memory when handling certain AMP packets. This flaw allows a remote attacker in an adjacent range to leak small portions of stack memory on the system by sending specially crafted AMP packets. The highest threat from this vulnerability is to data confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25662",
@@ -56358,7 +56360,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-25662",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-25662",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-25662"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2020-25668": {
         "affected_versions": "v2.6.12-rc2 to v5.10-rc3",
@@ -56770,9 +56773,32 @@
         "affected_versions": "v5.10-rc1 to v5.12-rc5",
         "breaks": "7c6967326267bd5c0dded0a99541357d70dd11ac",
         "cmt_msg": "bpf: Prohibit alu ops for pointer types not defining ptr_limit",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Observable Discrepancy",
         "fixes": "f232326f6966cf2a1d1db7bc917a4ce5f9f55f76",
         "last_affected_version": "5.11.7",
-        "last_modified": "2021-03-29",
+        "last_modified": "2021-03-30",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.11.8. kernel/bpf/verifier.c performs undesirable out-of-bounds speculation on pointer arithmetic, leading to side-channel attacks that defeat Spectre mitigations and obtain sensitive information from kernel memory, aka CID-f232326f6966. This affects pointer types that do not define a ptr_limit.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27170",
@@ -56787,9 +56813,32 @@
         "affected_versions": "v5.10-rc1 to v5.12-rc5",
         "breaks": "7c6967326267bd5c0dded0a99541357d70dd11ac",
         "cmt_msg": "bpf: Fix off-by-one for area size in creating mask to left",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Off-by-one Error",
         "fixes": "10d2bb2e6b1d8c4576c56a748f697dbeb8388899",
         "last_affected_version": "5.11.7",
-        "last_modified": "2021-03-29",
+        "last_modified": "2021-03-30",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.11.8. kernel/bpf/verifier.c has an off-by-one error (with a resultant integer underflow) affecting out-of-bounds speculation on pointer arithmetic, leading to side-channel attacks that defeat Spectre mitigations and obtain sensitive information from kernel memory, aka CID-10d2bb2e6b1d.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27171",
@@ -58583,12 +58632,12 @@
         }
     },
     "CVE-2021-20194": {
-        "affected_versions": "unk to v5.10-rc1",
-        "breaks": " fcb323cc53e29d9cc696d606bb42736b32dd9825",
+        "affected_versions": "v5.5-rc1 to v5.10-rc1",
+        "breaks": "fcb323cc53e29d9cc696d606bb42736b32dd9825",
         "cmt_msg": "io_uring: don't rely on weak ->files references",
         "fixes": "0f2122045b946241a9e549c2a76cea54fa58a7ff",
         "last_affected_version": "5.10.14",
-        "last_modified": "2021-03-22",
+        "last_modified": "2021-03-30",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20194",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20194",
