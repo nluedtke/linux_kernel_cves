@@ -4,9 +4,6 @@ CVEs fixed in 4.14:
   CVE-2017-16649: 2cb80187ba065d7decad7c6614e35e07aec8a974 net: cdc_ether: fix divide by 0 on bad descriptors
   CVE-2017-16650: 7fd078337201cf7468f53c3d9ef81ff78cb6df3b net: qmi_wwan: fix divide by 0 on bad descriptors
 
-CVEs fixed in 4.14-rc1:
-  CVE-2019-19078: 5f4761dda2ba3743ceb5eb5b5e7483172927831a ath10k: fix memory leak
-
 CVEs fixed in 4.14.1:
   CVE-2017-16537: 16edf1a6a8a52040841e3e875c76bad0aa28f85f media: imon: Fix null-ptr-deref in imon_probe
   CVE-2017-16646: 75d9dd294e2a41ddce75cc02d1675a9cf40873fc media: dib0700: fix invalid dvb_detach argument
@@ -603,6 +600,7 @@ CVEs fixed in 4.14.165:
   CVE-2019-19056: 6ddbe82681d911534f460e6afd297fcf7f388049 mwifiex: pcie: Fix memory leak in mwifiex_pcie_alloc_cmdrsp_buf
   CVE-2019-19066: f4e8c78fad1294c785de5e92562862dbef1e9c1e scsi: bfa: release allocated memory in case of error
   CVE-2019-19068: 32079b0c59f4620fdf7a5576af7502b0d05fcb01 rtl8xxxu: prevent leaking urb
+  CVE-2019-19078: 4af2276845448609264360e95973246f222a7d86 ath10k: fix memory leak
   CVE-2019-20636: af62c38b0f86539504dc5c0e5dcfc7613b1150a5 Input: add safety guards to input_set_keycode()
   CVE-2020-0305: c807f43500e14ed24599106745bb6005665f74d6 chardev: Avoid potential use-after-free in 'chrdev_open()'
   CVE-2020-0431: cb0a3edf8d00740303e5b42e9c0e72d924fc23d2 HID: hid-input: clear unmapped usages
@@ -859,6 +857,12 @@ CVEs fixed in 4.14.224:
 CVEs fixed in 4.14.226:
   CVE-2019-19060: 593b7ff46bc064f2acac9ed6b7baa3189d2bcd90 iio: imu: adis16400: release allocated memory on failure
   CVE-2021-28660: 33cdc63f0e07abf637ba326b6016731be958088d staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan()
+  CVE-2021-29265: 04f879ba79b056041972122c1dc597b79d2464e5 usbip: fix stub_dev usbip_sockfd_store() races leading to gpf
+
+CVEs fixed in 4.14.227:
+  CVE-2021-28964: 0fbf41006d8c850963049c35563e7775fe7c2164 btrfs: fix race when cloning extent buffer during rewind of an old root
+  CVE-2021-28971: 403fdabcc1bcd0d31f9fcb9b9b2e831214ab2192 perf/x86/intel: Fix a crash caused by zero PEBS status
+  CVE-2021-28972: 6d7724c9c507d5b526991dcdef861c6b28c45eb2 PCI: rpadlpar: Fix potential drc_name corruption in store functions
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -927,7 +931,6 @@ Outstanding CVEs:
   CVE-2019-9444: (unk) printk: hash addresses printed with %p 
   CVE-2020-0347: (unk)  
   CVE-2020-10708: (unk)  
-  CVE-2020-10774: (unk)  
   CVE-2020-11725: (unk)  
   CVE-2020-12362: (unk)  
   CVE-2020-12363: (unk) drm/i915/guc: Update to use firmware v49.0.1 
@@ -942,8 +945,6 @@ Outstanding CVEs:
   CVE-2020-24503: (unk)  
   CVE-2020-24504: (unk)  
   CVE-2020-25220: (unk)  
-  CVE-2020-25661: (unk)  
-  CVE-2020-25662: (unk)  
   CVE-2020-25670: (unk)  
   CVE-2020-25671: (unk)  
   CVE-2020-25672: (unk)  
@@ -958,11 +959,8 @@ Outstanding CVEs:
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
   CVE-2021-0399: (unk)  
-  CVE-2021-20194: (unk) io_uring: don't rely on weak ->files references 
   CVE-2021-20219: (unk)  
-  CVE-2021-20292: (unk)  
+  CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-26934: (unk)  
-  CVE-2021-28950: (unk) fuse: fix live lock in fuse_iget() 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
-  CVE-2021-28952: (unk) ASoC: qcom: sdm845: Fix array out of bounds access 
-  CVE-2021-3428: (unk) ext4: handle error of ext4_setup_system_zone() on remount 
+  CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 

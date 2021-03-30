@@ -56,6 +56,7 @@ CVEs fixed in 5.7.15:
 CVEs fixed in 5.7.16:
   CVE-2019-19770: 4470c2949a07883cda4de6899ce8507b0fc6aa5d blktrace: fix debugfs use after free
   CVE-2020-26088: f8093f0d1ababcb1a1ea859e1638a14fa5627e42 net/nfc/rawsock.c: add CAP_NET_RAW check.
+  CVE-2021-20292: 7387ad86fe8ef830e88a586b021b322eef316211 drm/ttm/nouveau: don't call tt destroy callback on alloc failure.
 
 CVEs fixed in 5.7.17:
   CVE-2019-19448: 7726619a51873ac0ac73d31f7852e0eb01a0833b btrfs: only search for left_info if there is no right_info in try_merge_free_space
@@ -104,7 +105,6 @@ Outstanding CVEs:
   CVE-2020-0465: (unk) HID: core: Sanitize event code and type when mapping input 
   CVE-2020-10135: (unk) Bluetooth: Consolidate encryption handling in hci_encrypt_cfm 
   CVE-2020-10708: (unk)  
-  CVE-2020-10774: (unk)  
   CVE-2020-11725: (unk)  
   CVE-2020-12351: (unk) Bluetooth: L2CAP: Fix calling sk_filter on non-socket based channel 
   CVE-2020-12352: (unk) Bluetooth: A2MP: Fix not initializing all members 
@@ -133,8 +133,6 @@ Outstanding CVEs:
   CVE-2020-25643: (unk) hdlc_ppp: add range checks in ppp_cp_parse_cr() 
   CVE-2020-25645: (unk) geneve: add transport ports in route lookup for geneve 
   CVE-2020-25656: (unk) vt: keyboard, extend func_buf_lock to readers 
-  CVE-2020-25661: (unk)  
-  CVE-2020-25662: (unk)  
   CVE-2020-25668: (unk) tty: make FONTX ioctl use the tty pointer they were actually passed 
   CVE-2020-25669: (unk) Input: sunkbd - avoid use-after-free in teardown paths 
   CVE-2020-25670: (unk)  
@@ -175,7 +173,6 @@ Outstanding CVEs:
   CVE-2021-20219: (unk)  
   CVE-2021-20226: (unk) io_uring: don't rely on weak ->files references 
   CVE-2021-20268: (unk) bpf: Fix signed_{sub,add32}_overflows type handling 
-  CVE-2021-20292: (unk)  
   CVE-2021-26708: (unk) vsock: fix the race conditions in multi-transport support 
   CVE-2021-26930: (unk) xen-blkback: fix error handling in xen_blkbk_map() 
   CVE-2021-26931: (unk) xen-blkback: don't "handle" error by BUG() 
@@ -187,11 +184,16 @@ Outstanding CVEs:
   CVE-2021-28038: (unk) Xen/gnttab: handle p2m update errors on a per-slot basis 
   CVE-2021-28375: (unk) misc: fastrpc: restrict user apps from sending kernel RPC messages 
   CVE-2021-28660: (unk) staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan() 
-  CVE-2021-28950: (unk) fuse: fix live lock in fuse_iget() 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-28952: (unk) ASoC: qcom: sdm845: Fix array out of bounds access 
+  CVE-2021-28964: (unk) btrfs: fix race when cloning extent buffer during rewind of an old root 
+  CVE-2021-28971: (unk) perf/x86/intel: Fix a crash caused by zero PEBS status 
+  CVE-2021-28972: (unk) PCI: rpadlpar: Fix potential drc_name corruption in store functions 
+  CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 
+  CVE-2021-29265: (unk) usbip: fix stub_dev usbip_sockfd_store() races leading to gpf 
   CVE-2021-3178: (unk) nfsd4: readdirplus shouldn't return parent of export 
   CVE-2021-3347: (unk) futex: Ensure the correct return value from futex_lock_pi() 
   CVE-2021-3348: (unk) nbd: freeze the queue while we're adding connections 
   CVE-2021-3411: (unk) x86/kprobes: Fix optprobe to detect INT3 padding correctly 
   CVE-2021-3428: (unk) ext4: handle error of ext4_setup_system_zone() on remount 
+  CVE-2021-3444: (unk) bpf: Fix truncation handling for mod32 dst reg wrt zero 
