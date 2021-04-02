@@ -65,6 +65,7 @@ CVEs fixed in 5.8.17:
 CVEs fixed in 5.8.18:
   CVE-2020-29534: 511abceaf0a00cb75f13bdc78f210a7b015e0478 io_uring: don't rely on weak ->files references
   CVE-2021-20194: 511abceaf0a00cb75f13bdc78f210a7b015e0478 io_uring: don't rely on weak ->files references
+  CVE-2021-20226: 511abceaf0a00cb75f13bdc78f210a7b015e0478 io_uring: don't rely on weak ->files references
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -142,11 +143,9 @@ Outstanding CVEs:
   CVE-2020-35508: (unk) fork: fix copy_process(CLONE_PARENT) race with the exiting ->real_parent 
   CVE-2020-35519: (unk) net/x25: prevent a couple of overflows 
   CVE-2020-36158: (unk) mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start 
-  CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
+  CVE-2020-4788: (unk) powerpc/64s: flush L1D on kernel entry 
   CVE-2020-8694: (unk) powercap: restrict energy meter to root access 
   CVE-2021-0399: (unk)  
-  CVE-2021-20219: (unk)  
-  CVE-2021-20226: (unk) io_uring: don't rely on weak ->files references 
   CVE-2021-20268: (unk) bpf: Fix signed_{sub,add32}_overflows type handling 
   CVE-2021-26708: (unk) vsock: fix the race conditions in multi-transport support 
   CVE-2021-26930: (unk) xen-blkback: fix error handling in xen_blkbk_map() 
@@ -159,6 +158,7 @@ Outstanding CVEs:
   CVE-2021-28038: (unk) Xen/gnttab: handle p2m update errors on a per-slot basis 
   CVE-2021-28375: (unk) misc: fastrpc: restrict user apps from sending kernel RPC messages 
   CVE-2021-28660: (unk) staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan() 
+  CVE-2021-28688: (unk) xen-blkback: don't leak persistent grants from xen_blkbk_map() 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-28952: (unk) ASoC: qcom: sdm845: Fix array out of bounds access 
   CVE-2021-28964: (unk) btrfs: fix race when cloning extent buffer during rewind of an old root 
@@ -167,6 +167,9 @@ Outstanding CVEs:
   CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 
   CVE-2021-29265: (unk) usbip: fix stub_dev usbip_sockfd_store() races leading to gpf 
   CVE-2021-29266: (unk) vhost-vdpa: fix use-after-free of v->config_ctx 
+  CVE-2021-29646: (unk) tipc: better validate user input in tipc_nl_retrieve_key() 
+  CVE-2021-29647: (unk) net: qrtr: fix a kernel-infoleak in qrtr_recvmsg() 
+  CVE-2021-29650: (unk) netfilter: x_tables: Use correct memory barriers. 
   CVE-2021-3178: (unk) nfsd4: readdirplus shouldn't return parent of export 
   CVE-2021-3347: (unk) futex: Ensure the correct return value from futex_lock_pi() 
   CVE-2021-3348: (unk) nbd: freeze the queue while we're adding connections 

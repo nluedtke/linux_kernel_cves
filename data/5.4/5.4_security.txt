@@ -285,7 +285,7 @@ CVEs fixed in 5.4.78:
 
 CVEs fixed in 5.4.79:
   CVE-2020-25669: df33054114475477b5e7810aa0efb26916220474 Input: sunkbd - avoid use-after-free in teardown paths
-  CVE-2020-4788: bcf7f2d3fcec8a47ddfee6d8801ab57162922480 selftests/powerpc: rfi_flush: disable entry flush if present
+  CVE-2020-4788: b65458b6be8032c5179d4f562038575d7b3a6be3 powerpc/64s: flush L1D on kernel entry
 
 CVEs fixed in 5.4.80:
   CVE-2020-28941: 3b78db264675e47ad3cf9c1e809e85d02fe1de90 speakup: Do not let the line discipline be used several times
@@ -346,6 +346,12 @@ CVEs fixed in 5.4.108:
   CVE-2021-28971: da326ba3b84aae8ac0513aa4725a49843f2f871e perf/x86/intel: Fix a crash caused by zero PEBS status
   CVE-2021-28972: 51a2b19b554c8c75ee2d253b87240309cd81f1fc PCI: rpadlpar: Fix potential drc_name corruption in store functions
 
+CVEs fixed in 5.4.109:
+  CVE-2021-28688: 057dd3e6986b260f0bec68bd1f2cd23a5d9dbda3 xen-blkback: don't leak persistent grants from xen_blkbk_map()
+  CVE-2021-29264: ec7ce1e337ec2b5641dcc639396e04a28454f21a gianfar: fix jumbo packets+napi+rx overrun crash
+  CVE-2021-29647: ae23957bd1fb3184a9935bd99c5ad2351a59d7c8 net: qrtr: fix a kernel-infoleak in qrtr_recvmsg()
+  CVE-2021-29650: 19a5fb4ceada903e692de96b8aa8494179abbf0b netfilter: x_tables: Use correct memory barriers.
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -405,7 +411,5 @@ Outstanding CVEs:
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-20177: (unk) netfilter: add and use nf_hook_slow_list() 
-  CVE-2021-20219: (unk)  
   CVE-2021-26934: (unk)  
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
-  CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 

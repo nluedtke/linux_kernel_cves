@@ -651,6 +651,7 @@ CVEs fixed in 4.4.168:
   CVE-2018-1120: adc143b97d06a3305707726e69b4247db050cb88 proc: do not access cmdline nor environ from file-backed areas
   CVE-2018-12896: 954648ebf8e27fcbf23b7954b79a22a5cacc83b1 posix-timers: Sanitize overrun handling
   CVE-2018-5848: e47b9b2b005ab8b1b83bc0ac4aa2803cba57182a wil6210: missing length check in wmi_set_ie
+  CVE-2018-5953: c873dfa0ccbdb08e9fb42f497503e148f79cdebb printk: hash addresses printed with %p
 
 CVEs fixed in 4.4.169:
   CVE-2017-18241: 0fd7726d69afb0b61817f8d51e80f385cbfb2b10 f2fs: fix a panic caused by NULL flush_cmd_control
@@ -1046,6 +1047,7 @@ CVEs fixed in 4.4.244:
 CVEs fixed in 4.4.245:
   CVE-2018-13093: f17ef9beebc7c55c5a791aacdc5992880ea15d8c xfs: validate cached inodes are free when allocated
   CVE-2020-25669: 640ede0a21a0b9bd68e47ccbca87fd747e38ea0a Input: sunkbd - avoid use-after-free in teardown paths
+  CVE-2020-4788: 4a1e90af718d1489ffcecc8f52486c4f5dc0f7a6 powerpc/64s: flush L1D on kernel entry
 
 CVEs fixed in 4.4.247:
   CVE-2019-19813: d4d0b4f942fed5d5b69effe200c1df6108483385 btrfs: inode: Verify inode mode to avoid NULL pointer dereference
@@ -1091,6 +1093,9 @@ CVEs fixed in 4.4.262:
 CVEs fixed in 4.4.263:
   CVE-2021-28964: 2922e2e894781c36ce014935f05163287635609c btrfs: fix race when cloning extent buffer during rewind of an old root
   CVE-2021-28972: 4639466722c2ea832bc145c06cd5aa2012db9102 PCI: rpadlpar: Fix potential drc_name corruption in store functions
+
+CVEs fixed in 4.4.264:
+  CVE-2021-28688: 47b6b2742ee60334c40d75bfaab49028688f1510 xen-blkback: don't leak persistent grants from xen_blkbk_map()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1142,7 +1147,6 @@ Outstanding CVEs:
   CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
-  CVE-2018-5953: (unk) printk: hash addresses printed with %p 
   CVE-2018-5995: (unk) printk: hash addresses printed with %p 
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
@@ -1157,7 +1161,6 @@ Outstanding CVEs:
   CVE-2019-12380: (unk) efi/x86/Add missing error handling to old_memmap 1:1 mapping code 
   CVE-2019-12381: (unk) ip_sockglue: Fix missing-check bug in ip_ra_control() 
   CVE-2019-12382: (unk) drm/edid: Fix a missing-check bug in drm_load_edid_firmware() 
-  CVE-2019-12455: (unk) clk-sunxi: fix a missing-check bug in sunxi_divs_clk_setup() 
   CVE-2019-12456: (unk)  
   CVE-2019-12615: (unk) mdesc: fix a missing-check bug in get_vdev_port_node_info() 
   CVE-2019-15222: (unk) ALSA: usb-audio: Fix gpf in snd_usb_pipe_sanity_check 
@@ -1219,11 +1222,9 @@ Outstanding CVEs:
   CVE-2020-27820: (unk)  
   CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-35501: (unk)  
-  CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2021-0399: (unk)  
-  CVE-2021-20219: (unk)  
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-26934: (unk)  
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
-  CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 
+  CVE-2021-29650: (unk) netfilter: x_tables: Use correct memory barriers. 

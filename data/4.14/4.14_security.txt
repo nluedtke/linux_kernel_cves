@@ -309,6 +309,7 @@ CVEs fixed in 4.14.88:
   CVE-2018-14625: f15c072d6576c5e2b693c22e39ccc9103c952078 vhost/vsock: fix use-after-free in network stack callers
   CVE-2018-19824: 19f74e45746253cafb8cb1e773041e7cadbac622 ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c
   CVE-2018-20169: 7b6e85da8d94948201abb8d576d485892a6a878f USB: check usb_get_extra_descriptor for proper size
+  CVE-2018-5953: f2a4f7622d052eb987e8693633468c239c13575a printk: hash addresses printed with %p
 
 CVEs fixed in 4.14.91:
   CVE-2018-16882: cc70f14956fa0ea84ee1a3a5b79347730c6c2d08 KVM: Fix UAF in nested posted interrupt processing
@@ -382,6 +383,7 @@ CVEs fixed in 4.14.113:
   CVE-2019-7308: 6588a490bfe1b879f11b5e74724ef53a33b68641 bpf: fix sanitation of alu op with pointer / scalar type from different paths
 
 CVEs fixed in 4.14.114:
+  CVE-2018-5995: 47ad82a34560ea70e85d2eb56be0ada03dc4fd35 printk: hash addresses printed with %p
   CVE-2019-11599: bb461ad8e6e0653fc6bd0f26d9173bab0aec235b coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
   CVE-2019-15214: d11a33e9ba584bb6f5cc74df9d74b26156ba9bb2 ALSA: core: Fix card races between register and disconnect
   CVE-2019-3892: bb461ad8e6e0653fc6bd0f26d9173bab0aec235b coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
@@ -810,6 +812,7 @@ CVEs fixed in 4.14.207:
 
 CVEs fixed in 4.14.208:
   CVE-2020-25669: 436aff975718106d8e168fde69a3786962ca356e Input: sunkbd - avoid use-after-free in teardown paths
+  CVE-2020-4788: db01cad9efe3c3838a6b3a3f68affd295c4b92d6 powerpc/64s: flush L1D on kernel entry
 
 CVEs fixed in 4.14.209:
   CVE-2020-28941: e712cefb3699ea978611edb3c2a5d3acd57d4004 speakup: Do not let the line discipline be used several times
@@ -864,6 +867,10 @@ CVEs fixed in 4.14.227:
   CVE-2021-28971: 403fdabcc1bcd0d31f9fcb9b9b2e831214ab2192 perf/x86/intel: Fix a crash caused by zero PEBS status
   CVE-2021-28972: 6d7724c9c507d5b526991dcdef861c6b28c45eb2 PCI: rpadlpar: Fix potential drc_name corruption in store functions
 
+CVEs fixed in 4.14.228:
+  CVE-2021-28688: db108b67d81397cdbaf3f91aeca6e5eb5f71de1d xen-blkback: don't leak persistent grants from xen_blkbk_map()
+  CVE-2021-29647: 749d2e33bfbacb3112cbfaafde75e507cb46c67d net: qrtr: fix a kernel-infoleak in qrtr_recvmsg()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -893,8 +900,6 @@ Outstanding CVEs:
   CVE-2018-17977: (unk)  
   CVE-2018-20449: (unk) printk: hash addresses printed with %p 
   CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
-  CVE-2018-5953: (unk) printk: hash addresses printed with %p 
-  CVE-2018-5995: (unk) printk: hash addresses printed with %p 
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
   CVE-2019-0146: (unk)  
@@ -954,13 +959,12 @@ Outstanding CVEs:
   CVE-2020-27835: (unk) IB/hfi1: Ensure correct mm is used at all times 
   CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-35501: (unk)  
-  CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
   CVE-2021-0399: (unk)  
-  CVE-2021-20219: (unk)  
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-26934: (unk)  
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 
+  CVE-2021-29650: (unk) netfilter: x_tables: Use correct memory barriers. 

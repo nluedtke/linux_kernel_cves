@@ -597,6 +597,7 @@ CVEs fixed in 3.18.129:
 CVEs fixed in 3.18.131:
   CVE-2018-12896: 2f5f58a8b5d8eb12cfc955cca62ccb5254bab951 posix-timers: Sanitize overrun handling
   CVE-2018-5848: eac164f4025d7bf7afb0ecf0cee06f55ca096a40 wil6210: missing length check in wmi_set_ie
+  CVE-2018-5953: fa3ec41ea511910599838a1fe8820e31ef85efdd printk: hash addresses printed with %p
 
 CVEs fixed in 3.18.132:
   CVE-2018-19985: 2dbfeb3393252289ce87a8e1a6ddbd47c2aa7eb4 USB: hso: Fix OOB memory access in hso_probe/hso_get_config_data
@@ -810,7 +811,6 @@ Outstanding CVEs:
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3693: (unk) ext4: fix spectre gadget in ext4_mb_regular_allocator() 
   CVE-2018-5391: (unk) ip: discard IPv4 datagrams with overlapping segments. 
-  CVE-2018-5953: (unk) printk: hash addresses printed with %p 
   CVE-2018-5995: (unk) printk: hash addresses printed with %p 
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7480: (unk) blkcg: fix double free of new_blkg in blkcg_init_queue 
@@ -843,7 +843,6 @@ Outstanding CVEs:
   CVE-2019-12380: (unk) efi/x86/Add missing error handling to old_memmap 1:1 mapping code 
   CVE-2019-12381: (unk) ip_sockglue: Fix missing-check bug in ip_ra_control() 
   CVE-2019-12382: (unk) drm/edid: Fix a missing-check bug in drm_load_edid_firmware() 
-  CVE-2019-12455: (unk) clk-sunxi: fix a missing-check bug in sunxi_divs_clk_setup() 
   CVE-2019-12456: (unk)  
   CVE-2019-12614: (unk) powerpc/pseries/dlpar: Fix a missing check in dlpar_parse_cc_property() 
   CVE-2019-12615: (unk) mdesc: fix a missing-check bug in get_vdev_port_node_info() 
@@ -1086,7 +1085,7 @@ Outstanding CVEs:
   CVE-2020-35508: (unk) fork: fix copy_process(CLONE_PARENT) race with the exiting ->real_parent 
   CVE-2020-35519: (unk) net/x25: prevent a couple of overflows 
   CVE-2020-36158: (unk) mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start 
-  CVE-2020-4788: (unk) selftests/powerpc: rfi_flush: disable entry flush if present 
+  CVE-2020-4788: (unk) powerpc/64s: flush L1D on kernel entry 
   CVE-2020-8647: (unk) vgacon: Fix a UAF in vgacon_invert_region 
   CVE-2020-8648: (unk) vt: selection, close sel_buffer race 
   CVE-2020-8649: (unk) vgacon: Fix a UAF in vgacon_invert_region 
@@ -1096,7 +1095,6 @@ Outstanding CVEs:
   CVE-2021-0399: (unk)  
   CVE-2021-0447: (unk) l2tp: protect sock pointer of struct pppol2tp_session with RCU 
   CVE-2021-0448: (unk) netfilter: ctnetlink: add a range check for l3/l4 protonum 
-  CVE-2021-20219: (unk)  
   CVE-2021-20261: (unk) floppy: fix lock_fdc() signal handling 
   CVE-2021-20265: (unk) af_unix: fix struct pid memory leak 
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
@@ -1109,9 +1107,10 @@ Outstanding CVEs:
   CVE-2021-27365: (unk) scsi: iscsi: Ensure sysfs attributes are limited to PAGE_SIZE 
   CVE-2021-28038: (unk) Xen/gnttab: handle p2m update errors on a per-slot basis 
   CVE-2021-28660: (unk) staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan() 
+  CVE-2021-28688: (unk) xen-blkback: don't leak persistent grants from xen_blkbk_map() 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-28964: (unk) btrfs: fix race when cloning extent buffer during rewind of an old root 
   CVE-2021-28972: (unk) PCI: rpadlpar: Fix potential drc_name corruption in store functions 
-  CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 
   CVE-2021-29265: (unk) usbip: fix stub_dev usbip_sockfd_store() races leading to gpf 
+  CVE-2021-29650: (unk) netfilter: x_tables: Use correct memory barriers. 
   CVE-2021-3178: (unk) nfsd4: readdirplus shouldn't return parent of export 
