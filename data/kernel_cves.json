@@ -58069,7 +58069,8 @@
         "breaks": "",
         "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address",
         "fixes": "e72436bc3a5206f95bb384e741154166ddb3202e",
-        "last_modified": "2021-04-07",
+        "last_modified": "2021-04-09",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.8. arch/x86/kvm/svm/svm.c allows a set_memory_region_test infinite loop for certain nested page faults, aka CID-e72436bc3a52.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36310",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36310",
@@ -58084,7 +58085,8 @@
         "breaks": "",
         "cmt_msg": "KVM: SVM: Periodically schedule when unregistering regions on destroy",
         "fixes": "7be74942f184fdfba34ddd19a0d995deb34d4a03",
-        "last_modified": "2021-04-07",
+        "last_modified": "2021-04-09",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.9. arch/x86/kvm/svm/sev.c allows attackers to cause a denial of service (soft lockup) by triggering destruction of a large SEV VM (which requires unregistering many encrypted regions), aka CID-7be74942f184.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36311",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36311",
@@ -58100,7 +58102,8 @@
         "cmt_msg": "KVM: fix memory leak in kvm_io_bus_unregister_dev()",
         "fixes": "f65886606c2d3b562716de030706dfe1bea4ed5e",
         "last_affected_version": "5.8.9",
-        "last_modified": "2021-04-07",
+        "last_modified": "2021-04-09",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.8.10. virt/kvm/kvm_main.c has a kvm_io_bus_unregister_dev memory leak upon a kmalloc failure, aka CID-f65886606c2d.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36312",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36312",
@@ -58115,7 +58118,8 @@
         "breaks": "",
         "cmt_msg": "KVM: Fix out of range accesses to memslots",
         "fixes": "0774a964ef561b7170d8d1b1bfe6f88002b6d219",
-        "last_modified": "2021-04-07",
+        "last_modified": "2021-04-09",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.7. The KVM subsystem allows out-of-range access to memslots after a deletion, aka CID-0774a964ef56. This affects arch/s390/kvm/kvm-s390.c, include/linux/kvm_host.h, and virt/kvm/kvm_main.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36313",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36313",
@@ -59149,6 +59153,20 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-28972"
         }
     },
+    "CVE-2021-29154": {
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "fixes": "e4d4d456436bfb2fe412ee2cd489f7658449b098",
+        "last_modified": "2021-04-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29154",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29154",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29154",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29154",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29154",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29154"
+        }
+    },
     "CVE-2021-29264": {
         "affected_versions": "v4.8-rc5 to v5.12-rc3",
         "breaks": "6c389fc931bcda88940c809f752ada6d7799482c",
@@ -59282,7 +59300,8 @@
         "breaks": "2fcf4876ada8a293d3b92a1033b8b990a7c613d3",
         "cmt_msg": "KVM: SVM: load control fields from VMCB12 before checking them",
         "fixes": "a58d9166a756a0f4a6618e4f593232593d6df134",
-        "last_modified": "2021-04-05",
+        "last_affected_version": "5.11.11",
+        "last_modified": "2021-04-09",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29657",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29657",
@@ -59417,6 +59436,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3444",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3444",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3444"
+        }
+    },
+    "CVE-2021-3483": {
+        "affected_versions": "unk to v5.12-rc6",
+        "breaks": "",
+        "cmt_msg": "firewire: nosy: Fix a use-after-free bug in nosy_ioctl()",
+        "fixes": "829933ef05a951c8ff140e814656d73e74915faf",
+        "last_affected_version": "5.11.11",
+        "last_modified": "2021-04-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3483",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3483",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3483",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3483",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3483",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3483"
         }
     }
 }
