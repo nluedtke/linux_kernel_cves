@@ -948,7 +948,6 @@ CVEs fixed in 4.9.237:
 
 CVEs fixed in 4.9.238:
   CVE-2020-25643: 585e29541c29349420d5926026a74456e233a2b3 hdlc_ppp: add range checks in ppp_cp_parse_cr()
-  CVE-2020-36312: 840e124f89a5127e7eb97ebf377f4b8ca745c070 KVM: fix memory leak in kvm_io_bus_unregister_dev()
 
 CVEs fixed in 4.9.239:
   CVE-2020-14386: 9a675ac9fe9794f0981db6e4b101503818f61622 net/packet: fix overflow in tpacket_rcv
@@ -1039,6 +1038,9 @@ CVEs fixed in 4.9.264:
 
 CVEs fixed in 4.9.265:
   CVE-2021-3483: cf4ab748a0ef6e70cad3878bf31f57ee33bf2d14 firewire: nosy: Fix a use-after-free bug in nosy_ioctl()
+
+CVEs fixed in 4.9.266:
+  CVE-2021-29154: d4b234e44aa7108aeadc7b84b162c6f882597005 bpf, x86: Validate computation of branch displacements for x86-64
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1144,9 +1146,9 @@ Outstanding CVEs:
   CVE-2020-24503: (unk)  
   CVE-2020-24504: (unk)  
   CVE-2020-25220: (unk)  
-  CVE-2020-25670: (unk)  
-  CVE-2020-25671: (unk)  
-  CVE-2020-25672: (unk)  
+  CVE-2020-25670: (unk) nfc: fix refcount leak in llcp_sock_bind() 
+  CVE-2020-25671: (unk) nfc: fix refcount leak in llcp_sock_connect() 
+  CVE-2020-25672: (unk) nfc: fix memory leak in llcp_sock_connect() 
   CVE-2020-25673: (unk)  
   CVE-2020-26541: (unk)  
   CVE-2020-27777: (unk) powerpc/rtas: Restrict RTAS requests from userspace 
@@ -1155,15 +1157,11 @@ Outstanding CVEs:
   CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-35501: (unk)  
   CVE-2020-36310: (unk) KVM: SVM: avoid infinite loop on NPF from bad address 
-  CVE-2020-36311: (unk) KVM: SVM: Periodically schedule when unregistering regions on destroy 
-  CVE-2020-36313: (unk) KVM: Fix out of range accesses to memslots 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
   CVE-2021-0399: (unk)  
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-26934: (unk)  
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
-  CVE-2021-29154: (unk)  
   CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 
   CVE-2021-29650: (unk) netfilter: x_tables: Use correct memory barriers. 
-  CVE-2021-30178: (unk) KVM: x86: hyper-v: Fix Hyper-V context null-ptr-deref 
