@@ -56584,6 +56584,7 @@
     "CVE-2020-26541": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "certs: Add EFI_CERT_X509_GUID support for dbx entries",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Local Access",
@@ -56607,8 +56608,8 @@
             "score": 6.5
         },
         "cwe": "Unspecified",
-        "fixes": "",
-        "last_modified": "2020-10-08",
+        "fixes": "56c5812623f95313f6a46fbf0beee7fa17c68bbf",
+        "last_modified": "2021-05-03",
         "nvd_text": "The Linux kernel through 5.8.13 does not properly enforce the Secure Boot Forbidden Signature Database (aka dbx) protection mechanism. This affects certs/blacklist.c and certs/system_keyring.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26541",
@@ -57669,7 +57670,7 @@
         "cwe": "Incorrect Authorization",
         "fixes": "17839856fd588f4ab6b789f482ed3ffd7c403e1f",
         "last_affected_version": "5.7.2",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-03",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.7.3, related to mm/gup.c and mm/huge_memory.c. The get_user_pages (aka gup) implementation, when used for a copy-on-write page, does not properly consider the semantics of read operations and therefore can grant unintended write access, aka CID-17839856fd58.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29374",
@@ -58231,9 +58232,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.11-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "fuse: fix bad inode",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Incomplete Cleanup",
         "fixes": "5d069dbe8aaf2a197142558b6fb2978189ba3454",
         "last_affected_version": "5.10.5",
-        "last_modified": "2021-04-19",
+        "last_modified": "2021-05-03",
         "nvd_text": "An issue was discovered in the FUSE filesystem implementation in the Linux kernel before 5.10.6, aka CID-5d069dbe8aaf. fuse_do_getattr() calls make_bad_inode() in inappropriate situations, causing a system crash. NOTE: the original fix for this vulnerability was incomplete, and its incompleteness is tracked as CVE-2021-28950.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36322",
@@ -58972,7 +58996,7 @@
         "cmt_msg": "net/sctp: fix race condition in sctp_destroy_sock",
         "fixes": "b166a20b07382b8bc1dcee2a448715c9c2c81b5b",
         "last_affected_version": "5.11.15",
-        "last_modified": "2021-04-27",
+        "last_modified": "2021-05-03",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-23133",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-23133",
@@ -59507,6 +59531,22 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-3178"
         }
     },
+    "CVE-2021-31916": {
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "dm ioctl: fix out of bounds array access when no devices",
+        "fixes": "4edbe1d7bcffcd6269f3b5eb63f710393ff2ec7a",
+        "last_affected_version": "5.11.10",
+        "last_modified": "2021-05-03",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-31916",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-31916",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-31916",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-31916",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-31916",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-31916"
+        }
+    },
     "CVE-2021-3347": {
         "affected_versions": "v4.15-rc9 to v5.11-rc6",
         "breaks": "c1e2f0eaf015fb7076d51a339011f2383e6dd389",
@@ -59633,6 +59673,22 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3493"
         },
         "vendor_specific": true
+    },
+    "CVE-2021-3501": {
+        "affected_versions": "v5.9-rc1 to v5.12-rc8",
+        "breaks": "1aa561b1a4c0ae2a9a9b9c21a84b5ca66b4775d8",
+        "cmt_msg": "KVM: VMX: Don't use vcpu->run->internal.ndata as an array index",
+        "fixes": "04c4f2ee3f68c9a4bf1653d15f1a9a435ae33f7a",
+        "last_affected_version": "5.11.15",
+        "last_modified": "2021-05-03",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3501",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3501",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3501",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3501",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3501",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3501"
+        }
     },
     "CVE-2021-3506": {
         "affected_versions": "unk to unk",
