@@ -10,6 +10,7 @@ CVEs fixed in 5.10.4:
 
 CVEs fixed in 5.10.6:
   CVE-2020-36158: 94cc73b27a2599e4c88b7b2d6fd190107c58e480 mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start
+  CVE-2020-36322: 36cf9ae54b0ead0daab7701a994de3dcd9ef605d fuse: fix bad inode
 
 CVEs fixed in 5.10.7:
   CVE-2020-28374: 6f1e88527c1869de08632efa2cc796e0131850dc scsi: target: Fix XCOPY NAA identifier lookup
@@ -42,6 +43,7 @@ CVEs fixed in 5.10.21:
   CVE-2021-27365: 76d92bf293c36a52ea5552919ac645ef2edee55d scsi: iscsi: Ensure sysfs attributes are limited to PAGE_SIZE
   CVE-2021-28038: 545c837d6789afcb23da5494a22e459952fb823f Xen/gnttab: handle p2m update errors on a per-slot basis
   CVE-2021-28039: 9c62adb6e2fda38dc6045a853a6e50b2bbc75d2a xen: fix p2m size in dom0 for disabled memory hotplug case
+  CVE-2021-30002: 5400770e31e8b80efc25b4c1d619361255174d11 media: v4l: ioctl: Fix memory leak in video_usercopy
 
 CVEs fixed in 5.10.24:
   CVE-2021-28375: 52feb58f9b5b078b5a39ed8ba8ab3b4546e16ff2 misc: fastrpc: restrict user apps from sending kernel RPC messages
@@ -59,6 +61,32 @@ CVEs fixed in 5.10.26:
   CVE-2021-28971: 514ea597be8e4b6a787bc34da111c44944fbf5a5 perf/x86/intel: Fix a crash caused by zero PEBS status
   CVE-2021-28972: be1f58e58f7644ab33f1413685c84173766408d3 PCI: rpadlpar: Fix potential drc_name corruption in store functions
   CVE-2021-29266: 49ca3100fbaf864853c922c8f7a8fe7090a83860 vhost-vdpa: fix use-after-free of v->config_ctx
+
+CVEs fixed in 5.10.27:
+  CVE-2021-28688: 3a1ca9bd4f5a647439e82e07b03d072781d9d180 xen-blkback: don't leak persistent grants from xen_blkbk_map()
+  CVE-2021-29264: b8bfda6e08b8a419097eea5a8e57671bc36f9939 gianfar: fix jumbo packets+napi+rx overrun crash
+  CVE-2021-29646: 50f41f2e29ff1980f7edfca40bbf81a4336b9feb tipc: better validate user input in tipc_nl_retrieve_key()
+  CVE-2021-29647: fce6fb90218935f7319265459484b3762c80d0a8 net: qrtr: fix a kernel-infoleak in qrtr_recvmsg()
+  CVE-2021-29649: ccd5565feea346697c1d1e8e9cd042218b49c44b bpf: Fix umd memory leak in copy_process()
+  CVE-2021-29650: 3fdebc2d8e7965f946a3d716ffdd482e66c1f46c netfilter: x_tables: Use correct memory barriers.
+  CVE-2021-31916: 921aae17bb0f02181fa05cf5580ebc855fdbd74d dm ioctl: fix out of bounds array access when no devices
+
+CVEs fixed in 5.10.28:
+  CVE-2021-29657: 5f6625f5cd5c593fae05a6ce22b406166bc796b8 KVM: SVM: load control fields from VMCB12 before checking them
+  CVE-2021-3483: c04adcc819d3bdd85a5dc2523687707b89724df7 firewire: nosy: Fix a use-after-free bug in nosy_ioctl()
+
+CVEs fixed in 5.10.29:
+  CVE-2021-29154: 3edb8967d91ecbc4c5eee34a65d4124267327574 bpf, x86: Validate computation of branch displacements for x86-64
+
+CVEs fixed in 5.10.30:
+  CVE-2020-25670: 6fb003e5ae18d8cda4c8a1175d9dd8db12bec049 nfc: fix refcount leak in llcp_sock_bind()
+  CVE-2020-25671: 99b596199e8402055c425ac6abd3b8c3fc047034 nfc: fix refcount leak in llcp_sock_connect()
+  CVE-2020-25672: 568ac94df580b1a65837dc299e8758635e7b1423 nfc: fix memory leak in llcp_sock_connect()
+
+CVEs fixed in 5.10.32:
+  CVE-2021-23133: 5a627026be4a17e5b9db23558cd28e62b2cbc66e net/sctp: fix race condition in sctp_destroy_sock
+  CVE-2021-29155: 4f3ff11204eac0ee23acf64deecb3bad7b0db0c6 bpf: Use correct permission flag for mixed signed bounds arithmetic
+  CVE-2021-3501: 7f64753835a78c7d2cc2932a5808ef3b7fd4c050 KVM: VMX: Don't use vcpu->run->internal.ndata as an array index
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -106,14 +134,10 @@ Outstanding CVEs:
   CVE-2020-24503: (unk)  
   CVE-2020-24504: (unk)  
   CVE-2020-25220: (unk)  
-  CVE-2020-25670: (unk)  
-  CVE-2020-25671: (unk)  
-  CVE-2020-25672: (unk)  
   CVE-2020-25673: (unk)  
-  CVE-2020-26541: (unk)  
+  CVE-2020-26541: (unk) certs: Add EFI_CERT_X509_GUID support for dbx entries 
   CVE-2020-27820: (unk)  
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
-  CVE-2021-20219: (unk)  
   CVE-2021-26934: (unk)  
-  CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 
+  CVE-2021-3506: (unk)  

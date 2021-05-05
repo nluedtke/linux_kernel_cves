@@ -39082,6 +39082,7 @@
     },
     "CVE-2018-5953": {
         "affected_versions": "v2.6.12-rc2 to v4.15-rc2",
+        "alt_msg": "swiotlb: clean up reporting",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "printk: hash addresses printed with %p",
         "cvss2": {
@@ -39108,7 +39109,8 @@
         },
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "ad67b74d2469d9b82aaa572d76474c95bc484d57",
-        "last_modified": "2020-03-25",
+        "last_affected_version": "4.14.87",
+        "last_modified": "2021-03-31",
         "nvd_text": "The swiotlb_print_info function in lib/swiotlb.c in the Linux kernel through 4.14.14 allows local users to obtain sensitive address information by reading dmesg data from a \"software IO TLB\" printk call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5953",
@@ -39121,6 +39123,7 @@
     },
     "CVE-2018-5995": {
         "affected_versions": "v2.6.12-rc2 to v4.15-rc2",
+        "alt_msg": "percpu: stop printing kernel addresses",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "printk: hash addresses printed with %p",
         "cvss2": {
@@ -39147,7 +39150,8 @@
         },
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "ad67b74d2469d9b82aaa572d76474c95bc484d57",
-        "last_modified": "2020-03-25",
+        "last_affected_version": "4.14.113",
+        "last_modified": "2021-03-31",
         "nvd_text": "The pcpu_embed_first_chunk function in mm/percpu.c in the Linux kernel through 4.14.14 allows local users to obtain sensitive address information by reading dmesg data from a \"pages/cpu\" printk call.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-5995",
@@ -41816,8 +41820,8 @@
         }
     },
     "CVE-2019-12455": {
-        "affected_versions": "unk to v5.3-rc1",
-        "breaks": "",
+        "affected_versions": "v4.7-rc1 to v5.3-rc1",
+        "breaks": "ff2bb89335daec6053b5ac778369f7f72b931142",
         "cmt_msg": "clk-sunxi: fix a missing-check bug in sunxi_divs_clk_setup()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -41841,7 +41845,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "fcdf445ff42f036d22178b49cf64e92d527c1330",
-        "last_modified": "2020-04-17",
+        "last_modified": "2021-04-01",
         "nvd_text": "** DISPUTED ** An issue was discovered in sunxi_divs_clk_setup in drivers/clk/sunxi/clk-sunxi.c in the Linux kernel through 5.1.5. There is an unchecked kstrndup of derived_name, which might allow an attacker to cause a denial of service (NULL pointer dereference and system crash). NOTE: This id is disputed as not being an issue because “The memory allocation that was not checked is part of a code that only runs at boot time, before user processes are started. Therefore, there is no possibility for an unprivileged user to control it, and no denial of service.”.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-12455",
@@ -45598,7 +45602,7 @@
     },
     "CVE-2019-18680": {
         "affected_versions": "unk to unk",
-        "breaks": "",
+        "breaks": "c4e97b06cfdc5213494c22dd5c2b41ff8b15e0ee",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Network Accessible",
@@ -45620,7 +45624,7 @@
             "score": "7.5"
         },
         "cwe": "NULL Pointer Dereference",
-        "fixes": "",
+        "fixes": "91573ae4aed0a49660abdad4d42f2a0db995ee5e",
         "last_modified": "2019-11-06",
         "nvd_text": "An issue was discovered in the Linux kernel 4.4.x before 4.4.195. There is a NULL pointer dereference in rds_tcp_kill_sock() in net/rds/tcp.c that will cause denial of service, aka CID-91573ae4aed0.",
         "ref_urls": {
@@ -51073,8 +51077,8 @@
         }
     },
     "CVE-2019-5489": {
-        "affected_versions": "v2.6.12-rc2 to v5.0-rc1",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "backport": true,
+        "breaks": "134fca9063ad4851de767d1768180e5dede9a881",
         "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages",
         "cvss2": {
             "Access Complexity": "Low",
@@ -51098,7 +51102,7 @@
         },
         "cwe": "Information Leak / Disclosure",
         "fixes": "574823bfab82d9d8fa47f422778043fbb4b4f50e",
-        "last_modified": "2019-01-31",
+        "last_modified": "2021-04-01",
         "nvd_text": "The mincore() implementation in mm/mincore.c in the Linux kernel through 4.19.13 allowed local attackers to observe page cache access patterns of other processes on the same system, potentially allowing sniffing of secret information. (Fixing this affects the output of the fincore program.) Limited remote exploitation may be possible, as demonstrated by latency differences in accessing public files from an Apache HTTP Server.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-5489",
@@ -56396,10 +56400,12 @@
         }
     },
     "CVE-2020-25670": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2020-11-02",
+        "affected_versions": "v3.6-rc1 to v5.12-rc7",
+        "breaks": "c7aa12252f5142b9eee2f6e34ca8870a8e7e048c",
+        "cmt_msg": "nfc: fix refcount leak in llcp_sock_bind()",
+        "fixes": "c33b1cc62ac05c1dbb1cdafe2eb66da01c76ca8d",
+        "last_affected_version": "5.11.13",
+        "last_modified": "2021-04-16",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25670",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25670",
@@ -56410,10 +56416,12 @@
         }
     },
     "CVE-2020-25671": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2020-11-02",
+        "affected_versions": "v3.6-rc1 to v5.12-rc7",
+        "breaks": "c7aa12252f5142b9eee2f6e34ca8870a8e7e048c",
+        "cmt_msg": "nfc: fix refcount leak in llcp_sock_connect()",
+        "fixes": "8a4cd82d62b5ec7e5482333a72b58a4eea4979f0",
+        "last_affected_version": "5.11.13",
+        "last_modified": "2021-04-16",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25671",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25671",
@@ -56424,10 +56432,12 @@
         }
     },
     "CVE-2020-25672": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2020-11-02",
+        "affected_versions": "v3.3-rc1 to v5.12-rc7",
+        "breaks": "d646960f7986fefb460a2b062d5ccc8ccfeacc3a",
+        "cmt_msg": "nfc: fix memory leak in llcp_sock_connect()",
+        "fixes": "7574fcdbdcb335763b6b322f6928dc0fd5730451",
+        "last_affected_version": "5.11.13",
+        "last_modified": "2021-04-16",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25672",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25672",
@@ -56574,6 +56584,7 @@
     "CVE-2020-26541": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "certs: Add EFI_CERT_X509_GUID support for dbx entries",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Local Access",
@@ -56597,8 +56608,8 @@
             "score": 6.5
         },
         "cwe": "Unspecified",
-        "fixes": "",
-        "last_modified": "2020-10-08",
+        "fixes": "56c5812623f95313f6a46fbf0beee7fa17c68bbf",
+        "last_modified": "2021-05-03",
         "nvd_text": "The Linux kernel through 5.8.13 does not properly enforce the Secure Boot Forbidden Signature Database (aka dbx) protection mechanism. This affects certs/blacklist.c and certs/system_keyring.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26541",
@@ -57659,7 +57670,7 @@
         "cwe": "Incorrect Authorization",
         "fixes": "17839856fd588f4ab6b789f482ed3ffd7c403e1f",
         "last_affected_version": "5.7.2",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-03",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.7.3, related to mm/gup.c and mm/huge_memory.c. The get_user_pages (aka gup) implementation, when used for a copy-on-write page, does not properly consider the semantics of read operations and therefore can grant unintended write access, aka CID-17839856fd58.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29374",
@@ -57928,9 +57939,33 @@
         "affected_versions": "v3.4-rc1 to v5.10-rc3",
         "breaks": "5f8aadd8b9966d71a77bba52b9d499cc2f38269f",
         "cmt_msg": "fork: fix copy_process(CLONE_PARENT) race with the exiting ->real_parent",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Improper Initialization",
         "fixes": "b4e00444cab4c3f3fec876dc0cccc8cbb0d1a948",
         "last_affected_version": "5.9.6",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-04-02",
+        "nvd_text": "A flaw possibility of race condition and incorrect initialization of the process id was found in the Linux kernel child/parent process identification handling while filtering signal handlers. A local attacker is able to abuse this flaw to bypass checks to send any signal to a privileged process.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35508",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-35508",
@@ -58036,10 +58071,207 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-36158"
         }
     },
+    "CVE-2020-36310": {
+        "affected_versions": "v2.6.12-rc2 to v5.8-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+        "fixes": "e72436bc3a5206f95bb384e741154166ddb3202e",
+        "last_modified": "2021-04-19",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.8. arch/x86/kvm/svm/svm.c allows a set_memory_region_test infinite loop for certain nested page faults, aka CID-e72436bc3a52.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36310",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36310",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-36310",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-36310",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-36310",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-36310"
+        }
+    },
+    "CVE-2020-36311": {
+        "affected_versions": "v4.16-rc1 to v5.9-rc5",
+        "breaks": "5dd0a57cf38eeb8b6be1d9c3df9add2f5756d974",
+        "cmt_msg": "KVM: SVM: Periodically schedule when unregistering regions on destroy",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
+        "fixes": "7be74942f184fdfba34ddd19a0d995deb34d4a03",
+        "last_modified": "2021-04-19",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.9. arch/x86/kvm/svm/sev.c allows attackers to cause a denial of service (soft lockup) by triggering destruction of a large SEV VM (which requires unregistering many encrypted regions), aka CID-7be74942f184.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36311",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36311",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-36311",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-36311",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-36311",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-36311"
+        }
+    },
+    "CVE-2020-36312": {
+        "affected_versions": "v4.11-rc5 to v5.9-rc5",
+        "breaks": "90db10434b163e46da413d34db8d0e77404cc645",
+        "cmt_msg": "KVM: fix memory leak in kvm_io_bus_unregister_dev()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Missing Release of Memory after Effective Lifetime",
+        "fixes": "f65886606c2d3b562716de030706dfe1bea4ed5e",
+        "last_affected_version": "5.8.9",
+        "last_modified": "2021-04-19",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.8.10. virt/kvm/kvm_main.c has a kvm_io_bus_unregister_dev memory leak upon a kmalloc failure, aka CID-f65886606c2d.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36312",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36312",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-36312",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-36312",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-36312",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-36312"
+        }
+    },
+    "CVE-2020-36313": {
+        "affected_versions": "v5.7-rc1 to v5.7-rc1",
+        "breaks": "36947254e5f981aeeedab1c7dfa35fc34d330e80",
+        "cmt_msg": "KVM: Fix out of range accesses to memslots",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
+        "fixes": "0774a964ef561b7170d8d1b1bfe6f88002b6d219",
+        "last_modified": "2021-04-19",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.7. The KVM subsystem allows out-of-range access to memslots after a deletion, aka CID-0774a964ef56. This affects arch/s390/kvm/kvm-s390.c, include/linux/kvm_host.h, and virt/kvm/kvm_main.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36313",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36313",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-36313",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-36313",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-36313",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-36313"
+        }
+    },
+    "CVE-2020-36322": {
+        "affected_versions": "v2.6.12-rc2 to v5.11-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "fuse: fix bad inode",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Incomplete Cleanup",
+        "fixes": "5d069dbe8aaf2a197142558b6fb2978189ba3454",
+        "last_affected_version": "5.10.5",
+        "last_modified": "2021-05-03",
+        "nvd_text": "An issue was discovered in the FUSE filesystem implementation in the Linux kernel before 5.10.6, aka CID-5d069dbe8aaf. fuse_do_getattr() calls make_bad_inode() in inappropriate situations, causing a system crash. NOTE: the original fix for this vulnerability was incomplete, and its incompleteness is tracked as CVE-2021-28950.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36322",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-36322",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-36322",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-36322",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-36322",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-36322"
+        }
+    },
     "CVE-2020-4788": {
         "affected_versions": "v2.6.12-rc2 to v5.10-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
-        "cmt_msg": "selftests/powerpc: rfi_flush: disable entry flush if present",
+        "cmt_msg": "powerpc/64s: flush L1D on kernel entry",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Local Access",
@@ -58063,9 +58295,9 @@
             "score": 4.7
         },
         "cwe": "Unspecified",
-        "fixes": "fcb48454c23c5679d1a2e252f127642e91b05cbe",
+        "fixes": "f79643787e0a0762d2409b7b8334e83f22d85695",
         "last_affected_version": "5.9.9",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-04-02",
         "nvd_text": "IBM Power9 (AIX 7.1, 7.2, and VIOS 3.1) processors could allow a local user to obtain sensitive information from the data in the L1 cache under extenuating circumstances. IBM X-Force ID: 189296.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-4788",
@@ -58637,7 +58869,7 @@
         "cmt_msg": "io_uring: don't rely on weak ->files references",
         "fixes": "0f2122045b946241a9e549c2a76cea54fa58a7ff",
         "last_affected_version": "5.10.14",
-        "last_modified": "2021-03-30",
+        "last_modified": "2021-04-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20194",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20194",
@@ -58651,7 +58883,7 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-03-30",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20219",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20219",
@@ -58659,14 +58891,16 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20219",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-20219",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-20219"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2021-20226": {
         "affected_versions": "v5.5-rc1 to v5.10-rc1",
         "breaks": "fcb323cc53e29d9cc696d606bb42736b32dd9825",
         "cmt_msg": "io_uring: don't rely on weak ->files references",
         "fixes": "0f2122045b946241a9e549c2a76cea54fa58a7ff",
-        "last_modified": "2021-03-18",
+        "last_affected_version": "5.9.2",
+        "last_modified": "2021-04-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20226",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20226",
@@ -58682,7 +58916,7 @@
         "cmt_msg": "Merge branch 'work.set_fs' of git://git.kernel.org/pub/scm/linux/kernel/git/viro/vfs",
         "fixes": "f56e65dff6ad52395ef45738799b4fb70ff43376",
         "last_affected_version": "None",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-04-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20239",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20239",
@@ -58754,6 +58988,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20292",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-20292",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-20292"
+        }
+    },
+    "CVE-2021-23133": {
+        "affected_versions": "v4.10-rc1 to v5.12-rc8",
+        "breaks": "61023658760032e97869b07d54be9681d2529e77",
+        "cmt_msg": "net/sctp: fix race condition in sctp_destroy_sock",
+        "fixes": "b166a20b07382b8bc1dcee2a448715c9c2c81b5b",
+        "last_affected_version": "5.11.15",
+        "last_modified": "2021-05-03",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-23133",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-23133",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-23133",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-23133",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-23133",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-23133"
         }
     },
     "CVE-2021-26708": {
@@ -58946,6 +59196,22 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-28660"
         }
     },
+    "CVE-2021-28688": {
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()",
+        "fixes": "a846738f8c3788d846ed1f587270d2f2e3d32432",
+        "last_affected_version": "5.11.10",
+        "last_modified": "2021-04-05",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28688",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28688",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-28688",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28688",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-28688",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-28688"
+        }
+    },
     "CVE-2021-28950": {
         "affected_versions": "v5.11-rc1 to v5.12-rc4",
         "breaks": "5d069dbe8aaf2a197142558b6fb2978189ba3454",
@@ -59042,12 +59308,45 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-28972"
         }
     },
-    "CVE-2021-29264": {
-        "affected_versions": "unk to v5.12-rc3",
+    "CVE-2021-29154": {
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "bpf, x86: Validate computation of branch displacements for x86-64",
+        "fixes": "e4d4d456436bfb2fe412ee2cd489f7658449b098",
+        "last_affected_version": "5.11.12",
+        "last_modified": "2021-04-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29154",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29154",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29154",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29154",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29154",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29154"
+        }
+    },
+    "CVE-2021-29155": {
+        "affected_versions": "unk to v5.12-rc8",
         "breaks": "",
+        "cmt_msg": "bpf: Use correct permission flag for mixed signed bounds arithmetic",
+        "fixes": "9601148392520e2e134936e76788fc2a6371e7be",
+        "last_affected_version": "5.11.15",
+        "last_modified": "2021-04-27",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29155",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29155",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29155",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29155",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29155",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29155"
+        }
+    },
+    "CVE-2021-29264": {
+        "affected_versions": "v4.8-rc5 to v5.12-rc3",
+        "breaks": "6c389fc931bcda88940c809f752ada6d7799482c",
         "cmt_msg": "gianfar: fix jumbo packets+napi+rx overrun crash",
         "fixes": "d8861bab48b6c1fc3cdbcab8ff9d1eaea43afe7f",
-        "last_modified": "2021-03-29",
+        "last_affected_version": "5.11.10",
+        "last_modified": "2021-04-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29264",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29264",
@@ -59089,6 +59388,133 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-29266"
         }
     },
+    "CVE-2021-29646": {
+        "affected_versions": "v5.5-rc1 to v5.12-rc5",
+        "breaks": "e1f32190cf7ddd55778b460e7d44af3f76529698",
+        "cmt_msg": "tipc: better validate user input in tipc_nl_retrieve_key()",
+        "fixes": "0217ed2848e8538bcf9172d97ed2eeb4a26041bb",
+        "last_affected_version": "5.11.10",
+        "last_modified": "2021-04-02",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29646",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29646",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29646",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29646",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29646",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29646"
+        }
+    },
+    "CVE-2021-29647": {
+        "affected_versions": "v4.7-rc1 to v5.12-rc5",
+        "breaks": "bdabad3e363d825ddf9679dd431cca0b2c30f881",
+        "cmt_msg": "net: qrtr: fix a kernel-infoleak in qrtr_recvmsg()",
+        "fixes": "50535249f624d0072cd885bcdce4e4b6fb770160",
+        "last_affected_version": "5.11.10",
+        "last_modified": "2021-04-02",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29647",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29647",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29647",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29647",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29647",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29647"
+        }
+    },
+    "CVE-2021-29648": {
+        "affected_versions": "v5.11-rc1 to v5.12-rc5",
+        "breaks": "5329722057d41aebc31e391907a501feaa42f7d9",
+        "cmt_msg": "bpf: Dont allow vmlinux BTF to be used in map_create and prog_load.",
+        "fixes": "350a5c4dd2452ea999cc5e1d4a8dbf12de2f97ef",
+        "last_affected_version": "5.11.10",
+        "last_modified": "2021-04-02",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29648",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29648",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29648",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29648",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29648",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29648"
+        }
+    },
+    "CVE-2021-29649": {
+        "affected_versions": "v5.10-rc1 to v5.12-rc5",
+        "breaks": "d71fa5c9763c24dd997a2fa4feb7a13a95bab42c",
+        "cmt_msg": "bpf: Fix umd memory leak in copy_process()",
+        "fixes": "f60a85cad677c4f9bb4cadd764f1d106c38c7cf8",
+        "last_affected_version": "5.11.10",
+        "last_modified": "2021-04-02",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29649",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29649",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29649",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29649",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29649",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29649"
+        }
+    },
+    "CVE-2021-29650": {
+        "affected_versions": "v3.0-rc1 to v5.12-rc5",
+        "breaks": "7f5c6d4f665bb57a19a34ce1fb16cc708c04f219",
+        "cmt_msg": "netfilter: x_tables: Use correct memory barriers.",
+        "fixes": "175e476b8cdf2a4de7432583b49c871345e4f8a1",
+        "last_affected_version": "5.11.10",
+        "last_modified": "2021-04-02",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29650",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29650",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29650",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29650",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29650",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29650"
+        }
+    },
+    "CVE-2021-29657": {
+        "affected_versions": "v5.10-rc1 to v5.12-rc6",
+        "breaks": "2fcf4876ada8a293d3b92a1033b8b990a7c613d3",
+        "cmt_msg": "KVM: SVM: load control fields from VMCB12 before checking them",
+        "fixes": "a58d9166a756a0f4a6618e4f593232593d6df134",
+        "last_affected_version": "5.11.11",
+        "last_modified": "2021-04-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29657",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29657",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-29657",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-29657",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-29657",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-29657"
+        }
+    },
+    "CVE-2021-30002": {
+        "affected_versions": "v2.6.39-rc1 to v5.12-rc1-dontuse",
+        "breaks": "d14e6d76ebf740fd0d0bd296933993a555938896",
+        "cmt_msg": "media: v4l: ioctl: Fix memory leak in video_usercopy",
+        "fixes": "fb18802a338b36f675a388fc03d2aa504a0d0899",
+        "last_affected_version": "5.11.2",
+        "last_modified": "2021-04-05",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-30002",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-30002",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-30002",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-30002",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-30002",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-30002"
+        }
+    },
+    "CVE-2021-30178": {
+        "affected_versions": "v5.12-rc1-dontuse to v5.12-rc2",
+        "breaks": "8f014550dfb114cc7f42a517d20d2cf887a0b771",
+        "cmt_msg": "KVM: x86: hyper-v: Fix Hyper-V context null-ptr-deref",
+        "fixes": "919f4ebc598701670e80e31573a58f1f2d2bf918",
+        "last_modified": "2021-04-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-30178",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-30178",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-30178",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-30178",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-30178",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-30178"
+        }
+    },
     "CVE-2021-3178": {
         "affected_versions": "v2.6.12-rc2 to v5.11-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -59103,6 +59529,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3178",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3178",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-3178"
+        }
+    },
+    "CVE-2021-31916": {
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "dm ioctl: fix out of bounds array access when no devices",
+        "fixes": "4edbe1d7bcffcd6269f3b5eb63f710393ff2ec7a",
+        "last_affected_version": "5.11.10",
+        "last_modified": "2021-05-03",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-31916",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-31916",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-31916",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-31916",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-31916",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-31916"
         }
     },
     "CVE-2021-3347": {
@@ -59183,6 +59625,83 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3444",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3444",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3444"
+        }
+    },
+    "CVE-2021-3483": {
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "firewire: nosy: Fix a use-after-free bug in nosy_ioctl()",
+        "fixes": "829933ef05a951c8ff140e814656d73e74915faf",
+        "last_affected_version": "5.11.11",
+        "last_modified": "2021-04-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3483",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3483",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3483",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3483",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3483",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3483"
+        }
+    },
+    "CVE-2021-3492": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-04-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3492",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3492",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3492",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3492",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3492",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3492"
+        },
+        "vendor_specific": true
+    },
+    "CVE-2021-3493": {
+        "affected_versions": "v2.6.12-rc2 to v5.11-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "vfs: move cap_convert_nscap() call into vfs_setxattr()",
+        "fixes": "7c03e2cda4a584cadc398e8f6641ca9988a39d52",
+        "last_modified": "2021-04-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3493",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3493",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3493",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3493",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3493",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3493"
+        },
+        "vendor_specific": true
+    },
+    "CVE-2021-3501": {
+        "affected_versions": "v5.9-rc1 to v5.12-rc8",
+        "breaks": "1aa561b1a4c0ae2a9a9b9c21a84b5ca66b4775d8",
+        "cmt_msg": "KVM: VMX: Don't use vcpu->run->internal.ndata as an array index",
+        "fixes": "04c4f2ee3f68c9a4bf1653d15f1a9a435ae33f7a",
+        "last_affected_version": "5.11.15",
+        "last_modified": "2021-05-03",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3501",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3501",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3501",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3501",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3501",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3501"
+        }
+    },
+    "CVE-2021-3506": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-04-27",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3506",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3506",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3506",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3506",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3506",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3506"
         }
     }
 }
