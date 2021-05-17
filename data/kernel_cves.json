@@ -50525,6 +50525,22 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-2215"
         }
     },
+    "CVE-2019-25044": {
+        "affected_versions": "unk to v5.2-rc4",
+        "breaks": "",
+        "cmt_msg": "block: free sched's request pool in blk_cleanup_queue",
+        "fixes": "c3e2219216c92919a6bd1711f340f5faa98695e6",
+        "last_modified": "2021-05-17",
+        "nvd_text": "The block subsystem in the Linux kernel before 5.2 has a use-after-free that can lead to arbitrary code execution in the kernel context and privilege escalation, aka CID-c3e2219216c9. This is related to blk_mq_free_rqs and blk_cleanup_queue.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-25044",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-25044",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-25044",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-25044",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-25044",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2019-25044"
+        }
+    },
     "CVE-2019-3016": {
         "affected_versions": "v4.10-rc1 to v5.6-rc1",
         "breaks": "0b9f6c4615c993d2b552e0d2bd1ade49b56e5beb",
@@ -59405,9 +59421,21 @@
         "affected_versions": "v5.12-rc7 to v5.13-rc1",
         "breaks": "8a4cd82d62b5ec7e5482333a72b58a4eea4979f0",
         "cmt_msg": "net/nfc: fix use-after-free llcp_sock_bind/connect",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "fixes": "c61760e6940dd4039a7f5e84a6afc9cdbf4d82b6",
         "last_affected_version": "5.12.3",
-        "last_modified": "2021-05-14",
+        "last_modified": "2021-05-17",
         "nvd_text": "Use After Free vulnerability in nfc sockets in the Linux Kernel before 5.12.2 allows local attackers to elevate their privileges. In typical configurations, the issue can only be triggered by a privileged local user with the CAP_NET_RAW capability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-23134",
@@ -60789,9 +60817,32 @@
         "affected_versions": "unk to v5.13-rc1",
         "breaks": "",
         "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "e2cb6b891ad2b8caa9131e3be70f45243df82a80",
         "last_affected_version": "5.12.3",
-        "last_modified": "2021-05-14",
+        "last_modified": "2021-05-17",
         "nvd_text": "net/bluetooth/hci_request.c in the Linux kernel through 5.12.2 has a race condition for removal of the HCI controller.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-32399",
@@ -60803,10 +60854,10 @@
         }
     },
     "CVE-2021-32606": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-05-12",
+        "affected_versions": "v5.11-rc1 to unk",
+        "breaks": "921ca574cd382142add8b12d0a7117f495510de5",
+        "fixes": "2b17c400aeb44daf041627722581ade527bb3c1d",
+        "last_modified": "2021-05-17",
         "nvd_text": "In the Linux kernel 5.11 through 5.12.2, isotp_setsockopt in net/can/isotp.c allows privilege escalation to root by leveraging a use-after-free. (This does not affect earlier versions that lack CAN ISOTP SF_BROADCAST support.)",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-32606",
@@ -60815,6 +60866,40 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-32606",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-32606",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-32606"
+        }
+    },
+    "CVE-2021-33033": {
+        "affected_versions": "unk to v5.12-rc3",
+        "breaks": "",
+        "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts",
+        "fixes": "ad5d07f4a9cd671233ae20983848874731102c08",
+        "last_affected_version": "5.11.6",
+        "last_modified": "2021-05-17",
+        "nvd_text": "The Linux kernel before 5.11.14 has a use-after-free in cipso_v4_genopt in net/ipv4/cipso_ipv4.c because the CIPSO and CALIPSO refcounting for the DOI definitions is mishandled, aka CID-ad5d07f4a9cd. This leads to writing an arbitrary value.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33033",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-33033",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-33033",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-33033",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-33033",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-33033"
+        }
+    },
+    "CVE-2021-33034": {
+        "affected_versions": "unk to v5.13-rc1",
+        "breaks": "",
+        "cmt_msg": "Bluetooth: verify AMP hci_chan before amp_destroy",
+        "fixes": "5c4c8c9544099bb9043a10a5318130a943e32fc3",
+        "last_affected_version": "5.12.3",
+        "last_modified": "2021-05-17",
+        "nvd_text": "In the Linux kernel before 5.12.4, net/bluetooth/hci_event.c has a use-after-free when destroying an hci_chan, aka CID-5c4c8c954409. This leads to writing an arbitrary value.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33034",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-33034",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-33034",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-33034",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-33034",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-33034"
         }
     },
     "CVE-2021-3347": {
@@ -61136,10 +61221,32 @@
         "affected_versions": "v5.9-rc1 to v5.12-rc8",
         "breaks": "1aa561b1a4c0ae2a9a9b9c21a84b5ca66b4775d8",
         "cmt_msg": "KVM: VMX: Don't use vcpu->run->internal.ndata as an array index",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+            "score": 3.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+            "score": 7.1
+        },
         "cwe": "Out-of-bounds Write",
         "fixes": "04c4f2ee3f68c9a4bf1653d15f1a9a435ae33f7a",
         "last_affected_version": "5.11.15",
-        "last_modified": "2021-05-07",
+        "last_modified": "2021-05-17",
         "nvd_text": "A flaw was found in the Linux kernel in versions before 5.12. The value of internal.ndata, in the KVM API, is mapped to an array index, which can be updated by a user process at anytime which could lead to an out-of-bounds write. The highest threat from this vulnerability is to data integrity and system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3501",
