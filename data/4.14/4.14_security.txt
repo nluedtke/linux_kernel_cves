@@ -863,6 +863,7 @@ CVEs fixed in 4.14.226:
   CVE-2019-19060: 593b7ff46bc064f2acac9ed6b7baa3189d2bcd90 iio: imu: adis16400: release allocated memory on failure
   CVE-2021-28660: 33cdc63f0e07abf637ba326b6016731be958088d staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan()
   CVE-2021-29265: 04f879ba79b056041972122c1dc597b79d2464e5 usbip: fix stub_dev usbip_sockfd_store() races leading to gpf
+  CVE-2021-33033: ab44f7317c16ddcf9ee12ba2aca60771266c2dc6 cipso,calipso: resolve a number of problems with the DOI refcounts
 
 CVEs fixed in 4.14.227:
   CVE-2021-28964: 0fbf41006d8c850963049c35563e7775fe7c2164 btrfs: fix race when cloning extent buffer during rewind of an old root
@@ -884,6 +885,7 @@ CVEs fixed in 4.14.231:
   CVE-2020-25670: 538a6ff11516d38a61e237d2d2dc04c30c845fbe nfc: fix refcount leak in llcp_sock_bind()
   CVE-2020-25671: b1d5c07a3b597766bbf5bf61083cd65e72034144 nfc: fix refcount leak in llcp_sock_connect()
   CVE-2020-25672: 02b99cae71335f9f38d0a164ffe3a7a1328f44fc nfc: fix memory leak in llcp_sock_connect()
+  CVE-2020-25673: 892e1f065c1b3c99a12a1a41683f9ddbc22abb3e nfc: Avoid endless loops caused by repeated llcp_sock_connect()
 
 CVEs fixed in 4.14.232:
   CVE-2020-29374: 407faed92b4a4e2ad900d61ea3831dd597640f29 gup: document and work around "COW can break either way" issue
@@ -949,6 +951,7 @@ Outstanding CVEs:
   CVE-2019-20794: (unk)  
   CVE-2019-20908: (unk) efi: Restrict efivar_ssdt_load when the kernel is locked down 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
+  CVE-2019-25044: (unk) block: free sched's request pool in blk_cleanup_queue 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2019-9444: (unk) printk: hash addresses printed with %p 
@@ -966,9 +969,18 @@ Outstanding CVEs:
   CVE-2020-16120: (unk) ovl: switch to mounter creds in readdir 
   CVE-2020-24502: (unk)  
   CVE-2020-24503: (unk)  
-  CVE-2020-24504: (unk)  
+  CVE-2020-24504: (unk) ice: create scheduler aggregator node config and move VSIs 
+  CVE-2020-24586: (unk)  
+  CVE-2020-24587: (unk)  
+  CVE-2020-24588: (unk)  
   CVE-2020-25220: (unk)  
-  CVE-2020-25673: (unk)  
+  CVE-2020-26139: (unk)  
+  CVE-2020-26140: (unk)  
+  CVE-2020-26141: (unk)  
+  CVE-2020-26142: (unk)  
+  CVE-2020-26143: (unk)  
+  CVE-2020-26145: (unk)  
+  CVE-2020-26147: (unk)  
   CVE-2020-26541: (unk) certs: Add EFI_CERT_X509_GUID support for dbx entries 
   CVE-2020-27820: (unk)  
   CVE-2020-27835: (unk) IB/hfi1: Ensure correct mm is used at all times 
@@ -985,4 +997,8 @@ Outstanding CVEs:
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
   CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 
   CVE-2021-29650: (unk) netfilter: x_tables: Use correct memory barriers. 
-  CVE-2021-3506: (unk)  
+  CVE-2021-31440: (unk) bpf: Fix propagation of 32 bit unsigned bounds from 64 bit bounds 
+  CVE-2021-32399: (unk) bluetooth: eliminate the potential race condition when removing the HCI controller 
+  CVE-2021-33034: (unk) Bluetooth: verify AMP hci_chan before amp_destroy 
+  CVE-2021-3506: (unk) f2fs: fix to avoid out-of-bounds memory access 
+  CVE-2021-3542: (unk)  

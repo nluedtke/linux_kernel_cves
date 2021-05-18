@@ -22,6 +22,7 @@ CVEs fixed in 5.11.7:
   CVE-2021-28375: 2754ab0efc08a9ab6f50d4ad592967db37dd38cc misc: fastrpc: restrict user apps from sending kernel RPC messages
   CVE-2021-28660: 1cdd069f7080acf6370250853c1211890f4ff38f staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan()
   CVE-2021-29265: f11d195b505d47d0442c59981efa41c47d0a8c9c usbip: fix stub_dev usbip_sockfd_store() races leading to gpf
+  CVE-2021-33033: 00d566df2cceb8591913b3ea3b43d2918915f7e3 cipso,calipso: resolve a number of problems with the DOI refcounts
 
 CVEs fixed in 5.11.8:
   CVE-2020-27170: 6bf7609666f6b2a9169c39c79a47ef8d6082afae bpf: Prohibit alu ops for pointer types not defining ptr_limit
@@ -57,11 +58,24 @@ CVEs fixed in 5.11.14:
   CVE-2020-25670: 8c9e4971e142e2899606a2490b77a1208c1f4638 nfc: fix refcount leak in llcp_sock_bind()
   CVE-2020-25671: b42800750b07893f2993214c3f777892eb06ad16 nfc: fix refcount leak in llcp_sock_connect()
   CVE-2020-25672: 596ad6296f07c63bed3cbd573de42f99b7984599 nfc: fix memory leak in llcp_sock_connect()
+  CVE-2020-25673: 820d46654348863bf6b359ab1cc978eb1126bcac nfc: Avoid endless loops caused by repeated llcp_sock_connect()
 
 CVEs fixed in 5.11.16:
   CVE-2021-23133: 59b5f3e478dbcb4c384cf0888d6cc9f5cad79f2f net/sctp: fix race condition in sctp_destroy_sock
   CVE-2021-29155: 4ccdc6c6cae38b91c871293fb0ed8c6845a61b51 bpf: Use correct permission flag for mixed signed bounds arithmetic
   CVE-2021-3501: ce541d7b59566a0d94c7c99bfb5d34b050e6af70 KVM: VMX: Don't use vcpu->run->internal.ndata as an array index
+
+CVEs fixed in 5.11.19:
+  CVE-2021-31829: 6eba92a4d4be8feb4dc33976abac544fa99d6ecc bpf: Fix masking negation logic upon negative dst register
+
+CVEs fixed in 5.11.20:
+  CVE-2021-3506: 7fe4c47161c21f3b1c3581c2653147281ca0e4fa f2fs: fix to avoid out-of-bounds memory access
+
+CVEs fixed in 5.11.21:
+  CVE-2021-31440: d11e645725e9850109a40031997fc05b7dda34c7 bpf: Fix propagation of 32 bit unsigned bounds from 64 bit bounds
+  CVE-2021-32399: c20a95f000bc369176d1698fce2515656b5db924 bluetooth: eliminate the potential race condition when removing the HCI controller
+  CVE-2021-33034: 7064d5651ba08adbcd3d8a2fc78f8a117a768935 Bluetooth: verify AMP hci_chan before amp_destroy
+  CVE-2021-3491: 7a8411015f744e68013d77432d869be5ad34208f io_uring: truncate lengths larger than MAX_RW_COUNT on provide buffers
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -105,12 +119,24 @@ Outstanding CVEs:
   CVE-2020-16119: (unk)  
   CVE-2020-24502: (unk)  
   CVE-2020-24503: (unk)  
-  CVE-2020-24504: (unk)  
+  CVE-2020-24504: (unk) ice: create scheduler aggregator node config and move VSIs 
+  CVE-2020-24586: (unk)  
+  CVE-2020-24587: (unk)  
+  CVE-2020-24588: (unk)  
   CVE-2020-25220: (unk)  
-  CVE-2020-25673: (unk)  
+  CVE-2020-26139: (unk)  
+  CVE-2020-26140: (unk)  
+  CVE-2020-26141: (unk)  
+  CVE-2020-26142: (unk)  
+  CVE-2020-26143: (unk)  
+  CVE-2020-26145: (unk)  
+  CVE-2020-26147: (unk)  
   CVE-2020-26541: (unk) certs: Add EFI_CERT_X509_GUID support for dbx entries 
   CVE-2020-27820: (unk)  
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
-  CVE-2021-3506: (unk)  
+  CVE-2021-32606: (unk)  
+  CVE-2021-3489: (unk)  
+  CVE-2021-3490: (unk)  
+  CVE-2021-3542: (unk)  

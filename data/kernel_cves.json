@@ -50525,6 +50525,22 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2019/CVE-2019-2215"
         }
     },
+    "CVE-2019-25044": {
+        "affected_versions": "unk to v5.2-rc4",
+        "breaks": "",
+        "cmt_msg": "block: free sched's request pool in blk_cleanup_queue",
+        "fixes": "c3e2219216c92919a6bd1711f340f5faa98695e6",
+        "last_modified": "2021-05-17",
+        "nvd_text": "The block subsystem in the Linux kernel before 5.2 has a use-after-free that can lead to arbitrary code execution in the kernel context and privilege escalation, aka CID-c3e2219216c9. This is related to blk_mq_free_rqs and blk_cleanup_queue.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-25044",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2019-25044",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2019-25044",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2019-25044",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2019-25044",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2019-25044"
+        }
+    },
     "CVE-2019-3016": {
         "affected_versions": "v4.10-rc1 to v5.6-rc1",
         "breaks": "0b9f6c4615c993d2b552e0d2bd1ade49b56e5beb",
@@ -55814,8 +55830,9 @@
         }
     },
     "CVE-2020-24504": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.12-rc1-dontuse",
         "breaks": "",
+        "cmt_msg": "ice: create scheduler aggregator node config and move VSIs",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -55839,8 +55856,8 @@
             "score": 5.5
         },
         "cwe": "Uncontrolled Resource Consumption",
-        "fixes": "",
-        "last_modified": "2021-02-26",
+        "fixes": "b126bd6bcd6710aa984104e979a5c930f44561b4",
+        "last_modified": "2021-05-06",
         "nvd_text": "Uncontrolled resource consumption in some Intel(R) Ethernet E810 Adapter drivers for Linux before version 1.0.4 may allow an authenticated user to potentially enable denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24504",
@@ -55849,6 +55866,51 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-24504",
             "SUSE": "https://www.suse.com/security/cve/CVE-2020-24504",
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-24504"
+        }
+    },
+    "CVE-2020-24586": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-12",
+        "nvd_text": "The 802.11 standard that underpins Wi-Fi Protected Access (WPA, WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require that received fragments be cleared from memory after (re)connecting to a network. Under the right circumstances, when another device sends fragmented frames encrypted using WEP, CCMP, or GCMP, this can be abused to inject arbitrary network packets and/or exfiltrate user data.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24586",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-24586",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-24586",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-24586",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-24586",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-24586"
+        }
+    },
+    "CVE-2020-24587": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-12",
+        "nvd_text": "The 802.11 standard that underpins Wi-Fi Protected Access (WPA, WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require that all fragments of a frame are encrypted under the same key. An adversary can abuse this to decrypt selected fragments when another device sends fragmented frames and the WEP, CCMP, or GCMP encryption key is periodically renewed.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24587",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-24587",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-24587",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-24587",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-24587",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-24587"
+        }
+    },
+    "CVE-2020-24588": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-12",
+        "nvd_text": "The 802.11 standard that underpins Wi-Fi Protected Access (WPA, WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require that the A-MSDU flag in the plaintext QoS header field is authenticated. Against devices that support receiving non-SSP A-MSDU frames (which is mandatory as part of 802.11n), an adversary can abuse this to inject arbitrary network packets.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24588",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-24588",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-24588",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-24588",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-24588",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-24588"
         }
     },
     "CVE-2020-25211": {
@@ -56448,10 +56510,12 @@
         }
     },
     "CVE-2020-25673": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2020-11-02",
+        "affected_versions": "v3.11-rc1 to v5.12-rc7",
+        "breaks": "b4011239a08e7e6c2c6e970dfa9e8ecb73139261",
+        "cmt_msg": "nfc: Avoid endless loops caused by repeated llcp_sock_connect()",
+        "fixes": "4b5db93e7f2afbdfe3b78e37879a85290187e6f1",
+        "last_affected_version": "5.11.13",
+        "last_modified": "2021-05-12",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25673",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-25673",
@@ -56581,9 +56645,114 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-26088"
         }
     },
-    "CVE-2020-26541": {
+    "CVE-2020-26139": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-12",
+        "nvd_text": "An issue was discovered in the kernel in NetBSD 7.1. An Access Point (AP) forwards EAPOL frames to other clients even though the sender has not yet successfully authenticated to the AP. This might be abused in projected Wi-Fi networks to launch denial-of-service attacks against connected clients and makes it easier to exploit other vulnerabilities in connected clients.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26139",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-26139",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-26139",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-26139",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-26139",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-26139"
+        }
+    },
+    "CVE-2020-26140": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-14",
+        "nvd_text": "An issue was discovered in the ALFA Windows 10 driver 6.1316.1209 for AWUS036H. The WEP, WPA, WPA2, and WPA3 implementations accept plaintext frames in a protected Wi-Fi network. An adversary can abuse this to inject arbitrary data frames independent of the network configuration.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26140",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-26140",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-26140",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-26140",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-26140",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-26140"
+        }
+    },
+    "CVE-2020-26141": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-12",
+        "nvd_text": "An issue was discovered in the ALFA Windows 10 driver 6.1316.1209 for AWUS036H. The Wi-Fi implementation does not verify the Message Integrity Check (authenticity) of fragmented TKIP frames. An adversary can abuse this to inject and possibly decrypt packets in WPA or WPA2 networks that support the TKIP data-confidentiality protocol.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26141",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-26141",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-26141",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-26141",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-26141",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-26141"
+        }
+    },
+    "CVE-2020-26142": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-14",
+        "nvd_text": "An issue was discovered in the kernel in OpenBSD 6.6. The WEP, WPA, WPA2, and WPA3 implementations treat fragmented frames as full frames. An adversary can abuse this to inject arbitrary network packets, independent of the network configuration.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26142",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-26142",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-26142",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-26142",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-26142",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-26142"
+        }
+    },
+    "CVE-2020-26143": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-14",
+        "nvd_text": "An issue was discovered in the ALFA Windows 10 driver 1030.36.604 for AWUS036ACH. The WEP, WPA, WPA2, and WPA3 implementations accept fragmented plaintext frames in a protected Wi-Fi network. An adversary can abuse this to inject arbitrary data frames independent of the network configuration.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26143",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-26143",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-26143",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-26143",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-26143",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-26143"
+        }
+    },
+    "CVE-2020-26145": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-12",
+        "nvd_text": "An issue was discovered on Samsung Galaxy S3 i9305 4.4.4 devices. The WEP, WPA, WPA2, and WPA3 implementations accept second (or subsequent) broadcast fragments even when sent in plaintext and process them as full unfragmented frames. An adversary can abuse this to inject arbitrary network packets independent of the network configuration.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26145",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-26145",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-26145",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-26145",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-26145",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-26145"
+        }
+    },
+    "CVE-2020-26147": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-12",
+        "nvd_text": "An issue was discovered in the Linux kernel 5.8.9. The WEP, WPA, WPA2, and WPA3 implementations reassemble fragments even though some of them were sent in plaintext. This vulnerability can be abused to inject packets and/or exfiltrate selected fragments when another device sends fragmented frames and the WEP, CCMP, or GCMP data-confidentiality protocol is used.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26147",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-26147",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-26147",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-26147",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-26147",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-26147"
+        }
+    },
+    "CVE-2020-26541": {
+        "affected_versions": "v2.6.12-rc2 to v5.13-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "certs: Add EFI_CERT_X509_GUID support for dbx entries",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -56609,7 +56778,7 @@
         },
         "cwe": "Unspecified",
         "fixes": "56c5812623f95313f6a46fbf0beee7fa17c68bbf",
-        "last_modified": "2021-05-03",
+        "last_modified": "2021-05-12",
         "nvd_text": "The Linux kernel through 5.8.13 does not properly enforce the Secure Boot Forbidden Signature Database (aka dbx) protection mechanism. This affects certs/blacklist.c and certs/system_keyring.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26541",
@@ -57089,8 +57258,8 @@
         "cwe": "Use After Free",
         "fixes": "c1f6e3c818dd734c30f6a7eeebf232ba2cf3181d",
         "last_affected_version": "5.6.13",
-        "last_modified": "2021-03-17",
-        "nvd_text": "A flaw was found in the Linux kernels implementation of MIDI, where an attacker with a local account and the permissions to issue an ioctl commands to midi devices, could trigger a use-after-free. A write to this specific memory while freed and before use could cause the flow of execution to change and possibly allow for memory corruption or privilege escalation.",
+        "last_modified": "2021-05-14",
+        "nvd_text": "A flaw was found in the Linux kernel’s implementation of MIDI, where an attacker with a local account and the permissions to issue ioctl commands to midi devices could trigger a use-after-free issue. A write to this specific memory while freed and before use causes the flow of execution to change and possibly allow for memory corruption or privilege escalation. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27786",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27786",
@@ -57176,7 +57345,8 @@
         "cmt_msg": "speakup: Reject setting the speakup line discipline outside of speakup",
         "fixes": "f0992098cadb4c9c6a00703b66cafe604e178fea",
         "last_affected_version": "5.9.13",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-14",
+        "nvd_text": "A vulnerability was found in Linux Kernel where in the spk_ttyio_receive_buf2() function, it would dereference spk_ttyio_synth without checking whether it is NULL or not, and may lead to a NULL-ptr deref crash.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27830",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27830",
@@ -57272,7 +57442,8 @@
         "cmt_msg": "lib/syscall: fix syscall registers retrieval on 32-bit platforms",
         "fixes": "4f134b89a24b965991e7c345b9a4591821f7c2a6",
         "last_affected_version": "5.9.13",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-12",
+        "nvd_text": "An information disclosure vulnerability exists in the /proc/pid/syscall functionality of Linux Kernel 5.1 Stable and 5.4.66. More specifically, this issue has been introduced in v5.1-rc4 (commit 631b7abacd02b88f4b0795c08b54ad4fc3e7c7c0) and is still present in v5.10-rc4, so it’s likely that all versions in between are affected. An attacker can read /proc/pid/syscall to trigger this vulnerability, which leads to the kernel leaking memory contents.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28588",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-28588",
@@ -58019,9 +58190,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.10-rc7",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "net/x25: prevent a couple of overflows",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:P/A:C",
+            "score": 6.8
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "6ee50c8e262a0f0693dad264c3c99e30e6442a56",
         "last_affected_version": "5.9.12",
-        "last_modified": "2021-03-22",
+        "last_modified": "2021-05-14",
+        "nvd_text": "An out-of-bounds (OOB) memory access flaw was found in x25_bind in net/x25/af_x25.c in the Linux kernel version v5.12-rc5. A bounds check failure allows a local attacker with a user account on the system to gain access to out-of-bounds memory, leading to a system crash or a leak of internal kernel information. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-35519",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-35519",
@@ -58790,9 +58985,33 @@
         "affected_versions": "v4.15-rc1 to v5.8-rc1",
         "breaks": "90e33d45940793def6f773b2d528e9f3c84ffdc7",
         "cmt_msg": "tun: correct header offsets in napi frags mode",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.7
+        },
+        "cwe": "Use After Free",
         "fixes": "96aa1b22bd6bb9fccf62f6261f390ed6f3e7967f",
         "last_affected_version": "5.7.2",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "In tun_get_user of tun.c, there is possible memory corruption due to a use after free. This could lead to local escalation of privilege with System execution privileges required. User interaction is not required for exploitation. Product: Android; Versions: Android kernel; Android ID: A-146554327.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0342",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0342",
@@ -58805,8 +59024,32 @@
     "CVE-2021-0399": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2021-03-02",
+        "last_modified": "2021-05-06",
+        "nvd_text": "In qtaguid_untag of xt_qtaguid.c, there is a possible memory corruption due to a use after free. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-176919394References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0399",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0399",
@@ -58867,9 +59110,33 @@
         "affected_versions": "v5.5-rc1 to v5.10-rc1",
         "breaks": "fcb323cc53e29d9cc696d606bb42736b32dd9825",
         "cmt_msg": "io_uring: don't rely on weak ->files references",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Input Validation",
         "fixes": "0f2122045b946241a9e549c2a76cea54fa58a7ff",
         "last_affected_version": "5.10.14",
-        "last_modified": "2021-04-02",
+        "last_modified": "2021-05-06",
+        "nvd_text": "There is a vulnerability in the linux kernel versions higher than 5.2 (if kernel compiled with config params CONFIG_BPF_SYSCALL=y , CONFIG_BPF=y , CONFIG_CGROUPS=y , CONFIG_CGROUP_BPF=y , CONFIG_HARDENED_USERCOPY not set, and BPF hook to getsockopt is registered). As result of BPF execution, the local user can trigger bug in __cgroup_bpf_run_filter_getsockopt() function that can lead to heap overflow (because of non-hardened usercopy). The impact of attack could be deny of service or possibly privileges escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20194",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20194",
@@ -58882,8 +59149,32 @@
     "CVE-2021-20219": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Incorrect Comparison",
         "fixes": "",
-        "last_modified": "2021-03-30",
+        "last_modified": "2021-05-06",
+        "nvd_text": "A denial of service vulnerability was found in n_tty_receive_char_special in drivers/tty/n_tty.c of the Linux kernel. In this flaw a local attacker with a normal user privilege could delay the loop (due to a changing ldata->read_head, and a missing sanity check) and cause a threat to the system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20219",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20219",
@@ -58898,9 +59189,33 @@
         "affected_versions": "v5.5-rc1 to v5.10-rc1",
         "breaks": "fcb323cc53e29d9cc696d606bb42736b32dd9825",
         "cmt_msg": "io_uring: don't rely on weak ->files references",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:C",
+            "score": 6.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "0f2122045b946241a9e549c2a76cea54fa58a7ff",
         "last_affected_version": "5.9.2",
-        "last_modified": "2021-04-02",
+        "last_modified": "2021-05-06",
+        "nvd_text": "A use-after-free flaw was found in the io_uring in Linux kernel, where a local attacker with a user privilege could cause a denial of service problem on the system The issue results from the lack of validating the existence of an object prior to performing operations on the object by not incrementing the file reference counter while in use. The highest threat from this vulnerability is to data integrity, confidentiality and system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20226",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20226",
@@ -58930,9 +59245,33 @@
         "affected_versions": "v2.6.12-rc2 to v4.5-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "floppy: fix lock_fdc() signal handling",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.4
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "a0c80efe5956ccce9fe7ae5c78542578c07bc20a",
         "last_affected_version": "4.4.261",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "A race condition was found in the Linux kernels implementation of the floppy disk drive controller driver software. The impact of this issue is lessened by the fact that the default permissions on the floppy device (/dev/fd0) are restricted to root. If the permissions on the device have changed the impact changes greatly. In the default configuration root (or equivalent) permissions are required to attack this flaw.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20261",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20261",
@@ -58946,9 +59285,33 @@
         "affected_versions": "v2.6.38 to v4.5-rc3",
         "breaks": "b3ca9b02b00704053a38bfe4c31dbbb9c13595d0",
         "cmt_msg": "af_unix: fix struct pid memory leak",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Uncontrolled Resource Consumption",
         "fixes": "fa0dc04df259ba2df3ce1920e9690c7842f8fa4b",
         "last_affected_version": "4.4.3",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "A flaw was found in the way memory resources were freed in the unix_stream_recvmsg function in the Linux kernel when a signal was pending. This flaw allows an unprivileged local user to crash the system by exhausting available memory. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20265",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20265",
@@ -58962,9 +59325,33 @@
         "affected_versions": "v5.7-rc1 to v5.11-rc5",
         "breaks": "3f50f132d8400e129fc9eb68b5020167ef80a244",
         "cmt_msg": "bpf: Fix signed_{sub,add32}_overflows type handling",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Input Validation",
         "fixes": "bc895e8b2a64e502fbba72748d59618272052a8b",
         "last_affected_version": "5.10.9",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An out-of-bounds access flaw was found in the Linux kernel's implementation of the eBPF code verifier in the way a user running the eBPF script calls dev_map_init_map or sock_map_alloc. This flaw allows a local user to crash the system or possibly escalate their privileges. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20268",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20268",
@@ -58994,9 +59381,33 @@
         "affected_versions": "v4.10-rc1 to v5.12-rc8",
         "breaks": "61023658760032e97869b07d54be9681d2529e77",
         "cmt_msg": "net/sctp: fix race condition in sctp_destroy_sock",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "b166a20b07382b8bc1dcee2a448715c9c2c81b5b",
         "last_affected_version": "5.11.15",
-        "last_modified": "2021-05-03",
+        "last_modified": "2021-05-06",
+        "nvd_text": "A race condition in Linux kernel SCTP sockets (net/sctp/socket.c) before 5.12-rc8 can lead to kernel privilege escalation from the context of a network service or an unprivileged process. If sctp_destroy_sock is called without sock_net(sk)->sctp.addr_wq_lock then an element is removed from the auto_asconf_splist list without any proper locking. This can be exploited by an attacker with network service privileges to escalate to root or from the context of an unprivileged user directly if a BPF_CGROUP_INET_SOCK_CREATE is attached which denies creation of some SCTP socket.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-23133",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-23133",
@@ -59006,13 +59417,66 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-23133"
         }
     },
+    "CVE-2021-23134": {
+        "affected_versions": "v5.12-rc7 to v5.13-rc1",
+        "breaks": "8a4cd82d62b5ec7e5482333a72b58a4eea4979f0",
+        "cmt_msg": "net/nfc: fix use-after-free llcp_sock_bind/connect",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "fixes": "c61760e6940dd4039a7f5e84a6afc9cdbf4d82b6",
+        "last_affected_version": "5.12.3",
+        "last_modified": "2021-05-17",
+        "nvd_text": "Use After Free vulnerability in nfc sockets in the Linux Kernel before 5.12.2 allows local attackers to elevate their privileges. In typical configurations, the issue can only be triggered by a privileged local user with the CAP_NET_RAW capability.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-23134",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-23134",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-23134",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-23134",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-23134",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-23134"
+        }
+    },
     "CVE-2021-26708": {
         "affected_versions": "v5.5-rc1 to v5.11-rc7",
         "breaks": "c0cfa2d8a788fcf45df5bf4070ab2474c88d543a",
         "cmt_msg": "vsock: fix the race conditions in multi-transport support",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Improper Privilege Management",
         "fixes": "c518adafa39f37858697ac9309c6cf1805581446",
         "last_affected_version": "5.10.12",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "A local privilege escalation was discovered in the Linux kernel before 5.10.13. Multiple race conditions in the AF_VSOCK implementation are caused by wrong locking in net/vmw_vsock/af_vsock.c. The race conditions were implicitly introduced in the commits that added VSOCK multi-transport support.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26708",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26708",
@@ -59026,9 +59490,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen-blkback: fix error handling in xen_blkbk_map()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Unspecified",
         "fixes": "871997bc9e423f05c7da7c9178e62dde5df2a7f8",
         "last_affected_version": "5.11.0",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel 3.11 through 5.10.16, as used by Xen. To service requests to the PV backend, the driver maps grant references provided by the frontend. In this process, errors may be encountered. In one case, an error encountered earlier might be discarded by later processing, resulting in the caller assuming successful mapping, and hence subsequent operations trying to access space that wasn't mapped. In another case, internal state would be insufficiently updated, preventing safe recovery from the error. This affects drivers/block/xen-blkback/blkback.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26930",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26930",
@@ -59042,9 +59530,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+            "score": 1.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Allocation of Resources Without Limits or Throttling",
         "fixes": "5a264285ed1cd32e26d9de4f3c8c6855e467fd63",
         "last_affected_version": "5.11.0",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel 2.6.39 through 5.10.16, as used in Xen. Block, net, and SCSI backends consider certain errors a plain bug, deliberately causing a kernel crash. For errors potentially being at least under the influence of guests (such as out of memory conditions), it isn't correct to assume a plain bug. Memory allocations potentially causing such crashes occur only when Linux is running in PV mode, though. This affects drivers/block/xen-blkback/blkback.c and drivers/xen/xen-scsiback.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26931",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26931",
@@ -59058,9 +59570,33 @@
         "affected_versions": "unk to v5.12-rc1",
         "breaks": "",
         "cmt_msg": "Xen/x86: don't bail early from clear_foreign_p2m_mapping()",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+            "score": 1.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
         "fixes": "a35f2ef3b7376bfd0a57f7844bd7454389aae1fc",
         "last_affected_version": "5.11.0",
-        "last_modified": "2021-03-02",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel 3.2 through 5.10.16, as used by Xen. Grant mapping operations often occur in batch hypercalls, where a number of operations are done in a single hypercall, the success or failure of each one is reported to the backend driver, and the backend driver then loops over the results, performing follow-up actions based on the success or failure of each operation. Unfortunately, when running in PV mode, the Linux backend drivers mishandle this: Some errors are ignored, effectively implying their success from the success of related batch elements. In other cases, errors resulting from one batch element lead to further batch elements not being inspected, and hence successful ones to not be possible to properly unmap upon error recovery. Only systems with Linux backends running in PV mode are vulnerable. Linux backends run in HVM / PVH modes are not vulnerable. This affects arch/*/xen/p2m.c and drivers/xen/gntdev.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26932",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26932",
@@ -59073,8 +59609,32 @@
     "CVE-2021-26934": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Unspecified",
         "fixes": "",
-        "last_modified": "2021-02-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel 4.18 through 5.10.16, as used by Xen. The backend allocation (aka be-alloc) mode of the drm_xen_front drivers was not meant to be a supported configuration, but this wasn't stated accordingly in its support status entry.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26934",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26934",
@@ -59088,9 +59648,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc2",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "scsi: iscsi: Restrict sessions and handles to admin capabilities",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+            "score": 3.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "Low",
+            "Confidentiality": "Low",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L",
+            "score": 4.4
+        },
+        "cwe": "Unspecified",
         "fixes": "688e8128b7a92df982709a4137ea4588d16f24aa",
         "last_affected_version": "5.11.3",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.11.3. A kernel pointer leak can be used to determine the address of the iscsi_transport structure. When an iSCSI transport is registered with the iSCSI subsystem, the transport's handle is available to unprivileged users via the sysfs file system, at /sys/class/iscsi_transport/$TRANSPORT_NAME/handle. When read, the show_transport_handle function (in drivers/scsi/scsi_transport_iscsi.c) is called, which leaks the handle. This handle is actually the pointer to an iscsi_transport struct in the kernel module's global variables.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-27363",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-27363",
@@ -59104,9 +59688,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc2",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "scsi: iscsi: Restrict sessions and handles to admin capabilities",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+            "score": 3.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "score": 7.1
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "688e8128b7a92df982709a4137ea4588d16f24aa",
         "last_affected_version": "5.11.3",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.11.3. drivers/scsi/scsi_transport_iscsi.c is adversely affected by the ability of an unprivileged user to craft Netlink messages.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-27364",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-27364",
@@ -59120,9 +59728,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc2",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "scsi: iscsi: Ensure sysfs attributes are limited to PAGE_SIZE",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "ec98ea7070e94cc25a422ec97d1421e28d97b7ee",
         "last_affected_version": "5.11.3",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.11.3. Certain iSCSI data structures do not have appropriate length constraints or checks, and can exceed the PAGE_SIZE value. An unprivileged user can send a Netlink message that is associated with iSCSI, and has a length up to the maximum length of a Netlink message.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-27365",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-27365",
@@ -59136,9 +59768,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc2",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Xen/gnttab: handle p2m update errors on a per-slot basis",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Changed",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+            "score": 6.5
+        },
+        "cwe": "Allocation of Resources Without Limits or Throttling",
         "fixes": "8310b77b48c5558c140e7a57a702e7819e62f04e",
         "last_affected_version": "5.11.3",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.11.3, as used with Xen PV. A certain part of the netback driver lacks necessary treatment of errors such as failed memory allocations (as a result of changes to the handling of grant mapping errors). A host OS denial of service may occur during misbehavior of a networking frontend driver. NOTE: this issue exists because of an incomplete fix for CVE-2021-26931.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28038",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28038",
@@ -59152,9 +59808,33 @@
         "affected_versions": "v5.9-rc4 to v5.12-rc2",
         "breaks": "9e2369c06c8a181478039258a4598c1ddd2cadfa",
         "cmt_msg": "xen: fix p2m size in dom0 for disabled memory hotplug case",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Changed",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+            "score": 6.5
+        },
+        "cwe": "Uncontrolled Resource Consumption",
         "fixes": "882213990d32fd224340a4533f6318dd152be4b2",
         "last_affected_version": "5.11.3",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel 5.9.x through 5.11.3, as used with Xen. In some less-common configurations, an x86 PV guest OS user can crash a Dom0 or driver domain via a large amount of I/O activity. The issue relates to misuse of guest physical addresses when a configuration has CONFIG_XEN_UNPOPULATED_ALLOC but not CONFIG_XEN_BALLOON_MEMORY_HOTPLUG.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28039",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28039",
@@ -59168,9 +59848,33 @@
         "affected_versions": "v5.1-rc1 to v5.12-rc3",
         "breaks": "c68cfb718c8f97b7f7a50ed66be5feb42d0c8988",
         "cmt_msg": "misc: fastrpc: restrict user apps from sending kernel RPC messages",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Privilege Management",
         "fixes": "20c40794eb85ea29852d7bc37c55713802a543d6",
         "last_affected_version": "5.11.6",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.11.6. fastrpc_internal_invoke in drivers/misc/fastrpc.c does not prevent user applications from sending kernel RPC messages, aka CID-20c40794eb85. This is a related issue to CVE-2019-2308.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28375",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28375",
@@ -59184,9 +59888,33 @@
         "affected_versions": "v3.12-rc1 to v5.12-rc3",
         "breaks": "a2c60d42d97cdbeee3c7371cd3502fca77f07d39",
         "cmt_msg": "staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "74b6b20df8cfe90ada777d621b54c32e69e27cd7",
         "last_affected_version": "5.11.6",
-        "last_modified": "2021-03-29",
+        "last_modified": "2021-05-06",
+        "nvd_text": "rtw_wx_set_scan in drivers/staging/rtl8188eu/os_dep/ioctl_linux.c in the Linux kernel through 5.11.6 allows writing beyond the end of the ->ssid[] array. NOTE: from the perspective of kernel.org releases, CVE IDs are not normally used for drivers/staging/* (unfinished work); however, system integrators may have situations in which a drivers/staging issue is relevant to their own customer base.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28660",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28660",
@@ -59200,9 +59928,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc6",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Changed",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+            "score": 6.5
+        },
+        "cwe": "Improper Initialization",
         "fixes": "a846738f8c3788d846ed1f587270d2f2e3d32432",
         "last_affected_version": "5.11.10",
-        "last_modified": "2021-04-05",
+        "last_modified": "2021-05-06",
+        "nvd_text": "The fix for XSA-365 includes initialization of pointers such that subsequent cleanup code wouldn't use uninitialized or stale values. This initialization went too far and may under certain conditions also overwrite pointers which are in need of cleaning up. The lack of cleanup would result in leaking persistent grants. The leak in turn would prevent fully cleaning up after a respective guest has died, leaving around zombie domains. All Linux versions having the fix for XSA-365 applied are vulnerable. XSA-365 was classified to affect versions back to at least 3.11.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28688",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28688",
@@ -59216,9 +59968,33 @@
         "affected_versions": "v5.11-rc1 to v5.12-rc4",
         "breaks": "5d069dbe8aaf2a197142558b6fb2978189ba3454",
         "cmt_msg": "fuse: fix live lock in fuse_iget()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Excessive Iteration",
         "fixes": "775c5033a0d164622d9d10dd0f0a5531639ed3ed",
         "last_affected_version": "5.11.7",
-        "last_modified": "2021-03-24",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in fs/fuse/fuse_i.h in the Linux kernel before 5.11.8. A \"stall on CPU\" can occur because a retry loop continually finds the same bad inode, aka CID-775c5033a0d1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28950",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28950",
@@ -59232,9 +60008,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc2",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "io_uring: ensure that SQPOLL thread is started for exit",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
         "fixes": "3ebba796fa251d042be42b929a2d916ee5c34a49",
         "last_affected_version": "5.11.8",
-        "last_modified": "2021-03-25",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in fs/io_uring.c in the Linux kernel through 5.11.8. It allows attackers to cause a denial of service (deadlock) because exit may be waiting to park a SQPOLL thread, but concurrently that SQPOLL thread is waiting for a signal to start, aka CID-3ebba796fa25.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28951",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28951",
@@ -59248,9 +60048,33 @@
         "affected_versions": "v5.7-rc1 to v5.12-rc4",
         "breaks": "1b93a88431470ea0b943157999084d9c7e6e3bd3",
         "cmt_msg": "ASoC: qcom: sdm845: Fix array out of bounds access",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "1c668e1c0a0f74472469cd514f40c9012b324c31",
         "last_affected_version": "5.11.8",
-        "last_modified": "2021-03-25",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.11.8. The sound/soc/qcom/sdm845.c soundwire device driver has a buffer overflow when an unexpected port ID number is encountered, aka CID-1c668e1c0a0f. (This has been fixed in 5.12-rc4.)",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28952",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28952",
@@ -59264,9 +60088,33 @@
         "affected_versions": "v3.7-rc3 to v5.12-rc4",
         "breaks": "834328a8493079d15f30866ace42489463f52571",
         "cmt_msg": "btrfs: fix race when cloning extent buffer during rewind of an old root",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+            "score": 1.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.7
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "dbcc7d57bffc0c8cac9dac11bec548597d59a6a5",
         "last_affected_version": "5.11.8",
-        "last_modified": "2021-03-25",
+        "last_modified": "2021-05-06",
+        "nvd_text": "A race condition was discovered in get_old_root in fs/btrfs/ctree.c in the Linux kernel through 5.11.8. It allows attackers to cause a denial of service (BUG) because of a lack of locking on an extent buffer before a cloning operation, aka CID-dbcc7d57bffc.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28964",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28964",
@@ -59280,9 +60128,33 @@
         "affected_versions": "v4.5-rc1 to v5.12-rc4",
         "breaks": "01330d7288e0050c5aaabc558059ff91589e67cd",
         "cmt_msg": "perf/x86/intel: Fix a crash caused by zero PEBS status",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Uncontrolled Resource Consumption",
         "fixes": "d88d05a9e0b6d9356e97129d4ff9942d765f46ea",
         "last_affected_version": "5.11.8",
-        "last_modified": "2021-03-25",
+        "last_modified": "2021-05-06",
+        "nvd_text": "In intel_pmu_drain_pebs_nhm in arch/x86/events/intel/ds.c in the Linux kernel through 5.11.8 on some Haswell CPUs, userspace applications (such as perf-fuzzer) can cause a system crash because the PEBS status in a PEBS record is mishandled, aka CID-d88d05a9e0b6.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28971",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28971",
@@ -59296,9 +60168,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc4",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "PCI: rpadlpar: Fix potential drc_name corruption in store functions",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.7
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "cc7a0bb058b85ea03db87169c60c7cfdd5d34678",
         "last_affected_version": "5.11.8",
-        "last_modified": "2021-03-25",
+        "last_modified": "2021-05-06",
+        "nvd_text": "In drivers/pci/hotplug/rpadlpar_sysfs.c in the Linux kernel through 5.11.8, the RPA PCI Hotplug driver has a user-tolerable buffer overflow when writing a new device name to the driver from userspace, allowing userspace to write data to the kernel stack frame directly. This occurs because add_slot_store and remove_slot_store mishandle drc_name '\\0' termination, aka CID-cc7a0bb058b8.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28972",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28972",
@@ -59312,9 +60208,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc7",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "bpf, x86: Validate computation of branch displacements for x86-64",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
         "fixes": "e4d4d456436bfb2fe412ee2cd489f7658449b098",
         "last_affected_version": "5.11.12",
-        "last_modified": "2021-04-13",
+        "last_modified": "2021-05-06",
+        "nvd_text": "BPF JIT compilers in the Linux kernel through 5.11.12 have incorrect computation of branch displacements, allowing them to execute arbitrary code within the kernel context. This affects arch/x86/net/bpf_jit_comp.c and arch/x86/net/bpf_jit_comp32.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29154",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29154",
@@ -59325,12 +60245,36 @@
         }
     },
     "CVE-2021-29155": {
-        "affected_versions": "unk to v5.12-rc8",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc8",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "bpf: Use correct permission flag for mixed signed bounds arithmetic",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "9601148392520e2e134936e76788fc2a6371e7be",
         "last_affected_version": "5.11.15",
-        "last_modified": "2021-04-27",
+        "last_modified": "2021-05-12",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.11.x. kernel/bpf/verifier.c performs undesirable out-of-bounds speculation on pointer arithmetic, leading to side-channel attacks that defeat Spectre mitigations and obtain sensitive information from kernel memory. Specifically, for sequences of pointer arithmetic operations, the pointer modification performed by the first operation is not correctly accounted for when restricting subsequent operations.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29155",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29155",
@@ -59344,9 +60288,33 @@
         "affected_versions": "v4.8-rc5 to v5.12-rc3",
         "breaks": "6c389fc931bcda88940c809f752ada6d7799482c",
         "cmt_msg": "gianfar: fix jumbo packets+napi+rx overrun crash",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:N/I:N/A:C",
+            "score": 4.7
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
         "fixes": "d8861bab48b6c1fc3cdbcab8ff9d1eaea43afe7f",
         "last_affected_version": "5.11.10",
-        "last_modified": "2021-04-02",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.11.10. drivers/net/ethernet/freescale/gianfar.c in the Freescale Gianfar Ethernet driver allows attackers to cause a system crash because a negative fragment size is calculated in situations involving an rx queue overrun when jumbo packets are used and NAPI is enabled, aka CID-d8861bab48b6.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29264",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29264",
@@ -59360,9 +60328,33 @@
         "affected_versions": "v2.6.39-rc1 to v5.12-rc3",
         "breaks": "9720b4bc76a83807c68e00c62bfba575251bb73e",
         "cmt_msg": "usbip: fix stub_dev usbip_sockfd_store() races leading to gpf",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:N/I:N/A:C",
+            "score": 4.7
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.7
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "9380afd6df70e24eacbdbde33afc6a3950965d22",
         "last_affected_version": "5.11.6",
-        "last_modified": "2021-03-29",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.11.7. usbip_sockfd_store in drivers/usb/usbip/stub_dev.c allows attackers to cause a denial of service (GPF) because the stub-up sequence has race conditions during an update of the local and shared status, aka CID-9380afd6df70.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29265",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29265",
@@ -59376,9 +60368,33 @@
         "affected_versions": "v5.8-rc1 to v5.12-rc4",
         "breaks": "776f395004d829bbbf18c159ed9beb517a208c71",
         "cmt_msg": "vhost-vdpa: fix use-after-free of v->config_ctx",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "f6bbf0010ba004f5e90c7aefdebc0ee4bd3283b9",
         "last_affected_version": "5.11.8",
-        "last_modified": "2021-03-29",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.11.9. drivers/vhost/vdpa.c has a use-after-free because v->config_ctx has an invalid value upon re-opening a character device, aka CID-f6bbf0010ba0.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29266",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29266",
@@ -59392,9 +60408,33 @@
         "affected_versions": "v5.5-rc1 to v5.12-rc5",
         "breaks": "e1f32190cf7ddd55778b460e7d44af3f76529698",
         "cmt_msg": "tipc: better validate user input in tipc_nl_retrieve_key()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
         "fixes": "0217ed2848e8538bcf9172d97ed2eeb4a26041bb",
         "last_affected_version": "5.11.10",
-        "last_modified": "2021-04-02",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.11.11. tipc_nl_retrieve_key in net/tipc/node.c does not properly validate certain data sizes, aka CID-0217ed2848e8.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29646",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29646",
@@ -59408,9 +60448,33 @@
         "affected_versions": "v4.7-rc1 to v5.12-rc5",
         "breaks": "bdabad3e363d825ddf9679dd431cca0b2c30f881",
         "cmt_msg": "net: qrtr: fix a kernel-infoleak in qrtr_recvmsg()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
         "fixes": "50535249f624d0072cd885bcdce4e4b6fb770160",
         "last_affected_version": "5.11.10",
-        "last_modified": "2021-04-02",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.11.11. qrtr_recvmsg in net/qrtr/qrtr.c allows attackers to obtain sensitive information from kernel memory because of a partially uninitialized data structure, aka CID-50535249f624.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29647",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29647",
@@ -59424,9 +60488,33 @@
         "affected_versions": "v5.11-rc1 to v5.12-rc5",
         "breaks": "5329722057d41aebc31e391907a501feaa42f7d9",
         "cmt_msg": "bpf: Dont allow vmlinux BTF to be used in map_create and prog_load.",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Improper Restriction of Excessive Authentication Attempts",
         "fixes": "350a5c4dd2452ea999cc5e1d4a8dbf12de2f97ef",
         "last_affected_version": "5.11.10",
-        "last_modified": "2021-04-02",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.11.11. The BPF subsystem does not properly consider that resolved_ids and resolved_sizes are intentionally uninitialized in the vmlinux BPF Type Format (BTF), which can cause a system crash upon an unexpected access attempt (in map_create in kernel/bpf/syscall.c or check_btf_info in kernel/bpf/verifier.c), aka CID-350a5c4dd245.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29648",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29648",
@@ -59440,9 +60528,33 @@
         "affected_versions": "v5.10-rc1 to v5.12-rc5",
         "breaks": "d71fa5c9763c24dd997a2fa4feb7a13a95bab42c",
         "cmt_msg": "bpf: Fix umd memory leak in copy_process()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Missing Release of Memory after Effective Lifetime",
         "fixes": "f60a85cad677c4f9bb4cadd764f1d106c38c7cf8",
         "last_affected_version": "5.11.10",
-        "last_modified": "2021-04-02",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.11.11. The user mode driver (UMD) has a copy_process() memory leak, related to a lack of cleanup steps in kernel/usermode_driver.c and kernel/bpf/preload/bpf_preload_kern.c, aka CID-f60a85cad677.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29649",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29649",
@@ -59456,9 +60568,33 @@
         "affected_versions": "v3.0-rc1 to v5.12-rc5",
         "breaks": "7f5c6d4f665bb57a19a34ce1fb16cc708c04f219",
         "cmt_msg": "netfilter: x_tables: Use correct memory barriers.",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
         "fixes": "175e476b8cdf2a4de7432583b49c871345e4f8a1",
         "last_affected_version": "5.11.10",
-        "last_modified": "2021-04-02",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.11.11. The netfilter subsystem allows attackers to cause a denial of service (panic) because net/netfilter/x_tables.c and include/linux/netfilter/x_tables.h lack a full memory barrier upon the assignment of a new table value, aka CID-175e476b8cdf.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29650",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-29650",
@@ -59488,9 +60624,33 @@
         "affected_versions": "v2.6.39-rc1 to v5.12-rc1-dontuse",
         "breaks": "d14e6d76ebf740fd0d0bd296933993a555938896",
         "cmt_msg": "media: v4l: ioctl: Fix memory leak in video_usercopy",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 6.2
+        },
+        "cwe": "Missing Release of Resource after Effective Lifetime",
         "fixes": "fb18802a338b36f675a388fc03d2aa504a0d0899",
         "last_affected_version": "5.11.2",
-        "last_modified": "2021-04-05",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.11.3 when a webcam device exists. video_usercopy in drivers/media/v4l2-core/v4l2-ioctl.c has a memory leak for large arguments, aka CID-fb18802a338b.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-30002",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-30002",
@@ -59504,8 +60664,32 @@
         "affected_versions": "v5.12-rc1-dontuse to v5.12-rc2",
         "breaks": "8f014550dfb114cc7f42a517d20d2cf887a0b771",
         "cmt_msg": "KVM: x86: hyper-v: Fix Hyper-V context null-ptr-deref",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "919f4ebc598701670e80e31573a58f1f2d2bf918",
-        "last_modified": "2021-04-13",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.11.11. synic_get in arch/x86/kvm/hyperv.c has a NULL pointer dereference for certain accesses to the SynIC Hyper-V context, aka CID-919f4ebc5987.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-30178",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-30178",
@@ -59515,13 +60699,53 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-30178"
         }
     },
+    "CVE-2021-31440": {
+        "affected_versions": "unk to v5.13-rc1",
+        "breaks": "",
+        "cmt_msg": "bpf: Fix propagation of 32 bit unsigned bounds from 64 bit bounds",
+        "fixes": "10bf4e83167cc68595b85fd73bb91e8f2c086e36",
+        "last_affected_version": "5.12.3",
+        "last_modified": "2021-05-14",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-31440",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-31440",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-31440",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-31440",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-31440",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-31440"
+        }
+    },
     "CVE-2021-3178": {
         "affected_versions": "v2.6.12-rc2 to v5.11-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "nfsd4: readdirplus shouldn't return parent of export",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "Single",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+            "score": 5.5
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N",
+            "score": 6.5
+        },
+        "cwe": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
         "fixes": "51b2ee7d006a736a9126e8111d1f24e4fd0afaa6",
         "last_affected_version": "5.10.9",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "** DISPUTED ** fs/nfsd/nfs3xdr.c in the Linux kernel through 5.10.8, when there is an NFS export of a subdirectory of a filesystem, allows remote attackers to traverse to other parts of the filesystem via READDIRPLUS. NOTE: some parties argue that such a subdirectory export is not intended to prevent this attack; see also the exports(5) no_subtree_check default behavior.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3178",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3178",
@@ -59531,13 +60755,55 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-3178"
         }
     },
+    "CVE-2021-31829": {
+        "affected_versions": "v5.0-rc1 to v5.13-rc1",
+        "breaks": "979d63d50c0c0f7bc537bf821e056cc9fe5abd38",
+        "cmt_msg": "bpf: Fix masking negation logic upon negative dst register",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Incorrect Authorization",
+        "fixes": "b9b34ddbe2076ade359cd5ce7537d5ed019e9807",
+        "last_affected_version": "5.12.1",
+        "last_modified": "2021-05-14",
+        "nvd_text": "kernel/bpf/verifier.c in the Linux kernel through 5.12.1 performs undesirable speculative loads, leading to disclosure of stack content via side-channel attacks, aka CID-801c6058d14a. The specific concern is not protecting the BPF stack area against speculative loads. Also, the BPF stack can contain uninitialized data that might represent sensitive information previously operated on by the kernel.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-31829",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-31829",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-31829",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-31829",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-31829",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-31829"
+        }
+    },
     "CVE-2021-31916": {
         "affected_versions": "v2.6.12-rc2 to v5.12-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "dm ioctl: fix out of bounds array access when no devices",
+        "cwe": "Out-of-bounds Write",
         "fixes": "4edbe1d7bcffcd6269f3b5eb63f710393ff2ec7a",
         "last_affected_version": "5.11.10",
-        "last_modified": "2021-05-03",
+        "last_modified": "2021-05-07",
+        "nvd_text": "An out-of-bounds (OOB) memory write flaw was found in list_devices in drivers/md/dm-ioctl.c in the Multi-device driver module in the Linux kernel before 5.12. A bound check failure allows an attacker with special user (CAP_SYS_ADMIN) privilege to gain access to out-of-bounds memory leading to a system crash or a leak of internal kernel information. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-31916",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-31916",
@@ -59547,13 +60813,126 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-31916"
         }
     },
+    "CVE-2021-32399": {
+        "affected_versions": "unk to v5.13-rc1",
+        "breaks": "",
+        "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
+        "fixes": "e2cb6b891ad2b8caa9131e3be70f45243df82a80",
+        "last_affected_version": "5.12.3",
+        "last_modified": "2021-05-17",
+        "nvd_text": "net/bluetooth/hci_request.c in the Linux kernel through 5.12.2 has a race condition for removal of the HCI controller.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-32399",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-32399",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-32399",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-32399",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-32399",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-32399"
+        }
+    },
+    "CVE-2021-32606": {
+        "affected_versions": "v5.11-rc1 to unk",
+        "breaks": "921ca574cd382142add8b12d0a7117f495510de5",
+        "fixes": "2b17c400aeb44daf041627722581ade527bb3c1d",
+        "last_modified": "2021-05-17",
+        "nvd_text": "In the Linux kernel 5.11 through 5.12.2, isotp_setsockopt in net/can/isotp.c allows privilege escalation to root by leveraging a use-after-free. (This does not affect earlier versions that lack CAN ISOTP SF_BROADCAST support.)",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-32606",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-32606",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-32606",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-32606",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-32606",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-32606"
+        }
+    },
+    "CVE-2021-33033": {
+        "affected_versions": "unk to v5.12-rc3",
+        "breaks": "",
+        "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts",
+        "fixes": "ad5d07f4a9cd671233ae20983848874731102c08",
+        "last_affected_version": "5.11.6",
+        "last_modified": "2021-05-17",
+        "nvd_text": "The Linux kernel before 5.11.14 has a use-after-free in cipso_v4_genopt in net/ipv4/cipso_ipv4.c because the CIPSO and CALIPSO refcounting for the DOI definitions is mishandled, aka CID-ad5d07f4a9cd. This leads to writing an arbitrary value.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33033",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-33033",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-33033",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-33033",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-33033",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-33033"
+        }
+    },
+    "CVE-2021-33034": {
+        "affected_versions": "unk to v5.13-rc1",
+        "breaks": "",
+        "cmt_msg": "Bluetooth: verify AMP hci_chan before amp_destroy",
+        "fixes": "5c4c8c9544099bb9043a10a5318130a943e32fc3",
+        "last_affected_version": "5.12.3",
+        "last_modified": "2021-05-17",
+        "nvd_text": "In the Linux kernel before 5.12.4, net/bluetooth/hci_event.c has a use-after-free when destroying an hci_chan, aka CID-5c4c8c954409. This leads to writing an arbitrary value.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33034",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-33034",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-33034",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-33034",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-33034",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-33034"
+        }
+    },
     "CVE-2021-3347": {
         "affected_versions": "v4.15-rc9 to v5.11-rc6",
         "breaks": "c1e2f0eaf015fb7076d51a339011f2383e6dd389",
         "cmt_msg": "futex: Ensure the correct return value from futex_lock_pi()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "12bb3f7f1b03d5913b3f9d4236a488aa7774dfe9",
         "last_affected_version": "5.10.11",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.10.11. PI futexes have a kernel stack use-after-free during fault handling, allowing local users to execute code in the kernel, aka CID-34b1a1ce1458.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3347",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3347",
@@ -59567,9 +60946,33 @@
         "affected_versions": "v4.10-rc1 to v5.11-rc6",
         "breaks": "9561a7ade0c205bc2ee035a2ac880478dcc1a024",
         "cmt_msg": "nbd: freeze the queue while we're adding connections",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "b98e762e3d71e893b221f871825dc64694cfb258",
         "last_affected_version": "5.10.12",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "nbd_add_socket in drivers/block/nbd.c in the Linux kernel through 5.10.12 has an ndb_queue_rq use-after-free that could be triggered by local attackers (with access to the nbd device) via an I/O request at a certain point during device setup, aka CID-b98e762e3d71.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3348",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3348",
@@ -59583,9 +60986,33 @@
         "affected_versions": "v5.5-rc1 to v5.10",
         "breaks": "7705dc8557973d8ad8f10840f61d8ec805695e9e",
         "cmt_msg": "x86/kprobes: Fix optprobe to detect INT3 padding correctly",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.7
+        },
+        "cwe": "Improper Control of Generation of Code ('Code Injection')",
         "fixes": "0d07c0ec4381f630c801539c79ad8dcc627f6e4a",
         "last_affected_version": "5.9",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-05-06",
+        "nvd_text": "A flaw was found in the Linux kernel in versions prior to 5.10. A violation of memory access was found while detecting a padding of int3 in the linking state. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3411",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3411",
@@ -59615,9 +61042,33 @@
         "affected_versions": "v4.15-rc5 to v5.12-rc1-dontuse",
         "breaks": "468f6eafa6c44cb2c5d8aad35e12f06c240a812a",
         "cmt_msg": "bpf: Fix truncation handling for mod32 dst reg wrt zero",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "9b00f1b78809309163dda2d044d9e94a3c0248a3",
         "last_affected_version": "5.11.1",
-        "last_modified": "2021-03-24",
+        "last_modified": "2021-05-06",
+        "nvd_text": "The bpf verifier in the Linux kernel did not properly handle mod32 destination register truncation when the source register was known to be 0. A local attacker with the ability to load bpf programs could use this gain out-of-bounds reads in kernel memory leading to information disclosure (kernel memory), and possibly out-of-bounds writes that could potentially lead to code execution. This issue was addressed in the upstream kernel in commit 9b00f1b78809 (\"bpf: Fix truncation handling for mod32 dst reg wrt zero\") and in Linux stable kernels 5.11.2, 5.10.19, and 5.4.101.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3444",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3444",
@@ -59643,11 +61094,79 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3483"
         }
     },
+    "CVE-2021-3489": {
+        "affected_versions": "v5.8-rc1 to unk",
+        "breaks": "457f44363a8894135c85b7a9afd2bd8196db24ab",
+        "fixes": "4b81ccebaeee885ab1aa1438133f2991e3a2b6ea",
+        "last_modified": "2021-05-14",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3489",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3489",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3489",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3489",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3489",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3489"
+        }
+    },
+    "CVE-2021-3490": {
+        "affected_versions": "v5.7-rc1 to unk",
+        "breaks": "3f50f132d8400e129fc9eb68b5020167ef80a244",
+        "fixes": "049c4e13714ecbca567b4d5f6d563f05d431c80e",
+        "last_modified": "2021-05-14",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3490",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3490",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3490",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3490",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3490",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3490"
+        }
+    },
+    "CVE-2021-3491": {
+        "affected_versions": "v5.7-rc1 to v5.13-rc1",
+        "breaks": "ddf0322db79c5984dc1a1db890f946dd19b7d6d9",
+        "cmt_msg": "io_uring: truncate lengths larger than MAX_RW_COUNT on provide buffers",
+        "fixes": "d1f82808877bb10d3deee7cf3374a4eb3fb582db",
+        "last_affected_version": "5.12.3",
+        "last_modified": "2021-05-14",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3491",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3491",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3491",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3491",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3491",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3491"
+        }
+    },
     "CVE-2021-3492": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Double Free",
         "fixes": "",
-        "last_modified": "2021-04-19",
+        "last_modified": "2021-05-06",
+        "nvd_text": "Shiftfs, an out-of-tree stacking file system included in Ubuntu Linux kernels, did not properly handle faults occurring during copy_from_user() correctly. These could lead to either a double-free situation or memory not being freed at all. An attacker could use this to cause a denial of service (kernel memory exhaustion) or gain privileges via executing arbitrary code. AKA ZDI-CAN-13562.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3492",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3492",
@@ -59662,8 +61181,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.11-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "vfs: move cap_convert_nscap() call into vfs_setxattr()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Privilege Management",
         "fixes": "7c03e2cda4a584cadc398e8f6641ca9988a39d52",
-        "last_modified": "2021-04-19",
+        "last_modified": "2021-05-06",
+        "nvd_text": "The overlayfs implementation in the linux kernel did not properly validate with respect to user namespaces the setting of file capabilities on files in an underlying file system. Due to the combination of unprivileged user namespaces along with a patch carried in the Ubuntu kernel to allow unprivileged overlay mounts, an attacker could use this to gain elevated privileges.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3493",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3493",
@@ -59678,9 +61221,33 @@
         "affected_versions": "v5.9-rc1 to v5.12-rc8",
         "breaks": "1aa561b1a4c0ae2a9a9b9c21a84b5ca66b4775d8",
         "cmt_msg": "KVM: VMX: Don't use vcpu->run->internal.ndata as an array index",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+            "score": 3.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+            "score": 7.1
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "04c4f2ee3f68c9a4bf1653d15f1a9a435ae33f7a",
         "last_affected_version": "5.11.15",
-        "last_modified": "2021-05-03",
+        "last_modified": "2021-05-17",
+        "nvd_text": "A flaw was found in the Linux kernel in versions before 5.12. The value of internal.ndata, in the KVM API, is mapped to an array index, which can be updated by a user process at anytime which could lead to an out-of-bounds write. The highest threat from this vulnerability is to data integrity and system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3501",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3501",
@@ -59691,10 +61258,36 @@
         }
     },
     "CVE-2021-3506": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.13-rc1",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-04-27",
+        "cmt_msg": "f2fs: fix to avoid out-of-bounds memory access",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:C",
+            "score": 5.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "score": 7.1
+        },
+        "cwe": "Out-of-bounds Read",
+        "fixes": "b862676e371715456c9dade7990c8004996d0d9e",
+        "last_affected_version": "5.12.2",
+        "last_modified": "2021-05-12",
+        "nvd_text": "An out-of-bounds (OOB) memory access flaw was found in fs/f2fs/node.c in the f2fs module in the Linux kernel in versions before 5.12.0-rc4. A bounds check failure allows a local attacker to gain access to out-of-bounds memory leading to a system crash or a leak of internal kernel information. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3506",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3506",
@@ -59702,6 +61295,20 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3506",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3506",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3506"
+        }
+    },
+    "CVE-2021-3542": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-05-12",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3542",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3542",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3542",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3542",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3542",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3542"
         }
     }
 }
