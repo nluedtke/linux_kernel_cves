@@ -23545,7 +23545,8 @@
         "cvss2": "9.3",
         "cvss3": "7.8",
         "fixes": "e09e28671cda63e6308b31798b997639120e2a21",
-        "last_affected_version": "3.16.43",
+        "last_affected_version": "4.9.268",
+        "last_modified": "2021-05-22",
         "nvd_text": "** REJECT **  DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate was withdrawn by its CNA.  Further investigation showed that it was not a security issue.  Notes: none.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-0605",
@@ -40447,8 +40448,9 @@
         }
     },
     "CVE-2019-0149": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.17-rc1 to v5.3-rc1",
+        "breaks": "c27eac48160de72dee33d42b5a33cc7b8a2eb1f5",
+        "cmt_msg": "i40e: Add bounds check for ch[] array",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -40472,8 +40474,8 @@
             "score": 5.5
         },
         "cwe": "Improper Input Validation",
-        "fixes": "",
-        "last_modified": "2020-09-09",
+        "fixes": "f5a2b3ffb7af4b6ae5b905850a1a6bad82b268b9",
+        "last_modified": "2021-05-22",
         "nvd_text": "Insufficient input validation in i40e driver for Intel(R) Ethernet 700 Series Controllers versions before 2.8.43 may allow an authenticated user to potentially enable a denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-0149",
@@ -50529,8 +50531,31 @@
         "affected_versions": "unk to v5.2-rc4",
         "breaks": "",
         "cmt_msg": "block: free sched's request pool in blk_cleanup_queue",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "c3e2219216c92919a6bd1711f340f5faa98695e6",
-        "last_modified": "2021-05-17",
+        "last_modified": "2021-05-22",
         "nvd_text": "The block subsystem in the Linux kernel before 5.2 has a use-after-free that can lead to arbitrary code execution in the kernel context and privilege escalation, aka CID-c3e2219216c9. This is related to blk_mq_free_rqs and blk_cleanup_queue.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-25044",
@@ -55830,8 +55855,8 @@
         }
     },
     "CVE-2020-24504": {
-        "affected_versions": "unk to v5.12-rc1-dontuse",
-        "breaks": "",
+        "affected_versions": "v4.17-rc1 to v5.12-rc1-dontuse",
+        "breaks": "837f08fdecbe4b2ffc7725624342e73b886665a8",
         "cmt_msg": "ice: create scheduler aggregator node config and move VSIs",
         "cvss2": {
             "Access Complexity": "Low",
@@ -55857,7 +55882,7 @@
         },
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "b126bd6bcd6710aa984104e979a5c930f44561b4",
-        "last_modified": "2021-05-06",
+        "last_modified": "2021-05-22",
         "nvd_text": "Uncontrolled resource consumption in some Intel(R) Ethernet E810 Adapter drivers for Linux before version 1.0.4 may allow an authenticated user to potentially enable denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24504",
@@ -55869,10 +55894,33 @@
         }
     },
     "CVE-2020-24586": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-05-12",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:A/AC:M/Au:N/C:P/I:P/A:N",
+            "score": 4.3
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "Low",
+            "Integrity": "Low",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+            "score": 4.6
+        },
+        "cwe": "Unspecified",
+        "fixes": "94034c40ab4a3fcf581fbc7f8fdf4e29943c4a24",
+        "last_modified": "2021-05-22",
         "nvd_text": "The 802.11 standard that underpins Wi-Fi Protected Access (WPA, WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require that received fragments be cleared from memory after (re)connecting to a network. Under the right circumstances, when another device sends fragmented frames encrypted using WEP, CCMP, or GCMP, this can be abused to inject arbitrary network packets and/or exfiltrate user data.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24586",
@@ -55884,10 +55932,33 @@
         }
     },
     "CVE-2020-24587": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-05-12",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:A/AC:L/Au:N/C:N/I:P/A:N",
+            "score": 3.3
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "score": 6.5
+        },
+        "cwe": "Inadequate Encryption Strength",
+        "fixes": "94034c40ab4a3fcf581fbc7f8fdf4e29943c4a24",
+        "last_modified": "2021-05-22",
         "nvd_text": "The 802.11 standard that underpins Wi-Fi Protected Access (WPA, WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require that all fragments of a frame are encrypted under the same key. An adversary can abuse this to decrypt selected fragments when another device sends fragmented frames and the WEP, CCMP, or GCMP encryption key is periodically renewed.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24587",
@@ -55899,10 +55970,33 @@
         }
     },
     "CVE-2020-24588": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-05-12",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:A/AC:M/Au:N/C:N/I:P/A:N",
+            "score": 2.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "Low",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+            "score": 3.5
+        },
+        "cwe": "Missing Authentication for Critical Function",
+        "fixes": "2b8a1fee3488c602aca8bea004a087e60806a5cf",
+        "last_modified": "2021-05-22",
         "nvd_text": "The 802.11 standard that underpins Wi-Fi Protected Access (WPA, WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require that the A-MSDU flag in the plaintext QoS header field is authenticated. Against devices that support receiving non-SSP A-MSDU frames (which is mandatory as part of 802.11n), an adversary can abuse this to inject arbitrary network packets.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-24588",
@@ -56646,10 +56740,33 @@
         }
     },
     "CVE-2020-26139": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-05-12",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+        },
+        "cwe": "Improper Authentication",
+        "fixes": "a8c4d76a8dd4fb9666fc8919a703d85fb8f44ed8",
+        "last_modified": "2021-05-22",
         "nvd_text": "An issue was discovered in the kernel in NetBSD 7.1. An Access Point (AP) forwards EAPOL frames to other clients even though the sender has not yet successfully authenticated to the AP. This might be abused in projected Wi-Fi networks to launch denial-of-service attacks against connected clients and makes it easier to exploit other vulnerabilities in connected clients.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26139",
@@ -56663,8 +56780,31 @@
     "CVE-2020-26140": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:A/AC:L/Au:N/C:N/I:P/A:N",
+            "score": 3.3
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "score": 6.5
+        },
+        "cwe": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
         "fixes": "",
-        "last_modified": "2021-05-14",
+        "last_modified": "2021-05-22",
         "nvd_text": "An issue was discovered in the ALFA Windows 10 driver 6.1316.1209 for AWUS036H. The WEP, WPA, WPA2, and WPA3 implementations accept plaintext frames in a protected Wi-Fi network. An adversary can abuse this to inject arbitrary data frames independent of the network configuration.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26140",
@@ -56676,10 +56816,33 @@
         }
     },
     "CVE-2020-26141": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-05-12",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:A/AC:L/Au:N/C:N/I:P/A:N",
+            "score": 3.3
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "score": 6.5
+        },
+        "cwe": "Improper Validation of Integrity Check Value",
+        "fixes": "0dc267b13f3a7e8424a898815dd357211b737330",
+        "last_modified": "2021-05-22",
         "nvd_text": "An issue was discovered in the ALFA Windows 10 driver 6.1316.1209 for AWUS036H. The Wi-Fi implementation does not verify the Message Integrity Check (authenticity) of fragmented TKIP frames. An adversary can abuse this to inject and possibly decrypt packets in WPA or WPA2 networks that support the TKIP data-confidentiality protocol.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26141",
@@ -56693,8 +56856,31 @@
     "CVE-2020-26142": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "score": 7.5
+        },
+        "cwe": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
         "fixes": "",
-        "last_modified": "2021-05-14",
+        "last_modified": "2021-05-22",
         "nvd_text": "An issue was discovered in the kernel in OpenBSD 6.6. The WEP, WPA, WPA2, and WPA3 implementations treat fragmented frames as full frames. An adversary can abuse this to inject arbitrary network packets, independent of the network configuration.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26142",
@@ -56708,8 +56894,31 @@
     "CVE-2020-26143": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:A/AC:L/Au:N/C:N/I:P/A:N",
+            "score": 3.3
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "score": 6.5
+        },
+        "cwe": "Improper Input Validation",
         "fixes": "",
-        "last_modified": "2021-05-14",
+        "last_modified": "2021-05-22",
         "nvd_text": "An issue was discovered in the ALFA Windows 10 driver 1030.36.604 for AWUS036ACH. The WEP, WPA, WPA2, and WPA3 implementations accept fragmented plaintext frames in a protected Wi-Fi network. An adversary can abuse this to inject arbitrary data frames independent of the network configuration.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26143",
@@ -56721,10 +56930,33 @@
         }
     },
     "CVE-2020-26145": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-05-12",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:A/AC:L/Au:N/C:N/I:P/A:N",
+            "score": 3.3
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "score": 6.5
+        },
+        "cwe": "Improper Input Validation",
+        "fixes": "65c415a144ad8132b6a6d97d4a1919ffc728e2d1",
+        "last_modified": "2021-05-22",
         "nvd_text": "An issue was discovered on Samsung Galaxy S3 i9305 4.4.4 devices. The WEP, WPA, WPA2, and WPA3 implementations accept second (or subsequent) broadcast fragments even when sent in plaintext and process them as full unfragmented frames. An adversary can abuse this to inject arbitrary network packets independent of the network configuration.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26145",
@@ -56736,10 +56968,10 @@
         }
     },
     "CVE-2020-26147": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-05-12",
+        "affected_versions": "v2.6.12-rc2 to unk",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "fixes": "965a7d72e798eb7af0aa67210e37cf7ecd1c9cad",
+        "last_modified": "2021-05-22",
         "nvd_text": "An issue was discovered in the Linux kernel 5.8.9. The WEP, WPA, WPA2, and WPA3 implementations reassemble fragments even though some of them were sent in plaintext. This vulnerability can be abused to inject packets and/or exfiltrate selected fragments when another device sends fragmented frames and the WEP, CCMP, or GCMP data-confidentiality protocol is used.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26147",
@@ -57343,9 +57575,32 @@
         "affected_versions": "v4.13-rc1 to v5.10-rc7",
         "breaks": "6b9ad1c742bf227b1005a41d8baa315b747e3e8d",
         "cmt_msg": "speakup: Reject setting the speakup line discipline outside of speakup",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "f0992098cadb4c9c6a00703b66cafe604e178fea",
         "last_affected_version": "5.9.13",
-        "last_modified": "2021-05-14",
+        "last_modified": "2021-05-22",
         "nvd_text": "A vulnerability was found in Linux Kernel where in the spk_ttyio_receive_buf2() function, it would dereference spk_ttyio_synth without checking whether it is NULL or not, and may lead to a NULL-ptr deref crash.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27830",
@@ -59444,6 +59699,16 @@
         "affected_versions": "v5.12-rc7 to v5.13-rc1",
         "breaks": "8a4cd82d62b5ec7e5482333a72b58a4eea4979f0",
         "cmt_msg": "net/nfc: fix use-after-free llcp_sock_bind/connect",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
         "cvss3": {
             "Attack Complexity": "Low",
             "Attack Vector": "Local",
@@ -59456,9 +59721,10 @@
             "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "score": 7.8
         },
+        "cwe": "Use After Free",
         "fixes": "c61760e6940dd4039a7f5e84a6afc9cdbf4d82b6",
         "last_affected_version": "5.12.3",
-        "last_modified": "2021-05-19",
+        "last_modified": "2021-05-22",
         "nvd_text": "Use After Free vulnerability in nfc sockets in the Linux Kernel before 5.12.4 allows local attackers to elevate their privileges. In typical configurations, the issue can only be triggered by a privileged local user with the CAP_NET_RAW capability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-23134",
@@ -60723,12 +60989,13 @@
         }
     },
     "CVE-2021-31440": {
-        "affected_versions": "unk to v5.13-rc1",
-        "breaks": "",
+        "affected_versions": "v5.7-rc1 to v5.13-rc1",
+        "breaks": "3f50f132d8400e129fc9eb68b5020167ef80a244",
         "cmt_msg": "bpf: Fix propagation of 32 bit unsigned bounds from 64 bit bounds",
         "fixes": "10bf4e83167cc68595b85fd73bb91e8f2c086e36",
         "last_affected_version": "5.12.3",
-        "last_modified": "2021-05-14",
+        "last_modified": "2021-05-22",
+        "nvd_text": "This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel 5.11.15. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The specific flaw exists within the handling of eBPF programs. The issue results from the lack of proper validation of user-supplied eBPF programs prior to executing them. An attacker can leverage this vulnerability to escalate privileges and execute arbitrary code in the context of the kernel. Was ZDI-CAN-13661.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-31440",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-31440",
@@ -60847,7 +61114,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "4edbe1d7bcffcd6269f3b5eb63f710393ff2ec7a",
         "last_affected_version": "5.11.10",
-        "last_modified": "2021-05-19",
+        "last_modified": "2021-05-22",
         "nvd_text": "An out-of-bounds (OOB) memory write flaw was found in list_devices in drivers/md/dm-ioctl.c in the Multi-device driver module in the Linux kernel before 5.12. A bound check failure allows an attacker with special user (CAP_SYS_ADMIN) privilege to gain access to out-of-bounds memory leading to a system crash or a leak of internal kernel information. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-31916",
@@ -60887,7 +61154,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "e2cb6b891ad2b8caa9131e3be70f45243df82a80",
         "last_affected_version": "5.12.3",
-        "last_modified": "2021-05-17",
+        "last_modified": "2021-05-22",
         "nvd_text": "net/bluetooth/hci_request.c in the Linux kernel through 5.12.2 has a race condition for removal of the HCI controller.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-32399",
@@ -60901,8 +61168,31 @@
     "CVE-2021-32606": {
         "affected_versions": "v5.11-rc1 to unk",
         "breaks": "921ca574cd382142add8b12d0a7117f495510de5",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "2b17c400aeb44daf041627722581ade527bb3c1d",
-        "last_modified": "2021-05-17",
+        "last_modified": "2021-05-22",
         "nvd_text": "In the Linux kernel 5.11 through 5.12.2, isotp_setsockopt in net/can/isotp.c allows privilege escalation to root by leveraging a use-after-free. (This does not affect earlier versions that lack CAN ISOTP SF_BROADCAST support.)",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-32606",
@@ -60931,12 +61221,12 @@
         }
     },
     "CVE-2021-33034": {
-        "affected_versions": "unk to v5.13-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.13-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: verify AMP hci_chan before amp_destroy",
         "fixes": "5c4c8c9544099bb9043a10a5318130a943e32fc3",
         "last_affected_version": "5.12.3",
-        "last_modified": "2021-05-17",
+        "last_modified": "2021-05-22",
         "nvd_text": "In the Linux kernel before 5.12.4, net/bluetooth/hci_event.c has a use-after-free when destroying an hci_chan, aka CID-5c4c8c954409. This leads to writing an arbitrary value.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33034",
@@ -61332,7 +61622,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "b862676e371715456c9dade7990c8004996d0d9e",
         "last_affected_version": "5.12.2",
-        "last_modified": "2021-05-12",
+        "last_modified": "2021-05-22",
         "nvd_text": "An out-of-bounds (OOB) memory access flaw was found in fs/f2fs/node.c in the f2fs module in the Linux kernel in versions before 5.12.0-rc4. A bounds check failure allows a local attacker to gain access to out-of-bounds memory leading to a system crash or a leak of internal kernel information. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3506",
@@ -61355,6 +61645,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3542",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3542",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3542"
+        }
+    },
+    "CVE-2021-3543": {
+        "affected_versions": "v5.10-rc1 to v5.13-rc1",
+        "breaks": "38907e124088b2f5b176acdf3d89926c09d3206a",
+        "cmt_msg": "nitro_enclaves: Fix stale file descriptors on failed usercopy",
+        "fixes": "f1ce3986baa62cffc3c5be156994de87524bab99",
+        "last_affected_version": "5.12.2",
+        "last_modified": "2021-05-22",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3543",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3543",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3543",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3543",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3543",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3543"
         }
     }
 }
