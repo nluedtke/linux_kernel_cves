@@ -61126,8 +61126,8 @@
         }
     },
     "CVE-2021-32399": {
-        "affected_versions": "unk to v5.13-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.13-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -61154,7 +61154,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "e2cb6b891ad2b8caa9131e3be70f45243df82a80",
         "last_affected_version": "5.12.3",
-        "last_modified": "2021-05-22",
+        "last_modified": "2021-05-25",
         "nvd_text": "net/bluetooth/hci_request.c in the Linux kernel through 5.12.2 has a race condition for removal of the HCI controller.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-32399",
@@ -61204,12 +61204,35 @@
         }
     },
     "CVE-2021-33033": {
-        "affected_versions": "unk to v5.12-rc3",
-        "breaks": "",
+        "affected_versions": "v4.8-rc1 to v5.12-rc3",
+        "breaks": "d7cce01504a0ccb95b5007d846560cfccbc1947f",
         "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "score": 5.5
+        },
+        "cwe": "Use After Free",
         "fixes": "ad5d07f4a9cd671233ae20983848874731102c08",
         "last_affected_version": "5.11.6",
-        "last_modified": "2021-05-17",
+        "last_modified": "2021-05-25",
         "nvd_text": "The Linux kernel before 5.11.14 has a use-after-free in cipso_v4_genopt in net/ipv4/cipso_ipv4.c because the CIPSO and CALIPSO refcounting for the DOI definitions is mishandled, aka CID-ad5d07f4a9cd. This leads to writing an arbitrary value.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33033",
@@ -61224,9 +61247,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.13-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: verify AMP hci_chan before amp_destroy",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "score": 5.5
+        },
+        "cwe": "Use After Free",
         "fixes": "5c4c8c9544099bb9043a10a5318130a943e32fc3",
         "last_affected_version": "5.12.3",
-        "last_modified": "2021-05-22",
+        "last_modified": "2021-05-25",
         "nvd_text": "In the Linux kernel before 5.12.4, net/bluetooth/hci_event.c has a use-after-free when destroying an hci_chan, aka CID-5c4c8c954409. This leads to writing an arbitrary value.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33034",
@@ -61417,9 +61463,10 @@
         "affected_versions": "v2.6.12-rc2 to v5.12-rc6",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "firewire: nosy: Fix a use-after-free bug in nosy_ioctl()",
+        "cwe": "Use After Free",
         "fixes": "829933ef05a951c8ff140e814656d73e74915faf",
         "last_affected_version": "5.11.11",
-        "last_modified": "2021-05-19",
+        "last_modified": "2021-05-25",
         "nvd_text": "A flaw was found in the Nosy driver in the Linux kernel. This issue allows a device to be inserted twice into a doubly-linked list, leading to a use-after-free when one of these devices is removed. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability. Versions before kernel 5.12-rc6 are affected",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3483",
