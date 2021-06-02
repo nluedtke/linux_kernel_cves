@@ -1110,6 +1110,11 @@ CVEs fixed in 4.4.267:
   CVE-2020-25672: 7ed6c0c7db2099792768150c070efca71e85bdf3 nfc: fix memory leak in llcp_sock_connect()
   CVE-2020-25673: 7f6c9e4314aa7d90b6261b8ae571d14c454ba964 nfc: Avoid endless loops caused by repeated llcp_sock_connect()
 
+CVEs fixed in 4.4.269:
+  CVE-2017-0605: 150381302389fa01425396489a21dc7c53383a5b tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline()
+  CVE-2021-31916: 0c0f93fbd20276d65ae0581edfcdc93579aa1dc7 dm ioctl: fix out of bounds array access when no devices
+  CVE-2021-33034: b27a218d166b7f07cd5616fb90e727b6ed662b1a Bluetooth: verify AMP hci_chan before amp_destroy
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1126,7 +1131,6 @@ Outstanding CVEs:
   CVE-2016-10723: (unk) mm, oom: remove sleep from under oom_lock 
   CVE-2016-5728: (unk) misc: mic: Fix for double fetch security bug in VOP driver 
   CVE-2016-8660: (unk)  
-  CVE-2017-0605: (unk) tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline() 
   CVE-2017-1000405: (unk) mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d() 
   CVE-2017-12168: (unk) arm64: KVM: pmu: Fix AArch32 cycle counter access 
   CVE-2017-13166: (unk) media: v4l2-ioctl.c: use check_fmt for enum/g/s/try_fmt 
@@ -1165,7 +1169,6 @@ Outstanding CVEs:
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
   CVE-2018-9465: (unk) binder: fix proc->files use-after-free 
   CVE-2019-0146: (unk)  
-  CVE-2019-0149: (unk)  
   CVE-2019-10220: (unk) Convert filldir[64]() from __put_user() to unsafe_put_user() 
   CVE-2019-11091: (unk) s390/speculation: Support 'mitigations=' cmdline option 
   CVE-2019-11191: (unk) x86: Deprecate a.out support 
@@ -1201,7 +1204,6 @@ Outstanding CVEs:
   CVE-2019-20908: (unk) efi: Restrict efivar_ssdt_load when the kernel is locked down 
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-2213: (unk) binder: fix possible UAF when freeing buffer 
-  CVE-2019-25044: (unk) block: free sched's request pool in blk_cleanup_queue 
   CVE-2019-3874: (unk) sctp: implement memory accounting on tx path 
   CVE-2019-5489: (unk) Change mincore() to count "mapped" pages rather than "cached" pages 
   CVE-2019-7308: (unk) bpf: fix sanitation of alu op with pointer / scalar type from different paths 
@@ -1225,19 +1227,24 @@ Outstanding CVEs:
   CVE-2020-16120: (unk) ovl: switch to mounter creds in readdir 
   CVE-2020-24502: (unk)  
   CVE-2020-24503: (unk)  
-  CVE-2020-24504: (unk) ice: create scheduler aggregator node config and move VSIs 
-  CVE-2020-24586: (unk)  
-  CVE-2020-24587: (unk)  
-  CVE-2020-24588: (unk)  
+  CVE-2020-24586: (unk) mac80211: prevent mixed key and fragment cache attacks 
+  CVE-2020-24587: (unk) mac80211: prevent mixed key and fragment cache attacks 
+  CVE-2020-24588: (unk) cfg80211: mitigate A-MSDU aggregation attacks 
   CVE-2020-25220: (unk)  
-  CVE-2020-26139: (unk)  
+  CVE-2020-26139: (unk) mac80211: do not accept/forward invalid EAPOL frames 
   CVE-2020-26140: (unk)  
-  CVE-2020-26141: (unk)  
+  CVE-2020-26141: (unk) ath10k: Fix TKIP Michael MIC verification for PCIe 
   CVE-2020-26142: (unk)  
   CVE-2020-26143: (unk)  
-  CVE-2020-26145: (unk)  
-  CVE-2020-26147: (unk)  
+  CVE-2020-26145: (unk) ath10k: drop fragments with multicast DA for PCIe 
+  CVE-2020-26147: (unk) mac80211: assure all fragments are encrypted 
   CVE-2020-26541: (unk) certs: Add EFI_CERT_X509_GUID support for dbx entries 
+  CVE-2020-26555: (unk)  
+  CVE-2020-26556: (unk)  
+  CVE-2020-26557: (unk)  
+  CVE-2020-26558: (unk)  
+  CVE-2020-26559: (unk)  
+  CVE-2020-26560: (unk)  
   CVE-2020-27777: (unk) powerpc/rtas: Restrict RTAS requests from userspace 
   CVE-2020-27820: (unk)  
   CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
@@ -1247,14 +1254,12 @@ Outstanding CVEs:
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2021-0399: (unk)  
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
+  CVE-2021-22543: (unk)  
   CVE-2021-26934: (unk)  
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
   CVE-2021-29650: (unk) netfilter: x_tables: Use correct memory barriers. 
-  CVE-2021-31440: (unk) bpf: Fix propagation of 32 bit unsigned bounds from 64 bit bounds 
-  CVE-2021-31916: (unk) dm ioctl: fix out of bounds array access when no devices 
   CVE-2021-32399: (unk) bluetooth: eliminate the potential race condition when removing the HCI controller 
-  CVE-2021-33033: (unk) cipso,calipso: resolve a number of problems with the DOI refcounts 
-  CVE-2021-33034: (unk) Bluetooth: verify AMP hci_chan before amp_destroy 
   CVE-2021-3506: (unk) f2fs: fix to avoid out-of-bounds memory access 
   CVE-2021-3542: (unk)  
+  CVE-2021-3564: (unk)  
