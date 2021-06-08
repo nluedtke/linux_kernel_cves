@@ -2,16 +2,19 @@
 CVEs fixed in 5.8:
   CVE-2020-16166: f227e3ec3b5cad859ad15666874405e8c1bbc1d4 random32: update the net random state on interrupt and activity
   CVE-2020-24490: a2ec905d1e160a33b2e210e45ad30445ef26ce0e Bluetooth: fix kernel oops in store_pending_adv_report
+  CVE-2021-0605: 37bd22420f856fcd976989f1d4f1f7ad28e1fcac af_key: pfkey_dump needs parameter validation
 
 CVEs fixed in 5.8-rc1:
   CVE-2021-20239: 581bfce969cbfc7ce43ee92273be9cb7c3fdfa61 Merge branch 'work.set_fs' of git://git.kernel.org/pub/scm/linux/kernel/git/viro/vfs
 
 CVEs fixed in 5.8.1:
   CVE-2020-14331: 0ca4ebe9d6350e758e40683f08fd93cb4539e0b7 vgacon: Fix for missing check in scrollback handling
+  CVE-2020-36386: cc09a53b7252eeffd2c1d403d215dd0f3aad1f5d Bluetooth: Fix slab-out-of-bounds read in hci_extended_inquiry_result_evt()
 
 CVEs fixed in 5.8.2:
   CVE-2019-19770: 00734ff000fc72cb48a1aec214f024824f8b7419 blktrace: fix debugfs use after free
   CVE-2020-26088: d556aa7ab7b71592fc60ecdc4b917644ecea2c92 net/nfc/rawsock.c: add CAP_NET_RAW check.
+  CVE-2020-36387: 960ea38bfe7a0edd403d6a9e2d358018b4ce3bfa io_uring: hold 'ctx' reference around task_work queue + execute
   CVE-2021-20292: 3c374f0e63d7261dce2e556ac3df4e0541dd775a drm/ttm/nouveau: don't call tt destroy callback on alloc failure.
 
 CVEs fixed in 5.8.3:
@@ -161,9 +164,12 @@ Outstanding CVEs:
   CVE-2020-36158: (unk) mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start 
   CVE-2020-36311: (unk) KVM: SVM: Periodically schedule when unregistering regions on destroy 
   CVE-2020-36322: (unk) fuse: fix bad inode 
+  CVE-2020-36385: (unk) RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy 
   CVE-2020-4788: (unk) powerpc/64s: flush L1D on kernel entry 
   CVE-2020-8694: (unk) powercap: restrict energy meter to root access 
   CVE-2021-0399: (unk)  
+  CVE-2021-0512: (unk) HID: make arrays usage and value to be the same 
+  CVE-2021-0606: (unk)  
   CVE-2021-20268: (unk) bpf: Fix signed_{sub,add32}_overflows type handling 
   CVE-2021-22543: (unk)  
   CVE-2021-23133: (unk) net/sctp: fix race condition in sctp_destroy_sock 
@@ -210,4 +216,5 @@ Outstanding CVEs:
   CVE-2021-3491: (unk) io_uring: truncate lengths larger than MAX_RW_COUNT on provide buffers 
   CVE-2021-3506: (unk) f2fs: fix to avoid out-of-bounds memory access 
   CVE-2021-3542: (unk)  
-  CVE-2021-3564: (unk)  
+  CVE-2021-3564: (unk) Bluetooth: fix the erroneous flush_work() order 
+  CVE-2021-3587: (unk) nfc: fix NULL ptr dereference in llcp_sock_getname() after failed connect 

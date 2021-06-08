@@ -627,6 +627,7 @@ CVEs fixed in 3.2.100:
   CVE-2017-18551: fa05746dcb3132105d634eb72ec0d455af3be3cf i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA
   CVE-2018-1000028: b520f2dc407ffcb097efd2282b42c26bed8492b7 nfsd: auth: Fix gid sorting when rootsquash enabled
   CVE-2018-18386: 8711719778f9e003be82bba0362e87b97b46c891 n_tty: fix EXTPROC vs ICANON interaction with TIOCINQ (aka FIONREAD)
+  CVE-2018-25015: 602382075ce41a4735990d4b7fb742d368c89c5f sctp: return error if the asoc has been peeled off in sctp_wait_for_sndbuf
   CVE-2018-5750: d019cd4409c70839ea5c8568ea861dcddf2d831c ACPI: sbshc: remove raw pointer from printk() message
   CVE-2018-6927: 9d4265fc8f485089645dca8c688eedd890a165af futex: Prevent overflow by strengthen input validation
   CVE-2018-7492: cbe131eb2d7bab9b3332094ae279fed7cb170a85 rds: Fix NULL pointer dereference in __rds_rdma_map
@@ -971,6 +972,7 @@ Outstanding CVEs:
   CVE-2019-2181: (unk) binder: check for overflow when alloc for security context 
   CVE-2019-2213: (unk) binder: fix possible UAF when freeing buffer 
   CVE-2019-2215: (unk) ANDROID: binder: remove waitqueue when thread exits. 
+  CVE-2019-25045: (unk) xfrm: clean up xfrm protocol checks 
   CVE-2019-3459: (unk) Bluetooth: Verify that l2cap_get_conf_opt provides large enough buffer 
   CVE-2019-3460: (unk) Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt 
   CVE-2019-3701: (unk) can: gw: ensure DLC boundaries after CAN frame modification 
@@ -1099,6 +1101,9 @@ Outstanding CVEs:
   CVE-2020-36158: (unk) mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start 
   CVE-2020-36310: (unk) KVM: SVM: avoid infinite loop on NPF from bad address 
   CVE-2020-36322: (unk) fuse: fix bad inode 
+  CVE-2020-36385: (unk) RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy 
+  CVE-2020-36386: (unk) Bluetooth: Fix slab-out-of-bounds read in hci_extended_inquiry_result_evt() 
+  CVE-2020-36387: (unk) io_uring: hold 'ctx' reference around task_work queue + execute 
   CVE-2020-4788: (unk) powerpc/64s: flush L1D on kernel entry 
   CVE-2020-8647: (unk) vgacon: Fix a UAF in vgacon_invert_region 
   CVE-2020-8648: (unk) vt: selection, close sel_buffer race 
@@ -1107,6 +1112,9 @@ Outstanding CVEs:
   CVE-2020-9383: (unk) floppy: check FDC index for errors before assigning it 
   CVE-2021-0399: (unk)  
   CVE-2021-0448: (unk) netfilter: ctnetlink: add a range check for l3/l4 protonum 
+  CVE-2021-0512: (unk) HID: make arrays usage and value to be the same 
+  CVE-2021-0605: (unk) af_key: pfkey_dump needs parameter validation 
+  CVE-2021-0606: (unk)  
   CVE-2021-20261: (unk) floppy: fix lock_fdc() signal handling 
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-22543: (unk)  
@@ -1133,4 +1141,5 @@ Outstanding CVEs:
   CVE-2021-3483: (unk) firewire: nosy: Fix a use-after-free bug in nosy_ioctl() 
   CVE-2021-3506: (unk) f2fs: fix to avoid out-of-bounds memory access 
   CVE-2021-3542: (unk)  
-  CVE-2021-3564: (unk)  
+  CVE-2021-3564: (unk) Bluetooth: fix the erroneous flush_work() order 
+  CVE-2021-3587: (unk) nfc: fix NULL ptr dereference in llcp_sock_getname() after failed connect 

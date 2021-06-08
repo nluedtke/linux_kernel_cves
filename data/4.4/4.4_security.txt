@@ -482,6 +482,7 @@ CVEs fixed in 4.4.114:
   CVE-2017-17448: a359a437fbc6bb08aa9cc8e25ef4ac3b77ca727b netfilter: nfnetlink_cthelper: Add missing permission checks
   CVE-2017-17450: d01ceb4722cd8d64176272434fe332b596750d9c netfilter: xt_osf: Add missing permission checks
   CVE-2018-1000028: 3f84339bd344b2cf0afe64b78d3964bb6422d0f3 nfsd: auth: Fix gid sorting when rootsquash enabled
+  CVE-2018-25015: 50194c3f48de2c2374731d4b6b7f3fbb89250094 sctp: return error if the asoc has been peeled off in sctp_wait_for_sndbuf
 
 CVEs fixed in 4.4.115:
   CVE-2017-17862: 1367d854b97493bfb1f3d24cf89ba60cb7f059ea bpf: fix branch pruning logic
@@ -793,6 +794,7 @@ CVEs fixed in 4.4.191:
 
 CVEs fixed in 4.4.193:
   CVE-2019-14835: 35b29a78cc9b2523f6b0c080e6b44d2eeb367023 vhost: make sure log_num < in_num
+  CVE-2019-25045: e1b22f7a0b273e2b6ff50afe950f6161ca8e3e58 xfrm: clean up xfrm protocol checks
 
 CVEs fixed in 4.4.194:
   CVE-2019-14814: 851224e62b5525f0a87a171905e5c144e1899cd2 mwifiex: Fix three heap overflow at parsing element in cfg80211_ap_settings
@@ -998,6 +1000,7 @@ CVEs fixed in 4.4.233:
   CVE-2020-16166: 40713057d1d11fc86f0ed02383373281d87841a3 random32: update the net random state on interrupt and activity
   CVE-2020-25212: db61fb8278925f54ccb0172471164aeb56ec6537 nfs: Fix getxattr kernel panic and memory overflow
   CVE-2020-26088: de7c8ab8cb412d21ffdac94a99ef2f29f7802fd1 net/nfc/rawsock.c: add CAP_NET_RAW check.
+  CVE-2020-36386: 491602ede684bb8554254f12f4b1bd242dd15c61 Bluetooth: Fix slab-out-of-bounds read in hci_extended_inquiry_result_evt()
 
 CVEs fixed in 4.4.234:
   CVE-2020-0466: d85e2b06662e7f46d0f174ecc603fc1c3554d5cf do_epoll_ctl(): clean the failure exits up a bit
@@ -1014,6 +1017,7 @@ CVEs fixed in 4.4.237:
 
 CVEs fixed in 4.4.238:
   CVE-2020-25643: a49ef91286776c3f095460112846cd85a063c29a hdlc_ppp: add range checks in ppp_cp_parse_cr()
+  CVE-2021-0605: 831587619afe78cd72651b34a0f6ccb2acf3c503 af_key: pfkey_dump needs parameter validation
 
 CVEs fixed in 4.4.239:
   CVE-2020-25211: 3f5bfa0a2c3401bfbc0cab5894df8262de619641 netfilter: ctnetlink: add a range check for l3/l4 protonum
@@ -1075,6 +1079,9 @@ CVEs fixed in 4.4.258:
   CVE-2021-26930: 2e6cc64b7b56e5c2d2c01de8ff1b3986342c2b18 xen-blkback: fix error handling in xen_blkbk_map()
   CVE-2021-26931: 74e38b7a6972fd6983e6fbd929b65746ce975aed xen-blkback: don't "handle" error by BUG()
   CVE-2021-26932: 15b6ca2cef13f06ef41d9ebc094ef7770fd98ab3 Xen/x86: don't bail early from clear_foreign_p2m_mapping()
+
+CVEs fixed in 4.4.259:
+  CVE-2021-0512: 795a8c31cabf1a452b0b63bb3f8d9159b353e5ce HID: make arrays usage and value to be the same
 
 CVEs fixed in 4.4.260:
   CVE-2021-27363: 67c6818821a39fb50e1b84e7259aee5298d2c512 scsi: iscsi: Restrict sessions and handles to admin capabilities
@@ -1255,8 +1262,11 @@ Outstanding CVEs:
   CVE-2020-35501: (unk)  
   CVE-2020-36310: (unk) KVM: SVM: avoid infinite loop on NPF from bad address 
   CVE-2020-36322: (unk) fuse: fix bad inode 
+  CVE-2020-36385: (unk) RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy 
+  CVE-2020-36387: (unk) io_uring: hold 'ctx' reference around task_work queue + execute 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2021-0399: (unk)  
+  CVE-2021-0606: (unk)  
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-22543: (unk)  
   CVE-2021-26934: (unk)  
@@ -1264,4 +1274,5 @@ Outstanding CVEs:
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
   CVE-2021-3506: (unk) f2fs: fix to avoid out-of-bounds memory access 
   CVE-2021-3542: (unk)  
-  CVE-2021-3564: (unk)  
+  CVE-2021-3564: (unk) Bluetooth: fix the erroneous flush_work() order 
+  CVE-2021-3587: (unk) nfc: fix NULL ptr dereference in llcp_sock_getname() after failed connect 

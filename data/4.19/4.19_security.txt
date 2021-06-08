@@ -149,6 +149,7 @@ CVEs fixed in 4.19.45:
 
 CVEs fixed in 4.19.46:
   CVE-2019-15666: c9516503fe53c8960f180c1cc1cdf2341bed843d xfrm: policy: Fix out-of-bound array accesses in __xfrm_policy_unlink
+  CVE-2019-25045: d410ef75886a4efb3c49b8bacd8e3c295235e744 xfrm: clean up xfrm protocol checks
 
 CVEs fixed in 4.19.47:
   CVE-2019-19543: aec118ecf579a6c70e505b39fc6eb6a2d878c89e media: serial_ir: Fix use-after-free in serial_ir_init_module
@@ -530,6 +531,7 @@ CVEs fixed in 4.19.139:
   CVE-2019-0147: 43a7e1cf606e96ee43f8897129972f0b79390367 i40e: add num_vectors checker in iwarp handler
   CVE-2019-0148: 48a9be93ff2c5a09e308ef93560ea1f4ecbd22f6 i40e: Wrong truncation from u16 to u8
   CVE-2020-14331: 61219546f3036d2b4a1898be7a38da22e97a3b62 vgacon: Fix for missing check in scrollback handling
+  CVE-2020-36386: 8c4a649c20fec015ebb326f36b47d4e39d9ff5b7 Bluetooth: Fix slab-out-of-bounds read in hci_extended_inquiry_result_evt()
 
 CVEs fixed in 4.19.140:
   CVE-2020-26088: b200620cada4eaa63108be32e040ed557a1965fd net/nfc/rawsock.c: add CAP_NET_RAW check.
@@ -559,6 +561,7 @@ CVEs fixed in 4.19.148:
   CVE-2020-25643: 45676c0bc28eff8f46455b28e2db80a77676488b hdlc_ppp: add range checks in ppp_cp_parse_cr()
   CVE-2020-25645: c797110d97c48054d1491251fd713900ff51615c geneve: add transport ports in route lookup for geneve
   CVE-2020-36312: 19184bd06f488af62924ff1747614a8cb284ad63 KVM: fix memory leak in kvm_io_bus_unregister_dev()
+  CVE-2021-0605: b59a23d596807a5aa88d8dd5655a66c6843729b3 af_key: pfkey_dump needs parameter validation
 
 CVEs fixed in 4.19.150:
   CVE-2020-14386: 1c3886dc302329f199cc04f8a56ba44d17a0df16 net/packet: fix overflow in tpacket_rcv
@@ -637,6 +640,9 @@ CVEs fixed in 4.19.177:
   CVE-2021-26930: 98f16e171e2849dba76e2e0346e914452c030dc5 xen-blkback: fix error handling in xen_blkbk_map()
   CVE-2021-26931: a01b49a9bf91a723f541139c063c1ff681ac536a xen-blkback: don't "handle" error by BUG()
   CVE-2021-26932: dfed59ee4b41b0937163dfed36752d29e72d0712 Xen/x86: don't bail early from clear_foreign_p2m_mapping()
+
+CVEs fixed in 4.19.178:
+  CVE-2021-0512: ffca531f71d078c6caf752d64bc2a592f420f7c6 HID: make arrays usage and value to be the same
 
 CVEs fixed in 4.19.179:
   CVE-2021-27363: ae84b246a76c4ace5997e5ca7e9fde3e1a526bc3 scsi: iscsi: Restrict sessions and handles to admin capabilities
@@ -769,8 +775,11 @@ Outstanding CVEs:
   CVE-2020-36310: (unk) KVM: SVM: avoid infinite loop on NPF from bad address 
   CVE-2020-36311: (unk) KVM: SVM: Periodically schedule when unregistering regions on destroy 
   CVE-2020-36322: (unk) fuse: fix bad inode 
+  CVE-2020-36385: (unk) RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy 
+  CVE-2020-36387: (unk) io_uring: hold 'ctx' reference around task_work queue + execute 
   CVE-2020-7053: (unk) drm/i915: Introduce a mutex for file_priv->context_idr 
   CVE-2021-0399: (unk)  
+  CVE-2021-0606: (unk)  
   CVE-2021-20177: (unk) netfilter: add and use nf_hook_slow_list() 
   CVE-2021-22543: (unk)  
   CVE-2021-26934: (unk)  
@@ -778,4 +787,5 @@ Outstanding CVEs:
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
   CVE-2021-3444: (unk) bpf: Fix truncation handling for mod32 dst reg wrt zero 
   CVE-2021-3542: (unk)  
-  CVE-2021-3564: (unk)  
+  CVE-2021-3564: (unk) Bluetooth: fix the erroneous flush_work() order 
+  CVE-2021-3587: (unk) nfc: fix NULL ptr dereference in llcp_sock_getname() after failed connect 
