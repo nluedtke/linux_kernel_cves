@@ -1,30 +1,29 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 08Jun21 08:02
+## Last Update - 11Jun21 08:39
 
 ### **New CVEs Added:**
 
-[CVE-2018-25015](cves/CVE-2018-25015)  
-[CVE-2019-25045](cves/CVE-2019-25045)  
-[CVE-2020-36385](cves/CVE-2020-36385)  
-[CVE-2020-36386](cves/CVE-2020-36386)  
-[CVE-2020-36387](cves/CVE-2020-36387)  
-[CVE-2021-0512](cves/CVE-2021-0512)  
-[CVE-2021-0605](cves/CVE-2021-0605)  
-[CVE-2021-0606](cves/CVE-2021-0606)  
-[CVE-2021-3587](cves/CVE-2021-3587)  
+[CVE-2021-0129](cves/CVE-2021-0129)  
+[CVE-2021-28691](cves/CVE-2021-28691)  
+[CVE-2021-3573](cves/CVE-2021-3573)  
+
+
+### **New Versions Checked:**
+
+[4.14.236](streams/4.14)  
+[4.19.194](streams/4.19)  
+[4.4.272](streams/4.4)  
+[4.9.272](streams/4.9)  
+[5.10.43](streams/5.10)  
+[5.12.10](streams/5.12)  
+[5.4.125](streams/5.4)  
 
 
 ### **Updated CVEs:**
 
-[CVE-2021-3506](cves/CVE-2021-3506)  
+[CVE-2020-26558](cves/CVE-2020-26558)  
 [CVE-2021-3564](cves/CVE-2021-3564)  
-[CVE-2008-2544](cves/CVE-2008-2544)  
+[CVE-2021-3587](cves/CVE-2021-3587)  
 [CVE-2020-10774](cves/CVE-2020-10774)  
-[CVE-2020-25668](cves/CVE-2020-25668)  
-[CVE-2020-25669](cves/CVE-2020-25669)  
-[CVE-2020-25671](cves/CVE-2020-25671)  
-[CVE-2020-25673](cves/CVE-2020-25673)  
-[CVE-2021-22543](cves/CVE-2021-22543)  
-[CVE-2021-3543](cves/CVE-2021-3543)  

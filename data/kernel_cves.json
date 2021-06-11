@@ -53526,9 +53526,31 @@
     "CVE-2020-10774": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
         "cwe": "Buffer Access with Incorrect Length Value",
         "fixes": "",
-        "last_modified": "2021-06-08",
+        "last_modified": "2021-06-11",
         "nvd_text": "A memory disclosure flaw was found in the Linux kernel's versions before 4.18.0-193.el8 in the sysctl subsystem when reading the /proc/sys/kernel/rh_features file. This flaw allows a local user to read uninitialized values from the kernel memory. The highest threat from this vulnerability is to confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10774",
@@ -57379,8 +57401,9 @@
         }
     },
     "CVE-2020-26558": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.13-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "Bluetooth: SMP: Fail if remote and local public keys are identical",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Adjacent Network",
@@ -57404,8 +57427,9 @@
             "score": 4.2
         },
         "cwe": "Improper Authentication",
-        "fixes": "",
-        "last_modified": "2021-06-04",
+        "fixes": "6d19628f539fccf899298ff02ee4c73e4bf6df3f",
+        "last_affected_version": "5.12.6",
+        "last_modified": "2021-06-11",
         "nvd_text": "Bluetooth LE and BR/EDR secure pairing in Bluetooth Core Specification 2.1 through 5.2 may permit a nearby man-in-the-middle attacker to identify the Passkey used during pairing (in the Passkey authentication procedure) by reflection of the public key and the authentication evidence of the initiating device, potentially permitting this attacker to complete authenticated pairing with the responding device using the correct Passkey for the pairing session. The attack methodology determines the Passkey value one bit at a time.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26558",
@@ -59804,6 +59828,23 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2020/CVE-2020-9391"
         }
     },
+    "CVE-2021-0129": {
+        "affected_versions": "v2.6.12-rc2 to v5.13-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "Bluetooth: SMP: Fail if remote and local public keys are identical",
+        "fixes": "6d19628f539fccf899298ff02ee4c73e4bf6df3f",
+        "last_affected_version": "5.12.6",
+        "last_modified": "2021-06-11",
+        "nvd_text": "Improper access control in BlueZ may allow an authenticated user to potentially enable information disclosure via adjacent access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0129",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0129",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-0129",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0129",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-0129",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-0129"
+        }
+    },
     "CVE-2021-0342": {
         "affected_versions": "v4.15-rc1 to v5.8-rc1",
         "breaks": "90e33d45940793def6f773b2d528e9f3c84ffdc7",
@@ -60952,6 +60993,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28688",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-28688",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-28688"
+        }
+    },
+    "CVE-2021-28691": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "xen-netback: take a reference to the RX task thread",
+        "fixes": "107866a8eb0b664675a260f1ba0655010fac1e08",
+        "last_affected_version": "5.12.9",
+        "last_modified": "2021-06-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28691",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28691",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-28691",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28691",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-28691",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-28691"
         }
     },
     "CVE-2021-28950": {
@@ -62512,7 +62569,9 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: fix the erroneous flush_work() order",
         "fixes": "6a137caec23aeb9e036cdfd8a46dd8a366460e5d",
-        "last_modified": "2021-06-08",
+        "last_affected_version": "5.12.9",
+        "last_modified": "2021-06-11",
+        "nvd_text": "A flaw double-free memory corruption in the Linux kernel HCI device initialization subsystem was found in the way user attach malicious HCI TTY Bluetooth device. A local user could use this flaw to crash the system. This flaw affects all the Linux kernel versions starting from 3.13.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3564",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3564",
@@ -62522,12 +62581,29 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3564"
         }
     },
-    "CVE-2021-3587": {
+    "CVE-2021-3573": {
         "affected_versions": "unk to v5.13-rc5",
         "breaks": "",
+        "cmt_msg": "Bluetooth: use correct lock to prevent UAF of hdev object",
+        "fixes": "e305509e678b3a4af2b3cfd410f409f7cdaabb52",
+        "last_affected_version": "5.12.9",
+        "last_modified": "2021-06-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3573",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3573",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3573",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3573",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3573",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3573"
+        }
+    },
+    "CVE-2021-3587": {
+        "affected_versions": "v3.3-rc1 to v5.13-rc5",
+        "breaks": "d646960f7986fefb460a2b062d5ccc8ccfeacc3a",
         "cmt_msg": "nfc: fix NULL ptr dereference in llcp_sock_getname() after failed connect",
         "fixes": "4ac06a1e013cf5fdd963317ffd3b968560f33bba",
-        "last_modified": "2021-06-08",
+        "last_affected_version": "5.12.9",
+        "last_modified": "2021-06-11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3587",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3587",
