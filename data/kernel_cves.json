@@ -59412,9 +59412,32 @@
         "affected_versions": "unk to v5.9-rc1",
         "breaks": "",
         "cmt_msg": "io_uring: hold 'ctx' reference around task_work queue + execute",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "6d816e088c359866f9867057e04f244c608c42fe",
         "last_affected_version": "5.8.1",
-        "last_modified": "2021-06-08",
+        "last_modified": "2021-06-22",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.8.2. fs/io_uring.c has a use-after-free related to io_async_task_func and ctx reference holding, aka CID-6d816e088c35.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36387",
@@ -59947,9 +59970,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.13-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: SMP: Fail if remote and local public keys are identical",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "Single",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:A/AC:L/Au:S/C:P/I:N/A:N",
+            "score": 2.7
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Adjacent",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.7
+        },
+        "cwe": "Incorrect Authorization",
         "fixes": "6d19628f539fccf899298ff02ee4c73e4bf6df3f",
         "last_affected_version": "5.12.6",
-        "last_modified": "2021-06-11",
+        "last_modified": "2021-06-22",
         "nvd_text": "Improper access control in BlueZ may allow an authenticated user to potentially enable information disclosure via adjacent access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0129",
@@ -60076,7 +60122,8 @@
         "cmt_msg": "HID: make arrays usage and value to be the same",
         "fixes": "ed9be64eefe26d7d8b0b5b9fa3ffdf425d87a01f",
         "last_affected_version": "5.11.1",
-        "last_modified": "2021-06-08",
+        "last_modified": "2021-06-22",
+        "nvd_text": "In __hidinput_change_resolution_multipliers of hid-input.c, there is a possible out of bounds write due to a heap buffer overflow. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-173843328References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0512",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0512",
@@ -62317,6 +62364,21 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2021/CVE-2021-3348"
         }
     },
+    "CVE-2021-33624": {
+        "affected_versions": "v4.15-rc8 to v5.13-rc7",
+        "breaks": "b2157399cc9898260d6031c5bfe45fe137c1fbe7",
+        "cmt_msg": "bpf: Inherit expanded/patched seen count from old aux data",
+        "fixes": "d203b0fd863a2261e5d00b97f3d060c4c2a6db71",
+        "last_modified": "2021-06-22",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33624",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-33624",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-33624",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-33624",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-33624",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-33624"
+        }
+    },
     "CVE-2021-3411": {
         "affected_versions": "v5.5-rc1 to v5.10",
         "breaks": "7705dc8557973d8ad8f10840f61d8ec805695e9e",
@@ -62414,10 +62476,34 @@
         }
     },
     "CVE-2021-34693": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.13-rc7",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-06-18",
+        "cmt_msg": "can: bcm: fix infoleak in struct bcm_msg_head",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Missing Initialization of Resource",
+        "fixes": "5e87ddbe3942e27e939bdc02deb8579b0cbd8ecc",
+        "last_modified": "2021-06-22",
         "nvd_text": "net/can/bcm.c in the Linux kernel through 5.12.10 allows local users to obtain sensitive information from kernel stack memory because parts of a data structure are uninitialized.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-34693",
@@ -62871,6 +62957,34 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3587",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3587",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3587"
+        }
+    },
+    "CVE-2021-3609": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-06-22",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3609",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3609",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3609",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3609",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3609",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3609"
+        }
+    },
+    "CVE-2021-3612": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-06-22",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3612",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3612",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3612",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3612",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3612",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3612"
         }
     }
 }
