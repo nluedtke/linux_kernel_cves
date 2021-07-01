@@ -38437,8 +38437,8 @@
         }
     }, 
     "CVE-2018-25015": {
-        "affected_versions": "unk to v4.15-rc9", 
-        "breaks": "", 
+        "affected_versions": "v4.15-rc1 to v4.15-rc9", 
+        "breaks": "cea0cc80a6777beb6eb643d4ad53690e1ad1d4ff", 
         "cmt_msg": "sctp: return error if the asoc has been peeled off in sctp_wait_for_sndbuf", 
         "cvss2": {
             "Access Complexity": "Low", 
@@ -38465,7 +38465,7 @@
         "cwe": "Use After Free", 
         "fixes": "a0ff660058b88d12625a783ce9e5c1371c87951f", 
         "last_affected_version": "4.14.15", 
-        "last_modified": "2021-06-18", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "An issue was discovered in the Linux kernel before 4.14.16. There is a use-after-free in net/sctp/socket.c for a held lock after a peel off, aka CID-a0ff660058b8.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-25015", 
@@ -50632,8 +50632,8 @@
         }
     }, 
     "CVE-2019-25045": {
-        "affected_versions": "unk to v5.1", 
-        "breaks": "", 
+        "affected_versions": "v4.15-rc6 to v5.1", 
+        "breaks": "6a53b7593233ab9e4f96873ebacc0f653a55c3e1", 
         "cmt_msg": "xfrm: clean up xfrm protocol checks", 
         "cvss2": {
             "Access Complexity": "Low", 
@@ -50660,7 +50660,7 @@
         "cwe": "Use After Free", 
         "fixes": "dbb2483b2a46fbaf833cfb5deb5ed9cace9c7399", 
         "last_affected_version": "5.0", 
-        "last_modified": "2021-06-18", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "An issue was discovered in the Linux kernel before 5.0.19. The XFRM subsystem has a use-after-free, related to an xfrm_state_fini panic, aka CID-dbb2483b2a46.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-25045", 
@@ -57344,7 +57344,8 @@
         }, 
         "cwe": "Unspecified", 
         "fixes": "56c5812623f95313f6a46fbf0beee7fa17c68bbf", 
-        "last_modified": "2021-05-12", 
+        "last_affected_version": "5.12.13", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "The Linux kernel through 5.8.13 does not properly enforce the Secure Boot Forbidden Signature Database (aka dbx) protection mechanism. This affects certs/blacklist.c and certs/system_keyring.c.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-26541", 
@@ -59338,8 +59339,8 @@
         }
     }, 
     "CVE-2020-36385": {
-        "affected_versions": "unk to v5.10-rc1", 
-        "breaks": "", 
+        "affected_versions": "v2.6.25-rc1 to v5.10-rc1", 
+        "breaks": "88314e4dda1e158aabce76429ef4d017b48f8b92", 
         "cmt_msg": "RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy", 
         "cvss2": {
             "Access Complexity": "Medium", 
@@ -59365,7 +59366,7 @@
         }, 
         "cwe": "Use After Free", 
         "fixes": "f5449e74802c1112dea984aec8af7a33c4516af1", 
-        "last_modified": "2021-06-18", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "An issue was discovered in the Linux kernel before 5.10. drivers/infiniband/core/ucma.c has a use-after-free because the ctx is reached via the ctx_list in some ucma_migrate_id situations where ucma_close is called, aka CID-f5449e74802c.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36385", 
@@ -59377,8 +59378,8 @@
         }
     }, 
     "CVE-2020-36386": {
-        "affected_versions": "unk to v5.9-rc1", 
-        "breaks": "", 
+        "affected_versions": "v2.6.12-rc2 to v5.9-rc1", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
         "cmt_msg": "Bluetooth: Fix slab-out-of-bounds read in hci_extended_inquiry_result_evt()", 
         "cvss2": {
             "Access Complexity": "Low", 
@@ -59405,7 +59406,7 @@
         "cwe": "Out-of-bounds Read", 
         "fixes": "51c19bf3d5cfaa66571e4b88ba2a6f6295311101", 
         "last_affected_version": "5.8.0", 
-        "last_modified": "2021-06-18", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "An issue was discovered in the Linux kernel before 5.8.1. net/bluetooth/hci_event.c has a slab out-of-bounds read in hci_extended_inquiry_result_evt, aka CID-51c19bf3d5cf.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36386", 
@@ -59417,8 +59418,8 @@
         }
     }, 
     "CVE-2020-36387": {
-        "affected_versions": "unk to v5.9-rc1", 
-        "breaks": "", 
+        "affected_versions": "v5.7-rc1 to v5.9-rc1", 
+        "breaks": "b41e98524e424d104aa7851d54fd65820759875a", 
         "cmt_msg": "io_uring: hold 'ctx' reference around task_work queue + execute", 
         "cvss2": {
             "Access Complexity": "Low", 
@@ -59445,7 +59446,7 @@
         "cwe": "Use After Free", 
         "fixes": "6d816e088c359866f9867057e04f244c608c42fe", 
         "last_affected_version": "5.8.1", 
-        "last_modified": "2021-06-22", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "An issue was discovered in the Linux kernel before 5.8.2. fs/io_uring.c has a use-after-free related to io_async_task_func and ctx reference holding, aka CID-6d816e088c35.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36387", 
@@ -60125,8 +60126,8 @@
         }
     }, 
     "CVE-2021-0512": {
-        "affected_versions": "unk to v5.12-rc1-dontuse", 
-        "breaks": "", 
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc1-dontuse", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
         "cmt_msg": "HID: make arrays usage and value to be the same", 
         "cvss2": {
             "Access Complexity": "Low", 
@@ -60153,7 +60154,7 @@
         "cwe": "Out-of-bounds Write", 
         "fixes": "ed9be64eefe26d7d8b0b5b9fa3ffdf425d87a01f", 
         "last_affected_version": "5.11.1", 
-        "last_modified": "2021-06-24", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "In __hidinput_change_resolution_multipliers of hid-input.c, there is a possible out of bounds write due to a heap buffer overflow. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-173843328References: Upstream kernel", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0512", 
@@ -60165,12 +60166,12 @@
         }
     }, 
     "CVE-2021-0605": {
-        "affected_versions": "unk to v5.8", 
-        "breaks": "", 
+        "affected_versions": "v3.15-rc1 to v5.8", 
+        "breaks": "d3623099d3509fa68fa28235366049dd3156c63a", 
         "cmt_msg": "af_key: pfkey_dump needs parameter validation", 
         "fixes": "37bd22420f856fcd976989f1d4f1f7ad28e1fcac", 
         "last_affected_version": "5.7", 
-        "last_modified": "2021-06-24", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "In pfkey_dump of af_key.c, there is a possible out-of-bounds read due to a missing bounds check. This could lead to local information disclosure in the kernel with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-110373476", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0605", 
@@ -60183,9 +60184,9 @@
     }, 
     "CVE-2021-0606": {
         "affected_versions": "unk to unk", 
-        "breaks": "", 
-        "fixes": "", 
-        "last_modified": "2021-06-24", 
+        "breaks": "5fb252cad61f20ae5d5a8b199f6cc4faf6f418e1", 
+        "fixes": "328ec6286a78a71500b74255448e8f3c83d2b2c4", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "In drm_syncobj_handle_to_fd of drm_syncobj.c, there is a possible use after free due to incorrect refcounting. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-168034487", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0606", 
@@ -60582,7 +60583,8 @@
         }, 
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer", 
         "fixes": "f8be156be163a052a067306417cd0ff679068c97", 
-        "last_modified": "2021-06-28", 
+        "last_affected_version": "5.12.13", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "An issue was discovered in Linux: KVM through Improper handling of VM_IO|VM_PFNMAP vmas in KVM can bypass RO checks and can lead to pages being freed while still accessible by the VMM and guest. This allows users with the ability to start and control a VM to read/write random pages of memory and can result in local privilege escalation.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-22543", 
@@ -61192,12 +61194,12 @@
         }
     }, 
     "CVE-2021-28691": {
-        "affected_versions": "unk to v5.13-rc6", 
-        "breaks": "", 
+        "affected_versions": "v5.5-rc1 to v5.13-rc6", 
+        "breaks": "2ac061ce97f413bfbbdd768f7d2e0fda2e8170df", 
         "cmt_msg": "xen-netback: take a reference to the RX task thread", 
         "fixes": "107866a8eb0b664675a260f1ba0655010fac1e08", 
         "last_affected_version": "5.12.9", 
-        "last_modified": "2021-06-15", 
+        "last_modified": "2021-07-01", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28691", 
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28691", 
@@ -62563,7 +62565,7 @@
         "cwe": "Missing Initialization of Resource", 
         "fixes": "5e87ddbe3942e27e939bdc02deb8579b0cbd8ecc", 
         "last_affected_version": "5.12.12", 
-        "last_modified": "2021-06-24", 
+        "last_modified": "2021-07-01", 
         "nvd_text": "net/can/bcm.c in the Linux kernel through 5.12.10 allows local users to obtain sensitive information from kernel stack memory because parts of a data structure are uninitialized.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-34693", 
@@ -63050,10 +63052,12 @@
         }
     }, 
     "CVE-2021-3612": {
-        "affected_versions": "unk to unk", 
-        "breaks": "", 
-        "fixes": "", 
-        "last_modified": "2021-06-22", 
+        "affected_versions": "v2.6.32-rc1 to v5.12-rc1-dontuse", 
+        "breaks": "999b874f4aa39b7abf45662ff0900f943ddb2d02", 
+        "cmt_msg": "Input: joydev - prevent potential read overflow in ioctl", 
+        "fixes": "182d679b2298d62bf42bb14b12a8067b8e17b617", 
+        "last_affected_version": "5.11.2", 
+        "last_modified": "2021-07-01", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3612", 
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3612", 
