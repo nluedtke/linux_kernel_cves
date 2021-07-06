@@ -45669,6 +45669,7 @@
     },
     "CVE-2019-18680": {
         "affected_versions": "unk to unk",
+        "alt_msg": "net: rds: Fix NULL ptr use in rds_tcp_kill_sock",
         "breaks": "c4e97b06cfdc5213494c22dd5c2b41ff8b15e0ee",
         "cvss2": {
             "Access Complexity": "Low",
@@ -45692,7 +45693,8 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "91573ae4aed0a49660abdad4d42f2a0db995ee5e",
-        "last_modified": "2019-11-06",
+        "last_affected_version": "4.4.194",
+        "last_modified": "2021-07-06",
         "nvd_text": "An issue was discovered in the Linux kernel 4.4.x before 4.4.195. There is a NULL pointer dereference in rds_tcp_kill_sock() in net/rds/tcp.c that will cause denial of service, aka CID-91573ae4aed0.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-18680",
@@ -56248,6 +56250,7 @@
     },
     "CVE-2020-25220": {
         "affected_versions": "unk to unk",
+        "alt_msg": "Add skcd->no_refcnt check which is missed when backporting",
         "breaks": "23ec03076333eea8882343af3f82c8ef53350e8c",
         "cvss2": {
             "Access Complexity": "Low",
@@ -60434,9 +60437,9 @@
         }
     },
     "CVE-2021-20239": {
-        "affected_versions": "v5.3-rc1 to v5.10-rc1",
+        "affected_versions": "v5.3-rc1 to v5.9-rc1",
         "breaks": "0d01da6afc5402f60325c5da31b22f7d56689b49",
-        "cmt_msg": "Merge branch 'work.set_fs' of git://git.kernel.org/pub/scm/linux/kernel/git/viro/vfs",
+        "cmt_msg": "net: pass a sockptr_t into ->setsockopt",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -60460,9 +60463,9 @@
             "score": 3.3
         },
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
-        "fixes": "f56e65dff6ad52395ef45738799b4fb70ff43376",
+        "fixes": "a7b75c5a8c41445f33efb663887ff5f5c3b4454b",
         "last_affected_version": "None",
-        "last_modified": "2021-06-04",
+        "last_modified": "2021-07-06",
         "nvd_text": "A flaw was found in the Linux kernel in versions before 5.4.92 in the BPF protocol. This flaw allows an attacker with a local account to leak information about kernel internal addresses. The highest threat from this vulnerability is to confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20239",
