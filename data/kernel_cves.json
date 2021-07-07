@@ -58124,8 +58124,8 @@
         }
     },
     "CVE-2020-27825": {
-        "affected_versions": "v5.9-rc1 to v5.10-rc1",
-        "breaks": "b23d7a5f4a07af02343cdd28fe1f7488bac3afda",
+        "affected_versions": "v3.5-rc1 to v5.10-rc1",
+        "breaks": "83f40318dab00e3298a1f6d0b12ac025e84e478d",
         "cmt_msg": "tracing: Fix race in trace_open and buffer resize call",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -58152,7 +58152,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "bbeb97464eefc65f506084fd9f18f21653e01137",
         "last_affected_version": "5.9.4",
-        "last_modified": "2021-03-17",
+        "last_modified": "2021-07-07",
         "nvd_text": "A use-after-free flaw was found in kernel/trace/ring_buffer.c in Linux kernel (before 5.10-rc1). There was a race problem in trace_open and resize of cpu buffer running parallely on different cpus, may cause a denial of service problem (DOS). This flaw could even allow a local attacker with special user privilege to a kernel information leak threat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27825",
@@ -61278,9 +61278,32 @@
         "affected_versions": "v5.5-rc1 to v5.13-rc6",
         "breaks": "2ac061ce97f413bfbbdd768f7d2e0fda2e8170df",
         "cmt_msg": "xen-netback: take a reference to the RX task thread",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "107866a8eb0b664675a260f1ba0655010fac1e08",
         "last_affected_version": "5.12.9",
-        "last_modified": "2021-07-06",
+        "last_modified": "2021-07-07",
         "nvd_text": "Guest triggered use-after-free in Linux xen-netback A malicious or buggy network PV frontend can force Linux netback to disable the interface and terminate the receive kernel thread associated with queue 0 in response to the frontend sending a malformed packet. Such kernel thread termination will lead to a use-after-free in Linux netback when the backend is destroyed, as the kernel thread associated with queue 0 will have already exited and thus the call to kthread_stop will be performed against a stale pointer.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28691",
@@ -62509,9 +62532,32 @@
         "affected_versions": "v4.15-rc8 to v5.13-rc7",
         "breaks": "b2157399cc9898260d6031c5bfe45fe137c1fbe7",
         "cmt_msg": "bpf: Inherit expanded/patched seen count from old aux data",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:N/A:N",
+            "score": 4.7
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.7
+        },
+        "cwe": "Observable Discrepancy",
         "fixes": "d203b0fd863a2261e5d00b97f3d060c4c2a6db71",
         "last_affected_version": "5.12.12",
-        "last_modified": "2021-06-24",
+        "last_modified": "2021-07-07",
         "nvd_text": "In kernel/bpf/verifier.c in the Linux kernel before 5.12.13, a branch can be mispredicted (e.g., because of type confusion) and consequently an unprivileged BPF program can read arbitrary memory locations via a side-channel attack, aka CID-9183671af6db.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33624",
@@ -62935,6 +62981,23 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3501",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3501",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3501"
+        }
+    },
+    "CVE-2021-35039": {
+        "affected_versions": "v4.15-rc1 to v5.13",
+        "breaks": "7c9bc0983f890ed9782e755a0e070930cd979333",
+        "cmt_msg": "module: limit enabling module.sig_enforce",
+        "fixes": "0c18f29aae7ce3dadd26d8ee3505d07cc982df75",
+        "last_affected_version": "5.12.13",
+        "last_modified": "2021-07-07",
+        "nvd_text": "kernel/module.c in the Linux kernel before 5.12.14 mishandles Signature Verification, aka CID-0c18f29aae7c. Without CONFIG_MODULE_SIG, verification that a kernel module is signed, for loading via init_module, does not occur for a module.sig_enforce=1 command-line argument.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-35039",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-35039",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-35039",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-35039",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-35039",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-35039"
         }
     },
     "CVE-2021-3506": {
