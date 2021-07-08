@@ -1120,6 +1120,7 @@ CVEs fixed in 4.4.267:
   CVE-2020-25671: a524eabb5e309e49ee2d8422a771c5cedef003c4 nfc: fix refcount leak in llcp_sock_connect()
   CVE-2020-25672: 7ed6c0c7db2099792768150c070efca71e85bdf3 nfc: fix memory leak in llcp_sock_connect()
   CVE-2020-25673: 7f6c9e4314aa7d90b6261b8ae571d14c454ba964 nfc: Avoid endless loops caused by repeated llcp_sock_connect()
+  CVE-2021-22555: b0d98b2193a38ef93c92e5e1953d134d0f426531 netfilter: x_tables: fix compat match/target pad out-of-bound write
 
 CVEs fixed in 4.4.269:
   CVE-2017-0605: 150381302389fa01425396489a21dc7c53383a5b tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline()
@@ -1168,9 +1169,11 @@ Outstanding CVEs:
   CVE-2017-13166: (unk) media: v4l2-ioctl.c: use check_fmt for enum/g/s/try_fmt 
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
+  CVE-2017-16648: (unk) dvb_frontend: don't use-after-free the frontend struct 
   CVE-2017-18174: (unk) pinctrl: amd: Use devm_pinctrl_register() for pinctrl registration 
   CVE-2017-18232: (unk) scsi: libsas: direct call probe and destruct 
   CVE-2017-18261: (unk) clocksource/drivers/arm_arch_timer: Avoid infinite recursion when ftrace is enabled 
+  CVE-2017-18552: (unk) RDS: validate the requested traces user input against max supported 
   CVE-2017-5715: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
@@ -1193,6 +1196,7 @@ Outstanding CVEs:
   CVE-2018-13098: (unk) f2fs: fix to do sanity check with extra_attr feature 
   CVE-2018-17977: (unk)  
   CVE-2018-20509: (unk) binder: refactor binder ref inc/dec for thread safety 
+  CVE-2018-20854: (unk) phy: ocelot-serdes: fix out-of-bounds read 
   CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
   CVE-2018-3620: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
   CVE-2018-3646: (unk) x86/microcode: Allow late microcode loading with SMT disabled 
@@ -1217,15 +1221,18 @@ Outstanding CVEs:
   CVE-2019-15794: (unk)  
   CVE-2019-16230: (unk) drm/amdkfd: fix a potential NULL pointer dereference (v2) 
   CVE-2019-16231: (unk) fjes: Handle workqueue allocation failure 
+  CVE-2019-16921: (unk) RDMA/hns: Fix init resp when alloc ucontext 
   CVE-2019-18885: (unk) btrfs: merge btrfs_find_device and find_device 
   CVE-2019-19036: (unk) btrfs: Detect unbalanced tree with empty leaf before crashing btree operations 
   CVE-2019-19039: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
+  CVE-2019-19241: (unk) io_uring: async workers should inherit the user creds 
   CVE-2019-19377: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19378: (unk)  
   CVE-2019-19449: (unk)  
   CVE-2019-19814: (unk)  
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
   CVE-2019-19922: (unk) sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices 
+  CVE-2019-19927: (unk) drm/ttm: fix incrementing the page pointer for huge pages 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
   CVE-2019-2025: (unk) binder: fix race that allows malicious free of live buffer 
   CVE-2019-2054: (unk) arm/ptrace: run seccomp after ptrace 
@@ -1275,6 +1282,7 @@ Outstanding CVEs:
   CVE-2020-29374: (unk) gup: document and work around "COW can break either way" issue 
   CVE-2020-35501: (unk)  
   CVE-2020-36310: (unk) KVM: SVM: avoid infinite loop on NPF from bad address 
+  CVE-2020-36313: (unk) KVM: Fix out of range accesses to memslots 
   CVE-2020-36322: (unk) fuse: fix bad inode 
   CVE-2020-36385: (unk) RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 

@@ -58,6 +58,8 @@ CVEs fixed in 3.18.14:
 
 CVEs fixed in 3.18.15:
   CVE-2015-1420: 444a3e132498a80ddd48296897e3ffe1ff53eb76 vfs: read file_handle only once in handle_to_path
+  CVE-2015-4177: 0de0e610f6b359c52d4f8b02bac2963f4968c9d6 mnt: Fail collect_mounts when applied to unmounted mounts
+  CVE-2015-4178: 11bf6b1ea65f1580477827831d05711e5b87ac7b fs_pin: Allow for the possibility that m_list or s_list go unused.
   CVE-2015-5706: f42b455331b5eb2ef5f2cecab28941eb1fada554 path_openat(): fix double fput()
 
 CVEs fixed in 3.18.17:
@@ -665,6 +667,7 @@ Outstanding CVEs:
   CVE-2015-3339: (unk) fs: take i_mutex during prepare_binprm for set[ug]id executables 
   CVE-2015-4001: (unk) ozwpan: Use unsigned ints to prevent heap overflow 
   CVE-2015-4004: (unk) staging: ozwpan: Remove from tree 
+  CVE-2015-4176: (unk) mnt: Update detach_mounts to leave mounts connected 
   CVE-2015-7515: (unk) Input: aiptek - fix crash on detecting device without endpoints 
   CVE-2015-7884: (unk) [media] media/vivid-osd: fix info leak in ioctl 
   CVE-2015-7885: (unk) staging/dgnc: fix info leak in ioctl 
@@ -731,6 +734,7 @@ Outstanding CVEs:
   CVE-2017-15116: (unk) crypto: rng - Remove old low-level rng interface 
   CVE-2017-16528: (unk) ALSA: seq: Cancel pending autoload work at unbinding device 
   CVE-2017-16536: (unk) [media] cx231xx-cards: fix NULL-deref on missing association descriptor 
+  CVE-2017-16648: (unk) dvb_frontend: don't use-after-free the frontend struct 
   CVE-2017-16649: (unk) net: cdc_ether: fix divide by 0 on bad descriptors 
   CVE-2017-16650: (unk) net: qmi_wwan: fix divide by 0 on bad descriptors 
   CVE-2017-16995: (unk) bpf: fix incorrect sign extension in check_alu_op() 
@@ -743,6 +747,7 @@ Outstanding CVEs:
   CVE-2017-18249: (unk) f2fs: fix race condition in between free nid allocator/initializer 
   CVE-2017-18261: (unk) clocksource/drivers/arm_arch_timer: Avoid infinite recursion when ftrace is enabled 
   CVE-2017-18509: (unk) ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt 
+  CVE-2017-18552: (unk) RDS: validate the requested traces user input against max supported 
   CVE-2017-2583: (unk) KVM: x86: fix emulation of "MOV SS, null selector" 
   CVE-2017-2584: (unk) KVM: x86: Introduce segmented_write_std 
   CVE-2017-5549: (unk) USB: serial: kl5kusb105: fix line-state error handling 
@@ -802,6 +807,7 @@ Outstanding CVEs:
   CVE-2018-19824: (unk) ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c 
   CVE-2018-20509: (unk) binder: refactor binder ref inc/dec for thread safety 
   CVE-2018-20510: (unk) binder: replace "%p" with "%pK" 
+  CVE-2018-20854: (unk) phy: ocelot-serdes: fix out-of-bounds read 
   CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
   CVE-2018-20856: (unk) block: blk_init_allocated_queue() set q->fq as NULL in the fail case 
   CVE-2018-20976: (unk) xfs: clear sb->s_fs_info on mount failure 
@@ -888,6 +894,7 @@ Outstanding CVEs:
   CVE-2019-16233: (unk) scsi: qla2xxx: fix a potential NULL pointer dereference 
   CVE-2019-16413: (unk) 9p: use inode->i_lock to protect i_size_write() under 32-bit 
   CVE-2019-16746: (unk) nl80211: validate beacon head 
+  CVE-2019-16921: (unk) RDMA/hns: Fix init resp when alloc ucontext 
   CVE-2019-17052: (unk) ax25: enforce CAP_NET_RAW for raw sockets 
   CVE-2019-17053: (unk) ieee802154: enforce CAP_NET_RAW for raw sockets 
   CVE-2019-17054: (unk) appletalk: enforce CAP_NET_RAW for raw sockets 
@@ -918,6 +925,7 @@ Outstanding CVEs:
   CVE-2019-19073: (unk) ath9k_htc: release allocated buffer if timed out 
   CVE-2019-19074: (unk) ath9k: release allocated buffer if timed out 
   CVE-2019-19227: (unk) appletalk: Fix potential NULL pointer dereference in unregister_snap_client 
+  CVE-2019-19241: (unk) io_uring: async workers should inherit the user creds 
   CVE-2019-19319: (unk) ext4: protect journal inode's blocks using block_validity 
   CVE-2019-19332: (unk) KVM: x86: fix out-of-bounds write in KVM_GET_EMULATED_CPUID (CVE-2019-19332) 
   CVE-2019-19377: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
@@ -942,6 +950,7 @@ Outstanding CVEs:
   CVE-2019-19815: (unk) f2fs: support swap file w/ DIO 
   CVE-2019-19816: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19922: (unk) sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices 
+  CVE-2019-19927: (unk) drm/ttm: fix incrementing the page pointer for huge pages 
   CVE-2019-19965: (unk) scsi: libsas: stop discovering if oob mode is disconnected 
   CVE-2019-19966: (unk) media: cpia2: Fix use-after-free in cpia2_exit 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
@@ -1102,6 +1111,7 @@ Outstanding CVEs:
   CVE-2020-35519: (unk) net/x25: prevent a couple of overflows 
   CVE-2020-36158: (unk) mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start 
   CVE-2020-36310: (unk) KVM: SVM: avoid infinite loop on NPF from bad address 
+  CVE-2020-36313: (unk) KVM: Fix out of range accesses to memslots 
   CVE-2020-36322: (unk) fuse: fix bad inode 
   CVE-2020-36385: (unk) RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy 
   CVE-2020-36386: (unk) Bluetooth: Fix slab-out-of-bounds read in hci_extended_inquiry_result_evt() 
@@ -1123,6 +1133,7 @@ Outstanding CVEs:
   CVE-2021-20265: (unk) af_unix: fix struct pid memory leak 
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-22543: (unk) KVM: do not allow mapping valid but non-reference-counted pages 
+  CVE-2021-22555: (unk) netfilter: x_tables: fix compat match/target pad out-of-bound write 
   CVE-2021-26930: (unk) xen-blkback: fix error handling in xen_blkbk_map() 
   CVE-2021-26931: (unk) xen-blkback: don't "handle" error by BUG() 
   CVE-2021-26932: (unk) Xen/x86: don't bail early from clear_foreign_p2m_mapping() 

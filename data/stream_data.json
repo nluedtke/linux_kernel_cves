@@ -163,6 +163,10 @@
             }
         }, 
         "3.18.15": {
+            "CVE-2015-4177": {
+                "cmt_msg": "mnt: Fail collect_mounts when applied to unmounted mounts", 
+                "cmt_id": "0de0e610f6b359c52d4f8b02bac2963f4968c9d6"
+            }, 
             "CVE-2015-5706": {
                 "cmt_msg": "path_openat(): fix double fput()", 
                 "cmt_id": "f42b455331b5eb2ef5f2cecab28941eb1fada554"
@@ -170,6 +174,10 @@
             "CVE-2015-1420": {
                 "cmt_msg": "vfs: read file_handle only once in handle_to_path", 
                 "cmt_id": "444a3e132498a80ddd48296897e3ffe1ff53eb76"
+            }, 
+            "CVE-2015-4178": {
+                "cmt_msg": "fs_pin: Allow for the possibility that m_list or s_list go unused.", 
+                "cmt_id": "11bf6b1ea65f1580477827831d05711e5b87ac7b"
             }
         }, 
         "3.18.17": {
@@ -1953,6 +1961,9 @@
             "CVE-2017-5551": {
                 "cmt_msg": "tmpfs: clear S_ISGID when setting posix ACLs"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -2166,8 +2177,8 @@
             "CVE-2015-8104": {
                 "cmt_msg": "KVM: svm: unconditionally intercept #DB"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
@@ -2529,6 +2540,9 @@
             "CVE-2020-12652": {
                 "cmt_msg": "scsi: mptfusion: Fix double fetch bug in ioctl"
             }, 
+            "CVE-2015-4176": {
+                "cmt_msg": "mnt: Update detach_mounts to leave mounts connected"
+            }, 
             "CVE-2020-14381": {
                 "cmt_msg": "futex: Fix inode life-time issue"
             }, 
@@ -2781,6 +2795,9 @@
             "CVE-2020-26541": {
                 "cmt_msg": "certs: Add EFI_CERT_X509_GUID support for dbx entries"
             }, 
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
+            }, 
             "CVE-2021-26931": {
                 "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()"
             }, 
@@ -2834,6 +2851,9 @@
             }, 
             "CVE-2021-0448": {
                 "cmt_msg": "netfilter: ctnetlink: add a range check for l3/l4 protonum"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -2921,6 +2941,9 @@
             }, 
             "CVE-2019-0136": {
                 "cmt_msg": "mac80211: drop robust management frames from unknown TA"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2018-16597": {
                 "cmt_msg": "ovl: modify ovl_permission() to do checks on two inodes"
@@ -3030,6 +3053,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -3129,6 +3155,9 @@
             "CVE-2020-27815": {
                 "cmt_msg": "jfs: Fix array index bounds check in dbAdjTree"
             }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
             }, 
@@ -3209,6 +3238,9 @@
             }, 
             "CVE-2020-25656": {
                 "cmt_msg": "vt: keyboard, extend func_buf_lock to readers"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
@@ -3416,6 +3448,9 @@
             }, 
             "CVE-2017-16649": {
                 "cmt_msg": "net: cdc_ether: fix divide by 0 on bad descriptors"
+            }, 
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }
         }
     }, 
@@ -3684,6 +3719,9 @@
             "CVE-2019-13631": {
                 "cmt_msg": "Input: gtco - bounds check collection indent level"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -3705,8 +3743,8 @@
             "CVE-2019-12379": {
                 "cmt_msg": "consolemap: Fix a memory leaking bug in drivers/tty/vt/consolemap.c"
             }, 
-            "CVE-2019-12378": {
-                "cmt_msg": "ipv6_sockglue: Fix a missing-check bug in ip6_ra_control()"
+            "CVE-2017-12134": {
+                "cmt_msg": "xen: fix bio vec merging"
             }, 
             "CVE-2021-30002": {
                 "cmt_msg": "media: v4l: ioctl: Fix memory leak in video_usercopy"
@@ -3924,8 +3962,8 @@
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
@@ -4419,8 +4457,8 @@
             "CVE-2019-18885": {
                 "cmt_msg": "btrfs: merge btrfs_find_device and find_device"
             }, 
-            "CVE-2017-12134": {
-                "cmt_msg": "xen: fix bio vec merging"
+            "CVE-2019-12378": {
+                "cmt_msg": "ipv6_sockglue: Fix a missing-check bug in ip6_ra_control()"
             }, 
             "CVE-2019-11091": {
                 "cmt_msg": "s390/speculation: Support 'mitigations=' cmdline option"
@@ -4454,6 +4492,9 @@
             }, 
             "CVE-2017-14340": {
                 "cmt_msg": "xfs: XFS_IS_REALTIME_INODE() should be false if no rt device present"
+            }, 
+            "CVE-2019-19535": {
+                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
             }, 
             "CVE-2020-14386": {
                 "cmt_msg": "net/packet: fix overflow in tpacket_rcv"
@@ -4818,6 +4859,9 @@
             "CVE-2017-18551": {
                 "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA"
             }, 
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
+            }, 
             "CVE-2021-26931": {
                 "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()"
             }, 
@@ -4892,6 +4936,9 @@
             }, 
             "CVE-2020-25705": {
                 "cmt_msg": "icmp: randomize the global rate limiter"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -5018,6 +5065,9 @@
             }, 
             "CVE-2017-17975": {
                 "cmt_msg": "media: usbtv: prevent double free in error case"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2019-19377": {
                 "cmt_msg": "btrfs: Don't submit any btree write bio if the fs has errors"
@@ -5205,6 +5255,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -5364,6 +5417,9 @@
             "CVE-2021-26934": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
             }, 
@@ -5492,6 +5548,9 @@
             }, 
             "CVE-2017-12192": {
                 "cmt_msg": "KEYS: prevent KEYCTL_READ on negative key"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2017-12190": {
                 "cmt_msg": "fix unbalanced page refcounting in bio_map_user_iov"
@@ -5727,8 +5786,8 @@
             "CVE-2018-1130": {
                 "cmt_msg": "dccp: check sk for closed state in dccp_sendmsg()"
             }, 
-            "CVE-2019-19535": {
-                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
+            "CVE-2019-14284": {
+                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
             }, 
             "CVE-2021-3506": {
                 "cmt_msg": "f2fs: fix to avoid out-of-bounds memory access"
@@ -5769,8 +5828,8 @@
             "CVE-2019-5489": {
                 "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages"
             }, 
-            "CVE-2019-14284": {
-                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2018-10880": {
                 "cmt_msg": "ext4: never move the system.data xattr out of the inode body"
@@ -6127,6 +6186,9 @@
             "CVE-2019-9245": {
                 "cmt_msg": "f2fs: sanity check of xattr entry size"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -6280,8 +6342,8 @@
             "CVE-2019-19074": {
                 "cmt_msg": "ath9k: release allocated buffer if timed out"
             }, 
-            "CVE-2019-19073": {
-                "cmt_msg": "ath9k_htc: release allocated buffer if timed out"
+            "CVE-2019-18683": {
+                "cmt_msg": "media: vivid: Fix wrong locking that causes race conditions on streaming stop"
             }, 
             "CVE-2019-18680": {
                 "cmt_msg": ""
@@ -6363,6 +6425,9 @@
             }, 
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
+            }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2020-27066": {
                 "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer"
@@ -6994,6 +7059,9 @@
             "CVE-2020-26139": {
                 "cmt_msg": "mac80211: do not accept/forward invalid EAPOL frames"
             }, 
+            "CVE-2020-14314": {
+                "cmt_msg": "ext4: fix potential negative array index in do_split()"
+            }, 
             "CVE-2019-10220": {
                 "cmt_msg": "Convert filldir[64]() from __put_user() to unsafe_put_user()"
             }, 
@@ -7159,8 +7227,8 @@
             "CVE-2016-8660": {
                 "cmt_msg": ""
             }, 
-            "CVE-2020-14314": {
-                "cmt_msg": "ext4: fix potential negative array index in do_split()"
+            "CVE-2018-10883": {
+                "cmt_msg": "jbd2: don't mark block as modified if the handle is out of credits"
             }, 
             "CVE-2019-13272": {
                 "cmt_msg": "ptrace: Fix ->ptracer_cred handling for PTRACE_TRACEME"
@@ -7179,6 +7247,9 @@
             }, 
             "CVE-2019-9456": {
                 "cmt_msg": "usb: usbmon: Read text within supplied buffer size"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -7291,6 +7362,9 @@
             "CVE-2017-17975": {
                 "cmt_msg": "media: usbtv: prevent double free in error case"
             }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
+            }, 
             "CVE-2019-19377": {
                 "cmt_msg": "btrfs: Don't submit any btree write bio if the fs has errors"
             }, 
@@ -7303,8 +7377,8 @@
             "CVE-2018-12896": {
                 "cmt_msg": "posix-timers: Sanitize overrun handling"
             }, 
-            "CVE-2019-18683": {
-                "cmt_msg": "media: vivid: Fix wrong locking that causes race conditions on streaming stop"
+            "CVE-2019-19073": {
+                "cmt_msg": "ath9k_htc: release allocated buffer if timed out"
             }, 
             "CVE-2018-14734": {
                 "cmt_msg": "infiniband: fix a possible use-after-free bug"
@@ -7449,6 +7523,9 @@
             }, 
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
@@ -7702,6 +7779,9 @@
             "CVE-2018-3693": {
                 "cmt_msg": "ext4: fix spectre gadget in ext4_mb_regular_allocator()"
             }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
+            }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
             }, 
@@ -7942,8 +8022,8 @@
             "CVE-2018-10882": {
                 "cmt_msg": "ext4: add more inode number paranoia checks"
             }, 
-            "CVE-2018-10883": {
-                "cmt_msg": "jbd2: don't mark block as modified if the handle is out of credits"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }
         }
     }, 
@@ -8173,6 +8253,9 @@
             }, 
             "CVE-2019-9245": {
                 "cmt_msg": "f2fs: sanity check of xattr entry size"
+            }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
             }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
@@ -8414,8 +8497,8 @@
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2020-27066": {
                 "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer"
@@ -8432,8 +8515,8 @@
             "CVE-2019-20806": {
                 "cmt_msg": "media: tw5864: Fix possible NULL pointer dereference in tw5864_handle_frame"
             }, 
-            "CVE-2020-0305": {
-                "cmt_msg": "chardev: Avoid potential use-after-free in 'chrdev_open()'"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2020-14304": {
                 "cmt_msg": ""
@@ -9302,6 +9385,9 @@
             "CVE-2019-9456": {
                 "cmt_msg": "usb: usbmon: Read text within supplied buffer size"
             }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
+            }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
             }, 
@@ -9425,6 +9511,9 @@
             "CVE-2017-17975": {
                 "cmt_msg": "media: usbtv: prevent double free in error case"
             }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
+            }, 
             "CVE-2019-19377": {
                 "cmt_msg": "btrfs: Don't submit any btree write bio if the fs has errors"
             }, 
@@ -9506,6 +9595,9 @@
             "CVE-2020-0465": {
                 "cmt_msg": "HID: core: Sanitize event code and type when mapping input"
             }, 
+            "CVE-2020-0305": {
+                "cmt_msg": "chardev: Avoid potential use-after-free in 'chrdev_open()'"
+            }, 
             "CVE-2018-3639": {
                 "cmt_msg": "x86/nospec: Simplify alternative_msr_write()"
             }, 
@@ -9586,6 +9678,9 @@
             }, 
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
@@ -9731,6 +9826,9 @@
             "CVE-2021-26934": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
             }, 
@@ -9853,6 +9951,9 @@
             }, 
             "CVE-2017-12192": {
                 "cmt_msg": "KEYS: prevent KEYCTL_READ on negative key"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2017-12190": {
                 "cmt_msg": "fix unbalanced page refcounting in bio_map_user_iov"
@@ -10344,6 +10445,9 @@
             "CVE-2019-9245": {
                 "cmt_msg": "f2fs: sanity check of xattr entry size"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -10577,6 +10681,9 @@
             }, 
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
+            }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2020-27066": {
                 "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer"
@@ -11091,8 +11198,8 @@
             "CVE-2019-15290": {
                 "cmt_msg": ""
             }, 
-            "CVE-2018-10902": {
-                "cmt_msg": "ALSA: rawmidi: Change resized buffers atomically"
+            "CVE-2019-3016": {
+                "cmt_msg": "x86/kvm: Be careful not to clear KVM_VCPU_FLUSH_TLB bit"
             }, 
             "CVE-2018-12930": {
                 "cmt_msg": ""
@@ -11340,6 +11447,9 @@
             "CVE-2020-25705": {
                 "cmt_msg": "icmp: randomize the global rate limiter"
             }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
+            }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
             }, 
@@ -11429,6 +11539,9 @@
             }, 
             "CVE-2019-0136": {
                 "cmt_msg": "mac80211: drop robust management frames from unknown TA"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2021-0512": {
                 "cmt_msg": "HID: make arrays usage and value to be the same"
@@ -11573,6 +11686,9 @@
             }, 
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
@@ -11787,6 +11903,9 @@
             "CVE-2018-3693": {
                 "cmt_msg": "ext4: fix spectre gadget in ext4_mb_regular_allocator()"
             }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
+            }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
             }, 
@@ -11886,8 +12005,8 @@
             "CVE-2019-6133": {
                 "cmt_msg": "fork: record start_time late"
             }, 
-            "CVE-2019-3016": {
-                "cmt_msg": "x86/kvm: Be careful not to clear KVM_VCPU_FLUSH_TLB bit"
+            "CVE-2018-10902": {
+                "cmt_msg": "ALSA: rawmidi: Change resized buffers atomically"
             }, 
             "CVE-2020-27673": {
                 "cmt_msg": "xen/events: add a proper barrier to 2-level uevent unmasking"
@@ -12078,13 +12197,17 @@
             }
         }, 
         "4.14.7": {
+            "CVE-2018-18559": {
+                "cmt_msg": "net/packet: fix a race in packet_bind() and packet_notifier()", 
+                "cmt_id": "589983eb9986ea9c851c8906a81781f317207313"
+            }, 
             "CVE-2018-7492": {
                 "cmt_msg": "rds: Fix NULL pointer dereference in __rds_rdma_map", 
                 "cmt_id": "9d9a63d74b2b6ed7c30c7d1584d87c16ae8d5862"
             }, 
-            "CVE-2018-18559": {
-                "cmt_msg": "net/packet: fix a race in packet_bind() and packet_notifier()", 
-                "cmt_id": "589983eb9986ea9c851c8906a81781f317207313"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct", 
+                "cmt_id": "7bc8eb30f1e02b4dd6fd2869720c64d9bf39d765"
             }
         }, 
         "4.14.8": {
@@ -14486,6 +14609,10 @@
             }
         }, 
         "4.14.231": {
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write", 
+                "cmt_id": "522a0191944e3db9c30ade5fa6b6ec0d7c42f40d"
+            }, 
             "CVE-2020-25672": {
                 "cmt_msg": "nfc: fix memory leak in llcp_sock_connect()", 
                 "cmt_id": "02b99cae71335f9f38d0a164ffe3a7a1328f44fc"
@@ -14601,6 +14728,9 @@
             "CVE-2020-35501": {
                 "cmt_msg": ""
             }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
+            }, 
             "CVE-2018-1121": {
                 "cmt_msg": ""
             }, 
@@ -14648,6 +14778,9 @@
             }, 
             "CVE-2019-19814": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
             }, 
             "CVE-2021-26934": {
                 "cmt_msg": ""
@@ -14760,6 +14893,12 @@
             "CVE-2021-29264": {
                 "cmt_msg": "gianfar: fix jumbo packets+napi+rx overrun crash"
             }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
+            }, 
             "CVE-2017-5715": {
                 "cmt_msg": "x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]"
             }, 
@@ -14858,6 +14997,9 @@
             }, 
             "CVE-2020-25220": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2015-2877": {
                 "cmt_msg": ""
@@ -15161,6 +15303,9 @@
             "CVE-2019-9245": {
                 "cmt_msg": "f2fs: sanity check of xattr entry size"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -15380,6 +15525,9 @@
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
             }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
+            }, 
             "CVE-2020-27066": {
                 "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer"
             }, 
@@ -15577,6 +15725,9 @@
             }, 
             "CVE-2018-1129": {
                 "cmt_msg": "libceph: implement CEPHX_V2 calculation mode"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-20855": {
                 "cmt_msg": "IB/mlx5: Fix leaking stack memory to userspace"
@@ -16268,6 +16419,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -16459,6 +16613,9 @@
             }, 
             "CVE-2019-10142": {
                 "cmt_msg": "drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
@@ -16892,6 +17049,9 @@
             "CVE-2019-9245": {
                 "cmt_msg": "f2fs: sanity check of xattr entry size"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -17117,6 +17277,9 @@
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
             }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
+            }, 
             "CVE-2020-27066": {
                 "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer"
             }, 
@@ -17329,6 +17492,9 @@
             }, 
             "CVE-2018-1129": {
                 "cmt_msg": "libceph: implement CEPHX_V2 calculation mode"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-1121": {
                 "cmt_msg": ""
@@ -17912,6 +18078,9 @@
             "CVE-2019-0136": {
                 "cmt_msg": "mac80211: drop robust management frames from unknown TA"
             }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
+            }, 
             "CVE-2021-0512": {
                 "cmt_msg": "HID: make arrays usage and value to be the same"
             }, 
@@ -18052,6 +18221,9 @@
             }, 
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
@@ -18209,8 +18381,8 @@
             "CVE-2019-19063": {
                 "cmt_msg": "rtlwifi: prevent memory leak in rtl_usb_probe"
             }, 
-            "CVE-2019-9445": {
-                "cmt_msg": "f2fs: check if file namelen exceeds max value"
+            "CVE-2019-19065": {
+                "cmt_msg": "RDMA/hfi1: Prevent memory leak in sdma_init"
             }, 
             "CVE-2019-19066": {
                 "cmt_msg": "scsi: bfa: release allocated memory in case of error"
@@ -18265,6 +18437,9 @@
             }, 
             "CVE-2018-3693": {
                 "cmt_msg": "ext4: fix spectre gadget in ext4_mb_regular_allocator()"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
@@ -18431,8 +18606,8 @@
             "CVE-2020-28941": {
                 "cmt_msg": "speakup: Do not let the line discipline be used several times"
             }, 
-            "CVE-2019-19065": {
-                "cmt_msg": "RDMA/hfi1: Prevent memory leak in sdma_init"
+            "CVE-2019-9445": {
+                "cmt_msg": "f2fs: check if file namelen exceeds max value"
             }, 
             "CVE-2019-14284": {
                 "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
@@ -19537,6 +19712,10 @@
                 "cmt_msg": "iwlwifi: dbg_ini: fix memory leak in alloc_sgtable", 
                 "cmt_id": "09044a4a142404799e519def0bbfcc98fa68c677"
             }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages", 
+                "cmt_id": "8c2cdfb2c81bb533b9e6a3874ee5399102c4c580"
+            }, 
             "CVE-2019-19077": {
                 "cmt_msg": "RDMA: Fix goto target to release the allocated memory", 
                 "cmt_id": "d203ff6a3059b7fc3a9b48048eaf5641ed7fda2c"
@@ -20372,6 +20551,12 @@
                 "cmt_id": "c14b50185cd0d5ba6d7a5eb8acf9fbcc3663416d"
             }
         }, 
+        "4.19.188": {
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write", 
+                "cmt_id": "12ec80252edefff00809d473a47e5f89c7485499"
+            }
+        }, 
         "4.19.189": {
             "CVE-2020-29374": {
                 "cmt_msg": "gup: document and work around \"COW can break either way\" issue", 
@@ -20474,6 +20659,9 @@
             "CVE-2020-35501": {
                 "cmt_msg": ""
             }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
+            }, 
             "CVE-2018-1121": {
                 "cmt_msg": ""
             }, 
@@ -20515,6 +20703,9 @@
             }, 
             "CVE-2019-19814": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
             }, 
             "CVE-2021-26934": {
                 "cmt_msg": ""
@@ -20692,6 +20883,9 @@
             }, 
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2015-2877": {
                 "cmt_msg": ""
@@ -20970,6 +21164,9 @@
             "CVE-2019-9245": {
                 "cmt_msg": "f2fs: sanity check of xattr entry size"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -21183,6 +21380,9 @@
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
             }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
+            }, 
             "CVE-2020-27066": {
                 "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer"
             }, 
@@ -21368,6 +21568,9 @@
             }, 
             "CVE-2018-1129": {
                 "cmt_msg": "libceph: implement CEPHX_V2 calculation mode"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-1121": {
                 "cmt_msg": ""
@@ -22035,6 +22238,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -22214,6 +22420,9 @@
             }, 
             "CVE-2019-10142": {
                 "cmt_msg": "drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
@@ -22494,6 +22703,10 @@
             "CVE-2013-7281": {
                 "cmt_msg": "inet: prevent leakage of uninitialized memory to user in recv syscalls", 
                 "cmt_id": "7a9b8e64a5706d62d5a5ab54fe3d0320845b1d4a"
+            }, 
+            "CVE-2013-7348": {
+                "cmt_msg": "aio: prevent double free in ioctx_alloc", 
+                "cmt_id": "f50db974cb75e31d98b176c3c9ea92e57aa97a1b"
             }, 
             "CVE-2013-4563": {
                 "cmt_msg": "ipv6: fix headroom calculation in udp6_ufo_fragment", 
@@ -23135,17 +23348,21 @@
             }
         }, 
         "3.12.44": {
+            "CVE-2015-4177": {
+                "cmt_msg": "mnt: Fail collect_mounts when applied to unmounted mounts", 
+                "cmt_id": "6ab282fe6d43027b3b1ef820b3798aae8fdb432b"
+            }, 
             "CVE-2015-4700": {
                 "cmt_msg": "x86: bpf_jit: fix compilation of large bpf programs", 
                 "cmt_id": "0fa9520e7b08f00138cf9a4a95d066492cbcc18d"
             }, 
-            "CVE-2015-1420": {
-                "cmt_msg": "vfs: read file_handle only once in handle_to_path", 
-                "cmt_id": "330c542ff8f659055de1992935abaa18b121379e"
-            }, 
             "CVE-2015-4036": {
                 "cmt_msg": "vhost/scsi: potential memory corruption", 
                 "cmt_id": "266ed50f2a81a882d54c4ff7452bca370f396bae"
+            }, 
+            "CVE-2015-1420": {
+                "cmt_msg": "vfs: read file_handle only once in handle_to_path", 
+                "cmt_id": "330c542ff8f659055de1992935abaa18b121379e"
             }, 
             "CVE-2015-5364": {
                 "cmt_msg": "udp: fix behavior of wrong checksums", 
@@ -23977,6 +24194,9 @@
             "CVE-2020-26558": {
                 "cmt_msg": "Bluetooth: SMP: Fail if remote and local public keys are identical"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -23998,14 +24218,17 @@
             "CVE-2019-12379": {
                 "cmt_msg": "consolemap: Fix a memory leaking bug in drivers/tty/vt/consolemap.c"
             }, 
-            "CVE-2019-12378": {
-                "cmt_msg": "ipv6_sockglue: Fix a missing-check bug in ip6_ra_control()"
+            "CVE-2017-12134": {
+                "cmt_msg": "xen: fix bio vec merging"
             }, 
             "CVE-2021-30002": {
                 "cmt_msg": "media: v4l: ioctl: Fix memory leak in video_usercopy"
             }, 
             "CVE-2017-17450": {
                 "cmt_msg": "netfilter: xt_osf: Add missing permission checks"
+            }, 
+            "CVE-2015-4176": {
+                "cmt_msg": "mnt: Update detach_mounts to leave mounts connected"
             }, 
             "CVE-2016-3672": {
                 "cmt_msg": "x86/mm/32: Enable full randomization on i386 and X86_32"
@@ -24016,8 +24239,8 @@
             "CVE-2017-18270": {
                 "cmt_msg": "KEYS: prevent creating a different user's keyrings"
             }, 
-            "CVE-2020-0543": {
-                "cmt_msg": "x86/cpu: Add 'table' argument to cpu_matches()"
+            "CVE-2015-4178": {
+                "cmt_msg": "fs_pin: Allow for the possibility that m_list or s_list go unused."
             }, 
             "CVE-2016-10906": {
                 "cmt_msg": "net: arc_emac: fix koops caused by sk_buff free"
@@ -24205,8 +24428,8 @@
             "CVE-2019-19922": {
                 "cmt_msg": "sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
@@ -24469,6 +24692,9 @@
             "CVE-2017-5753": {
                 "cmt_msg": "x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]"
             }, 
+            "CVE-2021-26934": {
+                "cmt_msg": ""
+            }, 
             "CVE-2019-9466": {
                 "cmt_msg": "brcmfmac: add subtype check for event handling in data path"
             }, 
@@ -24619,8 +24845,8 @@
             "CVE-2019-18885": {
                 "cmt_msg": "btrfs: merge btrfs_find_device and find_device"
             }, 
-            "CVE-2017-12134": {
-                "cmt_msg": "xen: fix bio vec merging"
+            "CVE-2019-12378": {
+                "cmt_msg": "ipv6_sockglue: Fix a missing-check bug in ip6_ra_control()"
             }, 
             "CVE-2019-11091": {
                 "cmt_msg": "s390/speculation: Support 'mitigations=' cmdline option"
@@ -24994,6 +25220,9 @@
             "CVE-2017-18551": {
                 "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA"
             }, 
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
+            }, 
             "CVE-2015-8839": {
                 "cmt_msg": "ext4: fix races between page faults and hole punching"
             }, 
@@ -25051,8 +25280,11 @@
             "CVE-2008-4609": {
                 "cmt_msg": ""
             }, 
-            "CVE-2016-6197": {
-                "cmt_msg": "ovl: verify upper dentry before unlink and rename"
+            "CVE-2018-19824": {
+                "cmt_msg": "ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -25170,6 +25402,9 @@
             }, 
             "CVE-2019-0136": {
                 "cmt_msg": "mac80211: drop robust management frames from unknown TA"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2019-19377": {
                 "cmt_msg": "btrfs: Don't submit any btree write bio if the fs has errors"
@@ -25345,6 +25580,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -25501,8 +25739,11 @@
             "CVE-2020-27815": {
                 "cmt_msg": "jfs: Fix array index bounds check in dbAdjTree"
             }, 
-            "CVE-2021-26934": {
-                "cmt_msg": ""
+            "CVE-2020-0543": {
+                "cmt_msg": "x86/cpu: Add 'table' argument to cpu_matches()"
+            }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
             }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
@@ -25608,6 +25849,9 @@
             }, 
             "CVE-2017-11176": {
                 "cmt_msg": "mqueue: fix a use-after-free in sys_mq_notify()"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2017-12190": {
                 "cmt_msg": "fix unbalanced page refcounting in bio_map_user_iov"
@@ -25747,8 +25991,8 @@
             "CVE-2021-0448": {
                 "cmt_msg": "netfilter: ctnetlink: add a range check for l3/l4 protonum"
             }, 
-            "CVE-2018-19824": {
-                "cmt_msg": "ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c"
+            "CVE-2016-6197": {
+                "cmt_msg": "ovl: verify upper dentry before unlink and rename"
             }, 
             "CVE-2020-29374": {
                 "cmt_msg": "gup: document and work around \"COW can break either way\" issue"
@@ -25816,6 +26060,9 @@
             "CVE-2017-0605": {
                 "cmt_msg": "tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline()"
             }, 
+            "CVE-2014-9803": {
+                "cmt_msg": "Revert \"arm64: Introduce execute-only page access permissions\""
+            }, 
             "CVE-2020-25220": {
                 "cmt_msg": ""
             }, 
@@ -25839,6 +26086,9 @@
             }, 
             "CVE-2018-1130": {
                 "cmt_msg": "dccp: check sk for closed state in dccp_sendmsg()"
+            }, 
+            "CVE-2019-14284": {
+                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
             }, 
             "CVE-2021-3506": {
                 "cmt_msg": "f2fs: fix to avoid out-of-bounds memory access"
@@ -25876,8 +26126,8 @@
             "CVE-2019-5489": {
                 "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages"
             }, 
-            "CVE-2019-14284": {
-                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2018-10880": {
                 "cmt_msg": "ext4: never move the system.data xattr out of the inode body"
@@ -26951,6 +27201,9 @@
             "CVE-2017-5551": {
                 "cmt_msg": "tmpfs: clear S_ISGID when setting posix ACLs"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -26987,8 +27240,8 @@
             "CVE-2017-17450": {
                 "cmt_msg": "netfilter: xt_osf: Add missing permission checks"
             }, 
-            "CVE-2015-8551": {
-                "cmt_msg": "xen/pciback: Return error on XEN_PCI_OP_enable_msi when device has MSI or MSI-X enabled"
+            "CVE-2015-4177": {
+                "cmt_msg": "mnt: Fail collect_mounts when applied to unmounted mounts"
             }, 
             "CVE-2017-7294": {
                 "cmt_msg": "drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl()"
@@ -27005,8 +27258,8 @@
             "CVE-2017-18270": {
                 "cmt_msg": "KEYS: prevent creating a different user's keyrings"
             }, 
-            "CVE-2020-0543": {
-                "cmt_msg": "x86/cpu: Add 'table' argument to cpu_matches()"
+            "CVE-2015-4178": {
+                "cmt_msg": "fs_pin: Allow for the possibility that m_list or s_list go unused."
             }, 
             "CVE-2016-10906": {
                 "cmt_msg": "net: arc_emac: fix koops caused by sk_buff free"
@@ -27215,8 +27468,8 @@
             "CVE-2015-8104": {
                 "cmt_msg": "KVM: svm: unconditionally intercept #DB"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
@@ -27250,6 +27503,9 @@
             }, 
             "CVE-2019-9506": {
                 "cmt_msg": "Bluetooth: Fix faulty expression for minimum encryption key size check"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2017-16995": {
                 "cmt_msg": "bpf: fix incorrect sign extension in check_alu_op()"
@@ -27515,6 +27771,9 @@
             "CVE-2017-5753": {
                 "cmt_msg": "x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]"
             }, 
+            "CVE-2021-26934": {
+                "cmt_msg": ""
+            }, 
             "CVE-2016-10208": {
                 "cmt_msg": "ext4: validate s_first_meta_bg at mount time"
             }, 
@@ -27704,6 +27963,9 @@
             "CVE-2019-19227": {
                 "cmt_msg": "appletalk: Fix potential NULL pointer dereference in unregister_snap_client"
             }, 
+            "CVE-2021-28951": {
+                "cmt_msg": "io_uring: ensure that SQPOLL thread is started for exit"
+            }, 
             "CVE-2017-14489": {
                 "cmt_msg": "scsi: scsi_transport_iscsi: fix the issue that iscsi_if_rx doesn't parse nlmsg properly"
             }, 
@@ -27715,6 +27977,9 @@
             }, 
             "CVE-2016-9604": {
                 "cmt_msg": "KEYS: Disallow keyrings beginning with '.' to be joined as session keyrings"
+            }, 
+            "CVE-2015-8551": {
+                "cmt_msg": "xen/pciback: Return error on XEN_PCI_OP_enable_msi when device has MSI or MSI-X enabled"
             }, 
             "CVE-2019-15292": {
                 "cmt_msg": "appletalk: Fix use-after-free in atalk_proc_exit"
@@ -28112,6 +28377,9 @@
             "CVE-2017-18551": {
                 "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA"
             }, 
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
+            }, 
             "CVE-2015-8839": {
                 "cmt_msg": "ext4: fix races between page faults and hole punching"
             }, 
@@ -28183,6 +28451,9 @@
             }, 
             "CVE-2018-19824": {
                 "cmt_msg": "ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -28315,6 +28586,9 @@
             }, 
             "CVE-2019-0136": {
                 "cmt_msg": "mac80211: drop robust management frames from unknown TA"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2014-9904": {
                 "cmt_msg": "ALSA: compress: fix an integer overflow check"
@@ -28517,6 +28791,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -28673,8 +28950,11 @@
             "CVE-2020-27815": {
                 "cmt_msg": "jfs: Fix array index bounds check in dbAdjTree"
             }, 
-            "CVE-2021-26934": {
-                "cmt_msg": ""
+            "CVE-2020-0543": {
+                "cmt_msg": "x86/cpu: Add 'table' argument to cpu_matches()"
+            }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
             }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
@@ -28889,8 +29169,8 @@
             "CVE-2019-14901": {
                 "cmt_msg": "mwifiex: Fix heap overflow in mmwifiex_process_tdls_action_frame()"
             }, 
-            "CVE-2021-28951": {
-                "cmt_msg": "io_uring: ensure that SQPOLL thread is started for exit"
+            "CVE-2015-4176": {
+                "cmt_msg": "mnt: Update detach_mounts to leave mounts connected"
             }, 
             "CVE-2020-16166": {
                 "cmt_msg": "random32: update the net random state on interrupt and activity"
@@ -29051,6 +29331,9 @@
             "CVE-2017-0605": {
                 "cmt_msg": "tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline()"
             }, 
+            "CVE-2014-9803": {
+                "cmt_msg": "Revert \"arm64: Introduce execute-only page access permissions\""
+            }, 
             "CVE-2020-25220": {
                 "cmt_msg": ""
             }, 
@@ -29077,6 +29360,9 @@
             }, 
             "CVE-2018-1130": {
                 "cmt_msg": "dccp: check sk for closed state in dccp_sendmsg()"
+            }, 
+            "CVE-2019-14284": {
+                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
             }, 
             "CVE-2021-3506": {
                 "cmt_msg": "f2fs: fix to avoid out-of-bounds memory access"
@@ -29117,8 +29403,8 @@
             "CVE-2019-5489": {
                 "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages"
             }, 
-            "CVE-2019-14284": {
-                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2018-10880": {
                 "cmt_msg": "ext4: never move the system.data xattr out of the inode body"
@@ -29291,6 +29577,10 @@
             "CVE-2015-4700": {
                 "cmt_msg": "x86: bpf_jit: fix compilation of large bpf programs", 
                 "cmt_id": "e0373a44e98aaf3b1c2ca0830b7b9e2e516f9bba"
+            }, 
+            "CVE-2015-8551": {
+                "cmt_msg": "xen/pciback: Return error on XEN_PCI_OP_enable_msi when device has MSI or MSI-X enabled", 
+                "cmt_id": "cb968d816e128f3c652f5a493d9a5cdd91490570"
             }, 
             "CVE-2015-5156": {
                 "cmt_msg": "virtio-net: drop NETIF_F_FRAGLIST", 
@@ -29544,9 +29834,9 @@
                 "cmt_msg": "ALSA: timer: Fix race at concurrent reads", 
                 "cmt_id": "d2fe56f9b3f8bace0b645d6c6634eba854b6b7f0"
             }, 
-            "CVE-2015-8551": {
-                "cmt_msg": "xen/pciback: Return error on XEN_PCI_OP_enable_msi when device has MSI or MSI-X enabled", 
-                "cmt_id": "cb968d816e128f3c652f5a493d9a5cdd91490570"
+            "CVE-2015-4177": {
+                "cmt_msg": "mnt: Fail collect_mounts when applied to unmounted mounts", 
+                "cmt_id": "4bcf842df09d2cbcd32db82a501383bc6b851fa8"
             }, 
             "CVE-2015-8374": {
                 "cmt_msg": "Btrfs: fix truncation of compressed and inlined extents", 
@@ -31889,6 +32179,9 @@
             "CVE-2020-26145": {
                 "cmt_msg": "ath10k: drop fragments with multicast DA for PCIe"
             }, 
+            "CVE-2020-25669": {
+                "cmt_msg": "Input: sunkbd - avoid use-after-free in teardown paths"
+            }, 
             "CVE-2020-24587": {
                 "cmt_msg": "mac80211: prevent mixed key and fragment cache attacks"
             }, 
@@ -31925,8 +32218,8 @@
             "CVE-2020-27786": {
                 "cmt_msg": "ALSA: rawmidi: Fix racy buffer resize under concurrent accesses"
             }, 
-            "CVE-2020-36158": {
-                "cmt_msg": "mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start"
+            "CVE-2019-15902": {
+                "cmt_msg": ""
             }, 
             "CVE-2020-24503": {
                 "cmt_msg": ""
@@ -31955,8 +32248,11 @@
             "CVE-2017-18249": {
                 "cmt_msg": "f2fs: fix race condition in between free nid allocator/initializer"
             }, 
-            "CVE-2021-28688": {
-                "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
+            "CVE-2021-29650": {
+                "cmt_msg": "netfilter: x_tables: Use correct memory barriers."
+            }, 
+            "CVE-2016-6197": {
+                "cmt_msg": "ovl: verify upper dentry before unlink and rename"
             }, 
             "CVE-2021-28660": {
                 "cmt_msg": "staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan()"
@@ -31982,8 +32278,8 @@
             "CVE-2019-19813": {
                 "cmt_msg": "btrfs: inode: Verify inode mode to avoid NULL pointer dereference"
             }, 
-            "CVE-2020-25284": {
-                "cmt_msg": "rbd: require global CAP_SYS_ADMIN for mapping and unmapping"
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
             }, 
             "CVE-2021-26931": {
                 "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()"
@@ -32000,8 +32296,8 @@
             "CVE-2020-0429": {
                 "cmt_msg": "l2tp: fix race between l2tp_session_delete() and l2tp_tunnel_closeall()"
             }, 
-            "CVE-2020-24586": {
-                "cmt_msg": "mac80211: prevent mixed key and fragment cache attacks"
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
             }, 
             "CVE-2015-8830": {
                 "cmt_msg": "aio: lift iov_iter_init() into aio_setup_..._rw()"
@@ -32054,8 +32350,8 @@
             "CVE-2017-15537": {
                 "cmt_msg": "x86/fpu: Don't let userspace set bogus xcomp_bv"
             }, 
-            "CVE-2020-16120": {
-                "cmt_msg": "ovl: switch to mounter creds in readdir"
+            "CVE-2015-4176": {
+                "cmt_msg": "mnt: Update detach_mounts to leave mounts connected"
             }, 
             "CVE-2020-15802": {
                 "cmt_msg": ""
@@ -32075,17 +32371,20 @@
             "CVE-2020-27675": {
                 "cmt_msg": "xen/events: avoid removing an event channel while handling it"
             }, 
-            "CVE-2019-15902": {
-                "cmt_msg": ""
+            "CVE-2015-4178": {
+                "cmt_msg": "fs_pin: Allow for the possibility that m_list or s_list go unused."
             }, 
-            "CVE-2020-28915": {
-                "cmt_msg": "fbcon: Fix global-out-of-bounds read in fbcon_get_font()"
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
             }, 
             "CVE-2019-20908": {
                 "cmt_msg": "efi: Restrict efivar_ssdt_load when the kernel is locked down"
+            }, 
+            "CVE-2020-16120": {
+                "cmt_msg": "ovl: switch to mounter creds in readdir"
             }, 
             "CVE-2018-7754": {
                 "cmt_msg": "printk: hash addresses printed with %p"
@@ -32128,6 +32427,9 @@
             }, 
             "CVE-2021-3506": {
                 "cmt_msg": "f2fs: fix to avoid out-of-bounds memory access"
+            }, 
+            "CVE-2021-28688": {
+                "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
             "CVE-2018-14614": {
                 "cmt_msg": "f2fs: fix to do sanity check with cp_pack_start_sum"
@@ -32231,6 +32533,9 @@
             "CVE-2019-19073": {
                 "cmt_msg": "ath9k_htc: release allocated buffer if timed out"
             }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
+            }, 
             "CVE-2015-8952": {
                 "cmt_msg": "ext2: convert to mbcache2"
             }, 
@@ -32252,14 +32557,23 @@
             "CVE-2012-4542": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-24586": {
+                "cmt_msg": "mac80211: prevent mixed key and fragment cache attacks"
+            }, 
             "CVE-2020-0067": {
                 "cmt_msg": "f2fs: fix to avoid memory leakage in f2fs_listxattr"
             }, 
             "CVE-2021-3573": {
                 "cmt_msg": "Bluetooth: use correct lock to prevent UAF of hdev object"
             }, 
+            "CVE-2020-28915": {
+                "cmt_msg": "fbcon: Fix global-out-of-bounds read in fbcon_get_font()"
+            }, 
             "CVE-2018-1000026": {
                 "cmt_msg": "bnx2x: disable GSO where gso_size is too big for hardware"
+            }, 
+            "CVE-2020-36158": {
+                "cmt_msg": "mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start"
             }, 
             "CVE-2013-7445": {
                 "cmt_msg": ""
@@ -32303,14 +32617,17 @@
             "CVE-2020-8694": {
                 "cmt_msg": "powercap: restrict energy meter to root access"
             }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
+            }, 
             "CVE-2020-27066": {
                 "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer"
             }, 
             "CVE-2014-3180": {
                 "cmt_msg": "compat: nanosleep: Clarify error handling"
             }, 
-            "CVE-2020-25669": {
-                "cmt_msg": "Input: sunkbd - avoid use-after-free in teardown paths"
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2019-19039": {
                 "cmt_msg": "btrfs: Don't submit any btree write bio if the fs has errors"
@@ -32396,9 +32713,6 @@
             "CVE-2021-0606": {
                 "cmt_msg": ""
             }, 
-            "CVE-2017-5967": {
-                "cmt_msg": "time: Remove CONFIG_TIMER_STATS"
-            }, 
             "CVE-2021-0605": {
                 "cmt_msg": "af_key: pfkey_dump needs parameter validation"
             }, 
@@ -32453,11 +32767,11 @@
             "CVE-2021-0448": {
                 "cmt_msg": "netfilter: ctnetlink: add a range check for l3/l4 protonum"
             }, 
-            "CVE-2016-6197": {
-                "cmt_msg": "ovl: verify upper dentry before unlink and rename"
+            "CVE-2017-5967": {
+                "cmt_msg": "time: Remove CONFIG_TIMER_STATS"
             }, 
-            "CVE-2021-29650": {
-                "cmt_msg": "netfilter: x_tables: Use correct memory barriers."
+            "CVE-2020-29374": {
+                "cmt_msg": "gup: document and work around \"COW can break either way\" issue"
             }, 
             "CVE-2019-18660": {
                 "cmt_msg": "powerpc/book3s64: Fix link stack flush on context switch"
@@ -32615,6 +32929,9 @@
             "CVE-2014-7145": {
                 "cmt_msg": "[CIFS] Possible null ptr deref in SMB2_tcon"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2015-2877": {
                 "cmt_msg": ""
             }, 
@@ -32690,8 +33007,8 @@
             "CVE-2021-3609": {
                 "cmt_msg": ""
             }, 
-            "CVE-2020-29374": {
-                "cmt_msg": "gup: document and work around \"COW can break either way\" issue"
+            "CVE-2020-25284": {
+                "cmt_msg": "rbd: require global CAP_SYS_ADMIN for mapping and unmapping"
             }, 
             "CVE-2021-20292": {
                 "cmt_msg": "drm/ttm/nouveau: don't call tt destroy callback on alloc failure."
@@ -32702,6 +33019,9 @@
             "CVE-2020-15393": {
                 "cmt_msg": "usb: usbtest: fix missing kfree(dev->buf) in usbtest_disconnect"
             }, 
+            "CVE-2019-2213": {
+                "cmt_msg": "binder: fix possible UAF when freeing buffer"
+            }, 
             "CVE-2020-27068": {
                 "cmt_msg": "cfg80211: add missing policy for NL80211_ATTR_STATUS_CODE"
             }, 
@@ -32711,8 +33031,8 @@
             "CVE-2017-18232": {
                 "cmt_msg": "scsi: libsas: direct call probe and destruct"
             }, 
-            "CVE-2019-2213": {
-                "cmt_msg": "binder: fix possible UAF when freeing buffer"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }
         }
     }, 
@@ -34911,6 +35231,9 @@
             "CVE-2017-5551": {
                 "cmt_msg": "tmpfs: clear S_ISGID when setting posix ACLs"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -34938,14 +35261,20 @@
             "CVE-2017-17450": {
                 "cmt_msg": "netfilter: xt_osf: Add missing permission checks"
             }, 
+            "CVE-2015-4177": {
+                "cmt_msg": "mnt: Fail collect_mounts when applied to unmounted mounts"
+            }, 
+            "CVE-2015-4176": {
+                "cmt_msg": "mnt: Update detach_mounts to leave mounts connected"
+            }, 
             "CVE-2020-15802": {
                 "cmt_msg": ""
             }, 
             "CVE-2019-3460": {
                 "cmt_msg": "Bluetooth: Check L2CAP option sizes returned from l2cap_get_conf_opt"
             }, 
-            "CVE-2020-0543": {
-                "cmt_msg": "x86/cpu: Add 'table' argument to cpu_matches()"
+            "CVE-2015-4178": {
+                "cmt_msg": "fs_pin: Allow for the possibility that m_list or s_list go unused."
             }, 
             "CVE-2018-3646": {
                 "cmt_msg": "x86/microcode: Allow late microcode loading with SMT disabled"
@@ -35106,6 +35435,9 @@
             "CVE-2019-19922": {
                 "cmt_msg": "sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices"
             }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
+            }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
             }, 
@@ -35121,8 +35453,8 @@
             "CVE-2019-20806": {
                 "cmt_msg": "media: tw5864: Fix possible NULL pointer dereference in tw5864_handle_frame"
             }, 
-            "CVE-2020-0305": {
-                "cmt_msg": "chardev: Avoid potential use-after-free in 'chrdev_open()'"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2020-14304": {
                 "cmt_msg": ""
@@ -35316,6 +35648,9 @@
             "CVE-2017-5753": {
                 "cmt_msg": "x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]"
             }, 
+            "CVE-2021-26934": {
+                "cmt_msg": ""
+            }, 
             "CVE-2014-0181": {
                 "cmt_msg": "net: Use netlink_ns_capable to verify the permisions of netlink messages"
             }, 
@@ -35474,6 +35809,9 @@
             }, 
             "CVE-2019-15917": {
                 "cmt_msg": "Bluetooth: hci_ldisc: Postpone HCI_UART_PROTO_READY bit set in hci_uart_set_proto()"
+            }, 
+            "CVE-2013-4129": {
+                "cmt_msg": "bridge: fix some kernel warning in multicast timer"
             }, 
             "CVE-2020-12362": {
                 "cmt_msg": ""
@@ -35679,6 +36017,9 @@
             "CVE-2020-26559": {
                 "cmt_msg": ""
             }, 
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
+            }, 
             "CVE-2015-8839": {
                 "cmt_msg": "ext4: fix races between page faults and hole punching"
             }, 
@@ -35724,8 +36065,11 @@
             "CVE-2008-4609": {
                 "cmt_msg": ""
             }, 
-            "CVE-2016-6197": {
-                "cmt_msg": "ovl: verify upper dentry before unlink and rename"
+            "CVE-2018-19824": {
+                "cmt_msg": "ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2017-15121": {
                 "cmt_msg": "mm: teach truncate_inode_pages_range() to handle non page aligned ranges"
@@ -35811,6 +36155,9 @@
             "CVE-2019-0136": {
                 "cmt_msg": "mac80211: drop robust management frames from unknown TA"
             }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
+            }, 
             "CVE-2021-0512": {
                 "cmt_msg": "HID: make arrays usage and value to be the same"
             }, 
@@ -35858,6 +36205,9 @@
             }, 
             "CVE-2020-0465": {
                 "cmt_msg": "HID: core: Sanitize event code and type when mapping input"
+            }, 
+            "CVE-2020-0305": {
+                "cmt_msg": "chardev: Avoid potential use-after-free in 'chrdev_open()'"
             }, 
             "CVE-2018-3639": {
                 "cmt_msg": "x86/nospec: Simplify alternative_msr_write()"
@@ -35943,6 +36293,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -35987,6 +36340,9 @@
             }, 
             "CVE-2020-4788": {
                 "cmt_msg": "powerpc/64s: flush L1D on kernel entry"
+            }, 
+            "CVE-2013-7348": {
+                "cmt_msg": "aio: prevent double free in ioctx_alloc"
             }, 
             "CVE-2019-19377": {
                 "cmt_msg": "btrfs: Don't submit any btree write bio if the fs has errors"
@@ -36045,8 +36401,8 @@
             "CVE-2020-27815": {
                 "cmt_msg": "jfs: Fix array index bounds check in dbAdjTree"
             }, 
-            "CVE-2021-26934": {
-                "cmt_msg": ""
+            "CVE-2020-0543": {
+                "cmt_msg": "x86/cpu: Add 'table' argument to cpu_matches()"
             }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
@@ -36119,6 +36475,9 @@
             }, 
             "CVE-2019-10142": {
                 "cmt_msg": "drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
@@ -36234,8 +36593,8 @@
             "CVE-2021-0448": {
                 "cmt_msg": "netfilter: ctnetlink: add a range check for l3/l4 protonum"
             }, 
-            "CVE-2018-19824": {
-                "cmt_msg": "ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c"
+            "CVE-2016-6197": {
+                "cmt_msg": "ovl: verify upper dentry before unlink and rename"
             }, 
             "CVE-2020-29374": {
                 "cmt_msg": "gup: document and work around \"COW can break either way\" issue"
@@ -36290,6 +36649,9 @@
             }, 
             "CVE-2013-1772": {
                 "cmt_msg": "printk: convert byte-buffer to variable-length record buffer"
+            }, 
+            "CVE-2014-9803": {
+                "cmt_msg": "Revert \"arm64: Introduce execute-only page access permissions\""
             }, 
             "CVE-2020-25220": {
                 "cmt_msg": ""
@@ -36605,6 +36967,9 @@
             "CVE-2017-5551": {
                 "cmt_msg": "tmpfs: clear S_ISGID when setting posix ACLs"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -36863,8 +37228,8 @@
             "CVE-2019-19922": {
                 "cmt_msg": "sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
@@ -37433,6 +37798,9 @@
             "CVE-2019-15217": {
                 "cmt_msg": "media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap"
             }, 
+            "CVE-2019-19535": {
+                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
+            }, 
             "CVE-2021-34693": {
                 "cmt_msg": "can: bcm: fix infoleak in struct bcm_msg_head"
             }, 
@@ -37606,6 +37974,9 @@
             }, 
             "CVE-2016-9588": {
                 "cmt_msg": "kvm: nVMX: Allow L1 to intercept software exceptions (#BP and #OF)"
+            }, 
+            "CVE-2021-0447": {
+                "cmt_msg": "l2tp: protect sock pointer of struct pppol2tp_session with RCU"
             }, 
             "CVE-2020-10766": {
                 "cmt_msg": "x86/speculation: Prevent rogue cross-process SSBD shutdown"
@@ -37826,8 +38197,8 @@
             "CVE-2017-18551": {
                 "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA"
             }, 
-            "CVE-2021-0447": {
-                "cmt_msg": "l2tp: protect sock pointer of struct pppol2tp_session with RCU"
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
             }, 
             "CVE-2021-26931": {
                 "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()"
@@ -37909,6 +38280,9 @@
             }, 
             "CVE-2018-19824": {
                 "cmt_msg": "ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -38053,6 +38427,9 @@
             }, 
             "CVE-2017-17975": {
                 "cmt_msg": "media: usbtv: prevent double free in error case"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2018-16597": {
                 "cmt_msg": "ovl: modify ovl_permission() to do checks on two inodes"
@@ -38273,6 +38650,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -38444,6 +38824,9 @@
             "CVE-2021-26934": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
             }, 
@@ -38575,6 +38958,9 @@
             }, 
             "CVE-2017-12192": {
                 "cmt_msg": "KEYS: prevent KEYCTL_READ on negative key"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2017-12190": {
                 "cmt_msg": "fix unbalanced page refcounting in bio_map_user_iov"
@@ -38840,8 +39226,8 @@
             "CVE-2018-1130": {
                 "cmt_msg": "dccp: check sk for closed state in dccp_sendmsg()"
             }, 
-            "CVE-2019-19535": {
-                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
+            "CVE-2019-14284": {
+                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
             }, 
             "CVE-2021-3506": {
                 "cmt_msg": "f2fs: fix to avoid out-of-bounds memory access"
@@ -38879,8 +39265,8 @@
             "CVE-2019-5489": {
                 "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages"
             }, 
-            "CVE-2019-14284": {
-                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2018-10880": {
                 "cmt_msg": "ext4: never move the system.data xattr out of the inode body"
@@ -42084,6 +42470,10 @@
             }
         }, 
         "4.4.267": {
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write", 
+                "cmt_id": "b0d98b2193a38ef93c92e5e1953d134d0f426531"
+            }, 
             "CVE-2020-25672": {
                 "cmt_msg": "nfc: fix memory leak in llcp_sock_connect()", 
                 "cmt_id": "7ed6c0c7db2099792768150c070efca71e85bdf3"
@@ -42203,6 +42593,9 @@
             "CVE-2018-1129": {
                 "cmt_msg": "libceph: implement CEPHX_V2 calculation mode"
             }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
+            }, 
             "CVE-2018-20855": {
                 "cmt_msg": "IB/mlx5: Fix leaking stack memory to userspace"
             }, 
@@ -42254,14 +42647,17 @@
             "CVE-2019-15223": {
                 "cmt_msg": "ALSA: line6: Assure canceling delayed work at disconnection"
             }, 
-            "CVE-2020-29374": {
-                "cmt_msg": "gup: document and work around \"COW can break either way\" issue"
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
             }, 
             "CVE-2019-19815": {
                 "cmt_msg": "f2fs: support swap file w/ DIO"
             }, 
             "CVE-2019-19814": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
             }, 
             "CVE-2019-9453": {
                 "cmt_msg": "f2fs: fix to avoid accessing xattr across the boundary"
@@ -42397,6 +42793,12 @@
             }, 
             "CVE-2019-19922": {
                 "cmt_msg": "sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices"
+            }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2017-8797": {
                 "cmt_msg": "nfsd: fix undefined behavior in nfsd4_layout_verify"
@@ -42554,6 +42956,9 @@
             "CVE-2020-25220": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2015-2877": {
                 "cmt_msg": ""
             }, 
@@ -42590,14 +42995,20 @@
             "CVE-2021-3609": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-29374": {
+                "cmt_msg": "gup: document and work around \"COW can break either way\" issue"
+            }, 
             "CVE-2019-5489": {
                 "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages"
+            }, 
+            "CVE-2019-2213": {
+                "cmt_msg": "binder: fix possible UAF when freeing buffer"
             }, 
             "CVE-2017-18232": {
                 "cmt_msg": "scsi: libsas: direct call probe and destruct"
             }, 
-            "CVE-2019-2213": {
-                "cmt_msg": "binder: fix possible UAF when freeing buffer"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }
         }
     }, 
@@ -42772,6 +43183,9 @@
             }, 
             "CVE-2017-5551": {
                 "cmt_msg": "tmpfs: clear S_ISGID when setting posix ACLs"
+            }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
             }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
@@ -43025,8 +43439,8 @@
             "CVE-2019-19922": {
                 "cmt_msg": "sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
@@ -43337,8 +43751,8 @@
             "CVE-2018-1087": {
                 "cmt_msg": "kvm/x86: fix icebp instruction handling"
             }, 
-            "CVE-2018-1120": {
-                "cmt_msg": "proc: do not access cmdline nor environ from file-backed areas"
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-1121": {
                 "cmt_msg": ""
@@ -43573,6 +43987,9 @@
             }, 
             "CVE-2019-15217": {
                 "cmt_msg": "media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap"
+            }, 
+            "CVE-2019-19535": {
+                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
             }, 
             "CVE-2020-14386": {
                 "cmt_msg": "net/packet: fix overflow in tpacket_rcv"
@@ -43952,6 +44369,9 @@
             "CVE-2017-18551": {
                 "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA"
             }, 
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
+            }, 
             "CVE-2021-26931": {
                 "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()"
             }, 
@@ -44023,6 +44443,9 @@
             }, 
             "CVE-2020-25705": {
                 "cmt_msg": "icmp: randomize the global rate limiter"
+            }, 
+            "CVE-2018-1120": {
+                "cmt_msg": "proc: do not access cmdline nor environ from file-backed areas"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -44158,6 +44581,9 @@
             }, 
             "CVE-2017-17975": {
                 "cmt_msg": "media: usbtv: prevent double free in error case"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2018-16597": {
                 "cmt_msg": "ovl: modify ovl_permission() to do checks on two inodes"
@@ -44369,6 +44795,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -44531,6 +44960,9 @@
             "CVE-2021-26934": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
             }, 
@@ -44671,6 +45103,9 @@
             }, 
             "CVE-2017-12192": {
                 "cmt_msg": "KEYS: prevent KEYCTL_READ on negative key"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2017-12190": {
                 "cmt_msg": "fix unbalanced page refcounting in bio_map_user_iov"
@@ -44930,8 +45365,8 @@
             "CVE-2018-1130": {
                 "cmt_msg": "dccp: check sk for closed state in dccp_sendmsg()"
             }, 
-            "CVE-2019-19535": {
-                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
+            "CVE-2019-14284": {
+                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
             }, 
             "CVE-2021-3506": {
                 "cmt_msg": "f2fs: fix to avoid out-of-bounds memory access"
@@ -44969,8 +45404,8 @@
             "CVE-2019-5489": {
                 "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages"
             }, 
-            "CVE-2019-14284": {
-                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2018-10880": {
                 "cmt_msg": "ext4: never move the system.data xattr out of the inode body"
@@ -45213,6 +45648,9 @@
             }, 
             "CVE-2017-5551": {
                 "cmt_msg": "tmpfs: clear S_ISGID when setting posix ACLs"
+            }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
             }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
@@ -45472,8 +45910,8 @@
             "CVE-2019-19922": {
                 "cmt_msg": "sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
@@ -46024,6 +46462,9 @@
             "CVE-2019-15217": {
                 "cmt_msg": "media: usb:zr364xx:Fix KASAN:null-ptr-deref Read in zr364xx_vidioc_querycap"
             }, 
+            "CVE-2019-19535": {
+                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
+            }, 
             "CVE-2020-14386": {
                 "cmt_msg": "net/packet: fix overflow in tpacket_rcv"
             }, 
@@ -46249,6 +46690,9 @@
             "CVE-2017-5577": {
                 "cmt_msg": "drm/vc4: Return -EINVAL on the overflow checks failing."
             }, 
+            "CVE-2021-0447": {
+                "cmt_msg": "l2tp: protect sock pointer of struct pppol2tp_session with RCU"
+            }, 
             "CVE-2017-8824": {
                 "cmt_msg": "dccp: CVE-2017-8824: use-after-free in DCCP code"
             }, 
@@ -46405,8 +46849,8 @@
             "CVE-2017-18551": {
                 "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA"
             }, 
-            "CVE-2021-0447": {
-                "cmt_msg": "l2tp: protect sock pointer of struct pppol2tp_session with RCU"
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
             }, 
             "CVE-2021-26931": {
                 "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()"
@@ -46482,6 +46926,9 @@
             }, 
             "CVE-2021-0448": {
                 "cmt_msg": "netfilter: ctnetlink: add a range check for l3/l4 protonum"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -46614,6 +47061,9 @@
             }, 
             "CVE-2017-17975": {
                 "cmt_msg": "media: usbtv: prevent double free in error case"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2018-16597": {
                 "cmt_msg": "ovl: modify ovl_permission() to do checks on two inodes"
@@ -46822,6 +47272,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -46987,6 +47440,9 @@
             "CVE-2021-26934": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
             }, 
@@ -47127,6 +47583,9 @@
             }, 
             "CVE-2017-12192": {
                 "cmt_msg": "KEYS: prevent KEYCTL_READ on negative key"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2017-12190": {
                 "cmt_msg": "fix unbalanced page refcounting in bio_map_user_iov"
@@ -47383,8 +47842,8 @@
             "CVE-2018-1130": {
                 "cmt_msg": "dccp: check sk for closed state in dccp_sendmsg()"
             }, 
-            "CVE-2019-19535": {
-                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
+            "CVE-2019-14284": {
+                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
             }, 
             "CVE-2021-3506": {
                 "cmt_msg": "f2fs: fix to avoid out-of-bounds memory access"
@@ -47422,8 +47881,8 @@
             "CVE-2019-5489": {
                 "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages"
             }, 
-            "CVE-2019-14284": {
-                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2018-10880": {
                 "cmt_msg": "ext4: never move the system.data xattr out of the inode body"
@@ -48817,6 +49276,9 @@
             "CVE-2017-5551": {
                 "cmt_msg": "tmpfs: clear S_ISGID when setting posix ACLs"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -49042,8 +49504,8 @@
             "CVE-2019-19922": {
                 "cmt_msg": "sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
@@ -49060,8 +49522,8 @@
             "CVE-2019-20806": {
                 "cmt_msg": "media: tw5864: Fix possible NULL pointer dereference in tw5864_handle_frame"
             }, 
-            "CVE-2020-0305": {
-                "cmt_msg": "chardev: Avoid potential use-after-free in 'chrdev_open()'"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2020-14304": {
                 "cmt_msg": ""
@@ -49564,6 +50026,9 @@
             "CVE-2020-8648": {
                 "cmt_msg": "vt: selection, close sel_buffer race"
             }, 
+            "CVE-2021-0447": {
+                "cmt_msg": "l2tp: protect sock pointer of struct pppol2tp_session with RCU"
+            }, 
             "CVE-2020-10766": {
                 "cmt_msg": "x86/speculation: Prevent rogue cross-process SSBD shutdown"
             }, 
@@ -49717,8 +50182,8 @@
             "CVE-2017-18551": {
                 "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA"
             }, 
-            "CVE-2021-0447": {
-                "cmt_msg": "l2tp: protect sock pointer of struct pppol2tp_session with RCU"
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
             }, 
             "CVE-2021-26931": {
                 "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()"
@@ -49779,6 +50244,9 @@
             }, 
             "CVE-2021-0448": {
                 "cmt_msg": "netfilter: ctnetlink: add a range check for l3/l4 protonum"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -49876,6 +50344,9 @@
             "CVE-2019-0136": {
                 "cmt_msg": "mac80211: drop robust management frames from unknown TA"
             }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
+            }, 
             "CVE-2018-16597": {
                 "cmt_msg": "ovl: modify ovl_permission() to do checks on two inodes"
             }, 
@@ -49926,6 +50397,9 @@
             }, 
             "CVE-2020-0465": {
                 "cmt_msg": "HID: core: Sanitize event code and type when mapping input"
+            }, 
+            "CVE-2020-0305": {
+                "cmt_msg": "chardev: Avoid potential use-after-free in 'chrdev_open()'"
             }, 
             "CVE-2018-3639": {
                 "cmt_msg": "x86/nospec: Simplify alternative_msr_write()"
@@ -50007,6 +50481,9 @@
             }, 
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
@@ -50119,6 +50596,9 @@
             "CVE-2021-26934": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
             }, 
@@ -50211,6 +50691,9 @@
             }, 
             "CVE-2019-10142": {
                 "cmt_msg": "drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
@@ -50853,8 +51336,8 @@
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
             }, 
-            "CVE-2020-16120": {
-                "cmt_msg": "ovl: switch to mounter creds in readdir"
+            "CVE-2018-12929": {
+                "cmt_msg": ""
             }, 
             "CVE-2020-15802": {
                 "cmt_msg": ""
@@ -50961,8 +51444,11 @@
             "CVE-2020-4788": {
                 "cmt_msg": "powerpc/64s: flush L1D on kernel entry"
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
+            }, 
+            "CVE-2021-32399": {
+                "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller"
             }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
@@ -51219,9 +51705,6 @@
             "CVE-2020-36385": {
                 "cmt_msg": "RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy"
             }, 
-            "CVE-2021-32399": {
-                "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller"
-            }, 
             "CVE-2021-26708": {
                 "cmt_msg": "vsock: fix the race conditions in multi-transport support"
             }, 
@@ -51258,8 +51741,8 @@
             "CVE-2020-12655": {
                 "cmt_msg": "xfs: add agf freeblocks verify in xfs_agf_verify"
             }, 
-            "CVE-2018-12929": {
-                "cmt_msg": ""
+            "CVE-2020-16120": {
+                "cmt_msg": "ovl: switch to mounter creds in readdir"
             }, 
             "CVE-2018-12928": {
                 "cmt_msg": ""
@@ -51269,6 +51752,9 @@
             }, 
             "CVE-2020-25220": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2015-2877": {
                 "cmt_msg": ""
@@ -51602,6 +52088,9 @@
             "CVE-2017-5551": {
                 "cmt_msg": "tmpfs: clear S_ISGID when setting posix ACLs"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -51869,8 +52358,8 @@
             "CVE-2015-1339": {
                 "cmt_msg": "cuse: fix memory leak"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
@@ -52364,6 +52853,9 @@
             "CVE-2007-3719": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2017-10911": {
                 "cmt_msg": "xen-blkback: don't leak stack data via response ring"
             }, 
@@ -52459,6 +52951,9 @@
             }, 
             "CVE-2015-8553": {
                 "cmt_msg": "xen/pciback: Don't allow MSI-X ops if PCI_COMMAND_MEMORY is not set."
+            }, 
+            "CVE-2019-19535": {
+                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
             }, 
             "CVE-2021-34693": {
                 "cmt_msg": "can: bcm: fix infoleak in struct bcm_msg_head"
@@ -52648,6 +53143,9 @@
             }, 
             "CVE-2016-9588": {
                 "cmt_msg": "kvm: nVMX: Allow L1 to intercept software exceptions (#BP and #OF)"
+            }, 
+            "CVE-2021-0447": {
+                "cmt_msg": "l2tp: protect sock pointer of struct pppol2tp_session with RCU"
             }, 
             "CVE-2020-10766": {
                 "cmt_msg": "x86/speculation: Prevent rogue cross-process SSBD shutdown"
@@ -52883,8 +53381,8 @@
             "CVE-2017-18551": {
                 "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA"
             }, 
-            "CVE-2021-0447": {
-                "cmt_msg": "l2tp: protect sock pointer of struct pppol2tp_session with RCU"
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
             }, 
             "CVE-2021-26931": {
                 "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()"
@@ -52963,6 +53461,9 @@
             }, 
             "CVE-2018-19824": {
                 "cmt_msg": "ALSA: usb-audio: Fix UAF decrement if card has no live interfaces in card.c"
+            }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -53119,6 +53620,9 @@
             }, 
             "CVE-2017-17975": {
                 "cmt_msg": "media: usbtv: prevent double free in error case"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2018-16597": {
                 "cmt_msg": "ovl: modify ovl_permission() to do checks on two inodes"
@@ -53528,6 +54032,9 @@
             "CVE-2019-15222": {
                 "cmt_msg": "ALSA: usb-audio: Fix gpf in snd_usb_pipe_sanity_check"
             }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
             }, 
@@ -53659,6 +54166,9 @@
             }, 
             "CVE-2017-12192": {
                 "cmt_msg": "KEYS: prevent KEYCTL_READ on negative key"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2017-12190": {
                 "cmt_msg": "fix unbalanced page refcounting in bio_map_user_iov"
@@ -53951,8 +54461,8 @@
             "CVE-2018-1130": {
                 "cmt_msg": "dccp: check sk for closed state in dccp_sendmsg()"
             }, 
-            "CVE-2019-19535": {
-                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
+            "CVE-2019-14284": {
+                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
             }, 
             "CVE-2021-3506": {
                 "cmt_msg": "f2fs: fix to avoid out-of-bounds memory access"
@@ -53993,8 +54503,8 @@
             "CVE-2019-5489": {
                 "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages"
             }, 
-            "CVE-2019-14284": {
-                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
+            "CVE-2018-10883": {
+                "cmt_msg": "jbd2: don't mark block as modified if the handle is out of credits"
             }, 
             "CVE-2018-10880": {
                 "cmt_msg": "ext4: never move the system.data xattr out of the inode body"
@@ -54005,8 +54515,8 @@
             "CVE-2017-16649": {
                 "cmt_msg": "net: cdc_ether: fix divide by 0 on bad descriptors"
             }, 
-            "CVE-2018-10883": {
-                "cmt_msg": "jbd2: don't mark block as modified if the handle is out of credits"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }
         }
     }, 
@@ -54454,8 +54964,11 @@
             "CVE-2020-4788": {
                 "cmt_msg": "powerpc/64s: flush L1D on kernel entry"
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
+            }, 
+            "CVE-2021-32399": {
+                "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller"
             }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
@@ -54660,9 +55173,6 @@
             }, 
             "CVE-2020-36385": {
                 "cmt_msg": "RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy"
-            }, 
-            "CVE-2021-32399": {
-                "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller"
             }, 
             "CVE-2021-26708": {
                 "cmt_msg": "vsock: fix the race conditions in multi-transport support"
@@ -55173,8 +55683,11 @@
             "CVE-2020-4788": {
                 "cmt_msg": "powerpc/64s: flush L1D on kernel entry"
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
+            }, 
+            "CVE-2021-32399": {
+                "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller"
             }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
@@ -55340,9 +55853,6 @@
             }, 
             "CVE-2020-36385": {
                 "cmt_msg": "RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy"
-            }, 
-            "CVE-2021-32399": {
-                "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller"
             }, 
             "CVE-2021-26708": {
                 "cmt_msg": "vsock: fix the race conditions in multi-transport support"
@@ -55768,8 +56278,11 @@
             "CVE-2020-10708": {
                 "cmt_msg": ""
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
+            }, 
+            "CVE-2021-32399": {
+                "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller"
             }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
@@ -55923,9 +56436,6 @@
             }, 
             "CVE-2020-36385": {
                 "cmt_msg": "RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy"
-            }, 
-            "CVE-2021-32399": {
-                "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller"
             }, 
             "CVE-2021-26708": {
                 "cmt_msg": "vsock: fix the race conditions in multi-transport support"
@@ -58925,6 +59435,10 @@
             }
         }, 
         "4.9.267": {
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write", 
+                "cmt_id": "0c58c9f9c5c5326320bbe0429a0f45fc1b92024b"
+            }, 
             "CVE-2020-25672": {
                 "cmt_msg": "nfc: fix memory leak in llcp_sock_connect()", 
                 "cmt_id": "83a09c10719661d8b51f1aa475ec52c13f3546d1"
@@ -59038,8 +59552,11 @@
             "CVE-2020-35501": {
                 "cmt_msg": ""
             }, 
-            "CVE-2018-1121": {
-                "cmt_msg": ""
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
+            }, 
+            "CVE-2018-20855": {
+                "cmt_msg": "IB/mlx5: Fix leaking stack memory to userspace"
             }, 
             "CVE-2019-19378": {
                 "cmt_msg": ""
@@ -59089,11 +59606,17 @@
             "CVE-2020-29374": {
                 "cmt_msg": "gup: document and work around \"COW can break either way\" issue"
             }, 
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
+            }, 
             "CVE-2019-19815": {
                 "cmt_msg": "f2fs: support swap file w/ DIO"
             }, 
             "CVE-2019-19814": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
             }, 
             "CVE-2019-9453": {
                 "cmt_msg": "f2fs: fix to avoid accessing xattr across the boundary"
@@ -59131,8 +59654,8 @@
             "CVE-2018-7754": {
                 "cmt_msg": "printk: hash addresses printed with %p"
             }, 
-            "CVE-2018-20855": {
-                "cmt_msg": "IB/mlx5: Fix leaking stack memory to userspace"
+            "CVE-2018-1121": {
+                "cmt_msg": ""
             }, 
             "CVE-2007-3719": {
                 "cmt_msg": ""
@@ -59191,8 +59714,8 @@
             "CVE-2019-18885": {
                 "cmt_msg": "btrfs: merge btrfs_find_device and find_device"
             }, 
-            "CVE-2018-20449": {
-                "cmt_msg": "printk: hash addresses printed with %p"
+            "CVE-2020-10708": {
+                "cmt_msg": ""
             }, 
             "CVE-2020-15780": {
                 "cmt_msg": "ACPI: configfs: Disallow loading ACPI tables when locked down"
@@ -59244,6 +59767,12 @@
             }, 
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
+            }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2017-5715": {
                 "cmt_msg": "x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]"
@@ -59371,14 +59900,17 @@
             "CVE-2020-25220": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2015-2877": {
                 "cmt_msg": ""
             }, 
             "CVE-2019-0146": {
                 "cmt_msg": ""
             }, 
-            "CVE-2020-10708": {
-                "cmt_msg": ""
+            "CVE-2018-20449": {
+                "cmt_msg": "printk: hash addresses printed with %p"
             }, 
             "CVE-2016-10723": {
                 "cmt_msg": "mm, oom: remove sleep from under oom_lock"
@@ -59412,6 +59944,9 @@
             }, 
             "CVE-2019-5489": {
                 "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages"
+            }, 
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2017-18232": {
                 "cmt_msg": "scsi: libsas: direct call probe and destruct"
@@ -59635,6 +60170,9 @@
             }, 
             "CVE-2017-5551": {
                 "cmt_msg": "tmpfs: clear S_ISGID when setting posix ACLs"
+            }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
             }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
@@ -59894,8 +60432,8 @@
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2017-18509": {
                 "cmt_msg": "ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt"
@@ -60209,8 +60747,8 @@
             "CVE-2018-1087": {
                 "cmt_msg": "kvm/x86: fix icebp instruction handling"
             }, 
-            "CVE-2018-1120": {
-                "cmt_msg": "proc: do not access cmdline nor environ from file-backed areas"
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
             }, 
             "CVE-2018-1121": {
                 "cmt_msg": ""
@@ -60436,6 +60974,9 @@
             }, 
             "CVE-2017-14340": {
                 "cmt_msg": "xfs: XFS_IS_REALTIME_INODE() should be false if no rt device present"
+            }, 
+            "CVE-2019-19535": {
+                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
             }, 
             "CVE-2020-14386": {
                 "cmt_msg": "net/packet: fix overflow in tpacket_rcv"
@@ -60806,6 +61347,9 @@
             "CVE-2017-18551": {
                 "cmt_msg": "i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA"
             }, 
+            "CVE-2017-18552": {
+                "cmt_msg": "RDS: validate the requested traces user input against max supported"
+            }, 
             "CVE-2021-26931": {
                 "cmt_msg": "xen-blkback: don't \"handle\" error by BUG()"
             }, 
@@ -60877,6 +61421,9 @@
             }, 
             "CVE-2020-25705": {
                 "cmt_msg": "icmp: randomize the global rate limiter"
+            }, 
+            "CVE-2018-1120": {
+                "cmt_msg": "proc: do not access cmdline nor environ from file-backed areas"
             }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
@@ -61009,6 +61556,9 @@
             }, 
             "CVE-2017-17975": {
                 "cmt_msg": "media: usbtv: prevent double free in error case"
+            }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
             }, 
             "CVE-2019-19377": {
                 "cmt_msg": "btrfs: Don't submit any btree write bio if the fs has errors"
@@ -61214,6 +61764,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -61376,6 +61929,9 @@
             "CVE-2021-26934": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
             }, 
@@ -61516,6 +62072,9 @@
             }, 
             "CVE-2017-12192": {
                 "cmt_msg": "KEYS: prevent KEYCTL_READ on negative key"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2017-12190": {
                 "cmt_msg": "fix unbalanced page refcounting in bio_map_user_iov"
@@ -61772,8 +62331,8 @@
             "CVE-2018-1130": {
                 "cmt_msg": "dccp: check sk for closed state in dccp_sendmsg()"
             }, 
-            "CVE-2019-19535": {
-                "cmt_msg": "can: peak_usb: pcan_usb_fd: Fix info-leaks to USB devices"
+            "CVE-2019-14284": {
+                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
             }, 
             "CVE-2021-3506": {
                 "cmt_msg": "f2fs: fix to avoid out-of-bounds memory access"
@@ -61814,8 +62373,8 @@
             "CVE-2019-5489": {
                 "cmt_msg": "Change mincore() to count \"mapped\" pages rather than \"cached\" pages"
             }, 
-            "CVE-2019-14284": {
-                "cmt_msg": "floppy: fix div-by-zero in setup_format_params"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2018-10880": {
                 "cmt_msg": "ext4: never move the system.data xattr out of the inode body"
@@ -62072,6 +62631,9 @@
             "CVE-2019-10124": {
                 "cmt_msg": "mm: hwpoison: fix thp split handing in soft_offline_in_use_page()"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -62315,8 +62877,8 @@
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
             }, 
-            "CVE-2020-27067": {
-                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2020-27066": {
                 "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer"
@@ -62333,8 +62895,8 @@
             "CVE-2019-20806": {
                 "cmt_msg": "media: tw5864: Fix possible NULL pointer dereference in tw5864_handle_frame"
             }, 
-            "CVE-2020-0305": {
-                "cmt_msg": "chardev: Avoid potential use-after-free in 'chrdev_open()'"
+            "CVE-2017-16648": {
+                "cmt_msg": "dvb_frontend: don't use-after-free the frontend struct"
             }, 
             "CVE-2020-14304": {
                 "cmt_msg": ""
@@ -63230,6 +63792,9 @@
             "CVE-2020-25705": {
                 "cmt_msg": "icmp: randomize the global rate limiter"
             }, 
+            "CVE-2018-20854": {
+                "cmt_msg": "phy: ocelot-serdes: fix out-of-bounds read"
+            }, 
             "CVE-2018-5391": {
                 "cmt_msg": "ip: discard IPv4 datagrams with overlapping segments."
             }, 
@@ -63368,6 +63933,9 @@
             "CVE-2017-17975": {
                 "cmt_msg": "media: usbtv: prevent double free in error case"
             }, 
+            "CVE-2019-16921": {
+                "cmt_msg": "RDMA/hns: Fix init resp when alloc ucontext"
+            }, 
             "CVE-2019-19377": {
                 "cmt_msg": "btrfs: Don't submit any btree write bio if the fs has errors"
             }, 
@@ -63452,6 +64020,9 @@
             "CVE-2020-0465": {
                 "cmt_msg": "HID: core: Sanitize event code and type when mapping input"
             }, 
+            "CVE-2020-0305": {
+                "cmt_msg": "chardev: Avoid potential use-after-free in 'chrdev_open()'"
+            }, 
             "CVE-2018-3639": {
                 "cmt_msg": "x86/nospec: Simplify alternative_msr_write()"
             }, 
@@ -63535,6 +64106,9 @@
             }, 
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
@@ -63683,6 +64257,9 @@
             "CVE-2021-26934": {
                 "cmt_msg": ""
             }, 
+            "CVE-2020-27067": {
+                "cmt_msg": "l2tp: fix l2tp_eth module loading"
+            }, 
             "CVE-2020-27777": {
                 "cmt_msg": "powerpc/rtas: Restrict RTAS requests from userspace"
             }, 
@@ -63808,6 +64385,9 @@
             }, 
             "CVE-2017-12192": {
                 "cmt_msg": "KEYS: prevent KEYCTL_READ on negative key"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2017-12190": {
                 "cmt_msg": "fix unbalanced page refcounting in bio_map_user_iov"
@@ -64420,6 +65000,9 @@
             "CVE-2020-35501": {
                 "cmt_msg": ""
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -64587,6 +65170,9 @@
             }, 
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
+            }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2020-27066": {
                 "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer"
@@ -65335,6 +65921,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -65481,6 +66070,9 @@
             }, 
             "CVE-2020-25656": {
                 "cmt_msg": "vt: keyboard, extend func_buf_lock to readers"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
@@ -65917,6 +66509,9 @@
             }, 
             "CVE-2020-35501": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
             }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
@@ -66674,9 +67269,6 @@
             "CVE-2019-12456": {
                 "cmt_msg": ""
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
-            }, 
             "CVE-2021-29647": {
                 "cmt_msg": "net: qrtr: fix a kernel-infoleak in qrtr_recvmsg()"
             }, 
@@ -66769,6 +67361,9 @@
             }, 
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2020-36312": {
                 "cmt_msg": "KVM: fix memory leak in kvm_io_bus_unregister_dev()"
@@ -66922,6 +67517,9 @@
             }, 
             "CVE-2020-25656": {
                 "cmt_msg": "vt: keyboard, extend func_buf_lock to readers"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
@@ -67369,6 +67967,9 @@
             "CVE-2020-35501": {
                 "cmt_msg": ""
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -67411,8 +68012,8 @@
             "CVE-2020-29660": {
                 "cmt_msg": "tty: Fix ->session locking"
             }, 
-            "CVE-2019-11135": {
-                "cmt_msg": "x86/msr: Add the IA32_TSX_CTRL MSR"
+            "CVE-2021-33624": {
+                "cmt_msg": "bpf: Inherit expanded/patched seen count from old aux data"
             }, 
             "CVE-2019-19770": {
                 "cmt_msg": "blktrace: fix debugfs use after free"
@@ -68026,9 +68627,6 @@
             "CVE-2019-12456": {
                 "cmt_msg": ""
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
-            }, 
             "CVE-2021-29647": {
                 "cmt_msg": "net: qrtr: fix a kernel-infoleak in qrtr_recvmsg()"
             }, 
@@ -68065,8 +68663,8 @@
             "CVE-2020-8992": {
                 "cmt_msg": "ext4: add cond_resched() to ext4_protect_reserved_inode"
             }, 
-            "CVE-2021-33624": {
-                "cmt_msg": "bpf: Inherit expanded/patched seen count from old aux data"
+            "CVE-2019-11135": {
+                "cmt_msg": "x86/msr: Add the IA32_TSX_CTRL MSR"
             }, 
             "CVE-2020-15780": {
                 "cmt_msg": "ACPI: configfs: Disallow loading ACPI tables when locked down"
@@ -68127,6 +68725,9 @@
             }, 
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
@@ -68271,6 +68872,9 @@
             }, 
             "CVE-2020-25656": {
                 "cmt_msg": "vt: keyboard, extend func_buf_lock to readers"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
@@ -68651,9 +69255,6 @@
             "CVE-2020-10708": {
                 "cmt_msg": ""
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
-            }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
             }, 
@@ -68946,6 +69547,12 @@
                 "cmt_id": "99b596199e8402055c425ac6abd3b8c3fc047034"
             }
         }, 
+        "5.10.31": {
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write", 
+                "cmt_id": "1f3b9000cb44318b0de40a0f495a5a708cd9be6e"
+            }
+        }, 
         "5.10.32": {
             "CVE-2021-3501": {
                 "cmt_msg": "KVM: VMX: Don't use vcpu->run->internal.ndata as an array index", 
@@ -69220,9 +69827,6 @@
             "CVE-2020-10708": {
                 "cmt_msg": ""
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
-            }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
             }, 
@@ -69460,6 +70064,12 @@
                 "cmt_id": "b42800750b07893f2993214c3f777892eb06ad16"
             }
         }, 
+        "5.11.15": {
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write", 
+                "cmt_id": "b4c4e4660b37a57011677809205a3f36725b70ae"
+            }
+        }, 
         "5.11.16": {
             "CVE-2021-3501": {
                 "cmt_msg": "KVM: VMX: Don't use vcpu->run->internal.ndata as an array index", 
@@ -69685,11 +70295,11 @@
             "CVE-2021-0606": {
                 "cmt_msg": ""
             }, 
+            "CVE-2021-3573": {
+                "cmt_msg": "Bluetooth: use correct lock to prevent UAF of hdev object"
+            }, 
             "CVE-2020-24586": {
                 "cmt_msg": "mac80211: prevent mixed key and fragment cache attacks"
-            }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
             }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
@@ -69699,9 +70309,6 @@
             }, 
             "CVE-2020-26141": {
                 "cmt_msg": "ath10k: Fix TKIP Michael MIC verification for PCIe"
-            }, 
-            "CVE-2021-3573": {
-                "cmt_msg": "Bluetooth: use correct lock to prevent UAF of hdev object"
             }, 
             "CVE-2011-4917": {
                 "cmt_msg": ""
@@ -69973,6 +70580,9 @@
             "CVE-2019-10124": {
                 "cmt_msg": "mm: hwpoison: fix thp split handing in soft_offline_in_use_page()"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
             "CVE-2021-28688": {
                 "cmt_msg": "xen-blkback: don't leak persistent grants from xen_blkbk_map()"
             }, 
@@ -70158,6 +70768,9 @@
             }, 
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
+            }, 
+            "CVE-2019-19927": {
+                "cmt_msg": "drm/ttm: fix incrementing the page pointer for huge pages"
             }, 
             "CVE-2020-27066": {
                 "cmt_msg": "xfrm: policy: Fix doulbe free in xfrm_policy_timer"
@@ -70975,6 +71588,9 @@
             "CVE-2020-36310": {
                 "cmt_msg": "KVM: SVM: avoid infinite loop on NPF from bad address"
             }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
+            }, 
             "CVE-2020-35519": {
                 "cmt_msg": "net/x25: prevent a couple of overflows"
             }, 
@@ -71136,6 +71752,9 @@
             }, 
             "CVE-2019-10142": {
                 "cmt_msg": "drivers/virt/fsl_hypervisor.c: prevent integer overflow in ioctl"
+            }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
             }, 
             "CVE-2021-0399": {
                 "cmt_msg": ""
@@ -71335,6 +71954,10 @@
             "CVE-2019-19767": {
                 "cmt_msg": "ext4: add more paranoia checking in ext4_expand_extra_isize handling", 
                 "cmt_id": "69412e8ac6206e36aa09a6e3f5503be020b64ba8"
+            }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds", 
+                "cmt_id": "8387e3688aa9e06a12b58abbcfe2cbfd0cf0f589"
             }, 
             "CVE-2019-19602": {
                 "cmt_msg": "x86/fpu: Don't cache access to fpu_fpregs_owner_ctx", 
@@ -72323,6 +72946,12 @@
                 "cmt_id": "41bc58ba0945d69578f60c6f06729d8e2dc327dc"
             }
         }, 
+        "5.4.113": {
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write", 
+                "cmt_id": "cc59b872f2e1995b8cc819b9445c1198bfe83b2d"
+            }
+        }, 
         "5.4.114": {
             "CVE-2021-23133": {
                 "cmt_msg": "net/sctp: fix race condition in sctp_destroy_sock", 
@@ -72594,8 +73223,8 @@
             "CVE-2020-10708": {
                 "cmt_msg": ""
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
@@ -72948,6 +73577,10 @@
                 "cmt_msg": "ext4: add more paranoia checking in ext4_expand_extra_isize handling", 
                 "cmt_id": "fb7bc3a2bb987865e149f6baa2a3d22dd18b201e"
             }, 
+            "CVE-2019-19241": {
+                "cmt_msg": "io_uring: async workers should inherit the user creds", 
+                "cmt_id": "ad700a7eb17dc3fc1f96152b4291532e5ba5a7ad"
+            }, 
             "CVE-2019-19602": {
                 "cmt_msg": "x86/fpu: Don't cache access to fpu_fpregs_owner_ctx", 
                 "cmt_id": "4a94795bd29e90045053107a6cd79942d2b02ccd"
@@ -73059,9 +73692,6 @@
                 "cmt_msg": "i40e: prevent memory leak in i40e_setup_macvlans"
             }, 
             "CVE-2021-26934": {
-                "cmt_msg": ""
-            }, 
-            "CVE-2020-26560": {
                 "cmt_msg": ""
             }, 
             "CVE-2021-0129": {
@@ -73403,6 +74033,9 @@
             "CVE-2019-19072": {
                 "cmt_msg": "tracing: Have error path in predicate_parse() free its allocated memory"
             }, 
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
+            }, 
             "CVE-2019-19070": {
                 "cmt_msg": "spi: gpio: prevent memory leak in spi_gpio_probe"
             }, 
@@ -73583,8 +74216,8 @@
             "CVE-2019-12456": {
                 "cmt_msg": ""
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
+            "CVE-2020-26560": {
+                "cmt_msg": ""
             }, 
             "CVE-2019-16234": {
                 "cmt_msg": "iwlwifi: pcie: fix rb_allocator workqueue allocation"
@@ -73804,6 +74437,9 @@
             }, 
             "CVE-2020-25220": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2015-2877": {
                 "cmt_msg": ""
@@ -74237,11 +74873,11 @@
             "CVE-2021-33033": {
                 "cmt_msg": "cipso,calipso: resolve a number of problems with the DOI refcounts"
             }, 
-            "CVE-2020-16120": {
-                "cmt_msg": "ovl: switch to mounter creds in readdir"
-            }, 
-            "CVE-2020-15802": {
+            "CVE-2018-12929": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2020-25669": {
+                "cmt_msg": "Input: sunkbd - avoid use-after-free in teardown paths"
             }, 
             "CVE-2020-25668": {
                 "cmt_msg": "tty: make FONTX ioctl use the tty pointer they were actually passed"
@@ -74339,8 +74975,11 @@
             "CVE-2020-4788": {
                 "cmt_msg": "powerpc/64s: flush L1D on kernel entry"
             }, 
-            "CVE-2019-18680": {
-                "cmt_msg": "unknown"
+            "CVE-2021-22555": {
+                "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write"
+            }, 
+            "CVE-2021-32399": {
+                "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller"
             }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
@@ -74411,8 +75050,8 @@
             "CVE-2020-8694": {
                 "cmt_msg": "powercap: restrict energy meter to root access"
             }, 
-            "CVE-2020-25669": {
-                "cmt_msg": "Input: sunkbd - avoid use-after-free in teardown paths"
+            "CVE-2020-15802": {
+                "cmt_msg": ""
             }, 
             "CVE-2021-0512": {
                 "cmt_msg": "HID: make arrays usage and value to be the same"
@@ -74570,9 +75209,6 @@
             "CVE-2020-36385": {
                 "cmt_msg": "RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy"
             }, 
-            "CVE-2021-32399": {
-                "cmt_msg": "bluetooth: eliminate the potential race condition when removing the HCI controller"
-            }, 
             "CVE-2021-26708": {
                 "cmt_msg": "vsock: fix the race conditions in multi-transport support"
             }, 
@@ -74603,8 +75239,8 @@
             "CVE-2020-12655": {
                 "cmt_msg": "xfs: add agf freeblocks verify in xfs_agf_verify"
             }, 
-            "CVE-2018-12929": {
-                "cmt_msg": ""
+            "CVE-2020-16120": {
+                "cmt_msg": "ovl: switch to mounter creds in readdir"
             }, 
             "CVE-2018-12928": {
                 "cmt_msg": ""
@@ -74614,6 +75250,9 @@
             }, 
             "CVE-2020-25220": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2020-36313": {
+                "cmt_msg": "KVM: Fix out of range accesses to memslots"
             }, 
             "CVE-2015-2877": {
                 "cmt_msg": ""

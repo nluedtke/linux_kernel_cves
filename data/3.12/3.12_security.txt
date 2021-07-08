@@ -35,6 +35,7 @@ CVEs fixed in 3.12.4:
   CVE-2013-7270: 0cefe287488ca07c0d7962a7b4d3fbb829d09917 net: rework recvmsg handler msg_name and msg_namelen logic
   CVE-2013-7271: 0cefe287488ca07c0d7962a7b4d3fbb829d09917 net: rework recvmsg handler msg_name and msg_namelen logic
   CVE-2013-7281: 7a9b8e64a5706d62d5a5ab54fe3d0320845b1d4a inet: prevent leakage of uninitialized memory to user in recv syscalls
+  CVE-2013-7348: f50db974cb75e31d98b176c3c9ea92e57aa97a1b aio: prevent double free in ioctx_alloc
 
 CVEs fixed in 3.12.6:
   CVE-2013-4587: 41fe7fa8fdeaa5a2a9f3ecaa9a47e2d2afa1b2b1 KVM: Improve create VCPU parameter (CVE-2013-4587)
@@ -237,6 +238,7 @@ CVEs fixed in 3.12.43:
 CVEs fixed in 3.12.44:
   CVE-2015-1420: 330c542ff8f659055de1992935abaa18b121379e vfs: read file_handle only once in handle_to_path
   CVE-2015-4036: 266ed50f2a81a882d54c4ff7452bca370f396bae vhost/scsi: potential memory corruption
+  CVE-2015-4177: 6ab282fe6d43027b3b1ef820b3798aae8fdb432b mnt: Fail collect_mounts when applied to unmounted mounts
   CVE-2015-4700: 0fa9520e7b08f00138cf9a4a95d066492cbcc18d x86: bpf_jit: fix compilation of large bpf programs
   CVE-2015-5364: a97b54dd69cb05df4c57f5d5b40c761f7835ce4e udp: fix behavior of wrong checksums
   CVE-2015-5366: a97b54dd69cb05df4c57f5d5b40c761f7835ce4e udp: fix behavior of wrong checksums
@@ -490,6 +492,7 @@ Outstanding CVEs:
   CVE-2014-7145: (unk) [CIFS] Possible null ptr deref in SMB2_tcon 
   CVE-2014-9419: (unk) x86_64, switch_to(): Load TLS descriptors before switching DS and ES 
   CVE-2014-9717: (unk) mnt: Update detach_mounts to leave mounts connected 
+  CVE-2014-9803: (unk) Revert "arm64: Introduce execute-only page access permissions" 
   CVE-2014-9888: (unk) ARM: dma-mapping: don't allow DMA mappings to be marked executable 
   CVE-2014-9922: (unk) fs: limit filesystem stacking depth 
   CVE-2014-9940: (unk) regulator: core: Fix regualtor_ena_gpio_free not to access pin after freeing 
@@ -500,6 +503,8 @@ Outstanding CVEs:
   CVE-2015-3339: (unk) fs: take i_mutex during prepare_binprm for set[ug]id executables 
   CVE-2015-4001: (unk) ozwpan: Use unsigned ints to prevent heap overflow 
   CVE-2015-4004: (unk) staging: ozwpan: Remove from tree 
+  CVE-2015-4176: (unk) mnt: Update detach_mounts to leave mounts connected 
+  CVE-2015-4178: (unk) fs_pin: Allow for the possibility that m_list or s_list go unused. 
   CVE-2015-8374: (unk) Btrfs: fix truncation of compressed and inlined extents 
   CVE-2015-8709: (unk) mm: Add a user_ns owner to mm_struct and fix ptrace permission checks 
   CVE-2015-8830: (unk) aio: lift iov_iter_init() into aio_setup_..._rw() 
@@ -608,6 +613,7 @@ Outstanding CVEs:
   CVE-2017-16643: (unk) Input: gtco - fix potential out-of-bound access 
   CVE-2017-16645: (unk) Input: ims-psu - check if CDC union descriptor is sane 
   CVE-2017-16646: (unk) media: dib0700: fix invalid dvb_detach argument 
+  CVE-2017-16648: (unk) dvb_frontend: don't use-after-free the frontend struct 
   CVE-2017-16649: (unk) net: cdc_ether: fix divide by 0 on bad descriptors 
   CVE-2017-16650: (unk) net: qmi_wwan: fix divide by 0 on bad descriptors 
   CVE-2017-16911: (unk) usbip: prevent vhci_hcd driver from leaking a socket pointer address 
@@ -641,6 +647,7 @@ Outstanding CVEs:
   CVE-2017-18360: (unk) USB: serial: io_ti: fix div-by-zero in set_termios 
   CVE-2017-18509: (unk) ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt 
   CVE-2017-18551: (unk) i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA 
+  CVE-2017-18552: (unk) RDS: validate the requested traces user input against max supported 
   CVE-2017-18595: (unk) tracing: Fix possible double free on failure of allocating trace buffer 
   CVE-2017-5715: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
@@ -750,6 +757,7 @@ Outstanding CVEs:
   CVE-2018-20510: (unk) binder: replace "%p" with "%pK" 
   CVE-2018-20511: (unk) net/appletalk: fix minor pointer leak to userspace in SIOCFINDIPDDPRT 
   CVE-2018-20836: (unk) scsi: libsas: fix a race condition when smp task timeout 
+  CVE-2018-20854: (unk) phy: ocelot-serdes: fix out-of-bounds read 
   CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
   CVE-2018-20976: (unk) xfs: clear sb->s_fs_info on mount failure 
   CVE-2018-21008: (unk) rsi: add fix for crash during assertions 
@@ -867,6 +875,7 @@ Outstanding CVEs:
   CVE-2019-16233: (unk) scsi: qla2xxx: fix a potential NULL pointer dereference 
   CVE-2019-16413: (unk) 9p: use inode->i_lock to protect i_size_write() under 32-bit 
   CVE-2019-16746: (unk) nl80211: validate beacon head 
+  CVE-2019-16921: (unk) RDMA/hns: Fix init resp when alloc ucontext 
   CVE-2019-17052: (unk) ax25: enforce CAP_NET_RAW for raw sockets 
   CVE-2019-17053: (unk) ieee802154: enforce CAP_NET_RAW for raw sockets 
   CVE-2019-17054: (unk) appletalk: enforce CAP_NET_RAW for raw sockets 
@@ -894,6 +903,7 @@ Outstanding CVEs:
   CVE-2019-19073: (unk) ath9k_htc: release allocated buffer if timed out 
   CVE-2019-19074: (unk) ath9k: release allocated buffer if timed out 
   CVE-2019-19227: (unk) appletalk: Fix potential NULL pointer dereference in unregister_snap_client 
+  CVE-2019-19241: (unk) io_uring: async workers should inherit the user creds 
   CVE-2019-19319: (unk) ext4: protect journal inode's blocks using block_validity 
   CVE-2019-19377: (unk) btrfs: Don't submit any btree write bio if the fs has errors 
   CVE-2019-19378: (unk)  
@@ -916,6 +926,7 @@ Outstanding CVEs:
   CVE-2019-19814: (unk)  
   CVE-2019-19816: (unk) btrfs: inode: Verify inode mode to avoid NULL pointer dereference 
   CVE-2019-19922: (unk) sched/fair: Fix low cpu usage with high throttling by removing expiration of cpu-local slices 
+  CVE-2019-19927: (unk) drm/ttm: fix incrementing the page pointer for huge pages 
   CVE-2019-19965: (unk) scsi: libsas: stop discovering if oob mode is disconnected 
   CVE-2019-19966: (unk) media: cpia2: Fix use-after-free in cpia2_exit 
   CVE-2019-1999: (unk) binder: fix race between munmap() and direct reclaim 
@@ -1084,6 +1095,7 @@ Outstanding CVEs:
   CVE-2020-35519: (unk) net/x25: prevent a couple of overflows 
   CVE-2020-36158: (unk) mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start 
   CVE-2020-36310: (unk) KVM: SVM: avoid infinite loop on NPF from bad address 
+  CVE-2020-36313: (unk) KVM: Fix out of range accesses to memslots 
   CVE-2020-36322: (unk) fuse: fix bad inode 
   CVE-2020-36385: (unk) RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy 
   CVE-2020-36386: (unk) Bluetooth: Fix slab-out-of-bounds read in hci_extended_inquiry_result_evt() 
@@ -1102,6 +1114,7 @@ Outstanding CVEs:
   CVE-2021-20261: (unk) floppy: fix lock_fdc() signal handling 
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-22543: (unk) KVM: do not allow mapping valid but non-reference-counted pages 
+  CVE-2021-22555: (unk) netfilter: x_tables: fix compat match/target pad out-of-bound write 
   CVE-2021-26930: (unk) xen-blkback: fix error handling in xen_blkbk_map() 
   CVE-2021-26931: (unk) xen-blkback: don't "handle" error by BUG() 
   CVE-2021-26932: (unk) Xen/x86: don't bail early from clear_foreign_p2m_mapping() 
