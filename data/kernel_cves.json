@@ -59275,7 +59275,8 @@
         },
         "cwe": "Unspecified",
         "fixes": "7be74942f184fdfba34ddd19a0d995deb34d4a03",
-        "last_modified": "2021-04-19",
+        "last_affected_version": "5.4.130",
+        "last_modified": "2021-07-13",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.9. arch/x86/kvm/svm/sev.c allows attackers to cause a denial of service (soft lockup) by triggering destruction of a large SEV VM (which requires unregistering many encrypted regions), aka CID-7be74942f184.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36311",
@@ -60710,12 +60711,35 @@
         }
     },
     "CVE-2021-22555": {
-        "affected_versions": "unk to v5.12-rc8",
-        "breaks": "",
+        "affected_versions": "v2.6.19-rc1 to v5.12-rc8",
+        "breaks": "9fa492cdc160cd27ce1046cb36f47d3b2b1efa21",
         "cmt_msg": "netfilter: x_tables: fix compat match/target pad out-of-bound write",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "b29c457a6511435960115c0f548c4360d5f4801d",
         "last_affected_version": "5.11.14",
-        "last_modified": "2021-07-08",
+        "last_modified": "2021-07-13",
         "nvd_text": "A heap out-of-bounds write affecting Linux since v2.6.19-rc1 was discovered in net/netfilter/x_tables.c. This allows an attacker to gain privileges or cause a DoS (via heap memory corruption) through user name space",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-22555",
@@ -63233,10 +63257,11 @@
         }
     },
     "CVE-2021-3609": {
-        "affected_versions": "v2.6.25-rc1 to unk",
+        "affected_versions": "v2.6.25-rc1 to v5.14-rc1",
         "breaks": "ffd980f976e7fd666c2e61bf8ab35107efd11828",
-        "fixes": "",
-        "last_modified": "2021-06-24",
+        "cmt_msg": "can: bcm: delay release of struct bcm_op after synchronize_rcu()",
+        "fixes": "d5f9023fa61ee8b94f37a93f08e94b136cf1e463",
+        "last_modified": "2021-07-13",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3609",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3609",
@@ -63252,7 +63277,8 @@
         "cmt_msg": "Input: joydev - prevent potential read overflow in ioctl",
         "fixes": "182d679b2298d62bf42bb14b12a8067b8e17b617",
         "last_affected_version": "5.11.2",
-        "last_modified": "2021-07-01",
+        "last_modified": "2021-07-13",
+        "nvd_text": "An out-of-bounds memory write flaw was found in the Linux kernel's joystick devices subsystem in versions before 5.9-rc1, in the way the user calls ioctl JSIOCSBTNMAP. This flaw allows a local user to crash the system or possibly escalate their privileges on the system. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3612",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3612",
