@@ -60670,6 +60670,22 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-20292"
         }
     },
+    "CVE-2021-21781": {
+        "affected_versions": "v2.6.12-rc2 to v5.11-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "ARM: ensure the signal page contains defined contents",
+        "fixes": "9c698bff66ab4914bb3d71da7dc6112519bde23e",
+        "last_affected_version": "5.10.16",
+        "last_modified": "2021-07-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-21781",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-21781",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-21781",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-21781",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-21781",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-21781"
+        }
+    },
     "CVE-2021-22543": {
         "affected_versions": "v2.6.12-rc2 to v5.13",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -63061,9 +63077,32 @@
         "affected_versions": "v4.15-rc1 to v5.13",
         "breaks": "7c9bc0983f890ed9782e755a0e070930cd979333",
         "cmt_msg": "module: limit enabling module.sig_enforce",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Verification of Cryptographic Signature",
         "fixes": "0c18f29aae7ce3dadd26d8ee3505d07cc982df75",
         "last_affected_version": "5.12",
-        "last_modified": "2021-07-14",
+        "last_modified": "2021-07-19",
         "nvd_text": "kernel/module.c in the Linux kernel before 5.12.14 mishandles Signature Verification, aka CID-0c18f29aae7c. Without CONFIG_MODULE_SIG, verification that a kernel module is signed, for loading via init_module, does not occur for a module.sig_enforce=1 command-line argument.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-35039",
@@ -63261,7 +63300,8 @@
         "breaks": "ffd980f976e7fd666c2e61bf8ab35107efd11828",
         "cmt_msg": "can: bcm: delay release of struct bcm_op after synchronize_rcu()",
         "fixes": "d5f9023fa61ee8b94f37a93f08e94b136cf1e463",
-        "last_modified": "2021-07-13",
+        "last_affected_version": "5.13.1",
+        "last_modified": "2021-07-19",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3609",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3609",
