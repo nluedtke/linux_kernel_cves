@@ -58276,8 +58276,8 @@
         }
     },
     "CVE-2020-28097": {
-        "affected_versions": "unk to v5.9-rc6",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.9-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "vgacon: remove software scrollback support",
         "cvss2": {
             "Access Complexity": "Low",
@@ -58304,7 +58304,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "973c096f6a85e5b5f2a295126ba6928d9a6afd45",
         "last_affected_version": "5.8.9",
-        "last_modified": "2021-07-06",
+        "last_modified": "2021-07-21",
         "nvd_text": "The vgacon subsystem in the Linux kernel before 5.8.10 mishandles software scrollback. There is a vgacon_scrolldelta out-of-bounds read, aka CID-973c096f6a85.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-28097",
@@ -61007,8 +61007,8 @@
         }
     },
     "CVE-2021-26934": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.18-rc1 to unk",
+        "breaks": "c575b7eeb89f94356997abd62d6d5a0590e259b7",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -61033,7 +61033,7 @@
         },
         "cwe": "Unspecified",
         "fixes": "",
-        "last_modified": "2021-05-06",
+        "last_modified": "2021-07-21",
         "nvd_text": "An issue was discovered in the Linux kernel 4.18 through 5.10.16, as used by Xen. The backend allocation (aka be-alloc) mode of the drm_xen_front drivers was not meant to be a supported configuration, but this wasn't stated accordingly in its support status entry.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26934",
@@ -62658,6 +62658,23 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-33624"
         }
     },
+    "CVE-2021-33909": {
+        "affected_versions": "v3.16-rc4 to unk",
+        "breaks": "058504edd02667eef8fac9be27ab3ea74332e9b4",
+        "cmt_msg": "seq_file: disallow extremely large seq buffer allocations",
+        "fixes": "8cae8cd89f05f6de223d63e6d15e31c8ba9cf53b",
+        "last_affected_version": "5.13.3",
+        "last_modified": "2021-07-21",
+        "nvd_text": "fs/seq_file.c in the Linux kernel 3.16 through 5.13.x before 5.13.4 does not properly restrict seq buffer allocations, leading to an integer overflow, an Out-of-bounds Write, and escalation to root by an unprivileged user, aka CID-8cae8cd89f05.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33909",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-33909",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-33909",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-33909",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-33909",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-33909"
+        }
+    },
     "CVE-2021-3411": {
         "affected_versions": "v5.5-rc1 to v5.10",
         "breaks": "7705dc8557973d8ad8f10840f61d8ec805695e9e",
@@ -62755,8 +62772,8 @@
         }
     },
     "CVE-2021-34693": {
-        "affected_versions": "unk to v5.13-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.25-rc1 to v5.13-rc7",
+        "breaks": "ffd980f976e7fd666c2e61bf8ab35107efd11828",
         "cmt_msg": "can: bcm: fix infoleak in struct bcm_msg_head",
         "cvss2": {
             "Access Complexity": "Low",
@@ -62783,7 +62800,7 @@
         "cwe": "Missing Initialization of Resource",
         "fixes": "5e87ddbe3942e27e939bdc02deb8579b0cbd8ecc",
         "last_affected_version": "5.12.12",
-        "last_modified": "2021-07-01",
+        "last_modified": "2021-07-21",
         "nvd_text": "net/can/bcm.c in the Linux kernel through 5.12.10 allows local users to obtain sensitive information from kernel stack memory because parts of a data structure are uninitialized.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-34693",
@@ -63301,7 +63318,7 @@
         "cmt_msg": "can: bcm: delay release of struct bcm_op after synchronize_rcu()",
         "fixes": "d5f9023fa61ee8b94f37a93f08e94b136cf1e463",
         "last_affected_version": "5.13.1",
-        "last_modified": "2021-07-19",
+        "last_modified": "2021-07-21",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3609",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3609",
@@ -63349,6 +63366,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3612",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3612",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3612"
+        }
+    },
+    "CVE-2021-3655": {
+        "affected_versions": "unk to v5.14-rc1",
+        "breaks": "",
+        "cmt_msg": "sctp: validate from_addr_param return",
+        "fixes": "0c5dc070ff3d6246d22ddd931f23a6266249e3db",
+        "last_affected_version": "5.13.2",
+        "last_modified": "2021-07-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3655",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3655",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3655",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3655",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3655",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3655"
         }
     }
 }
