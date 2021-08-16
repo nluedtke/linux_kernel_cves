@@ -1,6 +1,7 @@
 
 CVEs fixed in 5.12.2:
   CVE-2021-31829: 7cf64d8679ca1cb20cf57d6a88bfee79a0922a66 bpf: Fix masking negation logic upon negative dst register
+  CVE-2021-38209: 671c54ea8c7ff47bd88444f3fffb65bf9799ce43 netfilter: conntrack: Make global sysctls readonly in non-init netns
 
 CVEs fixed in 5.12.3:
   CVE-2021-3506: 0b60f23e29c8dfcf1b8a037fae1167e4f2e3249e f2fs: fix to avoid out-of-bounds memory access
@@ -37,10 +38,17 @@ CVEs fixed in 5.12.10:
   CVE-2021-3564: 3556fac71e41f342d61331f3367d48bbbc292308 Bluetooth: fix the erroneous flush_work() order
   CVE-2021-3573: 7422eadcf201f2e25eb45b46ffc900fc4214e14f Bluetooth: use correct lock to prevent UAF of hdev object
   CVE-2021-3587: 0c4559736d9a4ec1ca58ba98ca34e7c4da4c422b nfc: fix NULL ptr dereference in llcp_sock_getname() after failed connect
+  CVE-2021-38208: 0c4559736d9a4ec1ca58ba98ca34e7c4da4c422b nfc: fix NULL ptr dereference in llcp_sock_getname() after failed connect
+
+CVEs fixed in 5.12.11:
+  CVE-2021-38198: 7707f7244d813f8279143d5dfdee7a318801231b KVM: X86: MMU: Use the correct inherited permissions to get shadow page
 
 CVEs fixed in 5.12.13:
   CVE-2021-33624: 408a4956acde24413f3c684912b1d3e404bed8e2 bpf: Inherit expanded/patched seen count from old aux data
   CVE-2021-34693: dc6415cb5cf8ebc8b334b7d0be916a0bf4353779 can: bcm: fix infoleak in struct bcm_msg_head
+  CVE-2021-38200: 74c3c34a04bc226f77b9e515aa067072cff44e52 powerpc/perf: Fix crash in perf_instruction_pointer() when ppmu is not set
+  CVE-2021-38206: 7b1b88232e40396ee1d8b19d42a050cda0a5aebb mac80211: Fix NULL ptr deref for injected rate info
+  CVE-2021-38207: b6982493ed2dee412ccae062ccf7cf50fbe5a6a8 net: ll_temac: Fix TX BD buffer overwrite
 
 CVEs fixed in 5.12.14:
   CVE-2020-26541: 7be8fb1494c65f57bb6a95743cfbd3312fe9bf52 certs: Add EFI_CERT_X509_GUID support for dbx entries
@@ -52,9 +60,13 @@ CVEs fixed in 5.12.17:
 
 CVEs fixed in 5.12.18:
   CVE-2021-3655: d91adac26d5ebac78c731b3aa23ff2c210ce2a0d sctp: validate from_addr_param return
+  CVE-2021-38205: 7a9bfd7589c18c20df5a5b9278549a2807627e30 net: xilinx_emaclite: Do not print real IOMEM pointer
 
 CVEs fixed in 5.12.19:
   CVE-2021-33909: 514b6531b1cbb64199db63bfdb80953d71998cca seq_file: disallow extremely large seq buffer allocations
+  CVE-2021-38160: 445a2298edc919f3cc82345ff8c004e9e1f5017a virtio_console: Assure used length from device is limited
+  CVE-2021-38199: 87871d990a2c1879fb5c543f7244f360532e2f28 NFSv4: Initialise connection to the server in nfs4_alloc_client()
+  CVE-2021-38201: 9a4f77f171f68e5a275c4fabd8d78579af7b4950 sunrpc: Avoid a KASAN slab-out-of-bounds bug in xdr_set_page_base()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -114,8 +126,11 @@ Outstanding CVEs:
   CVE-2021-34556: (unk) bpf: Introduce BPF nospec instruction for mitigating Spectre v4 
   CVE-2021-3542: (unk)  
   CVE-2021-35477: (unk) bpf: Introduce BPF nospec instruction for mitigating Spectre v4 
+  CVE-2021-3635: (unk)  
   CVE-2021-3640: (unk)  
   CVE-2021-3669: (unk)  
   CVE-2021-3679: (unk) tracing: Fix bug in rb_per_cpu_empty() that might cause deadloop. 
   CVE-2021-37159: (unk) usb: hso: fix error handling code of hso_create_net_device 
   CVE-2021-37576: (unk) KVM: PPC: Book3S: Fix H_RTAS rets buffer overflow 
+  CVE-2021-38166: (unk) bpf: Fix integer overflow involving bucket_size 
+  CVE-2021-38204: (unk) usb: max-3421: Prevent corruption of freed memory 

@@ -60715,7 +60715,7 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "f8be156be163a052a067306417cd0ff679068c97",
         "last_affected_version": "5.12",
-        "last_modified": "2021-07-28",
+        "last_modified": "2021-08-16",
         "nvd_text": "An issue was discovered in Linux: KVM through Improper handling of VM_IO|VM_PFNMAP vmas in KVM can bypass RO checks and can lead to pages being freed while still accessible by the VMM and guest. This allows users with the ability to start and control a VM to read/write random pages of memory and can result in local privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-22543",
@@ -62048,9 +62048,32 @@
         "affected_versions": "v5.10-rc1 to v5.12-rc6",
         "breaks": "2fcf4876ada8a293d3b92a1033b8b990a7c613d3",
         "cmt_msg": "KVM: SVM: load control fields from VMCB12 before checking them",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.4
+        },
+        "cwe": "Use After Free",
         "fixes": "a58d9166a756a0f4a6618e4f593232593d6df134",
         "last_affected_version": "5.11.11",
-        "last_modified": "2021-08-02",
+        "last_modified": "2021-08-16",
         "nvd_text": "arch/x86/kvm/svm/nested.c in the Linux kernel before 5.11.12 has a use-after-free in which an AMD KVM guest can bypass access control on host OS MSRs when there are nested guests, aka CID-a58d9166a756. This occurs because of a TOCTOU race condition associated with a VMCB12 double fetch in nested_svm_vmrun.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29657",
@@ -62648,7 +62671,7 @@
         "cwe": "Observable Discrepancy",
         "fixes": "d203b0fd863a2261e5d00b97f3d060c4c2a6db71",
         "last_affected_version": "5.12.12",
-        "last_modified": "2021-07-07",
+        "last_modified": "2021-08-16",
         "nvd_text": "In kernel/bpf/verifier.c in the Linux kernel before 5.12.13, a branch can be mispredicted (e.g., because of type confusion) and consequently an unprivileged BPF program can read arbitrary memory locations via a side-channel attack, aka CID-9183671af6db.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33624",
@@ -62799,9 +62822,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.14-rc4",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "bpf: Introduce BPF nospec instruction for mitigating Spectre v4",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Observable Discrepancy",
         "fixes": "f5e81d1117501546b7be050c5fbafa6efd2c722c",
         "last_affected_version": "5.13.7",
-        "last_modified": "2021-08-05",
+        "last_modified": "2021-08-16",
         "nvd_text": "In the Linux kernel through 5.13.7, an unprivileged BPF program can obtain sensitive information from kernel memory via a Speculative Store Bypass side-channel attack because the protection mechanism neglects the possibility of uninitialized memory locations on the BPF stack.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-34556",
@@ -63269,9 +63315,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.14-rc4",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "bpf: Introduce BPF nospec instruction for mitigating Spectre v4",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Observable Discrepancy",
         "fixes": "f5e81d1117501546b7be050c5fbafa6efd2c722c",
         "last_affected_version": "5.13.7",
-        "last_modified": "2021-08-05",
+        "last_modified": "2021-08-16",
         "nvd_text": "In the Linux kernel through 5.13.7, an unprivileged BPF program can obtain sensitive information from kernel memory via a Speculative Store Bypass side-channel attack because a certain preempting store operation does not necessarily occur before a store operation that has an attacker-controlled value.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-35477",
@@ -63328,7 +63397,8 @@
         "cmt_msg": "Bluetooth: use correct lock to prevent UAF of hdev object",
         "fixes": "e305509e678b3a4af2b3cfd410f409f7cdaabb52",
         "last_affected_version": "5.12.9",
-        "last_modified": "2021-06-15",
+        "last_modified": "2021-08-16",
+        "nvd_text": "A use-after-free in function hci_sock_bound_ioctl() of the Linux kernel HCI subsystem was found in the way user calls ioct HCIUNBLOCKADDR or other way triggers race condition of the call hci_unregister_dev() together with one of the calls hci_sock_blacklist_add(), hci_sock_blacklist_del(), hci_get_conn_info(), hci_get_auth_info(). A privileged local user could use this flaw to crash the system or escalate their privileges on the system. This flaw affects the Linux kernel versions prior to 5.13-rc5.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3573",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3573",
@@ -63426,6 +63496,21 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3612"
         }
     },
+    "CVE-2021-3635": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-08-16",
+        "nvd_text": "A flaw was found in the Linux kernel netfilter implementation in versions prior to 5.5-rc7. A user with root (CAP_SYS_ADMIN) access is able to panic the system when issuing netfilter netflow commands.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3635",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3635",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3635",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3635",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3635",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3635"
+        }
+    },
     "CVE-2021-3640": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -63444,9 +63529,33 @@
         "affected_versions": "v2.6.12-rc2 to v5.14-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "sctp: validate from_addr_param return",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "Low",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "score": 3.3
+        },
+        "cwe": "Missing Initialization of Resource",
         "fixes": "0c5dc070ff3d6246d22ddd931f23a6266249e3db",
         "last_affected_version": "5.13.2",
-        "last_modified": "2021-08-05",
+        "last_modified": "2021-08-16",
+        "nvd_text": "A vulnerability was found in the Linux kernel in versions before v5.14-rc1. Missing size validations on inbound SCTP packets may allow the kernel to read uninitialized memory.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3655",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3655",
@@ -63490,9 +63599,33 @@
         "affected_versions": "v2.6.28-rc1 to v5.14-rc3",
         "breaks": "bf41a158cacba6ca5fc6407a54e7ad8ce1567e2e",
         "cmt_msg": "tracing: Fix bug in rb_per_cpu_empty() that might cause deadloop.",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Uncontrolled Resource Consumption",
         "fixes": "67f0d6d9883c13174669f88adac4f0ee656cc16a",
         "last_affected_version": "5.13.5",
-        "last_modified": "2021-08-05",
+        "last_modified": "2021-08-16",
+        "nvd_text": "A lack of CPU resource in the Linux kernel tracing module functionality in versions prior to 5.14-rc3 was found in the way user uses trace ring buffer in a specific way. Only privileged local users (with CAP_SYS_ADMIN capability) could use this flaw to starve the resources causing denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3679",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3679",
@@ -63546,9 +63679,32 @@
         "affected_versions": "v3.10-rc1 to v5.14-rc3",
         "breaks": "8e591cb7204739efa8e15967ea334eb367039dde",
         "cmt_msg": "KVM: PPC: Book3S: Fix H_RTAS rets buffer overflow",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "f62f3c20647ebd5fb6ecb8f0b477b9281c44c10a",
         "last_affected_version": "5.13.5",
-        "last_modified": "2021-08-05",
+        "last_modified": "2021-08-16",
         "nvd_text": "arch/powerpc/kvm/book3s_rtas.c in the Linux kernel through 5.13.5 on the powerpc platform allows KVM guest OS users to cause host OS memory corruption via rtas_args.nargs, aka CID-f62f3c20647e.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-37576",
@@ -63557,6 +63713,565 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-37576",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-37576",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-37576"
+        }
+    },
+    "CVE-2021-38160": {
+        "affected_versions": "v2.6.12-rc2 to v5.14-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "virtio_console: Assure used length from device is limited",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+        "fixes": "d00d8da5869a2608e97cfede094dfc5e11462a46",
+        "last_affected_version": "5.13.3",
+        "last_modified": "2021-08-16",
+        "nvd_text": "In drivers/char/virtio_console.c in the Linux kernel before 5.13.4, data corruption or loss can be triggered by an untrusted device that supplies a buf->len value exceeding the buffer size.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38160",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38160",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38160",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38160",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38160",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38160"
+        }
+    },
+    "CVE-2021-38166": {
+        "affected_versions": "v5.6-rc1 to v5.14-rc6",
+        "breaks": "057996380a42bb64ccc04383cfa9c0ace4ea11f0",
+        "cmt_msg": "bpf: Fix integer overflow involving bucket_size",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Write",
+        "fixes": "c4eb1f403243fc7bbb7de644db8587c03de36da6",
+        "last_modified": "2021-08-16",
+        "nvd_text": "In kernel/bpf/hashtab.c in the Linux kernel through 5.13.8, there is an integer overflow and out-of-bounds write when many elements are placed in a single bucket. NOTE: exploitation might be impractical without the CAP_SYS_ADMIN capability.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38166",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38166",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38166",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38166",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38166",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38166"
+        }
+    },
+    "CVE-2021-38198": {
+        "affected_versions": "v2.6.20-rc4 to v5.13-rc6",
+        "breaks": "cea0f0e7ea54753c3265dc77f605a6dad1912cfc",
+        "cmt_msg": "KVM: X86: MMU: Use the correct inherited permissions to get shadow page",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
+        "fixes": "b1bd5cba3306691c771d558e94baa73e8b0b96b7",
+        "last_affected_version": "5.12.10",
+        "last_modified": "2021-08-16",
+        "nvd_text": "arch/x86/kvm/mmu/paging_tmpl.h in the Linux kernel before 5.12.11 incorrectly computes the access permissions of a shadow page, leading to a missing guest protection page fault.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38198",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38198",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38198",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38198",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38198",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38198"
+        }
+    },
+    "CVE-2021-38199": {
+        "affected_versions": "v4.8-rc1 to v5.14-rc1",
+        "breaks": "5c6e5b60aae4347223f176966455010a5715b863",
+        "cmt_msg": "NFSv4: Initialise connection to the server in nfs4_alloc_client()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+        },
+        "cwe": "Unspecified",
+        "fixes": "dd99e9f98fbf423ff6d365b37a98e8879170f17c",
+        "last_affected_version": "5.13.3",
+        "last_modified": "2021-08-16",
+        "nvd_text": "fs/nfs/nfs4client.c in the Linux kernel before 5.13.4 has incorrect connection-setup ordering, which allows operators of remote NFSv4 servers to cause a denial of service (hanging of mounts) by arranging for those servers to be unreachable during trunking detection.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38199",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38199",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38199",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38199",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38199",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38199"
+        }
+    },
+    "CVE-2021-38200": {
+        "affected_versions": "v5.11-rc1 to v5.13-rc7",
+        "breaks": "2ca13a4cc56c920a6c9fc8ee45d02bccacd7f46c",
+        "cmt_msg": "powerpc/perf: Fix crash in perf_instruction_pointer() when ppmu is not set",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "60b7ed54a41b550d50caf7f2418db4a7e75b5bdc",
+        "last_affected_version": "5.12.12",
+        "last_modified": "2021-08-16",
+        "nvd_text": "arch/powerpc/perf/core-book3s.c in the Linux kernel before 5.12.13, on systems with perf_event_paranoid=-1 and no specific PMU driver support registered, allows local users to cause a denial of service (perf_instruction_pointer NULL pointer dereference and OOPS) via a \"perf record\" command.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38200",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38200",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38200",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38200",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38200",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38200"
+        }
+    },
+    "CVE-2021-38201": {
+        "affected_versions": "v5.11-rc1 to v5.14-rc1",
+        "breaks": "8d86e373b0ef52d091ced9583ffbb33ad2771576",
+        "cmt_msg": "sunrpc: Avoid a KASAN slab-out-of-bounds bug in xdr_set_page_base()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+        },
+        "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "fixes": "6d1c0f3d28f98ea2736128ed3e46821496dc3a8c",
+        "last_affected_version": "5.13.3",
+        "last_modified": "2021-08-16",
+        "nvd_text": "net/sunrpc/xdr.c in the Linux kernel before 5.13.4 allows remote attackers to cause a denial of service (xdr_set_page_base slab-out-of-bounds access) by performing many NFS 4.2 READ_PLUS operations.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38201",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38201",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38201",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38201",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38201",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38201"
+        }
+    },
+    "CVE-2021-38202": {
+        "affected_versions": "v5.13-rc1 to v5.14-rc1",
+        "breaks": "6019ce0742ca55d3e45279a19b07d1542747a098",
+        "cmt_msg": "NFSD: Prevent a possible oops in the nfs_dirent() tracepoint",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+        },
+        "cwe": "Out-of-bounds Read",
+        "fixes": "7b08cf62b1239a4322427d677ea9363f0ab677c6",
+        "last_affected_version": "5.13.3",
+        "last_modified": "2021-08-16",
+        "nvd_text": "fs/nfsd/trace.h in the Linux kernel before 5.13.4 might allow remote attackers to cause a denial of service (out-of-bounds read in strlen) by sending NFS traffic when the trace event framework is being used for nfsd.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38202",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38202",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38202",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38202",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38202",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38202"
+        }
+    },
+    "CVE-2021-38203": {
+        "affected_versions": "v5.13-rc1 to v5.14-rc2",
+        "breaks": "eafa4fd0ad06074da8be4e28ff93b4dca9ffa407",
+        "cmt_msg": "btrfs: fix deadlock with concurrent chunk allocations involving system chunks",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Allocation of Resources Without Limits or Throttling",
+        "fixes": "1cb3db1cf383a3c7dbda1aa0ce748b0958759947",
+        "last_affected_version": "5.13.3",
+        "last_modified": "2021-08-16",
+        "nvd_text": "btrfs in the Linux kernel before 5.13.4 allows attackers to cause a denial of service (deadlock) via processes that trigger allocation of new system chunks during times when there is a shortage of free space in the system space_info.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38203",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38203",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38203",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38203",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38203",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38203"
+        }
+    },
+    "CVE-2021-38204": {
+        "affected_versions": "v3.16-rc1 to v5.14-rc3",
+        "breaks": "2d53139f31626bad6f8983d8e519ddde2cbba921",
+        "cmt_msg": "usb: max-3421: Prevent corruption of freed memory",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.6
+        },
+        "cwe": "Use After Free",
+        "fixes": "b5fdf5c6e6bee35837e160c00ac89327bdad031b",
+        "last_affected_version": "5.13.5",
+        "last_modified": "2021-08-16",
+        "nvd_text": "drivers/usb/host/max3421-hcd.c in the Linux kernel before 5.13.6 allows physically proximate attackers to cause a denial of service (use-after-free and panic) by removing a MAX-3421 USB device in certain situations.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38204",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38204",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38204",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38204",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38204",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38204"
+        }
+    },
+    "CVE-2021-38205": {
+        "affected_versions": "v2.6.32-rc1 to v5.14-rc1",
+        "breaks": "bb81b2ddfa194b6d12761a350b5b5985cecae0a9",
+        "cmt_msg": "net: xilinx_emaclite: Do not print real IOMEM pointer",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "Low",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "score": 3.3
+        },
+        "cwe": "Access of Uninitialized Pointer",
+        "fixes": "d0d62baa7f505bd4c59cd169692ff07ec49dde37",
+        "last_affected_version": "5.13.2",
+        "last_modified": "2021-08-16",
+        "nvd_text": "drivers/net/ethernet/xilinx/xilinx_emaclite.c in the Linux kernel before 5.13.3 makes it easier for attackers to defeat an ASLR protection mechanism because it prints a kernel pointer (i.e., the real IOMEM pointer).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38205",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38205",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38205",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38205",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38205",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38205"
+        }
+    },
+    "CVE-2021-38206": {
+        "affected_versions": "v5.9-rc1 to v5.13-rc7",
+        "breaks": "cb17ed29a7a5fea8c9bf70e8a05757d71650e025",
+        "cmt_msg": "mac80211: Fix NULL ptr deref for injected rate info",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "bddc0c411a45d3718ac535a070f349be8eca8d48",
+        "last_affected_version": "5.12.12",
+        "last_modified": "2021-08-16",
+        "nvd_text": "The mac80211 subsystem in the Linux kernel before 5.12.13, when a device supporting only 5 GHz is used, allows attackers to cause a denial of service (NULL pointer dereference in the radiotap parser) by injecting a frame with 802.11a rates.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38206",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38206",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38206",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38206",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38206",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38206"
+        }
+    },
+    "CVE-2021-38207": {
+        "affected_versions": "v5.6-rc4 to v5.13-rc7",
+        "breaks": "84823ff80f7403752b59e00bb198724100dc611c",
+        "cmt_msg": "net: ll_temac: Fix TX BD buffer overwrite",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+        "fixes": "c364df2489b8ef2f5e3159b1dff1ff1fdb16040d",
+        "last_affected_version": "5.12.12",
+        "last_modified": "2021-08-16",
+        "nvd_text": "drivers/net/ethernet/xilinx/ll_temac_main.c in the Linux kernel before 5.12.13 allows remote attackers to cause a denial of service (buffer overflow and lockup) by sending heavy network traffic for about ten minutes.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38207",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38207",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38207",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38207",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38207",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38207"
+        }
+    },
+    "CVE-2021-38208": {
+        "affected_versions": "v3.3-rc1 to v5.13-rc5",
+        "breaks": "d646960f7986fefb460a2b062d5ccc8ccfeacc3a",
+        "cmt_msg": "nfc: fix NULL ptr dereference in llcp_sock_getname() after failed connect",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "4ac06a1e013cf5fdd963317ffd3b968560f33bba",
+        "last_affected_version": "5.12.9",
+        "last_modified": "2021-08-16",
+        "nvd_text": "net/nfc/llcp_sock.c in the Linux kernel before 5.12.10 allows local unprivileged users to cause a denial of service (NULL pointer dereference and BUG) by making a getsockname call after a certain type of failure of a bind call.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38208",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38208",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38208",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38208",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38208",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38208"
+        }
+    },
+    "CVE-2021-38209": {
+        "affected_versions": "v5.7-rc1 to v5.13-rc1",
+        "breaks": "d0febd81ae77a0e13717f1412ff9589e43fc4f8b",
+        "cmt_msg": "netfilter: conntrack: Make global sysctls readonly in non-init netns",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "Low",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "score": 3.3
+        },
+        "cwe": "Observable Discrepancy",
+        "fixes": "2671fa4dc0109d3fb581bc3078fdf17b5d9080f6",
+        "last_affected_version": "5.12.1",
+        "last_modified": "2021-08-16",
+        "nvd_text": "net/netfilter/nf_conntrack_standalone.c in the Linux kernel before 5.12.2 allows observation of changes in any net namespace because these changes are leaked into all other net namespaces. This is related to the NF_SYSCTL_CT_MAX, NF_SYSCTL_CT_EXPECT_MAX, and NF_SYSCTL_CT_BUCKETS sysctls.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38209",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38209",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38209",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38209",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38209",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38209"
         }
     }
 }
