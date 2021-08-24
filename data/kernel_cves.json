@@ -59526,6 +59526,45 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2020-36387"
         }
     },
+    "CVE-2020-3702": {
+        "affected_versions": "unk to v5.12-rc1-dontuse",
+        "breaks": "",
+        "cmt_msg": "ath: Use safer key clearing with key cache entries",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
+        },
+        "cwe": "Cleartext Transmission of Sensitive Information",
+        "fixes": "56c5485c9e444c2e85e11694b6c44f1338fc20fd",
+        "last_modified": "2021-08-24",
+        "nvd_text": "u'Specifically timed and handcrafted traffic can cause internal errors in a WLAN device that lead to improper layer 2 Wi-Fi encryption with a consequent possibility of information disclosure over the air for a discrete set of traffic' in Snapdragon Auto, Snapdragon Compute, Snapdragon Connectivity, Snapdragon Consumer IOT, Snapdragon Industrial IOT, Snapdragon Mobile, Snapdragon Voice & Music, Snapdragon Wearables, Snapdragon Wired Infrastructure and Networking in APQ8053, IPQ4019, IPQ8064, MSM8909W, MSM8996AU, QCA9531, QCN5502, QCS405, SDX20, SM6150, SM7150",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-3702",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2020-3702",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2020-3702",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2020-3702",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2020-3702",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2020-3702"
+        }
+    },
     "CVE-2020-4788": {
         "affected_versions": "v2.6.12-rc2 to v5.10-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -60676,7 +60715,8 @@
         "cmt_msg": "ARM: ensure the signal page contains defined contents",
         "fixes": "9c698bff66ab4914bb3d71da7dc6112519bde23e",
         "last_affected_version": "5.10.16",
-        "last_modified": "2021-08-05",
+        "last_modified": "2021-08-24",
+        "nvd_text": "An information disclosure vulnerability exists in the ARM SIGPAGE functionality of Linux Kernel v5.4.66 and v5.4.54. The latest version (5.11-rc4) seems to still be vulnerable. A userland application can read the contents of the sigpage, which can leak kernel memory contents. An attacker can read a process\u2019s memory at a specific offset to trigger this vulnerability. This was fixed in kernel releases: 4.14.222 4.19.177 5.4.99 5.10.17 5.11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-21781",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-21781",
@@ -63395,9 +63435,10 @@
         "affected_versions": "v2.6.12-rc2 to v5.13-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: use correct lock to prevent UAF of hdev object",
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "e305509e678b3a4af2b3cfd410f409f7cdaabb52",
         "last_affected_version": "5.12.9",
-        "last_modified": "2021-08-16",
+        "last_modified": "2021-08-24",
         "nvd_text": "A use-after-free in function hci_sock_bound_ioctl() of the Linux kernel HCI subsystem was found in the way user calls ioct HCIUNBLOCKADDR or other way triggers race condition of the call hci_unregister_dev() together with one of the calls hci_sock_blacklist_add(), hci_sock_blacklist_del(), hci_get_conn_info(), hci_get_auth_info(). A privileged local user could use this flaw to crash the system or escalate their privileges on the system. This flaw affects the Linux kernel versions prior to 5.13-rc5.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3573",
@@ -63414,7 +63455,8 @@
         "cmt_msg": "nfc: fix NULL ptr dereference in llcp_sock_getname() after failed connect",
         "fixes": "4ac06a1e013cf5fdd963317ffd3b968560f33bba",
         "last_affected_version": "5.12.9",
-        "last_modified": "2021-06-11",
+        "last_modified": "2021-08-24",
+        "nvd_text": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2021-38208. Reason: This candidate is a reservation duplicate of CVE-2021-38208. Notes: All CVE users should reference CVE-2021-38208 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3587",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3587",
@@ -63422,7 +63464,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3587",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3587",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3587"
-        }
+        },
+        "rejected": true
     },
     "CVE-2021-3600": {
         "affected_versions": "v4.15-rc9 to v5.11",
@@ -63499,8 +63542,31 @@
     "CVE-2021-3635": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.4
+        },
+        "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "",
-        "last_modified": "2021-08-16",
+        "last_modified": "2021-08-24",
         "nvd_text": "A flaw was found in the Linux kernel netfilter implementation in versions prior to 5.5-rc7. A user with root (CAP_SYS_ADMIN) access is able to panic the system when issuing netfilter netflow commands.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3635",
@@ -63523,6 +63589,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3640",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3640",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3640"
+        }
+    },
+    "CVE-2021-3653": {
+        "affected_versions": "v2.6.30-rc1 to v5.14-rc7",
+        "breaks": "3d6368ef580a4dff012960834bba4e28d3c1430c",
+        "cmt_msg": "KVM: nSVM: avoid picking up unsupported bits from L2 in int_ctl (CVE-2021-3653)",
+        "fixes": "0f923e07124df069ba68d8bb12324398f4b6b709",
+        "last_affected_version": "5.13.11",
+        "last_modified": "2021-08-24",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3653",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3653",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3653",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3653",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3653",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3653"
         }
     },
     "CVE-2021-3655": {
@@ -63563,6 +63645,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3655",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3655",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3655"
+        }
+    },
+    "CVE-2021-3656": {
+        "affected_versions": "v4.13-rc1 to v5.14-rc7",
+        "breaks": "89c8a4984fc98e625517bfe5083342d77ee35811",
+        "cmt_msg": "KVM: nSVM: always intercept VMLOAD/VMSAVE when nested (CVE-2021-3656)",
+        "fixes": "c7dfa4009965a9b2d7b329ee970eb8da0d32f0bc",
+        "last_affected_version": "5.13.11",
+        "last_modified": "2021-08-24",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3656",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3656",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3656",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3656",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3656",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3656"
         }
     },
     "CVE-2021-3659": {
@@ -63675,6 +63773,22 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-37159"
         }
     },
+    "CVE-2021-3732": {
+        "affected_versions": "unk to v5.14-rc6",
+        "breaks": "",
+        "cmt_msg": "ovl: prevent private clone if bind mount is not allowed",
+        "fixes": "427215d85e8d1476da1a86b8d67aceb485eb3631",
+        "last_affected_version": "5.13.10",
+        "last_modified": "2021-08-24",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3732",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3732",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3732",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3732",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3732",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3732"
+        }
+    },
     "CVE-2021-37576": {
         "affected_versions": "v3.10-rc1 to v5.14-rc3",
         "breaks": "8e591cb7204739efa8e15967ea334eb367039dde",
@@ -63783,7 +63897,8 @@
         },
         "cwe": "Out-of-bounds Write",
         "fixes": "c4eb1f403243fc7bbb7de644db8587c03de36da6",
-        "last_modified": "2021-08-16",
+        "last_affected_version": "5.13.11",
+        "last_modified": "2021-08-24",
         "nvd_text": "In kernel/bpf/hashtab.c in the Linux kernel through 5.13.8, there is an integer overflow and out-of-bounds write when many elements are placed in a single bucket. NOTE: exploitation might be impractical without the CAP_SYS_ADMIN capability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38166",

@@ -1,47 +1,27 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 16Aug21 13:36
+## Last Update - 24Aug21 07:59
 
 ### **New CVEs Added:**
 
-[CVE-2021-3635](cves/CVE-2021-3635)  
-[CVE-2021-38160](cves/CVE-2021-38160)  
-[CVE-2021-38166](cves/CVE-2021-38166)  
-[CVE-2021-38198](cves/CVE-2021-38198)  
-[CVE-2021-38199](cves/CVE-2021-38199)  
-[CVE-2021-38200](cves/CVE-2021-38200)  
-[CVE-2021-38201](cves/CVE-2021-38201)  
-[CVE-2021-38202](cves/CVE-2021-38202)  
-[CVE-2021-38203](cves/CVE-2021-38203)  
-[CVE-2021-38204](cves/CVE-2021-38204)  
-[CVE-2021-38205](cves/CVE-2021-38205)  
-[CVE-2021-38206](cves/CVE-2021-38206)  
-[CVE-2021-38207](cves/CVE-2021-38207)  
-[CVE-2021-38208](cves/CVE-2021-38208)  
-[CVE-2021-38209](cves/CVE-2021-38209)  
+[CVE-2020-3702](cves/CVE-2020-3702)  
+[CVE-2021-3653](cves/CVE-2021-3653)  
+[CVE-2021-3656](cves/CVE-2021-3656)  
+[CVE-2021-3732](cves/CVE-2021-3732)  
 
 
 ### **New Versions Checked:**
 
-[4.14.244](streams/4.14)  
-[4.19.204](streams/4.19)  
-[4.4.281](streams/4.4)  
-[4.9.280](streams/4.9)  
-[5.10.59](streams/5.10)  
-[5.13.11](streams/5.13)  
-[5.14-rc6](streams/5.14-rc6)  
-[5.4.141](streams/5.4)  
+[5.10.60](streams/5.10)  
+[5.13.12](streams/5.13)  
+[5.4.142](streams/5.4)  
 
 
 ### **Updated CVEs:**
 
-[CVE-2021-22543](cves/CVE-2021-22543)  
-[CVE-2021-33624](cves/CVE-2021-33624)  
-[CVE-2021-29657](cves/CVE-2021-29657)  
-[CVE-2021-34556](cves/CVE-2021-34556)  
-[CVE-2021-35477](cves/CVE-2021-35477)  
+[CVE-2021-38166](cves/CVE-2021-38166)  
+[CVE-2021-21781](cves/CVE-2021-21781)  
 [CVE-2021-3573](cves/CVE-2021-3573)  
-[CVE-2021-3655](cves/CVE-2021-3655)  
-[CVE-2021-3679](cves/CVE-2021-3679)  
-[CVE-2021-37576](cves/CVE-2021-37576)  
+[CVE-2021-3587](cves/CVE-2021-3587)  
+[CVE-2021-3635](cves/CVE-2021-3635)  
