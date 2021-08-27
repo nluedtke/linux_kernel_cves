@@ -59554,7 +59554,8 @@
         },
         "cwe": "Cleartext Transmission of Sensitive Information",
         "fixes": "56c5485c9e444c2e85e11694b6c44f1338fc20fd",
-        "last_modified": "2021-08-24",
+        "last_affected_version": "5.10.60",
+        "last_modified": "2021-08-26",
         "nvd_text": "u'Specifically timed and handcrafted traffic can cause internal errors in a WLAN device that lead to improper layer 2 Wi-Fi encryption with a consequent possibility of information disclosure over the air for a discrete set of traffic' in Snapdragon Auto, Snapdragon Compute, Snapdragon Connectivity, Snapdragon Consumer IOT, Snapdragon Industrial IOT, Snapdragon Mobile, Snapdragon Voice & Music, Snapdragon Wearables, Snapdragon Wired Infrastructure and Networking in APQ8053, IPQ4019, IPQ8064, MSM8909W, MSM8996AU, QCA9531, QCN5502, QCS405, SDX20, SM6150, SM7150",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-3702",
@@ -60713,9 +60714,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.11-rc7",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ARM: ensure the signal page contains defined contents",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "Low",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "score": 3.3
+        },
+        "cwe": "Use of Uninitialized Resource",
         "fixes": "9c698bff66ab4914bb3d71da7dc6112519bde23e",
         "last_affected_version": "5.10.16",
-        "last_modified": "2021-08-24",
+        "last_modified": "2021-08-26",
         "nvd_text": "An information disclosure vulnerability exists in the ARM SIGPAGE functionality of Linux Kernel v5.4.66 and v5.4.54. The latest version (5.11-rc4) seems to still be vulnerable. A userland application can read the contents of the sigpage, which can leak kernel memory contents. An attacker can read a process\u2019s memory at a specific offset to trigger this vulnerability. This was fixed in kernel releases: 4.14.222 4.19.177 5.4.99 5.10.17 5.11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-21781",
@@ -63435,10 +63459,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.13-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: use correct lock to prevent UAF of hdev object",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.4
+        },
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "e305509e678b3a4af2b3cfd410f409f7cdaabb52",
         "last_affected_version": "5.12.9",
-        "last_modified": "2021-08-24",
+        "last_modified": "2021-08-26",
         "nvd_text": "A use-after-free in function hci_sock_bound_ioctl() of the Linux kernel HCI subsystem was found in the way user calls ioct HCIUNBLOCKADDR or other way triggers race condition of the call hci_unregister_dev() together with one of the calls hci_sock_blacklist_add(), hci_sock_blacklist_del(), hci_get_conn_info(), hci_get_auth_info(). A privileged local user could use this flaw to crash the system or escalate their privileges on the system. This flaw affects the Linux kernel versions prior to 5.13-rc5.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3573",
@@ -63597,7 +63643,7 @@
         "cmt_msg": "KVM: nSVM: avoid picking up unsupported bits from L2 in int_ctl (CVE-2021-3653)",
         "fixes": "0f923e07124df069ba68d8bb12324398f4b6b709",
         "last_affected_version": "5.13.11",
-        "last_modified": "2021-08-24",
+        "last_modified": "2021-08-26",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3653",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3653",
@@ -63653,7 +63699,7 @@
         "cmt_msg": "KVM: nSVM: always intercept VMLOAD/VMSAVE when nested (CVE-2021-3656)",
         "fixes": "c7dfa4009965a9b2d7b329ee970eb8da0d32f0bc",
         "last_affected_version": "5.13.11",
-        "last_modified": "2021-08-24",
+        "last_modified": "2021-08-26",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3656",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3656",
@@ -63789,6 +63835,20 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3732"
         }
     },
+    "CVE-2021-3739": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-08-26",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3739",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3739",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3739",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3739",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3739",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3739"
+        }
+    },
     "CVE-2021-37576": {
         "affected_versions": "v3.10-rc1 to v5.14-rc3",
         "breaks": "8e591cb7204739efa8e15967ea334eb367039dde",
@@ -63858,8 +63918,8 @@
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "d00d8da5869a2608e97cfede094dfc5e11462a46",
         "last_affected_version": "5.13.3",
-        "last_modified": "2021-08-16",
-        "nvd_text": "In drivers/char/virtio_console.c in the Linux kernel before 5.13.4, data corruption or loss can be triggered by an untrusted device that supplies a buf->len value exceeding the buffer size.",
+        "last_modified": "2021-08-26",
+        "nvd_text": "** DISPUTED ** In drivers/char/virtio_console.c in the Linux kernel before 5.13.4, data corruption or loss can be triggered by an untrusted device that supplies a buf->len value exceeding the buffer size. NOTE: the vendor indicates that the cited data corruption is not a vulnerability in any existing use case; the length validation was added solely for robustness in the face of anomalous host OS behavior.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38160",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38160",
