@@ -62871,7 +62871,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "9b00f1b78809309163dda2d044d9e94a3c0248a3",
         "last_affected_version": "5.11.1",
-        "last_modified": "2021-05-06",
+        "last_modified": "2021-09-04",
         "nvd_text": "The bpf verifier in the Linux kernel did not properly handle mod32 destination register truncation when the source register was known to be 0. A local attacker with the ability to load bpf programs could use this gain out-of-bounds reads in kernel memory leading to information disclosure (kernel memory), and possibly out-of-bounds writes that could potentially lead to code execution. This issue was addressed in the upstream kernel in commit 9b00f1b78809 (\"bpf: Fix truncation handling for mod32 dst reg wrt zero\") and in Linux stable kernels 5.11.2, 5.10.19, and 5.4.101.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3444",
@@ -63519,7 +63519,7 @@
         "cmt_msg": "bpf: Fix 32 bit src register truncation on div/mod",
         "fixes": "e88b2c6e5a4d9ce30d75391e4d950da74bb2bd90",
         "last_affected_version": "5.10",
-        "last_modified": "2021-06-24",
+        "last_modified": "2021-09-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3600",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3600",
@@ -63838,8 +63838,10 @@
     "CVE-2021-3739": {
         "affected_versions": "v4.20-rc1 to unk",
         "breaks": "a27a94c2b0c727517c17cf2ca3a9f7291caadfbc",
-        "fixes": "",
-        "last_modified": "2021-09-01",
+        "cmt_msg": "btrfs: fix NULL pointer dereference when deleting device by invalid id",
+        "fixes": "e4571b8c5e9ffa1e85c0c671995bd4dcc5c75091",
+        "last_affected_version": "5.13.13",
+        "last_modified": "2021-09-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3739",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3739",
@@ -63863,6 +63865,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3743",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3743",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3743"
+        }
+    },
+    "CVE-2021-3753": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "vt_kdsetmode: extend console locking",
+        "fixes": "2287a51ba822384834dafc1c798453375d1107c7",
+        "last_affected_version": "5.13.13",
+        "last_modified": "2021-09-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3753",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3753",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3753",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3753",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3753",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3753"
         }
     },
     "CVE-2021-37576": {
@@ -63903,6 +63921,20 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-37576",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-37576",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-37576"
+        }
+    },
+    "CVE-2021-3759": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-09-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3759",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3759",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3759",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3759",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3759",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3759"
         }
     },
     "CVE-2021-38160": {
@@ -64014,7 +64046,7 @@
         "cwe": "Unspecified",
         "fixes": "b1bd5cba3306691c771d558e94baa73e8b0b96b7",
         "last_affected_version": "5.12.10",
-        "last_modified": "2021-08-16",
+        "last_modified": "2021-09-04",
         "nvd_text": "arch/x86/kvm/mmu/paging_tmpl.h in the Linux kernel before 5.12.11 incorrectly computes the access permissions of a shadow page, leading to a missing guest protection page fault.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38198",
@@ -64463,6 +64495,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38209",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-38209",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-38209"
+        }
+    },
+    "CVE-2021-40490": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-09-04",
+        "nvd_text": "A race condition was discovered in ext4_write_inline_data_end in fs/ext4/inline.c in the ext4 subsystem in the Linux kernel through 5.13.13.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-40490",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-40490",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-40490",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-40490",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-40490",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-40490"
         }
     }
 }
