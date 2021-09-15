@@ -60352,6 +60352,20 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-0606"
         }
     },
+    "CVE-2021-0695": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-09-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0695",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0695",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-0695",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0695",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-0695",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-0695"
+        }
+    },
     "CVE-2021-20177": {
         "affected_versions": "v4.19-rc1 to v5.5-rc1",
         "breaks": "17266ee939849cb095ed7dd9edbec4162172226b",
@@ -62911,7 +62925,7 @@
         "cwe": "Observable Discrepancy",
         "fixes": "f5e81d1117501546b7be050c5fbafa6efd2c722c",
         "last_affected_version": "5.13.7",
-        "last_modified": "2021-08-16",
+        "last_modified": "2021-09-15",
         "nvd_text": "In the Linux kernel through 5.13.7, an unprivileged BPF program can obtain sensitive information from kernel memory via a Speculative Store Bypass side-channel attack because the protection mechanism neglects the possibility of uninitialized memory locations on the BPF stack.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-34556",
@@ -63404,7 +63418,7 @@
         "cwe": "Observable Discrepancy",
         "fixes": "f5e81d1117501546b7be050c5fbafa6efd2c722c",
         "last_affected_version": "5.13.7",
-        "last_modified": "2021-08-16",
+        "last_modified": "2021-09-15",
         "nvd_text": "In the Linux kernel through 5.13.7, an unprivileged BPF program can obtain sensitive information from kernel memory via a Speculative Store Bypass side-channel attack because a certain preempting store operation does not necessarily occur before a store operation that has an attacker-controlled value.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-35477",
@@ -63586,8 +63600,9 @@
         }
     },
     "CVE-2021-3635": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.5-rc7",
         "breaks": "",
+        "cmt_msg": "netfilter: nf_tables: fix flowtable list del corruption",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -63611,8 +63626,9 @@
             "score": 4.4
         },
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
-        "fixes": "",
-        "last_modified": "2021-08-24",
+        "fixes": "335178d5429c4cee61b58f4ac80688f556630818",
+        "last_affected_version": "5.4.13",
+        "last_modified": "2021-09-15",
         "nvd_text": "A flaw was found in the Linux kernel netfilter implementation in versions prior to 5.5-rc7. A user with root (CAP_SYS_ADMIN) access is able to panic the system when issuing netfilter netflow commands.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3635",
@@ -63726,10 +63742,11 @@
         }
     },
     "CVE-2021-3669": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.15-rc1",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-08-05",
+        "cmt_msg": "ipc: replace costly bailout check in sysvipc_find_ipc()",
+        "fixes": "20401d1058f3f841f35a594ac2fc1293710e55b9",
+        "last_modified": "2021-09-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3669",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3669",
@@ -63780,12 +63797,12 @@
         }
     },
     "CVE-2021-3715": {
-        "affected_versions": "unk to v5.6",
-        "breaks": "",
+        "affected_versions": "v3.18-rc1 to v5.6",
+        "breaks": "1109c00547fc66df45b9ff923544be4c1e1bec13",
         "cmt_msg": "net_sched: cls_route: remove the right filter from hashtable",
         "fixes": "ef299cc3fa1a9e1288665a9fdc8bff55629fd359",
         "last_affected_version": "5.5",
-        "last_modified": "2021-09-07",
+        "last_modified": "2021-09-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3715",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3715",
@@ -63852,12 +63869,12 @@
         }
     },
     "CVE-2021-3739": {
-        "affected_versions": "v4.20-rc1 to unk",
+        "affected_versions": "v4.20-rc1 to v5.15-rc1",
         "breaks": "a27a94c2b0c727517c17cf2ca3a9f7291caadfbc",
         "cmt_msg": "btrfs: fix NULL pointer dereference when deleting device by invalid id",
         "fixes": "e4571b8c5e9ffa1e85c0c671995bd4dcc5c75091",
         "last_affected_version": "5.13.13",
-        "last_modified": "2021-09-04",
+        "last_modified": "2021-09-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3739",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3739",
@@ -63883,13 +63900,27 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3743"
         }
     },
-    "CVE-2021-3753": {
+    "CVE-2021-3744": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-09-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3744",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3744",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3744",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3744",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3744",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3744"
+        }
+    },
+    "CVE-2021-3753": {
+        "affected_versions": "v2.6.12-rc2 to v5.15-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "vt_kdsetmode: extend console locking",
         "fixes": "2287a51ba822384834dafc1c798453375d1107c7",
         "last_affected_version": "5.13.13",
-        "last_modified": "2021-09-04",
+        "last_modified": "2021-09-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3753",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3753",
@@ -63940,10 +63971,11 @@
         }
     },
     "CVE-2021-3759": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-09-04",
+        "affected_versions": "v4.5-rc1 to v5.15-rc1",
+        "breaks": "a9bb7e620efdfd29b6d1c238041173e411670996",
+        "cmt_msg": "memcg: enable accounting of ipc resources",
+        "fixes": "18319498fdd4cdf8c1c2c48cd432863b1f915d6f",
+        "last_modified": "2021-09-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3759",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3759",
@@ -63951,6 +63983,34 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3759",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3759",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3759"
+        }
+    },
+    "CVE-2021-3764": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-09-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3764",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3764",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3764",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3764",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3764",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3764"
+        }
+    },
+    "CVE-2021-3772": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-09-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3772",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3772",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3772",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3772",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3772",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3772"
         }
     },
     "CVE-2021-38160": {
@@ -64514,10 +64574,35 @@
         }
     },
     "CVE-2021-40490": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.15-rc1",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-09-04",
+        "cmt_msg": "ext4: fix race writing to an inline_data file while its xattrs are changing",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
+        "fixes": "a54c4613dac1500b40e4ab55199f7c51f028e848",
+        "last_affected_version": "5.13.14",
+        "last_modified": "2021-09-15",
         "nvd_text": "A race condition was discovered in ext4_write_inline_data_end in fs/ext4/inline.c in the ext4 subsystem in the Linux kernel through 5.13.13.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-40490",
