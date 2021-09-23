@@ -55729,8 +55729,9 @@
         }
     },
     "CVE-2020-16119": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.15-rc2",
         "breaks": "",
+        "cmt_msg": "dccp: don't duplicate ccid when cloning dccp sock",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -55754,8 +55755,9 @@
             "score": 7.8
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2021-02-01",
+        "fixes": "d9ea761fdd197351890418acd462c51f241014a7",
+        "last_affected_version": "5.10.67",
+        "last_modified": "2021-09-22",
         "nvd_text": "Use-after-free vulnerability in the Linux kernel exploitable by a local attacker due to reuse of a DCCP socket with an attached dccps_hc_tx_ccid object as a listener after being released. Fixed in Ubuntu Linux kernel 5.4.0-51.56, 5.3.0-68.63, 4.15.0-121.123, 4.4.0-193.224, 3.13.0.182.191 and 3.2.0-149.196.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16119",
@@ -59555,7 +59557,7 @@
         "cwe": "Cleartext Transmission of Sensitive Information",
         "fixes": "56c5485c9e444c2e85e11694b6c44f1338fc20fd",
         "last_affected_version": "5.10.60",
-        "last_modified": "2021-08-26",
+        "last_modified": "2021-09-22",
         "nvd_text": "u'Specifically timed and handcrafted traffic can cause internal errors in a WLAN device that lead to improper layer 2 Wi-Fi encryption with a consequent possibility of information disclosure over the air for a discrete set of traffic' in Snapdragon Auto, Snapdragon Compute, Snapdragon Connectivity, Snapdragon Consumer IOT, Snapdragon Industrial IOT, Snapdragon Mobile, Snapdragon Voice & Music, Snapdragon Wearables, Snapdragon Wired Infrastructure and Networking in APQ8053, IPQ4019, IPQ8064, MSM8909W, MSM8996AU, QCA9531, QCN5502, QCS405, SDX20, SM6150, SM7150",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-3702",
@@ -62925,7 +62927,7 @@
         "cwe": "Observable Discrepancy",
         "fixes": "f5e81d1117501546b7be050c5fbafa6efd2c722c",
         "last_affected_version": "5.13.7",
-        "last_modified": "2021-09-15",
+        "last_modified": "2021-09-22",
         "nvd_text": "In the Linux kernel through 5.13.7, an unprivileged BPF program can obtain sensitive information from kernel memory via a Speculative Store Bypass side-channel attack because the protection mechanism neglects the possibility of uninitialized memory locations on the BPF stack.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-34556",
@@ -63418,7 +63420,7 @@
         "cwe": "Observable Discrepancy",
         "fixes": "f5e81d1117501546b7be050c5fbafa6efd2c722c",
         "last_affected_version": "5.13.7",
-        "last_modified": "2021-09-15",
+        "last_modified": "2021-09-22",
         "nvd_text": "In the Linux kernel through 5.13.7, an unprivileged BPF program can obtain sensitive information from kernel memory via a Speculative Store Bypass side-channel attack because a certain preempting store operation does not necessarily occur before a store operation that has an attacker-controlled value.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-35477",
@@ -63912,6 +63914,20 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3744",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3744",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3744"
+        }
+    },
+    "CVE-2021-3752": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-09-22",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3752",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3752",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3752",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3752",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3752",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3752"
         }
     },
     "CVE-2021-3753": {
@@ -64573,9 +64589,24 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-38209"
         }
     },
-    "CVE-2021-40490": {
-        "affected_versions": "unk to v5.15-rc1",
+    "CVE-2021-38300": {
+        "affected_versions": "unk to unk",
         "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-09-22",
+        "nvd_text": "arch/mips/net/bpf_jit.c in the Linux kernel through 5.14.6 can generate undesirable machine code when transforming unprivileged cBPF programs, allowing execution of arbitrary code within the kernel context. This occurs because conditional branches can exceed the 128 KB limit of the MIPS architecture.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38300",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-38300",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-38300",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38300",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-38300",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-38300"
+        }
+    },
+    "CVE-2021-40490": {
+        "affected_versions": "v3.8-rc1 to v5.15-rc1",
+        "breaks": "f19d5870cbf72d4cb2a8e1f749dff97af99b071e",
         "cmt_msg": "ext4: fix race writing to an inline_data file while its xattrs are changing",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -64602,7 +64633,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "a54c4613dac1500b40e4ab55199f7c51f028e848",
         "last_affected_version": "5.13.14",
-        "last_modified": "2021-09-15",
+        "last_modified": "2021-09-22",
         "nvd_text": "A race condition was discovered in ext4_write_inline_data_end in fs/ext4/inline.c in the ext4 subsystem in the Linux kernel through 5.13.13.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-40490",
@@ -64611,6 +64642,23 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-40490",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-40490",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-40490"
+        }
+    },
+    "CVE-2021-41073": {
+        "affected_versions": "v5.10-rc1 to v5.15-rc2",
+        "breaks": "4017eb91a9e79bbb5d14868c207436f4a6a0af50",
+        "cmt_msg": "io_uring: ensure symmetry in handling iter types in loop_rw_iter()",
+        "fixes": "16c8d2df7ec0eed31b7d3b61cb13206a7fb930cc",
+        "last_affected_version": "5.10.67",
+        "last_modified": "2021-09-22",
+        "nvd_text": "loop_rw_iter in fs/io_uring.c in the Linux kernel 5.10 through 5.14.6 allows local users to gain privileges by using IORING_OP_PROVIDE_BUFFERS to trigger a free of a kernel buffer, as demonstrated by using /proc/<pid>/maps for exploitation.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-41073",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-41073",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-41073",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-41073",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-41073",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-41073"
         }
     }
 }
