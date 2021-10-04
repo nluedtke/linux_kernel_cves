@@ -48451,8 +48451,9 @@
         }
     },
     "CVE-2019-19449": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.10-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "f2fs: fix to do sanity check on segment/section count",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -48476,8 +48477,8 @@
             "score": "7.8"
         },
         "cwe": "Out-of-bounds Read",
-        "fixes": "",
-        "last_modified": "2019-12-11",
+        "fixes": "3a22e9ac71585bcb7667e44641f1bbb25295f0ce",
+        "last_modified": "2021-10-04",
         "nvd_text": "In the Linux kernel 5.0.21, mounting a crafted f2fs filesystem image can lead to slab-out-of-bounds read access in f2fs_build_segment_manager in fs/f2fs/segment.c, related to init_min_max_mtime in fs/f2fs/segment.c (because the second argument to get_seg_entry is not validated).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19449",
@@ -59529,8 +59530,8 @@
         }
     },
     "CVE-2020-3702": {
-        "affected_versions": "unk to v5.12-rc1-dontuse",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc1-dontuse",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ath: Use safer key clearing with key cache entries",
         "cvss2": {
             "Access Complexity": "Low",
@@ -59557,7 +59558,7 @@
         "cwe": "Cleartext Transmission of Sensitive Information",
         "fixes": "56c5485c9e444c2e85e11694b6c44f1338fc20fd",
         "last_affected_version": "5.10.60",
-        "last_modified": "2021-09-22",
+        "last_modified": "2021-10-04",
         "nvd_text": "u'Specifically timed and handcrafted traffic can cause internal errors in a WLAN device that lead to improper layer 2 Wi-Fi encryption with a consequent possibility of information disclosure over the air for a discrete set of traffic' in Snapdragon Auto, Snapdragon Compute, Snapdragon Connectivity, Snapdragon Consumer IOT, Snapdragon Industrial IOT, Snapdragon Mobile, Snapdragon Voice & Music, Snapdragon Wearables, Snapdragon Wired Infrastructure and Networking in APQ8053, IPQ4019, IPQ8064, MSM8909W, MSM8996AU, QCA9531, QCN5502, QCS405, SDX20, SM6150, SM7150",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-3702",
@@ -60727,11 +60728,12 @@
         }
     },
     "CVE-2021-20317": {
-        "affected_versions": "unk to v5.4-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.4-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "lib/timerqueue: Rely on rbtree semantics for next timer",
         "fixes": "511885d7061eda3eb1faf3f57dcc936ff75863f1",
-        "last_modified": "2021-09-27",
+        "last_modified": "2021-10-04",
+        "nvd_text": "A flaw was found in the Linux kernel. A corrupted timer tree caused the task wakeup to be missing in the timerqueue_add function in lib/timerqueue.c. This flaw allows a local attacker with special user privileges to cause a denial of service, slowing and eventually stopping the system while running OSP.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20317",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20317",
@@ -63674,9 +63676,11 @@
         "affected_versions": "v2.6.30-rc1 to v5.14-rc7",
         "breaks": "3d6368ef580a4dff012960834bba4e28d3c1430c",
         "cmt_msg": "KVM: nSVM: avoid picking up unsupported bits from L2 in int_ctl (CVE-2021-3653)",
+        "cwe": "Missing Authorization",
         "fixes": "0f923e07124df069ba68d8bb12324398f4b6b709",
         "last_affected_version": "5.13.11",
-        "last_modified": "2021-08-26",
+        "last_modified": "2021-10-04",
+        "nvd_text": "A flaw was found in the KVM's AMD code for supporting SVM nested virtualization. The flaw occurs when processing the VMCB (virtual machine control block) provided by the L1 guest to spawn/handle a nested guest (L2). Due to improper validation of the \"int_ctl\" field, this issue could allow a malicious L1 to enable AVIC support (Advanced Virtual Interrupt Controller) for the L2 guest. As a result, the L2 guest would be allowed to read/write physical pages of the host, resulting in a crash of the entire system, leak of sensitive data or potential guest-to-host escape. This flaw affects Linux kernel versions prior to 5.14-rc7.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3653",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3653",
@@ -63918,10 +63922,10 @@
         }
     },
     "CVE-2021-3744": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.12-rc1 to unk",
+        "breaks": "36cf515b9bbe298e1ce7384620f0d4ec45ad3328",
         "fixes": "",
-        "last_modified": "2021-09-15",
+        "last_modified": "2021-10-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3744",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3744",
@@ -64017,10 +64021,10 @@
         }
     },
     "CVE-2021-3764": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.12-rc1 to unk",
+        "breaks": "36cf515b9bbe298e1ce7384620f0d4ec45ad3328",
         "fixes": "",
-        "last_modified": "2021-09-15",
+        "last_modified": "2021-10-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3764",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3764",
@@ -64605,10 +64609,34 @@
         }
     },
     "CVE-2021-38300": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.15-rc4",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-09-22",
+        "cmt_msg": "bpf, mips: Validate conditional branch offsets",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Unspecified",
+        "fixes": "37cb28ec7d3a36a5bace7063a3dba633ab110f8b",
+        "last_modified": "2021-10-04",
         "nvd_text": "arch/mips/net/bpf_jit.c in the Linux kernel through 5.14.6 can generate undesirable machine code when transforming unprivileged cBPF programs, allowing execution of arbitrary code within the kernel context. This occurs because conditional branches can exceed the 128 KB limit of the MIPS architecture.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38300",
@@ -64663,9 +64691,32 @@
         "affected_versions": "v5.10-rc1 to v5.15-rc2",
         "breaks": "4017eb91a9e79bbb5d14868c207436f4a6a0af50",
         "cmt_msg": "io_uring: ensure symmetry in handling iter types in loop_rw_iter()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Privilege Management",
         "fixes": "16c8d2df7ec0eed31b7d3b61cb13206a7fb930cc",
         "last_affected_version": "5.10.67",
-        "last_modified": "2021-09-22",
+        "last_modified": "2021-10-04",
         "nvd_text": "loop_rw_iter in fs/io_uring.c in the Linux kernel 5.10 through 5.14.6 allows local users to gain privileges by using IORING_OP_PROVIDE_BUFFERS to trigger a free of a kernel buffer, as demonstrated by using /proc/<pid>/maps for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-41073",
@@ -64674,6 +64725,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-41073",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-41073",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-41073"
+        }
+    },
+    "CVE-2021-41864": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-10-04",
+        "nvd_text": "prealloc_elems_and_freelist in kernel/bpf/stackmap.c in the Linux kernel through 5.14.9 allows unprivileged users to trigger an eBPF multiplication integer overflow with a resultant out-of-bounds write.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-41864",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-41864",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-41864",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-41864",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-41864",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-41864"
         }
     }
 }
