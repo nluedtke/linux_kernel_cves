@@ -55757,8 +55757,8 @@
         },
         "cwe": "Use After Free",
         "fixes": "d9ea761fdd197351890418acd462c51f241014a7",
-        "last_affected_version": "5.10.67",
-        "last_modified": "2021-09-22",
+        "last_affected_version": "5.14.6",
+        "last_modified": "2021-10-06",
         "nvd_text": "Use-after-free vulnerability in the Linux kernel exploitable by a local attacker due to reuse of a DCCP socket with an attached dccps_hc_tx_ccid object as a listener after being released. Fixed in Ubuntu Linux kernel 5.4.0-51.56, 5.3.0-68.63, 4.15.0-121.123, 4.4.0-193.224, 3.13.0.182.191 and 3.2.0-149.196.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16119",
@@ -60731,8 +60731,31 @@
         "affected_versions": "v2.6.12-rc2 to v5.4-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "lib/timerqueue: Rely on rbtree semantics for next timer",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.4
+        },
+        "cwe": "Improper Initialization",
         "fixes": "511885d7061eda3eb1faf3f57dcc936ff75863f1",
-        "last_modified": "2021-10-04",
+        "last_modified": "2021-10-06",
         "nvd_text": "A flaw was found in the Linux kernel. A corrupted timer tree caused the task wakeup to be missing in the timerqueue_add function in lib/timerqueue.c. This flaw allows a local attacker with special user privileges to cause a denial of service, slowing and eventually stopping the system while running OSP.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20317",
@@ -63862,7 +63885,7 @@
         "cwe": "Double Free",
         "fixes": "a6ecfb39ba9d7316057cea823b196b734f6b18ca",
         "last_affected_version": "5.13.5",
-        "last_modified": "2021-08-05",
+        "last_modified": "2021-10-06",
         "nvd_text": "hso_free_net_device in drivers/net/usb/hso.c in the Linux kernel through 5.13.4 calls unregister_netdev without checking for the NETREG_REGISTERED state, leading to a use-after-free and a double free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-37159",
@@ -63894,8 +63917,8 @@
         "breaks": "a27a94c2b0c727517c17cf2ca3a9f7291caadfbc",
         "cmt_msg": "btrfs: fix NULL pointer dereference when deleting device by invalid id",
         "fixes": "e4571b8c5e9ffa1e85c0c671995bd4dcc5c75091",
-        "last_affected_version": "5.13.13",
-        "last_modified": "2021-09-15",
+        "last_affected_version": "5.14.0",
+        "last_modified": "2021-10-06",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3739",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3739",
@@ -63954,8 +63977,8 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "vt_kdsetmode: extend console locking",
         "fixes": "2287a51ba822384834dafc1c798453375d1107c7",
-        "last_affected_version": "5.13.13",
-        "last_modified": "2021-09-15",
+        "last_affected_version": "5.14.0",
+        "last_modified": "2021-10-06",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3753",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3753",
@@ -64675,8 +64698,8 @@
         },
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "a54c4613dac1500b40e4ab55199f7c51f028e848",
-        "last_affected_version": "5.13.14",
-        "last_modified": "2021-09-22",
+        "last_affected_version": "5.14.1",
+        "last_modified": "2021-10-06",
         "nvd_text": "A race condition was discovered in ext4_write_inline_data_end in fs/ext4/inline.c in the ext4 subsystem in the Linux kernel through 5.13.13.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-40490",
@@ -64715,8 +64738,8 @@
         },
         "cwe": "Improper Privilege Management",
         "fixes": "16c8d2df7ec0eed31b7d3b61cb13206a7fb930cc",
-        "last_affected_version": "5.10.67",
-        "last_modified": "2021-10-04",
+        "last_affected_version": "5.14.6",
+        "last_modified": "2021-10-06",
         "nvd_text": "loop_rw_iter in fs/io_uring.c in the Linux kernel 5.10 through 5.14.6 allows local users to gain privileges by using IORING_OP_PROVIDE_BUFFERS to trigger a free of a kernel buffer, as demonstrated by using /proc/<pid>/maps for exploitation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-41073",
@@ -64728,10 +64751,10 @@
         }
     },
     "CVE-2021-41864": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-10-04",
+        "affected_versions": "v4.6-rc1 to unk",
+        "breaks": "557c0c6e7df8e14a46bd7560d193fa5bbc00a858",
+        "fixes": "30e29a9a2bc6a4888335a6ede968b75cd329657a",
+        "last_modified": "2021-10-06",
         "nvd_text": "prealloc_elems_and_freelist in kernel/bpf/stackmap.c in the Linux kernel through 5.14.9 allows unprivileged users to trigger an eBPF multiplication integer overflow with a resultant out-of-bounds write.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-41864",
@@ -64743,12 +64766,12 @@
         }
     },
     "CVE-2021-42008": {
-        "affected_versions": "unk to v5.14-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.14-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "net: 6pack: fix slab-out-of-bounds in decode_data",
         "fixes": "19d1532a187669ce86d5a2696eb7275310070793",
         "last_affected_version": "5.13.12",
-        "last_modified": "2021-10-05",
+        "last_modified": "2021-10-06",
         "nvd_text": "The decode_data function in drivers/net/hamradio/6pack.c in the Linux kernel before 5.13.13 has a slab out-of-bounds write. Input from a process that has the CAP_NET_ADMIN capability can lead to root access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-42008",
