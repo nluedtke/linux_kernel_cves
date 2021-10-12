@@ -624,6 +624,7 @@ CVEs fixed in 4.19.164:
   CVE-2020-27815: c7e31b2fecfe0ebd5bd6a8274b2fbfb9c9401738 jfs: Fix array index bounds check in dbAdjTree
   CVE-2020-29568: 9039eb22f99545fa80a5897496452cf9962e3289 xen/xenbus: Allow watches discard events before queueing
   CVE-2020-29569: 014ee1c7d184acb8986152014a570ba7c69d3616 xen-blkback: set ring->xenblkd to NULL after kthread_stop()
+  CVE-2021-0938: b207caff4176e3a6ba273243da2db2e595e4aad2 compiler.h: fix barrier_data() on clang
 
 CVEs fixed in 4.19.166:
   CVE-2020-36158: b35029a1f24fe511af750537e6565dcf68e5c862 mwifiex: Fix possible buffer overflows in mwifiex_cmd_802_11_ad_hoc_start
@@ -676,6 +677,7 @@ CVEs fixed in 4.19.184:
   CVE-2021-31916: 76aa61c55279fdaa8d428236ba8834edf313b372 dm ioctl: fix out of bounds array access when no devices
 
 CVEs fixed in 4.19.185:
+  CVE-2021-0941: 8c1a77ae15ce70a72f26f4bb83c50f769011220c bpf: Remove MTU check in __bpf_skb_max_len
   CVE-2021-3483: 89a2c28a3b67c7d918218f57e4bb7b591f7e5d0f firewire: nosy: Fix a use-after-free bug in nosy_ioctl()
 
 CVEs fixed in 4.19.186:
@@ -689,6 +691,7 @@ CVEs fixed in 4.19.187:
   CVE-2021-3659: c166c0f5311dc9de687b8985574a5ee5166d367e net: mac802154: Fix general protection fault
 
 CVEs fixed in 4.19.188:
+  CVE-2021-0937: 12ec80252edefff00809d473a47e5f89c7485499 netfilter: x_tables: fix compat match/target pad out-of-bound write
   CVE-2021-22555: 12ec80252edefff00809d473a47e5f89c7485499 netfilter: x_tables: fix compat match/target pad out-of-bound write
 
 CVEs fixed in 4.19.189:
@@ -760,9 +763,15 @@ CVEs fixed in 4.19.207:
   CVE-2021-34556: 91cdb5b36234e6af69d6280f1510e4453707a2b8 bpf: Introduce BPF nospec instruction for mitigating Spectre v4
   CVE-2021-35477: 91cdb5b36234e6af69d6280f1510e4453707a2b8 bpf: Introduce BPF nospec instruction for mitigating Spectre v4
   CVE-2021-40490: c481607ba522e31e6ed01efefc19cc1d0e0a46fa ext4: fix race writing to an inline_data file while its xattrs are changing
+  CVE-2021-42252: 9c8891b638319ddba9cfa330247922cd960c95b0 soc: aspeed: lpc-ctrl: Fix boundary check for mmap
 
 CVEs fixed in 4.19.209:
   CVE-2021-37159: f6cf22a1ef49f8e131f99c3f5fd80ab6b23a2d21 usb: hso: fix error handling code of hso_create_net_device
+  CVE-2021-3744: 710be7c42d2f724869e5b18b21998ceddaffc4a9 crypto: ccp - fix resource leaks in ccp_run_aes_gcm_cmd()
+  CVE-2021-3764: 710be7c42d2f724869e5b18b21998ceddaffc4a9 crypto: ccp - fix resource leaks in ccp_run_aes_gcm_cmd()
+
+CVEs fixed in 4.19.210:
+  CVE-2021-20317: b9a1ac8e7c03fd09992352c7fb1a61cbbb9ad52b lib/timerqueue: Rely on rbtree semantics for next timer
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -848,8 +857,8 @@ Outstanding CVEs:
   CVE-2021-0399: (unk)  
   CVE-2021-0606: (unk)  
   CVE-2021-0695: (unk)  
+  CVE-2021-0936: (unk)  
   CVE-2021-20177: (unk) netfilter: add and use nf_hook_slow_list() 
-  CVE-2021-20317: (unk) lib/timerqueue: Rely on rbtree semantics for next timer 
   CVE-2021-26934: (unk)  
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
@@ -857,10 +866,8 @@ Outstanding CVEs:
   CVE-2021-3542: (unk)  
   CVE-2021-3640: (unk)  
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
-  CVE-2021-3744: (unk)  
   CVE-2021-3752: (unk)  
   CVE-2021-3759: (unk) memcg: enable accounting of ipc resources 
-  CVE-2021-3764: (unk)  
   CVE-2021-3772: (unk)  
   CVE-2021-38300: (unk) bpf, mips: Validate conditional branch offsets 
-  CVE-2021-41864: (unk)  
+  CVE-2021-41864: (unk) bpf: Fix integer overflow in prealloc_elems_and_freelist() 

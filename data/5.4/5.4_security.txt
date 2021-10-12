@@ -303,6 +303,9 @@ CVEs fixed in 5.4.83:
   CVE-2020-29660: 35ee9ac513280f46eeb1196bac82ed5320380412 tty: Fix ->session locking
   CVE-2020-29661: c536ecd4856084604701b95bd7e3fb15f05634bf tty: Fix ->pgrp locking in tiocspgrp()
 
+CVEs fixed in 5.4.84:
+  CVE-2021-0938: c2c5dc84ac51da90cadcb12554c69bdd5ac7aeeb compiler.h: fix barrier_data() on clang
+
 CVEs fixed in 5.4.86:
   CVE-2020-27815: cbeb61258186978c26f9ee738c86fe4812cc27af jfs: Fix array index bounds check in dbAdjTree
   CVE-2020-29568: eac0c12e329d489ff36e85fed5ce2a8606e3124d xen/xenbus: Allow watches discard events before queueing
@@ -370,6 +373,7 @@ CVEs fixed in 5.4.109:
   CVE-2021-31916: e6587d142d0214eb466f9978e25f0575c19b1ea0 dm ioctl: fix out of bounds array access when no devices
 
 CVEs fixed in 5.4.110:
+  CVE-2021-0941: 42c83e3bca434d9f63c58f9cbf2881e635679fee bpf: Remove MTU check in __bpf_skb_max_len
   CVE-2021-3483: 5ecfad1efbc31ab913f16ed60f0efff301aebfca firewire: nosy: Fix a use-after-free bug in nosy_ioctl()
 
 CVEs fixed in 5.4.111:
@@ -383,6 +387,7 @@ CVEs fixed in 5.4.112:
   CVE-2021-3659: 38ea2b3ed00fb4632a706f2c796d6aa4a884f573 net: mac802154: Fix general protection fault
 
 CVEs fixed in 5.4.113:
+  CVE-2021-0937: cc59b872f2e1995b8cc819b9445c1198bfe83b2d netfilter: x_tables: fix compat match/target pad out-of-bound write
   CVE-2021-22555: cc59b872f2e1995b8cc819b9445c1198bfe83b2d netfilter: x_tables: fix compat match/target pad out-of-bound write
 
 CVEs fixed in 5.4.114:
@@ -474,6 +479,12 @@ CVEs fixed in 5.4.146:
 
 CVEs fixed in 5.4.148:
   CVE-2020-16119: 5ab04a4ffed02f66e8e6310ba8261a43d1572343 dccp: don't duplicate ccid when cloning dccp sock
+  CVE-2021-42252: 2712f29c44f18db826c7e093915a727b6f3a20e4 soc: aspeed: lpc-ctrl: Fix boundary check for mmap
+
+CVEs fixed in 5.4.151:
+  CVE-2021-37159: fe57d53dd91d7823f1ceef5ea8e9458a4aeb47fa usb: hso: fix error handling code of hso_create_net_device
+  CVE-2021-3744: 24f3d2609114f1e1f6b487b511ce5fa36f21e0ae crypto: ccp - fix resource leaks in ccp_run_aes_gcm_cmd()
+  CVE-2021-3764: 24f3d2609114f1e1f6b487b511ce5fa36f21e0ae crypto: ccp - fix resource leaks in ccp_run_aes_gcm_cmd()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -538,6 +549,7 @@ Outstanding CVEs:
   CVE-2021-0399: (unk)  
   CVE-2021-0606: (unk)  
   CVE-2021-0695: (unk)  
+  CVE-2021-0936: (unk)  
   CVE-2021-20177: (unk) netfilter: add and use nf_hook_slow_list() 
   CVE-2021-20239: (unk) net: pass a sockptr_t into ->setsockopt 
   CVE-2021-26934: (unk)  
@@ -547,11 +559,8 @@ Outstanding CVEs:
   CVE-2021-3542: (unk)  
   CVE-2021-3640: (unk)  
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
-  CVE-2021-37159: (unk) usb: hso: fix error handling code of hso_create_net_device 
-  CVE-2021-3744: (unk)  
   CVE-2021-3752: (unk)  
   CVE-2021-3759: (unk) memcg: enable accounting of ipc resources 
-  CVE-2021-3764: (unk)  
   CVE-2021-3772: (unk)  
   CVE-2021-38300: (unk) bpf, mips: Validate conditional branch offsets 
-  CVE-2021-41864: (unk)  
+  CVE-2021-41864: (unk) bpf: Fix integer overflow in prealloc_elems_and_freelist() 
