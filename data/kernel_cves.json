@@ -55730,8 +55730,8 @@
         }
     },
     "CVE-2020-16119": {
-        "affected_versions": "unk to v5.15-rc2",
-        "breaks": "",
+        "affected_versions": "v4.17-rc7 to v5.15-rc2",
+        "breaks": "2677d20677314101293e6da0094ede7b5526d2b1",
         "cmt_msg": "dccp: don't duplicate ccid when cloning dccp sock",
         "cvss2": {
             "Access Complexity": "Low",
@@ -55758,7 +55758,7 @@
         "cwe": "Use After Free",
         "fixes": "d9ea761fdd197351890418acd462c51f241014a7",
         "last_affected_version": "5.14.6",
-        "last_modified": "2021-10-06",
+        "last_modified": "2021-10-19",
         "nvd_text": "Use-after-free vulnerability in the Linux kernel exploitable by a local attacker due to reuse of a DCCP socket with an attached dccps_hc_tx_ccid object as a listener after being released. Fixed in Ubuntu Linux kernel 5.4.0-51.56, 5.3.0-68.63, 4.15.0-121.123, 4.4.0-193.224, 3.13.0.182.191 and 3.2.0-149.196.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-16119",
@@ -58786,7 +58786,7 @@
         "cwe": "Incorrect Authorization",
         "fixes": "17839856fd588f4ab6b789f482ed3ffd7c403e1f",
         "last_affected_version": "5.7.2",
-        "last_modified": "2021-05-03",
+        "last_modified": "2021-10-19",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.7.3, related to mm/gup.c and mm/huge_memory.c. The get_user_pages (aka gup) implementation, when used for a copy-on-write page, does not properly consider the semantics of read operations and therefore can grant unintended write access, aka CID-17839856fd58.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-29374",
@@ -60867,6 +60867,54 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20317",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-20317",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-20317"
+        }
+    },
+    "CVE-2021-20320": {
+        "affected_versions": "unk to v5.15-rc3",
+        "breaks": "",
+        "cmt_msg": "s390/bpf: Fix optimizing out zero-extensions",
+        "fixes": "db7bee653859ef7179be933e7d1384644f795f26",
+        "last_affected_version": "5.14.6",
+        "last_modified": "2021-10-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20320",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20320",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-20320",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20320",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-20320",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-20320"
+        }
+    },
+    "CVE-2021-20321": {
+        "affected_versions": "unk to v5.15-rc5",
+        "breaks": "",
+        "cmt_msg": "ovl: fix missing negative dentry check in ovl_rename()",
+        "fixes": "a295aef603e109a47af355477326bd41151765b6",
+        "last_affected_version": "5.14.11",
+        "last_modified": "2021-10-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20321",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20321",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-20321",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20321",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-20321",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-20321"
+        }
+    },
+    "CVE-2021-20322": {
+        "affected_versions": "unk to v5.15-rc1",
+        "breaks": "",
+        "cmt_msg": "ipv6: make exception cache less predictible",
+        "fixes": "a00df2caffed3883c341d5685f830434312e4a43",
+        "last_affected_version": "5.14.3",
+        "last_modified": "2021-10-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20322",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20322",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-20322",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-20322",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-20322",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-20322"
         }
     },
     "CVE-2021-21781": {
@@ -63161,6 +63209,22 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3483"
         }
     },
+    "CVE-2021-34866": {
+        "affected_versions": "unk to v5.14",
+        "breaks": "",
+        "cmt_msg": "bpf: Fix ringbuf helper function compatibility",
+        "fixes": "5b029a32cfe4600f5e10e36b41778506b90fd4de",
+        "last_affected_version": "5.13",
+        "last_modified": "2021-10-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-34866",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-34866",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-34866",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-34866",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-34866",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-34866"
+        }
+    },
     "CVE-2021-3489": {
         "affected_versions": "v5.8-rc1 to v5.13-rc4",
         "breaks": "457f44363a8894135c85b7a9afd2bd8196db24ab",
@@ -64789,7 +64853,7 @@
         "cwe": "Unspecified",
         "fixes": "37cb28ec7d3a36a5bace7063a3dba633ab110f8b",
         "last_affected_version": "5.14.9",
-        "last_modified": "2021-10-12",
+        "last_modified": "2021-10-19",
         "nvd_text": "arch/mips/net/bpf_jit.c in the Linux kernel before 5.4.10 can generate undesirable machine code when transforming unprivileged cBPF programs, allowing execution of arbitrary code within the kernel context. This occurs because conditional branches can exceed the 128 KB limit of the MIPS architecture.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38300",
@@ -64798,6 +64862,20 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-38300",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-38300",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-38300"
+        }
+    },
+    "CVE-2021-3847": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-10-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3847",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3847",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3847",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3847",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3847",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3847"
         }
     },
     "CVE-2021-40490": {
@@ -64908,7 +64986,8 @@
         },
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "30e29a9a2bc6a4888335a6ede968b75cd329657a",
-        "last_modified": "2021-10-12",
+        "last_affected_version": "5.14.11",
+        "last_modified": "2021-10-19",
         "nvd_text": "prealloc_elems_and_freelist in kernel/bpf/stackmap.c in the Linux kernel through 5.14.9 allows unprivileged users to trigger an eBPF multiplication integer overflow with a resultant out-of-bounds write.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-41864",
@@ -64923,9 +65002,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.14-rc7",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "net: 6pack: fix slab-out-of-bounds in decode_data",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "19d1532a187669ce86d5a2696eb7275310070793",
         "last_affected_version": "5.13.12",
-        "last_modified": "2021-10-06",
+        "last_modified": "2021-10-19",
         "nvd_text": "The decode_data function in drivers/net/hamradio/6pack.c in the Linux kernel before 5.13.13 has a slab out-of-bounds write. Input from a process that has the CAP_NET_ADMIN capability can lead to root access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-42008",
@@ -64940,9 +65042,32 @@
         "affected_versions": "unk to v5.15-rc1",
         "breaks": "",
         "cmt_msg": "soc: aspeed: lpc-ctrl: Fix boundary check for mmap",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Unspecified",
         "fixes": "b49a0e69a7b1a68c8d3f64097d06dabb770fec96",
         "last_affected_version": "5.14.5",
-        "last_modified": "2021-10-12",
+        "last_modified": "2021-10-19",
         "nvd_text": "An issue was discovered in aspeed_lpc_ctrl_mmap in drivers/soc/aspeed/aspeed-lpc-ctrl.c in the Linux kernel before 5.14.6. Local attackers able to access the Aspeed LPC control interface could overwrite memory in the kernel and potentially execute privileges, aka CID-b49a0e69a7b1. This occurs because a certain comparison uses values that are not memory sizes.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-42252",
