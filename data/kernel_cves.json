@@ -30048,6 +30048,8 @@
         "cmt_msg": "waitid(): Add missing access_ok() checks",
         "fixes": "96ca579a1ecc943b75beba58bebb0356f6cc4b51",
         "last_affected_version": "4.13.6",
+        "last_modified": "2021-11-04",
+        "nvd_text": "Insufficient data validation in waitid allowed an user to escape sandboxes on Linux.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-5123",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-5123",
@@ -58148,7 +58150,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2020-12-04",
+        "last_modified": "2021-11-04",
+        "nvd_text": "A vulnerability was found in Linux kernel, where a use-after-frees in nouveau's postclose() handler could happen if removing device (that is not common to remove video card physically without power-off, but same happens if \"unbind\" the driver).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27820",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27820",
@@ -60393,6 +60396,51 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-0695"
         }
     },
+    "CVE-2021-0920": {
+        "affected_versions": "unk to v5.14-rc4",
+        "breaks": "",
+        "cmt_msg": "af_unix: fix garbage collect vs MSG_PEEK",
+        "fixes": "cbcf01128d0a92e131bd09f1688fe032480b65ca",
+        "last_affected_version": "5.13.6",
+        "last_modified": "2021-11-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0920",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0920",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-0920",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0920",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-0920",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-0920"
+        }
+    },
+    "CVE-2021-0924": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-11-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0924",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0924",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-0924",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0924",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-0924",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-0924"
+        }
+    },
+    "CVE-2021-0929": {
+        "affected_versions": "unk to v5.6-rc1",
+        "breaks": "",
+        "cmt_msg": "staging/android/ion: delete dma_buf->kmap/unmap implemenation",
+        "fixes": "3e9e0c5c764704218c0960ffdb139de075afaadf",
+        "last_modified": "2021-11-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0929",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-0929",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-0929",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0929",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-0929",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-0929"
+        }
+    },
     "CVE-2021-0935": {
         "affected_versions": "v4.12 to v4.16-rc7",
         "breaks": "85cb73ff9b74785a7fc752875d7f0fe17ca3ea7c",
@@ -60568,10 +60616,13 @@
         }
     },
     "CVE-2021-1048": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-11-02",
+        "affected_versions": "v5.9-rc2 to v5.9-rc4",
+        "backport": true,
+        "breaks": "a9ed4a6560b8562b7e2e2bed9527e88001f7b682",
+        "cmt_msg": "fix regression in \"epoll: Keep a reference on files added to the check list\"",
+        "fixes": "77f4689de17c0887775bb77896f4cc11a39bf848",
+        "last_affected_version": "5.4.63",
+        "last_modified": "2021-11-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-1048",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-1048",
@@ -61017,7 +61068,7 @@
         "cmt_msg": "ipv6: make exception cache less predictible",
         "fixes": "a00df2caffed3883c341d5685f830434312e4a43",
         "last_affected_version": "5.14.3",
-        "last_modified": "2021-10-19",
+        "last_modified": "2021-11-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20322",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20322",
@@ -63535,12 +63586,12 @@
         "vendor_specific": true
     },
     "CVE-2021-34981": {
-        "affected_versions": "unk to v5.14-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.14-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: cmtp: fix file refcount when cmtp_attach_device fails",
         "fixes": "3cfdf8fcaafa62a4123f92eb0f4a72650da3a479",
         "last_affected_version": "5.13.2",
-        "last_modified": "2021-11-02",
+        "last_modified": "2021-11-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-34981",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-34981",
@@ -64229,6 +64280,20 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3732"
         }
     },
+    "CVE-2021-3736": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-11-04",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3736",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3736",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-3736",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-3736",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-3736",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-3736"
+        }
+    },
     "CVE-2021-3739": {
         "affected_versions": "v4.20-rc1 to v5.15-rc1",
         "breaks": "a27a94c2b0c727517c17cf2ca3a9f7291caadfbc",
@@ -64399,8 +64464,8 @@
         "breaks": "",
         "cmt_msg": "sctp: use init_tag from inithdr for ABORT chunk",
         "fixes": "4f7019c7eb33967eb87766e0e4602b5576873680",
-        "last_affected_version": "4.9.288",
-        "last_modified": "2021-11-02",
+        "last_affected_version": "5.14",
+        "last_modified": "2021-11-04",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3772",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3772",
@@ -65282,7 +65347,8 @@
         },
         "cwe": "Out-of-bounds Write",
         "fixes": "5afa7898ab7a0ec9c28556a91df714bf3c2f725e",
-        "last_modified": "2021-11-02",
+        "last_affected_version": "5.14",
+        "last_modified": "2021-11-04",
         "nvd_text": "dp_link_settings_write in drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm_debugfs.c in the Linux kernel through 5.14.14 allows a heap-based buffer overflow by an attacker who can write a string to the AMD GPU display drivers debug filesystem. There are no checks on size within parse_write_buffer_into_params when it uses the size of copy_from_user to copy a userspace buffer into a 40-byte heap buffer.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-42327",
@@ -65296,6 +65362,7 @@
     "CVE-2021-42739": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cmt_msg": "media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt()",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -65319,8 +65386,8 @@
             "score": 7.8
         },
         "cwe": "Out-of-bounds Write",
-        "fixes": "",
-        "last_modified": "2021-10-28",
+        "fixes": "35d2969ea3c7d32aee78066b1f3cf61a0d935a4e",
+        "last_modified": "2021-11-04",
         "nvd_text": "The firewire subsystem in the Linux kernel through 5.14.13 has a buffer overflow related to drivers/media/firewire/firedtv-avc.c and drivers/media/firewire/firedtv-ci.c, because avc_ca_pmt mishandles bounds checking.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-42739",
@@ -65335,9 +65402,32 @@
         "affected_versions": "unk to v5.15-rc6",
         "breaks": "",
         "cmt_msg": "KVM: PPC: Book3S HV: Make idle_kvm_start_guest() return 0 if it went to guest",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
         "fixes": "cdeb5d7d890e14f3b70e8087e745c4a6a7d9f337",
         "last_affected_version": "5.14.14",
-        "last_modified": "2021-10-28",
+        "last_modified": "2021-11-04",
         "nvd_text": "An issue was discovered in the Linux kernel for powerpc before 5.14.15. It allows a malicious KVM guest to crash the host, when the host is running on Power8, due to an arch/powerpc/kvm/book3s_hv_rmhandlers.S implementation bug in the handling of the SRR1 register values.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-43056",
@@ -65352,9 +65442,32 @@
         "affected_versions": "unk to v5.15-rc3",
         "breaks": "",
         "cmt_msg": "selinux,smack: fix subjective/objective credential use mixups",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "a3727a8bac0a9e77c70820655fd8715523ba3db7",
         "last_affected_version": "5.14.7",
-        "last_modified": "2021-10-28",
+        "last_modified": "2021-11-04",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.14.8. A use-after-free in selinux_ptrace_traceme (aka the SELinux handler for PTRACE_TRACEME) could be used by local attackers to cause memory corruption and escalate privileges, aka CID-a3727a8bac0a. This occurs because of an attempt to access the subjective credentials of another task.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-43057",
@@ -65363,6 +65476,23 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-43057",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-43057",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-43057"
+        }
+    },
+    "CVE-2021-43267": {
+        "affected_versions": "v5.10-rc1 to v5.15",
+        "breaks": "1ef6f7c9390ff5308c940ff8d0a53533a4673ad9",
+        "cmt_msg": "tipc: fix size validations for the MSG_CRYPTO type",
+        "fixes": "fa40d9734a57bcbfa79a280189799f76c88f7bb0",
+        "last_affected_version": "5.14",
+        "last_modified": "2021-11-04",
+        "nvd_text": "An issue was discovered in net/tipc/crypto.c in the Linux kernel before 5.14.16. The Transparent Inter-Process Communication (TIPC) functionality allows remote attackers to exploit insufficient validation of user-supplied sizes for the MSG_CRYPTO message type.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-43267",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-43267",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-43267",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-43267",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-43267",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-43267"
         }
     }
 }
