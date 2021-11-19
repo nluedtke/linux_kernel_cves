@@ -1,34 +1,28 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 10Nov21 11:37
+## Last Update - 18Nov21 08:40
 
 ### **New CVEs Added:**
 
-[CVE-2021-43389](cves/CVE-2021-43389)  
+[CVE-2021-43975](cves/CVE-2021-43975)  
+[CVE-2021-43976](cves/CVE-2021-43976)  
 
 
 ### **New Versions Checked:**
 
-[4.19.216](streams/4.19)  
-[5.10.78](streams/5.10)  
-[5.14.17](streams/5.14)  
-[5.15.1](streams/5.15)  
-[5.4.158](streams/5.4)  
+[4.14.255](streams/4.14)  
+[4.19.217](streams/4.19)  
+[4.4.292](streams/4.4)  
+[4.9.290](streams/4.9)  
+[5.10.79](streams/5.10)  
+[5.14.19](streams/5.14)  
+[5.15.2](streams/5.15)  
+[5.4.160](streams/5.4)  
 
 
 ### **Updated CVEs:**
 
-[CVE-2021-0920](cves/CVE-2021-0920)  
-[CVE-2021-34866](cves/CVE-2021-34866)  
-[CVE-2021-3760](cves/CVE-2021-3760)  
-[CVE-2021-3772](cves/CVE-2021-3772)  
-[CVE-2021-42252](cves/CVE-2021-42252)  
-[CVE-2021-42327](cves/CVE-2021-42327)  
-[CVE-2021-42739](cves/CVE-2021-42739)  
-[CVE-2021-43056](cves/CVE-2021-43056)  
-[CVE-2021-43057](cves/CVE-2021-43057)  
-[CVE-2017-5123](cves/CVE-2017-5123)  
 [CVE-2020-27820](cves/CVE-2020-27820)  
-[CVE-2021-3896](cves/CVE-2021-3896)  
-[CVE-2021-43267](cves/CVE-2021-43267)  
+[CVE-2021-37159](cves/CVE-2021-37159)  
+[CVE-2021-42739](cves/CVE-2021-42739)  

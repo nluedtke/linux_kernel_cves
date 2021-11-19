@@ -58170,8 +58170,9 @@
         }
     },
     "CVE-2020-27820": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.16-rc1",
         "breaks": "",
+        "cmt_msg": "drm/nouveau: use drm_dev_unplug() during device removal",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Local Access",
@@ -58195,8 +58196,8 @@
             "score": 4.7
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2021-11-10",
+        "fixes": "aff2299e0d81b26304ccc6a1ec0170e437f38efc",
+        "last_modified": "2021-11-18",
         "nvd_text": "A vulnerability was found in Linux kernel, where a use-after-frees in nouveau's postclose() handler could happen if removing device (that is not common to remove video card physically without power-off, but same happens if \"unbind\" the driver).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27820",
@@ -64299,7 +64300,7 @@
         "cwe": "Double Free",
         "fixes": "a6ecfb39ba9d7316057cea823b196b734f6b18ca",
         "last_affected_version": "5.13.5",
-        "last_modified": "2021-10-12",
+        "last_modified": "2021-11-18",
         "nvd_text": "hso_free_net_device in drivers/net/usb/hso.c in the Linux kernel through 5.13.4 calls unregister_netdev without checking for the NETREG_REGISTERED state, leading to a use-after-free and a double free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-37159",
@@ -65408,7 +65409,7 @@
         }
     },
     "CVE-2021-42739": {
-        "affected_versions": "v2.6.12-rc2 to unk",
+        "affected_versions": "v2.6.12-rc2 to v5.16-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt()",
         "cvss2": {
@@ -65436,7 +65437,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "35d2969ea3c7d32aee78066b1f3cf61a0d935a4e",
         "last_affected_version": "5.15.0",
-        "last_modified": "2021-11-10",
+        "last_modified": "2021-11-18",
         "nvd_text": "The firewire subsystem in the Linux kernel through 5.14.13 has a buffer overflow related to drivers/media/firewire/firedtv-avc.c and drivers/media/firewire/firedtv-ci.c, because avc_ca_pmt mishandles bounds checking.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-42739",
@@ -65605,6 +65606,36 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-43389",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-43389",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-43389"
+        }
+    },
+    "CVE-2021-43975": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-11-18",
+        "nvd_text": "In the Linux kernel through 5.15.2, hw_atl_utils_fw_rpc_wait in drivers/net/ethernet/aquantia/atlantic/hw_atl/hw_atl_utils.c allows an attacker (who can introduce a crafted device) to trigger an out-of-bounds write via a crafted length value.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-43975",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-43975",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-43975",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-43975",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-43975",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-43975"
+        }
+    },
+    "CVE-2021-43976": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2021-11-18",
+        "nvd_text": "In the Linux kernel through 5.15.2, mwifiex_usb_recv in drivers/net/wireless/marvell/mwifiex/usb.c allows an attacker (who can connect a crafted USB device) to cause a denial of service (skb_over_panic).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-43976",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-43976",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-43976",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-43976",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-43976",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-43976"
         }
     }
 }
