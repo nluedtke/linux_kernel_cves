@@ -58197,7 +58197,8 @@
         },
         "cwe": "Use After Free",
         "fixes": "aff2299e0d81b26304ccc6a1ec0170e437f38efc",
-        "last_modified": "2021-11-18",
+        "last_affected_version": "5.15.4",
+        "last_modified": "2021-11-26",
         "nvd_text": "A vulnerability was found in Linux kernel, where a use-after-frees in nouveau's postclose() handler could happen if removing device (that is not common to remove video card physically without power-off, but same happens if \"unbind\" the driver).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27820",
@@ -64075,10 +64076,12 @@
         }
     },
     "CVE-2021-3640": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.16-rc1",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-07-26",
+        "cmt_msg": "Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()",
+        "fixes": "99c23da0eed4fd20cae8243f2b51e10e66aa0951",
+        "last_affected_version": "5.15.2",
+        "last_modified": "2021-11-26",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3640",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3640",
@@ -65168,6 +65171,38 @@
         },
         "rejected": true
     },
+    "CVE-2021-4001": {
+        "affected_versions": "v5.5-rc1 to v5.16-rc2",
+        "breaks": "a23740ec43ba022dbfd139d0fe3eff193216272b",
+        "cmt_msg": "bpf: Fix toctou on read-only map's constant scalar tracking",
+        "fixes": "353050be4c19e102178ccc05988101887c25ae53",
+        "last_affected_version": "5.15.4",
+        "last_modified": "2021-11-26",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4001",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4001",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4001",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4001",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4001",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4001"
+        }
+    },
+    "CVE-2021-4002": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "hugetlbfs: flush TLBs correctly after huge_pmd_unshare",
+        "fixes": "a4a118f2eead1d6c49e00765de89878288d4b890",
+        "last_affected_version": "5.15.4",
+        "last_modified": "2021-11-26",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4002",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4002",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4002",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4002",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4002",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4002"
+        }
+    },
     "CVE-2021-40490": {
         "affected_versions": "v3.8-rc1 to v5.15-rc1",
         "breaks": "f19d5870cbf72d4cb2a8e1f749dff97af99b071e",
@@ -65609,10 +65644,34 @@
         }
     },
     "CVE-2021-43975": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-11-18",
+        "affected_versions": "v2.6.12-rc2 to v5.16-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Write",
+        "fixes": "b922f622592af76b57cbc566eaeccda0b31a3496",
+        "last_modified": "2021-11-26",
         "nvd_text": "In the Linux kernel through 5.15.2, hw_atl_utils_fw_rpc_wait in drivers/net/ethernet/aquantia/atlantic/hw_atl/hw_atl_utils.c allows an attacker (who can introduce a crafted device) to trigger an out-of-bounds write via a crafted length value.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-43975",
@@ -65626,8 +65685,31 @@
     "CVE-2021-43976": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.6
+        },
+        "cwe": "Unspecified",
         "fixes": "",
-        "last_modified": "2021-11-18",
+        "last_modified": "2021-11-26",
         "nvd_text": "In the Linux kernel through 5.15.2, mwifiex_usb_recv in drivers/net/wireless/marvell/mwifiex/usb.c allows an attacker (who can connect a crafted USB device) to cause a denial of service (skb_over_panic).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-43976",
