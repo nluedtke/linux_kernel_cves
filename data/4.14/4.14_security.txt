@@ -147,6 +147,7 @@ CVEs fixed in 4.14.36:
 
 CVEs fixed in 4.14.37:
   CVE-2018-8087: afadc440a1cc08895f451b4a9db551a45f2a1a21 mac80211_hwsim: fix possible memory leak in hwsim_new_radio_nl()
+  CVE-2021-39636: ad10785a706e63ff155fc97860cdcc5e3bc5992d netfilter: x_tables: fix pointer leaks to userspace
 
 CVEs fixed in 4.14.38:
   CVE-2018-10940: 68c09d548bfc61aec99fa9a24e703c3d6fdba9b1 cdrom: information leak in cdrom_ioctl_media_changed()
@@ -847,12 +848,14 @@ CVEs fixed in 4.14.214:
 
 CVEs fixed in 4.14.215:
   CVE-2020-28374: c842ead67ae3cac58e84e7880153e68cccd59773 scsi: target: Fix XCOPY NAA identifier lookup
+  CVE-2021-39648: 6766064c794afeacc29b21fc09ea4dbe3cae1af3 usb: gadget: configfs: Fix use-after-free issue with udc_name
 
 CVEs fixed in 4.14.217:
   CVE-2021-3178: 0f60f9d1e6182d9440614c13cdf6106e2d470f89 nfsd4: readdirplus shouldn't return parent of export
 
 CVEs fixed in 4.14.218:
   CVE-2020-27825: fdb2310d58812b15f6b460509b43ff0b87e59367 tracing: Fix race in trace_open and buffer resize call
+  CVE-2021-39657: 30f2a89f9481f851bc68e51a1e7114392b052231 scsi: ufs: Correct the LUN used in eh_device_reset_handler() callback
 
 CVEs fixed in 4.14.219:
   CVE-2021-3348: 51359110d9d9b0231dc6a60716895104c73e7770 nbd: freeze the queue while we're adding connections
@@ -879,6 +882,7 @@ CVEs fixed in 4.14.226:
   CVE-2021-28660: 33cdc63f0e07abf637ba326b6016731be958088d staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan()
   CVE-2021-29265: 04f879ba79b056041972122c1dc597b79d2464e5 usbip: fix stub_dev usbip_sockfd_store() races leading to gpf
   CVE-2021-33033: ab44f7317c16ddcf9ee12ba2aca60771266c2dc6 cipso,calipso: resolve a number of problems with the DOI refcounts
+  CVE-2021-39656: 4769013f841ed35bdce3b11b64349d0c166ee0a2 configfs: fix a use-after-free in __configfs_open_file
 
 CVEs fixed in 4.14.227:
   CVE-2021-28964: 0fbf41006d8c850963049c35563e7775fe7c2164 btrfs: fix race when cloning extent buffer during rewind of an old root
@@ -1002,6 +1006,9 @@ CVEs fixed in 4.14.255:
 CVEs fixed in 4.14.256:
   CVE-2021-3640: 3eb50acbc96c9de3d8a056982938ece9bd1c2b91 Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()
 
+CVEs fixed in 4.14.257:
+  CVE-2021-4002: 7bf1f5cb5150b1a53f6ccaadc0bc77f8f33206c8 hugetlbfs: flush TLBs correctly after huge_pmd_unshare
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1032,6 +1039,7 @@ Outstanding CVEs:
   CVE-2018-20449: (unk) printk: hash addresses printed with %p 
   CVE-2018-20854: (unk) phy: ocelot-serdes: fix out-of-bounds read 
   CVE-2018-20855: (unk) IB/mlx5: Fix leaking stack memory to userspace 
+  CVE-2018-25020: (unk) bpf: fix truncated jump targets on heavy expansions 
   CVE-2018-7273: (unk) printk: hash addresses printed with %p 
   CVE-2018-7754: (unk) printk: hash addresses printed with %p 
   CVE-2019-0146: (unk)  
@@ -1104,10 +1112,10 @@ Outstanding CVEs:
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
   CVE-2021-0399: (unk)  
-  CVE-2021-0606: (unk)  
   CVE-2021-0695: (unk)  
   CVE-2021-0924: (unk)  
   CVE-2021-0929: (unk) staging/android/ion: delete dma_buf->kmap/unmap implemenation 
+  CVE-2021-0961: (unk)  
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-20322: (unk) ipv6: make exception cache less predictible 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
@@ -1125,7 +1133,6 @@ Outstanding CVEs:
   CVE-2021-38199: (unk) NFSv4: Initialise connection to the server in nfs4_alloc_client() 
   CVE-2021-3847: (unk)  
   CVE-2021-3892: (unk)  
-  CVE-2021-4002: (unk) hugetlbfs: flush TLBs correctly after huge_pmd_unshare 
   CVE-2021-4028: (unk)  
   CVE-2021-4032: (unk) Revert "KVM: x86: Open code necessary bits of kvm_lapic_set_base() at vCPU RESET" 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
