@@ -1205,6 +1205,7 @@ CVEs fixed in 4.4.292:
 
 CVEs fixed in 4.4.293:
   CVE-2021-3640: f632f88fe209240f5cad853e33f74fda4d341004 Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()
+  CVE-2021-3752: 88aed7d67197d155260f09078835290adfa1debd Bluetooth: fix use-after-free error in lock_sock_nested()
 
 CVEs fixed in 4.4.294:
   CVE-2021-4002: 8a8ae093b52ba76b650b493848d67e7b526c8751 hugetlbfs: flush TLBs correctly after huge_pmd_unshare
@@ -1360,6 +1361,11 @@ Outstanding CVEs:
   CVE-2021-20317: (unk) lib/timerqueue: Rely on rbtree semantics for next timer 
   CVE-2021-20322: (unk) ipv6: make exception cache less predictible 
   CVE-2021-22543: (unk) KVM: do not allow mapping valid but non-reference-counted pages 
+  CVE-2021-28711: (unk) xen/blkfront: harden blkfront against event channel storms 
+  CVE-2021-28712: (unk) xen/netfront: harden netfront against event channel storms 
+  CVE-2021-28713: (unk) xen/console: harden hvc_xen against event channel storms 
+  CVE-2021-28714: (unk) xen/netback: fix rx queue stall detection 
+  CVE-2021-28715: (unk) xen/netback: don't queue unlimited number of packages 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
   CVE-2021-32078: (unk) ARM: footbridge: remove personal server platform 
@@ -1370,7 +1376,6 @@ Outstanding CVEs:
   CVE-2021-35477: (unk) bpf: Introduce BPF nospec instruction for mitigating Spectre v4 
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
   CVE-2021-3736: (unk) vfio/mbochs: Fix missing error unwind of mbochs_used_mbytes 
-  CVE-2021-3752: (unk)  
   CVE-2021-38198: (unk) KVM: X86: MMU: Use the correct inherited permissions to get shadow page 
   CVE-2021-38300: (unk) bpf, mips: Validate conditional branch offsets 
   CVE-2021-3847: (unk)  
@@ -1379,13 +1384,14 @@ Outstanding CVEs:
   CVE-2021-39636: (unk) netfilter: x_tables: fix pointer leaks to userspace 
   CVE-2021-39648: (unk) usb: gadget: configfs: Fix use-after-free issue with udc_name 
   CVE-2021-39656: (unk) configfs: fix a use-after-free in __configfs_open_file 
-  CVE-2021-4028: (unk)  
+  CVE-2021-4028: (unk) RDMA/cma: Do not change route.addr.src_addr.ss_family 
   CVE-2021-4032: (unk) Revert "KVM: x86: Open code necessary bits of kvm_lapic_set_base() at vCPU RESET" 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
   CVE-2021-4095: (unk)  
+  CVE-2021-4135: (unk) netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc 
   CVE-2021-42739: (unk) media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt() 
   CVE-2021-43975: (unk) atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait 
   CVE-2021-43976: (unk)  
   CVE-2021-44733: (unk)  
-  CVE-2021-45095: (unk)  
+  CVE-2021-45095: (unk) phonet: refcount leak in pep_sock_accep 
   CVE-2021-45100: (unk)  

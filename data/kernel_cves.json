@@ -60488,9 +60488,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.14-rc4",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "af_unix: fix garbage collect vs MSG_PEEK",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.4
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "cbcf01128d0a92e131bd09f1688fe032480b65ca",
         "last_affected_version": "5.13.6",
-        "last_modified": "2021-12-16",
+        "last_modified": "2021-12-21",
         "nvd_text": "In unix_scm_to_skb of af_unix.c, there is a possible use after free bug due to a race condition. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-196926917References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0920",
@@ -60504,8 +60527,31 @@
     "CVE-2021-0924": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "",
-        "last_modified": "2021-12-16",
+        "last_modified": "2021-12-21",
         "nvd_text": "In xhci_vendor_get_ops of xhci.c, there is a possible out of bounds read due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-194461020References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0924",
@@ -60520,8 +60566,31 @@
         "affected_versions": "unk to v5.6-rc1",
         "breaks": "",
         "cmt_msg": "staging/android/ion: delete dma_buf->kmap/unmap implemenation",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "3e9e0c5c764704218c0960ffdb139de075afaadf",
-        "last_modified": "2021-12-16",
+        "last_modified": "2021-12-21",
         "nvd_text": "In ion_dma_buf_end_cpu_access and related functions of ion.c, there is a possible way to corrupt memory due to a use after free. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-187527909References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0929",
@@ -60710,8 +60779,31 @@
     "CVE-2021-0961": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.4
+        },
+        "cwe": "Missing Initialization of Resource",
         "fixes": "",
-        "last_modified": "2021-12-16",
+        "last_modified": "2021-12-21",
         "nvd_text": "In quota_proc_write of xt_quota2.c, there is a possible way to read kernel memory due to uninitialized data. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-196046570References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0961",
@@ -60727,9 +60819,32 @@
         "backport": true,
         "breaks": "a9ed4a6560b8562b7e2e2bed9527e88001f7b682",
         "cmt_msg": "fix regression in \"epoll: Keep a reference on files added to the check list\"",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "77f4689de17c0887775bb77896f4cc11a39bf848",
         "last_affected_version": "5.4.63",
-        "last_modified": "2021-12-16",
+        "last_modified": "2021-12-21",
         "nvd_text": "In ep_loop_check_proc of eventpoll.c, there is a possible way to corrupt memory due to a use after free. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-204573007References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-1048",
@@ -61942,6 +62057,81 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28691",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-28691",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-28691"
+        }
+    },
+    "CVE-2021-28711": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "xen/blkfront: harden blkfront against event channel storms",
+        "fixes": "0fd08a34e8e3b67ec9bd8287ac0facf8374b844a",
+        "last_modified": "2021-12-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28711",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28711",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-28711",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28711",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-28711",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-28711"
+        }
+    },
+    "CVE-2021-28712": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "xen/netfront: harden netfront against event channel storms",
+        "fixes": "b27d47950e481f292c0a5ad57357edb9d95d03ba",
+        "last_modified": "2021-12-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28712",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28712",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-28712",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28712",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-28712",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-28712"
+        }
+    },
+    "CVE-2021-28713": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "xen/console: harden hvc_xen against event channel storms",
+        "fixes": "fe415186b43df0db1f17fa3a46275fd92107fe71",
+        "last_modified": "2021-12-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28713",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28713",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-28713",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28713",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-28713",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-28713"
+        }
+    },
+    "CVE-2021-28714": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "xen/netback: fix rx queue stall detection",
+        "fixes": "6032046ec4b70176d247a71836186d47b25d1684",
+        "last_modified": "2021-12-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28714",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28714",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-28714",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28714",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-28714",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-28714"
+        }
+    },
+    "CVE-2021-28715": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "xen/netback: don't queue unlimited number of packages",
+        "fixes": "be81992f9086b230623ae3ebbc85ecee4d00a3d3",
+        "last_modified": "2021-12-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28715",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28715",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-28715",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-28715",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-28715",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-28715"
         }
     },
     "CVE-2021-28950": {
@@ -64495,10 +64685,12 @@
         }
     },
     "CVE-2021-3752": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.16-rc1",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-09-22",
+        "cmt_msg": "Bluetooth: fix use-after-free error in lock_sock_nested()",
+        "fixes": "1bff51ea59a9afb67d2dd78518ab0582a54a472c",
+        "last_affected_version": "5.15.2",
+        "last_modified": "2021-12-21",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3752",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3752",
@@ -65291,9 +65483,32 @@
         "affected_versions": "unk to v4.16-rc1",
         "breaks": "",
         "cmt_msg": "netfilter: x_tables: fix pointer leaks to userspace",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.4
+        },
+        "cwe": "Missing Initialization of Resource",
         "fixes": "1e98ffea5a8935ec040ab72299e349cb44b8defd",
         "last_affected_version": "4.14.36",
-        "last_modified": "2021-12-16",
+        "last_modified": "2021-12-21",
         "nvd_text": "In do_ipt_get_ctl and do_ipt_set_ctl of ip_tables.c, there is a possible way to leak kernel information due to uninitialized data. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-120612905References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39636",
@@ -65308,9 +65523,32 @@
         "affected_versions": "unk to v5.11-rc3",
         "breaks": "",
         "cmt_msg": "usb: gadget: configfs: Fix use-after-free issue with udc_name",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+            "score": 1.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.1
+        },
+        "cwe": "Exposure of Resource to Wrong Sphere",
         "fixes": "64e6bbfff52db4bf6785fab9cffab850b2de6870",
         "last_affected_version": "5.10.6",
-        "last_modified": "2021-12-16",
+        "last_modified": "2021-12-21",
         "nvd_text": "In gadget_dev_desc_UDC_show of configfs.c, there is a possible disclosure of kernel heap memory due to a race condition. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-160822094References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39648",
@@ -65325,9 +65563,32 @@
         "affected_versions": "unk to v5.12-rc3",
         "breaks": "",
         "cmt_msg": "configfs: fix a use-after-free in __configfs_open_file",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.7
+        },
+        "cwe": "Use After Free",
         "fixes": "14fbbc8297728e880070f7b077b3301a8c698ef9",
         "last_affected_version": "5.11.6",
-        "last_modified": "2021-12-16",
+        "last_modified": "2021-12-21",
         "nvd_text": "In __configfs_open_file of file.c, there is a possible use-after-free due to improper locking. This could lead to local escalation of privilege in the kernel with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-174049066References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39656",
@@ -65342,9 +65603,32 @@
         "affected_versions": "unk to v5.11-rc4",
         "breaks": "",
         "cmt_msg": "scsi: ufs: Correct the LUN used in eh_device_reset_handler() callback",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.4
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "35fc4cd34426c242ab015ef280853b7bff101f48",
         "last_affected_version": "5.10.10",
-        "last_modified": "2021-12-16",
+        "last_modified": "2021-12-21",
         "nvd_text": "In ufshcd_eh_device_reset_handler of ufshcd.c, there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-194696049References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39657",
@@ -65404,10 +65688,12 @@
         }
     },
     "CVE-2021-4028": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.15-rc4",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-11-30",
+        "cmt_msg": "RDMA/cma: Do not change route.addr.src_addr.ss_family",
+        "fixes": "bc0bdc5afaa740d782fbf936aaeebd65e5c2921d",
+        "last_affected_version": "5.14.9",
+        "last_modified": "2021-12-21",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4028",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4028",
@@ -65488,12 +65774,12 @@
         }
     },
     "CVE-2021-4083": {
-        "affected_versions": "unk to v5.16-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.16-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "fget: check that the fd still exists after getting a ref to it",
         "fixes": "054aa8d439b9185d4f5eb9a90282d1ce74772969",
         "last_affected_version": "5.15.6",
-        "last_modified": "2021-12-16",
+        "last_modified": "2021-12-21",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4083",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4083",
@@ -65587,6 +65873,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-41073",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-41073",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-41073"
+        }
+    },
+    "CVE-2021-4135": {
+        "affected_versions": "unk to v5.16-rc6",
+        "breaks": "",
+        "cmt_msg": "netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc",
+        "fixes": "481221775d53d6215a6e5e9ce1cce6d2b4ab9a46",
+        "last_modified": "2021-12-21",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4135",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4135",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4135",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4135",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4135",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4135"
         }
     },
     "CVE-2021-41864": {
@@ -66042,10 +66343,34 @@
         }
     },
     "CVE-2021-45095": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.16-rc6",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-12-16",
+        "cmt_msg": "phonet: refcount leak in pep_sock_accep",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
+        "fixes": "bcd0f93353326954817a4f9fa55ec57fb38acbb0",
+        "last_modified": "2021-12-21",
         "nvd_text": "pep_sock_accept in net/phonet/pep.c in the Linux kernel through 5.15.8 has a refcount leak.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-45095",
