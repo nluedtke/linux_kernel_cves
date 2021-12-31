@@ -10,6 +10,7 @@ CVEs fixed in 5.13.3:
   CVE-2021-34981: 5c73a8008035879a27f4bcf2d87869d039cb98fb Bluetooth: cmtp: fix file refcount when cmtp_attach_device fails
   CVE-2021-3655: 4ecabee69d190f2bd9bdc5140109a27231428413 sctp: validate from_addr_param return
   CVE-2021-38205: 8722275b41d5127048e1422a8a1b6370b4878533 net: xilinx_emaclite: Do not print real IOMEM pointer
+  CVE-2021-45485: 8853d2ce4e9e96c7b2a9908f752ab2253c99c6ab ipv6: use prandom_u32() for ID generation
 
 CVEs fixed in 5.13.4:
   CVE-2021-33909: 71de462034c69525a5049fbdf3903c5833cbce04 seq_file: disallow extremely large seq buffer allocations
@@ -18,6 +19,7 @@ CVEs fixed in 5.13.4:
   CVE-2021-38201: a02357d7532b88e97329bd7786c7e72601109704 sunrpc: Avoid a KASAN slab-out-of-bounds bug in xdr_set_page_base()
   CVE-2021-38202: 7605bff387a9972038b217b6c60998778dbae931 NFSD: Prevent a possible oops in the nfs_dirent() tracepoint
   CVE-2021-38203: 789b24d9950d3e67b227f81b3fab912a8fb257af btrfs: fix deadlock with concurrent chunk allocations involving system chunks
+  CVE-2021-4154: a41573667b39152176f6b08d10b4deb171e541c4 cgroup: verify that source is a string
 
 CVEs fixed in 5.13.6:
   CVE-2021-3679: 917a5bdd114a27c159796928cb3c09723a51d1c7 tracing: Fix bug in rb_per_cpu_empty() that might cause deadloop.
@@ -138,13 +140,15 @@ Outstanding CVEs:
   CVE-2021-4001: (unk) bpf: Fix toctou on read-only map's constant scalar tracking 
   CVE-2021-4002: (unk) hugetlbfs: flush TLBs correctly after huge_pmd_unshare 
   CVE-2021-4028: (unk) RDMA/cma: Do not change route.addr.src_addr.ss_family 
-  CVE-2021-4032: (unk) Revert "KVM: x86: Open code necessary bits of kvm_lapic_set_base() at vCPU RESET" 
   CVE-2021-4083: (unk) fget: check that the fd still exists after getting a ref to it 
   CVE-2021-4090: (unk) NFSD: Fix exposure in nfsd4_decode_bitmap() 
   CVE-2021-4093: (unk) KVM: SEV-ES: go over the sev_pio_data buffer in multiple passes if needed 
   CVE-2021-4095: (unk)  
   CVE-2021-41073: (unk) io_uring: ensure symmetry in handling iter types in loop_rw_iter() 
   CVE-2021-4135: (unk) netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc 
+  CVE-2021-4148: (unk)  
+  CVE-2021-4149: (unk) btrfs: unlock newly allocated extent buffer after error 
+  CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-41864: (unk) bpf: Fix integer overflow in prealloc_elems_and_freelist() 
   CVE-2021-42327: (unk) drm/amdgpu: fix out of bounds write 
   CVE-2021-42739: (unk) media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt() 
@@ -154,6 +158,7 @@ Outstanding CVEs:
   CVE-2021-43389: (unk) isdn: cpai: check ctr->cnr to avoid array index out of bound 
   CVE-2021-43975: (unk) atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait 
   CVE-2021-43976: (unk)  
-  CVE-2021-44733: (unk)  
+  CVE-2021-44733: (unk) tee: handle lookup of shm with reference count 0 
   CVE-2021-45095: (unk) phonet: refcount leak in pep_sock_accep 
-  CVE-2021-45100: (unk)  
+  CVE-2021-45469: (unk)  
+  CVE-2021-45480: (unk) rds: memory leak in __rds_conn_create() 

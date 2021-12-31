@@ -1131,6 +1131,7 @@ CVEs fixed in 4.4.269:
   CVE-2017-0605: 150381302389fa01425396489a21dc7c53383a5b tracing: Use strlcpy() instead of strcpy() in __trace_find_cmdline()
   CVE-2021-31916: 0c0f93fbd20276d65ae0581edfcdc93579aa1dc7 dm ioctl: fix out of bounds array access when no devices
   CVE-2021-33034: b27a218d166b7f07cd5616fb90e727b6ed662b1a Bluetooth: verify AMP hci_chan before amp_destroy
+  CVE-2021-4157: 0c5ccd5e2a2e291774618c24c459fa397fd1b7da pNFS/flexfiles: fix incorrect size check in decode_nfs_fh()
 
 CVEs fixed in 4.4.270:
   CVE-2020-26558: 75523bbfb0eaead670c97fbcf096ca2ab556f0c0 Bluetooth: SMP: Fail if remote and local public keys are identical
@@ -1154,11 +1155,13 @@ CVEs fixed in 4.4.272:
 
 CVEs fixed in 4.4.274:
   CVE-2021-34693: f638caa211e7a121a5596986d29ebbdaf9156398 can: bcm: fix infoleak in struct bcm_msg_head
+  CVE-2021-45486: 8fb8c138b5d69128964e54e1b5ee49fc395f011c inet: use bigger hash table for IP ID generation
 
 CVEs fixed in 4.4.276:
   CVE-2021-33909: 3533e50cbee8ff086bfa04176ac42a01ee3db37d seq_file: disallow extremely large seq buffer allocations
   CVE-2021-3609: 9c47fa9295ce58433cae4376240b738b126637d4 can: bcm: delay release of struct bcm_op after synchronize_rcu()
   CVE-2021-38160: 187f14fb88a9e62d55924748a274816fe6f34de6 virtio_console: Assure used length from device is limited
+  CVE-2021-45485: c43fa9ee9f1de295474a28903607f84209d7e611 ipv6: use prandom_u32() for ID generation
 
 CVEs fixed in 4.4.277:
   CVE-2021-3679: afa091792525dfa6c3c854069ec6b8a5ccc62c11 tracing: Fix bug in rb_per_cpu_empty() that might cause deadloop.
@@ -1213,6 +1216,12 @@ CVEs fixed in 4.4.294:
 
 CVEs fixed in 4.4.295:
   CVE-2021-39685: 93cd7100fe471c5f76fb942358de4ed70dbcaf35 USB: gadget: detect too-big endpoint 0 requests
+
+CVEs fixed in 4.4.296:
+  CVE-2021-28711: 3e04b9e6aa7d77287e70a400be83060d2b7b2cfe xen/blkfront: harden blkfront against event channel storms
+  CVE-2021-28712: 81900aa7d7a130dec4c55b68875e30fb8c9effec xen/netfront: harden netfront against event channel storms
+  CVE-2021-28713: c7eaa5082bccfc00dfdb500ac6cc86d6f24ca027 xen/console: harden hvc_xen against event channel storms
+  CVE-2021-28715: 0928efb09178e01d3dc8e8849aa1c807436c3c37 xen/netback: don't queue unlimited number of packages
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1361,11 +1370,7 @@ Outstanding CVEs:
   CVE-2021-20317: (unk) lib/timerqueue: Rely on rbtree semantics for next timer 
   CVE-2021-20322: (unk) ipv6: make exception cache less predictible 
   CVE-2021-22543: (unk) KVM: do not allow mapping valid but non-reference-counted pages 
-  CVE-2021-28711: (unk) xen/blkfront: harden blkfront against event channel storms 
-  CVE-2021-28712: (unk) xen/netfront: harden netfront against event channel storms 
-  CVE-2021-28713: (unk) xen/console: harden hvc_xen against event channel storms 
   CVE-2021-28714: (unk) xen/netback: fix rx queue stall detection 
-  CVE-2021-28715: (unk) xen/netback: don't queue unlimited number of packages 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
   CVE-2021-32078: (unk) ARM: footbridge: remove personal server platform 
@@ -1385,13 +1390,12 @@ Outstanding CVEs:
   CVE-2021-39648: (unk) usb: gadget: configfs: Fix use-after-free issue with udc_name 
   CVE-2021-39656: (unk) configfs: fix a use-after-free in __configfs_open_file 
   CVE-2021-4028: (unk) RDMA/cma: Do not change route.addr.src_addr.ss_family 
-  CVE-2021-4032: (unk) Revert "KVM: x86: Open code necessary bits of kvm_lapic_set_base() at vCPU RESET" 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
-  CVE-2021-4095: (unk)  
-  CVE-2021-4135: (unk) netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc 
+  CVE-2021-4148: (unk)  
+  CVE-2021-4149: (unk) btrfs: unlock newly allocated extent buffer after error 
+  CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-42739: (unk) media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt() 
   CVE-2021-43975: (unk) atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait 
   CVE-2021-43976: (unk)  
-  CVE-2021-44733: (unk)  
   CVE-2021-45095: (unk) phonet: refcount leak in pep_sock_accep 
-  CVE-2021-45100: (unk)  
+  CVE-2021-45469: (unk)  

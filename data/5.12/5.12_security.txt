@@ -15,6 +15,10 @@ CVEs fixed in 5.12.4:
   CVE-2021-3489: 53eb85cc663089f0eff42679f54ae915dcefc433 bpf, ringbuf: Deny reserve of buffers larger than ringbuf
   CVE-2021-3490: 9fdd1d10daac186e21a77290f9d22b41e175e1b9 bpf: Fix alu32 const subreg bound tracking on bitwise operations
   CVE-2021-3491: ca2960d35c36f2e601563c49f6673efd111b94c0 io_uring: truncate lengths larger than MAX_RW_COUNT on provide buffers
+  CVE-2021-45486: 806245375ff907cc8771de7a11585992a96d7937 inet: use bigger hash table for IP ID generation
+
+CVEs fixed in 5.12.5:
+  CVE-2021-4157: 754efbbdaf4e99f9e8d9bd0ef1470ff639cdb5f4 pNFS/flexfiles: fix incorrect size check in decode_nfs_fh()
 
 CVEs fixed in 5.12.7:
   CVE-2020-26558: 58cca5ec43be72a1af95f11966381e9953b0c9f5 Bluetooth: SMP: Fail if remote and local public keys are identical
@@ -64,12 +68,14 @@ CVEs fixed in 5.12.17:
 CVEs fixed in 5.12.18:
   CVE-2021-3655: d91adac26d5ebac78c731b3aa23ff2c210ce2a0d sctp: validate from_addr_param return
   CVE-2021-38205: 7a9bfd7589c18c20df5a5b9278549a2807627e30 net: xilinx_emaclite: Do not print real IOMEM pointer
+  CVE-2021-45485: 478ec08ae2097b7262a69d951f95e9ef16ff45a0 ipv6: use prandom_u32() for ID generation
 
 CVEs fixed in 5.12.19:
   CVE-2021-33909: 514b6531b1cbb64199db63bfdb80953d71998cca seq_file: disallow extremely large seq buffer allocations
   CVE-2021-38160: 445a2298edc919f3cc82345ff8c004e9e1f5017a virtio_console: Assure used length from device is limited
   CVE-2021-38199: 87871d990a2c1879fb5c543f7244f360532e2f28 NFSv4: Initialise connection to the server in nfs4_alloc_client()
   CVE-2021-38201: 9a4f77f171f68e5a275c4fabd8d78579af7b4950 sunrpc: Avoid a KASAN slab-out-of-bounds bug in xdr_set_page_base()
+  CVE-2021-4154: 242f80be5b13257173eadbc03a90932e786b4c9b cgroup: verify that source is a string
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -168,7 +174,6 @@ Outstanding CVEs:
   CVE-2021-4001: (unk) bpf: Fix toctou on read-only map's constant scalar tracking 
   CVE-2021-4002: (unk) hugetlbfs: flush TLBs correctly after huge_pmd_unshare 
   CVE-2021-4028: (unk) RDMA/cma: Do not change route.addr.src_addr.ss_family 
-  CVE-2021-4032: (unk) Revert "KVM: x86: Open code necessary bits of kvm_lapic_set_base() at vCPU RESET" 
   CVE-2021-40490: (unk) ext4: fix race writing to an inline_data file while its xattrs are changing 
   CVE-2021-4083: (unk) fget: check that the fd still exists after getting a ref to it 
   CVE-2021-4090: (unk) NFSD: Fix exposure in nfsd4_decode_bitmap() 
@@ -176,6 +181,9 @@ Outstanding CVEs:
   CVE-2021-4095: (unk)  
   CVE-2021-41073: (unk) io_uring: ensure symmetry in handling iter types in loop_rw_iter() 
   CVE-2021-4135: (unk) netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc 
+  CVE-2021-4148: (unk)  
+  CVE-2021-4149: (unk) btrfs: unlock newly allocated extent buffer after error 
+  CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-41864: (unk) bpf: Fix integer overflow in prealloc_elems_and_freelist() 
   CVE-2021-42008: (unk) net: 6pack: fix slab-out-of-bounds in decode_data 
   CVE-2021-42252: (unk) soc: aspeed: lpc-ctrl: Fix boundary check for mmap 
@@ -186,6 +194,6 @@ Outstanding CVEs:
   CVE-2021-43389: (unk) isdn: cpai: check ctr->cnr to avoid array index out of bound 
   CVE-2021-43975: (unk) atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait 
   CVE-2021-43976: (unk)  
-  CVE-2021-44733: (unk)  
+  CVE-2021-44733: (unk) tee: handle lookup of shm with reference count 0 
   CVE-2021-45095: (unk) phonet: refcount leak in pep_sock_accep 
-  CVE-2021-45100: (unk)  
+  CVE-2021-45469: (unk)  

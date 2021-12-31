@@ -124,6 +124,10 @@ CVEs fixed in 5.10.37:
   CVE-2021-3489: 1ca284f0867079a34f52a6f811747695828166c6 bpf, ringbuf: Deny reserve of buffers larger than ringbuf
   CVE-2021-3490: 282bfc8848eaa195d5e994bb700f2c7afb7eb3e6 bpf: Fix alu32 const subreg bound tracking on bitwise operations
   CVE-2021-3491: 7e916d0124e5f40d7912f93a633f5dee2c3ad735 io_uring: truncate lengths larger than MAX_RW_COUNT on provide buffers
+  CVE-2021-45486: a273c27d7255fc527023edeb528386d1b64bedf5 inet: use bigger hash table for IP ID generation
+
+CVEs fixed in 5.10.38:
+  CVE-2021-4157: 1fbea60ea658ab887fb899532d783732b04e53e6 pNFS/flexfiles: fix incorrect size check in decode_nfs_fh()
 
 CVEs fixed in 5.10.40:
   CVE-2020-26558: d8d261c7cfb3a5dd921b4aeeb944718afc3f3961 Bluetooth: SMP: Fail if remote and local public keys are identical
@@ -167,11 +171,13 @@ CVEs fixed in 5.10.50:
 
 CVEs fixed in 5.10.51:
   CVE-2021-3655: d4dbef7046e24669278eba4455e9e8053ead6ba0 sctp: validate from_addr_param return
+  CVE-2021-45485: 8f939b79579715b195dc3ad36669707fce6853ee ipv6: use prandom_u32() for ID generation
 
 CVEs fixed in 5.10.52:
   CVE-2021-33909: 174c34d9cda1b5818419b8f5a332ced10755e52f seq_file: disallow extremely large seq buffer allocations
   CVE-2021-38160: f6ec306b93dc600a0ab3bb2693568ef1cc5f7f7a virtio_console: Assure used length from device is limited
   CVE-2021-38199: ff4023d0194263a0827c954f623c314978cf7ddd NFSv4: Initialise connection to the server in nfs4_alloc_client()
+  CVE-2021-4154: 811763e3beb6c922d168e9f509ec593e9240842e cgroup: verify that source is a string
 
 CVEs fixed in 5.10.54:
   CVE-2021-3679: 757bdba8026be19b4f447487695cd0349a648d9e tracing: Fix bug in rb_per_cpu_empty() that might cause deadloop.
@@ -228,6 +234,9 @@ CVEs fixed in 5.10.73:
   CVE-2021-20321: 9763ffd4da217adfcbdcd519e9f434dfa3952fc3 ovl: fix missing negative dentry check in ovl_rename()
   CVE-2021-41864: 064faa8e8a9b50f5010c5aa5740e06d477677a89 bpf: Fix integer overflow in prealloc_elems_and_freelist()
 
+CVEs fixed in 5.10.75:
+  CVE-2021-4149: 206868a5b6c14adc4098dd3210a2f7510d97a670 btrfs: unlock newly allocated extent buffer after error
+
 CVEs fixed in 5.10.76:
   CVE-2021-3760: 77c0ef979e32b8bc22f36a013bab77cd37e31530 nfc: nci: fix the UAF of rf_conn_info object
   CVE-2021-3896: 7f221ccbee4ec662e2292d490a43ce6c314c4594 isdn: cpai: check ctr->cnr to avoid array index out of bound
@@ -259,6 +268,17 @@ CVEs fixed in 5.10.84:
 
 CVEs fixed in 5.10.85:
   CVE-2021-39685: 7193ad3e50e596ac2192531c58ba83b9e6d2444b USB: gadget: detect too-big endpoint 0 requests
+
+CVEs fixed in 5.10.88:
+  CVE-2021-28711: 8ac3b6ee7c9ff2df7c99624bb1235e2e55623825 xen/blkfront: harden blkfront against event channel storms
+  CVE-2021-28712: d31b3379179d64724d3bbfa87bd4ada94e3237de xen/netfront: harden netfront against event channel storms
+  CVE-2021-28713: 8fa3a370cc2af858a9ba662ca4f2bd0917550563 xen/console: harden hvc_xen against event channel storms
+  CVE-2021-28714: 525875c410df5d876b9615c44885ca7640aed6f2 xen/netback: fix rx queue stall detection
+  CVE-2021-28715: 88f20cccbeec9a5e83621df5cc2453b5081454dc xen/netback: don't queue unlimited number of packages
+  CVE-2021-4135: 1a34fb9e2bf3029f7c0882069d67ff69cbd645d8 netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc
+
+CVEs fixed in 5.10.89:
+  CVE-2021-44733: c05d8f66ec3470e5212c4d08c46d6cb5738d600d tee: handle lookup of shm with reference count 0
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -316,11 +336,6 @@ Outstanding CVEs:
   CVE-2021-0924: (unk)  
   CVE-2021-0961: (unk)  
   CVE-2021-26934: (unk)  
-  CVE-2021-28711: (unk) xen/blkfront: harden blkfront against event channel storms 
-  CVE-2021-28712: (unk) xen/netfront: harden netfront against event channel storms 
-  CVE-2021-28713: (unk) xen/console: harden hvc_xen against event channel storms 
-  CVE-2021-28714: (unk) xen/netback: fix rx queue stall detection 
-  CVE-2021-28715: (unk) xen/netback: don't queue unlimited number of packages 
   CVE-2021-32078: (unk) ARM: footbridge: remove personal server platform 
   CVE-2021-3542: (unk)  
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
@@ -329,11 +344,9 @@ Outstanding CVEs:
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
-  CVE-2021-4032: (unk) Revert "KVM: x86: Open code necessary bits of kvm_lapic_set_base() at vCPU RESET" 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
-  CVE-2021-4095: (unk)  
-  CVE-2021-4135: (unk) netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc 
+  CVE-2021-4148: (unk)  
+  CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-43976: (unk)  
-  CVE-2021-44733: (unk)  
   CVE-2021-45095: (unk) phonet: refcount leak in pep_sock_accep 
-  CVE-2021-45100: (unk)  
+  CVE-2021-45469: (unk)  
