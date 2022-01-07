@@ -62065,7 +62065,8 @@
         "cmt_msg": "xen/blkfront: harden blkfront against event channel storms",
         "fixes": "0fd08a34e8e3b67ec9bd8287ac0facf8374b844a",
         "last_affected_version": "5.15.10",
-        "last_modified": "2021-12-31",
+        "last_modified": "2022-01-06",
+        "nvd_text": "Rogue backends can cause DoS of guests via high frequency events T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Xen offers the ability to run PV backends in regular unprivileged guests, typically referred to as \"driver domains\". Running PV backends in driver domains has one primary security advantage: if a driver domain gets compromised, it doesn't have the privileges to take over the system. However, a malicious driver domain could try to attack other guests via sending events at a high frequency leading to a Denial of Service in the guest due to trying to service interrupts for elongated amounts of time. There are three affected backends: * blkfront patch 1, CVE-2021-28711 * netfront patch 2, CVE-2021-28712 * hvc_xen (console) patch 3, CVE-2021-28713",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28711",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28711",
@@ -62081,7 +62082,8 @@
         "cmt_msg": "xen/netfront: harden netfront against event channel storms",
         "fixes": "b27d47950e481f292c0a5ad57357edb9d95d03ba",
         "last_affected_version": "5.15.10",
-        "last_modified": "2021-12-31",
+        "last_modified": "2022-01-06",
+        "nvd_text": "Rogue backends can cause DoS of guests via high frequency events T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Xen offers the ability to run PV backends in regular unprivileged guests, typically referred to as \"driver domains\". Running PV backends in driver domains has one primary security advantage: if a driver domain gets compromised, it doesn't have the privileges to take over the system. However, a malicious driver domain could try to attack other guests via sending events at a high frequency leading to a Denial of Service in the guest due to trying to service interrupts for elongated amounts of time. There are three affected backends: * blkfront patch 1, CVE-2021-28711 * netfront patch 2, CVE-2021-28712 * hvc_xen (console) patch 3, CVE-2021-28713",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28712",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28712",
@@ -62097,7 +62099,8 @@
         "cmt_msg": "xen/console: harden hvc_xen against event channel storms",
         "fixes": "fe415186b43df0db1f17fa3a46275fd92107fe71",
         "last_affected_version": "5.15.10",
-        "last_modified": "2021-12-31",
+        "last_modified": "2022-01-06",
+        "nvd_text": "Rogue backends can cause DoS of guests via high frequency events T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Xen offers the ability to run PV backends in regular unprivileged guests, typically referred to as \"driver domains\". Running PV backends in driver domains has one primary security advantage: if a driver domain gets compromised, it doesn't have the privileges to take over the system. However, a malicious driver domain could try to attack other guests via sending events at a high frequency leading to a Denial of Service in the guest due to trying to service interrupts for elongated amounts of time. There are three affected backends: * blkfront patch 1, CVE-2021-28711 * netfront patch 2, CVE-2021-28712 * hvc_xen (console) patch 3, CVE-2021-28713",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28713",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28713",
@@ -62108,12 +62111,12 @@
         }
     },
     "CVE-2021-28714": {
-        "affected_versions": "unk to v5.16-rc7",
-        "breaks": "",
+        "affected_versions": "v4.3-rc1 to v5.16-rc7",
+        "breaks": "1d5d48523900a4b0f25d6b52f1a93c84bd671186",
         "cmt_msg": "xen/netback: fix rx queue stall detection",
         "fixes": "6032046ec4b70176d247a71836186d47b25d1684",
         "last_affected_version": "5.15.10",
-        "last_modified": "2021-12-31",
+        "last_modified": "2022-01-06",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28714",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28714",
@@ -62124,12 +62127,12 @@
         }
     },
     "CVE-2021-28715": {
-        "affected_versions": "unk to v5.16-rc7",
-        "breaks": "",
+        "affected_versions": "v3.18-rc3 to v5.16-rc7",
+        "breaks": "f48da8b14d04ca87ffcffe68829afd45f926ec6a",
         "cmt_msg": "xen/netback: don't queue unlimited number of packages",
         "fixes": "be81992f9086b230623ae3ebbc85ecee4d00a3d3",
         "last_affected_version": "5.15.10",
-        "last_modified": "2021-12-31",
+        "last_modified": "2022-01-06",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28715",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28715",
@@ -64626,12 +64629,12 @@
         }
     },
     "CVE-2021-3736": {
-        "affected_versions": "unk to v5.15-rc1",
-        "breaks": "",
+        "affected_versions": "v5.14-rc1 to v5.15-rc1",
+        "breaks": "681c1615f8914451cfd432ad30e2f307b6490542",
         "cmt_msg": "vfio/mbochs: Fix missing error unwind of mbochs_used_mbytes",
         "fixes": "de5494af4815a4c9328536c72741229b7de88e7f",
         "last_affected_version": "5.14.5",
-        "last_modified": "2021-11-28",
+        "last_modified": "2022-01-06",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3736",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3736",
@@ -64690,12 +64693,12 @@
         }
     },
     "CVE-2021-3752": {
-        "affected_versions": "unk to v5.16-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.16-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: fix use-after-free error in lock_sock_nested()",
         "fixes": "1bff51ea59a9afb67d2dd78518ab0582a54a472c",
         "last_affected_version": "5.15.2",
-        "last_modified": "2021-12-21",
+        "last_modified": "2022-01-06",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3752",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3752",
@@ -65486,9 +65489,41 @@
         },
         "rejected": true
     },
-    "CVE-2021-39636": {
-        "affected_versions": "unk to v4.16-rc1",
+    "CVE-2021-39633": {
+        "affected_versions": "unk to v5.14",
         "breaks": "",
+        "cmt_msg": "ip_gre: add validation for csum_start",
+        "fixes": "1d011c4803c72f3907eccfc1ec63caefb852fcbf",
+        "last_affected_version": "5.13",
+        "last_modified": "2022-01-06",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39633",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39633",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-39633",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-39633",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-39633",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-39633"
+        }
+    },
+    "CVE-2021-39634": {
+        "affected_versions": "unk to v5.9-rc8",
+        "breaks": "",
+        "cmt_msg": "epoll: do not insert into poll queues until all sanity checks are done",
+        "fixes": "f8d4f44df056c5b504b0d49683fb7279218fd207",
+        "last_affected_version": "5.4.69",
+        "last_modified": "2022-01-06",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39634",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39634",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-39634",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-39634",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-39634",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-39634"
+        }
+    },
+    "CVE-2021-39636": {
+        "affected_versions": "v2.6.12-rc2 to v4.16-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "netfilter: x_tables: fix pointer leaks to userspace",
         "cvss2": {
             "Access Complexity": "Low",
@@ -65515,7 +65550,7 @@
         "cwe": "Missing Initialization of Resource",
         "fixes": "1e98ffea5a8935ec040ab72299e349cb44b8defd",
         "last_affected_version": "4.14.36",
-        "last_modified": "2021-12-21",
+        "last_modified": "2022-01-06",
         "nvd_text": "In do_ipt_get_ctl and do_ipt_set_ctl of ip_tables.c, there is a possible way to leak kernel information due to uninitialized data. This could lead to local information disclosure with system execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-120612905References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39636",
@@ -65527,8 +65562,8 @@
         }
     },
     "CVE-2021-39648": {
-        "affected_versions": "unk to v5.11-rc3",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.11-rc3",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "usb: gadget: configfs: Fix use-after-free issue with udc_name",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -65555,7 +65590,7 @@
         "cwe": "Exposure of Resource to Wrong Sphere",
         "fixes": "64e6bbfff52db4bf6785fab9cffab850b2de6870",
         "last_affected_version": "5.10.6",
-        "last_modified": "2021-12-21",
+        "last_modified": "2022-01-06",
         "nvd_text": "In gadget_dev_desc_UDC_show of configfs.c, there is a possible disclosure of kernel heap memory due to a race condition. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-160822094References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39648",
@@ -65567,8 +65602,8 @@
         }
     },
     "CVE-2021-39656": {
-        "affected_versions": "unk to v5.12-rc3",
-        "breaks": "",
+        "affected_versions": "v5.3-rc8 to v5.12-rc3",
+        "breaks": "b0841eefd9693827afb9888235e26ddd098f9cef",
         "cmt_msg": "configfs: fix a use-after-free in __configfs_open_file",
         "cvss2": {
             "Access Complexity": "Low",
@@ -65595,7 +65630,7 @@
         "cwe": "Use After Free",
         "fixes": "14fbbc8297728e880070f7b077b3301a8c698ef9",
         "last_affected_version": "5.11.6",
-        "last_modified": "2021-12-21",
+        "last_modified": "2022-01-06",
         "nvd_text": "In __configfs_open_file of file.c, there is a possible use-after-free due to improper locking. This could lead to local escalation of privilege in the kernel with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-174049066References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39656",
@@ -65607,8 +65642,8 @@
         }
     },
     "CVE-2021-39657": {
-        "affected_versions": "unk to v5.11-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.11-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "scsi: ufs: Correct the LUN used in eh_device_reset_handler() callback",
         "cvss2": {
             "Access Complexity": "Low",
@@ -65635,7 +65670,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "35fc4cd34426c242ab015ef280853b7bff101f48",
         "last_affected_version": "5.10.10",
-        "last_modified": "2021-12-21",
+        "last_modified": "2022-01-06",
         "nvd_text": "In ufshcd_eh_device_reset_handler of ufshcd.c, there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-194696049References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39657",
@@ -65695,12 +65730,12 @@
         }
     },
     "CVE-2021-4028": {
-        "affected_versions": "unk to v5.15-rc4",
-        "breaks": "",
+        "affected_versions": "v5.10-rc1 to v5.15-rc4",
+        "breaks": "732d41c545bb359cbb8c94698bdc1f8bcf82279c",
         "cmt_msg": "RDMA/cma: Do not change route.addr.src_addr.ss_family",
         "fixes": "bc0bdc5afaa740d782fbf936aaeebd65e5c2921d",
         "last_affected_version": "5.14.9",
-        "last_modified": "2021-12-21",
+        "last_modified": "2022-01-06",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4028",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4028",
@@ -66013,6 +66048,20 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-41864",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-41864",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-41864"
+        }
+    },
+    "CVE-2021-4197": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2022-01-06",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4197",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4197",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4197",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4197",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4197",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4197"
         }
     },
     "CVE-2021-42008": {
@@ -66417,9 +66466,32 @@
         "affected_versions": "v4.12-rc1 to v5.16-rc7",
         "breaks": "967c9cca2cc50569efc65945325c173cecba83bd",
         "cmt_msg": "tee: handle lookup of shm with reference count 0",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Use After Free",
         "fixes": "dfd0743f1d9ea76931510ed150334d571fbab49d",
         "last_affected_version": "5.15.11",
-        "last_modified": "2021-12-31",
+        "last_modified": "2022-01-06",
         "nvd_text": "A use-after-free exists in drivers/tee/tee_shm.c in the TEE subsystem in the Linux kernel through 5.15.11. This occurs because of a race condition in tee_shm_get_from_id during an attempt to free a shared memory object.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-44733",
@@ -66512,8 +66584,31 @@
     "CVE-2021-45469": {
         "affected_versions": "v3.8-rc1 to unk",
         "breaks": "af48b85b8cd3fbb12c9b6759c16db6d69c0b03da",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "5598b24efaf4892741c798b425d543e4bed357a1",
-        "last_modified": "2021-12-31",
+        "last_modified": "2022-01-06",
         "nvd_text": "In __f2fs_setxattr in fs/f2fs/xattr.c in the Linux kernel through 5.15.11, there is an out-of-bounds memory access when an inode has an invalid last xattr entry.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-45469",

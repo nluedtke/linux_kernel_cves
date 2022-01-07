@@ -959,6 +959,7 @@ CVEs fixed in 4.9.239:
   CVE-2020-25211: 9c61977a713511c01abdf9b2a72693d21cb60556 netfilter: ctnetlink: add a range check for l3/l4 protonum
   CVE-2020-28915: 6f1adb22fc0c567d65e8c56cc04d633d2fa1bfb4 fbcon: Fix global-out-of-bounds read in fbcon_get_font()
   CVE-2021-0448: 9c61977a713511c01abdf9b2a72693d21cb60556 netfilter: ctnetlink: add a range check for l3/l4 protonum
+  CVE-2021-39634: a16d314ccda2efa6173f2ae7d386f99c61d273a4 epoll: do not insert into poll queues until all sanity checks are done
 
 CVEs fixed in 4.9.240:
   CVE-2020-10135: b77912c3bfc6e384c0ec0c08840a37d1f79ee5de Bluetooth: Consolidate encryption handling in hci_encrypt_cfm
@@ -1042,7 +1043,6 @@ CVEs fixed in 4.9.262:
   CVE-2019-19061: 10f675ec4eda0801791546980b35cc41589815aa iio: imu: adis16400: fix memory leak
   CVE-2021-28660: b318d268318be4c229fb4c0d4f6ff1d7251c88d7 staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan()
   CVE-2021-29265: bce53f0b8e90d2821ec5fa14689949a025e8b63d usbip: fix stub_dev usbip_sockfd_store() races leading to gpf
-  CVE-2021-39656: 6f5c47f0faed69f2e78e733fb18261854979e79f configfs: fix a use-after-free in __configfs_open_file
 
 CVEs fixed in 4.9.263:
   CVE-2021-28964: ca403b79f4330bb5a8df3551e39610db6c06c46f btrfs: fix race when cloning extent buffer during rewind of an old root
@@ -1124,6 +1124,7 @@ CVEs fixed in 4.9.281:
 
 CVEs fixed in 4.9.282:
   CVE-2021-3753: 755a2f40dda2d6b2e3b8624cb052e68947ee4d1f vt_kdsetmode: extend console locking
+  CVE-2021-39633: 41d5dfa408130433cc5f037ad89bed854bf936f7 ip_gre: add validation for csum_start
 
 CVEs fixed in 4.9.283:
   CVE-2020-3702: ea3f7df20fc8e0b82ec0e065b0b0d38e55fd7775 ath: Use safer key clearing with key cache entries
@@ -1315,7 +1316,6 @@ Outstanding CVEs:
   CVE-2021-3542: (unk)  
   CVE-2021-35477: (unk) bpf: Introduce BPF nospec instruction for mitigating Spectre v4 
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
-  CVE-2021-3736: (unk) vfio/mbochs: Fix missing error unwind of mbochs_used_mbytes 
   CVE-2021-3759: (unk) memcg: enable accounting of ipc resources 
   CVE-2021-38198: (unk) KVM: X86: MMU: Use the correct inherited permissions to get shadow page 
   CVE-2021-38199: (unk) NFSv4: Initialise connection to the server in nfs4_alloc_client() 
@@ -1324,11 +1324,11 @@ Outstanding CVEs:
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
   CVE-2021-39636: (unk) netfilter: x_tables: fix pointer leaks to userspace 
-  CVE-2021-4028: (unk) RDMA/cma: Do not change route.addr.src_addr.ss_family 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
   CVE-2021-4148: (unk)  
   CVE-2021-4149: (unk) btrfs: unlock newly allocated extent buffer after error 
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
+  CVE-2021-4197: (unk)  
   CVE-2021-42739: (unk) media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt() 
   CVE-2021-43975: (unk) atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait 
   CVE-2021-43976: (unk)  

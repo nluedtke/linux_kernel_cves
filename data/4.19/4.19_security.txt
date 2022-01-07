@@ -572,6 +572,7 @@ CVEs fixed in 4.19.150:
   CVE-2020-14386: 1c3886dc302329f199cc04f8a56ba44d17a0df16 net/packet: fix overflow in tpacket_rcv
   CVE-2020-25211: 289fe546ea16c2dcb57c5198c5a7b7387604530e netfilter: ctnetlink: add a range check for l3/l4 protonum
   CVE-2021-0448: 289fe546ea16c2dcb57c5198c5a7b7387604530e netfilter: ctnetlink: add a range check for l3/l4 protonum
+  CVE-2021-39634: 3e3bbc4d23eeb90bf282e98c7dfeca7702df3169 epoll: do not insert into poll queues until all sanity checks are done
 
 CVEs fixed in 4.19.151:
   CVE-2020-28915: 43198a5b1c42e3d8aadc6524a73bb3aa3666cd43 fbcon: Fix global-out-of-bounds read in fbcon_get_font()
@@ -668,7 +669,6 @@ CVEs fixed in 4.19.181:
   CVE-2021-28660: eda4378094de16090d74eacea3d8c10f7719ed25 staging: rtl8188eu: prevent ->ssid overflow in rtw_wx_set_scan()
   CVE-2021-29265: c6b0ca71d3cd561decd39c1c4132c2d10a496e1a usbip: fix stub_dev usbip_sockfd_store() races leading to gpf
   CVE-2021-33033: a44af1c69737f9e64d5134c34eb9d5c4c2e04da1 cipso,calipso: resolve a number of problems with the DOI refcounts
-  CVE-2021-39656: 9123463620132ada85caf5dc664b168f480b0cc4 configfs: fix a use-after-free in __configfs_open_file
 
 CVEs fixed in 4.19.183:
   CVE-2021-28964: 12dc6889bcff1bc2921a1587afca55ca4091b73e btrfs: fix race when cloning extent buffer during rewind of an old root
@@ -771,6 +771,7 @@ CVEs fixed in 4.19.206:
   CVE-2021-3444: 39f74b7c81cca139c05757d9c8f9d1e35fbbf56b bpf: Fix truncation handling for mod32 dst reg wrt zero
   CVE-2021-3600: 8313432df224d926590731ec3ace3e1bd7bc4a1a bpf: Fix 32 bit src register truncation on div/mod
   CVE-2021-3753: 0776c1a20babb4ad0b7ce7f2f4e0806a97663187 vt_kdsetmode: extend console locking
+  CVE-2021-39633: c33471daf2763c5aee2b7926202c74b75c365119 ip_gre: add validation for csum_start
 
 CVEs fixed in 4.19.207:
   CVE-2020-16119: dfec82f3e5b8bd93ab65b7417a64886ec8c42f14 dccp: don't duplicate ccid when cloning dccp sock
@@ -828,6 +829,9 @@ CVEs fixed in 4.19.222:
   CVE-2021-28714: 1de7644eac41981817fb66b74e0f82ca4477dc9d xen/netback: fix rx queue stall detection
   CVE-2021-28715: c9f17e92917fd5786be872626a3928979ecc4c39 xen/netback: don't queue unlimited number of packages
   CVE-2021-4135: d861443c4dc88650eed113310d933bd593d37b23 netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc
+
+CVEs fixed in 4.19.224:
+  CVE-2021-44733: b4a661b4212b8fac8853ec3b68e4a909dccc88a1 tee: handle lookup of shm with reference count 0
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -922,17 +926,15 @@ Outstanding CVEs:
   CVE-2021-32078: (unk) ARM: footbridge: remove personal server platform 
   CVE-2021-3542: (unk)  
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
-  CVE-2021-3736: (unk) vfio/mbochs: Fix missing error unwind of mbochs_used_mbytes 
   CVE-2021-3759: (unk) memcg: enable accounting of ipc resources 
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
-  CVE-2021-4028: (unk) RDMA/cma: Do not change route.addr.src_addr.ss_family 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
   CVE-2021-4148: (unk)  
   CVE-2021-4149: (unk) btrfs: unlock newly allocated extent buffer after error 
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
+  CVE-2021-4197: (unk)  
   CVE-2021-43976: (unk)  
-  CVE-2021-44733: (unk) tee: handle lookup of shm with reference count 0 
   CVE-2021-45095: (unk) phonet: refcount leak in pep_sock_accep 
   CVE-2021-45469: (unk)  

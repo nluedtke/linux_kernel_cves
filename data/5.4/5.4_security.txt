@@ -257,6 +257,7 @@ CVEs fixed in 5.4.68:
 CVEs fixed in 5.4.70:
   CVE-2020-25211: 253052b636e98083b1ecc3e9b0cf6f151e1cb8c6 netfilter: ctnetlink: add a range check for l3/l4 protonum
   CVE-2021-0448: 253052b636e98083b1ecc3e9b0cf6f151e1cb8c6 netfilter: ctnetlink: add a range check for l3/l4 protonum
+  CVE-2021-39634: 8993da3d4d3a7ae721e9dafa140ba64c0e632a50 epoll: do not insert into poll queues until all sanity checks are done
 
 CVEs fixed in 5.4.71:
   CVE-2020-28915: 1b2fcd82c0ca23f6fa01298c0d7b59eb4efbaf48 fbcon: Fix global-out-of-bounds read in fbcon_get_font()
@@ -486,6 +487,7 @@ CVEs fixed in 5.4.143:
 CVEs fixed in 5.4.144:
   CVE-2021-3739: d7f7eca72ecc08f0bb6897fda2290293fca63068 btrfs: fix NULL pointer dereference when deleting device by invalid id
   CVE-2021-3753: f4418015201bdca0cd4e28b363d88096206e4ad0 vt_kdsetmode: extend console locking
+  CVE-2021-39633: 53b480e68c1c2c778b620cc7f45a2ba5dff518ca ip_gre: add validation for csum_start
 
 CVEs fixed in 5.4.145:
   CVE-2021-40490: 9b3849ba667af99ee99a7853a021a7786851b9fd ext4: fix race writing to an inline_data file while its xattrs are changing
@@ -547,6 +549,9 @@ CVEs fixed in 5.4.168:
   CVE-2021-28714: 8bfcd0385211044627f93d170991da1ae5937245 xen/netback: fix rx queue stall detection
   CVE-2021-28715: 0d99b3c6bd39a0a023e972d8f912fd47698bbbb8 xen/netback: don't queue unlimited number of packages
   CVE-2021-4135: 699e794c12a3cd79045ff135bc87a53b97024e43 netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc
+
+CVEs fixed in 5.4.170:
+  CVE-2021-44733: 940e68e57ab69248fabba5889e615305789db8a7 tee: handle lookup of shm with reference count 0
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -620,16 +625,14 @@ Outstanding CVEs:
   CVE-2021-32078: (unk) ARM: footbridge: remove personal server platform 
   CVE-2021-3542: (unk)  
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
-  CVE-2021-3736: (unk) vfio/mbochs: Fix missing error unwind of mbochs_used_mbytes 
   CVE-2021-3759: (unk) memcg: enable accounting of ipc resources 
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
-  CVE-2021-4028: (unk) RDMA/cma: Do not change route.addr.src_addr.ss_family 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
   CVE-2021-4148: (unk)  
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
+  CVE-2021-4197: (unk)  
   CVE-2021-43976: (unk)  
-  CVE-2021-44733: (unk) tee: handle lookup of shm with reference count 0 
   CVE-2021-45095: (unk) phonet: refcount leak in pep_sock_accep 
   CVE-2021-45469: (unk)  
