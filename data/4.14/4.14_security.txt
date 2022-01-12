@@ -987,6 +987,7 @@ CVEs fixed in 4.14.249:
   CVE-2021-37159: 4c0db9c4b3701c29f47bac0721e2f7d2b15d8edb usb: hso: fix error handling code of hso_create_net_device
   CVE-2021-3744: 3707e37b3fcef4d5e9a81b9c2c48ba7248051c2a crypto: ccp - fix resource leaks in ccp_run_aes_gcm_cmd()
   CVE-2021-3764: 3707e37b3fcef4d5e9a81b9c2c48ba7248051c2a crypto: ccp - fix resource leaks in ccp_run_aes_gcm_cmd()
+  CVE-2021-4203: 9d76f723256d68eea16f0c563fc80b3c14258634 af_unix: fix races in sk_peer_pid and sk_peer_cred accesses
 
 CVEs fixed in 4.14.250:
   CVE-2021-20317: 0135fcb86a0bc9e4484f7e1228cadcc343c5edef lib/timerqueue: Rely on rbtree semantics for next timer
@@ -1010,6 +1011,7 @@ CVEs fixed in 4.14.255:
 CVEs fixed in 4.14.256:
   CVE-2021-3640: 3eb50acbc96c9de3d8a056982938ece9bd1c2b91 Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()
   CVE-2021-3752: cd76d797a690969186c0c100e8a301c4480e4e7f Bluetooth: fix use-after-free error in lock_sock_nested()
+  CVE-2021-4202: 6e2944d8bbc58682691438b57620491b5a4b7cfb NFC: reorganize the functions in nci_request
 
 CVEs fixed in 4.14.257:
   CVE-2021-4002: 7bf1f5cb5150b1a53f6ccaadc0bc77f8f33206c8 hugetlbfs: flush TLBs correctly after huge_pmd_unshare
@@ -1027,6 +1029,10 @@ CVEs fixed in 4.14.259:
 
 CVEs fixed in 4.14.261:
   CVE-2021-44733: 3d556a28bbfe34a80b014db49908b0f1bcb1ae80 tee: handle lookup of shm with reference count 0
+
+CVEs fixed in 4.14.262:
+  CVE-2021-4155: 2af625c89bf4a41c8a0bc818d8cf30a291f216ca xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
+  CVE-2021-45095: a025db5658d5c10019ffed0d59026da8172897b6 phonet: refcount leak in pep_sock_accep
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1132,9 +1138,7 @@ Outstanding CVEs:
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
   CVE-2021-0399: (unk)  
   CVE-2021-0695: (unk)  
-  CVE-2021-0924: (unk)  
   CVE-2021-0929: (unk) staging/android/ion: delete dma_buf->kmap/unmap implemenation 
-  CVE-2021-0961: (unk)  
   CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
   CVE-2021-20322: (unk) ipv6: make exception cache less predictible 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
@@ -1158,5 +1162,4 @@ Outstanding CVEs:
   CVE-2021-4197: (unk)  
   CVE-2021-43975: (unk) atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait 
   CVE-2021-43976: (unk)  
-  CVE-2021-45095: (unk) phonet: refcount leak in pep_sock_accep 
   CVE-2021-45469: (unk)  

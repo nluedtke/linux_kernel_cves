@@ -60551,7 +60551,7 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "",
-        "last_modified": "2021-12-21",
+        "last_modified": "2022-01-11",
         "nvd_text": "In xhci_vendor_get_ops of xhci.c, there is a possible out of bounds read due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-194461020References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0924",
@@ -60560,7 +60560,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0924",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-0924",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-0924"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2021-0929": {
         "affected_versions": "unk to v5.6-rc1",
@@ -60803,7 +60804,7 @@
         },
         "cwe": "Missing Initialization of Resource",
         "fixes": "",
-        "last_modified": "2021-12-21",
+        "last_modified": "2022-01-11",
         "nvd_text": "In quota_proc_write of xt_quota2.c, there is a possible way to read kernel memory due to uninitialized data. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-196046570References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0961",
@@ -60812,7 +60813,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0961",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-0961",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-0961"
-        }
+        },
+        "vendor_specific": true
     },
     "CVE-2021-1048": {
         "affected_versions": "v5.9-rc2 to v5.9-rc4",
@@ -62116,7 +62118,8 @@
         "cmt_msg": "xen/netback: fix rx queue stall detection",
         "fixes": "6032046ec4b70176d247a71836186d47b25d1684",
         "last_affected_version": "5.15.10",
-        "last_modified": "2022-01-06",
+        "last_modified": "2022-01-11",
+        "nvd_text": "Guest can force Linux netback driver to hog large amounts of kernel memory T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Incoming data packets for a guest in the Linux kernel's netback driver are buffered until the guest is ready to process them. There are some measures taken for avoiding to pile up too much data, but those can be bypassed by the guest: There is a timeout how long the client side of an interface can stop consuming new packets before it is assumed to have stalled, but this timeout is rather long (60 seconds by default). Using a UDP connection on a fast interface can easily accumulate gigabytes of data in that time. (CVE-2021-28715) The timeout could even never trigger if the guest manages to have only one free slot in its RX queue ring page and the next package would require more than one free slot, which may be the case when using GSO, XDP, or software hashing. (CVE-2021-28714)",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28714",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28714",
@@ -62132,7 +62135,8 @@
         "cmt_msg": "xen/netback: don't queue unlimited number of packages",
         "fixes": "be81992f9086b230623ae3ebbc85ecee4d00a3d3",
         "last_affected_version": "5.15.10",
-        "last_modified": "2022-01-06",
+        "last_modified": "2022-01-11",
+        "nvd_text": "Guest can force Linux netback driver to hog large amounts of kernel memory T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Incoming data packets for a guest in the Linux kernel's netback driver are buffered until the guest is ready to process them. There are some measures taken for avoiding to pile up too much data, but those can be bypassed by the guest: There is a timeout how long the client side of an interface can stop consuming new packets before it is assumed to have stalled, but this timeout is rather long (60 seconds by default). Using a UDP connection on a fast interface can easily accumulate gigabytes of data in that time. (CVE-2021-28715) The timeout could even never trigger if the guest manages to have only one free slot in its RX queue ring page and the next package would require more than one free slot, which may be the case when using GSO, XDP, or software hashing. (CVE-2021-28714)",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28715",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-28715",
@@ -65490,12 +65494,12 @@
         "rejected": true
     },
     "CVE-2021-39633": {
-        "affected_versions": "unk to v5.14",
-        "breaks": "",
+        "affected_versions": "v3.10-rc1 to v5.14",
+        "breaks": "c54419321455631079c7d6e60bc732dd0c5914c5",
         "cmt_msg": "ip_gre: add validation for csum_start",
         "fixes": "1d011c4803c72f3907eccfc1ec63caefb852fcbf",
         "last_affected_version": "5.13",
-        "last_modified": "2022-01-06",
+        "last_modified": "2022-01-11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39633",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39633",
@@ -65506,12 +65510,12 @@
         }
     },
     "CVE-2021-39634": {
-        "affected_versions": "unk to v5.9-rc8",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.9-rc8",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "epoll: do not insert into poll queues until all sanity checks are done",
         "fixes": "f8d4f44df056c5b504b0d49683fb7279218fd207",
         "last_affected_version": "5.4.69",
-        "last_modified": "2022-01-06",
+        "last_modified": "2022-01-11",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39634",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39634",
@@ -65994,6 +65998,22 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-4154"
         }
     },
+    "CVE-2021-4155": {
+        "affected_versions": "unk to v5.16",
+        "breaks": "",
+        "cmt_msg": "xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate",
+        "fixes": "983d8e60f50806f90534cc5373d0ce867e5aaf79",
+        "last_affected_version": "5.15.13",
+        "last_modified": "2022-01-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4155",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4155",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4155",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4155",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4155",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4155"
+        }
+    },
     "CVE-2021-4157": {
         "affected_versions": "v4.0-rc1 to v5.13-rc1",
         "breaks": "d67ae825a59d639e4d8b82413af84d854617a87e",
@@ -66102,6 +66122,52 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-42008",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-42008",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-42008"
+        }
+    },
+    "CVE-2021-4202": {
+        "affected_versions": "unk to v5.16-rc2",
+        "breaks": "",
+        "cmt_msg": "NFC: reorganize the functions in nci_request",
+        "fixes": "86cdf8e38792545161dbe3350a7eced558ba4d15",
+        "last_affected_version": "5.15.4",
+        "last_modified": "2022-01-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4202",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4202",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4202",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4202",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4202",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4202"
+        }
+    },
+    "CVE-2021-4203": {
+        "affected_versions": "unk to v5.15-rc4",
+        "breaks": "",
+        "cmt_msg": "af_unix: fix races in sk_peer_pid and sk_peer_cred accesses",
+        "fixes": "35306eb23814444bd4021f8a1c3047d3cb0c8b2b",
+        "last_affected_version": "5.14.9",
+        "last_modified": "2022-01-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4203",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4203",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4203",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4203",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4203",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4203"
+        }
+    },
+    "CVE-2021-4204": {
+        "affected_versions": "v5.8-rc1 to unk",
+        "breaks": "457f44363a8894135c85b7a9afd2bd8196db24ab",
+        "fixes": "",
+        "last_modified": "2022-01-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4204",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4204",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4204",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4204",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4204",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4204"
         }
     },
     "CVE-2021-42252": {
@@ -66530,7 +66596,8 @@
         },
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "bcd0f93353326954817a4f9fa55ec57fb38acbb0",
-        "last_modified": "2021-12-31",
+        "last_affected_version": "5.15.13",
+        "last_modified": "2022-01-11",
         "nvd_text": "pep_sock_accept in net/phonet/pep.c in the Linux kernel through 5.15.8 has a refcount leak.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-45095",
@@ -66623,9 +66690,32 @@
         "affected_versions": "v5.13-rc4 to v5.16-rc6",
         "breaks": "aced3ce57cd37b5ca332bcacd370d01f5a8c5371",
         "cmt_msg": "rds: memory leak in __rds_conn_create()",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:N/I:N/A:C",
+            "score": 4.7
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Missing Release of Memory after Effective Lifetime",
         "fixes": "5f9562ebe710c307adc5f666bf1a2162ee7977c0",
         "last_affected_version": "5.15.10",
-        "last_modified": "2021-12-31",
+        "last_modified": "2022-01-11",
         "nvd_text": "An issue was discovered in the Linux kernel before 5.15.11. There is a memory leak in the __rds_conn_create() function in net/rds/connection.c in a certain combination of circumstances.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-45480",
@@ -66657,9 +66747,32 @@
         "affected_versions": "v3.16-rc1 to v5.13-rc1",
         "breaks": "73f156a6e8c1074ac6327e0abd1169e95eb66463",
         "cmt_msg": "inet: use bigger hash table for IP ID generation",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Use of a Broken or Risky Cryptographic Algorithm",
         "fixes": "aa6dd211e4b1dde9d5dc25d699d35f789ae7eeba",
         "last_affected_version": "5.12.3",
-        "last_modified": "2021-12-31",
+        "last_modified": "2022-01-11",
         "nvd_text": "In the IPv4 implementation in the Linux kernel before 5.12.4, net/ipv4/route.c has an information leak because the hash table is very small.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-45486",
