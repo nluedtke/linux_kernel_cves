@@ -65499,7 +65499,8 @@
         "cmt_msg": "ip_gre: add validation for csum_start",
         "fixes": "1d011c4803c72f3907eccfc1ec63caefb852fcbf",
         "last_affected_version": "5.13",
-        "last_modified": "2022-01-11",
+        "last_modified": "2022-01-17",
+        "nvd_text": "In gre_handle_offloads of ip_gre.c, there is a possible page fault due to an invalid memory access. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-150694665References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39633",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39633",
@@ -65515,7 +65516,8 @@
         "cmt_msg": "epoll: do not insert into poll queues until all sanity checks are done",
         "fixes": "f8d4f44df056c5b504b0d49683fb7279218fd207",
         "last_affected_version": "5.4.69",
-        "last_modified": "2022-01-11",
+        "last_modified": "2022-01-17",
+        "nvd_text": "In fs/eventpoll.c, there is a possible use after free. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-204450605References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39634",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39634",
@@ -65870,8 +65872,9 @@
     "CVE-2021-4095": {
         "affected_versions": "v5.12-rc1-dontuse to unk",
         "breaks": "629b5348841a10afce49fbe81619863fd839f217",
-        "fixes": "",
-        "last_modified": "2021-12-31",
+        "cmt_msg": "KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty",
+        "fixes": "55749769fe608fa3f4a075e42e89d237c8e37637",
+        "last_modified": "2022-01-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4095",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4095",
@@ -65999,12 +66002,12 @@
         }
     },
     "CVE-2021-4155": {
-        "affected_versions": "unk to v5.16",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.16",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate",
         "fixes": "983d8e60f50806f90534cc5373d0ce867e5aaf79",
-        "last_affected_version": "5.15.13",
-        "last_modified": "2022-01-11",
+        "last_affected_version": "5.15",
+        "last_modified": "2022-01-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4155",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4155",
@@ -66071,10 +66074,12 @@
         }
     },
     "CVE-2021-4197": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.16",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2022-01-06",
+        "cmt_msg": "cgroup: Use open-time credentials for process migraton perm checks",
+        "fixes": "1756d7994ad85c2479af6ae5a9750b92324685af",
+        "last_affected_version": "5.15",
+        "last_modified": "2022-01-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4197",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4197",
@@ -66125,12 +66130,12 @@
         }
     },
     "CVE-2021-4202": {
-        "affected_versions": "unk to v5.16-rc2",
-        "breaks": "",
+        "affected_versions": "v3.2-rc1 to v5.16-rc2",
+        "breaks": "6a2968aaf50c7a22fced77a5e24aa636281efca8",
         "cmt_msg": "NFC: reorganize the functions in nci_request",
         "fixes": "86cdf8e38792545161dbe3350a7eced558ba4d15",
         "last_affected_version": "5.15.4",
-        "last_modified": "2022-01-11",
+        "last_modified": "2022-01-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4202",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4202",
@@ -66141,12 +66146,12 @@
         }
     },
     "CVE-2021-4203": {
-        "affected_versions": "unk to v5.15-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.36-rc1 to v5.15-rc4",
+        "breaks": "109f6e39fa07c48f580125f531f46cb7c245b528",
         "cmt_msg": "af_unix: fix races in sk_peer_pid and sk_peer_cred accesses",
         "fixes": "35306eb23814444bd4021f8a1c3047d3cb0c8b2b",
         "last_affected_version": "5.14.9",
-        "last_modified": "2022-01-11",
+        "last_modified": "2022-01-17",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4203",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4203",
@@ -66730,9 +66735,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.14-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ipv6: use prandom_u32() for ID generation",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
+        },
+        "cwe": "Use of a Broken or Risky Cryptographic Algorithm",
         "fixes": "62f20e068ccc50d6ab66fdb72ba90da2b9418c99",
         "last_affected_version": "5.13.2",
-        "last_modified": "2021-12-31",
+        "last_modified": "2022-01-17",
         "nvd_text": "In the IPv6 implementation in the Linux kernel before 5.13.3, net/ipv6/output_core.c has an information leak because of certain use of a hash table which, although big, doesn't properly consider that IPv6-based attackers can typically choose among many IPv6 source addresses.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-45485",
@@ -66781,6 +66809,39 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-45486",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-45486",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-45486"
+        }
+    },
+    "CVE-2021-46283": {
+        "affected_versions": "v5.7-rc1 to v5.13-rc7",
+        "breaks": "65038428b2c6c5be79d3f78a6b79c0cdc3a58a41",
+        "cmt_msg": "netfilter: nf_tables: initialize set before expression setup",
+        "fixes": "ad9f151e560b016b6ad3280b48e42fa11e1a5440",
+        "last_affected_version": "5.12.12",
+        "last_modified": "2022-01-17",
+        "nvd_text": "nf_tables_newset in net/netfilter/nf_tables_api.c in the Linux kernel before 5.12.13 allows local users to cause a denial of service (NULL pointer dereference and general protection fault) because of the missing initialization for nft_set_elem_expr_alloc. A local user can set a netfilter table expression in their own namespace.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-46283",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-46283",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-46283",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-46283",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-46283",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-46283"
+        }
+    },
+    "CVE-2022-23222": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL",
+        "fixes": "c25b2ae136039ffa820c26138ed4a5e5f3ab3841",
+        "last_modified": "2022-01-17",
+        "nvd_text": "kernel/bpf/verifier.c in the Linux kernel through 5.15.14 allows local users to gain privileges because of the availability of pointer arithmetic via certain *_OR_NULL pointer types.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23222",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23222",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23222",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23222",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23222",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23222"
         }
     }
 }

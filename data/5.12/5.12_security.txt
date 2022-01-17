@@ -56,6 +56,7 @@ CVEs fixed in 5.12.13:
   CVE-2021-38200: 74c3c34a04bc226f77b9e515aa067072cff44e52 powerpc/perf: Fix crash in perf_instruction_pointer() when ppmu is not set
   CVE-2021-38206: 7b1b88232e40396ee1d8b19d42a050cda0a5aebb mac80211: Fix NULL ptr deref for injected rate info
   CVE-2021-38207: b6982493ed2dee412ccae062ccf7cf50fbe5a6a8 net: ll_temac: Fix TX BD buffer overwrite
+  CVE-2021-46283: a1f6740fa3938baa2a45c3dfc53402b78122a8a8 netfilter: nf_tables: initialize set before expression setup
 
 CVEs fixed in 5.12.14:
   CVE-2020-26541: 7be8fb1494c65f57bb6a95743cfbd3312fe9bf52 certs: Add EFI_CERT_X509_GUID support for dbx entries
@@ -176,7 +177,7 @@ Outstanding CVEs:
   CVE-2021-4083: (unk) fget: check that the fd still exists after getting a ref to it 
   CVE-2021-4090: (unk) NFSD: Fix exposure in nfsd4_decode_bitmap() 
   CVE-2021-4093: (unk) KVM: SEV-ES: go over the sev_pio_data buffer in multiple passes if needed 
-  CVE-2021-4095: (unk)  
+  CVE-2021-4095: (unk) KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty 
   CVE-2021-41073: (unk) io_uring: ensure symmetry in handling iter types in loop_rw_iter() 
   CVE-2021-4135: (unk) netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc 
   CVE-2021-4148: (unk)  
@@ -184,7 +185,7 @@ Outstanding CVEs:
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-4155: (unk) xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate 
   CVE-2021-41864: (unk) bpf: Fix integer overflow in prealloc_elems_and_freelist() 
-  CVE-2021-4197: (unk)  
+  CVE-2021-4197: (unk) cgroup: Use open-time credentials for process migraton perm checks 
   CVE-2021-42008: (unk) net: 6pack: fix slab-out-of-bounds in decode_data 
   CVE-2021-4202: (unk) NFC: reorganize the functions in nci_request 
   CVE-2021-4203: (unk) af_unix: fix races in sk_peer_pid and sk_peer_cred accesses 
@@ -200,3 +201,4 @@ Outstanding CVEs:
   CVE-2021-44733: (unk) tee: handle lookup of shm with reference count 0 
   CVE-2021-45095: (unk) phonet: refcount leak in pep_sock_accep 
   CVE-2021-45469: (unk)  
+  CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
