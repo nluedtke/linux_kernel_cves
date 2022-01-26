@@ -33,15 +33,20 @@ CVEs fixed in 5.15.11:
   CVE-2021-28715: bd926d189210cd1d5b4e618e45898053be6b4b3b xen/netback: don't queue unlimited number of packages
   CVE-2021-4135: 27358aa81a7d60e6bd36f0bb1db65cd084c2cad0 netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc
   CVE-2021-45480: 68014890e4382ff9192e1357be39b7d0455665fa rds: memory leak in __rds_conn_create()
+  CVE-2022-0264: 423628125a484538111c2c6d9bb1588eb086053b bpf: Fix kernel address leakage in atomic fetch
 
 CVEs fixed in 5.15.12:
   CVE-2021-44733: 492eb7afe858d60408b2da09adc78540c4d16543 tee: handle lookup of shm with reference count 0
   CVE-2021-45100: a2c144d17623984fdafa4634ecf4ab64580d29bb ksmbd: disable SMB2_GLOBAL_CAP_ENCRYPTION for SMB 3.1.1
+  CVE-2021-45469: a8a9d753edd7f71e6a2edaa580d8182530b68791 f2fs: fix to do sanity check on last xattr entry in __f2fs_setxattr()
 
 CVEs fixed in 5.15.14:
   CVE-2021-4155: b0e72ba9e520b95346e68800afff0db65e766ca8 xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
   CVE-2021-4197: c6ebc35298848accb5e50c37fdb2490cf4690c92 cgroup: Use open-time credentials for process migraton perm checks
   CVE-2021-45095: 9ca97a693aa8b86e8424f0047198ea3ab997d50f phonet: refcount leak in pep_sock_accep
+
+CVEs fixed in 5.15.16:
+  CVE-2022-0185: e192ccc17ecf3e78a1c6fb81badf9b50bd791115 vfs: fs_context: fix up param length parsing in legacy_parse_param
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -100,7 +105,7 @@ Outstanding CVEs:
   CVE-2021-3892: (unk)  
   CVE-2021-4095: (unk) KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty 
   CVE-2021-4148: (unk)  
-  CVE-2021-4204: (unk)  
-  CVE-2021-43976: (unk)  
-  CVE-2021-45469: (unk)  
+  CVE-2021-4204: (unk) bpf: Generalize check_ctx_reg for reuse with other types 
+  CVE-2021-43976: (unk) mwifiex: Fix skb_over_panic in mwifiex_usb_recv() 
+  CVE-2022-0330: (unk) drm/i915: Flush TLBs before releasing backing store 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
