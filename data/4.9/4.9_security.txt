@@ -1176,6 +1176,21 @@ CVEs fixed in 4.9.297:
   CVE-2021-4155: 19e3d9a26f28f432ae89acec22ec47b2a72a502c xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
   CVE-2021-45095: 3bae29ecb2909c46309671090311230239f1bdd7 phonet: refcount leak in pep_sock_accep
 
+CVEs fixed in 4.9.298:
+  CVE-2020-36322: 3a2f8823aa565cc67bdd00c4cd5e1d8ad81e8436 fuse: fix bad inode
+  CVE-2021-20292: 70f44dfbde027f444412cfb4ea9b485a4c1dec0e drm/ttm/nouveau: don't call tt destroy callback on alloc failure.
+  CVE-2021-20317: ef2e64035f074bfeef14c28347aaec0b486a9e9f lib/timerqueue: Rely on rbtree semantics for next timer
+  CVE-2021-22543: f4b2bfed80e8d0e91b431dd1c21bc3c2c4d5f07e KVM: do not allow mapping valid but non-reference-counted pages
+  CVE-2021-29264: 2cf34285e6eac396a180762c5504e2911df88c9a gianfar: fix jumbo packets+napi+rx overrun crash
+  CVE-2021-33033: f49f0e65a95664b648e058aa923f651ec08dfeb7 cipso,calipso: resolve a number of problems with the DOI refcounts
+  CVE-2021-43976: b233d7395cd104398dd83f130df5f0d57036c95e mwifiex: Fix skb_over_panic in mwifiex_usb_recv()
+
+CVEs fixed in 4.9.299:
+  CVE-2021-38198: e262acbda232b6a2a9adb53f5d2b2065f7626625 KVM: X86: MMU: Use the correct inherited permissions to get shadow page
+  CVE-2021-38199: 993892ed82350d0b4eb7d321d2bb225219bd1cfc NFSv4: Initialise connection to the server in nfs4_alloc_client()
+  CVE-2021-42739: 1795af6435fa5f17ced2d34854fd4871e0780092 media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt()
+  CVE-2022-0330: 84f4ab5b47d955ad2bb30115d7841d3e8f0994f4 drm/i915: Flush TLBs before releasing backing store
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1300,22 +1315,15 @@ Outstanding CVEs:
   CVE-2020-35501: (unk)  
   CVE-2020-36310: (unk) KVM: SVM: avoid infinite loop on NPF from bad address 
   CVE-2020-36313: (unk) KVM: Fix out of range accesses to memslots 
-  CVE-2020-36322: (unk) fuse: fix bad inode 
   CVE-2020-36385: (unk) RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy 
   CVE-2020-8832: (unk) drm/i915: Record the default hw state after reset upon load 
   CVE-2020-8834: (unk) KVM: PPC: Book3S HV: Factor fake-suspend handling out of kvmppc_save/restore_tm 
   CVE-2021-0399: (unk)  
   CVE-2021-0695: (unk)  
   CVE-2021-0929: (unk) staging/android/ion: delete dma_buf->kmap/unmap implemenation 
-  CVE-2021-20292: (unk) drm/ttm/nouveau: don't call tt destroy callback on alloc failure. 
-  CVE-2021-20317: (unk) lib/timerqueue: Rely on rbtree semantics for next timer 
-  CVE-2021-20322: (unk) ipv6: make exception cache less predictible 
-  CVE-2021-22543: (unk) KVM: do not allow mapping valid but non-reference-counted pages 
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
-  CVE-2021-29264: (unk) gianfar: fix jumbo packets+napi+rx overrun crash 
   CVE-2021-32078: (unk) ARM: footbridge: remove personal server platform 
-  CVE-2021-33033: (unk) cipso,calipso: resolve a number of problems with the DOI refcounts 
   CVE-2021-33098: (unk) ixgbe: fix large MTU request from VF 
   CVE-2021-34556: (unk) bpf: Introduce BPF nospec instruction for mitigating Spectre v4 
   CVE-2021-3506: (unk) f2fs: fix to avoid out-of-bounds memory access 
@@ -1323,8 +1331,6 @@ Outstanding CVEs:
   CVE-2021-35477: (unk) bpf: Introduce BPF nospec instruction for mitigating Spectre v4 
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
   CVE-2021-3759: (unk) memcg: enable accounting of ipc resources 
-  CVE-2021-38198: (unk) KVM: X86: MMU: Use the correct inherited permissions to get shadow page 
-  CVE-2021-38199: (unk) NFSv4: Initialise connection to the server in nfs4_alloc_client() 
   CVE-2021-38300: (unk) bpf, mips: Validate conditional branch offsets 
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
@@ -1334,12 +1340,10 @@ Outstanding CVEs:
   CVE-2021-4148: (unk)  
   CVE-2021-4149: (unk) btrfs: unlock newly allocated extent buffer after error 
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
+  CVE-2021-4159: (unk) bpf: Verifer, adjust_scalar_min_max_vals to always call update_reg_bounds() 
   CVE-2021-4197: (unk) cgroup: Use open-time credentials for process migraton perm checks 
-  CVE-2021-42739: (unk) media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt() 
   CVE-2021-43975: (unk) atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait 
-  CVE-2021-43976: (unk) mwifiex: Fix skb_over_panic in mwifiex_usb_recv() 
   CVE-2021-45469: (unk) f2fs: fix to do sanity check on last xattr entry in __f2fs_setxattr() 
-  CVE-2022-0264: (unk) bpf: Fix kernel address leakage in atomic fetch 
-  CVE-2022-0322: (unk) sctp: account stream padding length for reconf chunk 
-  CVE-2022-0330: (unk) drm/i915: Flush TLBs before releasing backing store 
+  CVE-2022-0382: (unk) net ticp:fix a kernel-infoleak in __tipc_sendmsg() 
+  CVE-2022-0400: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 

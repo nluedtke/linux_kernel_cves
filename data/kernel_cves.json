@@ -38530,8 +38530,8 @@
         }
     },
     "CVE-2018-25020": {
-        "affected_versions": "unk to v4.17-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.17-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "bpf: fix truncated jump targets on heavy expansions",
         "cvss2": {
             "Access Complexity": "Low",
@@ -38557,7 +38557,7 @@
         },
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "050fad7c4534c13c8eb1d9c2ba66012e014773cb",
-        "last_modified": "2021-12-16",
+        "last_modified": "2022-01-31",
         "nvd_text": "The BPF subsystem in the Linux kernel before 4.17 mishandles situations with a long jump over an instruction sequence where inner instructions require substantial expansions into multiple BPF instructions, leading to an overflow. This affects kernel/bpf/core.c and net/core/filter.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-25020",
@@ -58209,8 +58209,8 @@
         }
     },
     "CVE-2020-27820": {
-        "affected_versions": "unk to v5.16-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.16-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "drm/nouveau: use drm_dev_unplug() during device removal",
         "cvss2": {
             "Access Complexity": "Medium",
@@ -58237,7 +58237,7 @@
         "cwe": "Use After Free",
         "fixes": "aff2299e0d81b26304ccc6a1ec0170e437f38efc",
         "last_affected_version": "5.15.4",
-        "last_modified": "2021-11-26",
+        "last_modified": "2022-01-31",
         "nvd_text": "A vulnerability was found in Linux kernel, where a use-after-frees in nouveau's postclose() handler could happen if removing device (that is not common to remove video card physically without power-off, but same happens if \"unbind\" the driver).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27820",
@@ -59489,7 +59489,7 @@
         "cwe": "Incomplete Cleanup",
         "fixes": "5d069dbe8aaf2a197142558b6fb2978189ba3454",
         "last_affected_version": "5.10.5",
-        "last_modified": "2021-05-03",
+        "last_modified": "2022-01-31",
         "nvd_text": "An issue was discovered in the FUSE filesystem implementation in the Linux kernel before 5.10.6, aka CID-5d069dbe8aaf. fuse_do_getattr() calls make_bad_inode() in inappropriate situations, causing a system crash. NOTE: the original fix for this vulnerability was incomplete, and its incompleteness is tracked as CVE-2021-28950.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36322",
@@ -61204,7 +61204,7 @@
         "cwe": "Use After Free",
         "fixes": "5de5b6ecf97a021f29403aa272cb4e03318ef586",
         "last_affected_version": "5.8.1",
-        "last_modified": "2021-06-04",
+        "last_modified": "2022-01-31",
         "nvd_text": "There is a flaw reported in the Linux kernel in versions before 5.9 in drivers/gpu/drm/nouveau/nouveau_sgdma.c in nouveau_sgdma_create_ttm in Nouveau DRM subsystem. The issue results from the lack of validating the existence of an object prior to performing operations on the object. An attacker with a local account with a root privilege, can leverage this vulnerability to escalate privileges and execute code in the context of the kernel.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20292",
@@ -61244,7 +61244,7 @@
         "cwe": "Improper Initialization",
         "fixes": "511885d7061eda3eb1faf3f57dcc936ff75863f1",
         "last_affected_version": "4.19.209",
-        "last_modified": "2021-10-12",
+        "last_modified": "2022-01-31",
         "nvd_text": "A flaw was found in the Linux kernel. A corrupted timer tree caused the task wakeup to be missing in the timerqueue_add function in lib/timerqueue.c. This flaw allows a local attacker with special user privileges to cause a denial of service, slowing and eventually stopping the system while running OSP.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20317",
@@ -61256,12 +61256,12 @@
         }
     },
     "CVE-2021-20320": {
-        "affected_versions": "unk to v5.15-rc3",
-        "breaks": "",
+        "affected_versions": "v4.1-rc1 to v5.15-rc3",
+        "breaks": "054623105728b06852f077299e2bf1bf3d5f2b0b",
         "cmt_msg": "s390/bpf: Fix optimizing out zero-extensions",
         "fixes": "db7bee653859ef7179be933e7d1384644f795f26",
         "last_affected_version": "5.14.6",
-        "last_modified": "2021-10-19",
+        "last_modified": "2022-01-31",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20320",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20320",
@@ -61288,12 +61288,12 @@
         }
     },
     "CVE-2021-20322": {
-        "affected_versions": "unk to v5.15-rc1",
-        "breaks": "",
+        "affected_versions": "v4.15-rc1 to v5.15-rc1",
+        "breaks": "35732d01fe311ec13c4e42936878b782b8e7ea85",
         "cmt_msg": "ipv6: make exception cache less predictible",
         "fixes": "a00df2caffed3883c341d5685f830434312e4a43",
         "last_affected_version": "5.14.3",
-        "last_modified": "2021-11-04",
+        "last_modified": "2022-01-31",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20322",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20322",
@@ -61372,7 +61372,7 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "f8be156be163a052a067306417cd0ff679068c97",
         "last_affected_version": "5.12",
-        "last_modified": "2021-08-16",
+        "last_modified": "2022-01-31",
         "nvd_text": "An issue was discovered in Linux: KVM through Improper handling of VM_IO|VM_PFNMAP vmas in KVM can bypass RO checks and can lead to pages being freed while still accessible by the VMM and guest. This allows users with the ability to start and control a VM to read/write random pages of memory and can result in local privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-22543",
@@ -61421,6 +61421,23 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-22555",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-22555",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-22555"
+        }
+    },
+    "CVE-2021-22600": {
+        "affected_versions": "v5.6 to v5.16-rc6",
+        "breaks": "61fad6816fc10fb8793a925d5c1256d1c3db0cd2",
+        "cmt_msg": "net/packet: rx_owner_map depends on pg_vec",
+        "fixes": "ec6af094ea28f0f2dda1a6a33b14cd57e36a9755",
+        "last_affected_version": "5.15.10",
+        "last_modified": "2022-01-31",
+        "nvd_text": "A double free bug in packet_set_ring() in net/packet/af_packet.c can be exploited by a local user through crafted syscalls to escalate privileges or deny service. We recommend upgrading kernel past the effected versions or rebuilding past ec6af094ea28f0f2dda1a6a33b14cd57e36a9755",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-22600",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-22600",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-22600",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-22600",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-22600",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-22600"
         }
     },
     "CVE-2021-23133": {
@@ -62062,8 +62079,8 @@
         }
     },
     "CVE-2021-28711": {
-        "affected_versions": "unk to v5.16-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.16-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/blkfront: harden blkfront against event channel storms",
         "cvss2": {
             "Access Complexity": "Low",
@@ -62090,7 +62107,7 @@
         "cwe": "Unspecified",
         "fixes": "0fd08a34e8e3b67ec9bd8287ac0facf8374b844a",
         "last_affected_version": "5.15.10",
-        "last_modified": "2022-01-26",
+        "last_modified": "2022-01-31",
         "nvd_text": "Rogue backends can cause DoS of guests via high frequency events T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Xen offers the ability to run PV backends in regular unprivileged guests, typically referred to as \"driver domains\". Running PV backends in driver domains has one primary security advantage: if a driver domain gets compromised, it doesn't have the privileges to take over the system. However, a malicious driver domain could try to attack other guests via sending events at a high frequency leading to a Denial of Service in the guest due to trying to service interrupts for elongated amounts of time. There are three affected backends: * blkfront patch 1, CVE-2021-28711 * netfront patch 2, CVE-2021-28712 * hvc_xen (console) patch 3, CVE-2021-28713",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28711",
@@ -62102,8 +62119,8 @@
         }
     },
     "CVE-2021-28712": {
-        "affected_versions": "unk to v5.16-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.16-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/netfront: harden netfront against event channel storms",
         "cvss2": {
             "Access Complexity": "Low",
@@ -62130,7 +62147,7 @@
         "cwe": "Unspecified",
         "fixes": "b27d47950e481f292c0a5ad57357edb9d95d03ba",
         "last_affected_version": "5.15.10",
-        "last_modified": "2022-01-26",
+        "last_modified": "2022-01-31",
         "nvd_text": "Rogue backends can cause DoS of guests via high frequency events T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Xen offers the ability to run PV backends in regular unprivileged guests, typically referred to as \"driver domains\". Running PV backends in driver domains has one primary security advantage: if a driver domain gets compromised, it doesn't have the privileges to take over the system. However, a malicious driver domain could try to attack other guests via sending events at a high frequency leading to a Denial of Service in the guest due to trying to service interrupts for elongated amounts of time. There are three affected backends: * blkfront patch 1, CVE-2021-28711 * netfront patch 2, CVE-2021-28712 * hvc_xen (console) patch 3, CVE-2021-28713",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28712",
@@ -62142,8 +62159,8 @@
         }
     },
     "CVE-2021-28713": {
-        "affected_versions": "unk to v5.16-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.16-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/console: harden hvc_xen against event channel storms",
         "cvss2": {
             "Access Complexity": "Low",
@@ -62170,7 +62187,7 @@
         "cwe": "Unspecified",
         "fixes": "fe415186b43df0db1f17fa3a46275fd92107fe71",
         "last_affected_version": "5.15.10",
-        "last_modified": "2022-01-26",
+        "last_modified": "2022-01-31",
         "nvd_text": "Rogue backends can cause DoS of guests via high frequency events T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Xen offers the ability to run PV backends in regular unprivileged guests, typically referred to as \"driver domains\". Running PV backends in driver domains has one primary security advantage: if a driver domain gets compromised, it doesn't have the privileges to take over the system. However, a malicious driver domain could try to attack other guests via sending events at a high frequency leading to a Denial of Service in the guest due to trying to service interrupts for elongated amounts of time. There are three affected backends: * blkfront patch 1, CVE-2021-28711 * netfront patch 2, CVE-2021-28712 * hvc_xen (console) patch 3, CVE-2021-28713",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28713",
@@ -62610,7 +62627,7 @@
         "cwe": "Unspecified",
         "fixes": "d8861bab48b6c1fc3cdbcab8ff9d1eaea43afe7f",
         "last_affected_version": "5.11.10",
-        "last_modified": "2021-05-06",
+        "last_modified": "2022-01-31",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.11.10. drivers/net/ethernet/freescale/gianfar.c in the Freescale Gianfar Ethernet driver allows attackers to cause a system crash because a negative fragment size is calculated in situations involving an rx queue overrun when jumbo packets are used and NAPI is enabled, aka CID-d8861bab48b6.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-29264",
@@ -63328,7 +63345,7 @@
         "cwe": "Use After Free",
         "fixes": "ad5d07f4a9cd671233ae20983848874731102c08",
         "last_affected_version": "5.11.6",
-        "last_modified": "2021-05-25",
+        "last_modified": "2022-01-31",
         "nvd_text": "The Linux kernel before 5.11.14 has a use-after-free in cipso_v4_genopt in net/ipv4/cipso_ipv4.c because the CIPSO and CALIPSO refcounting for the DOI definitions is mishandled, aka CID-ad5d07f4a9cd. This leads to writing an arbitrary value.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33033",
@@ -63380,8 +63397,8 @@
         }
     },
     "CVE-2021-33098": {
-        "affected_versions": "unk to v5.13-rc4",
-        "breaks": "",
+        "affected_versions": "v3.8-rc1 to v5.13-rc4",
+        "breaks": "872844ddb9e44a49b759ae3e34250fefbab656f2",
         "cmt_msg": "ixgbe: fix large MTU request from VF",
         "cvss2": {
             "Access Complexity": "Low",
@@ -63408,7 +63425,7 @@
         "cwe": "Improper Input Validation",
         "fixes": "63e39d29b3da02e901349f6cd71159818a4737a6",
         "last_affected_version": "5.12.8",
-        "last_modified": "2021-11-30",
+        "last_modified": "2022-01-31",
         "nvd_text": "Improper input validation in the Intel(R) Ethernet ixgbe driver for Linux before version 3.17.3 may allow an authenticated user to potentially enable denial of service via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33098",
@@ -64495,12 +64512,12 @@
         }
     },
     "CVE-2021-3640": {
-        "affected_versions": "unk to v5.16-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.16-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()",
         "fixes": "99c23da0eed4fd20cae8243f2b51e10e66aa0951",
         "last_affected_version": "5.15.2",
-        "last_modified": "2021-11-26",
+        "last_modified": "2022-01-31",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3640",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3640",
@@ -65057,7 +65074,7 @@
         "cwe": "Unspecified",
         "fixes": "b1bd5cba3306691c771d558e94baa73e8b0b96b7",
         "last_affected_version": "5.12.10",
-        "last_modified": "2021-09-04",
+        "last_modified": "2022-01-31",
         "nvd_text": "arch/x86/kvm/mmu/paging_tmpl.h in the Linux kernel before 5.12.11 incorrectly computes the access permissions of a shadow page, leading to a missing guest protection page fault.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38198",
@@ -65097,7 +65114,7 @@
         "cwe": "Unspecified",
         "fixes": "dd99e9f98fbf423ff6d365b37a98e8879170f17c",
         "last_affected_version": "5.13.3",
-        "last_modified": "2021-08-16",
+        "last_modified": "2022-01-31",
         "nvd_text": "fs/nfs/nfs4client.c in the Linux kernel before 5.13.4 has incorrect connection-setup ordering, which allows operators of remote NFSv4 servers to cause a denial of service (hanging of mounts) by arranging for those servers to be unreachable during trunking detection.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-38199",
@@ -65811,8 +65828,8 @@
         }
     },
     "CVE-2021-39657": {
-        "affected_versions": "v2.6.12-rc2 to v5.11-rc4",
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "affected_versions": "v3.4-rc1 to v5.11-rc4",
+        "breaks": "7a3e97b0dc4bbac2ba7803564ab0057722689921",
         "cmt_msg": "scsi: ufs: Correct the LUN used in eh_device_reset_handler() callback",
         "cvss2": {
             "Access Complexity": "Low",
@@ -65839,7 +65856,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "35fc4cd34426c242ab015ef280853b7bff101f48",
         "last_affected_version": "5.10.10",
-        "last_modified": "2022-01-06",
+        "last_modified": "2022-01-31",
         "nvd_text": "In ufshcd_eh_device_reset_handler of ufshcd.c, there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-194696049References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39657",
@@ -65870,9 +65887,32 @@
         "affected_versions": "v5.5-rc1 to v5.16-rc2",
         "breaks": "a23740ec43ba022dbfd139d0fe3eff193216272b",
         "cmt_msg": "bpf: Fix toctou on read-only map's constant scalar tracking",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:N/I:C/A:N",
+            "score": 4.7
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:H/A:N",
+            "score": 4.1
+        },
+        "cwe": "Time-of-check Time-of-use (TOCTOU) Race Condition",
         "fixes": "353050be4c19e102178ccc05988101887c25ae53",
         "last_affected_version": "5.15.4",
-        "last_modified": "2022-01-26",
+        "last_modified": "2022-01-31",
         "nvd_text": "A race condition was found in the Linux kernel's ebpf verifier between bpf_map_update_elem and bpf_map_freeze due to a missing lock in kernel/bpf/syscall.c. In this flaw, a local user with a special privilege (cap_sys_admin or cap_bpf) can modify the frozen mapped address space. This flaw affects kernel versions prior to 5.16 rc2.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4001",
@@ -65919,8 +65959,31 @@
         "affected_versions": "v5.15-rc1 to v5.15-rc7",
         "breaks": "421221234ada41b4a9f0beeb08e30b07388bd4bd",
         "cmt_msg": "Revert \"KVM: x86: Open code necessary bits of kvm_lapic_set_base() at vCPU RESET\"",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.4
+        },
+        "cwe": "Incomplete Cleanup",
         "fixes": "f7d8a19f9a056a05c5c509fa65af472a322abfee",
-        "last_modified": "2022-01-26",
+        "last_modified": "2022-01-31",
         "nvd_text": "A vulnerability was found in the Linux kernel's KVM subsystem in arch/x86/kvm/lapic.c kvm_free_lapic when a failure allocation was detected. In this flaw the KVM subsystem may crash the kernel due to mishandling of memory errors that happens during VCPU construction, which allows an attacker with special user privilege to cause a denial of service. This flaw affects kernel versions prior to 5.15 rc7.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4032",
@@ -66222,6 +66285,21 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-4157"
         }
     },
+    "CVE-2021-4159": {
+        "affected_versions": "unk to v5.7-rc1",
+        "breaks": "",
+        "cmt_msg": "bpf: Verifer, adjust_scalar_min_max_vals to always call update_reg_bounds()",
+        "fixes": "294f2fc6da27620a506e6c050241655459ccd6bd",
+        "last_modified": "2022-01-31",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4159",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4159",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4159",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4159",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4159",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4159"
+        }
+    },
     "CVE-2021-41864": {
         "affected_versions": "v4.6-rc1 to v5.15-rc5",
         "breaks": "557c0c6e7df8e14a46bd7560d193fa5bbc00a858",
@@ -66263,12 +66341,12 @@
         }
     },
     "CVE-2021-4197": {
-        "affected_versions": "unk to v5.16",
-        "breaks": "",
+        "affected_versions": "v4.2-rc1 to v5.16",
+        "breaks": "187fe84067bd377047cfcb7f2bbc7c9dc12d290c",
         "cmt_msg": "cgroup: Use open-time credentials for process migraton perm checks",
         "fixes": "1756d7994ad85c2479af6ae5a9750b92324685af",
         "last_affected_version": "5.15",
-        "last_modified": "2022-01-17",
+        "last_modified": "2022-01-31",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4197",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4197",
@@ -66474,7 +66552,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "35d2969ea3c7d32aee78066b1f3cf61a0d935a4e",
         "last_affected_version": "5.15.0",
-        "last_modified": "2021-11-18",
+        "last_modified": "2022-01-31",
         "nvd_text": "The firewire subsystem in the Linux kernel through 5.14.13 has a buffer overflow related to drivers/media/firewire/firedtv-avc.c and drivers/media/firewire/firedtv-ci.c, because avc_ca_pmt mishandles bounds checking.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-42739",
@@ -66686,8 +66764,8 @@
         }
     },
     "CVE-2021-43976": {
-        "affected_versions": "unk to v5.17-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.17-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "mwifiex: Fix skb_over_panic in mwifiex_usb_recv()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -66713,7 +66791,8 @@
         },
         "cwe": "Unspecified",
         "fixes": "04d80663f67ccef893061b49ec8a42ff7045ae84",
-        "last_modified": "2022-01-26",
+        "last_affected_version": "5.16.2",
+        "last_modified": "2022-01-31",
         "nvd_text": "In the Linux kernel through 5.15.2, mwifiex_usb_recv in drivers/net/wireless/marvell/mwifiex/usb.c allows an attacker (who can connect a crafted USB device) to cause a denial of service (skb_over_panic).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-43976",
@@ -66872,8 +66951,8 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "645a3c40ca3d40cc32b4b5972bf2620f2eb5dba6",
-        "last_affected_version": "5.15.11",
-        "last_modified": "2022-01-26",
+        "last_affected_version": "5.16.2",
+        "last_modified": "2022-01-31",
         "nvd_text": "In __f2fs_setxattr in fs/f2fs/xattr.c in the Linux kernel through 5.15.11, there is an out-of-bounds memory access when an inode has an invalid last xattr entry.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-45469",
@@ -67061,12 +67140,12 @@
         }
     },
     "CVE-2022-0264": {
-        "affected_versions": "unk to v5.16-rc6",
-        "breaks": "",
+        "affected_versions": "v5.12-rc1-dontuse to v5.16-rc6",
+        "breaks": "37086bfdc737ea6f66bf68dcf16757004d68e1e1",
         "cmt_msg": "bpf: Fix kernel address leakage in atomic fetch",
         "fixes": "7d3baf0afa3aa9102d6a521a8e4c41888bb79882",
         "last_affected_version": "5.15.10",
-        "last_modified": "2022-01-26",
+        "last_modified": "2022-01-31",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0264",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0264",
@@ -67077,12 +67156,12 @@
         }
     },
     "CVE-2022-0322": {
-        "affected_versions": "unk to v5.15-rc6",
-        "breaks": "",
+        "affected_versions": "v4.11-rc1 to v5.15-rc6",
+        "breaks": "cc16f00f6529aa2378f2b949a6f68e9dc6dec363",
         "cmt_msg": "sctp: account stream padding length for reconf chunk",
         "fixes": "a2d859e3fc97e79d907761550dbc03ff1b36479c",
         "last_affected_version": "5.14.13",
-        "last_modified": "2022-01-26",
+        "last_modified": "2022-01-31",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0322",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0322",
@@ -67093,11 +67172,12 @@
         }
     },
     "CVE-2022-0330": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.17-rc2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "drm/i915: Flush TLBs before releasing backing store",
         "fixes": "7938d61591d33394a21bdd7797a245b65428f44c",
-        "last_modified": "2022-01-26",
+        "last_affected_version": "5.16.3",
+        "last_modified": "2022-01-31",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0330",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0330",
@@ -67105,6 +67185,52 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0330",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-0330",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-0330"
+        }
+    },
+    "CVE-2022-0382": {
+        "affected_versions": "v2.6.12-rc2 to v5.16",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "net ticp:fix a kernel-infoleak in __tipc_sendmsg()",
+        "fixes": "d6d86830705f173fca6087a3e67ceaf68db80523",
+        "last_affected_version": "5.15",
+        "last_modified": "2022-01-31",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0382",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0382",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0382",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0382",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0382",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0382"
+        }
+    },
+    "CVE-2022-0400": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2022-01-31",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0400",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0400",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0400",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0400",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0400",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0400"
+        }
+    },
+    "CVE-2022-22942": {
+        "affected_versions": "v4.14-rc1 to v5.17-rc2",
+        "breaks": "c906965dee22d5e95d0651759ba107b420212a9f",
+        "cmt_msg": "drm/vmwgfx: Fix stale file descriptors on failed usercopy",
+        "fixes": "a0f90c8815706981c483a652a6aefca51a5e191c",
+        "last_affected_version": "5.16.3",
+        "last_modified": "2022-01-31",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-22942",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-22942",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-22942",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-22942",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-22942",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-22942"
         }
     },
     "CVE-2022-23222": {
@@ -67144,6 +67270,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23222",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-23222",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-23222"
+        }
+    },
+    "CVE-2022-24122": {
+        "affected_versions": "v5.14-rc1 to v5.17-rc2",
+        "breaks": "d64696905554e919321e31afc210606653b8f6a4",
+        "cmt_msg": "ucount:  Make get_ucount a safe get_user replacement",
+        "fixes": "f9d87929d451d3e649699d0f1d74f71f77ad38f5",
+        "last_modified": "2022-01-31",
+        "nvd_text": "kernel/ucount.c in the Linux kernel 5.14 through 5.16.4, when unprivileged user namespaces are enabled, allows a use-after-free and privilege escalation because a ucounts object can outlive its namespace.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-24122",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-24122",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-24122",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-24122",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-24122",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-24122"
         }
     }
 }
