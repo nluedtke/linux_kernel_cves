@@ -44199,8 +44199,9 @@
         "vendor_specific": true
     },
     "CVE-2019-15794": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.19-rc1 to v5.12",
+        "breaks": "2f502839e85ab265f03f25f30d6463154aee5473",
+        "cmt_msg": "ovl: fix reference counting in ovl_mmap error path",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -44224,8 +44225,9 @@
             "score": "7.8"
         },
         "cwe": "Operation on a Resource after Expiration or Release",
-        "fixes": "",
-        "last_modified": "2020-06-25",
+        "fixes": "2896900e22f8212606a1837d89a6bbce314ceeda",
+        "last_affected_version": "5.11",
+        "last_modified": "2022-02-03",
         "nvd_text": "Overlayfs in the Linux kernel and shiftfs, a non-upstream patch to the Linux kernel included in the Ubuntu 5.0 and 5.3 kernel series, both replace vma->vm_file in their mmap handlers. On error the original value is not restored, and the reference is put for the file to which vm_file points. On upstream kernels this is not an issue, as no callers dereference vm_file following after call_mmap() returns an error. However, the aufs patchs change mmap_region() to replace the fput() using a local variable with vma_fput(), which will fput() vm_file, leading to a refcount underflow.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15794",
@@ -63856,10 +63858,32 @@
         "affected_versions": "v5.8-rc1 to v5.14",
         "breaks": "457f44363a8894135c85b7a9afd2bd8196db24ab",
         "cmt_msg": "bpf: Fix ringbuf helper function compatibility",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "cwe": "Access of Resource Using Incompatible Type ('Type Confusion')",
         "fixes": "5b029a32cfe4600f5e10e36b41778506b90fd4de",
         "last_affected_version": "5.13",
-        "last_modified": "2022-01-26",
+        "last_modified": "2022-02-03",
         "nvd_text": "This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel 5.14-rc3. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The specific flaw exists within the handling of eBPF programs. The issue results from the lack of proper validation of user-supplied eBPF programs, which can result in a type confusion condition. An attacker can leverage this vulnerability to escalate privileges and execute arbitrary code in the context of the kernel. Was ZDI-CAN-14689.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-34866",
@@ -66443,6 +66467,21 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-4204"
         }
     },
+    "CVE-2021-4218": {
+        "affected_versions": "unk to v5.8-rc1",
+        "breaks": "",
+        "cmt_msg": "sysctl: pass kernel pointers to ->proc_handler",
+        "fixes": "32927393dc1ccd60fb2bdc05b9e8e88753761469",
+        "last_modified": "2022-02-03",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4218",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4218",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4218",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4218",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4218",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4218"
+        }
+    },
     "CVE-2021-42252": {
         "affected_versions": "v4.12-rc1 to v5.15-rc1",
         "breaks": "6c4e976785011dfbe461821d0bfc58cfd60eac56",
@@ -67155,6 +67194,23 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-0264"
         }
     },
+    "CVE-2022-0286": {
+        "affected_versions": "unk to v5.14-rc2",
+        "breaks": "",
+        "cmt_msg": "bonding: fix null dereference in bond_ipsec_add_sa()",
+        "fixes": "105cd17a866017b45f3c45901b394c711c97bf40",
+        "last_affected_version": "5.13.5",
+        "last_modified": "2022-02-03",
+        "nvd_text": "A flaw was found in the Linux kernel. A null pointer dereference in bond_ipsec_add_sa() may lead to local denial of service.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0286",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0286",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0286",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0286",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0286",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0286"
+        }
+    },
     "CVE-2022-0322": {
         "affected_versions": "v4.11-rc1 to v5.15-rc6",
         "breaks": "cc16f00f6529aa2378f2b949a6f68e9dc6dec363",
@@ -67215,6 +67271,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0400",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-0400",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-0400"
+        }
+    },
+    "CVE-2022-0433": {
+        "affected_versions": "unk to v5.17-rc1",
+        "breaks": "",
+        "cmt_msg": "bpf: Add missing map_get_next_key method to bloom filter map.",
+        "fixes": "3ccdcee28415c4226de05438b4d89eb5514edf73",
+        "last_affected_version": "5.16.2",
+        "last_modified": "2022-02-03",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0433",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0433",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0433",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0433",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0433",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0433"
         }
     },
     "CVE-2022-22942": {
