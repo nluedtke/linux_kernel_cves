@@ -37,6 +37,7 @@ CVEs fixed in 5.14.12:
   CVE-2021-41864: 3a1ac1e368bedae2777d9a7cfdc65df4859f7e71 bpf: Fix integer overflow in prealloc_elems_and_freelist()
 
 CVEs fixed in 5.14.14:
+  CVE-2021-3894: 4f0bc44b9191b176d7b558f1f5ca1865339a27ef sctp: account stream padding length for reconf chunk
   CVE-2021-4149: 0adda9f173f1e1f67b89c7257a5d21d4abfbbfb2 btrfs: unlock newly allocated extent buffer after error
   CVE-2022-0322: 4f0bc44b9191b176d7b558f1f5ca1865339a27ef sctp: account stream padding length for reconf chunk
 
@@ -122,7 +123,6 @@ Outstanding CVEs:
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
-  CVE-2021-3894: (unk)  
   CVE-2021-39685: (unk) USB: gadget: detect too-big endpoint 0 requests 
   CVE-2021-4001: (unk) bpf: Fix toctou on read-only map's constant scalar tracking 
   CVE-2021-4002: (unk) hugetlbfs: flush TLBs correctly after huge_pmd_unshare 
@@ -139,7 +139,9 @@ Outstanding CVEs:
   CVE-2021-43975: (unk) atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait 
   CVE-2021-43976: (unk) mwifiex: Fix skb_over_panic in mwifiex_usb_recv() 
   CVE-2021-44733: (unk) tee: handle lookup of shm with reference count 0 
+  CVE-2021-44879: (unk) f2fs: fix to do sanity check on inode type during garbage collection 
   CVE-2021-45095: (unk) phonet: refcount leak in pep_sock_accep 
+  CVE-2021-45402: (unk) bpf: Fix signed bounds propagation after mov32 
   CVE-2021-45469: (unk) f2fs: fix to do sanity check on last xattr entry in __f2fs_setxattr() 
   CVE-2021-45480: (unk) rds: memory leak in __rds_conn_create() 
   CVE-2022-0185: (unk) vfs: fs_context: fix up param length parsing in legacy_parse_param 
@@ -147,11 +149,14 @@ Outstanding CVEs:
   CVE-2022-0330: (unk) drm/i915: Flush TLBs before releasing backing store 
   CVE-2022-0382: (unk) net ticp:fix a kernel-infoleak in __tipc_sendmsg() 
   CVE-2022-0400: (unk)  
-  CVE-2022-0433: (unk) bpf: Add missing map_get_next_key method to bloom filter map. 
+  CVE-2022-0435: (unk) tipc: improve size validations for received domain records 
   CVE-2022-0480: (unk) memcg: enable accounting for file lock caches 
-  CVE-2022-0487: (unk)  
+  CVE-2022-0487: (unk) moxart: fix potential use-after-free on remove path 
   CVE-2022-0492: (unk) cgroup-v1: Require capabilities to set release_agent 
+  CVE-2022-0516: (unk) KVM: s390: Return error on SIDA memop on normal guest 
   CVE-2022-22942: (unk) drm/vmwgfx: Fix stale file descriptors on failed usercopy 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-24448: (unk) NFSv4: Handle case where the lookup of a directory fails 
+  CVE-2022-24958: (unk) usb: gadget: don't release an existing dev->buf 
+  CVE-2022-24959: (unk) yam: fix a memory leak in yam_siocdevprivate() 

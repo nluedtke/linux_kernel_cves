@@ -33,6 +33,7 @@ CVEs fixed in 5.15.11:
   CVE-2021-28714: 88449dbe6203c3a91cf1c39ea3032ad61a297bd7 xen/netback: fix rx queue stall detection
   CVE-2021-28715: bd926d189210cd1d5b4e618e45898053be6b4b3b xen/netback: don't queue unlimited number of packages
   CVE-2021-4135: 27358aa81a7d60e6bd36f0bb1db65cd084c2cad0 netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc
+  CVE-2021-45402: f77d7a35d4913e4ab27abb36016fbfc1e882a654 bpf: Fix signed bounds propagation after mov32
   CVE-2021-45480: 68014890e4382ff9192e1357be39b7d0455665fa rds: memory leak in __rds_conn_create()
   CVE-2022-0264: 423628125a484538111c2c6d9bb1588eb086053b bpf: Fix kernel address leakage in atomic fetch
 
@@ -52,6 +53,7 @@ CVEs fixed in 5.15.16:
 
 CVEs fixed in 5.15.17:
   CVE-2021-43976: b2762757f4e484f8a164546f93aca82568d87649 mwifiex: Fix skb_over_panic in mwifiex_usb_recv()
+  CVE-2021-44879: 0ddbdc0b7f0cec3815ac05a30b2c2f6457be3050 f2fs: fix to do sanity check on inode type during garbage collection
 
 CVEs fixed in 5.15.18:
   CVE-2022-0330: 8a17a077e7e9ecce25c95dbdb27843d2d6c2f0f7 drm/i915: Flush TLBs before releasing backing store
@@ -59,9 +61,15 @@ CVEs fixed in 5.15.18:
 
 CVEs fixed in 5.15.19:
   CVE-2022-24448: 4c36ca387af4a9b5d775e46a6cb9dc2d151bf057 NFSv4: Handle case where the lookup of a directory fails
+  CVE-2022-24959: 0690c3943ed0fa76654e600eca38cde6a13c87ac yam: fix a memory leak in yam_siocdevprivate()
 
 CVEs fixed in 5.15.20:
   CVE-2022-0492: 4b1c32bfaa02255a5df602b41587174004996477 cgroup-v1: Require capabilities to set release_agent
+
+CVEs fixed in 5.15.23:
+  CVE-2022-0435: 1f1788616157b0222b0c2153828b475d95e374a7 tipc: improve size validations for received domain records
+  CVE-2022-0487: af0e6c49438b1596e4be8a267d218a0c88a42323 moxart: fix potential use-after-free on remove path
+  CVE-2022-0516: 14f880ea779e11a6c162f122c1199e3578e6e3f3 KVM: s390: Return error on SIDA memop on normal guest
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -117,12 +125,10 @@ Outstanding CVEs:
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
-  CVE-2021-3894: (unk)  
   CVE-2021-4095: (unk) KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty 
   CVE-2021-4148: (unk)  
   CVE-2021-4204: (unk) bpf: Generalize check_ctx_reg for reuse with other types 
   CVE-2022-0400: (unk)  
-  CVE-2022-0433: (unk) bpf: Add missing map_get_next_key method to bloom filter map. 
-  CVE-2022-0487: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
+  CVE-2022-24958: (unk) usb: gadget: don't release an existing dev->buf 

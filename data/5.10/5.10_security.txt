@@ -241,6 +241,7 @@ CVEs fixed in 5.10.73:
   CVE-2021-41864: 064faa8e8a9b50f5010c5aa5740e06d477677a89 bpf: Fix integer overflow in prealloc_elems_and_freelist()
 
 CVEs fixed in 5.10.75:
+  CVE-2021-3894: d84a69ac410f6228873d05d35120f6bdddab7fc3 sctp: account stream padding length for reconf chunk
   CVE-2021-4149: 206868a5b6c14adc4098dd3210a2f7510d97a670 btrfs: unlock newly allocated extent buffer after error
   CVE-2022-0322: d84a69ac410f6228873d05d35120f6bdddab7fc3 sctp: account stream padding length for reconf chunk
 
@@ -285,6 +286,7 @@ CVEs fixed in 5.10.88:
   CVE-2021-28714: 525875c410df5d876b9615c44885ca7640aed6f2 xen/netback: fix rx queue stall detection
   CVE-2021-28715: 88f20cccbeec9a5e83621df5cc2453b5081454dc xen/netback: don't queue unlimited number of packages
   CVE-2021-4135: 1a34fb9e2bf3029f7c0882069d67ff69cbd645d8 netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc
+  CVE-2021-45402: e2aad0b5f2cbf71a31d00ce7bb4dee948adff5a9 bpf: Fix signed bounds propagation after mov32
 
 CVEs fixed in 5.10.89:
   CVE-2021-44733: c05d8f66ec3470e5212c4d08c46d6cb5738d600d tee: handle lookup of shm with reference count 0
@@ -306,9 +308,15 @@ CVEs fixed in 5.10.95:
 
 CVEs fixed in 5.10.96:
   CVE-2022-24448: ce8c552b88ca25d775ecd0a0fbef4e0e03de9ed2 NFSv4: Handle case where the lookup of a directory fails
+  CVE-2022-24959: 729e54636b3ebefb77796702a5b1f1ed5586895e yam: fix a memory leak in yam_siocdevprivate()
 
 CVEs fixed in 5.10.97:
   CVE-2022-0492: 1fc3444cda9a78c65b769e3fa93455e09ff7a0d3 cgroup-v1: Require capabilities to set release_agent
+
+CVEs fixed in 5.10.100:
+  CVE-2022-0435: 3c7e5943553594f68bbc070683db6bb6f6e9e78e tipc: improve size validations for received domain records
+  CVE-2022-0487: be93028d306dac9f5b59ebebd9ec7abcfc69c156 moxart: fix potential use-after-free on remove path
+  CVE-2022-0516: b62267b8b06e9b8bb429ae8f962ee431e6535d60 KVM: s390: Return error on SIDA memop on normal guest
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -371,15 +379,14 @@ Outstanding CVEs:
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
-  CVE-2021-3894: (unk)  
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
   CVE-2021-4148: (unk)  
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-4197: (unk) cgroup: Use open-time credentials for process migraton perm checks 
   CVE-2021-4204: (unk) bpf: Generalize check_ctx_reg for reuse with other types 
+  CVE-2021-44879: (unk) f2fs: fix to do sanity check on inode type during garbage collection 
   CVE-2022-0382: (unk) net ticp:fix a kernel-infoleak in __tipc_sendmsg() 
   CVE-2022-0400: (unk)  
-  CVE-2022-0433: (unk) bpf: Add missing map_get_next_key method to bloom filter map. 
   CVE-2022-0480: (unk) memcg: enable accounting for file lock caches 
-  CVE-2022-0487: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
+  CVE-2022-24958: (unk) usb: gadget: don't release an existing dev->buf 

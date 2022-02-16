@@ -65658,10 +65658,12 @@
         "rejected": true
     },
     "CVE-2021-3894": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.15-rc6",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2022-02-09",
+        "cmt_msg": "sctp: account stream padding length for reconf chunk",
+        "fixes": "a2d859e3fc97e79d907761550dbc03ff1b36479c",
+        "last_affected_version": "5.14.13",
+        "last_modified": "2022-02-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3894",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3894",
@@ -66303,9 +66305,32 @@
         "affected_versions": "v5.1-rc1 to v5.14-rc2",
         "breaks": "8d2451f4994fa60a57617282bab91b98266a00b1",
         "cmt_msg": "cgroup: verify that source is a string",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Changed",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+            "score": 8.8
+        },
+        "cwe": "Use After Free",
         "fixes": "3b0462726e7ef281c35a7a4ae33e93ee2bc9975b",
         "last_affected_version": "5.13.3",
-        "last_modified": "2022-02-09",
+        "last_modified": "2022-02-15",
         "nvd_text": "A use-after-free flaw was found in cgroup1_parse_param in kernel/cgroup/cgroup-v1.c in the Linux kernel's cgroup v1 parser. A local attacker with a user privilege could cause a privilege escalation by exploiting the fsconfig syscall parameter leading to a container breakout and a denial of service on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4154",
@@ -66349,11 +66374,11 @@
         }
     },
     "CVE-2021-4159": {
-        "affected_versions": "unk to v5.7-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.7-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "bpf: Verifer, adjust_scalar_min_max_vals to always call update_reg_bounds()",
         "fixes": "294f2fc6da27620a506e6c050241655459ccd6bd",
-        "last_modified": "2022-01-31",
+        "last_modified": "2022-02-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4159",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4159",
@@ -66507,11 +66532,11 @@
         }
     },
     "CVE-2021-4218": {
-        "affected_versions": "unk to v5.8-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.8-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "sysctl: pass kernel pointers to ->proc_handler",
         "fixes": "32927393dc1ccd60fb2bdc05b9e8e88753761469",
-        "last_modified": "2022-02-03",
+        "last_modified": "2022-02-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4218",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4218",
@@ -66921,6 +66946,23 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-44733"
         }
     },
+    "CVE-2021-44879": {
+        "affected_versions": "v2.6.12-rc2 to v5.17-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "f2fs: fix to do sanity check on inode type during garbage collection",
+        "fixes": "9056d6489f5a41cfbb67f719d2c0ce61ead72d9f",
+        "last_affected_version": "5.16.2",
+        "last_modified": "2022-02-15",
+        "nvd_text": "In gc_data_segment in fs/f2fs/gc.c in the Linux kernel before 5.16.3, special files are not considered, leading to a move_data_page NULL pointer dereference.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-44879",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-44879",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-44879",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-44879",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-44879",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-44879"
+        }
+    },
     "CVE-2021-45095": {
         "affected_versions": "v2.6.12-rc2 to v5.16-rc6",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -66999,6 +67041,23 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-45100",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-45100",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-45100"
+        }
+    },
+    "CVE-2021-45402": {
+        "affected_versions": "v5.7-rc1 to v5.16-rc6",
+        "breaks": "3f50f132d8400e129fc9eb68b5020167ef80a244",
+        "cmt_msg": "bpf: Fix signed bounds propagation after mov32",
+        "fixes": "3cf2b61eb06765e27fec6799292d9fb46d0b7e60",
+        "last_affected_version": "5.15.10",
+        "last_modified": "2022-02-15",
+        "nvd_text": "The check_alu_op() function in kernel/bpf/verifier.c in the Linux kernel through v5.16-rc5 did not properly update bounds while handling the mov32 instruction, which allows local users to obtain potentially sensitive address information, aka a \"pointer leak.\"",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-45402",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-45402",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-45402",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-45402",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-45402",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-45402"
         }
     },
     "CVE-2021-45469": {
@@ -67207,7 +67266,8 @@
         "cmt_msg": "vfs: fs_context: fix up param length parsing in legacy_parse_param",
         "fixes": "722d94847de29310e8aa03fcbdb41fc92c521756",
         "last_affected_version": "5.16.1",
-        "last_modified": "2022-01-26",
+        "last_modified": "2022-02-15",
+        "nvd_text": "A heap-based buffer overflow flaw was found in the way the legacy_parse_param function in the Filesystem Context functionality of the Linux kernel verified the supplied parameters length. An unprivileged (in case of unprivileged user namespaces enabled, otherwise needs namespaced CAP_SYS_ADMIN privilege) local user able to open a filesystem that does not support the Filesystem Context API (and thus fallbacks to legacy handling) could use this flaw to escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0185",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0185",
@@ -67221,9 +67281,32 @@
         "affected_versions": "v5.12-rc1-dontuse to v5.16-rc6",
         "breaks": "37086bfdc737ea6f66bf68dcf16757004d68e1e1",
         "cmt_msg": "bpf: Fix kernel address leakage in atomic fetch",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Improper Handling of Exceptional Conditions",
         "fixes": "7d3baf0afa3aa9102d6a521a8e4c41888bb79882",
         "last_affected_version": "5.15.10",
-        "last_modified": "2022-02-09",
+        "last_modified": "2022-02-15",
         "nvd_text": "A vulnerability was found in the Linux kernel's eBPF verifier when handling internal data structures. Internal memory locations could be returned to userspace. A local attacker with the permissions to insert eBPF code to the kernel can use this to leak internal kernel memory details defeating some of the exploit mitigations in place for the kernel. This flaws affects kernel versions < v5.16-rc6",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0264",
@@ -67235,8 +67318,8 @@
         }
     },
     "CVE-2022-0286": {
-        "affected_versions": "unk to v5.14-rc2",
-        "breaks": "",
+        "affected_versions": "v5.9-rc1 to v5.14-rc2",
+        "breaks": "18cb261afd7bf50134e5ccacc5ec91ea16efadd4",
         "cmt_msg": "bonding: fix null dereference in bond_ipsec_add_sa()",
         "cvss2": {
             "Access Complexity": "Low",
@@ -67263,7 +67346,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "105cd17a866017b45f3c45901b394c711c97bf40",
         "last_affected_version": "5.13.5",
-        "last_modified": "2022-02-09",
+        "last_modified": "2022-02-15",
         "nvd_text": "A flaw was found in the Linux kernel. A null pointer dereference in bond_ipsec_add_sa() may lead to local denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0286",
@@ -67312,7 +67395,8 @@
         "cmt_msg": "net ticp:fix a kernel-infoleak in __tipc_sendmsg()",
         "fixes": "d6d86830705f173fca6087a3e67ceaf68db80523",
         "last_affected_version": "5.15",
-        "last_modified": "2022-01-31",
+        "last_modified": "2022-02-15",
+        "nvd_text": "An information leak flaw was found due to uninitialized memory in the Linux kernel\u2019s TIPC protocol subsystem, in the way a user sends a TIPC datagram to one or more destinations. This flaw allows a local user to read some kernel memory. This issue is limited to no more than 7 bytes, and the user cannot control what is read. This flaw affects the Linux kernel versions prior to 5.17-rc1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0382",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0382",
@@ -67337,12 +67421,12 @@
         }
     },
     "CVE-2022-0433": {
-        "affected_versions": "unk to v5.17-rc1",
-        "breaks": "",
+        "affected_versions": "v5.16-rc1 to v5.17-rc1",
+        "breaks": "9330986c03006ab1d33d243b7cfe598a7a3c1baa",
         "cmt_msg": "bpf: Add missing map_get_next_key method to bloom filter map.",
         "fixes": "3ccdcee28415c4226de05438b4d89eb5514edf73",
         "last_affected_version": "5.16.2",
-        "last_modified": "2022-02-03",
+        "last_modified": "2022-02-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0433",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0433",
@@ -67352,12 +67436,28 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-0433"
         }
     },
+    "CVE-2022-0435": {
+        "affected_versions": "v4.8-rc1 to v5.17-rc4",
+        "breaks": "35c55c9877f8de0ab129fa1a309271d0ecc868b9",
+        "cmt_msg": "tipc: improve size validations for received domain records",
+        "fixes": "9aa422ad326634b76309e8ff342c246800621216",
+        "last_affected_version": "5.16.8",
+        "last_modified": "2022-02-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0435",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0435",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0435",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0435",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0435",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0435"
+        }
+    },
     "CVE-2022-0480": {
-        "affected_versions": "unk to v5.15-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.15-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "memcg: enable accounting for file lock caches",
         "fixes": "0f12156dff2862ac54235fc72703f18770769042",
-        "last_modified": "2022-02-09",
+        "last_modified": "2022-02-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0480",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0480",
@@ -67368,10 +67468,35 @@
         }
     },
     "CVE-2022-0487": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2022-02-09",
+        "affected_versions": "v3.16-rc1 to v5.17-rc4",
+        "breaks": "1b66e94e6b9995323190f31c51d8e1a6f516627e",
+        "cmt_msg": "moxart: fix potential use-after-free on remove path",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Use After Free",
+        "fixes": "bd2db32e7c3e35bd4d9b8bbff689434a50893546",
+        "last_affected_version": "5.16.8",
+        "last_modified": "2022-02-15",
         "nvd_text": "A use-after-free vulnerability was found in rtsx_usb_ms_drv_remove in drivers/memstick/host/rtsx_usb_ms.c in memstick in the Linux kernel. In this flaw, a local attacker with a user privilege may impact system Confidentiality. This flaw affects kernel versions prior to 5.14 rc1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0487",
@@ -67388,7 +67513,7 @@
         "cmt_msg": "cgroup-v1: Require capabilities to set release_agent",
         "fixes": "24f6008564183aa120d07c03d9289519c2fe02af",
         "last_affected_version": "5.16.5",
-        "last_modified": "2022-02-09",
+        "last_modified": "2022-02-15",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0492",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0492",
@@ -67396,6 +67521,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0492",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-0492",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-0492"
+        }
+    },
+    "CVE-2022-0516": {
+        "affected_versions": "v5.7-rc1 to v5.17-rc4",
+        "breaks": "19e1227768863a1469797c13ef8fea1af7beac2c",
+        "cmt_msg": "KVM: s390: Return error on SIDA memop on normal guest",
+        "fixes": "2c212e1baedcd782b2535a3f86bc491977677c0e",
+        "last_affected_version": "5.16.8",
+        "last_modified": "2022-02-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0516",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0516",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0516",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0516",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0516",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0516"
         }
     },
     "CVE-2022-22942": {
@@ -67496,9 +67637,32 @@
         "affected_versions": "v3.6-rc1 to v5.17-rc2",
         "breaks": "0dd2b474d0b69d58859399b1df7fdc699ea005d4",
         "cmt_msg": "NFSv4: Handle case where the lookup of a directory fails",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+            "score": 1.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "Low",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "score": 3.3
+        },
+        "cwe": "Missing Initialization of Resource",
         "fixes": "ac795161c93699d600db16c1a8cc23a65a1eceaf",
         "last_affected_version": "5.16.4",
-        "last_modified": "2022-02-09",
+        "last_modified": "2022-02-15",
         "nvd_text": "An issue was discovered in fs/nfs/dir.c in the Linux kernel before 5.16.5. If an application sets the O_DIRECTORY flag, and tries to open a regular file, nfs_atomic_open() performs a regular lookup. If a regular file is found, ENOTDIR should occur, but the server instead returns uninitialized data in the file descriptor.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-24448",
@@ -67507,6 +67671,39 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-24448",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-24448",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-24448"
+        }
+    },
+    "CVE-2022-24958": {
+        "affected_versions": "v2.6.12-rc2 to v5.17-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "usb: gadget: don't release an existing dev->buf",
+        "fixes": "89f3594d0de58e8a57d92d497dea9fee3d4b9cda",
+        "last_modified": "2022-02-15",
+        "nvd_text": "drivers/usb/gadget/legacy/inode.c in the Linux kernel through 5.16.8 mishandles dev->buf release.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-24958",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-24958",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-24958",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-24958",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-24958",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-24958"
+        }
+    },
+    "CVE-2022-24959": {
+        "affected_versions": "v4.19-rc7 to v5.17-rc2",
+        "breaks": "0781168e23a2fc8dceb989f11fc5b39b3ccacc35",
+        "cmt_msg": "yam: fix a memory leak in yam_siocdevprivate()",
+        "fixes": "29eb31542787e1019208a2e1047bb7c76c069536",
+        "last_affected_version": "5.16.4",
+        "last_modified": "2022-02-15",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.16.5. There is a memory leak in yam_siocdevprivate in drivers/net/hamradio/yam.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-24959",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-24959",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-24959",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-24959",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-24959",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-24959"
         }
     }
 }
