@@ -745,6 +745,7 @@ CVEs fixed in 4.19.198:
   CVE-2021-38160: b5fba782ccd3d12a14f884cd20f255fc9c0eec0c virtio_console: Assure used length from device is limited
   CVE-2021-38199: 743f6b973c8ba8a0a5ed15ab11e1d07fa00d5368 NFSv4: Initialise connection to the server in nfs4_alloc_client()
   CVE-2021-45485: f0be58ec9931907e980cf21737e51d369808eb95 ipv6: use prandom_u32() for ID generation
+  CVE-2022-0850: 9ed3a3d3a8d2cbe99d9e4386a98856491f0eade0 ext4: fix kernel infoleak via ext4_extent_header
 
 CVEs fixed in 4.19.199:
   CVE-2021-22543: 117777467bc015f0dc5fc079eeba0fa80c965149 KVM: do not allow mapping valid but non-reference-counted pages
@@ -869,6 +870,9 @@ CVEs fixed in 4.19.230:
   CVE-2022-25258: e5eb8d19aee115d8fb354d1eff1b8df700467164 USB: gadget: validate interface OS descriptor requests
   CVE-2022-25375: db9aaa3026298d652e98f777bc0f5756e2455dda usb: gadget: rndis: check size of RNDIS_MSG_SET command
 
+CVEs fixed in 4.19.231:
+  CVE-2022-0847: d46c42d8d2742742eddf9290e72df4b563f2e301 lib/iov_iter: initialize "flags" in new pipe_buffer
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -919,7 +923,7 @@ Outstanding CVEs:
   CVE-2020-0347: (unk)  
   CVE-2020-10708: (unk)  
   CVE-2020-11725: (unk)  
-  CVE-2020-12362: (unk)  
+  CVE-2020-12362: (unk) drm/i915/guc: Update to use firmware v49.0.1 
   CVE-2020-12363: (unk) drm/i915/guc: Update to use firmware v49.0.1 
   CVE-2020-12364: (unk) drm/i915/guc: Update to use firmware v49.0.1 
   CVE-2020-12656: (unk) sunrpc: check that domain table is empty at module unload. 
@@ -964,8 +968,9 @@ Outstanding CVEs:
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
+  CVE-2021-4023: (unk) io-wq: fix cancellation on create-worker failure 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
-  CVE-2021-4148: (unk)  
+  CVE-2021-4148: (unk) mm: khugepaged: skip huge page collapse for special files 
   CVE-2021-4149: (unk) btrfs: unlock newly allocated extent buffer after error 
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-4159: (unk) bpf: Verifer, adjust_scalar_min_max_vals to always call update_reg_bounds() 
@@ -976,8 +981,9 @@ Outstanding CVEs:
   CVE-2022-0400: (unk)  
   CVE-2022-0480: (unk) memcg: enable accounting for file lock caches 
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
-  CVE-2022-0646: (unk)  
+  CVE-2022-0812: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-24958: (unk) usb: gadget: don't release an existing dev->buf 
   CVE-2022-25265: (unk)  
-  CVE-2022-25636: (unk)  
+  CVE-2022-25636: (unk) netfilter: nf_tables_offload: incorrect flow offload action array size 
+  CVE-2022-26490: (unk) nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION 

@@ -54268,8 +54268,9 @@
         }
     },
     "CVE-2020-12362": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.11-rc1",
         "breaks": "",
+        "cmt_msg": "drm/i915/guc: Update to use firmware v49.0.1",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -54293,8 +54294,8 @@
             "score": 7.8
         },
         "cwe": "Integer Overflow or Wraparound",
-        "fixes": "",
-        "last_modified": "2021-02-26",
+        "fixes": "c784e5249e773689e38d2bc1749f08b986621a26",
+        "last_modified": "2022-03-07",
         "nvd_text": "Integer overflow in the firmware for some Intel(R) Graphics Drivers for Windows * before version 26.20.100.7212 and before Linux kernel version 5.5 may allow a privileged user to potentially enable an escalation of privilege via local access.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-12362",
@@ -61277,9 +61278,32 @@
         "affected_versions": "v4.1-rc1 to v5.15-rc3",
         "breaks": "054623105728b06852f077299e2bf1bf3d5f2b0b",
         "cmt_msg": "s390/bpf: Fix optimizing out zero-extensions",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "db7bee653859ef7179be933e7d1384644f795f26",
         "last_affected_version": "5.14.6",
-        "last_modified": "2022-02-22",
+        "last_modified": "2022-03-07",
         "nvd_text": "A flaw was found in s390 eBPF JIT in bpf_jit_insn in arch/s390/net/bpf_jit_comp.c in the Linux kernel. In this flaw, a local attacker with special user privilege can circumvent the verifier and may lead to a confidentiality problem.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20320",
@@ -61294,9 +61318,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.15-rc5",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ovl: fix missing negative dentry check in ovl_rename()",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:N/I:N/A:C",
+            "score": 4.7
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.7
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "a295aef603e109a47af355477326bd41151765b6",
         "last_affected_version": "5.14.11",
-        "last_modified": "2022-02-22",
+        "last_modified": "2022-03-07",
         "nvd_text": "A race condition accessing file object in the Linux kernel OverlayFS subsystem was found in the way users do rename in specific way with OverlayFS. A local user could use this flaw to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20321",
@@ -61311,9 +61358,32 @@
         "affected_versions": "v4.15-rc1 to v5.15-rc1",
         "breaks": "35732d01fe311ec13c4e42936878b782b8e7ea85",
         "cmt_msg": "ipv6: make exception cache less predictible",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+            "score": 5.8
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "score": 7.4
+        },
+        "cwe": "Use of Insufficiently Random Values",
         "fixes": "a00df2caffed3883c341d5685f830434312e4a43",
         "last_affected_version": "5.14.3",
-        "last_modified": "2022-02-22",
+        "last_modified": "2022-03-07",
         "nvd_text": "A flaw in the processing of received ICMP errors (ICMP fragment needed and ICMP redirect) in the Linux kernel functionality was found to allow the ability to quickly scan open UDP ports. This flaw allows an off-path remote user to effectively bypass the source port UDP randomization. The highest threat from this vulnerability is to confidentiality and possibly integrity, because software that relies on UDP source port randomization are indirectly affected as well.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20322",
@@ -63726,7 +63796,8 @@
         "cmt_msg": "ext4: handle error of ext4_setup_system_zone() on remount",
         "fixes": "d176b1f62f242ab259ff665a26fbac69db1aecba",
         "last_affected_version": "5.8.5",
-        "last_modified": "2021-03-29",
+        "last_modified": "2022-03-07",
+        "nvd_text": "A flaw was found in the Linux kernel. A denial of service problem is identified if an extent tree is corrupted in a crafted ext4 filesystem in fs/ext4/extents.c in ext4_es_cache_extent. Fabricating an integer overflow, A local attacker with a special user privilege may cause a system crash problem which can lead to an availability threat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3428",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3428",
@@ -64487,7 +64558,8 @@
         "cmt_msg": "can: bcm: delay release of struct bcm_op after synchronize_rcu()",
         "fixes": "d5f9023fa61ee8b94f37a93f08e94b136cf1e463",
         "last_affected_version": "5.13.1",
-        "last_modified": "2021-07-21",
+        "last_modified": "2022-03-07",
+        "nvd_text": ".A flaw was found in the CAN BCM networking protocol in the Linux kernel, where a local attacker can abuse a flaw in the CAN subsystem to corrupt memory, crash the system or escalate privileges. This race condition in net/can/bcm.c in the Linux kernel allows for local privilege escalation to root.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3609",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3609",
@@ -64583,7 +64655,8 @@
         "cmt_msg": "Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()",
         "fixes": "99c23da0eed4fd20cae8243f2b51e10e66aa0951",
         "last_affected_version": "5.15.2",
-        "last_modified": "2022-01-31",
+        "last_modified": "2022-03-07",
+        "nvd_text": "A flaw use-after-free in function sco_sock_sendmsg() of the Linux kernel HCI subsystem was found in the way user calls ioct UFFDIO_REGISTER or other way triggers race condition of the call sco_conn_del() together with the call sco_sock_sendmsg() with the expected controllable faulting memory page. A privileged local user could use this flaw to crash the system or escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3640",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3640",
@@ -64679,7 +64752,8 @@
         "cmt_msg": "KVM: nSVM: always intercept VMLOAD/VMSAVE when nested (CVE-2021-3656)",
         "fixes": "c7dfa4009965a9b2d7b329ee970eb8da0d32f0bc",
         "last_affected_version": "5.13.11",
-        "last_modified": "2021-08-26",
+        "last_modified": "2022-03-07",
+        "nvd_text": "A flaw was found in the KVM's AMD code for supporting SVM nested virtualization. The flaw occurs when processing the VMCB (virtual machine control block) provided by the L1 guest to spawn/handle a nested guest (L2). Due to improper validation of the \"virt_ext\" field, this issue could allow a malicious L1 to disable both VMLOAD/VMSAVE intercepts and VLS (Virtual VMLOAD/VMSAVE) for the L2 guest. As a result, the L2 guest would be allowed to read/write physical pages of the host, resulting in a crash of the entire system, leak of sensitive data or potential guest-to-host escape.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3656",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3656",
@@ -64766,7 +64840,8 @@
         "cmt_msg": "net_sched: cls_route: remove the right filter from hashtable",
         "fixes": "ef299cc3fa1a9e1288665a9fdc8bff55629fd359",
         "last_affected_version": "5.5",
-        "last_modified": "2021-09-15",
+        "last_modified": "2022-03-07",
+        "nvd_text": "A flaw was found in the \"Routing decision\" classifier in the Linux kernel's Traffic Control networking subsystem in the way it handled changing of classification filters, leading to a use-after-free condition. This flaw allows unprivileged local users to escalate their privileges on the system. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3715",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3715",
@@ -64870,7 +64945,8 @@
         "cmt_msg": "net: qrtr: fix OOB Read in qrtr_endpoint_post",
         "fixes": "ad9d24c9429e2159d1e279dc3a83191ccb4daf1d",
         "last_affected_version": "5.12.12",
-        "last_modified": "2021-09-01",
+        "last_modified": "2022-03-07",
+        "nvd_text": "An out-of-bounds (OOB) memory read flaw was found in the Qualcomm IPC router protocol in the Linux kernel. A missing sanity check allows a local attacker to gain access to out-of-bounds memory, leading to a system crash or a leak of internal kernel information. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3743",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3743",
@@ -64886,7 +64962,8 @@
         "cmt_msg": "crypto: ccp - fix resource leaks in ccp_run_aes_gcm_cmd()",
         "fixes": "505d9dcb0f7ddf9d075e729523a33d38642ae680",
         "last_affected_version": "5.14.9",
-        "last_modified": "2021-10-12",
+        "last_modified": "2022-03-07",
+        "nvd_text": "A memory leak flaw was found in the Linux kernel in the ccp_run_aes_gcm_cmd() function in drivers/crypto/ccp/ccp-ops.c, which allows attackers to cause a denial of service (memory consumption). This vulnerability is similar with the older CVE-2019-18808.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3744",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3744",
@@ -64900,9 +64977,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.16-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "Bluetooth: fix use-after-free error in lock_sock_nested()",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Adjacent Network",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:A/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 7.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Adjacent",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.1
+        },
+        "cwe": "Use After Free",
         "fixes": "1bff51ea59a9afb67d2dd78518ab0582a54a472c",
         "last_affected_version": "5.15.2",
-        "last_modified": "2022-02-22",
+        "last_modified": "2022-03-07",
         "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s Bluetooth subsystem in the way user calls connect to the socket and disconnect simultaneously due to a race condition. This flaw allows a user to crash the system or escalate their privileges. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3752",
@@ -64917,9 +65017,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.15-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "vt_kdsetmode: extend console locking",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+            "score": 1.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.7
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "2287a51ba822384834dafc1c798453375d1107c7",
         "last_affected_version": "5.14.0",
-        "last_modified": "2022-02-22",
+        "last_modified": "2022-03-07",
         "nvd_text": "A race problem was seen in the vt_k_ioctl in drivers/tty/vt/vt_ioctl.c in the Linux kernel, which may cause an out of bounds read in vt as the write access to vc_mode is not protected by lock-in vt_ioctl (KDSETMDE). The highest threat from this vulnerability is to data confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3753",
@@ -65047,7 +65170,8 @@
         "cmt_msg": "sctp: use init_tag from inithdr for ABORT chunk",
         "fixes": "4f7019c7eb33967eb87766e0e4602b5576873680",
         "last_affected_version": "5.14",
-        "last_modified": "2021-11-10",
+        "last_modified": "2022-03-07",
+        "nvd_text": "A flaw was found in the Linux SCTP stack. A blind attacker may be able to kill an existing SCTP association through invalid chunks if the attacker knows the IP-addresses and port numbers being used and the attacker can send packets with spoofed IP addresses.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3772",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3772",
@@ -66037,7 +66161,8 @@
         "cmt_msg": "hugetlbfs: flush TLBs correctly after huge_pmd_unshare",
         "fixes": "a4a118f2eead1d6c49e00765de89878288d4b890",
         "last_affected_version": "5.15.4",
-        "last_modified": "2021-12-09",
+        "last_modified": "2022-03-07",
+        "nvd_text": "A memory leak flaw in the Linux kernel's hugetlbfs memory usage was found in the way the user maps some regions of memory twice using shmget() which are aligned to PUD alignment with the fault of some of the memory pages. A local user could use this flaw to get unauthorized access to some data.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4002",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4002",
@@ -66045,6 +66170,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4002",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-4002",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-4002"
+        }
+    },
+    "CVE-2021-4023": {
+        "affected_versions": "unk to v5.15-rc1",
+        "breaks": "",
+        "cmt_msg": "io-wq: fix cancellation on create-worker failure",
+        "fixes": "713b9825a4c47897f66ad69409581e7734a8728e",
+        "last_modified": "2022-03-07",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4023",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4023",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-4023",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-4023",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-4023",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-4023"
         }
     },
     "CVE-2021-4028": {
@@ -66201,9 +66341,32 @@
         "affected_versions": "v5.11-rc1 to v5.16-rc2",
         "breaks": "d1c263a031e876ac3ca5223c728e4d98ed50b3c0",
         "cmt_msg": "NFSD: Fix exposure in nfsd4_decode_bitmap()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:N",
+            "score": 6.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+            "score": 7.1
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "c0019b7db1d7ac62c711cda6b357a659d46428fe",
         "last_affected_version": "5.15.4",
-        "last_modified": "2022-02-22",
+        "last_modified": "2022-03-07",
         "nvd_text": "An out-of-bounds (OOB) memory write flaw was found in the NFSD in the Linux kernel. Missing sanity may lead to a write beyond bmval[bmlen-1] in nfsd4_decode_bitmap4 in fs/nfsd/nfs4xdr.c. In this flaw, a local attacker with user privilege may gain access to out-of-bounds memory, leading to a system integrity and confidentiality threat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4090",
@@ -66218,9 +66381,32 @@
         "affected_versions": "v5.11-rc1 to v5.15-rc7",
         "breaks": "7ed9abfe8e9f62384f9b11c9fca19e551dbec5bd",
         "cmt_msg": "KVM: SEV-ES: go over the sev_pio_data buffer in multiple passes if needed",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Changed",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+            "score": 8.8
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "95e16b4792b0429f1933872f743410f00e590c55",
         "last_affected_version": "5.14.14",
-        "last_modified": "2022-02-22",
+        "last_modified": "2022-03-07",
         "nvd_text": "A flaw was found in the KVM's AMD code for supporting the Secure Encrypted Virtualization-Encrypted State (SEV-ES). A KVM guest using SEV-ES can trigger out-of-bounds reads and writes in the host kernel via a malicious VMGEXIT for a string I/O instruction (for example, outs or ins) using the exit reason SVM_EXIT_IOIO. This issue results in a crash of the entire system or a potential guest-to-host escape scenario.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4093",
@@ -66303,10 +66489,12 @@
         }
     },
     "CVE-2021-4148": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.15",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2021-12-31",
+        "cmt_msg": "mm: khugepaged: skip huge page collapse for special files",
+        "fixes": "a4aeaa06d45e90f9b279f0b09de84bd00006e733",
+        "last_affected_version": "5.14",
+        "last_modified": "2022-03-07",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4148",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4148",
@@ -67651,7 +67839,8 @@
         "cmt_msg": "cgroup-v1: Require capabilities to set release_agent",
         "fixes": "24f6008564183aa120d07c03d9289519c2fe02af",
         "last_affected_version": "5.16.5",
-        "last_modified": "2022-02-15",
+        "last_modified": "2022-03-07",
+        "nvd_text": "A vulnerability was found in the Linux kernel\u2019s cgroup_release_agent_write in the kernel/cgroup/cgroup-v1.c function. This flaw, under certain circumstances, allows the use of the cgroups v1 release_agent feature to escalate privileges and bypass the namespace isolation unexpectedly.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0492",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0492",
@@ -67697,9 +67886,32 @@
         "affected_versions": "unk to v5.17-rc2",
         "breaks": "",
         "cmt_msg": "udf: Fix NULL ptr deref when converting from inline format",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "7fc3b7c2981bbd1047916ade327beccb90994eee",
         "last_affected_version": "5.16.4",
-        "last_modified": "2022-02-22",
+        "last_modified": "2022-03-07",
         "nvd_text": "A flaw null pointer dereference in the Linux kernel UDF file system functionality was found in the way user triggers udf_file_write_iter function for the malicious UDF image. A local user could use this flaw to crash the system. Actual from Linux kernel 4.2-rc1 till 5.17-rc2.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0617",
@@ -67727,8 +67939,8 @@
         }
     },
     "CVE-2022-0646": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v5.17-rc1 to v5.17-rc5",
+        "breaks": "7bd9890f3d74e96f0e1a898f68decfc711de3001",
         "cvss2": {
             "Access Complexity": "Low",
             "Access Vector": "Local Access",
@@ -67752,8 +67964,8 @@
             "score": 7.8
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2022-02-28",
+        "fixes": "6c342ce2239c182c2428ce5a44cb32330434ae6e",
+        "last_modified": "2022-03-07",
         "nvd_text": "A flaw use after free in the Linux kernel Management Component Transport Protocol (MCTP) subsystem was found in the way user triggers cancel_work_sync after the unregister_netdev during removing device. A local user could use this flaw to crash the system or escalate their privileges on the system. It is actual from Linux Kernel 5.17-rc1 (when mctp-serial.c introduced) till 5.17-rc5.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0646",
@@ -67762,6 +67974,53 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0646",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-0646",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-0646"
+        }
+    },
+    "CVE-2022-0812": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2022-03-07",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0812",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0812",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0812",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0812",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0812",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0812"
+        }
+    },
+    "CVE-2022-0847": {
+        "affected_versions": "unk to v5.17-rc6",
+        "breaks": "",
+        "cmt_msg": "lib/iov_iter: initialize \"flags\" in new pipe_buffer",
+        "fixes": "9d2231c5d74e13b2a0546fee6737ee4446017903",
+        "last_affected_version": "5.16.10",
+        "last_modified": "2022-03-07",
+        "name": "Dirty Pipe",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0847",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0847",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0847",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0847",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0847",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0847"
+        }
+    },
+    "CVE-2022-0850": {
+        "affected_versions": "unk to v5.14-rc1",
+        "breaks": "",
+        "cmt_msg": "ext4: fix kernel infoleak via ext4_extent_header",
+        "fixes": "ce3aba43599f0b50adbebff133df8d08a3d5fffe",
+        "last_affected_version": "5.13.1",
+        "last_modified": "2022-03-07",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0850",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0850",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0850",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0850",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0850",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0850"
         }
     },
     "CVE-2022-22942": {
@@ -67982,9 +68241,32 @@
         "affected_versions": "unk to v5.17-rc4",
         "breaks": "",
         "cmt_msg": "USB: gadget: validate interface OS descriptor requests",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.6
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "75e5b4849b81e19e9efe1654b30d7f3151c33c2c",
         "last_affected_version": "5.16.9",
-        "last_modified": "2022-02-22",
+        "last_modified": "2022-03-07",
         "nvd_text": "An issue was discovered in drivers/usb/gadget/composite.c in the Linux kernel before 5.16.10. The USB Gadget subsystem lacks certain validation of interface OS descriptor requests (ones with a large array index and ones associated with NULL function pointer retrieval). Memory corruption might occur.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-25258",
@@ -68037,9 +68319,32 @@
         "affected_versions": "unk to v5.17-rc4",
         "breaks": "",
         "cmt_msg": "usb: gadget: rndis: check size of RNDIS_MSG_SET command",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Exposure of Resource to Wrong Sphere",
         "fixes": "38ea1eac7d88072bbffb630e2b3db83ca649b826",
         "last_affected_version": "5.16.9",
-        "last_modified": "2022-02-22",
+        "last_modified": "2022-03-07",
         "nvd_text": "An issue was discovered in drivers/usb/gadget/function/rndis.c in the Linux kernel before 5.16.10. The RNDIS USB gadget lacks validation of the size of the RNDIS_MSG_SET command. Attackers can obtain sensitive information from kernel memory.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-25375",
@@ -68051,10 +68356,35 @@
         }
     },
     "CVE-2022-25636": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.17-rc6",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2022-02-28",
+        "cmt_msg": "netfilter: nf_tables_offload: incorrect flow offload action array size",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Privilege Management",
+        "fixes": "b1a5983f56e371046dcf164f90bfaf704d2b89f6",
+        "last_affected_version": "5.16.11",
+        "last_modified": "2022-03-07",
         "nvd_text": "net/netfilter/nf_dup_netdev.c in the Linux kernel 5.4 through 5.6.10 allows local users to gain privileges because of a heap out-of-bounds write. This is related to nf_tables_offload.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-25636",
@@ -68063,6 +68393,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-25636",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-25636",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-25636"
+        }
+    },
+    "CVE-2022-26490": {
+        "affected_versions": "unk to v5.17-rc1",
+        "breaks": "",
+        "cmt_msg": "nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION",
+        "fixes": "4fbcc1a4cb20fe26ad0225679c536c80f1648221",
+        "last_modified": "2022-03-07",
+        "nvd_text": "st21nfca_connectivity_event_received in drivers/nfc/st21nfca/se.c in the Linux kernel through 5.16.12 has EVT_TRANSACTION buffer overflows because of untrusted length parameters.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-26490",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-26490",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-26490",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-26490",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-26490",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-26490"
         }
     }
 }
