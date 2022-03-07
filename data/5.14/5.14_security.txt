@@ -51,6 +51,7 @@ CVEs fixed in 5.14.15:
 
 CVEs fixed in 5.14.16:
   CVE-2021-3772: 332933f9ae0a17f6e362ec0f35ed51e7bc8e76d6 sctp: use init_tag from inithdr for ABORT chunk
+  CVE-2021-4148: 5fcb6fce74ffa614d964667110cf1a516c48c6d9 mm: khugepaged: skip huge page collapse for special files
   CVE-2021-42327: d3ed72495a59fbfb9377450c8dfe94389a6509a7 drm/amdgpu: fix out of bounds write
   CVE-2021-43267: e029c9828c5b503b11a609fcc7c5840de2db3fb4 tipc: fix size validations for the MSG_CRYPTO type
 
@@ -93,7 +94,6 @@ Outstanding CVEs:
   CVE-2020-0347: (unk)  
   CVE-2020-10708: (unk)  
   CVE-2020-11725: (unk)  
-  CVE-2020-12362: (unk)  
   CVE-2020-14304: (unk)  
   CVE-2020-15802: (unk)  
   CVE-2020-24502: (unk)  
@@ -128,11 +128,11 @@ Outstanding CVEs:
   CVE-2021-39685: (unk) USB: gadget: detect too-big endpoint 0 requests 
   CVE-2021-4001: (unk) bpf: Fix toctou on read-only map's constant scalar tracking 
   CVE-2021-4002: (unk) hugetlbfs: flush TLBs correctly after huge_pmd_unshare 
+  CVE-2021-4023: (unk) io-wq: fix cancellation on create-worker failure 
   CVE-2021-4083: (unk) fget: check that the fd still exists after getting a ref to it 
   CVE-2021-4090: (unk) NFSD: Fix exposure in nfsd4_decode_bitmap() 
   CVE-2021-4095: (unk) KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty 
   CVE-2021-4135: (unk) netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc 
-  CVE-2021-4148: (unk)  
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-4155: (unk) xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate 
   CVE-2021-4197: (unk) cgroup: Use open-time credentials for process migraton perm checks 
@@ -158,7 +158,8 @@ Outstanding CVEs:
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
   CVE-2022-0516: (unk) KVM: s390: Return error on SIDA memop on normal guest 
   CVE-2022-0617: (unk) udf: Fix NULL ptr deref when converting from inline format 
-  CVE-2022-0646: (unk)  
+  CVE-2022-0812: (unk)  
+  CVE-2022-0847: (unk) lib/iov_iter: initialize "flags" in new pipe_buffer 
   CVE-2022-22942: (unk) drm/vmwgfx: Fix stale file descriptors on failed usercopy 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
@@ -168,4 +169,5 @@ Outstanding CVEs:
   CVE-2022-25258: (unk) USB: gadget: validate interface OS descriptor requests 
   CVE-2022-25265: (unk)  
   CVE-2022-25375: (unk) usb: gadget: rndis: check size of RNDIS_MSG_SET command 
-  CVE-2022-25636: (unk)  
+  CVE-2022-25636: (unk) netfilter: nf_tables_offload: incorrect flow offload action array size 
+  CVE-2022-26490: (unk) nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION 
