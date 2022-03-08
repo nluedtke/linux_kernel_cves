@@ -1,51 +1,8 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 07Mar22 14:58
-
-### **New CVEs Added:**
-
-[CVE-2021-4023](cves/CVE-2021-4023)  
-[CVE-2022-0812](cves/CVE-2022-0812)  
-[CVE-2022-0847](cves/CVE-2022-0847)  
-[CVE-2022-0850](cves/CVE-2022-0850)  
-[CVE-2022-26490](cves/CVE-2022-26490)  
-
-
-### **New Versions Checked:**
-
-[4.14.269](streams/4.14)  
-[4.19.232](streams/4.19)  
-[4.9.304](streams/4.9)  
-[5.10.103](streams/5.10)  
-[5.15.26](streams/5.15)  
-[5.16.12](streams/5.16)  
-[5.4.182](streams/5.4)  
-
+## Last Update - 07Mar22 19:22
 
 ### **Updated CVEs:**
 
-[CVE-2020-12362](cves/CVE-2020-12362)  
-[CVE-2021-4148](cves/CVE-2021-4148)  
-[CVE-2022-0646](cves/CVE-2022-0646)  
-[CVE-2022-25636](cves/CVE-2022-25636)  
-[CVE-2021-20320](cves/CVE-2021-20320)  
-[CVE-2021-20321](cves/CVE-2021-20321)  
-[CVE-2021-20322](cves/CVE-2021-20322)  
-[CVE-2021-3428](cves/CVE-2021-3428)  
-[CVE-2021-3609](cves/CVE-2021-3609)  
-[CVE-2021-3640](cves/CVE-2021-3640)  
-[CVE-2021-3656](cves/CVE-2021-3656)  
-[CVE-2021-3715](cves/CVE-2021-3715)  
-[CVE-2021-3743](cves/CVE-2021-3743)  
-[CVE-2021-3744](cves/CVE-2021-3744)  
-[CVE-2021-3752](cves/CVE-2021-3752)  
-[CVE-2021-3753](cves/CVE-2021-3753)  
-[CVE-2021-3772](cves/CVE-2021-3772)  
-[CVE-2021-4002](cves/CVE-2021-4002)  
-[CVE-2021-4090](cves/CVE-2021-4090)  
-[CVE-2021-4093](cves/CVE-2021-4093)  
-[CVE-2022-0492](cves/CVE-2022-0492)  
-[CVE-2022-0617](cves/CVE-2022-0617)  
-[CVE-2022-25258](cves/CVE-2022-25258)  
-[CVE-2022-25375](cves/CVE-2022-25375)  
+[CVE-2022-0847](cves/CVE-2022-0847)  
