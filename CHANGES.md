@@ -1,8 +1,5 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 07Mar22 19:22
+## Last Update - 08Mar22 07:19
 
-### **Updated CVEs:**
-
-[CVE-2022-0847](cves/CVE-2022-0847)  
