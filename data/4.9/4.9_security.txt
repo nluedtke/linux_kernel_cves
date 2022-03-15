@@ -1158,6 +1158,7 @@ CVEs fixed in 4.9.290:
 CVEs fixed in 4.9.291:
   CVE-2021-3640: 9bbe312ebea40c9b586c2b07a0d0948ff418beca Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()
   CVE-2021-3752: d19ea7da0eeb61be28ec05d8b8bddec3dde71610 Bluetooth: fix use-after-free error in lock_sock_nested()
+  CVE-2021-39686: 443fc43d2fdbf55be7aa86faae1f7655e761e683 binder: use euid from cred instead of using task
   CVE-2021-4202: 4a59a3681158a182557c75bacd00d184f9b2a8f5 NFC: reorganize the functions in nci_request
 
 CVEs fixed in 4.9.292:
@@ -1166,6 +1167,7 @@ CVEs fixed in 4.9.292:
 
 CVEs fixed in 4.9.293:
   CVE-2021-39685: d2ca6859ea96c6d4c6ad3d6873a308a004882419 USB: gadget: detect too-big endpoint 0 requests
+  CVE-2021-39698: 0e92a7e47a0411d5208990c83a3d200515e314e8 wait: add wake_up_pollfree()
 
 CVEs fixed in 4.9.294:
   CVE-2021-28711: 25898389795bd85d8e1520c0c75c3ad906c17da7 xen/blkfront: harden blkfront against event channel storms
@@ -1205,6 +1207,23 @@ CVEs fixed in 4.9.301:
 CVEs fixed in 4.9.302:
   CVE-2022-25258: f3bcd744b0bc8dcc6cdb3ac5be20f54aecfb78a4 USB: gadget: validate interface OS descriptor requests
   CVE-2022-25375: ff0a90739925734c91c7e39befe3f4378e0c1369 usb: gadget: rndis: check size of RNDIS_MSG_SET command
+
+CVEs fixed in 4.9.304:
+  CVE-2022-26966: 89260e0e191e8a3a9872f72836bdf0641853c87f sr9700: sanity check for packet length
+
+CVEs fixed in 4.9.305:
+  CVE-2022-24958: be1bb345f180482b0e57768d967ef020d7cba592 usb: gadget: don't release an existing dev->buf
+
+CVEs fixed in 4.9.306:
+  CVE-2022-0001: a771511caa8e31cb5cac4fa39165ebbca3e62795 x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE
+  CVE-2022-0002: a771511caa8e31cb5cac4fa39165ebbca3e62795 x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE
+  CVE-2022-23036: 73e1d9b33f2bd93ce30719dfc8990b6328243b7e xen/grant-table: add gnttab_try_end_foreign_access()
+  CVE-2022-23037: 1112bb311ec13e7e6e7045ae4a0b7091bedc6b7a xen/netfront: don't use gnttab_query_foreign_access() for mapped status
+  CVE-2022-23038: 73e1d9b33f2bd93ce30719dfc8990b6328243b7e xen/grant-table: add gnttab_try_end_foreign_access()
+  CVE-2022-23039: 97b835c6de03a24db79d374b02d532f0b562fd38 xen/gntalloc: don't use gnttab_query_foreign_access()
+  CVE-2022-23040: 8f80d12f6946a6fe7c64bfc204c062a57f83c7f8 xen/xenbus: don't let xenbus_grant_ring() remove grants in error case
+  CVE-2022-23042: c4497b057b14274e159434f0ed70439a21f3d2a9 xen/netfront: react properly to failing gnttab_end_foreign_access_ref()
+  CVE-2022-23960: b24d4041cfb6dab83f9edf40573375bd1365e619 ARM: report Spectre v2 status through sysfs
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1352,6 +1371,9 @@ Outstanding CVEs:
   CVE-2021-3892: (unk)  
   CVE-2021-3894: (unk) sctp: account stream padding length for reconf chunk 
   CVE-2021-39636: (unk) netfilter: x_tables: fix pointer leaks to userspace 
+  CVE-2021-39711: (unk) bpf: fix panic due to oob in bpf_prog_test_run_skb 
+  CVE-2021-39713: (unk) net: sched: use Qdisc rcu API instead of relying on rtnl lock 
+  CVE-2021-39714: (unk) staging: android: ion: Drop ion_map_kernel interface 
   CVE-2021-4023: (unk) io-wq: fix cancellation on create-worker failure 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
   CVE-2021-4148: (unk) mm: khugepaged: skip huge page collapse for special files 
@@ -1367,9 +1389,11 @@ Outstanding CVEs:
   CVE-2022-0400: (unk)  
   CVE-2022-0480: (unk) memcg: enable accounting for file lock caches 
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
+  CVE-2022-0742: (unk) ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report() 
   CVE-2022-0812: (unk)  
+  CVE-2022-23041: (unk) xen/9p: use alloc/free_pages_exact() 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
-  CVE-2022-24958: (unk) usb: gadget: don't release an existing dev->buf 
   CVE-2022-25265: (unk)  
   CVE-2022-25636: (unk) netfilter: nf_tables_offload: incorrect flow offload action array size 
   CVE-2022-26490: (unk) nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION 
+  CVE-2022-26878: (unk)  

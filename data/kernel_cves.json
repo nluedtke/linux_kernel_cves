@@ -59626,8 +59626,31 @@
     "CVE-2020-36516": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "Single",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:S/C:N/I:P/A:P",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "Low",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:L",
+            "score": 5.9
+        },
+        "cwe": "Use of a Broken or Risky Cryptographic Algorithm",
         "fixes": "",
-        "last_modified": "2022-02-28",
+        "last_modified": "2022-03-15",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16.11. The mixed IPID assignment method with the hash-based IPID assignment policy allows an off-path attacker to inject data into a victim's TCP session or terminate that session.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36516",
@@ -63794,9 +63817,32 @@
         "affected_versions": "v5.2-rc2 to v5.9-rc2",
         "breaks": "0a944e8a6c66ca04c7afbaa17e22bf208a8b37f0",
         "cmt_msg": "ext4: handle error of ext4_setup_system_zone() on remount",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Integer Overflow or Wraparound",
         "fixes": "d176b1f62f242ab259ff665a26fbac69db1aecba",
         "last_affected_version": "5.8.5",
-        "last_modified": "2022-03-07",
+        "last_modified": "2022-03-15",
         "nvd_text": "A flaw was found in the Linux kernel. A denial of service problem is identified if an extent tree is corrupted in a crafted ext4 filesystem in fs/ext4/extents.c in ext4_es_cache_extent. Fabricating an integer overflow, A local attacker with a special user privilege may cause a system crash problem which can lead to an availability threat.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3428",
@@ -64556,9 +64602,32 @@
         "affected_versions": "v2.6.25-rc1 to v5.14-rc1",
         "breaks": "ffd980f976e7fd666c2e61bf8ab35107efd11828",
         "cmt_msg": "can: bcm: delay release of struct bcm_op after synchronize_rcu()",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "d5f9023fa61ee8b94f37a93f08e94b136cf1e463",
         "last_affected_version": "5.13.1",
-        "last_modified": "2022-03-07",
+        "last_modified": "2022-03-15",
         "nvd_text": ".A flaw was found in the CAN BCM networking protocol in the Linux kernel, where a local attacker can abuse a flaw in the CAN subsystem to corrupt memory, crash the system or escalate privileges. This race condition in net/can/bcm.c in the Linux kernel allows for local privilege escalation to root.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3609",
@@ -64750,9 +64819,32 @@
         "affected_versions": "v4.13-rc1 to v5.14-rc7",
         "breaks": "89c8a4984fc98e625517bfe5083342d77ee35811",
         "cmt_msg": "KVM: nSVM: always intercept VMLOAD/VMSAVE when nested (CVE-2021-3656)",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Changed",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+            "score": 8.8
+        },
+        "cwe": "Missing Authorization",
         "fixes": "c7dfa4009965a9b2d7b329ee970eb8da0d32f0bc",
         "last_affected_version": "5.13.11",
-        "last_modified": "2022-03-07",
+        "last_modified": "2022-03-15",
         "nvd_text": "A flaw was found in the KVM's AMD code for supporting SVM nested virtualization. The flaw occurs when processing the VMCB (virtual machine control block) provided by the L1 guest to spawn/handle a nested guest (L2). Due to improper validation of the \"virt_ext\" field, this issue could allow a malicious L1 to disable both VMLOAD/VMSAVE intercepts and VLS (Virtual VMLOAD/VMSAVE) for the L2 guest. As a result, the L2 guest would be allowed to read/write physical pages of the host, resulting in a crash of the entire system, leak of sensitive data or potential guest-to-host escape.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3656",
@@ -64838,9 +64930,32 @@
         "affected_versions": "v3.18-rc1 to v5.6",
         "breaks": "1109c00547fc66df45b9ff923544be4c1e1bec13",
         "cmt_msg": "net_sched: cls_route: remove the right filter from hashtable",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "ef299cc3fa1a9e1288665a9fdc8bff55629fd359",
         "last_affected_version": "5.5",
-        "last_modified": "2022-03-07",
+        "last_modified": "2022-03-15",
         "nvd_text": "A flaw was found in the \"Routing decision\" classifier in the Linux kernel's Traffic Control networking subsystem in the way it handled changing of classification filters, leading to a use-after-free condition. This flaw allows unprivileged local users to escalate their privileges on the system. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3715",
@@ -64895,9 +65010,33 @@
         "affected_versions": "v3.18-rc2 to v5.14-rc6",
         "breaks": "c771d683a62e5d36bc46036f5c07f4f5bb7dda61",
         "cmt_msg": "ovl: prevent private clone if bind mount is not allowed",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
+        "cwe": "Unspecified",
         "fixes": "427215d85e8d1476da1a86b8d67aceb485eb3631",
         "last_affected_version": "5.13.10",
-        "last_modified": "2021-09-01",
+        "last_modified": "2022-03-15",
+        "nvd_text": "A security issue was found in Linux kernel\u2019s OverlayFS subsystem where a local attacker who has the ability to mount the TmpFS filesystem with OverlayFS can abuse a logic bug in the overlayfs code which can inadvertently reveal files hidden in the original mount.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3732",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3732",
@@ -64927,9 +65066,33 @@
         "affected_versions": "v4.20-rc1 to v5.15-rc1",
         "breaks": "a27a94c2b0c727517c17cf2ca3a9f7291caadfbc",
         "cmt_msg": "btrfs: fix NULL pointer dereference when deleting device by invalid id",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+            "score": 3.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "score": 7.1
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "e4571b8c5e9ffa1e85c0c671995bd4dcc5c75091",
         "last_affected_version": "5.14.0",
-        "last_modified": "2021-10-06",
+        "last_modified": "2022-03-15",
+        "nvd_text": "A NULL pointer dereference flaw was found in the btrfs_rm_device function in fs/btrfs/volumes.c in the Linux Kernel, where triggering the bug requires \u2018CAP_SYS_ADMIN\u2019. This flaw allows a local attacker to crash the system or leak kernel internal information. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3739",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3739",
@@ -64943,9 +65106,32 @@
         "affected_versions": "v4.15-rc1 to v5.13-rc7",
         "breaks": "194ccc88297ae78d0803adad83c6dcc369787c9e",
         "cmt_msg": "net: qrtr: fix OOB Read in qrtr_endpoint_post",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+            "score": 3.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "score": 7.1
+        },
+        "cwe": "Out-of-bounds Read",
         "fixes": "ad9d24c9429e2159d1e279dc3a83191ccb4daf1d",
         "last_affected_version": "5.12.12",
-        "last_modified": "2022-03-07",
+        "last_modified": "2022-03-15",
         "nvd_text": "An out-of-bounds (OOB) memory read flaw was found in the Qualcomm IPC router protocol in the Linux kernel. A missing sanity check allows a local attacker to gain access to out-of-bounds memory, leading to a system crash or a leak of internal kernel information. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3743",
@@ -64960,9 +65146,32 @@
         "affected_versions": "v4.12-rc1 to v5.15-rc4",
         "breaks": "36cf515b9bbe298e1ce7384620f0d4ec45ad3328",
         "cmt_msg": "crypto: ccp - fix resource leaks in ccp_run_aes_gcm_cmd()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Missing Release of Memory after Effective Lifetime",
         "fixes": "505d9dcb0f7ddf9d075e729523a33d38642ae680",
         "last_affected_version": "5.14.9",
-        "last_modified": "2022-03-07",
+        "last_modified": "2022-03-15",
         "nvd_text": "A memory leak flaw was found in the Linux kernel in the ccp_run_aes_gcm_cmd() function in drivers/crypto/ccp/ccp-ops.c, which allows attackers to cause a denial of service (memory consumption). This vulnerability is similar with the older CVE-2019-18808.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3744",
@@ -65168,9 +65377,32 @@
         "affected_versions": "v2.6.12-rc2 to v5.15",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "sctp: use init_tag from inithdr for ABORT chunk",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "Partial",
+            "raw": "AV:N/AC:M/Au:N/C:N/I:P/A:P",
+            "score": 5.8
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "Low",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H",
+            "score": 6.5
+        },
+        "cwe": "Improper Validation of Integrity Check Value",
         "fixes": "4f7019c7eb33967eb87766e0e4602b5576873680",
         "last_affected_version": "5.14",
-        "last_modified": "2022-03-07",
+        "last_modified": "2022-03-15",
         "nvd_text": "A flaw was found in the Linux SCTP stack. A blind attacker may be able to kill an existing SCTP association through invalid chunks if the attacker knows the IP-addresses and port numbers being used and the attacker can send packets with spoofed IP addresses.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3772",
@@ -66115,6 +66347,85 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-39685"
         }
     },
+    "CVE-2021-39686": {
+        "affected_versions": "unk to v5.16-rc1",
+        "breaks": "",
+        "cmt_msg": "binder: use euid from cred instead of using task",
+        "fixes": "29bc22ac5e5bc63275e850f0c8fc549e3d0e306b",
+        "last_affected_version": "5.15.1",
+        "last_modified": "2022-03-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39686",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39686",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-39686",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-39686",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-39686",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-39686"
+        }
+    },
+    "CVE-2021-39698": {
+        "affected_versions": "unk to v5.16-rc5",
+        "breaks": "",
+        "cmt_msg": "wait: add wake_up_pollfree()",
+        "fixes": "42288cb44c4b5fff7653bc392b583a2b8bd6a8c0",
+        "last_affected_version": "5.15.7",
+        "last_modified": "2022-03-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39698",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39698",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-39698",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-39698",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-39698",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-39698"
+        }
+    },
+    "CVE-2021-39711": {
+        "affected_versions": "unk to v4.18-rc6",
+        "breaks": "",
+        "cmt_msg": "bpf: fix panic due to oob in bpf_prog_test_run_skb",
+        "fixes": "6e6fddc78323533be570873abb728b7e0ba7e024",
+        "last_affected_version": "4.14.258",
+        "last_modified": "2022-03-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39711",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39711",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-39711",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-39711",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-39711",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-39711"
+        }
+    },
+    "CVE-2021-39713": {
+        "affected_versions": "unk to v4.20-rc1",
+        "breaks": "",
+        "cmt_msg": "net: sched: use Qdisc rcu API instead of relying on rtnl lock",
+        "fixes": "e368fdb61d8e7c67ac70791b23345b26d7bbc661",
+        "last_affected_version": "4.19.220",
+        "last_modified": "2022-03-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39713",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39713",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-39713",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-39713",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-39713",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-39713"
+        }
+    },
+    "CVE-2021-39714": {
+        "affected_versions": "unk to v4.12-rc1",
+        "breaks": "",
+        "cmt_msg": "staging: android: ion: Drop ion_map_kernel interface",
+        "fixes": "e3b914bc7eb6bcecc5b597ee6e31fc40442c291f",
+        "last_modified": "2022-03-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39714",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-39714",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-39714",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-39714",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-39714",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-39714"
+        }
+    },
     "CVE-2021-4001": {
         "affected_versions": "v5.5-rc1 to v5.16-rc2",
         "breaks": "a23740ec43ba022dbfd139d0fe3eff193216272b",
@@ -66177,7 +66488,8 @@
         "breaks": "",
         "cmt_msg": "io-wq: fix cancellation on create-worker failure",
         "fixes": "713b9825a4c47897f66ad69409581e7734a8728e",
-        "last_modified": "2022-03-07",
+        "last_modified": "2022-03-15",
+        "nvd_text": "A flaw was found in the io-workqueue implementation in the Linux kernel versions prior to 5.15-rc1. The kernel can panic when an improper cancellation operation triggers the submission of new io-uring operations during a shortage of free space. This flaw allows a local user with permissions to execute io-uring requests to possibly crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4023",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4023",
@@ -66422,7 +66734,8 @@
         "breaks": "629b5348841a10afce49fbe81619863fd839f217",
         "cmt_msg": "KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty",
         "fixes": "55749769fe608fa3f4a075e42e89d237c8e37637",
-        "last_modified": "2022-01-26",
+        "last_modified": "2022-03-15",
+        "nvd_text": "A NULL pointer dereference was found in the Linux kernel's KVM when dirty ring logging is enabled without an active vCPU context. An unprivileged local attacker on the host may use this flaw to cause a kernel oops condition and thus a denial of service by issuing a KVM_XEN_HVM_SET_ATTR ioctl. This flaw affects Linux kernel versions prior to 5.17-rc1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4095",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4095",
@@ -67540,6 +67853,40 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-46283"
         }
     },
+    "CVE-2022-0001": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE",
+        "fixes": "d45476d9832409371537013ebdd8dc1a7781f97a",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-03-15",
+        "nvd_text": "Non-transparent sharing of branch predictor selectors between contexts in some Intel(R) Processors may allow an authorized user to potentially enable information disclosure via local access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0001",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0001",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0001",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0001",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0001",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0001"
+        }
+    },
+    "CVE-2022-0002": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE",
+        "fixes": "d45476d9832409371537013ebdd8dc1a7781f97a",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-03-15",
+        "nvd_text": "Non-transparent sharing of branch predictor within a context in some Intel(R) Processors may allow an authorized user to potentially enable information disclosure via local access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0002",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0002",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0002",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0002",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0002",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0002"
+        }
+    },
     "CVE-2022-0185": {
         "affected_versions": "v5.1-rc1 to v5.17-rc1",
         "breaks": "3e1aeb00e6d132efc151dacc062b38269bc9eccc",
@@ -67752,7 +68099,8 @@
         "cmt_msg": "bpf: Add missing map_get_next_key method to bloom filter map.",
         "fixes": "3ccdcee28415c4226de05438b4d89eb5514edf73",
         "last_affected_version": "5.16.2",
-        "last_modified": "2022-02-15",
+        "last_modified": "2022-03-15",
+        "nvd_text": "A NULL pointer dereference flaw was found in the Linux kernel's BPF subsystem in the way a user triggers the map_get_next_key function of the BPF bloom filter. This flaw allows a local user to crash the system. This flaw affects Linux kernel versions prior to 5.17-rc1.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0433",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0433",
@@ -67872,7 +68220,8 @@
         "cmt_msg": "KVM: s390: Return error on SIDA memop on normal guest",
         "fixes": "2c212e1baedcd782b2535a3f86bc491977677c0e",
         "last_affected_version": "5.16.8",
-        "last_modified": "2022-02-15",
+        "last_modified": "2022-03-15",
+        "nvd_text": "A vulnerability was found in kvm_s390_guest_sida_op in the arch/s390/kvm/kvm-s390.c function in KVM for s390 in the Linux kernel. This flaw allows a local attacker with a normal user privilege to obtain unauthorized memory write access. This flaw affects Linux kernel versions prior to 5.17-rc4.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0516",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0516",
@@ -67976,6 +68325,22 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-0646"
         }
     },
+    "CVE-2022-0742": {
+        "affected_versions": "unk to v5.17-rc7",
+        "breaks": "",
+        "cmt_msg": "ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report()",
+        "fixes": "2d3916f3189172d5c69d33065c3c21119fe539fc",
+        "last_affected_version": "5.16.12",
+        "last_modified": "2022-03-15",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0742",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0742",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0742",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0742",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0742",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0742"
+        }
+    },
     "CVE-2022-0812": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -67994,10 +68359,34 @@
         "affected_versions": "v5.8-rc1 to v5.17-rc6",
         "breaks": "f6dd975583bd8ce088400648fd9819e4691c8958",
         "cmt_msg": "lib/iov_iter: initialize \"flags\" in new pipe_buffer",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Improper Initialization",
         "fixes": "9d2231c5d74e13b2a0546fee6737ee4446017903",
         "last_affected_version": "5.16.10",
-        "last_modified": "2022-03-07",
+        "last_modified": "2022-03-15",
         "name": "Dirty Pipe",
+        "nvd_text": "A flaw was found in the way the \"flags\" member of the new pipe buffer structure was lacking proper initialization in copy_page_to_iter_pipe and push_pipe functions in the Linux kernel and could thus contain stale values. An unprivileged local user could use this flaw to write to pages in the page cache backed by read only files and as such escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0847",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0847",
@@ -68039,6 +68428,125 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-22942"
         }
     },
+    "CVE-2022-23036": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "xen/grant-table: add gnttab_try_end_foreign_access()",
+        "fixes": "6b1775f26a2da2b05a6dc8ec2b5d14e9a4701a1a",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-03-15",
+        "nvd_text": "Linux PV device frontends vulnerable to attacks by backends T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Several Linux PV device frontends are using the grant table interfaces for removing access rights of the backends in ways being subject to race conditions, resulting in potential data leaks, data corruption by malicious backends, and denial of service triggered by malicious backends: blkfront, netfront, scsifront and the gntalloc driver are testing whether a grant reference is still in use. If this is not the case, they assume that a following removal of the granted access will always succeed, which is not true in case the backend has mapped the granted page between those two operations. As a result the backend can keep access to the memory page of the guest no matter how the page will be used after the frontend I/O has finished. The xenbus driver has a similar problem, as it doesn't check the success of removing the granted access of a shared ring buffer. blkfront: CVE-2022-23036 netfront: CVE-2022-23037 scsifront: CVE-2022-23038 gntalloc: CVE-2022-23039 xenbus: CVE-2022-23040 blkfront, netfront, scsifront, usbfront, dmabuf, xenbus, 9p, kbdfront, and pvcalls are using a functionality to delay freeing a grant reference until it is no longer in use, but the freeing of the related data page is not synchronized with dropping the granted access. As a result the backend can keep access to the memory page even after it has been freed and then re-used for a different purpose. CVE-2022-23041 netfront will fail a BUG_ON() assertion if it fails to revoke access in the rx path. This will result in a Denial of Service (DoS) situation of the guest which can be triggered by the backend. CVE-2022-23042",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23036",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23036",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23036",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23036",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23036",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23036"
+        }
+    },
+    "CVE-2022-23037": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "xen/netfront: don't use gnttab_query_foreign_access() for mapped status",
+        "fixes": "31185df7e2b1d2fa1de4900247a12d7b9c7087eb",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-03-15",
+        "nvd_text": "Linux PV device frontends vulnerable to attacks by backends T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Several Linux PV device frontends are using the grant table interfaces for removing access rights of the backends in ways being subject to race conditions, resulting in potential data leaks, data corruption by malicious backends, and denial of service triggered by malicious backends: blkfront, netfront, scsifront and the gntalloc driver are testing whether a grant reference is still in use. If this is not the case, they assume that a following removal of the granted access will always succeed, which is not true in case the backend has mapped the granted page between those two operations. As a result the backend can keep access to the memory page of the guest no matter how the page will be used after the frontend I/O has finished. The xenbus driver has a similar problem, as it doesn't check the success of removing the granted access of a shared ring buffer. blkfront: CVE-2022-23036 netfront: CVE-2022-23037 scsifront: CVE-2022-23038 gntalloc: CVE-2022-23039 xenbus: CVE-2022-23040 blkfront, netfront, scsifront, usbfront, dmabuf, xenbus, 9p, kbdfront, and pvcalls are using a functionality to delay freeing a grant reference until it is no longer in use, but the freeing of the related data page is not synchronized with dropping the granted access. As a result the backend can keep access to the memory page even after it has been freed and then re-used for a different purpose. CVE-2022-23041 netfront will fail a BUG_ON() assertion if it fails to revoke access in the rx path. This will result in a Denial of Service (DoS) situation of the guest which can be triggered by the backend. CVE-2022-23042",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23037",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23037",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23037",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23037",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23037",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23037"
+        }
+    },
+    "CVE-2022-23038": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "xen/grant-table: add gnttab_try_end_foreign_access()",
+        "fixes": "6b1775f26a2da2b05a6dc8ec2b5d14e9a4701a1a",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-03-15",
+        "nvd_text": "Linux PV device frontends vulnerable to attacks by backends T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Several Linux PV device frontends are using the grant table interfaces for removing access rights of the backends in ways being subject to race conditions, resulting in potential data leaks, data corruption by malicious backends, and denial of service triggered by malicious backends: blkfront, netfront, scsifront and the gntalloc driver are testing whether a grant reference is still in use. If this is not the case, they assume that a following removal of the granted access will always succeed, which is not true in case the backend has mapped the granted page between those two operations. As a result the backend can keep access to the memory page of the guest no matter how the page will be used after the frontend I/O has finished. The xenbus driver has a similar problem, as it doesn't check the success of removing the granted access of a shared ring buffer. blkfront: CVE-2022-23036 netfront: CVE-2022-23037 scsifront: CVE-2022-23038 gntalloc: CVE-2022-23039 xenbus: CVE-2022-23040 blkfront, netfront, scsifront, usbfront, dmabuf, xenbus, 9p, kbdfront, and pvcalls are using a functionality to delay freeing a grant reference until it is no longer in use, but the freeing of the related data page is not synchronized with dropping the granted access. As a result the backend can keep access to the memory page even after it has been freed and then re-used for a different purpose. CVE-2022-23041 netfront will fail a BUG_ON() assertion if it fails to revoke access in the rx path. This will result in a Denial of Service (DoS) situation of the guest which can be triggered by the backend. CVE-2022-23042",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23038",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23038",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23038",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23038",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23038",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23038"
+        }
+    },
+    "CVE-2022-23039": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "xen/gntalloc: don't use gnttab_query_foreign_access()",
+        "fixes": "d3b6372c5881cb54925212abb62c521df8ba4809",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-03-15",
+        "nvd_text": "Linux PV device frontends vulnerable to attacks by backends T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Several Linux PV device frontends are using the grant table interfaces for removing access rights of the backends in ways being subject to race conditions, resulting in potential data leaks, data corruption by malicious backends, and denial of service triggered by malicious backends: blkfront, netfront, scsifront and the gntalloc driver are testing whether a grant reference is still in use. If this is not the case, they assume that a following removal of the granted access will always succeed, which is not true in case the backend has mapped the granted page between those two operations. As a result the backend can keep access to the memory page of the guest no matter how the page will be used after the frontend I/O has finished. The xenbus driver has a similar problem, as it doesn't check the success of removing the granted access of a shared ring buffer. blkfront: CVE-2022-23036 netfront: CVE-2022-23037 scsifront: CVE-2022-23038 gntalloc: CVE-2022-23039 xenbus: CVE-2022-23040 blkfront, netfront, scsifront, usbfront, dmabuf, xenbus, 9p, kbdfront, and pvcalls are using a functionality to delay freeing a grant reference until it is no longer in use, but the freeing of the related data page is not synchronized with dropping the granted access. As a result the backend can keep access to the memory page even after it has been freed and then re-used for a different purpose. CVE-2022-23041 netfront will fail a BUG_ON() assertion if it fails to revoke access in the rx path. This will result in a Denial of Service (DoS) situation of the guest which can be triggered by the backend. CVE-2022-23042",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23039",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23039",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23039",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23039",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23039",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23039"
+        }
+    },
+    "CVE-2022-23040": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "xen/xenbus: don't let xenbus_grant_ring() remove grants in error case",
+        "fixes": "3777ea7bac3113005b7180e6b9dadf16d19a5827",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-03-15",
+        "nvd_text": "Linux PV device frontends vulnerable to attacks by backends T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Several Linux PV device frontends are using the grant table interfaces for removing access rights of the backends in ways being subject to race conditions, resulting in potential data leaks, data corruption by malicious backends, and denial of service triggered by malicious backends: blkfront, netfront, scsifront and the gntalloc driver are testing whether a grant reference is still in use. If this is not the case, they assume that a following removal of the granted access will always succeed, which is not true in case the backend has mapped the granted page between those two operations. As a result the backend can keep access to the memory page of the guest no matter how the page will be used after the frontend I/O has finished. The xenbus driver has a similar problem, as it doesn't check the success of removing the granted access of a shared ring buffer. blkfront: CVE-2022-23036 netfront: CVE-2022-23037 scsifront: CVE-2022-23038 gntalloc: CVE-2022-23039 xenbus: CVE-2022-23040 blkfront, netfront, scsifront, usbfront, dmabuf, xenbus, 9p, kbdfront, and pvcalls are using a functionality to delay freeing a grant reference until it is no longer in use, but the freeing of the related data page is not synchronized with dropping the granted access. As a result the backend can keep access to the memory page even after it has been freed and then re-used for a different purpose. CVE-2022-23041 netfront will fail a BUG_ON() assertion if it fails to revoke access in the rx path. This will result in a Denial of Service (DoS) situation of the guest which can be triggered by the backend. CVE-2022-23042",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23040",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23040",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23040",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23040",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23040",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23040"
+        }
+    },
+    "CVE-2022-23041": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "xen/9p: use alloc/free_pages_exact()",
+        "fixes": "5cadd4bb1d7fc9ab201ac14620d1a478357e4ebd",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-03-15",
+        "nvd_text": "Linux PV device frontends vulnerable to attacks by backends T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Several Linux PV device frontends are using the grant table interfaces for removing access rights of the backends in ways being subject to race conditions, resulting in potential data leaks, data corruption by malicious backends, and denial of service triggered by malicious backends: blkfront, netfront, scsifront and the gntalloc driver are testing whether a grant reference is still in use. If this is not the case, they assume that a following removal of the granted access will always succeed, which is not true in case the backend has mapped the granted page between those two operations. As a result the backend can keep access to the memory page of the guest no matter how the page will be used after the frontend I/O has finished. The xenbus driver has a similar problem, as it doesn't check the success of removing the granted access of a shared ring buffer. blkfront: CVE-2022-23036 netfront: CVE-2022-23037 scsifront: CVE-2022-23038 gntalloc: CVE-2022-23039 xenbus: CVE-2022-23040 blkfront, netfront, scsifront, usbfront, dmabuf, xenbus, 9p, kbdfront, and pvcalls are using a functionality to delay freeing a grant reference until it is no longer in use, but the freeing of the related data page is not synchronized with dropping the granted access. As a result the backend can keep access to the memory page even after it has been freed and then re-used for a different purpose. CVE-2022-23041 netfront will fail a BUG_ON() assertion if it fails to revoke access in the rx path. This will result in a Denial of Service (DoS) situation of the guest which can be triggered by the backend. CVE-2022-23042",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23041",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23041",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23041",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23041",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23041",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23041"
+        }
+    },
+    "CVE-2022-23042": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "xen/netfront: react properly to failing gnttab_end_foreign_access_ref()",
+        "fixes": "66e3531b33ee51dad17c463b4d9c9f52e341503d",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-03-15",
+        "nvd_text": "Linux PV device frontends vulnerable to attacks by backends T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Several Linux PV device frontends are using the grant table interfaces for removing access rights of the backends in ways being subject to race conditions, resulting in potential data leaks, data corruption by malicious backends, and denial of service triggered by malicious backends: blkfront, netfront, scsifront and the gntalloc driver are testing whether a grant reference is still in use. If this is not the case, they assume that a following removal of the granted access will always succeed, which is not true in case the backend has mapped the granted page between those two operations. As a result the backend can keep access to the memory page of the guest no matter how the page will be used after the frontend I/O has finished. The xenbus driver has a similar problem, as it doesn't check the success of removing the granted access of a shared ring buffer. blkfront: CVE-2022-23036 netfront: CVE-2022-23037 scsifront: CVE-2022-23038 gntalloc: CVE-2022-23039 xenbus: CVE-2022-23040 blkfront, netfront, scsifront, usbfront, dmabuf, xenbus, 9p, kbdfront, and pvcalls are using a functionality to delay freeing a grant reference until it is no longer in use, but the freeing of the related data page is not synchronized with dropping the granted access. As a result the backend can keep access to the memory page even after it has been freed and then re-used for a different purpose. CVE-2022-23041 netfront will fail a BUG_ON() assertion if it fails to revoke access in the rx path. This will result in a Denial of Service (DoS) situation of the guest which can be triggered by the backend. CVE-2022-23042",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23042",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23042",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23042",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23042",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23042",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23042"
+        }
+    },
     "CVE-2022-23222": {
         "affected_versions": "v2.6.12-rc2 to v5.17-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
@@ -68077,6 +68585,23 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23222",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-23222",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-23222"
+        }
+    },
+    "CVE-2022-23960": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "ARM: report Spectre v2 status through sysfs",
+        "fixes": "9dd78194a3722fa6712192cdd4f7032d45112a9a",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-03-15",
+        "nvd_text": "Certain Arm Cortex and Neoverse processors through 2022-03-08 do not properly restrict cache speculation, aka Spectre-BHB. An attacker can leverage the shared branch history in the Branch History Buffer (BHB) to influence mispredicted branches. Then, cache allocation can allow the attacker to obtain sensitive information.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23960",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23960",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23960",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23960",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23960",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23960"
         }
     },
     "CVE-2022-24122": {
@@ -68186,7 +68711,8 @@
         },
         "cwe": "Release of Invalid Pointer or Reference",
         "fixes": "89f3594d0de58e8a57d92d497dea9fee3d4b9cda",
-        "last_modified": "2022-02-22",
+        "last_affected_version": "5.16.12",
+        "last_modified": "2022-03-15",
         "nvd_text": "drivers/usb/gadget/legacy/inode.c in the Linux kernel through 5.16.8 mishandles dev->buf release.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-24958",
@@ -68399,8 +68925,31 @@
         "affected_versions": "unk to v5.17-rc1",
         "breaks": "",
         "cmt_msg": "nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "4fbcc1a4cb20fe26ad0225679c536c80f1648221",
-        "last_modified": "2022-03-07",
+        "last_modified": "2022-03-15",
         "nvd_text": "st21nfca_connectivity_event_received in drivers/nfc/st21nfca/se.c in the Linux kernel through 5.16.12 has EVT_TRANSACTION buffer overflows because of untrusted length parameters.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-26490",
@@ -68409,6 +68958,38 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-26490",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-26490",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-26490"
+        }
+    },
+    "CVE-2022-26878": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "ad7cb5f6fa5f7ea37208c98a9457dd98025a89ca",
+        "last_modified": "2022-03-15",
+        "nvd_text": "drivers/bluetooth/virtio_bt.c in the Linux kernel before 5.16.3 has a memory leak (socket buffers have memory allocated but not freed).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-26878",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-26878",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-26878",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-26878",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-26878",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-26878"
+        }
+    },
+    "CVE-2022-26966": {
+        "affected_versions": "unk to v5.17-rc6",
+        "breaks": "",
+        "cmt_msg": "sr9700: sanity check for packet length",
+        "fixes": "e9da0b56fe27206b49f39805f7dcda8a89379062",
+        "last_affected_version": "5.16.11",
+        "last_modified": "2022-03-15",
+        "nvd_text": "An issue was discovered in the Linux kernel before 5.16.12. drivers/net/usb/sr9700.c allows attackers to obtain sensitive information from heap memory via crafted frame lengths from a device.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-26966",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-26966",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-26966",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-26966",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-26966",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-26966"
         }
     }
 }

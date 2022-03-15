@@ -8,6 +8,9 @@ CVEs fixed in 5.15:
 CVEs fixed in 5.15.1:
   CVE-2021-42739: cb667140875a3b1db92e4c50b4617a7cbf84659b media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt()
 
+CVEs fixed in 5.15.2:
+  CVE-2021-39686: ff1bd01f490ba60d82c765100d95d13cc00c1625 binder: use euid from cred instead of using task
+
 CVEs fixed in 5.15.3:
   CVE-2021-3640: b990c219c4c9d4993ef65ea9db73d9497e70f697 Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()
   CVE-2021-3752: 7e22e4db95b04f09adcce18c75d27cbca8f53b99 Bluetooth: fix use-after-free error in lock_sock_nested()
@@ -25,6 +28,7 @@ CVEs fixed in 5.15.7:
 
 CVEs fixed in 5.15.8:
   CVE-2021-39685: 36dfdf11af49d3c009c711fb16f5c6e7a274505d USB: gadget: detect too-big endpoint 0 requests
+  CVE-2021-39698: 1ebb6cd8c754bfe1a5f9539027980756bce7cb08 wait: add wake_up_pollfree()
 
 CVEs fixed in 5.15.11:
   CVE-2021-22600: feb116a0ecc5625d6532c616d9a10ef4ef81514b net/packet: rx_owner_map depends on pg_vec
@@ -82,6 +86,23 @@ CVEs fixed in 5.15.25:
 
 CVEs fixed in 5.15.26:
   CVE-2022-25636: 6c5d780469d6c3590729940e2be8a3bd66ea4814 netfilter: nf_tables_offload: incorrect flow offload action array size
+  CVE-2022-26966: 9f2d614779906f3d8ad4fb882c5b3e5ad6150bbe sr9700: sanity check for packet length
+
+CVEs fixed in 5.15.27:
+  CVE-2022-0742: 771aca9bc70709771f66c3e7c00ce87339aa1790 ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report()
+  CVE-2022-24958: 07de9a494b5ae41b9253411a8e9576d7fceedcc3 usb: gadget: don't release an existing dev->buf
+
+CVEs fixed in 5.15.28:
+  CVE-2022-0001: f150b6fccf7fa0e7e7275f0785798547db832c7b x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE
+  CVE-2022-0002: f150b6fccf7fa0e7e7275f0785798547db832c7b x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE
+  CVE-2022-23036: 1dd5b4b230f6d1345708c6204ccacdf83d53feaf xen/grant-table: add gnttab_try_end_foreign_access()
+  CVE-2022-23037: 5d5fa1d53a31c799b85112841c3c639c7baac1c4 xen/netfront: don't use gnttab_query_foreign_access() for mapped status
+  CVE-2022-23038: 1dd5b4b230f6d1345708c6204ccacdf83d53feaf xen/grant-table: add gnttab_try_end_foreign_access()
+  CVE-2022-23039: f06e3edaeac1942c4ff42072e3d98ee8c762c5fa xen/gntalloc: don't use gnttab_query_foreign_access()
+  CVE-2022-23040: 66cb2bbb522b0d5e4f6a11558ff7bfdf3f7d31f3 xen/xenbus: don't let xenbus_grant_ring() remove grants in error case
+  CVE-2022-23041: a019d26830e8a04933e38e4fcc507dcfbc6ccc72 xen/9p: use alloc/free_pages_exact()
+  CVE-2022-23042: dea18aef2021022a568f4d385a1386f51a9df6ff xen/netfront: react properly to failing gnttab_end_foreign_access_ref()
+  CVE-2022-23960: f02cab2bed1a3493a230e54d83ff117bc59f480e ARM: report Spectre v2 status through sysfs
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -144,6 +165,6 @@ Outstanding CVEs:
   CVE-2022-0812: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
-  CVE-2022-24958: (unk) usb: gadget: don't release an existing dev->buf 
   CVE-2022-25265: (unk)  
   CVE-2022-26490: (unk) nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION 
+  CVE-2022-26878: (unk)  

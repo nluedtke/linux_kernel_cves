@@ -58,6 +58,9 @@ CVEs fixed in 5.14.16:
 CVEs fixed in 5.14.17:
   CVE-2021-42739: 02a476ca886dc8155025fe99cbbad4121d029fa7 media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt()
 
+CVEs fixed in 5.14.18:
+  CVE-2021-39686: fbb106e7952442927f373f02f97dbb00f8fea137 binder: use euid from cred instead of using task
+
 CVEs fixed in 5.14.19:
   CVE-2021-3640: 2c2b295af72e4e30d17556375e100ae65ac0b896 Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()
   CVE-2021-3752: b87da982da1b4787e23316e3eedc6bba52cfba64 Bluetooth: fix use-after-free error in lock_sock_nested()
@@ -126,6 +129,7 @@ Outstanding CVEs:
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
   CVE-2021-39685: (unk) USB: gadget: detect too-big endpoint 0 requests 
+  CVE-2021-39698: (unk) wait: add wake_up_pollfree() 
   CVE-2021-4001: (unk) bpf: Fix toctou on read-only map's constant scalar tracking 
   CVE-2021-4002: (unk) hugetlbfs: flush TLBs correctly after huge_pmd_unshare 
   CVE-2021-4023: (unk) io-wq: fix cancellation on create-worker failure 
@@ -146,6 +150,8 @@ Outstanding CVEs:
   CVE-2021-45402: (unk) bpf: Fix signed bounds propagation after mov32 
   CVE-2021-45469: (unk) f2fs: fix to do sanity check on last xattr entry in __f2fs_setxattr() 
   CVE-2021-45480: (unk) rds: memory leak in __rds_conn_create() 
+  CVE-2022-0001: (unk) x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE 
+  CVE-2022-0002: (unk) x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE 
   CVE-2022-0185: (unk) vfs: fs_context: fix up param length parsing in legacy_parse_param 
   CVE-2022-0264: (unk) bpf: Fix kernel address leakage in atomic fetch 
   CVE-2022-0330: (unk) drm/i915: Flush TLBs before releasing backing store 
@@ -158,10 +164,19 @@ Outstanding CVEs:
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
   CVE-2022-0516: (unk) KVM: s390: Return error on SIDA memop on normal guest 
   CVE-2022-0617: (unk) udf: Fix NULL ptr deref when converting from inline format 
+  CVE-2022-0742: (unk) ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report() 
   CVE-2022-0812: (unk)  
   CVE-2022-0847: (unk) lib/iov_iter: initialize "flags" in new pipe_buffer 
   CVE-2022-22942: (unk) drm/vmwgfx: Fix stale file descriptors on failed usercopy 
+  CVE-2022-23036: (unk) xen/grant-table: add gnttab_try_end_foreign_access() 
+  CVE-2022-23037: (unk) xen/netfront: don't use gnttab_query_foreign_access() for mapped status 
+  CVE-2022-23038: (unk) xen/grant-table: add gnttab_try_end_foreign_access() 
+  CVE-2022-23039: (unk) xen/gntalloc: don't use gnttab_query_foreign_access() 
+  CVE-2022-23040: (unk) xen/xenbus: don't let xenbus_grant_ring() remove grants in error case 
+  CVE-2022-23041: (unk) xen/9p: use alloc/free_pages_exact() 
+  CVE-2022-23042: (unk) xen/netfront: react properly to failing gnttab_end_foreign_access_ref() 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
+  CVE-2022-23960: (unk) ARM: report Spectre v2 status through sysfs 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-24448: (unk) NFSv4: Handle case where the lookup of a directory fails 
   CVE-2022-24958: (unk) usb: gadget: don't release an existing dev->buf 
@@ -171,3 +186,5 @@ Outstanding CVEs:
   CVE-2022-25375: (unk) usb: gadget: rndis: check size of RNDIS_MSG_SET command 
   CVE-2022-25636: (unk) netfilter: nf_tables_offload: incorrect flow offload action array size 
   CVE-2022-26490: (unk) nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION 
+  CVE-2022-26878: (unk)  
+  CVE-2022-26966: (unk) sr9700: sanity check for packet length 

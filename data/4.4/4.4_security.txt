@@ -1214,6 +1214,7 @@ CVEs fixed in 4.4.292:
 CVEs fixed in 4.4.293:
   CVE-2021-3640: f632f88fe209240f5cad853e33f74fda4d341004 Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()
   CVE-2021-3752: 88aed7d67197d155260f09078835290adfa1debd Bluetooth: fix use-after-free error in lock_sock_nested()
+  CVE-2021-39686: 120ffcd83596fe94b6d6735d21349f118b60c936 binder: use euid from cred instead of using task
   CVE-2021-4202: 6dc051117ba0e1dac9324593ff2c1c520f67ad21 NFC: reorganize the functions in nci_request
 
 CVEs fixed in 4.4.294:
@@ -1222,6 +1223,7 @@ CVEs fixed in 4.4.294:
 
 CVEs fixed in 4.4.295:
   CVE-2021-39685: 93cd7100fe471c5f76fb942358de4ed70dbcaf35 USB: gadget: detect too-big endpoint 0 requests
+  CVE-2021-39698: d0ceebaae0e406263b83462701b5645e075c1467 wait: add wake_up_pollfree()
 
 CVEs fixed in 4.4.296:
   CVE-2021-28711: 3e04b9e6aa7d77287e70a400be83060d2b7b2cfe xen/blkfront: harden blkfront against event channel storms
@@ -1405,6 +1407,9 @@ Outstanding CVEs:
   CVE-2021-39633: (unk) ip_gre: add validation for csum_start 
   CVE-2021-39636: (unk) netfilter: x_tables: fix pointer leaks to userspace 
   CVE-2021-39648: (unk) usb: gadget: configfs: Fix use-after-free issue with udc_name 
+  CVE-2021-39711: (unk) bpf: fix panic due to oob in bpf_prog_test_run_skb 
+  CVE-2021-39713: (unk) net: sched: use Qdisc rcu API instead of relying on rtnl lock 
+  CVE-2021-39714: (unk) staging: android: ion: Drop ion_map_kernel interface 
   CVE-2021-4023: (unk) io-wq: fix cancellation on create-worker failure 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
   CVE-2021-4148: (unk) mm: khugepaged: skip huge page collapse for special files 
@@ -1417,6 +1422,8 @@ Outstanding CVEs:
   CVE-2021-43975: (unk) atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait 
   CVE-2021-44879: (unk) f2fs: fix to do sanity check on inode type during garbage collection 
   CVE-2021-45469: (unk) f2fs: fix to do sanity check on last xattr entry in __f2fs_setxattr() 
+  CVE-2022-0001: (unk) x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE 
+  CVE-2022-0002: (unk) x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE 
   CVE-2022-0382: (unk) net ticp:fix a kernel-infoleak in __tipc_sendmsg() 
   CVE-2022-0400: (unk)  
   CVE-2022-0480: (unk) memcg: enable accounting for file lock caches 
@@ -1424,8 +1431,17 @@ Outstanding CVEs:
   CVE-2022-0492: (unk) cgroup-v1: Require capabilities to set release_agent 
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
   CVE-2022-0644: (unk) vfs: check fd has read access in kernel_read_file_from_fd() 
+  CVE-2022-0742: (unk) ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report() 
   CVE-2022-0812: (unk)  
+  CVE-2022-23036: (unk) xen/grant-table: add gnttab_try_end_foreign_access() 
+  CVE-2022-23037: (unk) xen/netfront: don't use gnttab_query_foreign_access() for mapped status 
+  CVE-2022-23038: (unk) xen/grant-table: add gnttab_try_end_foreign_access() 
+  CVE-2022-23039: (unk) xen/gntalloc: don't use gnttab_query_foreign_access() 
+  CVE-2022-23040: (unk) xen/xenbus: don't let xenbus_grant_ring() remove grants in error case 
+  CVE-2022-23041: (unk) xen/9p: use alloc/free_pages_exact() 
+  CVE-2022-23042: (unk) xen/netfront: react properly to failing gnttab_end_foreign_access_ref() 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
+  CVE-2022-23960: (unk) ARM: report Spectre v2 status through sysfs 
   CVE-2022-24448: (unk) NFSv4: Handle case where the lookup of a directory fails 
   CVE-2022-24958: (unk) usb: gadget: don't release an existing dev->buf 
   CVE-2022-25258: (unk) USB: gadget: validate interface OS descriptor requests 
@@ -1433,3 +1449,5 @@ Outstanding CVEs:
   CVE-2022-25375: (unk) usb: gadget: rndis: check size of RNDIS_MSG_SET command 
   CVE-2022-25636: (unk) netfilter: nf_tables_offload: incorrect flow offload action array size 
   CVE-2022-26490: (unk) nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION 
+  CVE-2022-26878: (unk)  
+  CVE-2022-26966: (unk) sr9700: sanity check for packet length 
