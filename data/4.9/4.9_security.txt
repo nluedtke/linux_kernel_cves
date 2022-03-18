@@ -1160,6 +1160,7 @@ CVEs fixed in 4.9.291:
   CVE-2021-3752: d19ea7da0eeb61be28ec05d8b8bddec3dde71610 Bluetooth: fix use-after-free error in lock_sock_nested()
   CVE-2021-39686: 443fc43d2fdbf55be7aa86faae1f7655e761e683 binder: use euid from cred instead of using task
   CVE-2021-4202: 4a59a3681158a182557c75bacd00d184f9b2a8f5 NFC: reorganize the functions in nci_request
+  CVE-2021-45868: f7dd331a896700728492e02c20a69e53221cd7a4 quota: check block number when reading the block in quota file
 
 CVEs fixed in 4.9.292:
   CVE-2021-4002: 8e80bf5d001594b037de04fb4fe89f34cfbcb3ba hugetlbfs: flush TLBs correctly after huge_pmd_unshare
@@ -1210,6 +1211,7 @@ CVEs fixed in 4.9.302:
 
 CVEs fixed in 4.9.304:
   CVE-2022-26966: 89260e0e191e8a3a9872f72836bdf0641853c87f sr9700: sanity check for packet length
+  CVE-2022-27223: 958b6ab4d70bf991e8c90233504d4cb863aaef8a USB: gadget: validate endpoint index for xilinx udc
 
 CVEs fixed in 4.9.305:
   CVE-2022-24958: be1bb345f180482b0e57768d967ef020d7cba592 usb: gadget: don't release an existing dev->buf
@@ -1224,6 +1226,9 @@ CVEs fixed in 4.9.306:
   CVE-2022-23040: 8f80d12f6946a6fe7c64bfc204c062a57f83c7f8 xen/xenbus: don't let xenbus_grant_ring() remove grants in error case
   CVE-2022-23042: c4497b057b14274e159434f0ed70439a21f3d2a9 xen/netfront: react properly to failing gnttab_end_foreign_access_ref()
   CVE-2022-23960: b24d4041cfb6dab83f9edf40573375bd1365e619 ARM: report Spectre v2 status through sysfs
+
+CVEs fixed in 4.9.307:
+  CVE-2021-4149: 43bfa08ba62a1ca7a22365c7092e491e04327efb btrfs: unlock newly allocated extent buffer after error
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1377,7 +1382,6 @@ Outstanding CVEs:
   CVE-2021-4023: (unk) io-wq: fix cancellation on create-worker failure 
   CVE-2021-4037: (unk) xfs: fix up non-directory creation in SGID directories 
   CVE-2021-4148: (unk) mm: khugepaged: skip huge page collapse for special files 
-  CVE-2021-4149: (unk) btrfs: unlock newly allocated extent buffer after error 
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-4159: (unk) bpf: Verifer, adjust_scalar_min_max_vals to always call update_reg_bounds() 
   CVE-2021-4197: (unk) cgroup: Use open-time credentials for process migraton perm checks 
@@ -1391,6 +1395,9 @@ Outstanding CVEs:
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
   CVE-2022-0742: (unk) ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report() 
   CVE-2022-0812: (unk)  
+  CVE-2022-0995: (unk) watch_queue: Fix filter limit check 
+  CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
+  CVE-2022-1011: (unk) fuse: fix pipe buffer lifetime for direct_io 
   CVE-2022-23041: (unk) xen/9p: use alloc/free_pages_exact() 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-25265: (unk)  
