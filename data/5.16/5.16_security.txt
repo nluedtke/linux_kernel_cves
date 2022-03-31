@@ -24,6 +24,7 @@ CVEs fixed in 5.16.5:
 
 CVEs fixed in 5.16.6:
   CVE-2022-0492: 9c9dbb954e618e3d9110f13cc02c5db1fb73ea5d cgroup-v1: Require capabilities to set release_agent
+  CVE-2022-1055: 95e34f61b58a152656cbe8d6e19843cc343fb089 net: sched: fix use-after-free in tc_new_tfilter()
 
 CVEs fixed in 5.16.9:
   CVE-2022-0435: 59ff7514f8c56f166aadca49bcecfa028e0ad50f tipc: improve size validations for received domain records
@@ -38,6 +39,7 @@ CVEs fixed in 5.16.11:
   CVE-2022-0500: e982070f8970bb62e69ed7c9cafff886ed200349 bpf: Introduce MEM_RDONLY flag
   CVE-2022-0847: eddef98207d678f21261c2bd07da55938680df4e lib/iov_iter: initialize "flags" in new pipe_buffer
   CVE-2022-23222: 77459bc4d5e2c6f24db845780b4d9d60cf82d06a bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL
+  CVE-2022-27950: 80dad7483e3940dc9d9d55f8b34d1f4ba85a505e HID: elo: fix memory leak in elo_probe
 
 CVEs fixed in 5.16.12:
   CVE-2022-25636: 6bff27caef1ee07a8b190f34cf32c99d6cc37a33 netfilter: nf_tables_offload: incorrect flow offload action array size
@@ -45,6 +47,7 @@ CVEs fixed in 5.16.12:
   CVE-2022-27223: 3221ef49ba18924e55a4d42a2ea4080cfea12c6c USB: gadget: validate endpoint index for xilinx udc
 
 CVEs fixed in 5.16.13:
+  CVE-2022-0494: f8c61361a4f52c2a186269982587facc852dba62 block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern
   CVE-2022-0742: 5ed9983ce67341b405cf6fda826e29aed26a7371 ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report()
   CVE-2022-24958: 9e5c16b2a9812cd250f0de0b77391c2d63adf2f2 usb: gadget: don't release an existing dev->buf
 
@@ -61,8 +64,16 @@ CVEs fixed in 5.16.14:
   CVE-2022-23960: f5eb0f1dcde4b7c2b5ee920ae53bcecaaba03947 ARM: report Spectre v2 status through sysfs
 
 CVEs fixed in 5.16.15:
+  CVE-2022-0854: 62b27d925655999350d0ea775a025919fd88d27f swiotlb: rework "fix info leak with DMA_FROM_DEVICE"
   CVE-2022-0995: b36588ebbcef74583824c08352e75838d6fb4ff2 watch_queue: Fix filter limit check
   CVE-2022-1011: 58a9bdff32fde29137731e574b17c42592875fd0 fuse: fix pipe buffer lifetime for direct_io
+  CVE-2022-27666: 9afe83f62aac348db1facb28bfc106109a06e44d esp: Fix possible buffer overflow in ESP transformation
+
+CVEs fixed in 5.16.18:
+  CVE-2022-1015: 2c8ebdaa7c9755b85d90c07530210e83665bad9a netfilter: nf_tables: validate registers coming from userspace.
+  CVE-2022-1016: 64f24c76dd0ce53d0fa3a0bfb9aeea507c769485 netfilter: nf_tables: initialize registers in nft_do_chain()
+  CVE-2022-1048: 0090c13cbbdffd7da079ac56f80373a9a1be0bf8 ALSA: pcm: Fix races among concurrent hw_params and hw_free calls
+  CVE-2022-26490: 0646efbb6e100a3f93eba3b6a10a7f4c28dd1478 nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -120,10 +131,10 @@ Outstanding CVEs:
   CVE-2021-3892: (unk)  
   CVE-2021-4095: (unk) KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty 
   CVE-2021-4204: (unk) bpf: Generalize check_ctx_reg for reuse with other types 
+  CVE-2022-0168: (unk)  
   CVE-2022-0400: (unk)  
   CVE-2022-0812: (unk)  
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
-  CVE-2022-26490: (unk) nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION 
   CVE-2022-26878: (unk)  
