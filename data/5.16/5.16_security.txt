@@ -67,6 +67,8 @@ CVEs fixed in 5.16.15:
   CVE-2022-0854: 62b27d925655999350d0ea775a025919fd88d27f swiotlb: rework "fix info leak with DMA_FROM_DEVICE"
   CVE-2022-0995: b36588ebbcef74583824c08352e75838d6fb4ff2 watch_queue: Fix filter limit check
   CVE-2022-1011: 58a9bdff32fde29137731e574b17c42592875fd0 fuse: fix pipe buffer lifetime for direct_io
+  CVE-2022-1198: 4356343fb70c899901bce33acedf4fede797d21f drivers: hamradio: 6pack: fix UAF bug caused by mod_timer()
+  CVE-2022-1199: 1d83a95214bc516bd8778fa423cb8383d925f8c8 ax25: Fix NULL pointer dereference in ax25_kill_by_device
   CVE-2022-27666: 9afe83f62aac348db1facb28bfc106109a06e44d esp: Fix possible buffer overflow in ESP transformation
 
 CVEs fixed in 5.16.18:
@@ -74,6 +76,7 @@ CVEs fixed in 5.16.18:
   CVE-2022-1016: 64f24c76dd0ce53d0fa3a0bfb9aeea507c769485 netfilter: nf_tables: initialize registers in nft_do_chain()
   CVE-2022-1048: 0090c13cbbdffd7da079ac56f80373a9a1be0bf8 ALSA: pcm: Fix races among concurrent hw_params and hw_free calls
   CVE-2022-26490: 0646efbb6e100a3f93eba3b6a10a7f4c28dd1478 nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION
+  CVE-2022-28356: 6f5bf395c60ed2643de51f2b1041cb0882e9d97f llc: fix netdevice reference leaks in llc_ui_bind()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -125,7 +128,9 @@ Outstanding CVEs:
   CVE-2021-0399: (unk)  
   CVE-2021-0695: (unk)  
   CVE-2021-26934: (unk)  
+  CVE-2021-33061: (unk) ixgbe: add improvement for MDD response functionality 
   CVE-2021-3542: (unk)  
+  CVE-2021-3714: (unk)  
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
@@ -135,6 +140,11 @@ Outstanding CVEs:
   CVE-2022-0400: (unk)  
   CVE-2022-0812: (unk)  
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
+  CVE-2022-1204: (unk) ax25: Fix refcount leaks caused by ax25_cb_del() 
+  CVE-2022-1205: (unk) ax25: Fix NULL pointer dereferences in ax25 timers 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
   CVE-2022-26878: (unk)  
+  CVE-2022-28388: (unk) can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path 
+  CVE-2022-28389: (unk) can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path 
+  CVE-2022-28390: (unk) can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path 

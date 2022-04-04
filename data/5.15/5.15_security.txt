@@ -47,6 +47,7 @@ CVEs fixed in 5.15.12:
   CVE-2021-44733: 492eb7afe858d60408b2da09adc78540c4d16543 tee: handle lookup of shm with reference count 0
   CVE-2021-45100: a2c144d17623984fdafa4634ecf4ab64580d29bb ksmbd: disable SMB2_GLOBAL_CAP_ENCRYPTION for SMB 3.1.1
   CVE-2021-45469: a8a9d753edd7f71e6a2edaa580d8182530b68791 f2fs: fix to do sanity check on last xattr entry in __f2fs_setxattr()
+  CVE-2022-1195: 03d00f7f1815ec00dab5035851b3de83afd054a8 hamradio: improve the incomplete fix to avoid NPD
 
 CVEs fixed in 5.15.14:
   CVE-2021-4155: b0e72ba9e520b95346e68800afff0db65e766ca8 xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
@@ -113,6 +114,7 @@ CVEs fixed in 5.15.29:
   CVE-2022-0854: 2c1f97af38be151527380796d31d3c9adb054bf9 swiotlb: rework "fix info leak with DMA_FROM_DEVICE"
   CVE-2022-0995: 1b09f28f70a5046acd64138075ae3f095238b045 watch_queue: Fix filter limit check
   CVE-2022-1011: ca62747b38f59d4e75967ebf63c992de8852ca1b fuse: fix pipe buffer lifetime for direct_io
+  CVE-2022-1199: 46ad629e58ce3a88c924ff3c5a7e9129b0df5659 ax25: Fix NULL pointer dereference in ax25_kill_by_device
   CVE-2022-27666: 4aaabbffc3b0658ce80eebdde9bafa20a3f932e0 esp: Fix possible buffer overflow in ESP transformation
 
 CVEs fixed in 5.15.32:
@@ -120,6 +122,7 @@ CVEs fixed in 5.15.32:
   CVE-2022-1016: fafb904156fbb8f1dd34970cd5223e00b47c33be netfilter: nf_tables: initialize registers in nft_do_chain()
   CVE-2022-1048: 33061d0fba51d2bf70a2ef9645f703c33fe8e438 ALSA: pcm: Fix races among concurrent hw_params and hw_free calls
   CVE-2022-26490: a34c47b1ab07153a047476de83581dc822287f39 nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION
+  CVE-2022-28356: e9072996108387ab19b497f5b557c93f98d96b0b llc: fix netdevice reference leaks in llc_ui_bind()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -171,7 +174,9 @@ Outstanding CVEs:
   CVE-2021-0399: (unk)  
   CVE-2021-0695: (unk)  
   CVE-2021-26934: (unk)  
+  CVE-2021-33061: (unk) ixgbe: add improvement for MDD response functionality 
   CVE-2021-3542: (unk)  
+  CVE-2021-3714: (unk)  
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
@@ -182,7 +187,13 @@ Outstanding CVEs:
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
   CVE-2022-0812: (unk)  
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
+  CVE-2022-1198: (unk) drivers: hamradio: 6pack: fix UAF bug caused by mod_timer() 
+  CVE-2022-1204: (unk) ax25: Fix refcount leaks caused by ax25_cb_del() 
+  CVE-2022-1205: (unk) ax25: Fix NULL pointer dereferences in ax25 timers 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
   CVE-2022-26878: (unk)  
+  CVE-2022-28388: (unk) can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path 
+  CVE-2022-28389: (unk) can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path 
+  CVE-2022-28390: (unk) can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path 

@@ -1039,6 +1039,7 @@ CVEs fixed in 4.14.259:
 
 CVEs fixed in 4.14.260:
   CVE-2021-45469: 88dedecc24763c2e0bc1e8eeb35f9f2cd785a7e5 f2fs: fix to do sanity check on last xattr entry in __f2fs_setxattr()
+  CVE-2022-1195: a7b0ae2cc486fcb601f9f9d87d98138cc7b7f7f9 hamradio: improve the incomplete fix to avoid NPD
 
 CVEs fixed in 4.14.261:
   CVE-2021-44733: 3d556a28bbfe34a80b014db49908b0f1bcb1ae80 tee: handle lookup of shm with reference count 0
@@ -1093,11 +1094,13 @@ CVEs fixed in 4.14.271:
 
 CVEs fixed in 4.14.272:
   CVE-2021-4149: e0956dd95ddd6b02b7eb084d127b926a509ae8e7 btrfs: unlock newly allocated extent buffer after error
+  CVE-2022-1199: d03aba820f1549c9f3b1d14bf48fa082663d22b5 ax25: Fix NULL pointer dereference in ax25_kill_by_device
 
 CVEs fixed in 4.14.274:
   CVE-2022-1016: a3cc32863b175168283cb0a5fde08de6a1e27df9 netfilter: nf_tables: initialize registers in nft_do_chain()
   CVE-2022-26490: d908d2776464a8021a1f63eba6e7417fbe7653c9 nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION
   CVE-2022-27666: 2c8abafd6c72ef04bc972f40332c76c1dd04446d esp: Fix possible buffer overflow in ESP transformation
+  CVE-2022-28356: 0f294bc04be87f1c9e1d1a908db9fcc84ce94210 llc: fix netdevice reference leaks in llc_ui_bind()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1177,7 +1180,6 @@ Outstanding CVEs:
   CVE-2020-16120: (unk) ovl: switch to mounter creds in readdir 
   CVE-2020-24502: (unk)  
   CVE-2020-24503: (unk)  
-  CVE-2020-25220: (unk)  
   CVE-2020-26140: (unk)  
   CVE-2020-26141: (unk) ath10k: Fix TKIP Michael MIC verification for PCIe 
   CVE-2020-26142: (unk)  
@@ -1205,11 +1207,13 @@ Outstanding CVEs:
   CVE-2021-28951: (unk) io_uring: ensure that SQPOLL thread is started for exit 
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
   CVE-2021-32078: (unk) ARM: footbridge: remove personal server platform 
+  CVE-2021-33061: (unk) ixgbe: add improvement for MDD response functionality 
   CVE-2021-34556: (unk) bpf: Introduce BPF nospec instruction for mitigating Spectre v4 
   CVE-2021-3506: (unk) f2fs: fix to avoid out-of-bounds memory access 
   CVE-2021-3542: (unk)  
   CVE-2021-35477: (unk) bpf: Introduce BPF nospec instruction for mitigating Spectre v4 
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
+  CVE-2021-3714: (unk)  
   CVE-2021-3759: (unk) memcg: enable accounting of ipc resources 
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
@@ -1240,8 +1244,14 @@ Outstanding CVEs:
   CVE-2022-1043: (unk) io_uring: fix xa_alloc_cycle() error return value check 
   CVE-2022-1048: (unk) ALSA: pcm: Fix races among concurrent hw_params and hw_free calls 
   CVE-2022-1055: (unk) net: sched: fix use-after-free in tc_new_tfilter() 
+  CVE-2022-1198: (unk) drivers: hamradio: 6pack: fix UAF bug caused by mod_timer() 
+  CVE-2022-1204: (unk) ax25: Fix refcount leaks caused by ax25_cb_del() 
+  CVE-2022-1205: (unk) ax25: Fix NULL pointer dereferences in ax25 timers 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-25265: (unk)  
   CVE-2022-25636: (unk) netfilter: nf_tables_offload: incorrect flow offload action array size 
   CVE-2022-26878: (unk)  
   CVE-2022-27950: (unk) HID: elo: fix memory leak in elo_probe 
+  CVE-2022-28388: (unk) can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path 
+  CVE-2022-28389: (unk) can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path 
+  CVE-2022-28390: (unk) can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path 

@@ -43169,7 +43169,7 @@
         }
     }, 
     "CVE-2019-15099": {
-        "affected_versions": "v4.14-rc1 to v5.4-rc1", 
+        "affected_versions": "v4.14-rc1 to v5.5-rc1", 
         "breaks": "4db66499df91b9398435e2dbee0e42cd6df0bc27", 
         "cmt_msg": "ath6kl: fix a NULL-ptr-deref bug in ath6kl_usb_alloc_urb_from_pipe()", 
         "cvss2": {
@@ -43193,9 +43193,9 @@
             "score": "7.5"
         }, 
         "cwe": "NULL Pointer Dereference", 
-        "fixes": "39d170b3cb62ba98567f5c4f40c27b5864b304e5", 
-        "last_affected_version": "5.3.8", 
-        "last_modified": "2019-11-07", 
+        "fixes": "bfd6e6e6c5d2ee43a3d9902b36e01fc7527ebb27", 
+        "last_affected_version": "None", 
+        "last_modified": "2022-04-04", 
         "nvd_text": "drivers/net/wireless/ath/ath10k/usb.c in the Linux kernel through 5.2.8 has a NULL pointer dereference via an incomplete address in an endpoint descriptor.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-15099", 
@@ -56352,9 +56352,9 @@
         }
     }, 
     "CVE-2020-25220": {
-        "affected_versions": "unk to unk", 
+        "affected_versions": "v5.8-rc5 to unk", 
         "alt_msg": "Add skcd->no_refcnt check which is missed when backporting", 
-        "breaks": "23ec03076333eea8882343af3f82c8ef53350e8c", 
+        "breaks": "ad0f75e5f57ccbceec13274e1e242f2b5a6397ed", 
         "cvss2": {
             "Access Complexity": "Low", 
             "Access Vector": "Local Access", 
@@ -56379,7 +56379,7 @@
         }, 
         "cwe": "Use After Free", 
         "fixes": "1bfba2f4270c64c912756fc76621bbce959ddf2e", 
-        "last_modified": "2021-03-17", 
+        "last_modified": "2022-04-04", 
         "nvd_text": "The Linux kernel 4.9.x before 4.9.233, 4.14.x before 4.14.194, and 4.19.x before 4.19.140 has a use-after-free because skcd->no_refcnt was not considered during a backport of a CVE-2020-14356 patch. This is related to the cgroups feature.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-25220", 
@@ -61138,8 +61138,8 @@
         }
     }, 
     "CVE-2021-20265": {
-        "affected_versions": "v2.6.38 to v4.5-rc3", 
-        "breaks": "b3ca9b02b00704053a38bfe4c31dbbb9c13595d0", 
+        "affected_versions": "unk to v4.5-rc3", 
+        "breaks": "", 
         "cmt_msg": "af_unix: fix struct pid memory leak", 
         "cvss2": {
             "Access Complexity": "Low", 
@@ -61166,7 +61166,7 @@
         "cwe": "Uncontrolled Resource Consumption", 
         "fixes": "fa0dc04df259ba2df3ce1920e9690c7842f8fa4b", 
         "last_affected_version": "4.4.3", 
-        "last_modified": "2021-05-06", 
+        "last_modified": "2022-04-04", 
         "nvd_text": "A flaw was found in the way memory resources were freed in the unix_stream_recvmsg function in the Linux kernel when a signal was pending. This flaw allows an unprivileged local user to crash the system by exhausting available memory. The highest threat from this vulnerability is to system availability.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20265", 
@@ -63533,6 +63533,13 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-33034"
         }
     }, 
+    "CVE-2021-33061": {
+        "affected_versions": "unk to v5.18-rc1", 
+        "breaks": "", 
+        "cmt_msg": "ixgbe: add improvement for MDD response functionality", 
+        "fixes": "008ca35f6e87be1d60b6af3d1ae247c6d5c2531d", 
+        "last_modified": "2022-04-04"
+    }, 
     "CVE-2021-33098": {
         "affected_versions": "v3.8-rc1 to v5.13-rc4", 
         "breaks": "872844ddb9e44a49b759ae3e34250fefbab656f2", 
@@ -64707,7 +64714,7 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer", 
         "fixes": "335178d5429c4cee61b58f4ac80688f556630818", 
         "last_affected_version": "5.4.13", 
-        "last_modified": "2021-10-12", 
+        "last_modified": "2022-03-31", 
         "nvd_text": "A flaw was found in the Linux kernel netfilter implementation in versions prior to 5.5-rc7. A user with root (CAP_SYS_ADMIN) access is able to panic the system when issuing netfilter netflow commands.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3635", 
@@ -64948,6 +64955,12 @@
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-3679", 
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-3679"
         }
+    }, 
+    "CVE-2021-3714": {
+        "affected_versions": "unk to unk", 
+        "breaks": "", 
+        "fixes": "", 
+        "last_modified": "2022-04-04"
     }, 
     "CVE-2021-3715": {
         "affected_versions": "v3.18-rc1 to v5.6", 
@@ -68665,20 +68678,20 @@
         }
     }, 
     "CVE-2022-1015": {
-        "affected_versions": "unk to unk", 
+        "affected_versions": "unk to v5.18-rc1", 
         "breaks": "", 
         "cmt_msg": "netfilter: nf_tables: validate registers coming from userspace.", 
         "fixes": "6e1acfa387b9ff82cfc7db8cc3b6959221a95851", 
         "last_affected_version": "5.16.17", 
-        "last_modified": "2022-03-31"
+        "last_modified": "2022-04-04"
     }, 
     "CVE-2022-1016": {
-        "affected_versions": "unk to unk", 
+        "affected_versions": "unk to v5.18-rc1", 
         "breaks": "", 
         "cmt_msg": "netfilter: nf_tables: initialize registers in nft_do_chain()", 
         "fixes": "4c905f6740a365464e91467aa50916555b28213d", 
         "last_affected_version": "5.16.17", 
-        "last_modified": "2022-03-31"
+        "last_modified": "2022-04-04"
     }, 
     "CVE-2022-1043": {
         "affected_versions": "unk to v5.14-rc7", 
@@ -68689,12 +68702,12 @@
         "last_modified": "2022-03-31"
     }, 
     "CVE-2022-1048": {
-        "affected_versions": "unk to unk", 
+        "affected_versions": "unk to v5.18-rc1", 
         "breaks": "", 
         "cmt_msg": "ALSA: pcm: Fix races among concurrent hw_params and hw_free calls", 
         "fixes": "92ee3c60ec9fe64404dc035e7c41277d74aa26cb", 
         "last_affected_version": "5.16.17", 
-        "last_modified": "2022-03-31"
+        "last_modified": "2022-04-04"
     }, 
     "CVE-2022-1055": {
         "affected_versions": "unk to v5.17-rc3", 
@@ -68703,6 +68716,44 @@
         "fixes": "04c2a47ffb13c29778e2a14e414ad4cb5a5db4b5", 
         "last_affected_version": "5.16.5", 
         "last_modified": "2022-03-31"
+    }, 
+    "CVE-2022-1195": {
+        "affected_versions": "unk to v5.16-rc7", 
+        "breaks": "", 
+        "cmt_msg": "hamradio: improve the incomplete fix to avoid NPD", 
+        "fixes": "b2f37aead1b82a770c48b5d583f35ec22aabb61e", 
+        "last_affected_version": "5.15.11", 
+        "last_modified": "2022-04-04"
+    }, 
+    "CVE-2022-1198": {
+        "affected_versions": "unk to v5.17-rc6", 
+        "breaks": "", 
+        "cmt_msg": "drivers: hamradio: 6pack: fix UAF bug caused by mod_timer()", 
+        "fixes": "efe4186e6a1b54bf38b9e05450d43b0da1fd7739", 
+        "last_affected_version": "5.16.14", 
+        "last_modified": "2022-04-04"
+    }, 
+    "CVE-2022-1199": {
+        "affected_versions": "unk to v5.17-rc8", 
+        "breaks": "", 
+        "cmt_msg": "ax25: Fix NULL pointer dereference in ax25_kill_by_device", 
+        "fixes": "71171ac8eb34ce7fe6b3267dce27c313ab3cb3ac", 
+        "last_affected_version": "5.16.14", 
+        "last_modified": "2022-04-04"
+    }, 
+    "CVE-2022-1204": {
+        "affected_versions": "unk to v5.18-rc1", 
+        "breaks": "", 
+        "cmt_msg": "ax25: Fix refcount leaks caused by ax25_cb_del()", 
+        "fixes": "9fd75b66b8f68498454d685dc4ba13192ae069b0", 
+        "last_modified": "2022-04-04"
+    }, 
+    "CVE-2022-1205": {
+        "affected_versions": "unk to v5.18-rc1", 
+        "breaks": "", 
+        "cmt_msg": "ax25: Fix NULL pointer dereferences in ax25 timers", 
+        "fixes": "fc6d01ff9ef03b66d4a3a23b46fc3c3d8cf92009", 
+        "last_modified": "2022-04-04"
     }, 
     "CVE-2022-22942": {
         "affected_versions": "v4.14-rc1 to v5.17-rc2", 
@@ -69375,8 +69426,8 @@
         }
     }, 
     "CVE-2022-26490": {
-        "affected_versions": "unk to v5.17-rc1", 
-        "breaks": "", 
+        "affected_versions": "v4.0-rc1 to v5.17-rc1", 
+        "breaks": "26fc6c7f02cb26c39c4733de3dbc3c0646fc1074", 
         "cmt_msg": "nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION", 
         "cvss2": {
             "Access Complexity": "Low", 
@@ -69403,7 +69454,7 @@
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')", 
         "fixes": "4fbcc1a4cb20fe26ad0225679c536c80f1648221", 
         "last_affected_version": "5.16.17", 
-        "last_modified": "2022-03-31", 
+        "last_modified": "2022-04-04", 
         "nvd_text": "st21nfca_connectivity_event_received in drivers/nfc/st21nfca/se.c in the Linux kernel through 5.16.12 has EVT_TRANSACTION buffer overflows because of untrusted length parameters.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-26490", 
@@ -69464,12 +69515,12 @@
         }
     }, 
     "CVE-2022-27666": {
-        "affected_versions": "unk to v5.17-rc8", 
-        "breaks": "", 
+        "affected_versions": "v4.11-rc1 to v5.17-rc8", 
+        "breaks": "cac2661c53f35cbe651bef9b07026a5a05ab8ce0", 
         "cmt_msg": "esp: Fix possible buffer overflow in ESP transformation", 
         "fixes": "ebe48d368e97d007bfeb76fcb065d6cfc4c96645", 
         "last_affected_version": "5.16.14", 
-        "last_modified": "2022-03-31"
+        "last_modified": "2022-04-04"
     }, 
     "CVE-2022-27950": {
         "affected_versions": "unk to v5.17-rc5", 
@@ -69478,5 +69529,34 @@
         "fixes": "817b8b9c5396d2b2d92311b46719aad5d3339dbe", 
         "last_affected_version": "5.16.10", 
         "last_modified": "2022-03-31"
+    }, 
+    "CVE-2022-28356": {
+        "affected_versions": "unk to v5.18-rc1", 
+        "breaks": "", 
+        "cmt_msg": "llc: fix netdevice reference leaks in llc_ui_bind()", 
+        "fixes": "764f4eb6846f5475f1244767d24d25dd86528a4a", 
+        "last_affected_version": "5.16.17", 
+        "last_modified": "2022-04-04"
+    }, 
+    "CVE-2022-28388": {
+        "affected_versions": "unk to v5.18-rc1", 
+        "breaks": "", 
+        "cmt_msg": "can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path", 
+        "fixes": "3d3925ff6433f98992685a9679613a2cc97f3ce2", 
+        "last_modified": "2022-04-04"
+    }, 
+    "CVE-2022-28389": {
+        "affected_versions": "unk to v5.18-rc1", 
+        "breaks": "", 
+        "cmt_msg": "can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path", 
+        "fixes": "04c9b00ba83594a29813d6b1fb8fdc93a3915174", 
+        "last_modified": "2022-04-04"
+    }, 
+    "CVE-2022-28390": {
+        "affected_versions": "unk to v5.18-rc1", 
+        "breaks": "", 
+        "cmt_msg": "can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path", 
+        "fixes": "c70222752228a62135cee3409dccefd494a24646", 
+        "last_modified": "2022-04-04"
     }
 }
