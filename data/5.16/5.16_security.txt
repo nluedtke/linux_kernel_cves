@@ -45,6 +45,7 @@ CVEs fixed in 5.16.12:
   CVE-2022-25636: 6bff27caef1ee07a8b190f34cf32c99d6cc37a33 netfilter: nf_tables_offload: incorrect flow offload action array size
   CVE-2022-26966: 639f72dce8667a3d601561e0e47d53ad999e7f8a sr9700: sanity check for packet length
   CVE-2022-27223: 3221ef49ba18924e55a4d42a2ea4080cfea12c6c USB: gadget: validate endpoint index for xilinx udc
+  CVE-2022-29156: fa498059c631e94e91dcb6d78070909d8de56d99 RDMA/rtrs-clt: Fix possible double free in error case
 
 CVEs fixed in 5.16.13:
   CVE-2022-0494: f8c61361a4f52c2a186269982587facc852dba62 block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern
@@ -77,6 +78,16 @@ CVEs fixed in 5.16.18:
   CVE-2022-1048: 0090c13cbbdffd7da079ac56f80373a9a1be0bf8 ALSA: pcm: Fix races among concurrent hw_params and hw_free calls
   CVE-2022-26490: 0646efbb6e100a3f93eba3b6a10a7f4c28dd1478 nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION
   CVE-2022-28356: 6f5bf395c60ed2643de51f2b1041cb0882e9d97f llc: fix netdevice reference leaks in llc_ui_bind()
+
+CVEs fixed in 5.16.19:
+  CVE-2022-0168: 0f0ce73e7dad17084222da19989049ebfb8be541 cifs: fix NULL ptr dereference in smb2_ioctl_query_info()
+  CVE-2022-1158: 9a611c57530050dc359a83177c2f97678b1f961e KVM: x86/mmu: do compare-and-exchange of gPTE via the user address
+  CVE-2022-28388: 3e006cf0fb809815d56e59c9de4486fbe253ccdf can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
+  CVE-2022-28389: f913412848defa326a155c47d026267624472190 can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
+  CVE-2022-28390: 41f6be840f138c7d42312d7619a6b44c001d6b6e can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
+
+CVEs fixed in 5.16.20:
+  CVE-2022-28893: 7a0921a23cae42e9fa5ce964f6907181b6dc80d8 SUNRPC: Ensure we flush any closed sockets before xs_xprt_free()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -139,16 +150,14 @@ Outstanding CVEs:
   CVE-2021-39802: (unk)  
   CVE-2021-4095: (unk) KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty 
   CVE-2021-4204: (unk) bpf: Generalize check_ctx_reg for reuse with other types 
-  CVE-2022-0168: (unk)  
   CVE-2022-0400: (unk)  
   CVE-2022-0812: (unk)  
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
   CVE-2022-1204: (unk) ax25: Fix refcount leaks caused by ax25_cb_del() 
   CVE-2022-1205: (unk) ax25: Fix NULL pointer dereferences in ax25 timers 
   CVE-2022-1263: (unk)  
+  CVE-2022-1280: (unk)  
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
   CVE-2022-26878: (unk)  
-  CVE-2022-28388: (unk) can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path 
-  CVE-2022-28389: (unk) can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path 
-  CVE-2022-28390: (unk) can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path 
+  CVE-2022-28796: (unk) jbd2: fix use-after-free of transaction_t race 
