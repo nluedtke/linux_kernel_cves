@@ -1102,6 +1102,14 @@ CVEs fixed in 4.14.274:
   CVE-2022-27666: 2c8abafd6c72ef04bc972f40332c76c1dd04446d esp: Fix possible buffer overflow in ESP transformation
   CVE-2022-28356: 0f294bc04be87f1c9e1d1a908db9fcc84ce94210 llc: fix netdevice reference leaks in llc_ui_bind()
 
+CVEs fixed in 4.14.276:
+  CVE-2021-4197: a70bcf9ed08f3628a9324f054b0e041697b26853 cgroup: Use open-time credentials for process migraton perm checks
+  CVE-2022-1011: 0ab55e14cf5fd40c39109969c8b04a25870f5d1e fuse: fix pipe buffer lifetime for direct_io
+  CVE-2022-1198: a2793cb58444d4411810cc555eb45b8f4a228018 drivers: hamradio: 6pack: fix UAF bug caused by mod_timer()
+  CVE-2022-1353: fcdaaeb7eb5d52941ceb2fdcec0e2170c9bf3031 af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register
+  CVE-2022-28389: cdced1015a63a7f100b5867ebb9a40271f891411 can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
+  CVE-2022-28390: 29d967c18737ce04f372831c4542e71da1a8d5c8 can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1228,7 +1236,6 @@ Outstanding CVEs:
   CVE-2021-4148: (unk) mm: khugepaged: skip huge page collapse for special files 
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-4159: (unk) bpf: Verifer, adjust_scalar_min_max_vals to always call update_reg_bounds() 
-  CVE-2021-4197: (unk) cgroup: Use open-time credentials for process migraton perm checks 
   CVE-2021-4218: (unk) sysctl: pass kernel pointers to ->proc_handler 
   CVE-2021-43975: (unk) atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait 
   CVE-2021-44879: (unk) f2fs: fix to do sanity check on inode type during garbage collection 
@@ -1243,26 +1250,23 @@ Outstanding CVEs:
   CVE-2022-0854: (unk) swiotlb: rework "fix info leak with DMA_FROM_DEVICE" 
   CVE-2022-0995: (unk) watch_queue: Fix filter limit check 
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
-  CVE-2022-1011: (unk) fuse: fix pipe buffer lifetime for direct_io 
   CVE-2022-1015: (unk) netfilter: nf_tables: validate registers coming from userspace. 
   CVE-2022-1043: (unk) io_uring: fix xa_alloc_cycle() error return value check 
   CVE-2022-1048: (unk) ALSA: pcm: Fix races among concurrent hw_params and hw_free calls 
   CVE-2022-1055: (unk) net: sched: fix use-after-free in tc_new_tfilter() 
   CVE-2022-1158: (unk) KVM: x86/mmu: do compare-and-exchange of gPTE via the user address 
-  CVE-2022-1198: (unk) drivers: hamradio: 6pack: fix UAF bug caused by mod_timer() 
+  CVE-2022-1184: (unk)  
   CVE-2022-1204: (unk) ax25: Fix refcount leaks caused by ax25_cb_del() 
   CVE-2022-1205: (unk) ax25: Fix NULL pointer dereferences in ax25 timers 
   CVE-2022-1263: (unk)  
   CVE-2022-1280: (unk)  
-  CVE-2022-1353: (unk) af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register 
+  CVE-2022-1419: (unk) drm/vgem: Close use-after-free race in vgem_gem_create 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-25265: (unk)  
   CVE-2022-25636: (unk) netfilter: nf_tables_offload: incorrect flow offload action array size 
   CVE-2022-26878: (unk)  
   CVE-2022-27950: (unk) HID: elo: fix memory leak in elo_probe 
   CVE-2022-28388: (unk) can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path 
-  CVE-2022-28389: (unk) can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path 
-  CVE-2022-28390: (unk) can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path 
   CVE-2022-28796: (unk) jbd2: fix use-after-free of transaction_t race 
   CVE-2022-28893: (unk) SUNRPC: Ensure we flush any closed sockets before xs_xprt_free() 
   CVE-2022-29156: (unk) RDMA/rtrs-clt: Fix possible double free in error case 
