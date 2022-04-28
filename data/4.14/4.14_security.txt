@@ -1110,6 +1110,11 @@ CVEs fixed in 4.14.276:
   CVE-2022-28389: cdced1015a63a7f100b5867ebb9a40271f891411 can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
   CVE-2022-28390: 29d967c18737ce04f372831c4542e71da1a8d5c8 can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
 
+CVEs fixed in 4.14.277:
+  CVE-2022-1204: c44a453ffe16eb08acdc6129ac4fa0192dbc0456 ax25: Fix refcount leaks caused by ax25_cb_del()
+  CVE-2022-1205: 331210983ba5ce82bf63b827bca0e1c833f293db ax25: Fix NULL pointer dereferences in ax25 timers
+  CVE-2022-28388: a5e2259173eb52a728bbf32e02aa9a388451e614 can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1246,7 +1251,7 @@ Outstanding CVEs:
   CVE-2022-0494: (unk) block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern 
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
   CVE-2022-0742: (unk) ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report() 
-  CVE-2022-0812: (unk)  
+  CVE-2022-0812: (unk) xprtrdma: fix incorrect header size calculations 
   CVE-2022-0854: (unk) swiotlb: rework "fix info leak with DMA_FROM_DEVICE" 
   CVE-2022-0995: (unk) watch_queue: Fix filter limit check 
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
@@ -1256,17 +1261,16 @@ Outstanding CVEs:
   CVE-2022-1055: (unk) net: sched: fix use-after-free in tc_new_tfilter() 
   CVE-2022-1158: (unk) KVM: x86/mmu: do compare-and-exchange of gPTE via the user address 
   CVE-2022-1184: (unk)  
-  CVE-2022-1204: (unk) ax25: Fix refcount leaks caused by ax25_cb_del() 
-  CVE-2022-1205: (unk) ax25: Fix NULL pointer dereferences in ax25 timers 
-  CVE-2022-1263: (unk)  
-  CVE-2022-1280: (unk)  
+  CVE-2022-1263: (unk) KVM: avoid NULL pointer dereference in kvm_dirty_ring_push 
+  CVE-2022-1280: (unk) drm: avoid circular locks in drm_mode_getconnector 
   CVE-2022-1419: (unk) drm/vgem: Close use-after-free race in vgem_gem_create 
+  CVE-2022-1508: (unk) io_uring: reexpand under-reexpanded iters 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-25265: (unk)  
   CVE-2022-25636: (unk) netfilter: nf_tables_offload: incorrect flow offload action array size 
   CVE-2022-26878: (unk)  
   CVE-2022-27950: (unk) HID: elo: fix memory leak in elo_probe 
-  CVE-2022-28388: (unk) can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path 
   CVE-2022-28796: (unk) jbd2: fix use-after-free of transaction_t race 
   CVE-2022-28893: (unk) SUNRPC: Ensure we flush any closed sockets before xs_xprt_free() 
   CVE-2022-29156: (unk) RDMA/rtrs-clt: Fix possible double free in error case 
+  CVE-2022-29582: (unk) io_uring: fix race between timeout flush and removal 
