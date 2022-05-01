@@ -8,9 +8,13 @@ CVEs fixed in 5.15:
 CVEs fixed in 5.15.1:
   CVE-2021-42739: cb667140875a3b1db92e4c50b4617a7cbf84659b media: firewire: firedtv-avc: fix a buffer overflow in avc_ca_pmt()
 
+CVEs fixed in 5.15.2:
+  CVE-2021-39686: ff1bd01f490ba60d82c765100d95d13cc00c1625 binder: use euid from cred instead of using task
+
 CVEs fixed in 5.15.3:
   CVE-2021-3640: b990c219c4c9d4993ef65ea9db73d9497e70f697 Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()
   CVE-2021-3752: 7e22e4db95b04f09adcce18c75d27cbca8f53b99 Bluetooth: fix use-after-free error in lock_sock_nested()
+  CVE-2021-45868: 332db0909293f3f4d853ee2ea695272c75082d87 quota: check block number when reading the block in quota file
 
 CVEs fixed in 5.15.5:
   CVE-2020-27820: 0b1a35d63995497a9186113c60a16e7ae59642c1 drm/nouveau: use drm_dev_unplug() during device removal
@@ -25,6 +29,7 @@ CVEs fixed in 5.15.7:
 
 CVEs fixed in 5.15.8:
   CVE-2021-39685: 36dfdf11af49d3c009c711fb16f5c6e7a274505d USB: gadget: detect too-big endpoint 0 requests
+  CVE-2021-39698: 1ebb6cd8c754bfe1a5f9539027980756bce7cb08 wait: add wake_up_pollfree()
 
 CVEs fixed in 5.15.11:
   CVE-2021-22600: feb116a0ecc5625d6532c616d9a10ef4ef81514b net/packet: rx_owner_map depends on pg_vec
@@ -42,6 +47,7 @@ CVEs fixed in 5.15.12:
   CVE-2021-44733: 492eb7afe858d60408b2da09adc78540c4d16543 tee: handle lookup of shm with reference count 0
   CVE-2021-45100: a2c144d17623984fdafa4634ecf4ab64580d29bb ksmbd: disable SMB2_GLOBAL_CAP_ENCRYPTION for SMB 3.1.1
   CVE-2021-45469: a8a9d753edd7f71e6a2edaa580d8182530b68791 f2fs: fix to do sanity check on last xattr entry in __f2fs_setxattr()
+  CVE-2022-1195: 03d00f7f1815ec00dab5035851b3de83afd054a8 hamradio: improve the incomplete fix to avoid NPD
 
 CVEs fixed in 5.15.14:
   CVE-2021-4155: b0e72ba9e520b95346e68800afff0db65e766ca8 xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
@@ -67,6 +73,7 @@ CVEs fixed in 5.15.19:
 
 CVEs fixed in 5.15.20:
   CVE-2022-0492: 4b1c32bfaa02255a5df602b41587174004996477 cgroup-v1: Require capabilities to set release_agent
+  CVE-2022-1055: f36cacd6c933183c1a8827d5987cf2cfc0a44c76 net: sched: fix use-after-free in tc_new_tfilter()
 
 CVEs fixed in 5.15.23:
   CVE-2022-0435: 1f1788616157b0222b0c2153828b475d95e374a7 tipc: improve size validations for received domain records
@@ -79,9 +86,62 @@ CVEs fixed in 5.15.24:
 
 CVEs fixed in 5.15.25:
   CVE-2022-0847: 114e9f141822e6977633d322c1b03e89bd209932 lib/iov_iter: initialize "flags" in new pipe_buffer
+  CVE-2022-27950: de0d102d0c8c681fc9a3263d842fb35f7cf662f4 HID: elo: fix memory leak in elo_probe
 
 CVEs fixed in 5.15.26:
   CVE-2022-25636: 6c5d780469d6c3590729940e2be8a3bd66ea4814 netfilter: nf_tables_offload: incorrect flow offload action array size
+  CVE-2022-26966: 9f2d614779906f3d8ad4fb882c5b3e5ad6150bbe sr9700: sanity check for packet length
+  CVE-2022-27223: 2c775ad1fd5e014b35e483da2aab8400933fb09d USB: gadget: validate endpoint index for xilinx udc
+  CVE-2022-29156: bf2cfad0c6e4b0d1b34d26420fddaf18dc25e56d RDMA/rtrs-clt: Fix possible double free in error case
+
+CVEs fixed in 5.15.27:
+  CVE-2022-0494: a1ba98731518b811ff90009505c1aebf6e400bc2 block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern
+  CVE-2022-0742: 771aca9bc70709771f66c3e7c00ce87339aa1790 ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report()
+  CVE-2022-24958: 07de9a494b5ae41b9253411a8e9576d7fceedcc3 usb: gadget: don't release an existing dev->buf
+
+CVEs fixed in 5.15.28:
+  CVE-2022-0001: f150b6fccf7fa0e7e7275f0785798547db832c7b x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE
+  CVE-2022-0002: f150b6fccf7fa0e7e7275f0785798547db832c7b x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE
+  CVE-2022-23036: 1dd5b4b230f6d1345708c6204ccacdf83d53feaf xen/grant-table: add gnttab_try_end_foreign_access()
+  CVE-2022-23037: 5d5fa1d53a31c799b85112841c3c639c7baac1c4 xen/netfront: don't use gnttab_query_foreign_access() for mapped status
+  CVE-2022-23038: 1dd5b4b230f6d1345708c6204ccacdf83d53feaf xen/grant-table: add gnttab_try_end_foreign_access()
+  CVE-2022-23039: f06e3edaeac1942c4ff42072e3d98ee8c762c5fa xen/gntalloc: don't use gnttab_query_foreign_access()
+  CVE-2022-23040: 66cb2bbb522b0d5e4f6a11558ff7bfdf3f7d31f3 xen/xenbus: don't let xenbus_grant_ring() remove grants in error case
+  CVE-2022-23041: a019d26830e8a04933e38e4fcc507dcfbc6ccc72 xen/9p: use alloc/free_pages_exact()
+  CVE-2022-23042: dea18aef2021022a568f4d385a1386f51a9df6ff xen/netfront: react properly to failing gnttab_end_foreign_access_ref()
+  CVE-2022-23960: f02cab2bed1a3493a230e54d83ff117bc59f480e ARM: report Spectre v2 status through sysfs
+
+CVEs fixed in 5.15.29:
+  CVE-2022-0854: 2c1f97af38be151527380796d31d3c9adb054bf9 swiotlb: rework "fix info leak with DMA_FROM_DEVICE"
+  CVE-2022-0995: 1b09f28f70a5046acd64138075ae3f095238b045 watch_queue: Fix filter limit check
+  CVE-2022-1011: ca62747b38f59d4e75967ebf63c992de8852ca1b fuse: fix pipe buffer lifetime for direct_io
+  CVE-2022-1199: 46ad629e58ce3a88c924ff3c5a7e9129b0df5659 ax25: Fix NULL pointer dereference in ax25_kill_by_device
+  CVE-2022-27666: 4aaabbffc3b0658ce80eebdde9bafa20a3f932e0 esp: Fix possible buffer overflow in ESP transformation
+
+CVEs fixed in 5.15.32:
+  CVE-2022-1015: 1bd57dea456149619f3b80d67eee012122325af8 netfilter: nf_tables: validate registers coming from userspace.
+  CVE-2022-1016: fafb904156fbb8f1dd34970cd5223e00b47c33be netfilter: nf_tables: initialize registers in nft_do_chain()
+  CVE-2022-1048: 33061d0fba51d2bf70a2ef9645f703c33fe8e438 ALSA: pcm: Fix races among concurrent hw_params and hw_free calls
+  CVE-2022-26490: a34c47b1ab07153a047476de83581dc822287f39 nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION
+  CVE-2022-28356: e9072996108387ab19b497f5b557c93f98d96b0b llc: fix netdevice reference leaks in llc_ui_bind()
+
+CVEs fixed in 5.15.33:
+  CVE-2022-0168: 39a4bf7d1a23dd172526c2fb0db480c5d5c63bd6 cifs: fix NULL ptr dereference in smb2_ioctl_query_info()
+  CVE-2022-1158: 8771d9673e0bdb7148299f3c074667124bde6dff KVM: x86/mmu: do compare-and-exchange of gPTE via the user address
+  CVE-2022-1198: 3eb18f8a1d02a9462a0e4903efc674ca3d0406d1 drivers: hamradio: 6pack: fix UAF bug caused by mod_timer()
+  CVE-2022-1353: d06ee4572fd916fbb34d16dc81eb37d1dff83446 af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register
+  CVE-2022-1516: 409570a619c1cda2e0fde6018a256b9e3d3ba0ee net/x25: Fix null-ptr-deref caused by x25_disconnect
+  CVE-2022-28388: f2ce5238904f539648aaf56c5ee49e5eaf44d8fc can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
+  CVE-2022-28389: 37f07ad24866c6c1423b37b131c9a42414bcf8a1 can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
+  CVE-2022-28390: 459b19f42fd5e031e743dfa119f44aba0b62ff97 can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
+
+CVEs fixed in 5.15.34:
+  CVE-2022-1263: 226b4327ef5c88572fc12187193f1b5073c10837 KVM: avoid NULL pointer dereference in kvm_dirty_ring_push
+  CVE-2022-29582: ba7261af2b030ab2c06189be1fc77b273716839f io_uring: fix race between timeout flush and removal
+
+CVEs fixed in 5.15.35:
+  CVE-2022-1204: 452ae92b99062d2f6a34324eaf705a3b7eac9f8b ax25: Fix refcount leaks caused by ax25_cb_del()
+  CVE-2022-1205: 43c107021d9160f6a1610bafba6dadc0323ae548 ax25: Fix NULL pointer dereferences in ax25 timers
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -133,17 +193,24 @@ Outstanding CVEs:
   CVE-2021-0399: (unk)  
   CVE-2021-0695: (unk)  
   CVE-2021-26934: (unk)  
+  CVE-2021-33061: (unk) ixgbe: add improvement for MDD response functionality 
   CVE-2021-3542: (unk)  
+  CVE-2021-3714: (unk)  
   CVE-2021-3847: (unk)  
   CVE-2021-3864: (unk)  
   CVE-2021-3892: (unk)  
+  CVE-2021-39800: (unk)  
+  CVE-2021-39801: (unk)  
+  CVE-2021-39802: (unk)  
   CVE-2021-4095: (unk) KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty 
   CVE-2021-4204: (unk) bpf: Generalize check_ctx_reg for reuse with other types 
   CVE-2022-0400: (unk)  
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
-  CVE-2022-0812: (unk)  
+  CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
+  CVE-2022-1184: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
-  CVE-2022-24958: (unk) usb: gadget: don't release an existing dev->buf 
   CVE-2022-25265: (unk)  
-  CVE-2022-26490: (unk) nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION 
+  CVE-2022-26878: (unk)  
+  CVE-2022-28796: (unk) jbd2: fix use-after-free of transaction_t race 
+  CVE-2022-28893: (unk) SUNRPC: Ensure we flush any closed sockets before xs_xprt_free() 
