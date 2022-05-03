@@ -86,6 +86,7 @@ CVEs fixed in 5.15.24:
 
 CVEs fixed in 5.15.25:
   CVE-2022-0847: 114e9f141822e6977633d322c1b03e89bd209932 lib/iov_iter: initialize "flags" in new pipe_buffer
+  CVE-2022-20008: f3ff5f75d8f6367eac7556c9db1227bb43e5c615 mmc: block: fix read single on recovery logic
   CVE-2022-27950: de0d102d0c8c681fc9a3263d842fb35f7cf662f4 HID: elo: fix memory leak in elo_probe
 
 CVEs fixed in 5.15.26:
@@ -142,6 +143,10 @@ CVEs fixed in 5.15.34:
 CVEs fixed in 5.15.35:
   CVE-2022-1204: 452ae92b99062d2f6a34324eaf705a3b7eac9f8b ax25: Fix refcount leaks caused by ax25_cb_del()
   CVE-2022-1205: 43c107021d9160f6a1610bafba6dadc0323ae548 ax25: Fix NULL pointer dereferences in ax25 timers
+
+CVEs fixed in 5.15.37:
+  CVE-2022-0500: b453361384c2db1c703dacb806d5fd36aec4ceca bpf: Introduce MEM_RDONLY flag
+  CVE-2022-23222: 8d38cde47a7e17b646401fa92d916503caa5375e bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -205,12 +210,11 @@ Outstanding CVEs:
   CVE-2021-4095: (unk) KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty 
   CVE-2021-4204: (unk) bpf: Generalize check_ctx_reg for reuse with other types 
   CVE-2022-0400: (unk)  
-  CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
   CVE-2022-1184: (unk)  
-  CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
   CVE-2022-26878: (unk)  
   CVE-2022-28796: (unk) jbd2: fix use-after-free of transaction_t race 
   CVE-2022-28893: (unk) SUNRPC: Ensure we flush any closed sockets before xs_xprt_free() 
+  CVE-2022-29968: (unk) io_uring: fix uninitialized field in rw io_kiocb 

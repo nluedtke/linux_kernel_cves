@@ -69146,7 +69146,7 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "20b2aff4bc15bda809f994761d5719827d66c0b4",
         "last_affected_version": "5.16.10",
-        "last_modified": "2022-04-15",
+        "last_modified": "2022-05-03",
         "nvd_text": "A flaw was found in unrestricted eBPF usage by the BPF_BTF_LOAD, leading to a possible out-of-bounds memory write in the Linux kernel\u2019s BPF subsystem due to the way a user loads BTF. This flaw allows a local user to crash or escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0500",
@@ -69552,8 +69552,8 @@
         "cwe": "Use After Free",
         "fixes": "0c4bcfdecb1ac0967619ee7ff44871d93c08c909",
         "last_affected_version": "5.16.14",
-        "last_modified": "2022-04-22",
-        "nvd_text": "A flaw use after free in the Linux kernel FUSE filesystem was found in the way user triggers write(). A local user could use this flaw to get some unauthorized access to some data from the FUSE filesystem and as result potentially privilege escalation too.",
+        "last_modified": "2022-05-03",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s FUSE filesystem in the way a user triggers write(). This flaw allows a local user to gain unauthorized access to data from the FUSE filesystem, resulting in privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1011",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1011",
@@ -69569,7 +69569,8 @@
         "cmt_msg": "netfilter: nf_tables: validate registers coming from userspace.",
         "fixes": "6e1acfa387b9ff82cfc7db8cc3b6959221a95851",
         "last_affected_version": "5.17.0",
-        "last_modified": "2022-04-15",
+        "last_modified": "2022-05-03",
+        "nvd_text": "A flaw was found in the Linux kernel in linux/net/netfilter/nf_tables_api.c of the netfilter subsystem. This flaw allows a local user to cause an out-of-bounds write issue.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1015",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1015",
@@ -69617,7 +69618,8 @@
         "cmt_msg": "ALSA: pcm: Fix races among concurrent hw_params and hw_free calls",
         "fixes": "92ee3c60ec9fe64404dc035e7c41277d74aa26cb",
         "last_affected_version": "5.17.0",
-        "last_modified": "2022-04-15",
+        "last_modified": "2022-05-03",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s sound subsystem in the way a user triggers concurrent calls of PCM hw_params. The hw_free ioctls or similar race condition happens inside ALSA PCM for other ioctls. This flaw allows a local user to crash or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1048",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1048",
@@ -69703,7 +69705,8 @@
         "cmt_msg": "hamradio: improve the incomplete fix to avoid NPD",
         "fixes": "b2f37aead1b82a770c48b5d583f35ec22aabb61e",
         "last_affected_version": "5.15.11",
-        "last_modified": "2022-04-04",
+        "last_modified": "2022-05-03",
+        "nvd_text": "A use-after-free vulnerability was found in the Linux kernel in drivers/net/hamradio. This flaw allows a local attacker with a user privilege to cause a denial of service (DOS) when the mkiss or sixpack device is detached and reclaim resources early.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1195",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1195",
@@ -69838,7 +69841,8 @@
         "cmt_msg": "af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register",
         "fixes": "9a564bccb78a76740ea9d75a259942df8143d02c",
         "last_affected_version": "5.16",
-        "last_modified": "2022-04-22",
+        "last_modified": "2022-05-03",
+        "nvd_text": "A vulnerability was found in the pfkey_register function in net/key/af_key.c in the Linux kernel. This flaw allows a local, unprivileged user to gain access to kernel memory, leading to a system crash or a leak of internal kernel information.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1353",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1353",
@@ -69893,6 +69897,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1516",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-1516",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1516"
+        }
+    },
+    "CVE-2022-20008": {
+        "affected_versions": "unk to v5.17-rc5",
+        "breaks": "",
+        "cmt_msg": "mmc: block: fix read single on recovery logic",
+        "fixes": "54309fde1a352ad2674ebba004a79f7d20b9f037",
+        "last_affected_version": "5.16.10",
+        "last_modified": "2022-05-03",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20008",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20008",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20008",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20008",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20008",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20008"
         }
     },
     "CVE-2022-22942": {
@@ -70220,7 +70240,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "c25b2ae136039ffa820c26138ed4a5e5f3ab3841",
         "last_affected_version": "5.16.10",
-        "last_modified": "2022-02-28",
+        "last_modified": "2022-05-03",
         "nvd_text": "kernel/bpf/verifier.c in the Linux kernel through 5.15.14 allows local users to gain privileges because of the availability of pointer arithmetic via certain *_OR_NULL pointer types.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23222",
@@ -71121,6 +71141,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-29582",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-29582",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-29582"
+        }
+    },
+    "CVE-2022-29968": {
+        "affected_versions": "unk to v5.18-rc5",
+        "breaks": "",
+        "cmt_msg": "io_uring: fix uninitialized field in rw io_kiocb",
+        "fixes": "32452a3eb8b64e01e2be717f518c0be046975b9d",
+        "last_modified": "2022-05-03",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.17.5. io_rw_init_file in fs/io_uring.c lacks initialization of kiocb->private.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-29968",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-29968",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-29968",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-29968",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-29968",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-29968"
         }
     }
 }
