@@ -69889,7 +69889,8 @@
         "cmt_msg": "net/x25: Fix null-ptr-deref caused by x25_disconnect",
         "fixes": "7781607938c8371d4c2b243527430241c62e39c2",
         "last_affected_version": "5.17.1",
-        "last_modified": "2022-04-29",
+        "last_modified": "2022-05-06",
+        "nvd_text": "A NULL pointer dereference flaw was found in the Linux kernel\u2019s X.25 set of standardized network protocols functionality in the way a user terminates their session using a simulated Ethernet card and continued usage of this connection. This flaw allows a local user to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1516",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1516",
@@ -71130,9 +71131,32 @@
         "affected_versions": "unk to v5.18-rc2",
         "breaks": "",
         "cmt_msg": "io_uring: fix race between timeout flush and removal",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Use After Free",
         "fixes": "e677edbcabee849bfdd43f1602bccbecf736a646",
         "last_affected_version": "5.17.2",
-        "last_modified": "2022-04-28",
+        "last_modified": "2022-05-06",
         "nvd_text": "In the Linux kernel before 5.17.3, fs/io_uring.c has a use-after-free due to a race condition in io_uring timeouts. This can be triggered by a local user who has no access to any user namespace; however, the race condition perhaps can only be exploited infrequently.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-29582",
