@@ -886,6 +886,7 @@ CVEs fixed in 4.19.233:
   CVE-2022-24958: 70196d12856306a17ddc3eae0f022b9c1d748e52 usb: gadget: don't release an existing dev->buf
 
 CVEs fixed in 4.19.234:
+  CVE-2021-26401: d3cb3a6927222268a10b2f12dfb8c9444f7cc39e x86/speculation: Use generic retpoline by default on AMD
   CVE-2022-0001: 25440a8c77dd2fde6a8e9cfc0c616916febf408e x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE
   CVE-2022-0002: 25440a8c77dd2fde6a8e9cfc0c616916febf408e x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE
   CVE-2022-23036: 17659846fe336366b1663194f5669d10f5947f53 xen/grant-table: add gnttab_try_end_foreign_access()
@@ -915,11 +916,15 @@ CVEs fixed in 4.19.238:
   CVE-2022-1516: 4c240c5a105557e4546d0836e694868f22fd09b0 net/x25: Fix null-ptr-deref caused by x25_disconnect
   CVE-2022-28389: a8bba9fd73775e66b4021b18f2193f769ce48a59 can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
   CVE-2022-28390: dec3ed0c76483748268bf36ec278af660b0f80ba can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
+  CVE-2022-30594: b1f438f872dcda10a79e6aeaf06fd52dfb15a6ab ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE
 
 CVEs fixed in 4.19.240:
   CVE-2022-1204: de55a1338e6a48ff1e41ea8db1432496fbe2a62b ax25: Fix refcount leaks caused by ax25_cb_del()
   CVE-2022-1205: 512f09df261b51b088f17d86dbdf300a3492523d ax25: Fix NULL pointer dereferences in ax25 timers
   CVE-2022-28388: 8eb78da898079c0d7250c32ebf0c35fb81737abe can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
+
+CVEs fixed in 4.19.242:
+  CVE-2022-1419: df2c1f38939aabb8c6beca108f08b90f050b9ebc drm/vgem: Close use-after-free race in vgem_gem_create
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1039,6 +1044,7 @@ Outstanding CVEs:
   CVE-2022-0854: (unk) swiotlb: rework "fix info leak with DMA_FROM_DEVICE" 
   CVE-2022-0995: (unk) watch_queue: Fix filter limit check 
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
+  CVE-2022-1012: (unk) secure_seq: use the 64 bits of the siphash for port offset calculation 
   CVE-2022-1015: (unk) netfilter: nf_tables: validate registers coming from userspace. 
   CVE-2022-1043: (unk) io_uring: fix xa_alloc_cycle() error return value check 
   CVE-2022-1048: (unk) ALSA: pcm: Fix races among concurrent hw_params and hw_free calls 
@@ -1047,8 +1053,9 @@ Outstanding CVEs:
   CVE-2022-1184: (unk)  
   CVE-2022-1263: (unk) KVM: avoid NULL pointer dereference in kvm_dirty_ring_push 
   CVE-2022-1280: (unk) drm: avoid circular locks in drm_mode_getconnector 
-  CVE-2022-1419: (unk) drm/vgem: Close use-after-free race in vgem_gem_create 
   CVE-2022-1508: (unk) io_uring: reexpand under-reexpanded iters 
+  CVE-2022-1651: (unk) virt: acrn: fix a memory leak in acrn_dev_ioctl() 
+  CVE-2022-1652: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-25265: (unk)  
   CVE-2022-25636: (unk) netfilter: nf_tables_offload: incorrect flow offload action array size 

@@ -3695,6 +3695,12 @@
             "CVE-2022-1015": {
                 "cmt_msg": "netfilter: nf_tables: validate registers coming from userspace."
             }, 
+            "CVE-2022-1652": {
+                "cmt_msg": ""
+            }, 
+            "CVE-2022-1651": {
+                "cmt_msg": "virt: acrn: fix a memory leak in acrn_dev_ioctl()"
+            }, 
             "CVE-2021-39648": {
                 "cmt_msg": "usb: gadget: configfs: Fix use-after-free issue with udc_name"
             }, 
@@ -3703,6 +3709,9 @@
             }, 
             "CVE-2019-19241": {
                 "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
+            "CVE-2022-1012": {
+                "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation"
             }, 
             "CVE-2019-9453": {
                 "cmt_msg": "f2fs: fix to avoid accessing xattr across the boundary"
@@ -4250,6 +4259,9 @@
             "CVE-2019-19039": {
                 "cmt_msg": "btrfs: Don't submit any btree write bio if the fs has errors"
             }, 
+            "CVE-2021-26401": {
+                "cmt_msg": "x86/speculation: Use generic retpoline by default on AMD"
+            }, 
             "CVE-2021-3847": {
                 "cmt_msg": ""
             }, 
@@ -4270,6 +4282,9 @@
             }, 
             "CVE-2021-32078": {
                 "cmt_msg": "ARM: footbridge: remove personal server platform"
+            }, 
+            "CVE-2022-30594": {
+                "cmt_msg": "ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE"
             }, 
             "CVE-2019-10220": {
                 "cmt_msg": "Convert filldir[64]() from __put_user() to unsafe_put_user()"
@@ -5949,6 +5964,10 @@
                 "cmt_msg": "ARM: report Spectre v2 status through sysfs", 
                 "cmt_id": "fdfc0baf829dfb306a1ec45900d2cfbee265ae60"
             }, 
+            "CVE-2022-23041": {
+                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
+                "cmt_id": "be63ea883e56aacf9326e581b53dff9ac087ace1"
+            }, 
             "CVE-2022-23036": {
                 "cmt_msg": "xen/grant-table: add gnttab_try_end_foreign_access()", 
                 "cmt_id": "44d86dccd2a5f02a66c6784378d1429412d84bf0"
@@ -5965,9 +5984,9 @@
                 "cmt_msg": "x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE", 
                 "cmt_id": "41b50510e593541e2ee1537614652e91e71f6bf5"
             }, 
-            "CVE-2022-23041": {
-                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
-                "cmt_id": "be63ea883e56aacf9326e581b53dff9ac087ace1"
+            "CVE-2021-26401": {
+                "cmt_msg": "x86/speculation: Use generic retpoline by default on AMD", 
+                "cmt_id": "b1bacf22a847d21a12900bd6a1eacaecb5bca253"
             }, 
             "CVE-2022-23040": {
                 "cmt_msg": "xen/xenbus: don't let xenbus_grant_ring() remove grants in error case", 
@@ -6019,6 +6038,10 @@
                 "cmt_msg": "af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register", 
                 "cmt_id": "ef388db2fe351230ff7194b37d507784bef659ec"
             }, 
+            "CVE-2022-30594": {
+                "cmt_msg": "ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE", 
+                "cmt_id": "2458ecd21f29a3e5571d7d97764c043083deed5e"
+            }, 
             "CVE-2022-1198": {
                 "cmt_msg": "drivers: hamradio: 6pack: fix UAF bug caused by mod_timer()", 
                 "cmt_id": "28c8fd84bea13cbf238d7b19d392de2fcc31331c"
@@ -6050,6 +6073,16 @@
             "CVE-2022-28388": {
                 "cmt_msg": "can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path", 
                 "cmt_id": "660784e7194ac2953aebe874c1f75f2441ba3d19"
+            }
+        }, 
+        "5.4.193": {
+            "CVE-2022-1048": {
+                "cmt_msg": "ALSA: pcm: Fix races among concurrent hw_params and hw_free calls", 
+                "cmt_id": "fbeb492694ce0441053de57699e1e2b7bc148a69"
+            }, 
+            "CVE-2022-0494": {
+                "cmt_msg": "block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern", 
+                "cmt_id": "c7337efd1d11acb6f84c68ffee57d3f312e87b24"
             }
         }, 
         "outstanding": {
@@ -6137,6 +6170,15 @@
             "CVE-2022-1015": {
                 "cmt_msg": "netfilter: nf_tables: validate registers coming from userspace."
             }, 
+            "CVE-2022-1652": {
+                "cmt_msg": ""
+            }, 
+            "CVE-2022-1651": {
+                "cmt_msg": "virt: acrn: fix a memory leak in acrn_dev_ioctl()"
+            }, 
+            "CVE-2022-1012": {
+                "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation"
+            }, 
             "CVE-2021-26934": {
                 "cmt_msg": ""
             }, 
@@ -6145,9 +6187,6 @@
             }, 
             "CVE-2021-3669": {
                 "cmt_msg": "ipc: replace costly bailout check in sysvipc_find_ipc()"
-            }, 
-            "CVE-2022-0494": {
-                "cmt_msg": "block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern"
             }, 
             "CVE-2018-12929": {
                 "cmt_msg": ""
@@ -6334,9 +6373,6 @@
             }, 
             "CVE-2021-39802": {
                 "cmt_msg": ""
-            }, 
-            "CVE-2022-1048": {
-                "cmt_msg": "ALSA: pcm: Fix races among concurrent hw_params and hw_free calls"
             }, 
             "CVE-2020-36385": {
                 "cmt_msg": "RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy"
@@ -9412,6 +9448,10 @@
                 "cmt_msg": "ARM: report Spectre v2 status through sysfs", 
                 "cmt_id": "2d44960d3edf9994998ff798ef618e666c4f0143"
             }, 
+            "CVE-2022-23041": {
+                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
+                "cmt_id": "22fd4f3fc1cd37d3daa4462f3184b20adb9342f5"
+            }, 
             "CVE-2022-23036": {
                 "cmt_msg": "xen/grant-table: add gnttab_try_end_foreign_access()", 
                 "cmt_id": "1b2f59f854e7069ba059adfe03d648ea643eba51"
@@ -9428,9 +9468,9 @@
                 "cmt_msg": "x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE", 
                 "cmt_id": "35c13d13becb5b951ea0fc708dda03fe900cf879"
             }, 
-            "CVE-2022-23041": {
-                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
-                "cmt_id": "22fd4f3fc1cd37d3daa4462f3184b20adb9342f5"
+            "CVE-2021-26401": {
+                "cmt_msg": "x86/speculation: Use generic retpoline by default on AMD", 
+                "cmt_id": "85938688be23ecd36a06757096896b2779b80d97"
             }, 
             "CVE-2022-23040": {
                 "cmt_msg": "xen/xenbus: don't let xenbus_grant_ring() remove grants in error case", 
@@ -9478,6 +9518,10 @@
                 "cmt_msg": "af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register", 
                 "cmt_id": "fcdaaeb7eb5d52941ceb2fdcec0e2170c9bf3031"
             }, 
+            "CVE-2022-30594": {
+                "cmt_msg": "ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE", 
+                "cmt_id": "f1442ed84c43610ca8ab77deb9ca991e7354746c"
+            }, 
             "CVE-2022-1198": {
                 "cmt_msg": "drivers: hamradio: 6pack: fix UAF bug caused by mod_timer()", 
                 "cmt_id": "a2793cb58444d4411810cc555eb45b8f4a228018"
@@ -9511,6 +9555,12 @@
             "CVE-2022-28388": {
                 "cmt_msg": "can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path", 
                 "cmt_id": "a5e2259173eb52a728bbf32e02aa9a388451e614"
+            }
+        }, 
+        "4.14.278": {
+            "CVE-2022-1419": {
+                "cmt_msg": "drm/vgem: Close use-after-free race in vgem_gem_create", 
+                "cmt_id": "d2b8e8fbac9f175388d2808ade90d86402642b01"
             }
         }, 
         "outstanding": {
@@ -9547,8 +9597,8 @@
             "CVE-2019-19378": {
                 "cmt_msg": ""
             }, 
-            "CVE-2022-1419": {
-                "cmt_msg": "drm/vgem: Close use-after-free race in vgem_gem_create"
+            "CVE-2022-25265": {
+                "cmt_msg": ""
             }, 
             "CVE-2017-5753": {
                 "cmt_msg": "x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]"
@@ -9625,8 +9675,17 @@
             "CVE-2022-1015": {
                 "cmt_msg": "netfilter: nf_tables: validate registers coming from userspace."
             }, 
+            "CVE-2022-1652": {
+                "cmt_msg": ""
+            }, 
+            "CVE-2022-1651": {
+                "cmt_msg": "virt: acrn: fix a memory leak in acrn_dev_ioctl()"
+            }, 
             "CVE-2019-19241": {
                 "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
+            "CVE-2022-1012": {
+                "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation"
             }, 
             "CVE-2021-43975": {
                 "cmt_msg": "atlantic: Fix OOB read and write in hw_atl_utils_fw_rpc_wait"
@@ -9797,9 +9856,6 @@
                 "cmt_msg": "io_uring: ensure that SQPOLL thread is started for exit"
             }, 
             "CVE-2020-14304": {
-                "cmt_msg": ""
-            }, 
-            "CVE-2022-25265": {
                 "cmt_msg": ""
             }, 
             "CVE-2020-0347": {
@@ -12468,6 +12524,10 @@
                 "cmt_msg": "ARM: report Spectre v2 status through sysfs", 
                 "cmt_id": "dc64af755099d1e51fd64e99fe3a59b75595814a"
             }, 
+            "CVE-2022-23041": {
+                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
+                "cmt_id": "2466bed361f3274e3e0ca9d8e539532481c06fea"
+            }, 
             "CVE-2022-23036": {
                 "cmt_msg": "xen/grant-table: add gnttab_try_end_foreign_access()", 
                 "cmt_id": "17659846fe336366b1663194f5669d10f5947f53"
@@ -12484,9 +12544,9 @@
                 "cmt_msg": "x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE", 
                 "cmt_id": "25440a8c77dd2fde6a8e9cfc0c616916febf408e"
             }, 
-            "CVE-2022-23041": {
-                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
-                "cmt_id": "2466bed361f3274e3e0ca9d8e539532481c06fea"
+            "CVE-2021-26401": {
+                "cmt_msg": "x86/speculation: Use generic retpoline by default on AMD", 
+                "cmt_id": "d3cb3a6927222268a10b2f12dfb8c9444f7cc39e"
             }, 
             "CVE-2022-23040": {
                 "cmt_msg": "xen/xenbus: don't let xenbus_grant_ring() remove grants in error case", 
@@ -12534,6 +12594,10 @@
                 "cmt_msg": "af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register", 
                 "cmt_id": "693fe8af9a2625139de07bd1ae212a7d89c37795"
             }, 
+            "CVE-2022-30594": {
+                "cmt_msg": "ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE", 
+                "cmt_id": "b1f438f872dcda10a79e6aeaf06fd52dfb15a6ab"
+            }, 
             "CVE-2022-1198": {
                 "cmt_msg": "drivers: hamradio: 6pack: fix UAF bug caused by mod_timer()", 
                 "cmt_id": "79e2f40c210a47f283bca352745068207798fbb9"
@@ -12569,6 +12633,12 @@
                 "cmt_id": "8eb78da898079c0d7250c32ebf0c35fb81737abe"
             }
         }, 
+        "4.19.242": {
+            "CVE-2022-1419": {
+                "cmt_msg": "drm/vgem: Close use-after-free race in vgem_gem_create", 
+                "cmt_id": "df2c1f38939aabb8c6beca108f08b90f050b9ebc"
+            }
+        }, 
         "outstanding": {
             "CVE-2021-0929": {
                 "cmt_msg": "staging/android/ion: delete dma_buf->kmap/unmap implemenation"
@@ -12602,9 +12672,6 @@
             }, 
             "CVE-2019-19378": {
                 "cmt_msg": ""
-            }, 
-            "CVE-2022-1419": {
-                "cmt_msg": "drm/vgem: Close use-after-free race in vgem_gem_create"
             }, 
             "CVE-2022-0995": {
                 "cmt_msg": "watch_queue: Fix filter limit check"
@@ -12672,8 +12739,17 @@
             "CVE-2022-1015": {
                 "cmt_msg": "netfilter: nf_tables: validate registers coming from userspace."
             }, 
+            "CVE-2022-1652": {
+                "cmt_msg": ""
+            }, 
+            "CVE-2022-1651": {
+                "cmt_msg": "virt: acrn: fix a memory leak in acrn_dev_ioctl()"
+            }, 
             "CVE-2019-19241": {
                 "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
+            "CVE-2022-1012": {
+                "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation"
             }, 
             "CVE-2021-26934": {
                 "cmt_msg": ""
@@ -16423,6 +16499,10 @@
                 "cmt_msg": "x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE", 
                 "cmt_id": "a771511caa8e31cb5cac4fa39165ebbca3e62795"
             }, 
+            "CVE-2021-26401": {
+                "cmt_msg": "x86/speculation: Use generic retpoline by default on AMD", 
+                "cmt_id": "b6a1aec08a84ccb331ce526c051df074150cf3c5"
+            }, 
             "CVE-2022-23040": {
                 "cmt_msg": "xen/xenbus: don't let xenbus_grant_ring() remove grants in error case", 
                 "cmt_id": "8f80d12f6946a6fe7c64bfc204c062a57f83c7f8"
@@ -16468,6 +16548,10 @@
             "CVE-2022-1516": {
                 "cmt_msg": "net/x25: Fix null-ptr-deref caused by x25_disconnect", 
                 "cmt_id": "dffc859d1d9560da594e4282091781b8d2715f00"
+            }, 
+            "CVE-2022-30594": {
+                "cmt_msg": "ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE", 
+                "cmt_id": "4f96b94a8342fac058117962f1a76fc7ebd1c245"
             }, 
             "CVE-2022-28390": {
                 "cmt_msg": "can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path", 
@@ -16598,11 +16682,20 @@
             "CVE-2022-1015": {
                 "cmt_msg": "netfilter: nf_tables: validate registers coming from userspace."
             }, 
+            "CVE-2022-1652": {
+                "cmt_msg": ""
+            }, 
+            "CVE-2022-1651": {
+                "cmt_msg": "virt: acrn: fix a memory leak in acrn_dev_ioctl()"
+            }, 
             "CVE-2022-1011": {
                 "cmt_msg": "fuse: fix pipe buffer lifetime for direct_io"
             }, 
             "CVE-2019-19241": {
                 "cmt_msg": "io_uring: async workers should inherit the user creds"
+            }, 
+            "CVE-2022-1012": {
+                "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation"
             }, 
             "CVE-2019-9453": {
                 "cmt_msg": "f2fs: fix to avoid accessing xattr across the boundary"
@@ -18050,6 +18143,10 @@
                 "cmt_msg": "ARM: report Spectre v2 status through sysfs", 
                 "cmt_id": "b7f1e73c4ddf2044530091e69114a5fc1a1229d0"
             }, 
+            "CVE-2022-23041": {
+                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
+                "cmt_id": "8357d75bfdb85ea63253cf369f405830c7b13d78"
+            }, 
             "CVE-2022-23036": {
                 "cmt_msg": "xen/grant-table: add gnttab_try_end_foreign_access()", 
                 "cmt_id": "3d81e85f30a8f712c3e4f2a507553d9063a20ed6"
@@ -18066,9 +18163,9 @@
                 "cmt_msg": "x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE", 
                 "cmt_id": "f38774bb6e231d647d40ceeb8ddf9082eabde667"
             }, 
-            "CVE-2022-23041": {
-                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
-                "cmt_id": "8357d75bfdb85ea63253cf369f405830c7b13d78"
+            "CVE-2021-26401": {
+                "cmt_msg": "x86/speculation: Use generic retpoline by default on AMD", 
+                "cmt_id": "2fdf67a1d215574c31b1a716f80fa0fdccd401d7"
             }, 
             "CVE-2022-23040": {
                 "cmt_msg": "xen/xenbus: don't let xenbus_grant_ring() remove grants in error case", 
@@ -18133,6 +18230,10 @@
             "CVE-2022-1353": {
                 "cmt_msg": "af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register", 
                 "cmt_id": "8d3f4ad43054619379ccc697cfcbdb2c266800d8"
+            }, 
+            "CVE-2022-30594": {
+                "cmt_msg": "ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE", 
+                "cmt_id": "5a41a3033a9344d7683340e3d83f5435ffb06501"
             }, 
             "CVE-2022-1198": {
                 "cmt_msg": "drivers: hamradio: 6pack: fix UAF bug caused by mod_timer()", 
@@ -18240,6 +18341,15 @@
             }, 
             "CVE-2022-1015": {
                 "cmt_msg": "netfilter: nf_tables: validate registers coming from userspace."
+            }, 
+            "CVE-2022-1652": {
+                "cmt_msg": ""
+            }, 
+            "CVE-2022-1651": {
+                "cmt_msg": "virt: acrn: fix a memory leak in acrn_dev_ioctl()"
+            }, 
+            "CVE-2022-1012": {
+                "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation"
             }, 
             "CVE-2021-26934": {
                 "cmt_msg": ""
@@ -18367,7 +18477,7 @@
             "CVE-2022-1184": {
                 "cmt_msg": ""
             }, 
-            "CVE-2011-4917": {
+            "CVE-2022-25265": {
                 "cmt_msg": ""
             }, 
             "CVE-2022-23222": {
@@ -18439,7 +18549,7 @@
             "CVE-2022-1280": {
                 "cmt_msg": "drm: avoid circular locks in drm_mode_getconnector"
             }, 
-            "CVE-2022-25265": {
+            "CVE-2011-4917": {
                 "cmt_msg": ""
             }, 
             "CVE-2021-32078": {
@@ -18611,6 +18721,10 @@
                 "cmt_msg": "ARM: report Spectre v2 status through sysfs", 
                 "cmt_id": "f5eb0f1dcde4b7c2b5ee920ae53bcecaaba03947"
             }, 
+            "CVE-2022-23041": {
+                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
+                "cmt_id": "d83dd50f3c23bc887e4c67d547e5a21a23fb8bb8"
+            }, 
             "CVE-2022-23036": {
                 "cmt_msg": "xen/grant-table: add gnttab_try_end_foreign_access()", 
                 "cmt_id": "0ba1ab25bb5057869621b340dbd411cca3242467"
@@ -18627,9 +18741,9 @@
                 "cmt_msg": "x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE", 
                 "cmt_id": "56829c19c8171303faca18d6ab3511ecdf3e7e23"
             }, 
-            "CVE-2022-23041": {
-                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
-                "cmt_id": "d83dd50f3c23bc887e4c67d547e5a21a23fb8bb8"
+            "CVE-2021-26401": {
+                "cmt_msg": "x86/speculation: Use generic retpoline by default on AMD", 
+                "cmt_id": "1984feb9872b905420af97d471d60051b6dd5851"
             }, 
             "CVE-2022-23040": {
                 "cmt_msg": "xen/xenbus: don't let xenbus_grant_ring() remove grants in error case", 
@@ -18705,6 +18819,10 @@
                 "cmt_msg": "af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register", 
                 "cmt_id": "16d974fa4ddda389bf58bb5e4fc8cad8910ba66d"
             }, 
+            "CVE-2022-30594": {
+                "cmt_msg": "ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE", 
+                "cmt_id": "c8248775c1b96b00b680e067f99f8feaaa7c7dbc"
+            }, 
             "CVE-2022-28389": {
                 "cmt_msg": "can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path", 
                 "cmt_id": "f913412848defa326a155c47d026267624472190"
@@ -18716,6 +18834,10 @@
             "CVE-2022-1516": {
                 "cmt_msg": "net/x25: Fix null-ptr-deref caused by x25_disconnect", 
                 "cmt_id": "4a279d7ee1c65411b4055ecd428b8aa2b1711c1f"
+            }, 
+            "CVE-2022-1651": {
+                "cmt_msg": "virt: acrn: fix a memory leak in acrn_dev_ioctl()", 
+                "cmt_id": "ee827d86ee73583c0f0b65db877467d9b5551aa4"
             }
         }, 
         "5.16.20": {
@@ -18895,11 +19017,17 @@
             "CVE-2020-10708": {
                 "cmt_msg": ""
             }, 
+            "CVE-2022-1652": {
+                "cmt_msg": ""
+            }, 
             "CVE-2022-1184": {
                 "cmt_msg": ""
             }, 
             "CVE-2021-3847": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2022-1012": {
+                "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation"
             }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
@@ -18995,6 +19123,10 @@
                 "cmt_msg": "ax25: Fix NULL pointer dereferences in ax25 timers", 
                 "cmt_id": "a45dba71849a963c427637b3330e2ccf098f42d1"
             }, 
+            "CVE-2022-30594": {
+                "cmt_msg": "ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE", 
+                "cmt_id": "4d51bbc8a3799febf50471eb6888b1b58e87111e"
+            }, 
             "CVE-2022-28389": {
                 "cmt_msg": "can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path", 
                 "cmt_id": "42a4b0dfd365c4f77f96fd1f73a64b47ae443a38"
@@ -19006,6 +19138,10 @@
             "CVE-2022-1516": {
                 "cmt_msg": "net/x25: Fix null-ptr-deref caused by x25_disconnect", 
                 "cmt_id": "671529db75e6be777bb1c76aa07c2bdd2992be6d"
+            }, 
+            "CVE-2022-1651": {
+                "cmt_msg": "virt: acrn: fix a memory leak in acrn_dev_ioctl()", 
+                "cmt_id": "f8e6e18d117e461110c849a11c6a396dcccdbd4e"
             }
         }, 
         "5.17.3": {
@@ -19020,6 +19156,12 @@
             "CVE-2022-29582": {
                 "cmt_msg": "io_uring: fix race between timeout flush and removal", 
                 "cmt_id": "11cd7959400258beb1dc17c8680055966263f316"
+            }
+        }, 
+        "5.17.6": {
+            "CVE-2022-29968": {
+                "cmt_msg": "io_uring: fix uninitialized field in rw io_kiocb", 
+                "cmt_id": "77089e6ff273f43c42e99a690ae45ee39a6a62de"
             }
         }, 
         "outstanding": {
@@ -19167,11 +19309,17 @@
             "CVE-2020-10708": {
                 "cmt_msg": ""
             }, 
+            "CVE-2022-1652": {
+                "cmt_msg": ""
+            }, 
             "CVE-2022-1184": {
                 "cmt_msg": ""
             }, 
             "CVE-2021-3847": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2022-1012": {
+                "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation"
             }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
@@ -19196,9 +19344,6 @@
             }, 
             "CVE-2012-4542": {
                 "cmt_msg": ""
-            }, 
-            "CVE-2022-29968": {
-                "cmt_msg": "io_uring: fix uninitialized field in rw io_kiocb"
             }, 
             "CVE-2019-15290": {
                 "cmt_msg": ""
@@ -19512,6 +19657,10 @@
                 "cmt_msg": "ARM: report Spectre v2 status through sysfs", 
                 "cmt_id": "f02cab2bed1a3493a230e54d83ff117bc59f480e"
             }, 
+            "CVE-2022-23041": {
+                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
+                "cmt_id": "a019d26830e8a04933e38e4fcc507dcfbc6ccc72"
+            }, 
             "CVE-2022-23036": {
                 "cmt_msg": "xen/grant-table: add gnttab_try_end_foreign_access()", 
                 "cmt_id": "1dd5b4b230f6d1345708c6204ccacdf83d53feaf"
@@ -19528,9 +19677,9 @@
                 "cmt_msg": "x86/speculation: Rename RETPOLINE_AMD to RETPOLINE_LFENCE", 
                 "cmt_id": "f150b6fccf7fa0e7e7275f0785798547db832c7b"
             }, 
-            "CVE-2022-23041": {
-                "cmt_msg": "xen/9p: use alloc/free_pages_exact()", 
-                "cmt_id": "a019d26830e8a04933e38e4fcc507dcfbc6ccc72"
+            "CVE-2021-26401": {
+                "cmt_msg": "x86/speculation: Use generic retpoline by default on AMD", 
+                "cmt_id": "a56566d7a957c34811384d6300a53a97be94cd20"
             }, 
             "CVE-2022-23040": {
                 "cmt_msg": "xen/xenbus: don't let xenbus_grant_ring() remove grants in error case", 
@@ -19602,6 +19751,10 @@
                 "cmt_msg": "af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register", 
                 "cmt_id": "d06ee4572fd916fbb34d16dc81eb37d1dff83446"
             }, 
+            "CVE-2022-30594": {
+                "cmt_msg": "ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE", 
+                "cmt_id": "b6d75218ff65f4d63c9cf4986f6c55666fb90a1a"
+            }, 
             "CVE-2022-1198": {
                 "cmt_msg": "drivers: hamradio: 6pack: fix UAF bug caused by mod_timer()", 
                 "cmt_id": "3eb18f8a1d02a9462a0e4903efc674ca3d0406d1"
@@ -19617,6 +19770,10 @@
             "CVE-2022-1516": {
                 "cmt_msg": "net/x25: Fix null-ptr-deref caused by x25_disconnect", 
                 "cmt_id": "409570a619c1cda2e0fde6018a256b9e3d3ba0ee"
+            }, 
+            "CVE-2022-1651": {
+                "cmt_msg": "virt: acrn: fix a memory leak in acrn_dev_ioctl()", 
+                "cmt_id": "1d5103d9bb7d42fc220afe9f01ec6b9fe0ea5773"
             }
         }, 
         "5.15.34": {
@@ -19809,11 +19966,17 @@
             "CVE-2020-10708": {
                 "cmt_msg": ""
             }, 
+            "CVE-2022-1652": {
+                "cmt_msg": ""
+            }, 
             "CVE-2022-1184": {
                 "cmt_msg": ""
             }, 
             "CVE-2021-3847": {
                 "cmt_msg": ""
+            }, 
+            "CVE-2022-1012": {
+                "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation"
             }, 
             "CVE-2017-13693": {
                 "cmt_msg": ""
