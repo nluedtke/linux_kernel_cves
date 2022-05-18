@@ -134,6 +134,7 @@ CVEs fixed in 5.15.33:
   CVE-2022-1353: d06ee4572fd916fbb34d16dc81eb37d1dff83446 af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register
   CVE-2022-1516: 409570a619c1cda2e0fde6018a256b9e3d3ba0ee net/x25: Fix null-ptr-deref caused by x25_disconnect
   CVE-2022-1651: 1d5103d9bb7d42fc220afe9f01ec6b9fe0ea5773 virt: acrn: fix a memory leak in acrn_dev_ioctl()
+  CVE-2022-1671: 432297011caf71dbc95c3365a65adf365e79aff3 rxrpc: fix some null-ptr-deref bugs in server_key.c
   CVE-2022-28388: f2ce5238904f539648aaf56c5ee49e5eaf44d8fc can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-28389: 37f07ad24866c6c1423b37b131c9a42414bcf8a1 can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
   CVE-2022-28390: 459b19f42fd5e031e743dfa119f44aba0b62ff97 can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
@@ -147,9 +148,19 @@ CVEs fixed in 5.15.35:
   CVE-2022-1204: 452ae92b99062d2f6a34324eaf705a3b7eac9f8b ax25: Fix refcount leaks caused by ax25_cb_del()
   CVE-2022-1205: 43c107021d9160f6a1610bafba6dadc0323ae548 ax25: Fix NULL pointer dereferences in ax25 timers
 
+CVEs fixed in 5.15.36:
+  CVE-2022-29581: ba9e9a794fd1689bf7e8a7452c55f3d3cbda7728 net/sched: cls_u32: fix netns refcount changes in u32_change()
+
 CVEs fixed in 5.15.37:
   CVE-2022-0500: b453361384c2db1c703dacb806d5fd36aec4ceca bpf: Introduce MEM_RDONLY flag
   CVE-2022-23222: 8d38cde47a7e17b646401fa92d916503caa5375e bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL
+
+CVEs fixed in 5.15.39:
+  CVE-2022-1734: b8f2b836e7d0a553b886654e8b3925a85862d2eb nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs
+
+CVEs fixed in 5.15.41:
+  CVE-2022-1012: 1a8ee547da2b64d6a2aedbd38a691578eff14718 secure_seq: use the 64 bits of the siphash for port offset calculation
+  CVE-2022-28893: 54f6834b283d9b4d070b0639d9ef5e1d156fe7b0 SUNRPC: Ensure we flush any closed sockets before xs_xprt_free()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -212,14 +223,16 @@ Outstanding CVEs:
   CVE-2021-39802: (unk)  
   CVE-2021-4095: (unk) KVM: x86: Fix wall clock writes in Xen shared_info not to mark page dirty 
   CVE-2021-4204: (unk) bpf: Generalize check_ctx_reg for reuse with other types 
+  CVE-2022-0171: (unk)  
   CVE-2022-0400: (unk)  
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
-  CVE-2022-1012: (unk) secure_seq: use the 64 bits of the siphash for port offset calculation 
+  CVE-2022-1116: (unk)  
   CVE-2022-1184: (unk)  
+  CVE-2022-1247: (unk)  
   CVE-2022-1652: (unk)  
+  CVE-2022-1679: (unk)  
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
   CVE-2022-26878: (unk)  
   CVE-2022-28796: (unk) jbd2: fix use-after-free of transaction_t race 
-  CVE-2022-28893: (unk) SUNRPC: Ensure we flush any closed sockets before xs_xprt_free() 
   CVE-2022-29968: (unk) io_uring: fix uninitialized field in rw io_kiocb 
