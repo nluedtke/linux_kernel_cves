@@ -63716,6 +63716,44 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-33098"
         }
     },
+    "CVE-2021-33135": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Uncontrolled Resource Consumption",
+        "fixes": "",
+        "last_modified": "2022-05-25",
+        "nvd_text": "Uncontrolled resource consumption in the Linux kernel drivers for Intel(R) SGX may allow an authenticated user to potentially enable denial of service via local access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33135",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-33135",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-33135",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-33135",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-33135",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-33135"
+        }
+    },
     "CVE-2021-33200": {
         "affected_versions": "v5.12-rc8 to v5.13-rc4",
         "breaks": "7fedb63a8307dda0ec3b8969a3b233a1dd7ea8e0",
@@ -69487,7 +69525,7 @@
         "cwe": "Missing Release of Memory after Effective Lifetime",
         "fixes": "aa6f8dcbab473f3a3c7454b74caa46d36cdc5d13",
         "last_affected_version": "5.16.14",
-        "last_modified": "2022-04-07",
+        "last_modified": "2022-05-25",
         "nvd_text": "A memory leak flaw was found in the Linux kernel\u2019s DMA subsystem, in the way a user calls DMA_FROM_DEVICE. This flaw allows a local user to read random memory from the kernel space.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0854",
@@ -70163,8 +70201,31 @@
     "CVE-2022-1679": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2022-05-18",
+        "last_modified": "2022-05-25",
         "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s Atheros wireless adapter driver in the way a user forces the ath9k_htc_wait_for_target function to fail with some input messages. This flaw allows a local user to crash or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1679",
@@ -70173,6 +70234,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1679",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-1679",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1679"
+        }
+    },
+    "CVE-2022-1729": {
+        "affected_versions": "unk to v5.18",
+        "breaks": "",
+        "cmt_msg": "perf: Fix sys_perf_event_open() race against self",
+        "fixes": "3ac6487e584a1eb54071dbe1212e05b884136704",
+        "last_affected_version": "5.17.9",
+        "last_modified": "2022-05-25",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1729",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1729",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1729",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1729",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1729",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1729"
         }
     },
     "CVE-2022-1734": {
@@ -70190,6 +70267,37 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1734",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-1734",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1734"
+        }
+    },
+    "CVE-2022-1789": {
+        "affected_versions": "unk to v5.18",
+        "breaks": "",
+        "cmt_msg": "KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID",
+        "fixes": "9f46c187e2e680ecd9de7983e4d081c3391acc76",
+        "last_modified": "2022-05-25",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1789",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1789",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1789",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1789",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1789",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1789"
+        }
+    },
+    "CVE-2022-1836": {
+        "affected_versions": "unk to v5.18-rc5",
+        "breaks": "",
+        "cmt_msg": "floppy: disable FDRAWCMD by default",
+        "fixes": "233087ca063686964a53c829d547c7571e3f67bf",
+        "last_affected_version": "5.17.5",
+        "last_modified": "2022-05-25",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1836",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1836",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1836",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1836",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1836",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1836"
         }
     },
     "CVE-2022-20008": {
@@ -71392,7 +71500,7 @@
         "cwe": "Use After Free",
         "fixes": "f00432063db1a0db484e85193eccc6845435b80e",
         "last_affected_version": "5.17.2",
-        "last_modified": "2022-05-18",
+        "last_modified": "2022-05-25",
         "nvd_text": "The SUNRPC subsystem in the Linux kernel through 5.17.2 can call xs_xprt_free before ensuring that sockets are in the intended state.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-28893",

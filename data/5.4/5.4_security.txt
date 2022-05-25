@@ -655,10 +655,18 @@ CVEs fixed in 5.4.191:
   CVE-2022-28388: 660784e7194ac2953aebe874c1f75f2441ba3d19 can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-29581: 5a4f3eba211a532b2eb5045102ad3ceea5e9f0f9 net/sched: cls_u32: fix netns refcount changes in u32_change()
 
+CVEs fixed in 5.4.192:
+  CVE-2022-1836: 7dea5913000c6a2974a00d9af8e7ffb54e47eac1 floppy: disable FDRAWCMD by default
+
 CVEs fixed in 5.4.193:
   CVE-2022-0494: c7337efd1d11acb6f84c68ffee57d3f312e87b24 block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern
   CVE-2022-1048: fbeb492694ce0441053de57699e1e2b7bc148a69 ALSA: pcm: Fix races among concurrent hw_params and hw_free calls
   CVE-2022-1734: 33d3e76fc7a7037f402246c824d750542e2eb37f nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs
+
+CVEs fixed in 5.4.196:
+  CVE-2022-0854: b2f140a9f980806f572d672e1780acea66b9a25c swiotlb: rework "fix info leak with DMA_FROM_DEVICE"
+  CVE-2022-1729: dd0ea88b0a0f913f82500e988ef38158a9ad9885 perf: Fix sys_perf_event_open() race against self
+  CVE-2022-28893: 2f8f6c393b11b5da059b1fc10a69fc2f2b6c446a SUNRPC: Ensure we flush any closed sockets before xs_xprt_free()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -729,6 +737,7 @@ Outstanding CVEs:
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
   CVE-2021-32078: (unk) ARM: footbridge: remove personal server platform 
   CVE-2021-33061: (unk) ixgbe: add improvement for MDD response functionality 
+  CVE-2021-33135: (unk)  
   CVE-2021-3542: (unk)  
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
   CVE-2021-3714: (unk)  
@@ -753,7 +762,6 @@ Outstanding CVEs:
   CVE-2022-0480: (unk) memcg: enable accounting for file lock caches 
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
   CVE-2022-0742: (unk) ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report() 
-  CVE-2022-0854: (unk) swiotlb: rework "fix info leak with DMA_FROM_DEVICE" 
   CVE-2022-0995: (unk) watch_queue: Fix filter limit check 
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
   CVE-2022-1012: (unk) secure_seq: use the 64 bits of the siphash for port offset calculation 
@@ -769,12 +777,12 @@ Outstanding CVEs:
   CVE-2022-1652: (unk)  
   CVE-2022-1671: (unk) rxrpc: fix some null-ptr-deref bugs in server_key.c 
   CVE-2022-1679: (unk)  
+  CVE-2022-1789: (unk) KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-25265: (unk)  
   CVE-2022-26878: (unk)  
   CVE-2022-27950: (unk) HID: elo: fix memory leak in elo_probe 
   CVE-2022-28796: (unk) jbd2: fix use-after-free of transaction_t race 
-  CVE-2022-28893: (unk) SUNRPC: Ensure we flush any closed sockets before xs_xprt_free() 
   CVE-2022-29156: (unk) RDMA/rtrs-clt: Fix possible double free in error case 
   CVE-2022-29582: (unk) io_uring: fix race between timeout flush and removal 
   CVE-2022-29968: (unk) io_uring: fix uninitialized field in rw io_kiocb 
