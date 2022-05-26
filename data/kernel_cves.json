@@ -69826,8 +69826,31 @@
     "CVE-2022-1116": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Integer Overflow or Wraparound",
         "fixes": "",
-        "last_modified": "2022-05-19",
+        "last_modified": "2022-05-26",
         "nvd_text": "Integer Overflow or Wraparound vulnerability in io_uring of Linux Kernel allows local attacker to cause memory corruption and escalate privileges to root. This issue affects: Linux Kernel versions prior to 5.4.189; version 5.4.24 and later versions.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1116",
@@ -70198,6 +70221,22 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1671"
         }
     },
+    "CVE-2022-1678": {
+        "affected_versions": "unk to v4.20-rc1",
+        "breaks": "",
+        "cmt_msg": "tcp: optimize tcp internal pacing",
+        "fixes": "864e5c090749448e879e86bec06ee396aa2c19c5",
+        "last_modified": "2022-05-26",
+        "nvd_text": "An issue was discovered in the Linux Kernel from 4.18 to 4.19, an improper update of sock reference in TCP pacing can lead to memory/netns leak, which can be used by remote clients.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1678",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1678",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1678",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1678",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1678",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1678"
+        }
+    },
     "CVE-2022-1679": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -70267,6 +70306,21 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1734",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-1734",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1734"
+        }
+    },
+    "CVE-2022-1786": {
+        "affected_versions": "unk to v5.12-rc1-dontuse",
+        "breaks": "",
+        "cmt_msg": "io_uring: remove io_identity",
+        "fixes": "4379bf8bd70b5de6bba7d53015b0c36c57a634ee",
+        "last_modified": "2022-05-26",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1786",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1786",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1786",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1786",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1786",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1786"
         }
     },
     "CVE-2022-1789": {
@@ -71555,9 +71609,32 @@
         "affected_versions": "unk to v5.18-rc4",
         "breaks": "",
         "cmt_msg": "net/sched: cls_u32: fix netns refcount changes in u32_change()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "3db09e762dc79584a69c10d74a6b98f89a9979f8",
         "last_affected_version": "5.17.4",
-        "last_modified": "2022-05-19",
+        "last_modified": "2022-05-26",
         "nvd_text": "Improper Update of Reference Count vulnerability in net/sched of Linux Kernel allows local attacker to cause privilege escalation to root. This issue affects: Linux Kernel versions prior to 5.18; version 4.14 and later versions.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-29581",
