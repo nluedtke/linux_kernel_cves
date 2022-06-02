@@ -69661,7 +69661,7 @@
         "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation",
         "fixes": "b2d057560b8107c633b39aabe517ff9d93f285e3",
         "last_affected_version": "5.17.8",
-        "last_modified": "2022-05-18",
+        "last_modified": "2022-06-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1012",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1012",
@@ -70309,9 +70309,32 @@
         "affected_versions": "unk to v5.18-rc6",
         "breaks": "",
         "cmt_msg": "nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Use After Free",
         "fixes": "d270453a0d9ec10bb8a802a142fb1b3601a83098",
         "last_affected_version": "5.17.6",
-        "last_modified": "2022-05-19",
+        "last_modified": "2022-06-02",
         "nvd_text": "A flaw in Linux Kernel found in nfcmrvl_nci_unregister_dev() in drivers/nfc/nfcmrvl/main.c can lead to use after free both read or write when non synchronized between cleanup routine and firmware download routine.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1734",
@@ -70342,7 +70365,8 @@
         "breaks": "",
         "cmt_msg": "KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID",
         "fixes": "9f46c187e2e680ecd9de7983e4d081c3391acc76",
-        "last_modified": "2022-05-25",
+        "last_affected_version": "5.17.11",
+        "last_modified": "2022-06-02",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1789",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1789",
@@ -70368,6 +70392,21 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1836"
         }
     },
+    "CVE-2022-1852": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "KVM: x86: avoid calling x86 emulator without a decoded instruction",
+        "fixes": "fee060cd52d69c114b62d1a2948ea9648b5131f9",
+        "last_modified": "2022-06-02",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1852",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1852",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1852",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1852",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1852",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1852"
+        }
+    },
     "CVE-2022-1882": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -70381,6 +70420,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1882",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-1882",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1882"
+        }
+    },
+    "CVE-2022-1943": {
+        "affected_versions": "unk to v5.18-rc7",
+        "breaks": "",
+        "cmt_msg": "udf: Avoid using stale lengthOfImpUse",
+        "fixes": "c1ad35dd0548ce947d97aaf92f7f2f9a202951cf",
+        "last_affected_version": "5.17.7",
+        "last_modified": "2022-06-02",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1943",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1943",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1943",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1943",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1943",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1943"
         }
     },
     "CVE-2022-20008": {
