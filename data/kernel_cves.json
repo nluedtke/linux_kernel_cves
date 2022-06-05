@@ -70110,7 +70110,8 @@
         "cmt_msg": "drm/vgem: Close use-after-free race in vgem_gem_create",
         "fixes": "4b848f20eda5974020f043ca14bacf7a7e634fc8",
         "last_affected_version": "5.5.4",
-        "last_modified": "2022-05-31",
+        "last_modified": "2022-06-05",
+        "nvd_text": "The root cause of this vulnerability is that the ioctl$DRM_IOCTL_MODE_DESTROY_DUMB can decrease refcount of *drm_vgem_gem_object *(created in *vgem_gem_dumb_create*) concurrently, and *vgem_gem_dumb_create *will access the freed drm_vgem_gem_object.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1419",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1419",
@@ -70124,7 +70125,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2022-05-31",
+        "last_modified": "2022-06-05",
+        "nvd_text": "An out-of-bounds read flaw was found in the Linux kernel\u2019s TeleTYpe subsystem. The issue occurs in how a user triggers a race condition using ioctls TIOCSPTLCK and TIOCGPTPEER and TIOCSTI and TCXONC with leakage of memory in the flush_to_ldisc function. This flaw allows a local user to crash the system or read unauthorized random data from memory.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1462",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1462",
@@ -70209,7 +70211,8 @@
         "affected_versions": "unk to unk",
         "breaks": "",
         "fixes": "",
-        "last_modified": "2022-05-12",
+        "last_modified": "2022-06-05",
+        "nvd_text": "Linux Kernel could allow a local attacker to execute arbitrary code on the system, caused by a concurrency use-after-free flaw in the bad_flp_intr function. By executing a specially-crafted program, an attacker could exploit this vulnerability to execute arbitrary code or cause a denial of service condition on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1652",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1652",
@@ -70350,7 +70353,8 @@
         "breaks": "",
         "cmt_msg": "io_uring: remove io_identity",
         "fixes": "4379bf8bd70b5de6bba7d53015b0c36c57a634ee",
-        "last_modified": "2022-05-26",
+        "last_modified": "2022-06-05",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s io_uring subsystem in the way a user sets up a ring with IORING_SETUP_IOPOLL with more than one task completing submissions on this ring. This flaw allows a local user to crash or escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1786",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1786",
@@ -70366,7 +70370,8 @@
         "cmt_msg": "KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID",
         "fixes": "9f46c187e2e680ecd9de7983e4d081c3391acc76",
         "last_affected_version": "5.17.11",
-        "last_modified": "2022-06-02",
+        "last_modified": "2022-06-05",
+        "nvd_text": "With shadow paging enabled, the INVPCID instruction results in a call to kvm_mmu_invpcid_gva. If INVPCID is executed with CR0.PG=0, the invlpg callback is not set and the result is a NULL pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1789",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1789",
@@ -70428,7 +70433,8 @@
         "cmt_msg": "udf: Avoid using stale lengthOfImpUse",
         "fixes": "c1ad35dd0548ce947d97aaf92f7f2f9a202951cf",
         "last_affected_version": "5.17.7",
-        "last_modified": "2022-06-02",
+        "last_modified": "2022-06-05",
+        "nvd_text": "A flaw out of bounds memory write in the Linux kernel UDF file system functionality was found in the way user triggers some file operation which triggers udf_write_fi(). A local user could use this flaw to crash the system or potentially",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1943",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1943",
@@ -70436,6 +70442,36 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1943",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-1943",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1943"
+        }
+    },
+    "CVE-2022-1966": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "netfilter: nf_tables: disallow non-stateful expression in sets earlier",
+        "fixes": "520778042ccca019f3ffa136dd0ca565c486cedd",
+        "last_modified": "2022-06-05",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1966",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1966",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1966",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1966",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1966",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1966"
+        }
+    },
+    "CVE-2022-1972": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "netfilter: nf_tables: sanitize nft_set_desc_concat_parse()",
+        "fixes": "fecf31ee395b0295f2d7260aa29946b7605f7c85",
+        "last_modified": "2022-06-05",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1972",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1972",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1972",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1972",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1972",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1972"
         }
     },
     "CVE-2022-20008": {
