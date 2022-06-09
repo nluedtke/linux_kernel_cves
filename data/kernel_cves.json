@@ -69198,7 +69198,7 @@
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "cc8f7fe1f5eab010191aa4570f27641876fa1267",
         "last_affected_version": "5.16.12",
-        "last_modified": "2022-05-18",
+        "last_modified": "2022-06-09",
         "nvd_text": "A kernel information leak flaw was identified in the scsi_ioctl function in drivers/scsi/scsi_ioctl.c in the Linux kernel. This flaw allows a local attacker with a special user privilege (CAP_SYS_ADMIN or CAP_SYS_RAWIO) to create issues with confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0494",
@@ -69661,7 +69661,7 @@
         "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation",
         "fixes": "b2d057560b8107c633b39aabe517ff9d93f285e3",
         "last_affected_version": "5.17.8",
-        "last_modified": "2022-06-02",
+        "last_modified": "2022-06-09",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1012",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1012",
@@ -70242,8 +70242,31 @@
         "affected_versions": "unk to v4.20-rc1",
         "breaks": "",
         "cmt_msg": "tcp: optimize tcp internal pacing",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+        },
+        "cwe": "Unspecified",
         "fixes": "864e5c090749448e879e86bec06ee396aa2c19c5",
-        "last_modified": "2022-05-26",
+        "last_modified": "2022-06-09",
         "nvd_text": "An issue was discovered in the Linux Kernel from 4.18 to 4.19, an improper update of sock reference in TCP pacing can lead to memory/netns leak, which can be used by remote clients.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1678",
@@ -70398,11 +70421,12 @@
         }
     },
     "CVE-2022-1852": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.19-rc1",
         "breaks": "",
         "cmt_msg": "KVM: x86: avoid calling x86 emulator without a decoded instruction",
         "fixes": "fee060cd52d69c114b62d1a2948ea9648b5131f9",
-        "last_modified": "2022-06-02",
+        "last_affected_version": "5.17.12",
+        "last_modified": "2022-06-09",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1852",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1852",
@@ -70415,9 +70439,32 @@
     "CVE-2022-1882": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2022-05-31",
-        "nvd_text": "A flaw use after free in the Linux kernel pipes functionality was found in the way user do some manipulations with pipe ex. with the post_one_notification() after free_pipe_info() already called. A local user could use this flaw to crash the system or potentially escalate their privileges on the system.",
+        "last_modified": "2022-06-09",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s pipes functionality in how a user performs manipulations with the pipe post_one_notification() after free_pipe_info() that is already called. This flaw allows a local user to crash or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1882",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1882",
@@ -70445,11 +70492,13 @@
         }
     },
     "CVE-2022-1966": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.19-rc1",
         "breaks": "",
         "cmt_msg": "netfilter: nf_tables: disallow non-stateful expression in sets earlier",
         "fixes": "520778042ccca019f3ffa136dd0ca565c486cedd",
-        "last_modified": "2022-06-05",
+        "last_affected_version": "5.17.12",
+        "last_modified": "2022-06-09",
+        "nvd_text": "A use-after-free vulnerability was found in the Linux kernel's Netfilter subsystem in net/netfilter/nf_tables_api.c. This flaw allows a local attacker with user access to cause a privilege escalation issue.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1966",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1966",
@@ -70460,11 +70509,12 @@
         }
     },
     "CVE-2022-1972": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v5.19-rc1",
         "breaks": "",
         "cmt_msg": "netfilter: nf_tables: sanitize nft_set_desc_concat_parse()",
         "fixes": "fecf31ee395b0295f2d7260aa29946b7605f7c85",
-        "last_modified": "2022-06-05",
+        "last_affected_version": "5.17.12",
+        "last_modified": "2022-06-09",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1972",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1972",
@@ -70472,6 +70522,70 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1972",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-1972",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1972"
+        }
+    },
+    "CVE-2022-1973": {
+        "affected_versions": "unk to v5.19-rc1",
+        "breaks": "",
+        "cmt_msg": "fs/ntfs3: Fix invalid free in log_replay",
+        "fixes": "f26967b9f7a830e228bb13fb41bd516ddd9d789d",
+        "last_affected_version": "5.17.13",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1973",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1973",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1973",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1973",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1973",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1973"
+        }
+    },
+    "CVE-2022-1974": {
+        "affected_versions": "unk to v5.18-rc6",
+        "breaks": "",
+        "cmt_msg": "nfc: replace improper check device_is_registered() in netlink related functions",
+        "fixes": "da5c0f119203ad9728920456a0f52a6d850c01cd",
+        "last_affected_version": "5.17.6",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1974",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1974",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1974",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1974",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1974",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1974"
+        }
+    },
+    "CVE-2022-1975": {
+        "affected_versions": "unk to v5.18-rc6",
+        "breaks": "",
+        "cmt_msg": "NFC: netlink: fix sleep in atomic bug when firmware download timeout",
+        "fixes": "4071bf121d59944d5cd2238de0642f3d7995a997",
+        "last_affected_version": "5.17.6",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1975",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1975",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1975",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1975",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1975",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1975"
+        }
+    },
+    "CVE-2022-1998": {
+        "affected_versions": "unk to v5.17-rc3",
+        "breaks": "",
+        "cmt_msg": "fanotify: Fix stale file descriptor in copy_event_to_user()",
+        "fixes": "ee12595147ac1fbfb5bcb23837e26dd58d94b15d",
+        "last_affected_version": "5.16.5",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1998",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1998",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1998",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1998",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1998",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1998"
         }
     },
     "CVE-2022-20008": {
@@ -70512,6 +70626,101 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20008",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-20008",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-20008"
+        }
+    },
+    "CVE-2022-20132": {
+        "affected_versions": "unk to v5.16-rc5",
+        "breaks": "",
+        "cmt_msg": "HID: add hid_is_usb() function to make it simpler for USB detection",
+        "fixes": "f83baa0cb6cfc92ebaf7f9d3a99d7e34f2e77a8a",
+        "last_affected_version": "5.15.7",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20132",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20132",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20132",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20132",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20132",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20132"
+        }
+    },
+    "CVE-2022-20141": {
+        "affected_versions": "unk to v5.15-rc1",
+        "breaks": "",
+        "cmt_msg": "igmp: Add ip_mc_list lock in ip_check_mc_rcu",
+        "fixes": "23d2b94043ca8835bd1e67749020e839f396a1c2",
+        "last_affected_version": "5.14.2",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20141",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20141",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20141",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20141",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20141",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20141"
+        }
+    },
+    "CVE-2022-20148": {
+        "affected_versions": "unk to v5.16-rc1",
+        "breaks": "",
+        "cmt_msg": "f2fs: fix UAF in f2fs_available_free_memory",
+        "fixes": "5429c9dbc9025f9a166f64e22e3a69c94fd5b29b",
+        "last_affected_version": "5.15.2",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20148",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20148",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20148",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20148",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20148",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20148"
+        }
+    },
+    "CVE-2022-20153": {
+        "affected_versions": "unk to v5.13-rc1",
+        "breaks": "",
+        "cmt_msg": "io_uring: return back safer resurrect",
+        "fixes": "f70865db5ff35f5ed0c7e9ef63e7cca3d4947f04",
+        "last_affected_version": "5.10.106",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20153",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20153",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20153",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20153",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20153",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20153"
+        }
+    },
+    "CVE-2022-20154": {
+        "affected_versions": "unk to v5.16-rc8",
+        "breaks": "",
+        "cmt_msg": "sctp: use call_rcu to free endpoint",
+        "fixes": "5ec7d18d1813a5bead0b495045606c93873aecbb",
+        "last_affected_version": "5.15.12",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20154",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20154",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20154",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20154",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20154",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20154"
+        }
+    },
+    "CVE-2022-20166": {
+        "affected_versions": "unk to v5.10-rc1",
+        "breaks": "",
+        "cmt_msg": "drivers core: Use sysfs_emit and sysfs_emit_at for show(device *...) functions",
+        "fixes": "aa838896d87af561a33ecefea1caa4c15a68bc47",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20166",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20166",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20166",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20166",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20166",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20166"
         }
     },
     "CVE-2022-22942": {
@@ -71883,6 +72092,23 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-30594",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-30594",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-30594"
+        }
+    },
+    "CVE-2022-32296": {
+        "affected_versions": "unk to v5.18-rc6",
+        "breaks": "",
+        "cmt_msg": "tcp: increase source port perturb table to 2^16",
+        "fixes": "4c2c8f03a5ab7cb04ec64724d7d176d00bcc91e5",
+        "last_affected_version": "5.17.8",
+        "last_modified": "2022-06-09",
+        "nvd_text": "The Linux kernel before 5.17.9 allows TCP servers to identify clients by observing what source ports are used.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-32296",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-32296",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-32296",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-32296",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-32296",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-32296"
         }
     }
 }

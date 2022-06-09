@@ -10,6 +10,9 @@ CVEs fixed in 5.14.1:
 CVEs fixed in 5.14.2:
   CVE-2021-40490: f8ea208b3fbbc0546d71b47e8abaf98b0961dec1 ext4: fix race writing to an inline_data file while its xattrs are changing
 
+CVEs fixed in 5.14.3:
+  CVE-2022-20141: d1a3c6d5925a8d00a32c5ef2d674dd9c0ce89c95 igmp: Add ip_mc_list lock in ip_check_mc_rcu
+
 CVEs fixed in 5.14.4:
   CVE-2021-20322: 55938482a1461a35087c6f3051f8447662889ea8 ipv6: make exception cache less predictible
 
@@ -65,6 +68,7 @@ CVEs fixed in 5.14.19:
   CVE-2021-3640: 2c2b295af72e4e30d17556375e100ae65ac0b896 Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()
   CVE-2021-3752: b87da982da1b4787e23316e3eedc6bba52cfba64 Bluetooth: fix use-after-free error in lock_sock_nested()
   CVE-2021-45868: b2d7d18457990ad15ee9f9f40da538fa58dae6b5 quota: check block number when reading the block in quota file
+  CVE-2022-20148: 5b67adb7425e758655e464bda4eb4174ac88b625 f2fs: fix UAF in f2fs_available_free_memory
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -214,7 +218,13 @@ Outstanding CVEs:
   CVE-2022-1943: (unk) udf: Avoid using stale lengthOfImpUse 
   CVE-2022-1966: (unk) netfilter: nf_tables: disallow non-stateful expression in sets earlier 
   CVE-2022-1972: (unk) netfilter: nf_tables: sanitize nft_set_desc_concat_parse() 
+  CVE-2022-1973: (unk) fs/ntfs3: Fix invalid free in log_replay 
+  CVE-2022-1974: (unk) nfc: replace improper check device_is_registered() in netlink related functions 
+  CVE-2022-1975: (unk) NFC: netlink: fix sleep in atomic bug when firmware download timeout 
+  CVE-2022-1998: (unk) fanotify: Fix stale file descriptor in copy_event_to_user() 
   CVE-2022-20008: (unk) mmc: block: fix read single on recovery logic 
+  CVE-2022-20132: (unk) HID: add hid_is_usb() function to make it simpler for USB detection 
+  CVE-2022-20154: (unk) sctp: use call_rcu to free endpoint 
   CVE-2022-22942: (unk) drm/vmwgfx: Fix stale file descriptors on failed usercopy 
   CVE-2022-23036: (unk) xen/grant-table: add gnttab_try_end_foreign_access() 
   CVE-2022-23037: (unk) xen/netfront: don't use gnttab_query_foreign_access() for mapped status 
@@ -250,3 +260,4 @@ Outstanding CVEs:
   CVE-2022-29582: (unk) io_uring: fix race between timeout flush and removal 
   CVE-2022-29968: (unk) io_uring: fix uninitialized field in rw io_kiocb 
   CVE-2022-30594: (unk) ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE 
+  CVE-2022-32296: (unk) tcp: increase source port perturb table to 2^16 

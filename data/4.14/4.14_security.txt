@@ -980,6 +980,7 @@ CVEs fixed in 4.14.246:
 CVEs fixed in 4.14.247:
   CVE-2021-40490: 9569234645f102025aaf0fc83d3dcbf1b8cbf2dc ext4: fix race writing to an inline_data file while its xattrs are changing
   CVE-2021-42252: b1b55e4073d3da6119ecc41636a2994b67a2be37 soc: aspeed: lpc-ctrl: Fix boundary check for mmap
+  CVE-2022-20141: 78967749984cf3614de346c90f3e259ff8272735 igmp: Add ip_mc_list lock in ip_check_mc_rcu
 
 CVEs fixed in 4.14.248:
   CVE-2021-20320: daf48f68fca9040b542282a5cd17397af316dd89 s390/bpf: Fix optimizing out zero-extensions
@@ -1028,6 +1029,7 @@ CVEs fixed in 4.14.257:
 CVEs fixed in 4.14.258:
   CVE-2021-39685: e7c8afee149134b438df153b09af7fd928a8bc24 USB: gadget: detect too-big endpoint 0 requests
   CVE-2021-39698: a36e1978c6cb6282fadd5d62d4b3e7808cf0597b wait: add wake_up_pollfree()
+  CVE-2022-20132: 43cc4686b15d7d3a2b65b125393ea3f3d477e7d1 HID: add hid_is_usb() function to make it simpler for USB detection
 
 CVEs fixed in 4.14.259:
   CVE-2021-28711: 5ac3b68b79c9e964dd6f3cf80ff825518e502b79 xen/blkfront: harden blkfront against event channel storms
@@ -1043,6 +1045,7 @@ CVEs fixed in 4.14.260:
 
 CVEs fixed in 4.14.261:
   CVE-2021-44733: 3d556a28bbfe34a80b014db49908b0f1bcb1ae80 tee: handle lookup of shm with reference count 0
+  CVE-2022-20154: 8873140f95d4977bf37e4cf0d5c5e3f6e34cdd3e sctp: use call_rcu to free endpoint
 
 CVEs fixed in 4.14.262:
   CVE-2021-4155: 2af625c89bf4a41c8a0bc818d8cf30a291f216ca xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
@@ -1122,6 +1125,8 @@ CVEs fixed in 4.14.278:
   CVE-2022-1419: d2b8e8fbac9f175388d2808ade90d86402642b01 drm/vgem: Close use-after-free race in vgem_gem_create
   CVE-2022-1734: ced30680fb1c7c1daae39a9384d23cd1a022585f nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs
   CVE-2022-1836: b7fa84ae1171a3c5ea5d710899080a6e63cfe084 floppy: disable FDRAWCMD by default
+  CVE-2022-1974: 6f0ac4cd0377ab4e0b49b8f6efd37057c21336a9 nfc: replace improper check device_is_registered() in netlink related functions
+  CVE-2022-1975: c33b2afffe8ae90e0bd4790e0505edd92addf14c NFC: netlink: fix sleep in atomic bug when firmware download timeout
   CVE-2022-29581: 0511cdd41a03ab396602dded4e778c5edcd8dcd1 net/sched: cls_u32: fix netns refcount changes in u32_change()
 
 CVEs fixed in 4.14.279:
@@ -1130,6 +1135,10 @@ CVEs fixed in 4.14.279:
 CVEs fixed in 4.14.281:
   CVE-2022-0854: aaf166f37eb6bb55d81c3e40a2a460c8875c8813 swiotlb: rework "fix info leak with DMA_FROM_DEVICE"
   CVE-2022-1729: dee63319e2d1abd5d37a89de046ccf32ca8a8451 perf: Fix sys_perf_event_open() race against self
+
+CVEs fixed in 4.14.282:
+  CVE-2022-0494: 4f3ea768c56e8dce55ae538f18b37420366c5c22 block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern
+  CVE-2022-1012: 40d20f3186ddd9b6b94598f4ef3d07644b0fa43c secure_seq: use the 64 bits of the siphash for port offset calculation
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1266,13 +1275,11 @@ Outstanding CVEs:
   CVE-2022-0382: (unk) net ticp:fix a kernel-infoleak in __tipc_sendmsg() 
   CVE-2022-0400: (unk)  
   CVE-2022-0480: (unk) memcg: enable accounting for file lock caches 
-  CVE-2022-0494: (unk) block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern 
   CVE-2022-0500: (unk) bpf: Introduce MEM_RDONLY flag 
   CVE-2022-0742: (unk) ipv6: fix skb drops in igmp6_event_query() and igmp6_event_report() 
   CVE-2022-0812: (unk) xprtrdma: fix incorrect header size calculations 
   CVE-2022-0995: (unk) watch_queue: Fix filter limit check 
   CVE-2022-0998: (unk) vdpa: clean up get_config_size ret value handling 
-  CVE-2022-1012: (unk) secure_seq: use the 64 bits of the siphash for port offset calculation 
   CVE-2022-1015: (unk) netfilter: nf_tables: validate registers coming from userspace. 
   CVE-2022-1043: (unk) io_uring: fix xa_alloc_cycle() error return value check 
   CVE-2022-1055: (unk) net: sched: fix use-after-free in tc_new_tfilter() 
@@ -1296,7 +1303,12 @@ Outstanding CVEs:
   CVE-2022-1943: (unk) udf: Avoid using stale lengthOfImpUse 
   CVE-2022-1966: (unk) netfilter: nf_tables: disallow non-stateful expression in sets earlier 
   CVE-2022-1972: (unk) netfilter: nf_tables: sanitize nft_set_desc_concat_parse() 
+  CVE-2022-1973: (unk) fs/ntfs3: Fix invalid free in log_replay 
+  CVE-2022-1998: (unk) fanotify: Fix stale file descriptor in copy_event_to_user() 
   CVE-2022-20008: (unk) mmc: block: fix read single on recovery logic 
+  CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
+  CVE-2022-20153: (unk) io_uring: return back safer resurrect 
+  CVE-2022-20166: (unk) drivers core: Use sysfs_emit and sysfs_emit_at for show(device *...) functions 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-25265: (unk)  
   CVE-2022-25636: (unk) netfilter: nf_tables_offload: incorrect flow offload action array size 
@@ -1307,3 +1319,4 @@ Outstanding CVEs:
   CVE-2022-29156: (unk) RDMA/rtrs-clt: Fix possible double free in error case 
   CVE-2022-29582: (unk) io_uring: fix race between timeout flush and removal 
   CVE-2022-29968: (unk) io_uring: fix uninitialized field in rw io_kiocb 
+  CVE-2022-32296: (unk) tcp: increase source port perturb table to 2^16 

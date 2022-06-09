@@ -15,6 +15,7 @@ CVEs fixed in 5.15.3:
   CVE-2021-3640: b990c219c4c9d4993ef65ea9db73d9497e70f697 Bluetooth: sco: Fix lock_sock() blockage by memcpy_from_msg()
   CVE-2021-3752: 7e22e4db95b04f09adcce18c75d27cbca8f53b99 Bluetooth: fix use-after-free error in lock_sock_nested()
   CVE-2021-45868: 332db0909293f3f4d853ee2ea695272c75082d87 quota: check block number when reading the block in quota file
+  CVE-2022-20148: 5e1b901dd470659bcfeaa76811d2af9165579d77 f2fs: fix UAF in f2fs_available_free_memory
 
 CVEs fixed in 5.15.5:
   CVE-2020-27820: 0b1a35d63995497a9186113c60a16e7ae59642c1 drm/nouveau: use drm_dev_unplug() during device removal
@@ -30,6 +31,7 @@ CVEs fixed in 5.15.7:
 CVEs fixed in 5.15.8:
   CVE-2021-39685: 36dfdf11af49d3c009c711fb16f5c6e7a274505d USB: gadget: detect too-big endpoint 0 requests
   CVE-2021-39698: 1ebb6cd8c754bfe1a5f9539027980756bce7cb08 wait: add wake_up_pollfree()
+  CVE-2022-20132: e1e21632a4c4d2f85587e204939883ce59d18447 HID: add hid_is_usb() function to make it simpler for USB detection
 
 CVEs fixed in 5.15.11:
   CVE-2021-22600: feb116a0ecc5625d6532c616d9a10ef4ef81514b net/packet: rx_owner_map depends on pg_vec
@@ -48,6 +50,9 @@ CVEs fixed in 5.15.12:
   CVE-2021-45100: a2c144d17623984fdafa4634ecf4ab64580d29bb ksmbd: disable SMB2_GLOBAL_CAP_ENCRYPTION for SMB 3.1.1
   CVE-2021-45469: a8a9d753edd7f71e6a2edaa580d8182530b68791 f2fs: fix to do sanity check on last xattr entry in __f2fs_setxattr()
   CVE-2022-1195: 03d00f7f1815ec00dab5035851b3de83afd054a8 hamradio: improve the incomplete fix to avoid NPD
+
+CVEs fixed in 5.15.13:
+  CVE-2022-20154: 75799e71df1da11394740b43ae5686646179561d sctp: use call_rcu to free endpoint
 
 CVEs fixed in 5.15.14:
   CVE-2021-4155: b0e72ba9e520b95346e68800afff0db65e766ca8 xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
@@ -74,6 +79,7 @@ CVEs fixed in 5.15.19:
 CVEs fixed in 5.15.20:
   CVE-2022-0492: 4b1c32bfaa02255a5df602b41587174004996477 cgroup-v1: Require capabilities to set release_agent
   CVE-2022-1055: f36cacd6c933183c1a8827d5987cf2cfc0a44c76 net: sched: fix use-after-free in tc_new_tfilter()
+  CVE-2022-1998: 60765e43e40fbf7a1df828116172440510fcc3e4 fanotify: Fix stale file descriptor in copy_event_to_user()
 
 CVEs fixed in 5.15.23:
   CVE-2022-0435: 1f1788616157b0222b0c2153828b475d95e374a7 tipc: improve size validations for received domain records
@@ -158,6 +164,8 @@ CVEs fixed in 5.15.37:
 
 CVEs fixed in 5.15.39:
   CVE-2022-1734: b8f2b836e7d0a553b886654e8b3925a85862d2eb nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs
+  CVE-2022-1974: a2168fb3128a576d0175443403c15dcf8bf128f6 nfc: replace improper check device_is_registered() in netlink related functions
+  CVE-2022-1975: 7bd81a05d48942ef2c48630e5e7963b187e95727 NFC: netlink: fix sleep in atomic bug when firmware download timeout
 
 CVEs fixed in 5.15.40:
   CVE-2022-1943: 9e951f2d85c9430ea8ae0c8448e47e3c234f1580 udf: Avoid using stale lengthOfImpUse
@@ -165,12 +173,21 @@ CVEs fixed in 5.15.40:
 CVEs fixed in 5.15.41:
   CVE-2022-1012: 1a8ee547da2b64d6a2aedbd38a691578eff14718 secure_seq: use the 64 bits of the siphash for port offset calculation
   CVE-2022-28893: 54f6834b283d9b4d070b0639d9ef5e1d156fe7b0 SUNRPC: Ensure we flush any closed sockets before xs_xprt_free()
+  CVE-2022-32296: 952a238d779eea4ecb2f8deb5004c8f56be79bc9 tcp: increase source port perturb table to 2^16
 
 CVEs fixed in 5.15.42:
   CVE-2022-1729: e085354dde254bc6c83ee604ea66c2b36f9f9067 perf: Fix sys_perf_event_open() race against self
 
 CVEs fixed in 5.15.44:
   CVE-2022-1789: acd12d16528152b32fa09be2c5ef95047f69af05 KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID
+
+CVEs fixed in 5.15.45:
+  CVE-2022-1852: 531d1070d864c78283b7597449e60ddc53319d88 KVM: x86: avoid calling x86 emulator without a decoded instruction
+  CVE-2022-1966: f692bcffd1f2ce5488d24fbcb8eab5f351abf79d netfilter: nf_tables: disallow non-stateful expression in sets earlier
+  CVE-2022-1972: 89ef50fe03a55feccf5681c237673a2f98161161 netfilter: nf_tables: sanitize nft_set_desc_concat_parse()
+
+CVEs fixed in 5.15.46:
+  CVE-2022-1973: 61decb58486d7c0cbded25fe4d301ab4fa148cd8 fs/ntfs3: Fix invalid free in log_replay
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -243,10 +260,7 @@ Outstanding CVEs:
   CVE-2022-1462: (unk)  
   CVE-2022-1652: (unk)  
   CVE-2022-1679: (unk)  
-  CVE-2022-1852: (unk) KVM: x86: avoid calling x86 emulator without a decoded instruction 
   CVE-2022-1882: (unk)  
-  CVE-2022-1966: (unk) netfilter: nf_tables: disallow non-stateful expression in sets earlier 
-  CVE-2022-1972: (unk) netfilter: nf_tables: sanitize nft_set_desc_concat_parse() 
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
   CVE-2022-26878: (unk)  
