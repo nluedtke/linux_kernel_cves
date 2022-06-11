@@ -70108,9 +70108,32 @@
         "affected_versions": "unk to v5.6-rc2",
         "breaks": "",
         "cmt_msg": "drm/vgem: Close use-after-free race in vgem_gem_create",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "4b848f20eda5974020f043ca14bacf7a7e634fc8",
         "last_affected_version": "5.5.4",
-        "last_modified": "2022-06-05",
+        "last_modified": "2022-06-10",
         "nvd_text": "The root cause of this vulnerability is that the ioctl$DRM_IOCTL_MODE_DESTROY_DUMB can decrease refcount of *drm_vgem_gem_object *(created in *vgem_gem_dumb_create*) concurrently, and *vgem_gem_dumb_create *will access the freed drm_vgem_gem_object.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1419",
@@ -70320,8 +70343,8 @@
         "breaks": "",
         "cmt_msg": "perf: Fix sys_perf_event_open() race against self",
         "fixes": "3ac6487e584a1eb54071dbe1212e05b884136704",
-        "last_affected_version": "5.17.9",
-        "last_modified": "2022-05-25",
+        "last_affected_version": "5.17",
+        "last_modified": "2022-06-10",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1729",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1729",
@@ -70392,8 +70415,8 @@
         "breaks": "",
         "cmt_msg": "KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID",
         "fixes": "9f46c187e2e680ecd9de7983e4d081c3391acc76",
-        "last_affected_version": "5.17.11",
-        "last_modified": "2022-06-05",
+        "last_affected_version": "5.17",
+        "last_modified": "2022-06-10",
         "nvd_text": "With shadow paging enabled, the INVPCID instruction results in a call to kvm_mmu_invpcid_gva. If INVPCID is executed with CR0.PG=0, the invlpg callback is not set and the result is a NULL pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1789",
@@ -70425,8 +70448,8 @@
         "breaks": "",
         "cmt_msg": "KVM: x86: avoid calling x86 emulator without a decoded instruction",
         "fixes": "fee060cd52d69c114b62d1a2948ea9648b5131f9",
-        "last_affected_version": "5.17.12",
-        "last_modified": "2022-06-09",
+        "last_affected_version": "5.18.1",
+        "last_modified": "2022-06-10",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1852",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1852",
@@ -70496,8 +70519,8 @@
         "breaks": "",
         "cmt_msg": "netfilter: nf_tables: disallow non-stateful expression in sets earlier",
         "fixes": "520778042ccca019f3ffa136dd0ca565c486cedd",
-        "last_affected_version": "5.17.12",
-        "last_modified": "2022-06-09",
+        "last_affected_version": "5.18.1",
+        "last_modified": "2022-06-10",
         "nvd_text": "A use-after-free vulnerability was found in the Linux kernel's Netfilter subsystem in net/netfilter/nf_tables_api.c. This flaw allows a local attacker with user access to cause a privilege escalation issue.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1966",
@@ -70513,8 +70536,8 @@
         "breaks": "",
         "cmt_msg": "netfilter: nf_tables: sanitize nft_set_desc_concat_parse()",
         "fixes": "fecf31ee395b0295f2d7260aa29946b7605f7c85",
-        "last_affected_version": "5.17.12",
-        "last_modified": "2022-06-09",
+        "last_affected_version": "5.18.1",
+        "last_modified": "2022-06-10",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1972",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1972",
@@ -70529,8 +70552,8 @@
         "breaks": "",
         "cmt_msg": "fs/ntfs3: Fix invalid free in log_replay",
         "fixes": "f26967b9f7a830e228bb13fb41bd516ddd9d789d",
-        "last_affected_version": "5.17.13",
-        "last_modified": "2022-06-09",
+        "last_affected_version": "5.18.2",
+        "last_modified": "2022-06-10",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1973",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1973",
@@ -70578,7 +70601,8 @@
         "cmt_msg": "fanotify: Fix stale file descriptor in copy_event_to_user()",
         "fixes": "ee12595147ac1fbfb5bcb23837e26dd58d94b15d",
         "last_affected_version": "5.16.5",
-        "last_modified": "2022-06-09",
+        "last_modified": "2022-06-10",
+        "nvd_text": "A use after free in the Linux kernel File System notify functionality was found in the way user triggers copy_info_records_to_user() call to fail in copy_event_to_user(). A local user could use this flaw to crash the system or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1998",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1998",
@@ -70721,6 +70745,35 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20166",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-20166",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-20166"
+        }
+    },
+    "CVE-2022-21499": {
+        "affected_versions": "unk to v5.19-rc1",
+        "breaks": "",
+        "cmt_msg": "lockdown: also lock down previous kgdb use",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+            "score": 6.5
+        },
+        "fixes": "eadb2f47a3ced5c64b23b90fd2a3463f63726066",
+        "last_affected_version": "5.18.0",
+        "last_modified": "2022-06-10",
+        "nvd_text": "KGDB and KDB allow read and write access to kernel memory, and thus should be restricted during lockdown. An attacker with access to a serial port could trigger the debugger so it is important that the debugger respect the lockdown mode when/if it is triggered. CVSS 3.1 Base Score 6.5 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-21499",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-21499",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-21499",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-21499",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-21499",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-21499"
         }
     },
     "CVE-2022-22942": {
