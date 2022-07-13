@@ -383,6 +383,7 @@ CVEs fixed in 5.10.110:
   CVE-2022-1198: f67a1400788f550d201c71aeaf56706afe57f0da drivers: hamradio: 6pack: fix UAF bug caused by mod_timer()
   CVE-2022-1353: 8d3f4ad43054619379ccc697cfcbdb2c266800d8 af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register
   CVE-2022-1516: 5c94b6205e87411dbe9dc1ca088eb36b8837fb47 net/x25: Fix null-ptr-deref caused by x25_disconnect
+  CVE-2022-2380: 72af8810922eb143ed4f116db246789ead2d8543 video: fbdev: sm712fb: Fix crash in smtcfb_read()
   CVE-2022-28388: 5318cdf4fd834856ce71238b064f35386f9ef528 can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-28389: 0801a51d79389282c1271e623613b2e1886e071e can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
   CVE-2022-28390: b417f9c50586588754b2b0453a1f99520cf7c0e8 can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
@@ -441,6 +442,18 @@ CVEs fixed in 5.10.123:
 CVEs fixed in 5.10.125:
   CVE-2022-32296: 9429b75bc271b6f29e50dbb0ee0751800ff87dd9 tcp: increase source port perturb table to 2^16
 
+CVEs fixed in 5.10.129:
+  CVE-2022-2318: 8f74cb27c2b4872fd14bf046201fa7b36a46885e net: rose: fix UAF bugs caused by timer handler
+  CVE-2022-26365: cfea428030be836d79a7690968232bb7fa4410f1 xen/blkfront: fix leaking data in shared pages
+  CVE-2022-33740: 728d68bfe68d92eae1407b8a9edc7817d6227404 xen/netfront: fix leaking data in shared pages
+  CVE-2022-33741: 4923217af5742a796821272ee03f8d6de15c0cca xen/netfront: force data bouncing when backend is untrusted
+  CVE-2022-33742: cbbd2d2531539212ff090aecbea9877c996e6ce6 xen/blkfront: force data bouncing when backend is untrusted
+  CVE-2022-33743: 547b7c640df545a344358ede93e491a89194cdfa xen-netfront: restore __skb_queue_tail() positioning in xennet_get_responses()
+  CVE-2022-33744: 43c8d33ce353091f15312cb6de3531517d7bba90 xen/arm: Fix race in RB-tree based P2M accounting
+
+CVEs fixed in 5.10.130:
+  CVE-2022-34918: 0a5e36dbcb448a7a8ba63d1d4b6ade2c9d3cc8bf netfilter: nf_tables: stricter validation of element data
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -448,6 +461,7 @@ Outstanding CVEs:
   CVE-2008-4609: (unk)  
   CVE-2010-4563: (unk)  
   CVE-2010-5321: (unk)  
+  CVE-2011-4916: (unk)  
   CVE-2011-4917: (unk)  
   CVE-2012-4542: (unk)  
   CVE-2013-7445: (unk)  
@@ -527,15 +541,9 @@ Outstanding CVEs:
   CVE-2022-1882: (unk)  
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
   CVE-2022-2153: (unk) KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast() 
-  CVE-2022-2318: (unk) net: rose: fix UAF bugs caused by timer handler 
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
+  CVE-2022-23816: (unk)  
+  CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
-  CVE-2022-26365: (unk) xen/blkfront: fix leaking data in shared pages 
-  CVE-2022-33740: (unk) xen/netfront: fix leaking data in shared pages 
-  CVE-2022-33741: (unk) xen/netfront: force data bouncing when backend is untrusted 
-  CVE-2022-33742: (unk) xen/blkfront: force data bouncing when backend is untrusted 
-  CVE-2022-33743: (unk) xen-netfront: restore __skb_queue_tail() positioning in xennet_get_responses() 
-  CVE-2022-33744: (unk) xen/arm: Fix race in RB-tree based P2M accounting 
-  CVE-2022-34494: (unk) rpmsg: virtio: Fix possible double free in rpmsg_virtio_add_ctrl_dev() 
-  CVE-2022-34495: (unk) rpmsg: virtio: Fix possible double free in rpmsg_probe() 
-  CVE-2022-34918: (unk)  
+  CVE-2022-29900: (unk) x86/kvm/vmx: Make noinstr clean 
+  CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 

@@ -823,6 +823,20 @@
             "Ubuntu": "https://people.canonical.com/~ubuntu-security/cve/2011/CVE-2011-4915"
         }
     },
+    "CVE-2011-4916": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2022-07-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2011-4916",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2011-4916",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2011-4916",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2011-4916",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2011-4916",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2011-4916"
+        }
+    },
     "CVE-2011-4917": {
         "affected_versions": "unk to unk",
         "breaks": "",
@@ -70558,9 +70572,32 @@
         "affected_versions": "v5.12-rc1-dontuse to v5.19-rc1",
         "breaks": "4aa2691dcbd38ce1c461188799d863398dd2865d",
         "cmt_msg": "KVM: x86: avoid calling x86 emulator without a decoded instruction",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "fee060cd52d69c114b62d1a2948ea9648b5131f9",
         "last_affected_version": "5.18.1",
-        "last_modified": "2022-07-06",
+        "last_modified": "2022-07-13",
         "nvd_text": "A NULL pointer dereference flaw was found in the Linux kernel\u2019s KVM module, which can lead to a denial of service in the x86_emulate_insn in arch/x86/kvm/emulate.c. This flaw occurs while executing an illegal instruction in guest in the Intel CPU.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1852",
@@ -71093,9 +71130,32 @@
         "affected_versions": "v5.6-rc1 to v5.19-rc1",
         "breaks": "f3a2181e16f1dcbf5446ed43f6b5d9f56c459f85",
         "cmt_msg": "netfilter: nf_tables: sanitize nft_set_desc_concat_parse()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "fecf31ee395b0295f2d7260aa29946b7605f7c85",
         "last_affected_version": "5.18.1",
-        "last_modified": "2022-07-06",
+        "last_modified": "2022-07-13",
         "nvd_text": "A vulnerability was found in the Linux kernel's nft_set_desc_concat_parse() function .This flaw allows an attacker to trigger a buffer overflow via nft_set_desc_concat_parse() , causing a denial of service and possibly to run code.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-2078",
@@ -71579,11 +71639,13 @@
         }
     },
     "CVE-2022-2318": {
-        "affected_versions": "unk to v5.19-rc5",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.19-rc5",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "net: rose: fix UAF bugs caused by timer handler",
         "fixes": "9cc02ede696272c5271a401e4f27c262359bc2f6",
-        "last_modified": "2022-07-06",
+        "last_affected_version": "5.18.9",
+        "last_modified": "2022-07-13",
+        "nvd_text": "There are use-after-free vulnerabilities caused by timer handler in net/rose/rose_timer.c of linux that allow attackers to crash linux kernel without any privileges.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-2318",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-2318",
@@ -71631,6 +71693,50 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23222",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-23222",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-23222"
+        }
+    },
+    "CVE-2022-2380": {
+        "affected_versions": "v2.6.12-rc2 to v5.18-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "video: fbdev: sm712fb: Fix crash in smtcfb_read()",
+        "fixes": "bd771cf5c4254511cc4abb88f3dab3bd58bdf8e8",
+        "last_affected_version": "5.17.1",
+        "last_modified": "2022-07-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-2380",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-2380",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-2380",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-2380",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-2380",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-2380"
+        }
+    },
+    "CVE-2022-23816": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2022-07-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23816",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23816",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23816",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23816",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23816",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23816"
+        }
+    },
+    "CVE-2022-23825": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2022-07-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23825",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23825",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-23825",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-23825",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-23825",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-23825"
         }
     },
     "CVE-2022-23960": {
@@ -71991,11 +72097,12 @@
         }
     },
     "CVE-2022-26365": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.19-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/blkfront: fix leaking data in shared pages",
         "fixes": "2f446ffe9d737e9a844b97887919c4fda18246e7",
-        "last_modified": "2022-07-06",
+        "last_affected_version": "5.18.9",
+        "last_modified": "2022-07-13",
         "nvd_text": "Linux disk/nic frontends data leaks T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Linux Block and Network PV device frontends don't zero memory regions before sharing them with the backend (CVE-2022-26365, CVE-2022-33740). Additionally the granularity of the grant table doesn't allow sharing less than a 4K page, leading to unrelated data residing in the same 4K page as data shared with a backend being accessible by such backend (CVE-2022-33741, CVE-2022-33742).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-26365",
@@ -72604,6 +72711,38 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-29582"
         }
     },
+    "CVE-2022-29900": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "x86/kvm/vmx: Make noinstr clean",
+        "fixes": "742ab6df974ae8384a2dd213db1a3a06cf6d8936",
+        "last_modified": "2022-07-13",
+        "nvd_text": "AMD microprocessor families 15h to 18h are affected by a new Spectre variant that is able to bypass their retpoline mitigation in the kernel to leak arbitrary data. An attacker with unprivileged user access can hijack return instructions to achieve arbitrary speculative code execution under certain microarchitecture-dependent conditions.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-29900",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-29900",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-29900",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-29900",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-29900",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-29900"
+        }
+    },
+    "CVE-2022-29901": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "x86/kvm/vmx: Make noinstr clean",
+        "fixes": "742ab6df974ae8384a2dd213db1a3a06cf6d8936",
+        "last_modified": "2022-07-13",
+        "nvd_text": "Intel microprocessor generations 6 to 8 are affected by a new Spectre variant that is able to bypass their retpoline mitigation in the kernel to leak arbitrary data. An attacker with unprivileged user access can hijack return instructions to achieve arbitrary speculative code execution under certain microarchitecture-dependent conditions.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-29901",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-29901",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-29901",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-29901",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-29901",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-29901"
+        }
+    },
     "CVE-2022-29968": {
         "affected_versions": "v5.16-rc1 to v5.18-rc5",
         "breaks": "3e08773c3841e9db7a520908cc2b136a77d275ff",
@@ -72805,11 +72944,12 @@
         }
     },
     "CVE-2022-33740": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.19-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/netfront: fix leaking data in shared pages",
         "fixes": "307c8de2b02344805ebead3440d8feed28f2f010",
-        "last_modified": "2022-07-06",
+        "last_affected_version": "5.18.9",
+        "last_modified": "2022-07-13",
         "nvd_text": "Linux disk/nic frontends data leaks T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Linux Block and Network PV device frontends don't zero memory regions before sharing them with the backend (CVE-2022-26365, CVE-2022-33740). Additionally the granularity of the grant table doesn't allow sharing less than a 4K page, leading to unrelated data residing in the same 4K page as data shared with a backend being accessible by such backend (CVE-2022-33741, CVE-2022-33742).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-33740",
@@ -72821,11 +72961,12 @@
         }
     },
     "CVE-2022-33741": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.19-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/netfront: force data bouncing when backend is untrusted",
         "fixes": "4491001c2e0fa69efbb748c96ec96b100a5cdb7e",
-        "last_modified": "2022-07-06",
+        "last_affected_version": "5.18.9",
+        "last_modified": "2022-07-13",
         "nvd_text": "Linux disk/nic frontends data leaks T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Linux Block and Network PV device frontends don't zero memory regions before sharing them with the backend (CVE-2022-26365, CVE-2022-33740). Additionally the granularity of the grant table doesn't allow sharing less than a 4K page, leading to unrelated data residing in the same 4K page as data shared with a backend being accessible by such backend (CVE-2022-33741, CVE-2022-33742).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-33741",
@@ -72837,11 +72978,12 @@
         }
     },
     "CVE-2022-33742": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.19-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/blkfront: force data bouncing when backend is untrusted",
         "fixes": "2400617da7eebf9167d71a46122828bc479d64c9",
-        "last_modified": "2022-07-06",
+        "last_affected_version": "5.18.9",
+        "last_modified": "2022-07-13",
         "nvd_text": "Linux disk/nic frontends data leaks T[his CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] Linux Block and Network PV device frontends don't zero memory regions before sharing them with the backend (CVE-2022-26365, CVE-2022-33740). Additionally the granularity of the grant table doesn't allow sharing less than a 4K page, leading to unrelated data residing in the same 4K page as data shared with a backend being accessible by such backend (CVE-2022-33741, CVE-2022-33742).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-33742",
@@ -72853,11 +72995,12 @@
         }
     },
     "CVE-2022-33743": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v5.9-rc1 to v5.19-rc6",
+        "breaks": "6c5aa6fc4defc2a0977a2c59e4710d50fa1e834c",
         "cmt_msg": "xen-netfront: restore __skb_queue_tail() positioning in xennet_get_responses()",
         "fixes": "f63c2c2032c2e3caad9add3b82cc6e91c376fd26",
-        "last_modified": "2022-07-06",
+        "last_affected_version": "5.18.9",
+        "last_modified": "2022-07-13",
         "nvd_text": "network backend may cause Linux netfront to use freed SKBs While adding logic to support XDP (eXpress Data Path), a code label was moved in a way allowing for SKBs having references (pointers) retained for further processing to nevertheless be freed.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-33743",
@@ -72869,11 +73012,12 @@
         }
     },
     "CVE-2022-33744": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.19-rc6",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "xen/arm: Fix race in RB-tree based P2M accounting",
         "fixes": "b75cd218274e01d026dc5240e86fdeb44bbed0c8",
-        "last_modified": "2022-07-06",
+        "last_affected_version": "5.18.9",
+        "last_modified": "2022-07-13",
         "nvd_text": "Arm guests can cause Dom0 DoS via PV devices When mapping pages of guests on Arm, dom0 is using an rbtree to keep track of the foreign mappings. Updating of that rbtree is not always done completely with the related lock held, resulting in a small race window, which can be used by unprivileged guests via PV devices to cause inconsistencies of the rbtree. These inconsistencies can lead to Denial of Service (DoS) of dom0, e.g. by causing crashes or the inability to perform further mappings of other guests' memory pages.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-33744",
@@ -72925,12 +73069,35 @@
         }
     },
     "CVE-2022-34494": {
-        "affected_versions": "unk to v5.19-rc1",
-        "breaks": "",
+        "affected_versions": "v5.13-rc1 to v5.19-rc1",
+        "breaks": "c486682ae1e2b149add22f44cf413b3103e3ef39",
         "cmt_msg": "rpmsg: virtio: Fix possible double free in rpmsg_virtio_add_ctrl_dev()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Double Free",
         "fixes": "1680939e9ecf7764fba8689cfb3429c2fe2bb23c",
         "last_affected_version": "5.18.3",
-        "last_modified": "2022-06-27",
+        "last_modified": "2022-07-13",
         "nvd_text": "rpmsg_virtio_add_ctrl_dev in drivers/rpmsg/virtio_rpmsg_bus.c in the Linux kernel before 5.18.4 has a double free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-34494",
@@ -72942,12 +73109,35 @@
         }
     },
     "CVE-2022-34495": {
-        "affected_versions": "unk to v5.19-rc1",
-        "breaks": "",
+        "affected_versions": "v5.13-rc1 to v5.19-rc1",
+        "breaks": "c486682ae1e2b149add22f44cf413b3103e3ef39",
         "cmt_msg": "rpmsg: virtio: Fix possible double free in rpmsg_probe()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Double Free",
         "fixes": "c2eecefec5df1306eafce28ccdf1ca159a552ecc",
         "last_affected_version": "5.18.3",
-        "last_modified": "2022-06-27",
+        "last_modified": "2022-07-13",
         "nvd_text": "rpmsg_probe in drivers/rpmsg/virtio_rpmsg_bus.c in the Linux kernel before 5.18.4 has a double free.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-34495",
@@ -72959,10 +73149,12 @@
         }
     },
     "CVE-2022-34918": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2022-07-06",
+        "affected_versions": "v4.1-rc1 to v5.19-rc6",
+        "breaks": "7d7402642eaf385aef0772eff5a35e34fc4995d7",
+        "cmt_msg": "netfilter: nf_tables: stricter validation of element data",
+        "fixes": "7e6bc1f6cabcd30aba0b11219d8e01b952eacbb6",
+        "last_affected_version": "5.18.10",
+        "last_modified": "2022-07-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.18.9. A type confusion bug in nft_set_elem_init (leading to a buffer overflow) could be used by a local attacker to escalate privileges, a different vulnerability than CVE-2022-32250. (The attacker can obtain root access, but must start with an unprivileged user namespace to obtain CAP_NET_ADMIN access.) This can be fixed in nft_setelem_parse_data in net/netfilter/nf_tables_api.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-34918",

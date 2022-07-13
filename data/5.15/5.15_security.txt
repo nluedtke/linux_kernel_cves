@@ -142,6 +142,7 @@ CVEs fixed in 5.15.33:
   CVE-2022-1651: 1d5103d9bb7d42fc220afe9f01ec6b9fe0ea5773 virt: acrn: fix a memory leak in acrn_dev_ioctl()
   CVE-2022-1671: 432297011caf71dbc95c3365a65adf365e79aff3 rxrpc: fix some null-ptr-deref bugs in server_key.c
   CVE-2022-2153: 0e5dbc0540baa89faf4c04ccc7e9c4fe6b1d7bf4 KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast()
+  CVE-2022-2380: 46cdbff26c88fd75dccbf28df1d07cbe18007eac video: fbdev: sm712fb: Fix crash in smtcfb_read()
   CVE-2022-28388: f2ce5238904f539648aaf56c5ee49e5eaf44d8fc can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-28389: 37f07ad24866c6c1423b37b131c9a42414bcf8a1 can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
   CVE-2022-28390: 459b19f42fd5e031e743dfa119f44aba0b62ff97 can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
@@ -205,6 +206,18 @@ CVEs fixed in 5.15.48:
   CVE-2022-21125: ebd0f558b48082c265fd594ffb205ae5350bfe79 x86/speculation/mmio: Reuse SRBDS mitigation for SBDS
   CVE-2022-21166: 2044838ab2283c23869ffa7b062e5f388136e432 x86/speculation/mmio: Enable CPU Fill buffer clearing on idle
 
+CVEs fixed in 5.15.53:
+  CVE-2022-2318: 659d39545260100628d8a30020d09fb6bf63b915 net: rose: fix UAF bugs caused by timer handler
+  CVE-2022-26365: 7ed65a4ad8fa9f40bc3979b32c54243d6a684ec9 xen/blkfront: fix leaking data in shared pages
+  CVE-2022-33740: 5dd0993c36832d33820238fc8dc741ba801b7961 xen/netfront: fix leaking data in shared pages
+  CVE-2022-33741: ed3cfc690675d852c3416aedb271e0e7d179bf49 xen/netfront: force data bouncing when backend is untrusted
+  CVE-2022-33742: 6d0a9127279a4533815202e30ad1b3a39f560ba3 xen/blkfront: force data bouncing when backend is untrusted
+  CVE-2022-33743: 1052fc2b7391a43b25168ae69ad658fff5170f04 xen-netfront: restore __skb_queue_tail() positioning in xennet_get_responses()
+  CVE-2022-33744: 9f83c8f6ab14bbf4311b70bf1b7290d131059101 xen/arm: Fix race in RB-tree based P2M accounting
+
+CVEs fixed in 5.15.54:
+  CVE-2022-34918: c1784d2075138992b00c17ab4ffc6d855171fe6d netfilter: nf_tables: stricter validation of element data
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -212,6 +225,7 @@ Outstanding CVEs:
   CVE-2008-4609: (unk)  
   CVE-2010-4563: (unk)  
   CVE-2010-5321: (unk)  
+  CVE-2011-4916: (unk)  
   CVE-2011-4917: (unk)  
   CVE-2012-4542: (unk)  
   CVE-2013-7445: (unk)  
@@ -272,14 +286,10 @@ Outstanding CVEs:
   CVE-2022-1462: (unk)  
   CVE-2022-1679: (unk)  
   CVE-2022-1882: (unk)  
-  CVE-2022-2318: (unk) net: rose: fix UAF bugs caused by timer handler 
+  CVE-2022-23816: (unk)  
+  CVE-2022-23825: (unk)  
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
-  CVE-2022-26365: (unk) xen/blkfront: fix leaking data in shared pages 
   CVE-2022-26878: (unk)  
-  CVE-2022-33740: (unk) xen/netfront: fix leaking data in shared pages 
-  CVE-2022-33741: (unk) xen/netfront: force data bouncing when backend is untrusted 
-  CVE-2022-33742: (unk) xen/blkfront: force data bouncing when backend is untrusted 
-  CVE-2022-33743: (unk) xen-netfront: restore __skb_queue_tail() positioning in xennet_get_responses() 
-  CVE-2022-33744: (unk) xen/arm: Fix race in RB-tree based P2M accounting 
-  CVE-2022-34918: (unk)  
+  CVE-2022-29900: (unk) x86/kvm/vmx: Make noinstr clean 
+  CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 
