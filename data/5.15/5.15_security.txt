@@ -126,6 +126,9 @@ CVEs fixed in 5.15.29:
   CVE-2022-1199: 46ad629e58ce3a88c924ff3c5a7e9129b0df5659 ax25: Fix NULL pointer dereference in ax25_kill_by_device
   CVE-2022-27666: 4aaabbffc3b0658ce80eebdde9bafa20a3f932e0 esp: Fix possible buffer overflow in ESP transformation
 
+CVEs fixed in 5.15.31:
+  CVE-2022-20368: a055f5f2841f7522b44a2b1eccb1951b4b03d51a net/packet: fix slab-out-of-bounds access in packet_recvmsg()
+
 CVEs fixed in 5.15.32:
   CVE-2022-1015: 1bd57dea456149619f3b80d67eee012122325af8 netfilter: nf_tables: validate registers coming from userspace.
   CVE-2022-1016: fafb904156fbb8f1dd34970cd5223e00b47c33be netfilter: nf_tables: initialize registers in nft_do_chain()
@@ -141,6 +144,7 @@ CVEs fixed in 5.15.33:
   CVE-2022-1516: 409570a619c1cda2e0fde6018a256b9e3d3ba0ee net/x25: Fix null-ptr-deref caused by x25_disconnect
   CVE-2022-1651: 1d5103d9bb7d42fc220afe9f01ec6b9fe0ea5773 virt: acrn: fix a memory leak in acrn_dev_ioctl()
   CVE-2022-1671: 432297011caf71dbc95c3365a65adf365e79aff3 rxrpc: fix some null-ptr-deref bugs in server_key.c
+  CVE-2022-20369: 48d00e24822e4384edcee3aae03d54c1b7982eba media: v4l2-mem2mem: Apply DST_QUEUE_OFF_BASE on MMAP buffers across ioctls
   CVE-2022-2153: 0e5dbc0540baa89faf4c04ccc7e9c4fe6b1d7bf4 KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast()
   CVE-2022-2380: 46cdbff26c88fd75dccbf28df1d07cbe18007eac video: fbdev: sm712fb: Fix crash in smtcfb_read()
   CVE-2022-28388: f2ce5238904f539648aaf56c5ee49e5eaf44d8fc can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
@@ -219,9 +223,19 @@ CVEs fixed in 5.15.54:
   CVE-2021-33655: 6886327780254ba749b770373653b6afc2a339fc fbcon: Disallow setting font bigger than screen size
   CVE-2022-34918: c1784d2075138992b00c17ab4ffc6d855171fe6d netfilter: nf_tables: stricter validation of element data
 
+CVEs fixed in 5.15.56:
+  CVE-2022-36123: 26bb7afc027ce6ac8ab6747babec674d55689ff0 x86: Clear .brk area at early boot
+
 CVEs fixed in 5.15.57:
   CVE-2022-29900: ccb25d7db1a29bc251692be745b000e6f0754048 x86/kvm/vmx: Make noinstr clean
   CVE-2022-29901: ccb25d7db1a29bc251692be745b000e6f0754048 x86/kvm/vmx: Make noinstr clean
+
+CVEs fixed in 5.15.58:
+  CVE-2022-21505: 0e66932a9dc9ba47e60405b392e3782a332bc44e lockdown: Fix kexec lockdown bypass with ima policy
+  CVE-2022-36879: c8e32bca0676ac663266a3b16562cb017300adcd xfrm: xfrm_policy: fix a possible double xfrm_pols_put() in xfrm_bundle_lookup()
+
+CVEs fixed in 5.15.59:
+  CVE-2022-36946: 91c11008aab0282957b8b8ccb0707d90e74cc3b9 netfilter: nf_queue: do not allow packet truncation below transport header offset
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -291,13 +305,10 @@ Outstanding CVEs:
   CVE-2022-1462: (unk)  
   CVE-2022-1679: (unk)  
   CVE-2022-1882: (unk)  
-  CVE-2022-21505: (unk) lockdown: Fix kexec lockdown bypass with ima policy 
+  CVE-2022-20158: (unk)  
   CVE-2022-2209: (unk)  
-  CVE-2022-2327: (unk)  
   CVE-2022-23816: (unk)  
   CVE-2022-23825: (unk)  
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
   CVE-2022-26878: (unk)  
-  CVE-2022-36879: (unk) xfrm: xfrm_policy: fix a possible double xfrm_pols_put() in xfrm_bundle_lookup() 
-  CVE-2022-36946: (unk)  

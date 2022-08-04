@@ -638,6 +638,9 @@ CVEs fixed in 5.4.185:
   CVE-2022-1011: a9174077febfb1608ec3361622bf5f91e2668d7f fuse: fix pipe buffer lifetime for direct_io
   CVE-2022-1199: 0a64aea5fe023cf1e4973676b11f49038b1f045b ax25: Fix NULL pointer dereference in ax25_kill_by_device
 
+CVEs fixed in 5.4.187:
+  CVE-2022-20368: 268dcf1f7b3193bc446ec3d14e08a240e9561e4d net/packet: fix slab-out-of-bounds access in packet_recvmsg()
+
 CVEs fixed in 5.4.188:
   CVE-2022-1016: 06f0ff82c70241a766a811ae1acf07d6e2734dcb netfilter: nf_tables: initialize registers in nft_do_chain()
   CVE-2022-26490: 0aef7184630b599493a0dcad4eec6d42b3e68e91 nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION
@@ -708,6 +711,16 @@ CVEs fixed in 5.4.204:
 
 CVEs fixed in 5.4.205:
   CVE-2021-33655: 4f34f380f952289e818c76617bbb5c9a3a9a9dd0 fbcon: Disallow setting font bigger than screen size
+
+CVEs fixed in 5.4.207:
+  CVE-2022-36123: a3c7c1a726a4c6b63b85e8c183f207543fd75e1b x86: Clear .brk area at early boot
+
+CVEs fixed in 5.4.208:
+  CVE-2022-21505: ed3fea55066b4e054c4d212e54f9965abcac9685 lockdown: Fix kexec lockdown bypass with ima policy
+  CVE-2022-36879: f4248bdb7d5c1150a2a6f8c3d3b6da0b71f62a20 xfrm: xfrm_policy: fix a possible double xfrm_pols_put() in xfrm_bundle_lookup()
+
+CVEs fixed in 5.4.209:
+  CVE-2022-36946: 52be29e8b6455788a4d0f501bd87aa679ca3ba3c netfilter: nf_queue: do not allow packet truncation below transport header offset
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -809,17 +822,16 @@ Outstanding CVEs:
   CVE-2022-1789: (unk) KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID 
   CVE-2022-1882: (unk)  
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
+  CVE-2022-20158: (unk)  
   CVE-2022-20166: (unk) drivers core: Use sysfs_emit and sysfs_emit_at for show(device *...) functions 
-  CVE-2022-21505: (unk) lockdown: Fix kexec lockdown bypass with ima policy 
+  CVE-2022-20369: (unk) media: v4l2-mem2mem: Apply DST_QUEUE_OFF_BASE on MMAP buffers across ioctls 
   CVE-2022-2153: (unk) KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast() 
   CVE-2022-2209: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
-  CVE-2022-2327: (unk)  
+  CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
   CVE-2022-23816: (unk)  
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
   CVE-2022-29900: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
-  CVE-2022-36879: (unk) xfrm: xfrm_policy: fix a possible double xfrm_pols_put() in xfrm_bundle_lookup() 
-  CVE-2022-36946: (unk)  

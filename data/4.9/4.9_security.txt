@@ -1241,6 +1241,9 @@ CVEs fixed in 4.9.307:
   CVE-2021-4149: 43bfa08ba62a1ca7a22365c7092e491e04327efb btrfs: unlock newly allocated extent buffer after error
   CVE-2022-1199: cad71f1094834eb69f7ceec8100d300c26b43053 ax25: Fix NULL pointer dereference in ax25_kill_by_device
 
+CVEs fixed in 4.9.308:
+  CVE-2022-20368: b9d5772d60f8e7ef34e290f72fc20e3a4883e7d0 net/packet: fix slab-out-of-bounds access in packet_recvmsg()
+
 CVEs fixed in 4.9.309:
   CVE-2022-1016: 4d28522acd1c4415c85f6b33463713a268f68965 netfilter: nf_tables: initialize registers in nft_do_chain()
   CVE-2022-26490: c1184fa07428fb81371d5863e09795f0d06d35cf nfc: st21nfca: Fix potential buffer overflows in EVT_TRANSACTION
@@ -1294,6 +1297,12 @@ CVEs fixed in 4.9.322:
   CVE-2022-33741: c6e941364608d911ac7b055d27d86e360fd94aed xen/netfront: force data bouncing when backend is untrusted
   CVE-2022-33742: 8dad9a67100245295373523375610be850999b37 xen/blkfront: force data bouncing when backend is untrusted
   CVE-2022-33744: 856d1b8e6e826b5087f1ea3fdbabda3557d73599 xen/arm: Fix race in RB-tree based P2M accounting
+
+CVEs fixed in 4.9.324:
+  CVE-2022-36123: b3d7c509bcbd4384d4964dcdf028b3c3e0adb7f7 x86: Clear .brk area at early boot
+
+CVEs fixed in 4.9.325:
+  CVE-2022-36879: 5aff12fa09504c6ea88fc17749a39cda2c4d6ef7 xfrm: xfrm_policy: fix a possible double xfrm_pols_put() in xfrm_bundle_lookup()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1471,12 +1480,14 @@ Outstanding CVEs:
   CVE-2022-1786: (unk) io_uring: remove io_identity 
   CVE-2022-1882: (unk)  
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
+  CVE-2022-20158: (unk)  
   CVE-2022-20166: (unk) drivers core: Use sysfs_emit and sysfs_emit_at for show(device *...) functions 
+  CVE-2022-20369: (unk) media: v4l2-mem2mem: Apply DST_QUEUE_OFF_BASE on MMAP buffers across ioctls 
   CVE-2022-21499: (unk) lockdown: also lock down previous kgdb use 
   CVE-2022-2153: (unk) KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast() 
   CVE-2022-2209: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
-  CVE-2022-2327: (unk)  
+  CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
   CVE-2022-23816: (unk)  
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
@@ -1484,5 +1495,4 @@ Outstanding CVEs:
   CVE-2022-29900: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
-  CVE-2022-36879: (unk) xfrm: xfrm_policy: fix a possible double xfrm_pols_put() in xfrm_bundle_lookup() 
-  CVE-2022-36946: (unk)  
+  CVE-2022-36946: (unk) netfilter: nf_queue: do not allow packet truncation below transport header offset 
