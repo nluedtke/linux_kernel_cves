@@ -63959,12 +63959,12 @@
         "last_modified": "2022-07-28"
     }, 
     "CVE-2021-33656": {
-        "affected_versions": "unk to v5.12-rc1-dontuse", 
-        "breaks": "", 
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc1-dontuse", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
         "cmt_msg": "vt: drop old FONT ioctls", 
         "fixes": "ff2047fb755d4415ec3c70ac799889371151796d", 
         "last_affected_version": "5.10.126", 
-        "last_modified": "2022-07-20"
+        "last_modified": "2022-08-22"
     }, 
     "CVE-2021-33909": {
         "affected_versions": "v3.16-rc4 to v5.14-rc3", 
@@ -70203,8 +70203,9 @@
         }
     }, 
     "CVE-2022-1462": {
-        "affected_versions": "unk to unk", 
+        "affected_versions": "unk to v5.19-rc7", 
         "breaks": "", 
+        "cmt_msg": "tty: use new tty_insert_flip_string_and_push_buffer() in pty_write()", 
         "cvss2": {
             "Access Complexity": "Medium", 
             "Access Vector": "Local Access", 
@@ -70228,8 +70229,9 @@
             "score": 6.3
         }, 
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')", 
-        "fixes": "", 
-        "last_modified": "2022-06-12", 
+        "fixes": "a501ab75e7624d133a5a3c7ec010687c8b961d23", 
+        "last_affected_version": "5.18.12", 
+        "last_modified": "2022-08-22", 
         "nvd_text": "An out-of-bounds read flaw was found in the Linux kernel\u2019s TeleTYpe subsystem. The issue occurs in how a user triggers a race condition using ioctls TIOCSPTLCK and TIOCGPTPEER and TIOCSTI and TCXONC with leakage of memory in the flush_to_ldisc function. This flaw allows a local user to crash the system or read unauthorized random data from memory.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1462", 
@@ -70409,8 +70411,9 @@
         }
     }, 
     "CVE-2022-1679": {
-        "affected_versions": "v2.6.35-rc1 to unk", 
+        "affected_versions": "v2.6.35-rc1 to v6.0-rc1", 
         "breaks": "fb9987d0f748c983bb795a86f47522313f701a08", 
+        "cmt_msg": "ath9k: fix use-after-free in ath9k_hif_usb_rx_cb", 
         "cvss2": {
             "Access Complexity": "Low", 
             "Access Vector": "Local Access", 
@@ -70434,8 +70437,9 @@
             "score": 7.8
         }, 
         "cwe": "Use After Free", 
-        "fixes": "", 
-        "last_modified": "2022-06-27", 
+        "fixes": "0ac4827f78c7ffe8eef074bc010e7e34bc22f533", 
+        "last_affected_version": "5.18.17", 
+        "last_modified": "2022-08-22", 
         "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s Atheros wireless adapter driver in the way a user forces the ath9k_htc_wait_for_target function to fail with some input messages. This flaw allows a local user to crash or potentially escalate their privileges on the system.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1679", 
@@ -70643,8 +70647,9 @@
         }
     }, 
     "CVE-2022-1882": {
-        "affected_versions": "unk to unk", 
-        "breaks": "", 
+        "affected_versions": "v5.17-rc8 to v5.19-rc8", 
+        "breaks": "db8facfc9fafacefe8a835416a6b77c838088f8b", 
+        "cmt_msg": "watchqueue: make sure to serialize 'wqueue->defunct' properly", 
         "cvss2": {
             "Access Complexity": "Low", 
             "Access Vector": "Local Access", 
@@ -70668,8 +70673,9 @@
             "score": 7.8
         }, 
         "cwe": "Use After Free", 
-        "fixes": "", 
-        "last_modified": "2022-06-09", 
+        "fixes": "353f7988dd8413c47718f7ca79c030b6fb62cfe5", 
+        "last_affected_version": "5.18.14", 
+        "last_modified": "2022-08-22", 
         "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s pipes functionality in how a user performs manipulations with the pipe post_one_notification() after free_pipe_info() that is already called. This flaw allows a local user to crash or potentially escalate their privileges on the system.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1882", 
@@ -71398,7 +71404,7 @@
         "cmt_msg": "KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast()", 
         "fixes": "00b5f37189d24ac3ed46cb7f11742094778c46ce", 
         "last_affected_version": "5.17.1", 
-        "last_modified": "2022-06-27", 
+        "last_modified": "2022-08-22", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-2153", 
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-2153", 
@@ -71710,6 +71716,12 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-23042"
         }
     }, 
+    "CVE-2022-2308": {
+        "affected_versions": "unk to unk", 
+        "breaks": "", 
+        "fixes": "", 
+        "last_modified": "2022-08-22"
+    }, 
     "CVE-2022-2318": {
         "affected_versions": "v2.6.12-rc2 to v5.19-rc5", 
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
@@ -71791,11 +71803,11 @@
         }
     }, 
     "CVE-2022-2327": {
-        "affected_versions": "unk to v5.12-rc1-dontuse", 
-        "breaks": "", 
+        "affected_versions": "v2.6.12-rc2 to v5.12-rc1-dontuse", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
         "cmt_msg": "io_uring: remove any grabbing of context", 
         "fixes": "44526bedc2ff8fcd58552e3c5bae928524b6f13c", 
-        "last_modified": "2022-08-04"
+        "last_modified": "2022-08-22"
     }, 
     "CVE-2022-2380": {
         "affected_versions": "v2.6.12-rc2 to v5.18-rc1", 
@@ -72042,6 +72054,14 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-24959"
         }
     }, 
+    "CVE-2022-2503": {
+        "affected_versions": "unk to v5.19-rc1", 
+        "breaks": "", 
+        "cmt_msg": "dm verity: set DM_TARGET_IMMUTABLE feature flag", 
+        "fixes": "4caae58406f8ceb741603eee460d79bacca9b1b5", 
+        "last_affected_version": "5.18.1", 
+        "last_modified": "2022-08-22"
+    }, 
     "CVE-2022-25258": {
         "affected_versions": "v3.16-rc1 to v5.17-rc4", 
         "breaks": "37a3a533429ef9b3cc9f15a656c19623f0e88df7", 
@@ -72201,24 +72221,28 @@
         }
     }, 
     "CVE-2022-2585": {
-        "affected_versions": "v5.7-rc1 to unk", 
+        "affected_versions": "v5.7-rc1 to v6.0-rc1", 
         "breaks": "55e8c8eb2c7b6bf30e99423ccfe7ca032f498f59", 
-        "fixes": "", 
-        "last_modified": "2022-08-12"
+        "cmt_msg": "posix-cpu-timers: Cleanup CPU timers before freeing them during exec", 
+        "fixes": "e362359ace6f87c201531872486ff295df306d13", 
+        "last_affected_version": "5.18.17", 
+        "last_modified": "2022-08-22"
     }, 
     "CVE-2022-2586": {
         "affected_versions": "unk to v6.0-rc1", 
         "breaks": "", 
         "cmt_msg": "netfilter: nf_tables: do not allow SET_ID to refer to another table", 
         "fixes": "470ee20e069a6d05ae549f7d0ef2bdbcee6a81b2", 
-        "last_modified": "2022-08-16"
+        "last_affected_version": "5.18.17", 
+        "last_modified": "2022-08-22"
     }, 
     "CVE-2022-2588": {
         "affected_versions": "unk to v6.0-rc1", 
         "breaks": "", 
         "cmt_msg": "net_sched: cls_route: remove from list when handle is 0", 
         "fixes": "9ad36309e2719a884f946678e0296be10f0bb4c1", 
-        "last_modified": "2022-08-16"
+        "last_affected_version": "5.18.17", 
+        "last_modified": "2022-08-22"
     }, 
     "CVE-2022-2590": {
         "affected_versions": "v5.16-rc1 to unk", 
@@ -72679,6 +72703,14 @@
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-28390", 
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-28390"
         }
+    }, 
+    "CVE-2022-2873": {
+        "affected_versions": "unk to v5.19-rc1", 
+        "breaks": "", 
+        "cmt_msg": "i2c: ismt: prevent memory corruption in ismt_access()", 
+        "fixes": "690b2549b19563ec5ad53e5c82f6a944d910086e", 
+        "last_affected_version": "5.18.1", 
+        "last_modified": "2022-08-22"
     }, 
     "CVE-2022-28796": {
         "affected_versions": "v5.17-rc3 to v5.18-rc1", 
