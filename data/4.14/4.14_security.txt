@@ -1186,6 +1186,12 @@ CVEs fixed in 4.14.290:
   CVE-2022-1462: e9274a2732e1de3ca36076126284b4e5ffe6d587 tty: use new tty_insert_flip_string_and_push_buffer() in pty_write()
   CVE-2022-36879: 2c9d93e35cb857fc613ec9d58d690d332252747b xfrm: xfrm_policy: fix a possible double xfrm_pols_put() in xfrm_bundle_lookup()
 
+CVEs fixed in 4.14.291:
+  CVE-2022-1679: 62bc1ea5c7401d77eaf73d0c6a15f3d2e742856e ath9k: fix use-after-free in ath9k_hif_usb_rx_cb
+  CVE-2022-2153: bcf0a450fbaabe7e14d71f885525805b4f86e855 KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast()
+  CVE-2022-2588: d0cce31f328fa10e7256f314e6e044e13cdf6814 net_sched: cls_route: remove from list when handle is 0
+  CVE-2022-36946: 83636c64b796a7e44fa72f371777f803c1ef9e74 netfilter: nf_queue: do not allow packet truncation below transport header offset
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1320,25 +1326,25 @@ Outstanding CVEs:
   CVE-2022-1263: (unk) KVM: avoid NULL pointer dereference in kvm_dirty_ring_push 
   CVE-2022-1280: (unk) drm: avoid circular locks in drm_mode_getconnector 
   CVE-2022-1508: (unk) io_uring: reexpand under-reexpanded iters 
-  CVE-2022-1679: (unk) ath9k: fix use-after-free in ath9k_hif_usb_rx_cb 
   CVE-2022-1786: (unk) io_uring: remove io_identity 
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
   CVE-2022-20166: (unk) drivers core: Use sysfs_emit and sysfs_emit_at for show(device *...) functions 
   CVE-2022-20369: (unk) media: v4l2-mem2mem: Apply DST_QUEUE_OFF_BASE on MMAP buffers across ioctls 
   CVE-2022-21499: (unk) lockdown: also lock down previous kgdb use 
-  CVE-2022-2153: (unk) KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast() 
   CVE-2022-2209: (unk)  
   CVE-2022-2308: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
-  CVE-2022-23816: (unk)  
+  CVE-2022-23816: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
   CVE-2022-2586: (unk) netfilter: nf_tables: do not allow SET_ID to refer to another table 
-  CVE-2022-2588: (unk) net_sched: cls_route: remove from list when handle is 0 
   CVE-2022-26373: (unk) x86/speculation: Add RSB VM Exit protections 
-  CVE-2022-2873: (unk) i2c: ismt: prevent memory corruption in ismt_access() 
+  CVE-2022-2938: (unk) psi: Fix uaf issue when psi trigger is destroyed while being polled 
+  CVE-2022-2959: (unk) pipe: Fix missing lock in pipe_resize_ring() 
+  CVE-2022-2961: (unk)  
+  CVE-2022-2978: (unk)  
   CVE-2022-29900: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 
+  CVE-2022-2991: (unk) remove the lightnvm subsystem 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
-  CVE-2022-36946: (unk) netfilter: nf_queue: do not allow packet truncation below transport header offset 

@@ -67645,7 +67645,7 @@
         "cmt_msg": "bpf: Verifer, adjust_scalar_min_max_vals to always call update_reg_bounds()", 
         "fixes": "294f2fc6da27620a506e6c050241655459ccd6bd", 
         "last_affected_version": "5.4.209", 
-        "last_modified": "2022-08-12", 
+        "last_modified": "2022-08-26", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-4159", 
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-4159", 
@@ -70203,8 +70203,8 @@
         }
     }, 
     "CVE-2022-1462": {
-        "affected_versions": "unk to v5.19-rc7", 
-        "breaks": "", 
+        "affected_versions": "v2.6.12-rc2 to v5.19-rc7", 
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
         "cmt_msg": "tty: use new tty_insert_flip_string_and_push_buffer() in pty_write()", 
         "cvss2": {
             "Access Complexity": "Medium", 
@@ -70231,7 +70231,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')", 
         "fixes": "a501ab75e7624d133a5a3c7ec010687c8b961d23", 
         "last_affected_version": "5.18.12", 
-        "last_modified": "2022-08-22", 
+        "last_modified": "2022-08-26", 
         "nvd_text": "An out-of-bounds read flaw was found in the Linux kernel\u2019s TeleTYpe subsystem. The issue occurs in how a user triggers a race condition using ioctls TIOCSPTLCK and TIOCGPTPEER and TIOCSTI and TCXONC with leakage of memory in the flush_to_ldisc function. This flaw allows a local user to crash the system or read unauthorized random data from memory.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1462", 
@@ -70439,7 +70439,7 @@
         "cwe": "Use After Free", 
         "fixes": "0ac4827f78c7ffe8eef074bc010e7e34bc22f533", 
         "last_affected_version": "5.18.17", 
-        "last_modified": "2022-08-22", 
+        "last_modified": "2022-08-26", 
         "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s Atheros wireless adapter driver in the way a user forces the ath9k_htc_wait_for_target function to fail with some input messages. This flaw allows a local user to crash or potentially escalate their privileges on the system.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1679", 
@@ -71404,7 +71404,7 @@
         "cmt_msg": "KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast()", 
         "fixes": "00b5f37189d24ac3ed46cb7f11742094778c46ce", 
         "last_affected_version": "5.17.1", 
-        "last_modified": "2022-08-22", 
+        "last_modified": "2022-08-26", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-2153", 
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-2153", 
@@ -71827,10 +71827,12 @@
         }
     }, 
     "CVE-2022-23816": {
-        "affected_versions": "unk to unk", 
+        "affected_versions": "unk to v5.19-rc7", 
         "breaks": "", 
-        "fixes": "", 
-        "last_modified": "2022-07-13", 
+        "cmt_msg": "x86/kvm/vmx: Make noinstr clean", 
+        "fixes": "742ab6df974ae8384a2dd213db1a3a06cf6d8936", 
+        "last_affected_version": "5.18.13", 
+        "last_modified": "2022-08-26", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23816", 
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-23816", 
@@ -72234,7 +72236,7 @@
         "cmt_msg": "netfilter: nf_tables: do not allow SET_ID to refer to another table", 
         "fixes": "470ee20e069a6d05ae549f7d0ef2bdbcee6a81b2", 
         "last_affected_version": "5.18.17", 
-        "last_modified": "2022-08-22"
+        "last_modified": "2022-08-26"
     }, 
     "CVE-2022-2588": {
         "affected_versions": "unk to v6.0-rc1", 
@@ -72242,13 +72244,14 @@
         "cmt_msg": "net_sched: cls_route: remove from list when handle is 0", 
         "fixes": "9ad36309e2719a884f946678e0296be10f0bb4c1", 
         "last_affected_version": "5.18.17", 
-        "last_modified": "2022-08-22"
+        "last_modified": "2022-08-26"
     }, 
     "CVE-2022-2590": {
         "affected_versions": "v5.16-rc1 to unk", 
         "breaks": "9ae0f87d009ca6c4aab2882641ddfc319727e3db", 
-        "fixes": "", 
-        "last_modified": "2022-08-12"
+        "cmt_msg": "mm/gup: fix FOLL_FORCE COW security issue and remove FOLL_COW", 
+        "fixes": "5535be3099717646781ce1540cf725965d680e7b", 
+        "last_modified": "2022-08-26"
     }, 
     "CVE-2022-26365": {
         "affected_versions": "v2.6.12-rc2 to v5.19-rc6", 
@@ -72705,12 +72708,12 @@
         }
     }, 
     "CVE-2022-2873": {
-        "affected_versions": "unk to v5.19-rc1", 
-        "breaks": "", 
+        "affected_versions": "v5.11-rc1 to v5.19-rc1", 
+        "breaks": "5e9a97b1f4491b8b65874901ad084348fcaba327", 
         "cmt_msg": "i2c: ismt: prevent memory corruption in ismt_access()", 
         "fixes": "690b2549b19563ec5ad53e5c82f6a944d910086e", 
         "last_affected_version": "5.18.1", 
-        "last_modified": "2022-08-22"
+        "last_modified": "2022-08-26"
     }, 
     "CVE-2022-28796": {
         "affected_versions": "v5.17-rc3 to v5.18-rc1", 
@@ -72832,6 +72835,14 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-29156"
         }
     }, 
+    "CVE-2022-2938": {
+        "affected_versions": "unk to v5.17-rc2", 
+        "breaks": "", 
+        "cmt_msg": "psi: Fix uaf issue when psi trigger is destroyed while being polled", 
+        "fixes": "a06247c6804f1a7c86a2e5398a4c1f1db1471848", 
+        "last_affected_version": "5.16.4", 
+        "last_modified": "2022-08-26"
+    }, 
     "CVE-2022-29581": {
         "affected_versions": "v4.14 to v5.18-rc4", 
         "breaks": "35c55fc156d85a396a975fc17636f560fc02fd65", 
@@ -72912,6 +72923,26 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-29582"
         }
     }, 
+    "CVE-2022-2959": {
+        "affected_versions": "unk to v5.19-rc1", 
+        "breaks": "", 
+        "cmt_msg": "pipe: Fix missing lock in pipe_resize_ring()", 
+        "fixes": "189b0ddc245139af81198d1a3637cac74f96e13a", 
+        "last_affected_version": "5.18.1", 
+        "last_modified": "2022-08-26"
+    }, 
+    "CVE-2022-2961": {
+        "affected_versions": "unk to unk", 
+        "breaks": "", 
+        "fixes": "", 
+        "last_modified": "2022-08-26"
+    }, 
+    "CVE-2022-2978": {
+        "affected_versions": "unk to unk", 
+        "breaks": "", 
+        "fixes": "", 
+        "last_modified": "2022-08-26"
+    }, 
     "CVE-2022-29900": {
         "affected_versions": "unk to v5.19-rc7", 
         "breaks": "", 
@@ -72945,6 +72976,13 @@
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-29901", 
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-29901"
         }
+    }, 
+    "CVE-2022-2991": {
+        "affected_versions": "unk to v5.15-rc1", 
+        "breaks": "", 
+        "cmt_msg": "remove the lightnvm subsystem", 
+        "fixes": "9ea9b9c48387edc101d56349492ad9c0492ff78d", 
+        "last_modified": "2022-08-26"
     }, 
     "CVE-2022-29968": {
         "affected_versions": "v5.16-rc1 to v5.18-rc5", 
@@ -73528,6 +73566,6 @@
         "cmt_msg": "netfilter: nf_queue: do not allow packet truncation below transport header offset", 
         "fixes": "99a63d36cb3ed5ca3aa6fcb64cffbeaf3b0fb164", 
         "last_affected_version": "5.18.15", 
-        "last_modified": "2022-08-12"
+        "last_modified": "2022-08-26"
     }
 }
