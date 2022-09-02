@@ -1,37 +1,42 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 26Aug22 15:08
+## Last Update - 02Sep22 13:27
 
 ### **New CVEs Added:**
 
-[CVE-2022-2938](cves/CVE-2022-2938)  
-[CVE-2022-2959](cves/CVE-2022-2959)  
-[CVE-2022-2961](cves/CVE-2022-2961)  
-[CVE-2022-2978](cves/CVE-2022-2978)  
-[CVE-2022-2991](cves/CVE-2022-2991)  
+[CVE-2020-27784](cves/CVE-2020-27784)  
+[CVE-2022-21385](cves/CVE-2022-21385)  
+[CVE-2022-2663](cves/CVE-2022-2663)  
+[CVE-2022-2905](cves/CVE-2022-2905)  
+[CVE-2022-2964](cves/CVE-2022-2964)  
+[CVE-2022-3028](cves/CVE-2022-3028)  
+[CVE-2022-3061](cves/CVE-2022-3061)  
+[CVE-2022-3078](cves/CVE-2022-3078)  
+[CVE-2022-39188](cves/CVE-2022-39188)  
+[CVE-2022-39189](cves/CVE-2022-39189)  
+[CVE-2022-39190](cves/CVE-2022-39190)  
 
 
 ### **New Versions Checked:**
 
-[4.14.291](streams/4.14)  
-[4.19.256](streams/4.19)  
-[4.9.326](streams/4.9)  
-[5.10.138](streams/5.10)  
-[5.15.63](streams/5.15)  
-[5.19.4](streams/5.19)  
-[5.4.211](streams/5.4)  
+[5.10.140](streams/5.10)  
+[5.15.64](streams/5.15)  
+[5.19.6](streams/5.19)  
 
 
 ### **Updated CVEs:**
 
-[CVE-2021-4159](cves/CVE-2021-4159)  
-[CVE-2022-1462](cves/CVE-2022-1462)  
-[CVE-2022-1679](cves/CVE-2022-1679)  
-[CVE-2022-2153](cves/CVE-2022-2153)  
-[CVE-2022-23816](cves/CVE-2022-23816)  
+[CVE-2020-36557](cves/CVE-2020-36557)  
+[CVE-2020-36558](cves/CVE-2020-36558)  
+[CVE-2022-20369](cves/CVE-2022-20369)  
+[CVE-2022-2308](cves/CVE-2022-2308)  
+[CVE-2022-2503](cves/CVE-2022-2503)  
 [CVE-2022-2586](cves/CVE-2022-2586)  
 [CVE-2022-2588](cves/CVE-2022-2588)  
 [CVE-2022-2590](cves/CVE-2022-2590)  
-[CVE-2022-2873](cves/CVE-2022-2873)  
-[CVE-2022-36946](cves/CVE-2022-36946)  
+[CVE-2022-26373](cves/CVE-2022-26373)  
+[CVE-2022-2639](cves/CVE-2022-2639)  
+[CVE-2022-2938](cves/CVE-2022-2938)  
+[CVE-2022-2959](cves/CVE-2022-2959)  
+[CVE-2022-2991](cves/CVE-2022-2991)  

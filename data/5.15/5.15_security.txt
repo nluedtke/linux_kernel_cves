@@ -90,6 +90,7 @@ CVEs fixed in 5.15.23:
 CVEs fixed in 5.15.24:
   CVE-2022-25258: 3e33e5c67cb9ebd2b791b9a9fb2b71daacebd8d4 USB: gadget: validate interface OS descriptor requests
   CVE-2022-25375: 2da3b0ab54fb7f4d7c5a82757246d0ee33a47197 usb: gadget: rndis: check size of RNDIS_MSG_SET command
+  CVE-2022-2964: ffd0393adcdcefab7e131488e10dcfde5e02d6eb net: usb: ax88179_178a: Fix out-of-bounds accesses in RX fixup
 
 CVEs fixed in 5.15.25:
   CVE-2022-0847: 114e9f141822e6977633d322c1b03e89bd209932 lib/iov_iter: initialize "flags" in new pipe_buffer
@@ -153,6 +154,7 @@ CVEs fixed in 5.15.33:
   CVE-2022-28389: 37f07ad24866c6c1423b37b131c9a42414bcf8a1 can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
   CVE-2022-28390: 459b19f42fd5e031e743dfa119f44aba0b62ff97 can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-30594: b6d75218ff65f4d63c9cf4986f6c55666fb90a1a ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE
+  CVE-2022-3078: 9dd2fd7a1f84c947561af29424c5ddcecfcf2cbe media: vidtv: Check for null return of vzalloc
 
 CVEs fixed in 5.15.34:
   CVE-2022-1263: 226b4327ef5c88572fc12187193f1b5073c10837 KVM: avoid NULL pointer dereference in kvm_dirty_ring_push
@@ -247,12 +249,18 @@ CVEs fixed in 5.15.59:
 
 CVEs fixed in 5.15.60:
   CVE-2022-26373: 7fcd99e889c0634f8275ae7a6b06aec4a22c8715 x86/speculation: Add RSB VM Exit protections
+  CVE-2022-39189: 92343314d34e04da0923cefd3be67521d706fa35 KVM: x86: do not report a vCPU as preempted outside instruction boundaries
 
 CVEs fixed in 5.15.61:
   CVE-2022-1679: 03ca957c5f7b55660957eda20b5db4110319ac7a ath9k: fix use-after-free in ath9k_hif_usb_rx_cb
   CVE-2022-2585: 9e255ed238fc67058df87b0388ad6d4b2ef3a2bd posix-cpu-timers: Cleanup CPU timers before freeing them during exec
   CVE-2022-2586: faafd9286f1355c76fe9ac3021c280297213330e netfilter: nf_tables: do not allow SET_ID to refer to another table
   CVE-2022-2588: 57bbb691a93bd39d0644c5c879b354232d0e0eed net_sched: cls_route: remove from list when handle is 0
+
+CVEs fixed in 5.15.64:
+  CVE-2022-2905: 4f672112f8665102a5842c170be1713f8ff95919 bpf: Don't use tnum_range on array range checking for poke descriptors
+  CVE-2022-3028: 103bd319c0fc90f1cb013c3a508615e6df8af823 af_key: Do not call xfrm_probe_algs in parallel
+  CVE-2022-39190: 51f192ae71c3431aa69a988449ee2fd288e57648 netfilter: nf_tables: disallow binding to already bound chain
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -324,6 +332,9 @@ Outstanding CVEs:
   CVE-2022-23825: (unk)  
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
+  CVE-2022-2663: (unk)  
   CVE-2022-26878: (unk)  
   CVE-2022-2961: (unk)  
   CVE-2022-2978: (unk)  
+  CVE-2022-3061: (unk) video: fbdev: i740fb: Error out if 'pixclock' equals zero 
+  CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 

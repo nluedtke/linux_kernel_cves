@@ -26,6 +26,7 @@ CVEs fixed in 5.17.2:
   CVE-2022-28389: 42a4b0dfd365c4f77f96fd1f73a64b47ae443a38 can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
   CVE-2022-28390: 3f71f499395545119383f10760b8b19703d2a7dd can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-30594: 4d51bbc8a3799febf50471eb6888b1b58e87111e ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE
+  CVE-2022-3078: 79d17521953d0a16f4df91be59a543a54d1d8c4a media: vidtv: Check for null return of vzalloc
 
 CVEs fixed in 5.17.3:
   CVE-2022-1263: e8d7f0dad29e634e26d4614cfbd081514c16e042 KVM: avoid NULL pointer dereference in kvm_dirty_ring_push
@@ -162,11 +163,15 @@ Outstanding CVEs:
   CVE-2022-2590: (unk) mm/gup: fix FOLL_FORCE COW security issue and remove FOLL_COW 
   CVE-2022-26365: (unk) xen/blkfront: fix leaking data in shared pages 
   CVE-2022-26373: (unk) x86/speculation: Add RSB VM Exit protections 
+  CVE-2022-2663: (unk)  
   CVE-2022-26878: (unk)  
+  CVE-2022-2905: (unk) bpf: Don't use tnum_range on array range checking for poke descriptors 
   CVE-2022-2961: (unk)  
   CVE-2022-2978: (unk)  
   CVE-2022-29900: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 
+  CVE-2022-3028: (unk) af_key: Do not call xfrm_probe_algs in parallel 
+  CVE-2022-3061: (unk) video: fbdev: i740fb: Error out if 'pixclock' equals zero 
   CVE-2022-33740: (unk) xen/netfront: fix leaking data in shared pages 
   CVE-2022-33741: (unk) xen/netfront: force data bouncing when backend is untrusted 
   CVE-2022-33742: (unk) xen/blkfront: force data bouncing when backend is untrusted 
@@ -176,3 +181,6 @@ Outstanding CVEs:
   CVE-2022-36123: (unk) x86: Clear .brk area at early boot 
   CVE-2022-36879: (unk) xfrm: xfrm_policy: fix a possible double xfrm_pols_put() in xfrm_bundle_lookup() 
   CVE-2022-36946: (unk) netfilter: nf_queue: do not allow packet truncation below transport header offset 
+  CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
+  CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
+  CVE-2022-39190: (unk) netfilter: nf_tables: disallow binding to already bound chain 

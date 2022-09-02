@@ -338,6 +338,7 @@ CVEs fixed in 5.10.100:
 CVEs fixed in 5.10.101:
   CVE-2022-25258: 22ec1004728548598f4f5b4a079a7873409eacfd USB: gadget: validate interface OS descriptor requests
   CVE-2022-25375: fb4ff0f96de37c44236598e8b53fe43b1df36bf3 usb: gadget: rndis: check size of RNDIS_MSG_SET command
+  CVE-2022-2964: 758290defe93a865a2880d10c5d5abd288b64b5d net: usb: ax88179_178a: Fix out-of-bounds accesses in RX fixup
 
 CVEs fixed in 5.10.102:
   CVE-2022-0847: b19ec7afa9297d862ed86443e0164643b97250ab lib/iov_iter: initialize "flags" in new pipe_buffer
@@ -392,6 +393,7 @@ CVEs fixed in 5.10.110:
   CVE-2022-28389: 0801a51d79389282c1271e623613b2e1886e071e can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
   CVE-2022-28390: b417f9c50586588754b2b0453a1f99520cf7c0e8 can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-30594: 5a41a3033a9344d7683340e3d83f5435ffb06501 ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE
+  CVE-2022-3078: 663e7a72871f89f7a10cc8d7b2f17f27c64e071d media: vidtv: Check for null return of vzalloc
 
 CVEs fixed in 5.10.111:
   CVE-2021-4197: 4665722d36ad13c6abc6b2ef3fe5150c0a92d870 cgroup: Use open-time credentials for process migraton perm checks
@@ -491,6 +493,11 @@ CVEs fixed in 5.10.137:
   CVE-2022-2586: 1a4b18b1ff11ba26f9a852019d674fde9d1d1cff netfilter: nf_tables: do not allow SET_ID to refer to another table
   CVE-2022-2588: 7018f03d97daf344e49b16200caf4363a1407cab net_sched: cls_route: remove from list when handle is 0
 
+CVEs fixed in 5.10.140:
+  CVE-2022-2905: e8979807178434db8ceaa84dfcd44363e71e50bb bpf: Don't use tnum_range on array range checking for poke descriptors
+  CVE-2022-3028: c5c4d4c9806dadac7bc82f9c29ef4e1b78894775 af_key: Do not call xfrm_probe_algs in parallel
+  CVE-2022-39190: c08a104a8bce832f6e7a4e8d9ac091777b9982ea netfilter: nf_tables: disallow binding to already bound chain
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -575,11 +582,14 @@ Outstanding CVEs:
   CVE-2022-1508: (unk) io_uring: reexpand under-reexpanded iters 
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
   CVE-2022-2209: (unk)  
-  CVE-2022-2308: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
+  CVE-2022-2663: (unk)  
   CVE-2022-2961: (unk)  
   CVE-2022-2978: (unk)  
   CVE-2022-2991: (unk) remove the lightnvm subsystem 
+  CVE-2022-3061: (unk) video: fbdev: i740fb: Error out if 'pixclock' equals zero 
+  CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
+  CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 

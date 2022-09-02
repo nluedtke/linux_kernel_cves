@@ -970,6 +970,7 @@ CVEs fixed in 4.9.240:
 
 CVEs fixed in 4.9.241:
   CVE-2020-25705: df838165a187b7c699ec372a2a136f9873112776 icmp: randomize the global rate limiter
+  CVE-2020-27784: 4a47581cf010dc351d8069978080fdb000c0776d usb: gadget: function: printer: fix use-after-free in __lock_acquire
 
 CVEs fixed in 4.9.242:
   CVE-2020-25656: 04a6e5aa75e7a9432df0443a17ab7c8dd005cc9b vt: keyboard, extend func_buf_lock to readers
@@ -1218,6 +1219,9 @@ CVEs fixed in 4.9.302:
   CVE-2022-25258: f3bcd744b0bc8dcc6cdb3ac5be20f54aecfb78a4 USB: gadget: validate interface OS descriptor requests
   CVE-2022-25375: ff0a90739925734c91c7e39befe3f4378e0c1369 usb: gadget: rndis: check size of RNDIS_MSG_SET command
 
+CVEs fixed in 4.9.303:
+  CVE-2022-2964: 711b6bf3fb052f0a6b5b3205d50e30c0c2980382 net: usb: ax88179_178a: Fix out-of-bounds accesses in RX fixup
+
 CVEs fixed in 4.9.304:
   CVE-2022-26966: 89260e0e191e8a3a9872f72836bdf0641853c87f sr9700: sanity check for packet length
   CVE-2022-27223: 958b6ab4d70bf991e8c90233504d4cb863aaef8a USB: gadget: validate endpoint index for xilinx udc
@@ -1256,9 +1260,6 @@ CVEs fixed in 4.9.311:
   CVE-2022-2380: e6766bb02614ad69218dcd849668524e46916e11 video: fbdev: sm712fb: Fix crash in smtcfb_read()
   CVE-2022-28390: e9c4ee674586ff0b098d17638af719aa56c9c272 can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-30594: 4f96b94a8342fac058117962f1a76fc7ebd1c245 ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE
-
-CVEs fixed in 4.9.312:
-  CVE-2022-2639: 1aba176280dcd0eb08e291bc59ba6067df22af98 openvswitch: fix OOB access in reserve_sfa_size()
 
 CVEs fixed in 4.9.313:
   CVE-2022-1734: 4721695be941626e4b18b89e0641e36fc385cfd8 nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs
@@ -1490,10 +1491,10 @@ Outstanding CVEs:
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
   CVE-2022-20166: (unk) drivers core: Use sysfs_emit and sysfs_emit_at for show(device *...) functions 
   CVE-2022-20369: (unk) media: v4l2-mem2mem: Apply DST_QUEUE_OFF_BASE on MMAP buffers across ioctls 
+  CVE-2022-21385: (unk) net/rds: fix warn in rds_message_alloc_sgs 
   CVE-2022-21499: (unk) lockdown: also lock down previous kgdb use 
   CVE-2022-2153: (unk) KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast() 
   CVE-2022-2209: (unk)  
-  CVE-2022-2308: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
   CVE-2022-23816: (unk) x86/kvm/vmx: Make noinstr clean 
@@ -1501,12 +1502,17 @@ Outstanding CVEs:
   CVE-2022-25265: (unk)  
   CVE-2022-2586: (unk) netfilter: nf_tables: do not allow SET_ID to refer to another table 
   CVE-2022-26373: (unk) x86/speculation: Add RSB VM Exit protections 
+  CVE-2022-2663: (unk)  
   CVE-2022-28388: (unk) can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path 
-  CVE-2022-2938: (unk) psi: Fix uaf issue when psi trigger is destroyed while being polled 
-  CVE-2022-2959: (unk) pipe: Fix missing lock in pipe_resize_ring() 
   CVE-2022-2961: (unk)  
   CVE-2022-2978: (unk)  
   CVE-2022-29900: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-2991: (unk) remove the lightnvm subsystem 
+  CVE-2022-3028: (unk) af_key: Do not call xfrm_probe_algs in parallel 
+  CVE-2022-3061: (unk) video: fbdev: i740fb: Error out if 'pixclock' equals zero 
+  CVE-2022-3078: (unk) media: vidtv: Check for null return of vzalloc 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
+  CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
+  CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
+  CVE-2022-39190: (unk) netfilter: nf_tables: disallow binding to already bound chain 

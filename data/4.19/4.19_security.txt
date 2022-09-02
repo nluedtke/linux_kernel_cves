@@ -111,6 +111,7 @@ CVEs fixed in 4.19.35:
 CVEs fixed in 4.19.36:
   CVE-2019-15292: 6c42507f426b40c63e8eb98ce6dd4afbc7efcdb5 appletalk: Fix use-after-free in atalk_proc_exit
   CVE-2019-9857: ca306c17d2edcc8aa3bf1724a5cb1ecefc31ef3b inotify: Fix fsnotify_mark refcount leak in inotify_update_existing_watch()
+  CVE-2022-21385: 5be4bb315de29ad3ae558a8f6b92f13a1b4bfb84 net/rds: fix warn in rds_message_alloc_sgs
 
 CVEs fixed in 4.19.37:
   CVE-2019-11599: 6ff17bc5936e5fab33de8064dc0690f6c8c789ca coredump: fix race condition between mmget_not_zero()/get_task_mm() and core dumping
@@ -589,6 +590,9 @@ CVEs fixed in 4.19.153:
   CVE-2020-0423: 35cc2facc2a5ff52b9aa03f2dc81dcb000d97da3 binder: fix UAF when releasing todo list
   CVE-2020-25705: d6c552505c0d1719dda42b4af2def0618bd7bf54 icmp: randomize the global rate limiter
 
+CVEs fixed in 4.19.154:
+  CVE-2020-27784: cedb0187b8ba929c3f76f28e6bc25804d65f8a54 usb: gadget: function: printer: fix use-after-free in __lock_acquire
+
 CVEs fixed in 4.19.155:
   CVE-2020-25656: 7e3ba72e5b9376e12839ea347c49fc4108244b0c vt: keyboard, extend func_buf_lock to readers
   CVE-2020-25668: 619e366268e0430687d07b24b48f7382fc088c9f tty: make FONTX ioctl use the tty pointer they were actually passed
@@ -885,6 +889,7 @@ CVEs fixed in 4.19.230:
 
 CVEs fixed in 4.19.231:
   CVE-2022-20008: c91b06297563e84ac072464fe6cc141cc15435f0 mmc: block: fix read single on recovery logic
+  CVE-2022-2964: 1668781ed24da43498799aa4f65714a7de201930 net: usb: ax88179_178a: Fix out-of-bounds accesses in RX fixup
 
 CVEs fixed in 4.19.232:
   CVE-2022-26966: dde5ddf02a47487dd6efcc7077307f1d4e1ba337 sr9700: sanity check for packet length
@@ -932,7 +937,6 @@ CVEs fixed in 4.19.238:
 
 CVEs fixed in 4.19.240:
   CVE-2022-1204: de55a1338e6a48ff1e41ea8db1432496fbe2a62b ax25: Fix refcount leaks caused by ax25_cb_del()
-  CVE-2022-2639: bbbf059337f9a74285c1cf088ff85ee92d149e64 openvswitch: fix OOB access in reserve_sfa_size()
   CVE-2022-28388: 8eb78da898079c0d7250c32ebf0c35fb81737abe can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
 
 CVEs fixed in 4.19.241:
@@ -1124,17 +1128,21 @@ Outstanding CVEs:
   CVE-2022-20369: (unk) media: v4l2-mem2mem: Apply DST_QUEUE_OFF_BASE on MMAP buffers across ioctls 
   CVE-2022-21499: (unk) lockdown: also lock down previous kgdb use 
   CVE-2022-2209: (unk)  
-  CVE-2022-2308: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
   CVE-2022-23816: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
-  CVE-2022-2938: (unk) psi: Fix uaf issue when psi trigger is destroyed while being polled 
-  CVE-2022-2959: (unk) pipe: Fix missing lock in pipe_resize_ring() 
+  CVE-2022-2663: (unk)  
   CVE-2022-2961: (unk)  
   CVE-2022-2978: (unk)  
   CVE-2022-29900: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-2991: (unk) remove the lightnvm subsystem 
+  CVE-2022-3028: (unk) af_key: Do not call xfrm_probe_algs in parallel 
+  CVE-2022-3061: (unk) video: fbdev: i740fb: Error out if 'pixclock' equals zero 
+  CVE-2022-3078: (unk) media: vidtv: Check for null return of vzalloc 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
+  CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
+  CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
+  CVE-2022-39190: (unk) netfilter: nf_tables: disallow binding to already bound chain 
