@@ -662,6 +662,7 @@ CVEs fixed in 5.4.189:
   CVE-2022-2977: a27ed2f3695baf15f9b34d2d7a1f9fc105539a81 tpm: fix reference counting for struct tpm_chip
   CVE-2022-30594: 2458ecd21f29a3e5571d7d97764c043083deed5e ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE
   CVE-2022-3202: e19c3149a80e4fc8df298d6546640e01601f3758 jfs: prevent NULL deref in diFree
+  CVE-2022-3239: 92f84aa82dfaa8382785874277b0c4bedec89a68 media: em28xx: initialize refcount before kref_get
 
 CVEs fixed in 5.4.190:
   CVE-2022-1204: 9e1e088a57c23251f1cfe9601bbd90ade2ea73b9 ax25: Fix refcount leaks caused by ax25_cb_del()
@@ -741,11 +742,13 @@ CVEs fixed in 5.4.211:
   CVE-2022-2153: 8cdba919acefdd6fea5dd2b77a119f54fb88ce11 KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast()
   CVE-2022-2586: fab2f61cc3b0e441b1749f017cfee75f9bbaded7 netfilter: nf_tables: do not allow SET_ID to refer to another table
   CVE-2022-2588: 1fcd691cc2e7f808eca2e644adee1f1c6c1527fd net_sched: cls_route: remove from list when handle is 0
+  CVE-2022-41222: 79e522101cf40735f1936a10312e17f937b8dcad mm/mremap: hold the rmap lock in write mode when moving page table entries.
 
 CVEs fixed in 5.4.212:
   CVE-2022-3028: 8ee27a4f0f1ad36d430221842767880df6494147 af_key: Do not call xfrm_probe_algs in parallel
 
 CVEs fixed in 5.4.213:
+  CVE-2022-2663: 36f7b71f8ad8e4d224b45f7d6ecfeff63b091547 netfilter: nf_conntrack_irc: Fix forged IP logic
   CVE-2022-40307: 8028ff4cdbb3f20d3c1c04be33a83bab0cb94997 efi: capsule-loader: Fix use-after-free in efi_capsule_write
 
 Outstanding CVEs:
@@ -851,7 +854,6 @@ Outstanding CVEs:
   CVE-2022-23816: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
-  CVE-2022-2663: (unk)  
   CVE-2022-2961: (unk)  
   CVE-2022-2978: (unk)  
   CVE-2022-29900: (unk) x86/kvm/vmx: Make noinstr clean 
@@ -873,3 +875,4 @@ Outstanding CVEs:
   CVE-2022-39842: (unk) video: fbdev: pxa3xx-gcu: Fix integer overflow in pxa3xx_gcu_write 
   CVE-2022-40133: (unk)  
   CVE-2022-40768: (unk)  
+  CVE-2022-41218: (unk)  
