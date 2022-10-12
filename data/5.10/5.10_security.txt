@@ -373,6 +373,7 @@ CVEs fixed in 5.10.106:
 CVEs fixed in 5.10.108:
   CVE-2022-20158: 70b7b3c055fd4a464da8da55ff4c1f84269f9b02 net/packet: fix slab-out-of-bounds access in packet_recvmsg()
   CVE-2022-20368: 70b7b3c055fd4a464da8da55ff4c1f84269f9b02 net/packet: fix slab-out-of-bounds access in packet_recvmsg()
+  CVE-2022-20423: 28bc0267399f42f987916a7174e2e32f0833cc65 usb: gadget: rndis: prevent integer overflow in rndis_set_response()
   CVE-2022-27666: 9248694dac20eda06e22d8503364dc9d03df4e2f esp: Fix possible buffer overflow in ESP transformation
 
 CVEs fixed in 5.10.109:
@@ -491,6 +492,7 @@ CVEs fixed in 5.10.136:
 
 CVEs fixed in 5.10.137:
   CVE-2022-1679: eccd7c3e2596b574241a7670b5b53f5322f470e5 ath9k: fix use-after-free in ath9k_hif_usb_rx_cb
+  CVE-2022-20422: 353b4673d01c512303c45cf2346f630cda73b5c9 arm64: fix oops in concurrently setting insn_emulation sysctls
   CVE-2022-2153: ac7de8c2ba1292856fdd4a4c0764669b9607cf0a KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast()
   CVE-2022-2585: 541840859ace9c2ccebc32fa9e376c7bd3def490 posix-cpu-timers: Cleanup CPU timers before freeing them during exec
   CVE-2022-2586: 1a4b18b1ff11ba26f9a852019d674fde9d1d1cff netfilter: nf_tables: do not allow SET_ID to refer to another table
@@ -501,6 +503,12 @@ CVEs fixed in 5.10.140:
   CVE-2022-2905: e8979807178434db8ceaa84dfcd44363e71e50bb bpf: Don't use tnum_range on array range checking for poke descriptors
   CVE-2022-3028: c5c4d4c9806dadac7bc82f9c29ef4e1b78894775 af_key: Do not call xfrm_probe_algs in parallel
   CVE-2022-39190: c08a104a8bce832f6e7a4e8d9ac091777b9982ea netfilter: nf_tables: disallow binding to already bound chain
+
+CVEs fixed in 5.10.141:
+  CVE-2022-42703: 98f401d36396134c0c86e9e3bd00b6b6b028b521 mm/rmap: Fix anon_vma->degree ambiguity leading to double-reuse
+
+CVEs fixed in 5.10.142:
+  CVE-2022-20421: 9629f2dfdb1dad294b468038ff8e161e94d0b609 binder: fix UAF of ref->proc caused by race condition
 
 CVEs fixed in 5.10.143:
   CVE-2022-2663: e12ce30fe593dd438c5b392290ad7316befc11ca netfilter: nf_conntrack_irc: Fix forged IP logic
@@ -595,6 +603,8 @@ Outstanding CVEs:
   CVE-2022-1280: (unk) drm: avoid circular locks in drm_mode_getconnector 
   CVE-2022-1508: (unk) io_uring: reexpand under-reexpanded iters 
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
+  CVE-2022-20409: (unk) io_uring: remove io_identity 
+  CVE-2022-20424: (unk) io_uring: remove io_identity 
   CVE-2022-2209: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
@@ -606,6 +616,8 @@ Outstanding CVEs:
   CVE-2022-3169: (unk)  
   CVE-2022-3176: (unk) io_uring: fix UAF due to missing POLLFREE handling 
   CVE-2022-3303: (unk) ALSA: pcm: oss: Fix race at SNDCTL_DSP_SYNC 
+  CVE-2022-3424: (unk)  
+  CVE-2022-3435: (unk)  
   CVE-2022-36280: (unk)  
   CVE-2022-36402: (unk)  
   CVE-2022-38096: (unk)  
@@ -613,7 +625,7 @@ Outstanding CVEs:
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
   CVE-2022-40133: (unk)  
-  CVE-2022-40768: (unk)  
+  CVE-2022-40768: (unk) scsi: stex: Properly zero out the passthrough command structure 
   CVE-2022-41218: (unk)  
   CVE-2022-41848: (unk)  
   CVE-2022-41849: (unk)  

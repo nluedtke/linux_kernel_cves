@@ -80,6 +80,7 @@ CVEs fixed in 5.16.15:
 CVEs fixed in 5.16.17:
   CVE-2022-20158: ef591b35176029fdefea38e8388ffa371e18f4b2 net/packet: fix slab-out-of-bounds access in packet_recvmsg()
   CVE-2022-20368: ef591b35176029fdefea38e8388ffa371e18f4b2 net/packet: fix slab-out-of-bounds access in packet_recvmsg()
+  CVE-2022-20423: df7e088d51cdf78b1a0bf1f3d405c2593295c7b0 usb: gadget: rndis: prevent integer overflow in rndis_set_response()
 
 CVEs fixed in 5.16.18:
   CVE-2022-1015: 2c8ebdaa7c9755b85d90c07530210e83665bad9a netfilter: nf_tables: validate registers coming from userspace.
@@ -195,6 +196,8 @@ Outstanding CVEs:
   CVE-2022-1973: (unk) fs/ntfs3: Fix invalid free in log_replay 
   CVE-2022-1974: (unk) nfc: replace improper check device_is_registered() in netlink related functions 
   CVE-2022-1975: (unk) NFC: netlink: fix sleep in atomic bug when firmware download timeout 
+  CVE-2022-20421: (unk) binder: fix UAF of ref->proc caused by race condition 
+  CVE-2022-20422: (unk) arm64: fix oops in concurrently setting insn_emulation sysctls 
   CVE-2022-2078: (unk) netfilter: nf_tables: sanitize nft_set_desc_concat_parse() 
   CVE-2022-21123: (unk) x86/speculation/mmio: Add mitigation for Processor MMIO Stale Data 
   CVE-2022-21125: (unk) x86/speculation/mmio: Reuse SRBDS mitigation for SBDS 
@@ -202,7 +205,7 @@ Outstanding CVEs:
   CVE-2022-21499: (unk) lockdown: also lock down previous kgdb use 
   CVE-2022-21505: (unk) lockdown: Fix kexec lockdown bypass with ima policy 
   CVE-2022-2209: (unk)  
-  CVE-2022-2308: (unk)  
+  CVE-2022-2308: (unk) vduse: prevent uninitialized memory accesses 
   CVE-2022-2318: (unk) net: rose: fix UAF bugs caused by timer handler 
   CVE-2022-23816: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-23825: (unk)  
@@ -242,6 +245,8 @@ Outstanding CVEs:
   CVE-2022-33743: (unk) xen-netfront: restore __skb_queue_tail() positioning in xennet_get_responses() 
   CVE-2022-33744: (unk) xen/arm: Fix race in RB-tree based P2M accounting 
   CVE-2022-33981: (unk) floppy: disable FDRAWCMD by default 
+  CVE-2022-3424: (unk)  
+  CVE-2022-3435: (unk)  
   CVE-2022-34494: (unk) rpmsg: virtio: Fix possible double free in rpmsg_virtio_add_ctrl_dev() 
   CVE-2022-34495: (unk) rpmsg: virtio: Fix possible double free in rpmsg_probe() 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
@@ -258,8 +263,9 @@ Outstanding CVEs:
   CVE-2022-39842: (unk) video: fbdev: pxa3xx-gcu: Fix integer overflow in pxa3xx_gcu_write 
   CVE-2022-40133: (unk)  
   CVE-2022-40307: (unk) efi: capsule-loader: Fix use-after-free in efi_capsule_write 
-  CVE-2022-40768: (unk)  
+  CVE-2022-40768: (unk) scsi: stex: Properly zero out the passthrough command structure 
   CVE-2022-41218: (unk)  
   CVE-2022-41848: (unk)  
   CVE-2022-41849: (unk)  
   CVE-2022-41850: (unk)  
+  CVE-2022-42703: (unk) mm/rmap: Fix anon_vma->degree ambiguity leading to double-reuse 

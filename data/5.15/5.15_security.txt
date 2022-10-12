@@ -131,6 +131,7 @@ CVEs fixed in 5.15.29:
 CVEs fixed in 5.15.31:
   CVE-2022-20158: a055f5f2841f7522b44a2b1eccb1951b4b03d51a net/packet: fix slab-out-of-bounds access in packet_recvmsg()
   CVE-2022-20368: a055f5f2841f7522b44a2b1eccb1951b4b03d51a net/packet: fix slab-out-of-bounds access in packet_recvmsg()
+  CVE-2022-20423: 56b38e3ca4064041d93c1ca18828c8cedad2e16c usb: gadget: rndis: prevent integer overflow in rndis_set_response()
 
 CVEs fixed in 5.15.32:
   CVE-2022-1015: 1bd57dea456149619f3b80d67eee012122325af8 netfilter: nf_tables: validate registers coming from userspace.
@@ -257,6 +258,7 @@ CVEs fixed in 5.15.60:
 
 CVEs fixed in 5.15.61:
   CVE-2022-1679: 03ca957c5f7b55660957eda20b5db4110319ac7a ath9k: fix use-after-free in ath9k_hif_usb_rx_cb
+  CVE-2022-20422: cc69ef95988b9ef2fc730ec452a7441efb90ef5e arm64: fix oops in concurrently setting insn_emulation sysctls
   CVE-2022-2585: 9e255ed238fc67058df87b0388ad6d4b2ef3a2bd posix-cpu-timers: Cleanup CPU timers before freeing them during exec
   CVE-2022-2586: faafd9286f1355c76fe9ac3021c280297213330e netfilter: nf_tables: do not allow SET_ID to refer to another table
   CVE-2022-2588: 57bbb691a93bd39d0644c5c879b354232d0e0eed net_sched: cls_route: remove from list when handle is 0
@@ -268,6 +270,10 @@ CVEs fixed in 5.15.64:
 
 CVEs fixed in 5.15.65:
   CVE-2022-3176: e9d7ca0c4640cbebe6840ee3bac66a25a9bacaf5 io_uring: fix UAF due to missing POLLFREE handling
+  CVE-2022-42703: c18a209b56e37b2a60414f714bd70b084ef25835 mm/rmap: Fix anon_vma->degree ambiguity leading to double-reuse
+
+CVEs fixed in 5.15.66:
+  CVE-2022-20421: c2a4b5dc8fa71af73bab704d0cac42ac39767ed6 binder: fix UAF of ref->proc caused by race condition
 
 CVEs fixed in 5.15.68:
   CVE-2022-2663: 451c9ce1e2fc9b9e40303bef8e5a0dca1a923cc4 netfilter: nf_conntrack_irc: Fix forged IP logic
@@ -278,6 +284,9 @@ CVEs fixed in 5.15.70:
   CVE-2022-0171: 39b0235284c7aa33a64e07b825add7a2c108094a KVM: SEV: add cache flush to solve SEV cache incoherency issues
   CVE-2022-3061: 59b756da49bfa51a00a0b58b4147ce2652bc3d28 video: fbdev: i740fb: Error out if 'pixclock' equals zero
   CVE-2022-39842: ab5140c6ddd7473509e12f468948de91138b124e video: fbdev: pxa3xx-gcu: Fix integer overflow in pxa3xx_gcu_write
+
+CVEs fixed in 5.15.72:
+  CVE-2022-2308: dc248ddf41eab4566e95b1ee2433c8a5134ad94a vduse: prevent uninitialized memory accesses
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -344,7 +353,6 @@ Outstanding CVEs:
   CVE-2022-1116: (unk)  
   CVE-2022-1247: (unk)  
   CVE-2022-2209: (unk)  
-  CVE-2022-2308: (unk)  
   CVE-2022-23825: (unk)  
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
@@ -352,13 +360,15 @@ Outstanding CVEs:
   CVE-2022-2961: (unk)  
   CVE-2022-2978: (unk)  
   CVE-2022-3169: (unk)  
+  CVE-2022-3424: (unk)  
+  CVE-2022-3435: (unk)  
   CVE-2022-36280: (unk)  
   CVE-2022-36402: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-38457: (unk)  
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-40133: (unk)  
-  CVE-2022-40768: (unk)  
+  CVE-2022-40768: (unk) scsi: stex: Properly zero out the passthrough command structure 
   CVE-2022-41218: (unk)  
   CVE-2022-41848: (unk)  
   CVE-2022-41849: (unk)  
