@@ -373,7 +373,6 @@ CVEs fixed in 5.10.106:
 CVEs fixed in 5.10.108:
   CVE-2022-20158: 70b7b3c055fd4a464da8da55ff4c1f84269f9b02 net/packet: fix slab-out-of-bounds access in packet_recvmsg()
   CVE-2022-20368: 70b7b3c055fd4a464da8da55ff4c1f84269f9b02 net/packet: fix slab-out-of-bounds access in packet_recvmsg()
-  CVE-2022-20423: 28bc0267399f42f987916a7174e2e32f0833cc65 usb: gadget: rndis: prevent integer overflow in rndis_set_response()
   CVE-2022-27666: 9248694dac20eda06e22d8503364dc9d03df4e2f esp: Fix possible buffer overflow in ESP transformation
 
 CVEs fixed in 5.10.109:
@@ -443,6 +442,7 @@ CVEs fixed in 5.10.120:
 
 CVEs fixed in 5.10.121:
   CVE-2022-1184: da2f05919238c7bdc6e28c79539f55c8355408bb ext4: verify dir block before splitting it
+  CVE-2022-3577: 296f8ca0f73f5268cd9b85cf72ff783596b2264e HID: bigben: fix slab-out-of-bounds Write in bigben_probe
 
 CVEs fixed in 5.10.122:
   CVE-2022-32981: 3be74fc0afbeadc2aff8dc69f3bf9716fbe66486 powerpc/32: Fix overread/overwrite of thread_struct via ptrace
@@ -512,6 +512,7 @@ CVEs fixed in 5.10.142:
 
 CVEs fixed in 5.10.143:
   CVE-2022-2663: e12ce30fe593dd438c5b392290ad7316befc11ca netfilter: nf_conntrack_irc: Fix forged IP logic
+  CVE-2022-3586: 2ee85ac1b29dbd2ebd2d8e5ac1dd5793235d516b sch_sfb: Don't assume the skb is still around after enqueueing to child
   CVE-2022-40307: 918d9c4a4bdf5205f2fb3f64dddfb56c9a1d01d6 efi: capsule-loader: Fix use-after-free in efi_capsule_write
 
 CVEs fixed in 5.10.145:
@@ -529,6 +530,9 @@ CVEs fixed in 5.10.148:
   CVE-2022-42720: 6b944845031356f3e0c0f6695f9252a8ddc8b02f wifi: cfg80211: fix BSS refcounting bugs
   CVE-2022-42721: b0e5c5deb7880be5b8a459d584e13e1f9879d307 wifi: cfg80211: avoid nontransmitted BSS list corruption
   CVE-2022-42722: 58c0306d0bcd5f541714bea8765d23111c9af68a wifi: mac80211: fix crash in beacon protection for P2P-device
+
+CVEs fixed in 5.10.149:
+  CVE-2022-42719: 31ce5da48a845bac48930bbde1d45e7449591728 wifi: mac80211: fix MBSSID parsing use-after-free
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -618,6 +622,7 @@ Outstanding CVEs:
   CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
+  CVE-2022-2602: (unk) io_uring/af_unix: defer registered files gc to io_uring release 
   CVE-2022-2961: (unk)  
   CVE-2022-2978: (unk)  
   CVE-2022-2991: (unk) remove the lightnvm subsystem 
@@ -630,6 +635,20 @@ Outstanding CVEs:
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
   CVE-2022-3524: (unk) tcp/udp: Fix memory leak in ipv6_renew_options(). 
   CVE-2022-3526: (unk) macvlan: Fix leaking skb in source mode with nodst option 
+  CVE-2022-3531: (unk)  
+  CVE-2022-3532: (unk)  
+  CVE-2022-3535: (unk) net: mvpp2: fix mvpp2 debugfs leak 
+  CVE-2022-3541: (unk) eth: sp7021: fix use after free bug in spl2sw_nvmem_get_mac_address 
+  CVE-2022-3542: (unk) bnx2x: fix potential memory leak in bnx2x_tpa_stop() 
+  CVE-2022-3543: (unk) af_unix: Fix memory leaks of the whole sk due to OOB skb. 
+  CVE-2022-3544: (unk)  
+  CVE-2022-3545: (unk) nfp: fix use-after-free in area_cache_get() 
+  CVE-2022-3564: (unk)  
+  CVE-2022-3565: (unk) mISDN: fix use-after-free bugs in l1oip timer handlers 
+  CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
+  CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
+  CVE-2022-3594: (unk) r8152: Rate limit overflow messages 
+  CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
   CVE-2022-36280: (unk)  
   CVE-2022-36402: (unk)  
   CVE-2022-38096: (unk)  
@@ -641,4 +660,3 @@ Outstanding CVEs:
   CVE-2022-41848: (unk)  
   CVE-2022-41849: (unk)  
   CVE-2022-41850: (unk)  
-  CVE-2022-42719: (unk) wifi: mac80211: fix MBSSID parsing use-after-free 
