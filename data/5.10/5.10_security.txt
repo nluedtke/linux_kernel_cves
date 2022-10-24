@@ -499,6 +499,12 @@ CVEs fixed in 5.10.137:
   CVE-2022-2588: 7018f03d97daf344e49b16200caf4363a1407cab net_sched: cls_route: remove from list when handle is 0
   CVE-2022-41222: 2613baa3ab2153cc45b175c58700d93f72ef36c4 mm/mremap: hold the rmap lock in write mode when moving page table entries.
 
+CVEs fixed in 5.10.138:
+  CVE-2022-3625: 0e28678a770df7989108327cfe86f835d8760c33 devlink: Fix use-after-free after a failed reload
+  CVE-2022-3629: 38ddccbda5e8b762c8ee06670bb1f64f1be5ee50 vsock: Fix memory leak in vsock_connect()
+  CVE-2022-3633: a220ff343396bae8d3b6abee72ab51f1f34b3027 can: j1939: j1939_session_destroy(): fix memory leak of skbs
+  CVE-2022-3635: a0ae122e9aeccbff75014c4d36d11a9d32e7fb5e atm: idt77252: fix use-after-free bugs caused by tst_timer
+
 CVEs fixed in 5.10.140:
   CVE-2022-2905: e8979807178434db8ceaa84dfcd44363e71e50bb bpf: Don't use tnum_range on array range checking for poke descriptors
   CVE-2022-3028: c5c4d4c9806dadac7bc82f9c29ef4e1b78894775 af_key: Do not call xfrm_probe_algs in parallel
@@ -525,6 +531,9 @@ CVEs fixed in 5.10.146:
 
 CVEs fixed in 5.10.148:
   CVE-2022-3303: fce793a056c604b41a298317cf704dae255f1b36 ALSA: pcm: oss: Fix race at SNDCTL_DSP_SYNC
+  CVE-2022-3621: 3f840480e31495ce674db4a69912882b5ac083f2 nilfs2: fix NULL pointer dereference at nilfs_bmap_lookup_at_level()
+  CVE-2022-3646: aad4c997857f1d4b6c1e296c07e4729d3f8058ee nilfs2: fix leak of nilfs_root in case of writer thread creation failure
+  CVE-2022-3649: 21ee3cffed8fbabb669435facfd576ba18ac8652 nilfs2: fix use-after-free bug of struct nilfs_root
   CVE-2022-40768: 36b33c63515a93246487691046d18dd37a9f589b scsi: stex: Properly zero out the passthrough command structure
   CVE-2022-41674: a6408e0b694c1bdd8ae7dd0464a86b98518145ec wifi: cfg80211: fix u8 overflow in cfg80211_update_notlisted_nontrans()
   CVE-2022-42720: 6b944845031356f3e0c0f6695f9252a8ddc8b02f wifi: cfg80211: fix BSS refcounting bugs
@@ -628,6 +637,8 @@ Outstanding CVEs:
   CVE-2022-2991: (unk) remove the lightnvm subsystem 
   CVE-2022-3169: (unk)  
   CVE-2022-3176: (unk) io_uring: fix UAF due to missing POLLFREE handling 
+  CVE-2022-3238: (unk)  
+  CVE-2022-3344: (unk)  
   CVE-2022-3424: (unk)  
   CVE-2022-3435: (unk)  
   CVE-2022-3521: (unk) kcm: avoid potential race in kcm_tx_work 
@@ -649,8 +660,15 @@ Outstanding CVEs:
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3594: (unk) r8152: Rate limit overflow messages 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
+  CVE-2022-3619: (unk)  
+  CVE-2022-3623: (unk) mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page 
+  CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-36280: (unk)  
+  CVE-2022-3630: (unk) fscache: don't leak cookie access refs if invalidation is in progress or failed 
+  CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
+  CVE-2022-3640: (unk)  
   CVE-2022-36402: (unk)  
+  CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-38457: (unk)  
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 

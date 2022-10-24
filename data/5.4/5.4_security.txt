@@ -744,6 +744,10 @@ CVEs fixed in 5.4.211:
   CVE-2022-2153: 8cdba919acefdd6fea5dd2b77a119f54fb88ce11 KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast()
   CVE-2022-2586: fab2f61cc3b0e441b1749f017cfee75f9bbaded7 netfilter: nf_tables: do not allow SET_ID to refer to another table
   CVE-2022-2588: 1fcd691cc2e7f808eca2e644adee1f1c6c1527fd net_sched: cls_route: remove from list when handle is 0
+  CVE-2022-3625: 1ad4ba9341f15412cf86dc6addbb73871a10212f devlink: Fix use-after-free after a failed reload
+  CVE-2022-3629: f82f1e2042b397277cd39f16349950f5abade58d vsock: Fix memory leak in vsock_connect()
+  CVE-2022-3633: 04e41b6bacf474f5431491f92e981096e8cc8e93 can: j1939: j1939_session_destroy(): fix memory leak of skbs
+  CVE-2022-3635: 9a6cbaa50f263b12df18a051b37f3f42f9fb5253 atm: idt77252: fix use-after-free bugs caused by tst_timer
   CVE-2022-41222: 79e522101cf40735f1936a10312e17f937b8dcad mm/mremap: hold the rmap lock in write mode when moving page table entries.
 
 CVEs fixed in 5.4.212:
@@ -766,6 +770,8 @@ CVEs fixed in 5.4.217:
   CVE-2022-29901: 893cd858b09ca20c8c919db8dc5b009895626da3 x86/kvm/vmx: Make noinstr clean
 
 CVEs fixed in 5.4.218:
+  CVE-2022-3621: 792211333ad77fcea50a44bb7f695783159fc63c nilfs2: fix NULL pointer dereference at nilfs_bmap_lookup_at_level()
+  CVE-2022-3646: b7e409d11db9ce9f8bc05fcdfa24d143f60cd393 nilfs2: fix leak of nilfs_root in case of writer thread creation failure
   CVE-2022-40768: 20a5bde605979af270f94b9151f753ec2caf8b05 scsi: stex: Properly zero out the passthrough command structure
   CVE-2022-41674: 020402c7dd587a8a4725d32bbd172a5f7ecc5f8f wifi: cfg80211: fix u8 overflow in cfg80211_update_notlisted_nontrans()
   CVE-2022-42720: 785eaabfe3103e8bfa36aebacff6e8f69f092ed7 wifi: cfg80211: fix BSS refcounting bugs
@@ -884,6 +890,8 @@ Outstanding CVEs:
   CVE-2022-3061: (unk) video: fbdev: i740fb: Error out if 'pixclock' equals zero 
   CVE-2022-3169: (unk)  
   CVE-2022-3176: (unk) io_uring: fix UAF due to missing POLLFREE handling 
+  CVE-2022-3238: (unk)  
+  CVE-2022-3344: (unk)  
   CVE-2022-3424: (unk)  
   CVE-2022-3435: (unk)  
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
@@ -906,8 +914,16 @@ Outstanding CVEs:
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3594: (unk) r8152: Rate limit overflow messages 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
+  CVE-2022-3619: (unk)  
+  CVE-2022-3623: (unk) mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page 
+  CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-36280: (unk)  
+  CVE-2022-3630: (unk) fscache: don't leak cookie access refs if invalidation is in progress or failed 
+  CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
+  CVE-2022-3640: (unk)  
   CVE-2022-36402: (unk)  
+  CVE-2022-3642: (unk)  
+  CVE-2022-3649: (unk) nilfs2: fix use-after-free bug of struct nilfs_root 
   CVE-2022-38096: (unk)  
   CVE-2022-38457: (unk)  
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
