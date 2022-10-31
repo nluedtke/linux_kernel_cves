@@ -296,6 +296,9 @@ CVEs fixed in 5.15.70:
 CVEs fixed in 5.15.72:
   CVE-2022-2308: dc248ddf41eab4566e95b1ee2433c8a5134ad94a vduse: prevent uninitialized memory accesses
 
+CVEs fixed in 5.15.73:
+  CVE-2022-43750: 5ff80339cdc3143b89eee2ad91ae44b4dbf65ad1 usb: mon: make mmapped memory read only
+
 CVEs fixed in 5.15.74:
   CVE-2022-3621: 1e512c65b4adcdbdf7aead052f2162b079cc7f55 nilfs2: fix NULL pointer dereference at nilfs_bmap_lookup_at_level()
   CVE-2022-3646: 44b1ee304bac03f1b879be5afe920e3a844e40fc nilfs2: fix leak of nilfs_root in case of writer thread creation failure
@@ -306,6 +309,13 @@ CVEs fixed in 5.15.74:
   CVE-2022-42720: bfe29873454f38eb1a511a76144ad1a4848ca176 wifi: cfg80211: fix BSS refcounting bugs
   CVE-2022-42721: 0a8ee682e4f992eccce226b012bba600bb2251e2 wifi: cfg80211: avoid nontransmitted BSS list corruption
   CVE-2022-42722: 93a3a32554079432b49cf87f326607b2a2fab4f2 wifi: mac80211: fix crash in beacon protection for P2P-device
+
+CVEs fixed in 5.15.75:
+  CVE-2022-2602: 813d8fe5d30388f73a21d3a2bf46b0a1fd72498c io_uring/af_unix: defer registered files gc to io_uring release
+  CVE-2022-3535: a624161ebe0c678c10c4c82b574fed6c04d552d8 net: mvpp2: fix mvpp2 debugfs leak
+  CVE-2022-3542: 0b6516a4e3eb0e2dc88a538458f3f732940f44fd bnx2x: fix potential memory leak in bnx2x_tpa_stop()
+  CVE-2022-3565: 7bfa18b05f381162c9d38192bbf0179f1142dd38 mISDN: fix use-after-free bugs in l1oip timer handlers
+  CVE-2022-3594: b3179865cf7e892b26eedab3d6c54b4747c774a2 r8152: Rate limit overflow messages
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -375,7 +385,6 @@ Outstanding CVEs:
   CVE-2022-23825: (unk)  
   CVE-2022-24122: (unk) ucount:  Make get_ucount a safe get_user replacement 
   CVE-2022-25265: (unk)  
-  CVE-2022-2602: (unk) io_uring/af_unix: defer registered files gc to io_uring release 
   CVE-2022-26878: (unk)  
   CVE-2022-2961: (unk)  
   CVE-2022-2978: (unk)  
@@ -388,29 +397,23 @@ Outstanding CVEs:
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
   CVE-2022-3524: (unk) tcp/udp: Fix memory leak in ipv6_renew_options(). 
-  CVE-2022-3531: (unk)  
-  CVE-2022-3532: (unk)  
-  CVE-2022-3535: (unk) net: mvpp2: fix mvpp2 debugfs leak 
-  CVE-2022-3541: (unk) eth: sp7021: fix use after free bug in spl2sw_nvmem_get_mac_address 
-  CVE-2022-3542: (unk) bnx2x: fix potential memory leak in bnx2x_tpa_stop() 
   CVE-2022-3543: (unk) af_unix: Fix memory leaks of the whole sk due to OOB skb. 
-  CVE-2022-3544: (unk)  
   CVE-2022-3545: (unk) nfp: fix use-after-free in area_cache_get() 
   CVE-2022-3564: (unk)  
-  CVE-2022-3565: (unk) mISDN: fix use-after-free bugs in l1oip timer handlers 
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
-  CVE-2022-3594: (unk) r8152: Rate limit overflow messages 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
   CVE-2022-3619: (unk)  
   CVE-2022-3623: (unk) mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
+  CVE-2022-3628: (unk)  
   CVE-2022-36280: (unk)  
   CVE-2022-3630: (unk) fscache: don't leak cookie access refs if invalidation is in progress or failed 
   CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
   CVE-2022-3640: (unk)  
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
+  CVE-2022-3707: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-38457: (unk)  
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
@@ -419,3 +422,6 @@ Outstanding CVEs:
   CVE-2022-41848: (unk)  
   CVE-2022-41849: (unk)  
   CVE-2022-41850: (unk)  
+  CVE-2022-44032: (unk)  
+  CVE-2022-44033: (unk)  
+  CVE-2022-44034: (unk)  

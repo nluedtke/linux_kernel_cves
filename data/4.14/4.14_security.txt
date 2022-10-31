@@ -1215,6 +1215,16 @@ CVEs fixed in 4.14.295:
   CVE-2022-3239: 1f6ab281f218c3a2b789eb976c5b1ef67139680a media: em28xx: initialize refcount before kref_get
   CVE-2022-39842: 9556a88a16e381dbd6834da95206742d0973afc6 video: fbdev: pxa3xx-gcu: Fix integer overflow in pxa3xx_gcu_write
 
+CVEs fixed in 4.14.296:
+  CVE-2022-3542: f63e896e78c247d0be8165d99d543a28ca0be360 bnx2x: fix potential memory leak in bnx2x_tpa_stop()
+  CVE-2022-3565: cbd342376a4e7ea481891181910e9e995390eb24 mISDN: fix use-after-free bugs in l1oip timer handlers
+  CVE-2022-3594: f5d6c938d51217d6f0f534f1ee606d9c5eb22fdc r8152: Rate limit overflow messages
+  CVE-2022-3621: 1ce68de30b663b79073251162123e57cbed2dc84 nilfs2: fix NULL pointer dereference at nilfs_bmap_lookup_at_level()
+  CVE-2022-3646: a832de79d82ac8c9f445f99069e11b17c5d2224a nilfs2: fix leak of nilfs_root in case of writer thread creation failure
+  CVE-2022-3649: 26b9b66610d6f8f3333cb6f52e97745da875fee1 nilfs2: fix use-after-free bug of struct nilfs_root
+  CVE-2022-40768: 5c8395d775ca9044b361af4a19b2ff223485be35 scsi: stex: Properly zero out the passthrough command structure
+  CVE-2022-43750: b29f76fcf2db6615b416d98e28c7d81eff4c89a2 usb: mon: make mmapped memory read only
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1380,27 +1390,17 @@ Outstanding CVEs:
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
   CVE-2022-3524: (unk) tcp/udp: Fix memory leak in ipv6_renew_options(). 
-  CVE-2022-3526: (unk) macvlan: Fix leaking skb in source mode with nodst option 
-  CVE-2022-3531: (unk)  
-  CVE-2022-3532: (unk)  
-  CVE-2022-3535: (unk) net: mvpp2: fix mvpp2 debugfs leak 
-  CVE-2022-3541: (unk) eth: sp7021: fix use after free bug in spl2sw_nvmem_get_mac_address 
-  CVE-2022-3542: (unk) bnx2x: fix potential memory leak in bnx2x_tpa_stop() 
-  CVE-2022-3543: (unk) af_unix: Fix memory leaks of the whole sk due to OOB skb. 
-  CVE-2022-3544: (unk)  
   CVE-2022-3545: (unk) nfp: fix use-after-free in area_cache_get() 
   CVE-2022-3564: (unk)  
-  CVE-2022-3565: (unk) mISDN: fix use-after-free bugs in l1oip timer handlers 
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3577: (unk) HID: bigben: fix slab-out-of-bounds Write in bigben_probe 
-  CVE-2022-3594: (unk) r8152: Rate limit overflow messages 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
   CVE-2022-3619: (unk)  
-  CVE-2022-3621: (unk) nilfs2: fix NULL pointer dereference at nilfs_bmap_lookup_at_level() 
   CVE-2022-3623: (unk) mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3625: (unk) devlink: Fix use-after-free after a failed reload 
+  CVE-2022-3628: (unk)  
   CVE-2022-36280: (unk)  
   CVE-2022-3630: (unk) fscache: don't leak cookie access refs if invalidation is in progress or failed 
   CVE-2022-3633: (unk) can: j1939: j1939_session_destroy(): fix memory leak of skbs 
@@ -1408,15 +1408,16 @@ Outstanding CVEs:
   CVE-2022-3640: (unk)  
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
-  CVE-2022-3646: (unk) nilfs2: fix leak of nilfs_root in case of writer thread creation failure 
-  CVE-2022-3649: (unk) nilfs2: fix use-after-free bug of struct nilfs_root 
+  CVE-2022-3707: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-38457: (unk)  
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-40133: (unk)  
-  CVE-2022-40768: (unk) scsi: stex: Properly zero out the passthrough command structure 
   CVE-2022-41218: (unk)  
   CVE-2022-41222: (unk) mm/mremap: hold the rmap lock in write mode when moving page table entries. 
   CVE-2022-41848: (unk)  
   CVE-2022-41849: (unk)  
   CVE-2022-41850: (unk)  
+  CVE-2022-44032: (unk)  
+  CVE-2022-44033: (unk)  
+  CVE-2022-44034: (unk)  
