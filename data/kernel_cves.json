@@ -57801,8 +57801,8 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "ea75080110a4c1fa011b0a73cb8f42227143ee3e",
         "last_affected_version": "5.5.7",
-        "last_modified": "2021-03-17",
-        "nvd_text": "In the nl80211_policy policy of nl80211.c, there is a possible out of bounds read due to a missing bounds check. This could lead to local information disclosure with System execution privileges needed. User interaction is not required for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-119770583",
+        "last_modified": "2022-06-19",
+        "nvd_text": "Product: AndroidVersions: Android kernelAndroid ID: A-127973231References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-27068",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-27068",
@@ -60951,8 +60951,8 @@
         },
         "cwe": "Use After Free",
         "fixes": "77f4689de17c0887775bb77896f4cc11a39bf848",
-        "last_affected_version": "5.4.63",
-        "last_modified": "2021-12-21",
+        "last_affected_version": "5.8.7",
+        "last_modified": "2022-05-30",
         "nvd_text": "In ep_loop_check_proc of eventpoll.c, there is a possible way to corrupt memory due to a use after free. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-204573007References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-1048",
@@ -61719,6 +61719,46 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-23134",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-23134",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-23134"
+        }
+    },
+    "CVE-2021-26401": {
+        "affected_versions": "unk to v5.17-rc8",
+        "breaks": "",
+        "cmt_msg": "x86/speculation: Use generic retpoline by default on AMD",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+            "score": 1.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Changed",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+            "score": 5.6
+        },
+        "cwe": "Unspecified",
+        "fixes": "244d00b5dd4755f8df892c86cab35fb2cfd4f14b",
+        "last_affected_version": "5.16.13",
+        "last_modified": "2022-05-12",
+        "nvd_text": "LFENCE/JMP (mitigation V2-2) may not sufficiently mitigate CVE-2017-5715 on some AMD CPUs.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-26401",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-26401",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-26401",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-26401",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-26401",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-26401"
         }
     },
     "CVE-2021-26708": {
@@ -63674,6 +63714,44 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-33098",
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-33098",
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-33098"
+        }
+    },
+    "CVE-2021-33135": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Uncontrolled Resource Consumption",
+        "fixes": "",
+        "last_modified": "2022-05-25",
+        "nvd_text": "Uncontrolled resource consumption in the Linux kernel drivers for Intel(R) SGX may allow an authenticated user to potentially enable denial of service via local access.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-33135",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2021-33135",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2021-33135",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-33135",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2021-33135",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2021-33135"
         }
     },
     "CVE-2021-33200": {
@@ -66323,8 +66401,8 @@
         },
         "cwe": "Use After Free",
         "fixes": "f8d4f44df056c5b504b0d49683fb7279218fd207",
-        "last_affected_version": "5.4.69",
-        "last_modified": "2022-01-26",
+        "last_affected_version": "5.8.13",
+        "last_modified": "2022-05-30",
         "nvd_text": "In fs/eventpoll.c, there is a possible use after free. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-204450605References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39634",
@@ -68648,6 +68726,20 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-0168"
         }
     },
+    "CVE-2022-0171": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2022-05-18",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0171",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0171",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-0171",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-0171",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-0171",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-0171"
+        }
+    },
     "CVE-2022-0185": {
         "affected_versions": "v5.1-rc1 to v5.17-rc1",
         "breaks": "3e1aeb00e6d132efc151dacc062b38269bc9eccc",
@@ -69106,7 +69198,7 @@
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "cc8f7fe1f5eab010191aa4570f27641876fa1267",
         "last_affected_version": "5.16.12",
-        "last_modified": "2022-04-15",
+        "last_modified": "2022-06-09",
         "nvd_text": "A kernel information leak flaw was identified in the scsi_ioctl function in drivers/scsi/scsi_ioctl.c in the Linux kernel. This flaw allows a local attacker with a special user privilege (CAP_SYS_ADMIN or CAP_SYS_RAWIO) to create issues with confidentiality.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0494",
@@ -69146,7 +69238,7 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "20b2aff4bc15bda809f994761d5719827d66c0b4",
         "last_affected_version": "5.16.10",
-        "last_modified": "2022-04-15",
+        "last_modified": "2022-05-03",
         "nvd_text": "A flaw was found in unrestricted eBPF usage by the BPF_BTF_LOAD, leading to a possible out-of-bounds memory write in the Linux kernel\u2019s BPF subsystem due to the way a user loads BTF. This flaw allows a local user to crash or escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0500",
@@ -69336,8 +69428,8 @@
         "breaks": "",
         "cmt_msg": "xprtrdma: fix incorrect header size calculations",
         "fixes": "912288442cb2f431bf3c8cb097a5de83bc6dbac1",
-        "last_affected_version": "5.4.52",
-        "last_modified": "2022-04-28",
+        "last_affected_version": "5.7.9",
+        "last_modified": "2022-05-30",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0812",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-0812",
@@ -69433,7 +69525,7 @@
         "cwe": "Missing Release of Memory after Effective Lifetime",
         "fixes": "aa6f8dcbab473f3a3c7454b74caa46d36cdc5d13",
         "last_affected_version": "5.16.14",
-        "last_modified": "2022-04-07",
+        "last_modified": "2022-05-25",
         "nvd_text": "A memory leak flaw was found in the Linux kernel\u2019s DMA subsystem, in the way a user calls DMA_FROM_DEVICE. This flaw allows a local user to read random memory from the kernel space.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-0854",
@@ -69552,8 +69644,8 @@
         "cwe": "Use After Free",
         "fixes": "0c4bcfdecb1ac0967619ee7ff44871d93c08c909",
         "last_affected_version": "5.16.14",
-        "last_modified": "2022-04-22",
-        "nvd_text": "A flaw use after free in the Linux kernel FUSE filesystem was found in the way user triggers write(). A local user could use this flaw to get some unauthorized access to some data from the FUSE filesystem and as result potentially privilege escalation too.",
+        "last_modified": "2022-05-03",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s FUSE filesystem in the way a user triggers write(). This flaw allows a local user to gain unauthorized access to data from the FUSE filesystem, resulting in privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1011",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1011",
@@ -69563,13 +69655,53 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1011"
         }
     },
+    "CVE-2022-1012": {
+        "affected_versions": "unk to v5.18-rc6",
+        "breaks": "",
+        "cmt_msg": "secure_seq: use the 64 bits of the siphash for port offset calculation",
+        "fixes": "b2d057560b8107c633b39aabe517ff9d93f285e3",
+        "last_affected_version": "5.17.8",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1012",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1012",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1012",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1012",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1012",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1012"
+        }
+    },
     "CVE-2022-1015": {
         "affected_versions": "unk to v5.18-rc1",
         "breaks": "",
         "cmt_msg": "netfilter: nf_tables: validate registers coming from userspace.",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "Low",
+            "Integrity": "Low",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+            "score": 6.6
+        },
+        "cwe": "Out-of-bounds Write",
         "fixes": "6e1acfa387b9ff82cfc7db8cc3b6959221a95851",
         "last_affected_version": "5.17.0",
-        "last_modified": "2022-04-15",
+        "last_modified": "2022-05-12",
+        "nvd_text": "A flaw was found in the Linux kernel in linux/net/netfilter/nf_tables_api.c of the netfilter subsystem. This flaw allows a local user to cause an out-of-bounds write issue.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1015",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1015",
@@ -69615,9 +69747,33 @@
         "affected_versions": "unk to v5.18-rc1",
         "breaks": "",
         "cmt_msg": "ALSA: pcm: Fix races among concurrent hw_params and hw_free calls",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "92ee3c60ec9fe64404dc035e7c41277d74aa26cb",
         "last_affected_version": "5.17.0",
-        "last_modified": "2022-04-15",
+        "last_modified": "2022-05-18",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s sound subsystem in the way a user triggers concurrent calls of PCM hw_params. The hw_free ioctls or similar race condition happens inside ALSA PCM for other ioctls. This flaw allows a local user to crash or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1048",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1048",
@@ -69667,6 +69823,44 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1055"
         }
     },
+    "CVE-2022-1116": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Integer Overflow or Wraparound",
+        "fixes": "",
+        "last_modified": "2022-05-26",
+        "nvd_text": "Integer Overflow or Wraparound vulnerability in io_uring of Linux Kernel allows local attacker to cause memory corruption and escalate privileges to root. This issue affects: Linux Kernel versions prior to 5.4.189; version 5.4.24 and later versions.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1116",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1116",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1116",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1116",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1116",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1116"
+        }
+    },
     "CVE-2022-1158": {
         "affected_versions": "unk to v5.18-rc1",
         "breaks": "",
@@ -69701,9 +69895,33 @@
         "affected_versions": "unk to v5.16-rc7",
         "breaks": "",
         "cmt_msg": "hamradio: improve the incomplete fix to avoid NPD",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Use After Free",
         "fixes": "b2f37aead1b82a770c48b5d583f35ec22aabb61e",
         "last_affected_version": "5.15.11",
-        "last_modified": "2022-04-04",
+        "last_modified": "2022-05-12",
+        "nvd_text": "A use-after-free vulnerability was found in the Linux kernel in drivers/net/hamradio. This flaw allows a local attacker with a user privilege to cause a denial of service (DOS) when the mkiss or sixpack device is detached and reclaim resources early.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1195",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1195",
@@ -69777,6 +69995,20 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1205"
         }
     },
+    "CVE-2022-1247": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2022-05-18",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1247",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1247",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1247",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1247",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1247",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1247"
+        }
+    },
     "CVE-2022-1263": {
         "affected_versions": "unk to v5.18-rc3",
         "breaks": "",
@@ -69836,9 +70068,33 @@
         "affected_versions": "unk to v5.17",
         "breaks": "",
         "cmt_msg": "af_key: add __GFP_ZERO flag for compose_sadb_supported in function pfkey_register",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+            "score": 3.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "score": 7.1
+        },
+        "cwe": "Unspecified",
         "fixes": "9a564bccb78a76740ea9d75a259942df8143d02c",
         "last_affected_version": "5.16",
-        "last_modified": "2022-04-22",
+        "last_modified": "2022-05-12",
+        "nvd_text": "A vulnerability was found in the pfkey_register function in net/key/af_key.c in the Linux kernel. This flaw allows a local, unprivileged user to gain access to kernel memory, leading to a system crash or a leak of internal kernel information.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1353",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1353",
@@ -69852,9 +70108,33 @@
         "affected_versions": "unk to v5.6-rc2",
         "breaks": "",
         "cmt_msg": "drm/vgem: Close use-after-free race in vgem_gem_create",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
         "fixes": "4b848f20eda5974020f043ca14bacf7a7e634fc8",
-        "last_affected_version": "5.4.20",
-        "last_modified": "2022-04-22",
+        "last_affected_version": "5.5.4",
+        "last_modified": "2022-06-10",
+        "nvd_text": "The root cause of this vulnerability is that the ioctl$DRM_IOCTL_MODE_DESTROY_DUMB can decrease refcount of *drm_vgem_gem_object *(created in *vgem_gem_dumb_create*) concurrently, and *vgem_gem_dumb_create *will access the freed drm_vgem_gem_object.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1419",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1419",
@@ -69862,6 +70142,44 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1419",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-1419",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1419"
+        }
+    },
+    "CVE-2022-1462": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:N/A:P",
+            "score": 3.3
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "score": 6.3
+        },
+        "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
+        "fixes": "",
+        "last_modified": "2022-06-12",
+        "nvd_text": "An out-of-bounds read flaw was found in the Linux kernel\u2019s TeleTYpe subsystem. The issue occurs in how a user triggers a race condition using ioctls TIOCSPTLCK and TIOCGPTPEER and TIOCSTI and TCXONC with leakage of memory in the flush_to_ldisc function. This flaw allows a local user to crash the system or read unauthorized random data from memory.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1462",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1462",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1462",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1462",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1462",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1462"
         }
     },
     "CVE-2022-1508": {
@@ -69883,9 +70201,33 @@
         "affected_versions": "unk to v5.18-rc1",
         "breaks": "",
         "cmt_msg": "net/x25: Fix null-ptr-deref caused by x25_disconnect",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Use After Free",
         "fixes": "7781607938c8371d4c2b243527430241c62e39c2",
         "last_affected_version": "5.17.1",
-        "last_modified": "2022-04-29",
+        "last_modified": "2022-05-18",
+        "nvd_text": "A NULL pointer dereference flaw was found in the Linux kernel\u2019s X.25 set of standardized network protocols functionality in the way a user terminates their session using a simulated Ethernet card and continued usage of this connection. This flaw allows a local user to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1516",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1516",
@@ -69893,6 +70235,759 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1516",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-1516",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-1516"
+        }
+    },
+    "CVE-2022-1651": {
+        "affected_versions": "unk to v5.18-rc1",
+        "breaks": "",
+        "cmt_msg": "virt: acrn: fix a memory leak in acrn_dev_ioctl()",
+        "fixes": "ecd1735f14d6ac868ae5d8b7a2bf193fa11f388b",
+        "last_affected_version": "5.17.1",
+        "last_modified": "2022-05-12",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1651",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1651",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1651",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1651",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1651",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1651"
+        }
+    },
+    "CVE-2022-1652": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
+        "fixes": "",
+        "last_modified": "2022-06-12",
+        "nvd_text": "Linux Kernel could allow a local attacker to execute arbitrary code on the system, caused by a concurrency use-after-free flaw in the bad_flp_intr function. By executing a specially-crafted program, an attacker could exploit this vulnerability to execute arbitrary code or cause a denial of service condition on the system.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1652",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1652",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1652",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1652",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1652",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1652"
+        }
+    },
+    "CVE-2022-1671": {
+        "affected_versions": "unk to v5.18-rc1",
+        "breaks": "",
+        "cmt_msg": "rxrpc: fix some null-ptr-deref bugs in server_key.c",
+        "fixes": "ff8376ade4f668130385839cef586a0990f8ef87",
+        "last_affected_version": "5.17.1",
+        "last_modified": "2022-05-18",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1671",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1671",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1671",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1671",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1671",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1671"
+        }
+    },
+    "CVE-2022-1678": {
+        "affected_versions": "v4.18-rc1 to v4.20-rc1",
+        "alt_msg": "tcp: fix possible socket leaks in internal pacing mode",
+        "breaks": "73a6bab5aa2a83cb7df85805e08bc03b4065aea7",
+        "cmt_msg": "tcp: optimize tcp internal pacing",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Network Accessible",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "score": 5.0
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+        },
+        "cwe": "Unspecified",
+        "fixes": "864e5c090749448e879e86bec06ee396aa2c19c5",
+        "last_affected_version": "4.19.227",
+        "last_modified": "2022-06-19",
+        "nvd_text": "An issue was discovered in the Linux Kernel from 4.18 to 4.19, an improper update of sock reference in TCP pacing can lead to memory/netns leak, which can be used by remote clients.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1678",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1678",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1678",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1678",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1678",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1678"
+        }
+    },
+    "CVE-2022-1679": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
+        "fixes": "",
+        "last_modified": "2022-05-25",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s Atheros wireless adapter driver in the way a user forces the ath9k_htc_wait_for_target function to fail with some input messages. This flaw allows a local user to crash or potentially escalate their privileges on the system.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1679",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1679",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1679",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1679",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1679",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1679"
+        }
+    },
+    "CVE-2022-1729": {
+        "affected_versions": "unk to v5.18",
+        "breaks": "",
+        "cmt_msg": "perf: Fix sys_perf_event_open() race against self",
+        "fixes": "3ac6487e584a1eb54071dbe1212e05b884136704",
+        "last_affected_version": "5.17",
+        "last_modified": "2022-06-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1729",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1729",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1729",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1729",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1729",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1729"
+        }
+    },
+    "CVE-2022-1734": {
+        "affected_versions": "v4.4-rc1 to v5.18-rc6",
+        "breaks": "3194c6870158e305dac2af52f83681e9cb67280f",
+        "cmt_msg": "nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+            "score": 4.4
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Use After Free",
+        "fixes": "d270453a0d9ec10bb8a802a142fb1b3601a83098",
+        "last_affected_version": "5.17.6",
+        "last_modified": "2022-06-12",
+        "nvd_text": "A flaw in Linux Kernel found in nfcmrvl_nci_unregister_dev() in drivers/nfc/nfcmrvl/main.c can lead to use after free both read or write when non synchronized between cleanup routine and firmware download routine.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1734",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1734",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1734",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1734",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1734",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1734"
+        }
+    },
+    "CVE-2022-1786": {
+        "affected_versions": "v5.10-rc1 to v5.12-rc1-dontuse",
+        "alt_msg": "io_uring: always use original task when preparing req identity",
+        "backport": true,
+        "breaks": "500a373d731ac506612db12631ec21295c1ff360",
+        "cmt_msg": "io_uring: remove io_identity",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
+        "fixes": "4379bf8bd70b5de6bba7d53015b0c36c57a634ee",
+        "last_affected_version": "5.10.116",
+        "last_modified": "2022-06-19",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s io_uring subsystem in the way a user sets up a ring with IORING_SETUP_IOPOLL with more than one task completing submissions on this ring. This flaw allows a local user to crash or escalate their privileges on the system.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1786",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1786",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1786",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1786",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1786",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1786"
+        }
+    },
+    "CVE-2022-1789": {
+        "affected_versions": "unk to v5.18",
+        "breaks": "",
+        "cmt_msg": "KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.8
+        },
+        "cwe": "NULL Pointer Dereference",
+        "fixes": "9f46c187e2e680ecd9de7983e4d081c3391acc76",
+        "last_affected_version": "5.17",
+        "last_modified": "2022-06-12",
+        "nvd_text": "With shadow paging enabled, the INVPCID instruction results in a call to kvm_mmu_invpcid_gva. If INVPCID is executed with CR0.PG=0, the invlpg callback is not set and the result is a NULL pointer dereference.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1789",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1789",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1789",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1789",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1789",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1789"
+        }
+    },
+    "CVE-2022-1836": {
+        "affected_versions": "unk to v5.18-rc5",
+        "breaks": "",
+        "cmt_msg": "floppy: disable FDRAWCMD by default",
+        "fixes": "233087ca063686964a53c829d547c7571e3f67bf",
+        "last_affected_version": "5.17.5",
+        "last_modified": "2022-05-25",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1836",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1836",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1836",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1836",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1836",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1836"
+        }
+    },
+    "CVE-2022-1852": {
+        "affected_versions": "unk to v5.19-rc1",
+        "breaks": "",
+        "cmt_msg": "KVM: x86: avoid calling x86 emulator without a decoded instruction",
+        "fixes": "fee060cd52d69c114b62d1a2948ea9648b5131f9",
+        "last_affected_version": "5.18.1",
+        "last_modified": "2022-06-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1852",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1852",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1852",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1852",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1852",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1852"
+        }
+    },
+    "CVE-2022-1882": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
+        "fixes": "",
+        "last_modified": "2022-06-09",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s pipes functionality in how a user performs manipulations with the pipe post_one_notification() after free_pipe_info() that is already called. This flaw allows a local user to crash or potentially escalate their privileges on the system.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1882",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1882",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1882",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1882",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1882",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1882"
+        }
+    },
+    "CVE-2022-1943": {
+        "affected_versions": "unk to v5.18-rc7",
+        "breaks": "",
+        "cmt_msg": "udf: Avoid using stale lengthOfImpUse",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "None",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+            "score": 4.9
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Out-of-bounds Write",
+        "fixes": "c1ad35dd0548ce947d97aaf92f7f2f9a202951cf",
+        "last_affected_version": "5.17.7",
+        "last_modified": "2022-06-12",
+        "nvd_text": "A flaw out of bounds memory write in the Linux kernel UDF file system functionality was found in the way user triggers some file operation which triggers udf_write_fi(). A local user could use this flaw to crash the system or potentially",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1943",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1943",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1943",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1943",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1943",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1943"
+        }
+    },
+    "CVE-2022-1966": {
+        "affected_versions": "unk to v5.19-rc1",
+        "breaks": "",
+        "cmt_msg": "netfilter: nf_tables: disallow non-stateful expression in sets earlier",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
+        "fixes": "520778042ccca019f3ffa136dd0ca565c486cedd",
+        "last_affected_version": "5.18.1",
+        "last_modified": "2022-06-19",
+        "nvd_text": "A use-after-free vulnerability was found in the Linux kernel's Netfilter subsystem in net/netfilter/nf_tables_api.c. This flaw allows a local attacker with user access to cause a privilege escalation issue.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1966",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1966",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1966",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1966",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1966",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1966"
+        }
+    },
+    "CVE-2022-1972": {
+        "affected_versions": "unk to v5.19-rc1",
+        "breaks": "",
+        "cmt_msg": "netfilter: nf_tables: sanitize nft_set_desc_concat_parse()",
+        "fixes": "fecf31ee395b0295f2d7260aa29946b7605f7c85",
+        "last_affected_version": "5.18.1",
+        "last_modified": "2022-06-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1972",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1972",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1972",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1972",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1972",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1972"
+        }
+    },
+    "CVE-2022-1973": {
+        "affected_versions": "unk to v5.19-rc1",
+        "breaks": "",
+        "cmt_msg": "fs/ntfs3: Fix invalid free in log_replay",
+        "fixes": "f26967b9f7a830e228bb13fb41bd516ddd9d789d",
+        "last_affected_version": "5.18.2",
+        "last_modified": "2022-06-10",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1973",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1973",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1973",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1973",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1973",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1973"
+        }
+    },
+    "CVE-2022-1974": {
+        "affected_versions": "unk to v5.18-rc6",
+        "breaks": "",
+        "cmt_msg": "nfc: replace improper check device_is_registered() in netlink related functions",
+        "fixes": "da5c0f119203ad9728920456a0f52a6d850c01cd",
+        "last_affected_version": "5.17.6",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1974",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1974",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1974",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1974",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1974",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1974"
+        }
+    },
+    "CVE-2022-1975": {
+        "affected_versions": "unk to v5.18-rc6",
+        "breaks": "",
+        "cmt_msg": "NFC: netlink: fix sleep in atomic bug when firmware download timeout",
+        "fixes": "4071bf121d59944d5cd2238de0642f3d7995a997",
+        "last_affected_version": "5.17.6",
+        "last_modified": "2022-06-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1975",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1975",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1975",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1975",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1975",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1975"
+        }
+    },
+    "CVE-2022-1976": {
+        "affected_versions": "unk to v5.19-rc1",
+        "breaks": "",
+        "cmt_msg": "io_uring: reinstate the inflight tracking",
+        "fixes": "9cae36a094e7e9d6e5fe8b6dcd4642138b3eb0c7",
+        "last_modified": "2022-06-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1976",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1976",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1976",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1976",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1976",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1976"
+        }
+    },
+    "CVE-2022-1998": {
+        "affected_versions": "unk to v5.17-rc3",
+        "breaks": "",
+        "cmt_msg": "fanotify: Fix stale file descriptor in copy_event_to_user()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
+        "fixes": "ee12595147ac1fbfb5bcb23837e26dd58d94b15d",
+        "last_affected_version": "5.16.5",
+        "last_modified": "2022-06-19",
+        "nvd_text": "A use after free in the Linux kernel File System notify functionality was found in the way user triggers copy_info_records_to_user() call to fail in copy_event_to_user(). A local user could use this flaw to crash the system or potentially escalate their privileges on the system.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1998",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-1998",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-1998",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-1998",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-1998",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-1998"
+        }
+    },
+    "CVE-2022-20008": {
+        "affected_versions": "v4.16-rc1 to v5.17-rc5",
+        "breaks": "81196976ed946cbf36bb41ddda402853c7df7cfa",
+        "cmt_msg": "mmc: block: fix read single on recovery logic",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 4.6
+        },
+        "cwe": "Use of Uninitialized Resource",
+        "fixes": "54309fde1a352ad2674ebba004a79f7d20b9f037",
+        "last_affected_version": "5.16.10",
+        "last_modified": "2022-06-12",
+        "nvd_text": "In mmc_blk_read_single of block.c, there is a possible way to read kernel heap memory due to uninitialized data. This could lead to local information disclosure if reading from an SD card that triggers errors, with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-216481035References: Upstream kernel",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20008",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20008",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20008",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20008",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20008",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20008"
+        }
+    },
+    "CVE-2022-20132": {
+        "affected_versions": "unk to v5.16-rc5",
+        "breaks": "",
+        "cmt_msg": "HID: add hid_is_usb() function to make it simpler for USB detection",
+        "fixes": "f83baa0cb6cfc92ebaf7f9d3a99d7e34f2e77a8a",
+        "last_affected_version": "5.15.7",
+        "last_modified": "2022-06-19",
+        "nvd_text": "In lg_probe and related functions of hid-lg.c and other USB HID files, there is a possible out of bounds read due to improper input validation. This could lead to local information disclosure if a malicious USB HID device were plugged in, with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-188677105References: Upstream kernel",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20132",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20132",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20132",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20132",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20132",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20132"
+        }
+    },
+    "CVE-2022-20141": {
+        "affected_versions": "unk to v5.15-rc1",
+        "breaks": "",
+        "cmt_msg": "igmp: Add ip_mc_list lock in ip_check_mc_rcu",
+        "fixes": "23d2b94043ca8835bd1e67749020e839f396a1c2",
+        "last_affected_version": "5.14.2",
+        "last_modified": "2022-06-19",
+        "nvd_text": "In ip_check_mc_rcu of igmp.c, there is a possible use after free due to improper locking. This could lead to local escalation of privilege when opening and closing inet sockets with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-112551163References: Upstream kernel",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20141",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20141",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20141",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20141",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20141",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20141"
+        }
+    },
+    "CVE-2022-20148": {
+        "affected_versions": "unk to v5.16-rc1",
+        "breaks": "",
+        "cmt_msg": "f2fs: fix UAF in f2fs_available_free_memory",
+        "fixes": "5429c9dbc9025f9a166f64e22e3a69c94fd5b29b",
+        "last_affected_version": "5.15.2",
+        "last_modified": "2022-06-19",
+        "nvd_text": "In TBD of TBD, there is a possible use-after-free due to a race condition. This could lead to local escalation of privilege in the kernel with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-219513976References: Upstream kernel",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20148",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20148",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20148",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20148",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20148",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20148"
+        }
+    },
+    "CVE-2022-20153": {
+        "affected_versions": "unk to v5.13-rc1",
+        "breaks": "",
+        "cmt_msg": "io_uring: return back safer resurrect",
+        "fixes": "f70865db5ff35f5ed0c7e9ef63e7cca3d4947f04",
+        "last_affected_version": "5.10.106",
+        "last_modified": "2022-06-19",
+        "nvd_text": "In rcu_cblist_dequeue of rcu_segcblist.c, there is a possible use-after-free due to improper locking. This could lead to local escalation of privilege in the kernel with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-222091980References: Upstream kernel",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20153",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20153",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20153",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20153",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20153",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20153"
+        }
+    },
+    "CVE-2022-20154": {
+        "affected_versions": "unk to v5.16-rc8",
+        "breaks": "",
+        "cmt_msg": "sctp: use call_rcu to free endpoint",
+        "fixes": "5ec7d18d1813a5bead0b495045606c93873aecbb",
+        "last_affected_version": "5.15.12",
+        "last_modified": "2022-06-19",
+        "nvd_text": "In lock_sock_nested of sock.c, there is a possible use after free due to a race condition. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-174846563References: Upstream kernel",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20154",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20154",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20154",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20154",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20154",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20154"
+        }
+    },
+    "CVE-2022-20166": {
+        "affected_versions": "unk to v5.10-rc1",
+        "breaks": "",
+        "cmt_msg": "drivers core: Use sysfs_emit and sysfs_emit_at for show(device *...) functions",
+        "fixes": "aa838896d87af561a33ecefea1caa4c15a68bc47",
+        "last_modified": "2022-06-19",
+        "nvd_text": "In various methods of kernel base drivers, there is a possible out of bounds write due to a heap buffer overflow. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-182388481References: Upstream kernel",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-20166",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-20166",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-20166",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-20166",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-20166",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-20166"
+        }
+    },
+    "CVE-2022-2078": {
+        "affected_versions": "unk to v5.19-rc1",
+        "breaks": "",
+        "cmt_msg": "netfilter: nf_tables: sanitize nft_set_desc_concat_parse()",
+        "fixes": "fecf31ee395b0295f2d7260aa29946b7605f7c85",
+        "last_affected_version": "5.18.1",
+        "last_modified": "2022-06-19",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-2078",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-2078",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-2078",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-2078",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-2078",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-2078"
+        }
+    },
+    "CVE-2022-21499": {
+        "affected_versions": "unk to v5.19-rc1",
+        "breaks": "",
+        "cmt_msg": "lockdown: also lock down previous kgdb use",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "High",
+            "Scope": "Unchanged",
+            "User Interaction": "Required",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+            "score": 6.5
+        },
+        "cwe": "Out-of-bounds Write",
+        "fixes": "eadb2f47a3ced5c64b23b90fd2a3463f63726066",
+        "last_affected_version": "5.18.0",
+        "last_modified": "2022-06-19",
+        "nvd_text": "KGDB and KDB allow read and write access to kernel memory, and thus should be restricted during lockdown. An attacker with access to a serial port could trigger the debugger so it is important that the debugger respect the lockdown mode when/if it is triggered. CVSS 3.1 Base Score 6.5 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-21499",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-21499",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-21499",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-21499",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-21499",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-21499"
         }
     },
     "CVE-2022-22942": {
@@ -70220,7 +71315,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "c25b2ae136039ffa820c26138ed4a5e5f3ab3841",
         "last_affected_version": "5.16.10",
-        "last_modified": "2022-02-28",
+        "last_modified": "2022-05-03",
         "nvd_text": "kernel/bpf/verifier.c in the Linux kernel through 5.15.14 allows local users to gain privileges because of the availability of pointer arithmetic via certain *_OR_NULL pointer types.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-23222",
@@ -71055,7 +72150,7 @@
         "cwe": "Use After Free",
         "fixes": "f00432063db1a0db484e85193eccc6845435b80e",
         "last_affected_version": "5.17.2",
-        "last_modified": "2022-04-15",
+        "last_modified": "2022-05-25",
         "nvd_text": "The SUNRPC subsystem in the Linux kernel through 5.17.2 can call xs_xprt_free before ensuring that sockets are in the intended state.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-28893",
@@ -71106,13 +72201,76 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-29156"
         }
     },
+    "CVE-2022-29581": {
+        "affected_versions": "v4.14 to v5.18-rc4",
+        "breaks": "35c55fc156d85a396a975fc17636f560fc02fd65",
+        "cmt_msg": "net/sched: cls_u32: fix netns refcount changes in u32_change()",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+            "score": 7.2
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Use After Free",
+        "fixes": "3db09e762dc79584a69c10d74a6b98f89a9979f8",
+        "last_affected_version": "5.17.4",
+        "last_modified": "2022-06-12",
+        "nvd_text": "Improper Update of Reference Count vulnerability in net/sched of Linux Kernel allows local attacker to cause privilege escalation to root. This issue affects: Linux Kernel versions prior to 5.18; version 4.14 and later versions.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-29581",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-29581",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-29581",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-29581",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-29581",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-29581"
+        }
+    },
     "CVE-2022-29582": {
         "affected_versions": "unk to v5.18-rc2",
         "breaks": "",
         "cmt_msg": "io_uring: fix race between timeout flush and removal",
+        "cvss2": {
+            "Access Complexity": "Medium",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Complete",
+            "Confidentiality Impact": "Complete",
+            "Integrity Impact": "Complete",
+            "raw": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+            "score": 6.9
+        },
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.0
+        },
+        "cwe": "Use After Free",
         "fixes": "e677edbcabee849bfdd43f1602bccbecf736a646",
         "last_affected_version": "5.17.2",
-        "last_modified": "2022-04-28",
+        "last_modified": "2022-05-06",
         "nvd_text": "In the Linux kernel before 5.17.3, fs/io_uring.c has a use-after-free due to a race condition in io_uring timeouts. This can be triggered by a local user who has no access to any user namespace; however, the race condition perhaps can only be exploited infrequently.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-29582",
@@ -71121,6 +72279,143 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-29582",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-29582",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-29582"
+        }
+    },
+    "CVE-2022-29968": {
+        "affected_versions": "unk to v5.18-rc5",
+        "breaks": "",
+        "cmt_msg": "io_uring: fix uninitialized field in rw io_kiocb",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Missing Initialization of Resource",
+        "fixes": "32452a3eb8b64e01e2be717f518c0be046975b9d",
+        "last_affected_version": "5.17.5",
+        "last_modified": "2022-05-12",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.17.5. io_rw_init_file in fs/io_uring.c lacks initialization of kiocb->private.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-29968",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-29968",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-29968",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-29968",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-29968",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-29968"
+        }
+    },
+    "CVE-2022-30594": {
+        "affected_versions": "unk to v5.18-rc1",
+        "breaks": "",
+        "cmt_msg": "ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "Partial",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "Partial",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+            "score": 4.6
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Incorrect Default Permissions",
+        "fixes": "ee1fee900537b5d9560e9f937402de5ddc8412f3",
+        "last_affected_version": "5.17.1",
+        "last_modified": "2022-05-23",
+        "nvd_text": "The Linux kernel before 5.17.2 mishandles seccomp permissions. The PTRACE_SEIZE code path allows attackers to bypass intended restrictions on setting the PT_SUSPEND_SECCOMP flag.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-30594",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-30594",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-30594",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-30594",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-30594",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-30594"
+        }
+    },
+    "CVE-2022-32296": {
+        "affected_versions": "unk to v5.18-rc6",
+        "breaks": "",
+        "cmt_msg": "tcp: increase source port perturb table to 2^16",
+        "cvss2": {
+            "Access Complexity": "Low",
+            "Access Vector": "Local Access",
+            "Authentication": "None",
+            "Availability Impact": "None",
+            "Confidentiality Impact": "Partial",
+            "Integrity Impact": "None",
+            "raw": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+            "score": 2.1
+        },
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "Low",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "score": 3.3
+        },
+        "cwe": "Observable Discrepancy",
+        "fixes": "4c2c8f03a5ab7cb04ec64724d7d176d00bcc91e5",
+        "last_affected_version": "5.17.8",
+        "last_modified": "2022-06-19",
+        "nvd_text": "The Linux kernel before 5.17.9 allows TCP servers to identify clients by observing what source ports are used.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-32296",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-32296",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-32296",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-32296",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-32296",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-32296"
+        }
+    },
+    "CVE-2022-32981": {
+        "affected_versions": "unk to v5.19-rc2",
+        "breaks": "",
+        "cmt_msg": "powerpc/32: Fix overread/overwrite of thread_struct via ptrace",
+        "fixes": "8e1278444446fc97778a5e5c99bca1ce0bbc5ec9",
+        "last_affected_version": "5.18.3",
+        "last_modified": "2022-06-19",
+        "nvd_text": "An issue was discovered in the Linux kernel through 5.18.3 on powerpc 32-bit platforms. There is a buffer overflow in ptrace PEEKUSER and POKEUSER (aka PEEKUSR and POKEUSR) when accessing floating point registers.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-32981",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-32981",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-32981",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-32981",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-32981",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-32981"
         }
     }
 }
