@@ -17,6 +17,8 @@ CVEs fixed in 5.17.2:
   CVE-2022-1516: 671529db75e6be777bb1c76aa07c2bdd2992be6d net/x25: Fix null-ptr-deref caused by x25_disconnect
   CVE-2022-1651: f8e6e18d117e461110c849a11c6a396dcccdbd4e virt: acrn: fix a memory leak in acrn_dev_ioctl()
   CVE-2022-1671: 4e1f670e1b440dc783dbeb881d575bca31474f73 rxrpc: fix some null-ptr-deref bugs in server_key.c
+  CVE-2022-2153: 9fa2b94443ff41cdecdff6f4d4324d83af01089a KVM: x86: Avoid theoretical NULL pointer dereference in kvm_irq_delivery_to_apic_fast()
+  CVE-2022-2380: e46779a5706941fb9cd6e0264427953eb77d7888 video: fbdev: sm712fb: Fix crash in smtcfb_read()
   CVE-2022-28388: 29d6c06168faa23ce23db3321981c8fde576c95c can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-28389: 42a4b0dfd365c4f77f96fd1f73a64b47ae443a38 can: mcba_usb: mcba_usb_start_xmit(): fix double dev_kfree_skb in error path
   CVE-2022-28390: 3f71f499395545119383f10760b8b19703d2a7dd can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
@@ -33,6 +35,7 @@ CVEs fixed in 5.17.5:
 CVEs fixed in 5.17.6:
   CVE-2022-1836: d91ca05d52fabf68c0376bcfeed1a52be68a8e1b floppy: disable FDRAWCMD by default
   CVE-2022-29968: 77089e6ff273f43c42e99a690ae45ee39a6a62de io_uring: fix uninitialized field in rw io_kiocb
+  CVE-2022-33981: d91ca05d52fabf68c0376bcfeed1a52be68a8e1b floppy: disable FDRAWCMD by default
 
 CVEs fixed in 5.17.7:
   CVE-2022-1734: f4bfbac45121c8638db5eacb1ebbb61ee956c668 nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs
@@ -47,6 +50,7 @@ CVEs fixed in 5.17.9:
   CVE-2022-32296: e3ee7bb47d6509c3e8a3e96e5d8e3bf21549b6e8 tcp: increase source port perturb table to 2^16
 
 CVEs fixed in 5.17.10:
+  CVE-2022-1652: 88887ced7803132ed357a42d050560a2fb5c7ce6 floppy: use a statically allocated error counter
   CVE-2022-1729: 22fb2974224c9836eeaf0d24fdd481fcdaa0aea8 perf: Fix sys_perf_event_open() race against self
   CVE-2022-21499: 281d356a035132f2603724ee0f04767d70e2e98e lockdown: also lock down previous kgdb use
 
@@ -58,12 +62,16 @@ CVEs fixed in 5.17.13:
   CVE-2022-1966: d8db0465bcc4d4b54ecfb67b820ed26eb1440da7 netfilter: nf_tables: disallow non-stateful expression in sets earlier
   CVE-2022-1972: c88f3e3d243d701586239c5b69356ec2b1fd05f1 netfilter: nf_tables: sanitize nft_set_desc_concat_parse()
   CVE-2022-2078: c88f3e3d243d701586239c5b69356ec2b1fd05f1 netfilter: nf_tables: sanitize nft_set_desc_concat_parse()
+  CVE-2022-32250: d8db0465bcc4d4b54ecfb67b820ed26eb1440da7 netfilter: nf_tables: disallow non-stateful expression in sets earlier
 
 CVEs fixed in 5.17.14:
+  CVE-2022-1184: 4b1cd51256e9267140153f04f4e62148adb2908c ext4: verify dir block before splitting it
   CVE-2022-1973: 2088cc00491e8d25a99d0f247df843e9c3df2040 fs/ntfs3: Fix invalid free in log_replay
 
 CVEs fixed in 5.17.15:
   CVE-2022-32981: 638556430658eca42501271edb38154264767ff5 powerpc/32: Fix overread/overwrite of thread_struct via ptrace
+  CVE-2022-34494: 900373f8f7ee128cbbd3968722182b8d26c1e54e rpmsg: virtio: Fix possible double free in rpmsg_virtio_add_ctrl_dev()
+  CVE-2022-34495: c49fb74e050d01ea09703b7c0d5fe8b9c3855b60 rpmsg: virtio: Fix possible double free in rpmsg_probe()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -72,6 +80,7 @@ Outstanding CVEs:
   CVE-2008-4609: (unk)  
   CVE-2010-4563: (unk)  
   CVE-2010-5321: (unk)  
+  CVE-2011-4916: (unk)  
   CVE-2011-4917: (unk)  
   CVE-2012-4542: (unk)  
   CVE-2013-7445: (unk)  
@@ -85,7 +94,6 @@ Outstanding CVEs:
   CVE-2018-12930: (unk)  
   CVE-2018-12931: (unk)  
   CVE-2018-17977: (unk)  
-  CVE-2019-0146: (unk)  
   CVE-2019-12456: (unk)  
   CVE-2019-15239: (unk) unknown 
   CVE-2019-15290: (unk)  
@@ -105,7 +113,6 @@ Outstanding CVEs:
   CVE-2020-26140: (unk)  
   CVE-2020-26142: (unk)  
   CVE-2020-26143: (unk)  
-  CVE-2020-26555: (unk)  
   CVE-2020-26556: (unk)  
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
@@ -116,7 +123,6 @@ Outstanding CVEs:
   CVE-2021-0695: (unk)  
   CVE-2021-26934: (unk)  
   CVE-2021-33061: (unk) ixgbe: add improvement for MDD response functionality 
-  CVE-2021-33135: (unk)  
   CVE-2021-3542: (unk)  
   CVE-2021-3714: (unk)  
   CVE-2021-3847: (unk)  
@@ -125,15 +131,27 @@ Outstanding CVEs:
   CVE-2021-39800: (unk)  
   CVE-2021-39801: (unk)  
   CVE-2021-39802: (unk)  
-  CVE-2022-0171: (unk)  
+  CVE-2022-0171: (unk) KVM: SEV: add cache flush to solve SEV cache incoherency issues 
   CVE-2022-0400: (unk)  
   CVE-2022-1116: (unk)  
-  CVE-2022-1184: (unk)  
   CVE-2022-1247: (unk)  
   CVE-2022-1462: (unk)  
-  CVE-2022-1652: (unk)  
   CVE-2022-1679: (unk)  
   CVE-2022-1882: (unk)  
-  CVE-2022-1976: (unk) io_uring: reinstate the inflight tracking 
+  CVE-2022-21123: (unk) x86/speculation/mmio: Add mitigation for Processor MMIO Stale Data 
+  CVE-2022-21125: (unk) x86/speculation/mmio: Reuse SRBDS mitigation for SBDS 
+  CVE-2022-21166: (unk) x86/speculation/mmio: Enable CPU Fill buffer clearing on idle 
+  CVE-2022-2318: (unk) net: rose: fix UAF bugs caused by timer handler 
+  CVE-2022-23816: (unk)  
+  CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
+  CVE-2022-26365: (unk) xen/blkfront: fix leaking data in shared pages 
   CVE-2022-26878: (unk)  
+  CVE-2022-29900: (unk) x86/kvm/vmx: Make noinstr clean 
+  CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 
+  CVE-2022-33740: (unk) xen/netfront: fix leaking data in shared pages 
+  CVE-2022-33741: (unk) xen/netfront: force data bouncing when backend is untrusted 
+  CVE-2022-33742: (unk) xen/blkfront: force data bouncing when backend is untrusted 
+  CVE-2022-33743: (unk) xen-netfront: restore __skb_queue_tail() positioning in xennet_get_responses() 
+  CVE-2022-33744: (unk) xen/arm: Fix race in RB-tree based P2M accounting 
+  CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
