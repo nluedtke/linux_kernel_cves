@@ -60581,7 +60581,7 @@
         }, 
         "cwe": "Use After Free", 
         "fixes": "", 
-        "last_modified": "2021-10-12", 
+        "last_modified": "2022-11-18", 
         "nvd_text": "In get_sock_stat of xt_qtaguid.c, there is a possible out of bounds read due to a use after free. This could lead to local information disclosure with User execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-184018316References: Upstream kernel", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-0695", 
@@ -60590,7 +60590,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-0695", 
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-0695", 
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-0695"
-        }
+        }, 
+        "vendor_specific": true
     }, 
     "CVE-2021-0707": {
         "affected_versions": "v5.8-rc4 to v5.11-rc3", 
@@ -62602,8 +62603,8 @@
         }
     }, 
     "CVE-2021-28951": {
-        "affected_versions": "v2.6.12-rc2 to v5.12-rc2", 
-        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2", 
+        "affected_versions": "v5.10-rc1 to v5.12-rc2", 
+        "breaks": "7e84e1c7566a1df470a9e1f49d3db2ce311261a4", 
         "cmt_msg": "io_uring: ensure that SQPOLL thread is started for exit", 
         "cvss2": {
             "Access Complexity": "Low", 
@@ -62630,7 +62631,7 @@
         "cwe": "Unspecified", 
         "fixes": "3ebba796fa251d042be42b929a2d916ee5c34a49", 
         "last_affected_version": "5.11.8", 
-        "last_modified": "2021-05-06", 
+        "last_modified": "2022-11-18", 
         "nvd_text": "An issue was discovered in fs/io_uring.c in the Linux kernel through 5.11.8. It allows attackers to cause a denial of service (deadlock) because exit may be waiting to park a SQPOLL thread, but concurrently that SQPOLL thread is waiting for a signal to start, aka CID-3ebba796fa25.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-28951", 
@@ -66976,7 +66977,7 @@
         }, 
         "cwe": "Improper Privilege Management", 
         "fixes": "ac4488815518c236e60c0048833c51a76404b1b6", 
-        "last_modified": "2022-06-27", 
+        "last_modified": "2022-11-18", 
         "nvd_text": "In change_pte_range of mprotect.c , there is a possible way to make a shared mmap writable due to a permissions bypass. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-213339151References: Upstream kernel", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-39802", 
@@ -66985,7 +66986,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2021-39802", 
             "SUSE": "https://www.suse.com/security/cve/CVE-2021-39802", 
             "Ubuntu": "https://ubuntu.com/security/CVE-2021-39802"
-        }
+        }, 
+        "vendor_specific": true
     }, 
     "CVE-2021-4001": {
         "affected_versions": "v5.5-rc1 to v5.16-rc2", 
@@ -69892,6 +69894,7 @@
     }, 
     "CVE-2022-1116": {
         "affected_versions": "unk to unk", 
+        "backport": true, 
         "breaks": "cac68d12c531aa3010509a5a55a5dfd18dedaa80", 
         "cvss2": {
             "Access Complexity": "Low", 
@@ -69917,7 +69920,7 @@
         }, 
         "cwe": "Integer Overflow or Wraparound", 
         "fixes": "1a623d361ffe5cecd4244a02f449528416360038", 
-        "last_modified": "2022-06-27", 
+        "last_modified": "2022-11-18", 
         "nvd_text": "Integer Overflow or Wraparound vulnerability in io_uring of Linux Kernel allows local attacker to cause memory corruption and escalate privileges to root. This issue affects: Linux Kernel versions prior to 5.4.189; version 5.4.24 and later versions.", 
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-1116", 
@@ -71984,6 +71987,7 @@
         }, 
         "cwe": "Use After Free", 
         "fixes": "f9d87929d451d3e649699d0f1d74f71f77ad38f5", 
+        "last_affected_version": "5.15.18", 
         "last_modified": "2022-02-09", 
         "nvd_text": "kernel/ucount.c in the Linux kernel 5.14 through 5.16.4, when unprivileged user namespaces are enabled, allows a use-after-free and privilege escalation because a ucounts object can outlive its namespace.", 
         "ref_urls": {
@@ -73812,6 +73816,12 @@
         "fixes": "6e8280b958c5d7edc514cf347a800b23b7732b2b", 
         "last_modified": "2022-10-31"
     }, 
+    "CVE-2022-3534": {
+        "affected_versions": "unk to unk", 
+        "breaks": "", 
+        "fixes": "93c660ca40b5d2f7c1b1626e955a8e9fa30e0749", 
+        "last_modified": "2022-11-18"
+    }, 
     "CVE-2022-3535": {
         "affected_versions": "v4.19-rc1 to v6.1-rc1", 
         "breaks": "21da57a23125a072e6ab2bb6c9bea5e02e01d1f5", 
@@ -73995,12 +74005,12 @@
         "last_modified": "2022-10-24"
     }, 
     "CVE-2022-3633": {
-        "affected_versions": "unk to v6.0-rc1", 
-        "breaks": "", 
+        "affected_versions": "v5.4-rc1 to v6.0-rc1", 
+        "breaks": "9d71dd0c70099914fcd063135da3c580865e924c", 
         "cmt_msg": "can: j1939: j1939_session_destroy(): fix memory leak of skbs", 
         "fixes": "8c21c54a53ab21842f5050fa090f26b03c0313d6", 
         "last_affected_version": "5.15.62", 
-        "last_modified": "2022-10-24"
+        "last_modified": "2022-11-18"
     }, 
     "CVE-2022-3635": {
         "affected_versions": "v2.6.12-rc2 to v6.0-rc1", 
