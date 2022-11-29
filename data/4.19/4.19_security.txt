@@ -938,6 +938,9 @@ CVEs fixed in 4.19.238:
   CVE-2022-3202: 2ef74e3e0089b6615ee124e1183746974c6bb561 jfs: prevent NULL deref in diFree
   CVE-2022-3239: 0113fa98a49a8e46a19b0ad80f29c904c6feec23 media: em28xx: initialize refcount before kref_get
 
+CVEs fixed in 4.19.239:
+  CVE-2022-41858: 753b9d220a7d36dac70e7c6d05492d10d6f9dd36 drivers: net: slip: fix NPD bug in sl_tx_timeout()
+
 CVEs fixed in 4.19.240:
   CVE-2022-1204: de55a1338e6a48ff1e41ea8db1432496fbe2a62b ax25: Fix refcount leaks caused by ax25_cb_del()
   CVE-2022-28388: 8eb78da898079c0d7250c32ebf0c35fb81737abe can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path
@@ -1024,6 +1027,7 @@ CVEs fixed in 4.19.258:
   CVE-2022-2663: 3275f7804f40de3c578d2253232349b07c25f146 netfilter: nf_conntrack_irc: Fix forged IP logic
   CVE-2022-3586: 9245ed20950afe225bc6d1c4b9d28d55aa152e25 sch_sfb: Don't assume the skb is still around after enqueueing to child
   CVE-2022-40307: 021805af5bedeafc76c117fc771c100b358ab419 efi: capsule-loader: Fix use-after-free in efi_capsule_write
+  CVE-2022-4095: 9fd6170c5e2d0ccd027abe26f6f5ffc528e1bb27 staging: rtl8712: fix use after free bugs
 
 CVEs fixed in 4.19.260:
   CVE-2022-39842: a34547fc43d02f2662b2b62c9a4c578594cf662d video: fbdev: pxa3xx-gcu: Fix integer overflow in pxa3xx_gcu_write
@@ -1049,6 +1053,9 @@ CVEs fixed in 4.19.265:
   CVE-2022-3564: 6c7407bfbeafc80a04e6eaedcf34d378532a04f2 Bluetooth: L2CAP: Fix use-after-free caused by l2cap_reassemble_sdu
   CVE-2022-3628: 5e7d546917431400b7d6e5e38f588e0bd13083c9 wifi: brcmfmac: Fix potential buffer overflow in brcmf_fweh_event_worker()
   CVE-2022-42895: 36919a82f335784d86b4def308739559bb47943d Bluetooth: L2CAP: Fix attempting to access uninitialized memory
+
+CVEs fixed in 4.19.267:
+  CVE-2022-3521: 23a0a5869749c7833772330313ae7aec6581ec60 kcm: avoid potential race in kcm_tx_work
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1177,13 +1184,11 @@ Outstanding CVEs:
   CVE-2022-2991: (unk) remove the lightnvm subsystem 
   CVE-2022-3061: (unk) video: fbdev: i740fb: Error out if 'pixclock' equals zero 
   CVE-2022-3169: (unk) nvme: ensure subsystem reset is single threaded 
-  CVE-2022-3238: (unk)  
   CVE-2022-3303: (unk) ALSA: pcm: oss: Fix race at SNDCTL_DSP_SYNC 
   CVE-2022-3344: (unk)  
   CVE-2022-3424: (unk)  
   CVE-2022-3435: (unk) ipv4: Handle attempt to delete multipath route when fib_info contains an nh reference 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
-  CVE-2022-3521: (unk) kcm: avoid potential race in kcm_tx_work 
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
   CVE-2022-3524: (unk) tcp/udp: Fix memory leak in ipv6_renew_options(). 
@@ -1192,7 +1197,6 @@ Outstanding CVEs:
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
-  CVE-2022-3619: (unk) Bluetooth: L2CAP: Fix memory leak in vhci_write 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3625: (unk) devlink: Fix use-after-free after a failed reload 
   CVE-2022-36280: (unk)  
@@ -1206,12 +1210,20 @@ Outstanding CVEs:
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
-  CVE-2022-3977: (unk) mctp: prevent double key removal and unref 
   CVE-2022-40133: (unk)  
   CVE-2022-41218: (unk)  
   CVE-2022-41222: (unk) mm/mremap: hold the rmap lock in write mode when moving page table entries. 
+  CVE-2022-4127: (unk) io_uring: check that we have a file table when allocating update slots 
+  CVE-2022-4129: (unk)  
   CVE-2022-41848: (unk)  
   CVE-2022-42896: (unk) Bluetooth: L2CAP: Fix accepting connection request for invalid SPSM 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
+  CVE-2022-45884: (unk)  
+  CVE-2022-45885: (unk)  
+  CVE-2022-45886: (unk)  
+  CVE-2022-45887: (unk)  
+  CVE-2022-45888: (unk)  
+  CVE-2022-45919: (unk)  
+  CVE-2022-45934: (unk)  

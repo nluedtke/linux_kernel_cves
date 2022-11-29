@@ -666,6 +666,7 @@ CVEs fixed in 5.4.189:
 
 CVEs fixed in 5.4.190:
   CVE-2022-1204: 9e1e088a57c23251f1cfe9601bbd90ade2ea73b9 ax25: Fix refcount leaks caused by ax25_cb_del()
+  CVE-2022-41858: d05cd68ed8460cb158cc62c41ffe39fe0ca16169 drivers: net: slip: fix NPD bug in sl_tx_timeout()
 
 CVEs fixed in 5.4.191:
   CVE-2022-2639: aa70705560871725e963945a2d36ace7849c004e openvswitch: fix OOB access in reserve_sfa_size()
@@ -759,6 +760,7 @@ CVEs fixed in 5.4.213:
   CVE-2022-2663: 36f7b71f8ad8e4d224b45f7d6ecfeff63b091547 netfilter: nf_conntrack_irc: Fix forged IP logic
   CVE-2022-3586: 279c7668e354fa151d5fd2e8c42b5153a1de3135 sch_sfb: Don't assume the skb is still around after enqueueing to child
   CVE-2022-40307: 8028ff4cdbb3f20d3c1c04be33a83bab0cb94997 efi: capsule-loader: Fix use-after-free in efi_capsule_write
+  CVE-2022-4095: d0aac7146e96bf39e79c65087d21dfa02ef8db38 staging: rtl8712: fix use after free bugs
 
 CVEs fixed in 5.4.215:
   CVE-2022-3303: 4051324a6dafd7053c74c475e80b3ba10ae672b0 ALSA: pcm: oss: Fix race at SNDCTL_DSP_SYNC
@@ -798,6 +800,9 @@ CVEs fixed in 5.4.224:
   CVE-2022-3564: 4cd094fd5d872862ca278e15b9b51b07e915ef3f Bluetooth: L2CAP: Fix use-after-free caused by l2cap_reassemble_sdu
   CVE-2022-3628: a16415c8f156bec5399ef0345715ee4b90e5bb83 wifi: brcmfmac: Fix potential buffer overflow in brcmf_fweh_event_worker()
   CVE-2022-42895: 6949400ec9feca7f88c0f6ca5cb5fdbcef419c89 Bluetooth: L2CAP: Fix attempting to access uninitialized memory
+
+CVEs fixed in 5.4.225:
+  CVE-2022-3521: ad39d09190a545d0f05ae0a82900eee96c5facea kcm: avoid potential race in kcm_tx_work
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -903,12 +908,10 @@ Outstanding CVEs:
   CVE-2022-3061: (unk) video: fbdev: i740fb: Error out if 'pixclock' equals zero 
   CVE-2022-3169: (unk) nvme: ensure subsystem reset is single threaded 
   CVE-2022-3176: (unk) io_uring: fix UAF due to missing POLLFREE handling 
-  CVE-2022-3238: (unk)  
   CVE-2022-3344: (unk)  
   CVE-2022-3424: (unk)  
   CVE-2022-3435: (unk) ipv4: Handle attempt to delete multipath route when fib_info contains an nh reference 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
-  CVE-2022-3521: (unk) kcm: avoid potential race in kcm_tx_work 
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
   CVE-2022-3534: (unk)  
@@ -916,7 +919,6 @@ Outstanding CVEs:
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
-  CVE-2022-3619: (unk) Bluetooth: L2CAP: Fix memory leak in vhci_write 
   CVE-2022-3623: (unk) mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-36280: (unk)  
@@ -930,11 +932,19 @@ Outstanding CVEs:
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
-  CVE-2022-3977: (unk) mctp: prevent double key removal and unref 
   CVE-2022-40133: (unk)  
   CVE-2022-41218: (unk)  
+  CVE-2022-4127: (unk) io_uring: check that we have a file table when allocating update slots 
+  CVE-2022-4129: (unk)  
   CVE-2022-41848: (unk)  
   CVE-2022-42896: (unk) Bluetooth: L2CAP: Fix accepting connection request for invalid SPSM 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
+  CVE-2022-45884: (unk)  
+  CVE-2022-45885: (unk)  
+  CVE-2022-45886: (unk)  
+  CVE-2022-45887: (unk)  
+  CVE-2022-45888: (unk)  
+  CVE-2022-45919: (unk)  
+  CVE-2022-45934: (unk)  
