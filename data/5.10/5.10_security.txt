@@ -436,6 +436,7 @@ CVEs fixed in 5.10.119:
 CVEs fixed in 5.10.120:
   CVE-2022-1966: ea62d169b6e731e0b54abda1d692406f6bc6a696 netfilter: nf_tables: disallow non-stateful expression in sets earlier
   CVE-2022-1972: c0aff1faf66b6b7a19103f83e6a5d0fdc64b9048 netfilter: nf_tables: sanitize nft_set_desc_concat_parse()
+  CVE-2022-20572: 8df42bcd364cc3b41105215d841792aea787b133 dm verity: set DM_TARGET_IMMUTABLE feature flag
   CVE-2022-2078: c0aff1faf66b6b7a19103f83e6a5d0fdc64b9048 netfilter: nf_tables: sanitize nft_set_desc_concat_parse()
   CVE-2022-2503: 8df42bcd364cc3b41105215d841792aea787b133 dm verity: set DM_TARGET_IMMUTABLE feature flag
   CVE-2022-2959: 8fbd54ab06c955d247c1a91d5d980cddc868f1e7 pipe: Fix missing lock in pipe_resize_ring()
@@ -486,6 +487,7 @@ CVEs fixed in 5.10.134:
   CVE-2022-36879: 47b696dd654450cdec3103a833e5bf29c4b83bfa xfrm: xfrm_policy: fix a possible double xfrm_pols_put() in xfrm_bundle_lookup()
 
 CVEs fixed in 5.10.135:
+  CVE-2022-20566: de5d4654ac6c22b1be756fdf7db18471e7df01ea Bluetooth: L2CAP: Fix use-after-free caused by l2cap_chan_put
   CVE-2022-36946: 440dccd80f627e0e11ceb0429e4cdab61857d17e netfilter: nf_queue: do not allow packet truncation below transport header offset
 
 CVEs fixed in 5.10.136:
@@ -648,6 +650,7 @@ Outstanding CVEs:
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
   CVE-2022-20409: (unk) io_uring: remove io_identity 
   CVE-2022-20424: (unk) io_uring: remove io_identity 
+  CVE-2022-20568: (unk) Merge tag 'io_uring-worker.v3-2021-02-25' of git://git.kernel.dk/linux-block 
   CVE-2022-2209: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
@@ -656,9 +659,8 @@ Outstanding CVEs:
   CVE-2022-2961: (unk)  
   CVE-2022-2991: (unk) remove the lightnvm subsystem 
   CVE-2022-3176: (unk) io_uring: fix UAF due to missing POLLFREE handling 
-  CVE-2022-3344: (unk)  
+  CVE-2022-3344: (unk) KVM: x86: nSVM: harden svm_free_nested against freeing vmcb02 while still in use 
   CVE-2022-3424: (unk)  
-  CVE-2022-3435: (unk) ipv4: Handle attempt to delete multipath route when fib_info contains an nh reference 
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
   CVE-2022-3534: (unk)  
@@ -669,10 +671,10 @@ Outstanding CVEs:
   CVE-2022-3623: (unk) mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-36280: (unk)  
-  CVE-2022-3630: (unk) fscache: don't leak cookie access refs if invalidation is in progress or failed 
   CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
+  CVE-2022-3643: (unk) xen/netback: Ensure protocol headers don't fall in the non-linear area 
   CVE-2022-3707: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-38457: (unk)  
@@ -681,9 +683,9 @@ Outstanding CVEs:
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
   CVE-2022-40133: (unk)  
   CVE-2022-41218: (unk)  
-  CVE-2022-4127: (unk) io_uring: check that we have a file table when allocating update slots 
   CVE-2022-4129: (unk)  
   CVE-2022-41848: (unk)  
+  CVE-2022-4269: (unk)  
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
