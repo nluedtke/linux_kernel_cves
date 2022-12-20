@@ -919,6 +919,7 @@ CVEs fixed in 4.19.235:
 CVEs fixed in 4.19.236:
   CVE-2022-20158: a33dd1e6693f80d805155b3f69c18c2f642915da net/packet: fix slab-out-of-bounds access in packet_recvmsg()
   CVE-2022-20368: a33dd1e6693f80d805155b3f69c18c2f642915da net/packet: fix slab-out-of-bounds access in packet_recvmsg()
+  CVE-2022-3107: a30c7c81db60f7f7ad52f75a4f7de5f628063df4 hv_netvsc: Add check for kvmalloc_array
 
 CVEs fixed in 4.19.237:
   CVE-2022-1016: 88791b79a1eb2ba94e95d039243e28433583a67b netfilter: nf_tables: initialize registers in nft_do_chain()
@@ -936,6 +937,7 @@ CVEs fixed in 4.19.238:
   CVE-2022-28390: dec3ed0c76483748268bf36ec278af660b0f80ba can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-2977: cb64bd038beacb4331fe464a36c8b5481e8f51e2 tpm: fix reference counting for struct tpm_chip
   CVE-2022-30594: b1f438f872dcda10a79e6aeaf06fd52dfb15a6ab ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE
+  CVE-2022-3111: 60dd1082322966f192f42fe2a6605dfa08eef41f power: supply: wm8350-power: Add missing free in free_charger_irq
   CVE-2022-3202: 2ef74e3e0089b6615ee124e1183746974c6bb561 jfs: prevent NULL deref in diFree
   CVE-2022-3239: 0113fa98a49a8e46a19b0ad80f29c904c6feec23 media: em28xx: initialize refcount before kref_get
 
@@ -1064,6 +1066,9 @@ CVEs fixed in 4.19.268:
   CVE-2022-3524: bbfbdca680b0cbea0e57be597b5e2cae19747052 tcp/udp: Fix memory leak in ipv6_renew_options().
   CVE-2022-42896: a2045d57e844864605d39e6cfd2237861d800f13 Bluetooth: L2CAP: Fix accepting connection request for invalid SPSM
 
+CVEs fixed in 4.19.269:
+  CVE-2022-3643: 44dfdecc288b8d5932e09f5e6a597a089d5a82b2 xen/netback: Ensure protocol headers don't fall in the non-linear area
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1180,6 +1185,7 @@ Outstanding CVEs:
   CVE-2022-20424: (unk) io_uring: remove io_identity 
   CVE-2022-20568: (unk) Merge tag 'io_uring-worker.v3-2021-02-25' of git://git.kernel.dk/linux-block 
   CVE-2022-21499: (unk) lockdown: also lock down previous kgdb use 
+  CVE-2022-2196: (unk) KVM: VMX: Execute IBPB on emulated VM-exit when guest has IBRS 
   CVE-2022-2209: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
@@ -1191,25 +1197,33 @@ Outstanding CVEs:
   CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-2991: (unk) remove the lightnvm subsystem 
   CVE-2022-3061: (unk) video: fbdev: i740fb: Error out if 'pixclock' equals zero 
+  CVE-2022-3104: (unk) lkdtm/bugs: Check for the NULL pointer after calling kmalloc 
+  CVE-2022-3105: (unk) RDMA/uverbs: Check for null return of kmalloc_array 
+  CVE-2022-3106: (unk) sfc_ef100: potential dereference of null pointer 
+  CVE-2022-3108: (unk) drm/amdkfd: Check for null pointer after calling kmemdup 
+  CVE-2022-3110: (unk) staging: r8188eu: add check for kzalloc 
+  CVE-2022-3112: (unk) media: meson: vdec: potential dereference of null pointer 
+  CVE-2022-3113: (unk) media: mtk-vcodec: potential dereference of null pointer 
+  CVE-2022-3114: (unk) clk: imx: Add check for kcalloc 
+  CVE-2022-3115: (unk) drm: mali-dp: potential dereference of null pointer 
   CVE-2022-3169: (unk) nvme: ensure subsystem reset is single threaded 
   CVE-2022-3303: (unk) ALSA: pcm: oss: Fix race at SNDCTL_DSP_SYNC 
   CVE-2022-3344: (unk) KVM: x86: nSVM: harden svm_free_nested against freeing vmcb02 while still in use 
-  CVE-2022-3424: (unk)  
+  CVE-2022-3424: (unk) misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
-  CVE-2022-3534: (unk)  
+  CVE-2022-3534: (unk) libbpf: Fix use-after-free in btf_dump_name_dups 
   CVE-2022-3545: (unk) nfp: fix use-after-free in area_cache_get() 
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3625: (unk) devlink: Fix use-after-free after a failed reload 
-  CVE-2022-36280: (unk)  
+  CVE-2022-36280: (unk) drm/vmwgfx: Validate the box size for the snooped cursor 
   CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
-  CVE-2022-3643: (unk) xen/netback: Ensure protocol headers don't fall in the non-linear area 
   CVE-2022-3707: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-38457: (unk)  
@@ -1217,14 +1231,17 @@ Outstanding CVEs:
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
   CVE-2022-40133: (unk)  
-  CVE-2022-41218: (unk)  
+  CVE-2022-41218: (unk) media: dvb-core: Fix UAF due to refcount races at releasing 
   CVE-2022-41222: (unk) mm/mremap: hold the rmap lock in write mode when moving page table entries. 
-  CVE-2022-4129: (unk)  
+  CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
   CVE-2022-4269: (unk)  
+  CVE-2022-4379: (unk)  
+  CVE-2022-4382: (unk)  
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
+  CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
   CVE-2022-45886: (unk)  
@@ -1232,3 +1249,7 @@ Outstanding CVEs:
   CVE-2022-45888: (unk)  
   CVE-2022-45919: (unk)  
   CVE-2022-45934: (unk)  
+  CVE-2022-47518: (unk) wifi: wilc1000: validate number of channels 
+  CVE-2022-47519: (unk) wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_OPER_CHANNEL attribute 
+  CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
+  CVE-2022-47521: (unk) wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_CHANNEL_LIST attribute 

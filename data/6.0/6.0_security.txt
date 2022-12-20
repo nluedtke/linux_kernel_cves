@@ -50,9 +50,19 @@ CVEs fixed in 6.0.11:
   CVE-2022-3344: 5ca2721b7d3ed4d3da6323a2ea7339f745866d83 KVM: x86: nSVM: harden svm_free_nested against freeing vmcb02 while still in use
   CVE-2022-4139: aef39675ad33317c8badc0165ea882e172a633e6 drm/i915: fix TLB invalidation for Gen12 video and compute engines
   CVE-2022-45869: 34ced1da74eb975abdf7ef823512c7719f67601b KVM: x86/mmu: Fix race condition in direct_page_fault
+  CVE-2022-47518: 6195b4838e10a557859862c4e7840dc0eafdd1cd wifi: wilc1000: validate number of channels
+  CVE-2022-47519: c4b629c29a51344a99f279e0bc0caffd25897725 wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_OPER_CHANNEL attribute
+  CVE-2022-47520: b3ac275fe82fb2e52085dace26ab65c91b3434b8 wifi: wilc1000: validate pairwise and authentication suite offsets
+  CVE-2022-47521: 0269a353bb4bf49902c702e0b55dcab0d470f5aa wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_CHANNEL_LIST attribute
 
 CVEs fixed in 6.0.12:
   CVE-2022-3435: bb20a2ae241be846bc3c11ea4b3a3c69e41d51f2 ipv4: Handle attempt to delete multipath route when fib_info contains an nh reference
+  CVE-2022-4378: fdf2c95f28bf197bfab421d21e8c697d4f149ea1 proc: proc_skip_spaces() shouldn't think it is working on C strings
+
+CVEs fixed in 6.0.13:
+  CVE-2022-3643: e8851d841fe4f29b613a00de45f39c80dbfdb975 xen/netback: Ensure protocol headers don't fall in the non-linear area
+  CVE-2022-42328: 3fb02db125bbcf8163e9e30d2824b4adf13f06cb xen/netback: don't call kfree_skb() with interrupts disabled
+  CVE-2022-42329: 3fb02db125bbcf8163e9e30d2824b4adf13f06cb xen/netback: don't call kfree_skb() with interrupts disabled
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -112,39 +122,40 @@ Outstanding CVEs:
   CVE-2022-0400: (unk)  
   CVE-2022-1116: (unk)  
   CVE-2022-1247: (unk)  
+  CVE-2022-2196: (unk) KVM: VMX: Execute IBPB on emulated VM-exit when guest has IBRS 
   CVE-2022-2209: (unk)  
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
   CVE-2022-26878: (unk)  
   CVE-2022-2961: (unk)  
   CVE-2022-3238: (unk)  
-  CVE-2022-3424: (unk)  
+  CVE-2022-3424: (unk) misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os 
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
-  CVE-2022-3531: (unk)  
-  CVE-2022-3534: (unk)  
+  CVE-2022-3531: (unk) selftest/bpf: Fix memory leak in kprobe_multi_test 
+  CVE-2022-3534: (unk) libbpf: Fix use-after-free in btf_dump_name_dups 
   CVE-2022-3544: (unk)  
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
-  CVE-2022-36280: (unk)  
+  CVE-2022-36280: (unk) drm/vmwgfx: Validate the box size for the snooped cursor 
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
-  CVE-2022-3643: (unk) xen/netback: Ensure protocol headers don't fall in the non-linear area 
   CVE-2022-3707: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-38457: (unk)  
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-40133: (unk)  
-  CVE-2022-41218: (unk)  
-  CVE-2022-4129: (unk)  
+  CVE-2022-41218: (unk) media: dvb-core: Fix UAF due to refcount races at releasing 
+  CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
-  CVE-2022-42328: (unk) xen/netback: don't call kfree_skb() with interrupts disabled 
-  CVE-2022-42329: (unk) xen/netback: don't call kfree_skb() with interrupts disabled 
   CVE-2022-4269: (unk)  
+  CVE-2022-4379: (unk)  
+  CVE-2022-4382: (unk)  
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
+  CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
   CVE-2022-45886: (unk)  

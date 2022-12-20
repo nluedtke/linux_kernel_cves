@@ -297,6 +297,7 @@ CVEs fixed in 5.10.88:
   CVE-2021-28715: 88f20cccbeec9a5e83621df5cc2453b5081454dc xen/netback: don't queue unlimited number of packages
   CVE-2021-4135: 1a34fb9e2bf3029f7c0882069d67ff69cbd645d8 netdevsim: Zero-initialize memory for new map's value in function nsim_bpf_map_alloc
   CVE-2021-45402: e2aad0b5f2cbf71a31d00ce7bb4dee948adff5a9 bpf: Fix signed bounds propagation after mov32
+  CVE-2022-3106: 734a3f3106053ee41cecae2a995b3d4d0c246764 sfc_ef100: potential dereference of null pointer
 
 CVEs fixed in 5.10.89:
   CVE-2021-44733: c05d8f66ec3470e5212c4d08c46d6cb5738d600d tee: handle lookup of shm with reference count 0
@@ -309,6 +310,7 @@ CVEs fixed in 5.10.90:
 CVEs fixed in 5.10.91:
   CVE-2021-4155: 16d8568378f9ee2d1e69216d39961aa72710209f xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
   CVE-2021-45095: 4f260ea5537db35d2eeec9bca78a74713078a544 phonet: refcount leak in pep_sock_accep
+  CVE-2022-3105: 16e5cad6eca1e506c38c39dc256298643fa1852a RDMA/uverbs: Check for null return of kmalloc_array
 
 CVEs fixed in 5.10.93:
   CVE-2022-0185: eadde287a62e66b2f9e62d007c59a8f50d4b8413 vfs: fs_context: fix up param length parsing in legacy_parse_param
@@ -374,6 +376,7 @@ CVEs fixed in 5.10.108:
   CVE-2022-20158: 70b7b3c055fd4a464da8da55ff4c1f84269f9b02 net/packet: fix slab-out-of-bounds access in packet_recvmsg()
   CVE-2022-20368: 70b7b3c055fd4a464da8da55ff4c1f84269f9b02 net/packet: fix slab-out-of-bounds access in packet_recvmsg()
   CVE-2022-27666: 9248694dac20eda06e22d8503364dc9d03df4e2f esp: Fix possible buffer overflow in ESP transformation
+  CVE-2022-3107: 9b763ceda6f8963cc99df5772540c54ba46ba37c hv_netvsc: Add check for kvmalloc_array
 
 CVEs fixed in 5.10.109:
   CVE-2022-1016: 2c74374c2e88c7b7992bf808d9f9391f7452f9d9 netfilter: nf_tables: initialize registers in nft_do_chain()
@@ -395,6 +398,9 @@ CVEs fixed in 5.10.110:
   CVE-2022-2977: 290e05f346d1829e849662c97e42d5ad984f5258 tpm: fix reference counting for struct tpm_chip
   CVE-2022-30594: 5a41a3033a9344d7683340e3d83f5435ffb06501 ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE
   CVE-2022-3078: 663e7a72871f89f7a10cc8d7b2f17f27c64e071d media: vidtv: Check for null return of vzalloc
+  CVE-2022-3111: 48d23ef90116c8c702bfa4cad93744e4e5588d7d power: supply: wm8350-power: Add missing free in free_charger_irq
+  CVE-2022-3112: 032b141a91a82a5f0107ce664a35b201e60c5ce1 media: meson: vdec: potential dereference of null pointer
+  CVE-2022-3113: bc2573abc691a269b54a6c14a2660f26d88876a5 media: mtk-vcodec: potential dereference of null pointer
   CVE-2022-3239: ec8a37b2d9a76a9443feb0af95bd06ac3df25444 media: em28xx: initialize refcount before kref_get
 
 CVEs fixed in 5.10.111:
@@ -444,9 +450,11 @@ CVEs fixed in 5.10.120:
 
 CVEs fixed in 5.10.121:
   CVE-2022-1184: da2f05919238c7bdc6e28c79539f55c8355408bb ext4: verify dir block before splitting it
+  CVE-2022-3115: b4c7dd0037e6aeecad9b947b30f0d9eaeda11762 drm: mali-dp: potential dereference of null pointer
   CVE-2022-3577: 296f8ca0f73f5268cd9b85cf72ff783596b2264e HID: bigben: fix slab-out-of-bounds Write in bigben_probe
 
 CVEs fixed in 5.10.122:
+  CVE-2022-3104: 56ac04f35fc5dc8b5b67a1fa2f7204282aa887d5 lkdtm/bugs: Check for the NULL pointer after calling kmalloc
   CVE-2022-32981: 3be74fc0afbeadc2aff8dc69f3bf9716fbe66486 powerpc/32: Fix overread/overwrite of thread_struct via ptrace
 
 CVEs fixed in 5.10.123:
@@ -570,6 +578,22 @@ CVEs fixed in 5.10.156:
   CVE-2022-3169: 023435a095d22bcbbaeea7e3a8c534b5c57d0d82 nvme: ensure subsystem reset is single threaded
   CVE-2022-3521: 7deb7a9d33e4941c5ff190108146d3a56bf69e9d kcm: avoid potential race in kcm_tx_work
 
+CVEs fixed in 5.10.157:
+  CVE-2022-47518: 3eb6b89a4e9f9e44c3170d70d8d16c3c8dc8c800 wifi: wilc1000: validate number of channels
+  CVE-2022-47519: 905f886eae4b065656a575e8a02544045cbaadcf wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_OPER_CHANNEL attribute
+  CVE-2022-47520: 7c6535fb4d67ea37c98a1d1d24ca33dd5ec42693 wifi: wilc1000: validate pairwise and authentication suite offsets
+  CVE-2022-47521: 5a068535c0073c8402aa0755e8ef259fb98a33c5 wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_CHANNEL_LIST attribute
+
+CVEs fixed in 5.10.158:
+  CVE-2022-4378: 9ba389863ac63032d4b6ffad2c90a62cd78082ee proc: proc_skip_spaces() shouldn't think it is working on C strings
+
+CVEs fixed in 5.10.159:
+  CVE-2022-3623: fccee93eb20d72f5390432ecea7f8c16af88c850 mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page
+  CVE-2022-3643: 49e07c0768dbebff672ee1834eff9680fc6277bf xen/netback: Ensure protocol headers don't fall in the non-linear area
+
+CVEs fixed in 5.10.160:
+  CVE-2022-3545: eb6313c12955c58c3d3d40f086c22e44ca1c9a1b nfp: fix use-after-free in area_cache_get()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -651,6 +675,7 @@ Outstanding CVEs:
   CVE-2022-20409: (unk) io_uring: remove io_identity 
   CVE-2022-20424: (unk) io_uring: remove io_identity 
   CVE-2022-20568: (unk) Merge tag 'io_uring-worker.v3-2021-02-25' of git://git.kernel.dk/linux-block 
+  CVE-2022-2196: (unk) KVM: VMX: Execute IBPB on emulated VM-exit when guest has IBRS 
   CVE-2022-2209: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
   CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
@@ -658,23 +683,23 @@ Outstanding CVEs:
   CVE-2022-25265: (unk)  
   CVE-2022-2961: (unk)  
   CVE-2022-2991: (unk) remove the lightnvm subsystem 
+  CVE-2022-3108: (unk) drm/amdkfd: Check for null pointer after calling kmemdup 
+  CVE-2022-3110: (unk) staging: r8188eu: add check for kzalloc 
+  CVE-2022-3114: (unk) clk: imx: Add check for kcalloc 
   CVE-2022-3176: (unk) io_uring: fix UAF due to missing POLLFREE handling 
   CVE-2022-3344: (unk) KVM: x86: nSVM: harden svm_free_nested against freeing vmcb02 while still in use 
-  CVE-2022-3424: (unk)  
+  CVE-2022-3424: (unk) misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os 
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
-  CVE-2022-3534: (unk)  
-  CVE-2022-3545: (unk) nfp: fix use-after-free in area_cache_get() 
+  CVE-2022-3534: (unk) libbpf: Fix use-after-free in btf_dump_name_dups 
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
-  CVE-2022-3623: (unk) mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
-  CVE-2022-36280: (unk)  
+  CVE-2022-36280: (unk) drm/vmwgfx: Validate the box size for the snooped cursor 
   CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
-  CVE-2022-3643: (unk) xen/netback: Ensure protocol headers don't fall in the non-linear area 
   CVE-2022-3707: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-38457: (unk)  
@@ -682,13 +707,16 @@ Outstanding CVEs:
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
   CVE-2022-40133: (unk)  
-  CVE-2022-41218: (unk)  
-  CVE-2022-4129: (unk)  
+  CVE-2022-41218: (unk) media: dvb-core: Fix UAF due to refcount races at releasing 
+  CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
   CVE-2022-4269: (unk)  
+  CVE-2022-4379: (unk)  
+  CVE-2022-4382: (unk)  
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
+  CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
   CVE-2022-45886: (unk)  

@@ -4,6 +4,7 @@ CVEs fixed in 5.17:
   CVE-2022-20158: c700525fcc06b05adfea78039de02628af79e07a net/packet: fix slab-out-of-bounds access in packet_recvmsg()
   CVE-2022-20368: c700525fcc06b05adfea78039de02628af79e07a net/packet: fix slab-out-of-bounds access in packet_recvmsg()
   CVE-2022-20423: 65f3324f4b6fed78b8761c3b74615ecf0ffa81fa usb: gadget: rndis: prevent integer overflow in rndis_set_response()
+  CVE-2022-3107: 886e44c9298a6b428ae046e2fa092ca52e822e6a hv_netvsc: Add check for kvmalloc_array
 
 CVEs fixed in 5.17.1:
   CVE-2022-1015: afdc3f4b81f0ec9f97f0910476af4620a2481a6d netfilter: nf_tables: validate registers coming from userspace.
@@ -29,6 +30,9 @@ CVEs fixed in 5.17.2:
   CVE-2022-28390: 3f71f499395545119383f10760b8b19703d2a7dd can: ems_usb: ems_usb_start_xmit(): fix double dev_kfree_skb() in error path
   CVE-2022-30594: 4d51bbc8a3799febf50471eb6888b1b58e87111e ptrace: Check PTRACE_O_SUSPEND_SECCOMP permission on PTRACE_SEIZE
   CVE-2022-3078: 79d17521953d0a16f4df91be59a543a54d1d8c4a media: vidtv: Check for null return of vzalloc
+  CVE-2022-3111: 011ce263361608bb2a1a5cbcc0e3c53b1d7a41d7 power: supply: wm8350-power: Add missing free in free_charger_irq
+  CVE-2022-3112: 879ab4096ebf996e97a768b8fd8acae4a736cce7 media: meson: vdec: potential dereference of null pointer
+  CVE-2022-3113: 0aeb244eb2fddbbc34f2227cf3fd85c86e111c9a media: mtk-vcodec: potential dereference of null pointer
   CVE-2022-3239: d96dd287ca21c5b494bdb55555b33a6afec807cb media: em28xx: initialize refcount before kref_get
 
 CVEs fixed in 5.17.3:
@@ -85,9 +89,12 @@ CVEs fixed in 5.17.13:
 CVEs fixed in 5.17.14:
   CVE-2022-1184: 4b1cd51256e9267140153f04f4e62148adb2908c ext4: verify dir block before splitting it
   CVE-2022-1973: 2088cc00491e8d25a99d0f247df843e9c3df2040 fs/ntfs3: Fix invalid free in log_replay
+  CVE-2022-3115: 9d091187844de5c884939bfae7421813941f6de1 drm: mali-dp: potential dereference of null pointer
   CVE-2022-3577: 2ab0a30f4f709f462d253bbb36fc64bb6de5a135 HID: bigben: fix slab-out-of-bounds Write in bigben_probe
 
 CVEs fixed in 5.17.15:
+  CVE-2022-3104: ec89c6200f8d94a86d57b2bb881fb079417f4901 lkdtm/bugs: Check for the NULL pointer after calling kmalloc
+  CVE-2022-3110: 8ae7bf782eacad803f752c83a183393b0a67127b staging: r8188eu: add check for kzalloc
   CVE-2022-32981: 638556430658eca42501271edb38154264767ff5 powerpc/32: Fix overread/overwrite of thread_struct via ptrace
   CVE-2022-34494: 900373f8f7ee128cbbd3968722182b8d26c1e54e rpmsg: virtio: Fix possible double free in rpmsg_virtio_add_ctrl_dev()
   CVE-2022-34495: c49fb74e050d01ea09703b7c0d5fe8b9c3855b60 rpmsg: virtio: Fix possible double free in rpmsg_probe()
@@ -163,6 +170,7 @@ Outstanding CVEs:
   CVE-2022-21125: (unk) x86/speculation/mmio: Reuse SRBDS mitigation for SBDS 
   CVE-2022-21166: (unk) x86/speculation/mmio: Enable CPU Fill buffer clearing on idle 
   CVE-2022-21505: (unk) lockdown: Fix kexec lockdown bypass with ima policy 
+  CVE-2022-2196: (unk) KVM: VMX: Execute IBPB on emulated VM-exit when guest has IBRS 
   CVE-2022-2209: (unk)  
   CVE-2022-2308: (unk) vduse: prevent uninitialized memory accesses 
   CVE-2022-2318: (unk) net: rose: fix UAF bugs caused by timer handler 
@@ -185,6 +193,7 @@ Outstanding CVEs:
   CVE-2022-29901: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-3028: (unk) af_key: Do not call xfrm_probe_algs in parallel 
   CVE-2022-3061: (unk) video: fbdev: i740fb: Error out if 'pixclock' equals zero 
+  CVE-2022-3114: (unk) clk: imx: Add check for kcalloc 
   CVE-2022-3169: (unk) nvme: ensure subsystem reset is single threaded 
   CVE-2022-3238: (unk)  
   CVE-2022-3303: (unk) ALSA: pcm: oss: Fix race at SNDCTL_DSP_SYNC 
@@ -194,13 +203,13 @@ Outstanding CVEs:
   CVE-2022-33742: (unk) xen/blkfront: force data bouncing when backend is untrusted 
   CVE-2022-33743: (unk) xen-netfront: restore __skb_queue_tail() positioning in xennet_get_responses() 
   CVE-2022-33744: (unk) xen/arm: Fix race in RB-tree based P2M accounting 
-  CVE-2022-3424: (unk)  
+  CVE-2022-3424: (unk) misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
   CVE-2022-3521: (unk) kcm: avoid potential race in kcm_tx_work 
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
   CVE-2022-3524: (unk) tcp/udp: Fix memory leak in ipv6_renew_options(). 
-  CVE-2022-3534: (unk)  
+  CVE-2022-3534: (unk) libbpf: Fix use-after-free in btf_dump_name_dups 
   CVE-2022-3535: (unk) net: mvpp2: fix mvpp2 debugfs leak 
   CVE-2022-3542: (unk) bnx2x: fix potential memory leak in bnx2x_tpa_stop() 
   CVE-2022-3543: (unk) af_unix: Fix memory leaks of the whole sk due to OOB skb. 
@@ -219,7 +228,7 @@ Outstanding CVEs:
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3625: (unk) devlink: Fix use-after-free after a failed reload 
   CVE-2022-3628: (unk) wifi: brcmfmac: Fix potential buffer overflow in brcmf_fweh_event_worker() 
-  CVE-2022-36280: (unk)  
+  CVE-2022-36280: (unk) drm/vmwgfx: Validate the box size for the snooped cursor 
   CVE-2022-3629: (unk) vsock: Fix memory leak in vsock_connect() 
   CVE-2022-3633: (unk) can: j1939: j1939_session_destroy(): fix memory leak of skbs 
   CVE-2022-3635: (unk) atm: idt77252: fix use-after-free bugs caused by tst_timer 
@@ -243,9 +252,9 @@ Outstanding CVEs:
   CVE-2022-40307: (unk) efi: capsule-loader: Fix use-after-free in efi_capsule_write 
   CVE-2022-40768: (unk) scsi: stex: Properly zero out the passthrough command structure 
   CVE-2022-4095: (unk) staging: rtl8712: fix use after free bugs 
-  CVE-2022-41218: (unk)  
+  CVE-2022-41218: (unk) media: dvb-core: Fix UAF due to refcount races at releasing 
   CVE-2022-4128: (unk) mptcp: fix subflow traversal at disconnect time 
-  CVE-2022-4129: (unk)  
+  CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-4139: (unk) drm/i915: fix TLB invalidation for Gen12 video and compute engines 
   CVE-2022-41674: (unk) wifi: cfg80211: fix u8 overflow in cfg80211_update_notlisted_nontrans() 
   CVE-2022-41848: (unk)  
@@ -262,10 +271,14 @@ Outstanding CVEs:
   CVE-2022-42895: (unk) Bluetooth: L2CAP: Fix attempting to access uninitialized memory 
   CVE-2022-42896: (unk) Bluetooth: L2CAP: Fix accepting connection request for invalid SPSM 
   CVE-2022-43750: (unk) usb: mon: make mmapped memory read only 
+  CVE-2022-4378: (unk) proc: proc_skip_spaces() shouldn't think it is working on C strings 
+  CVE-2022-4379: (unk)  
+  CVE-2022-4382: (unk)  
   CVE-2022-43945: (unk) NFSD: Protect against send buffer overflow in NFSv2 READDIR 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
+  CVE-2022-4543: (unk)  
   CVE-2022-45869: (unk) KVM: x86/mmu: Fix race condition in direct_page_fault 
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
@@ -274,3 +287,7 @@ Outstanding CVEs:
   CVE-2022-45888: (unk)  
   CVE-2022-45919: (unk)  
   CVE-2022-45934: (unk)  
+  CVE-2022-47518: (unk) wifi: wilc1000: validate number of channels 
+  CVE-2022-47519: (unk) wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_OPER_CHANNEL attribute 
+  CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
+  CVE-2022-47521: (unk) wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_CHANNEL_LIST attribute 
