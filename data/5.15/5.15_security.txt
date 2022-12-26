@@ -277,6 +277,13 @@ CVEs fixed in 5.15.61:
   CVE-2022-2585: 9e255ed238fc67058df87b0388ad6d4b2ef3a2bd posix-cpu-timers: Cleanup CPU timers before freeing them during exec
   CVE-2022-2586: faafd9286f1355c76fe9ac3021c280297213330e netfilter: nf_tables: do not allow SET_ID to refer to another table
   CVE-2022-2588: 57bbb691a93bd39d0644c5c879b354232d0e0eed net_sched: cls_route: remove from list when handle is 0
+  CVE-2022-47938: 577619605556a90e64abc759ca3ad9d86bf51176 ksmbd: prevent out of bound read for SMB2_TREE_CONNNECT
+  CVE-2022-47939: a54c509c32adba9d136f2b9d6a075e8cae1b6d27 ksmbd: fix use-after-free bug in smb2_tree_disconect
+  CVE-2022-47941: dd4e4c811898410e6a3ae3b63207b7c542860907 ksmbd: fix memory leak in smb2_handle_negotiate
+
+CVEs fixed in 5.15.62:
+  CVE-2022-47942: cb69d4d6f709f87c94afa28ae64c501576692171 ksmbd: fix heap-based overflow in set_ntacl_dacl()
+  CVE-2022-47943: c76b216753c9eb2950a091037c9976f389e73529 ksmbd: prevent out of bound read for SMB2_WRITE
 
 CVEs fixed in 5.15.63:
   CVE-2022-3625: c4d09fd1e18bac11c2f7cf736048112568687301 devlink: Fix use-after-free after a failed reload
@@ -296,6 +303,7 @@ CVEs fixed in 5.15.65:
 CVEs fixed in 5.15.66:
   CVE-2022-20421: c2a4b5dc8fa71af73bab704d0cac42ac39767ed6 binder: fix UAF of ref->proc caused by race condition
   CVE-2022-4095: dc02aaf950015850e7589696521c7fca767cea77 staging: rtl8712: fix use after free bugs
+  CVE-2022-4662: c548b99e1c37db6f7df86ecfe9a1f895d6c5966e USB: core: Prevent nested device-reset calls
 
 CVEs fixed in 5.15.68:
   CVE-2022-2663: 451c9ce1e2fc9b9e40303bef8e5a0dca1a923cc4 netfilter: nf_conntrack_irc: Fix forged IP logic
@@ -474,3 +482,4 @@ Outstanding CVEs:
   CVE-2022-45888: (unk)  
   CVE-2022-45919: (unk)  
   CVE-2022-45934: (unk)  
+  CVE-2022-47940: (unk) ksmbd: validate length in smb2_write() 
