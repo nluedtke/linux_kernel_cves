@@ -72363,8 +72363,8 @@
         }
     },
     "CVE-2022-21385": {
-        "affected_versions": "unk to v4.20",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v4.20",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "net/rds: fix warn in rds_message_alloc_sgs",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -72381,7 +72381,7 @@
         "cwe": "Unspecified",
         "fixes": "ea010070d0a7497253d5a6f919f6dd107450b31a",
         "last_affected_version": "4.19",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "A flaw in net_rds_alloc_sgs() in Oracle Linux kernels allows unprivileged local users to crash the machine. CVSS 3.1 Base Score 6.2 (Availability impacts). CVSS Vector (CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-21385",
@@ -72479,11 +72479,12 @@
         }
     },
     "CVE-2022-2196": {
-        "affected_versions": "unk to v6.2-rc1",
-        "breaks": "",
+        "affected_versions": "v5.8-rc1 to v6.2-rc1",
+        "breaks": "5c911beff20aa8639e7a1f28988736c13e03ed54",
         "cmt_msg": "KVM: VMX: Execute IBPB on emulated VM-exit when guest has IBRS",
         "fixes": "2e7eab81425ad6c875f2ed47c0ce01e78afc38a5",
-        "last_modified": "2022-12-26",
+        "last_modified": "2023-01-13",
+        "nvd_text": "A regression exists in the Linux Kernel within KVM: nVMX that allowed for speculative execution attacks. L2 can carry out Spectre v2 attacks on L1 due to L1 thinking it doesn't need retpolines or IBPB after running L2 due to KVM (L0) advertising eIBRS support to L1. An attacker at L2 with code execution can execute code on an indirect branch on the host machine. We recommend upgrading to Kernel 6.2 or past commit 2e7eab81425a",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-2196",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-2196",
@@ -74477,8 +74478,8 @@
         }
     },
     "CVE-2022-2978": {
-        "affected_versions": "unk to v6.1-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v6.1-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "fs: fix UAF/GPF bug in nilfs_mdt_destroy",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -74495,7 +74496,7 @@
         "cwe": "Use After Free",
         "fixes": "2e488f13755ffbb60f307e991b27024716a33b29",
         "last_affected_version": "6.0.0",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "A flaw use after free in the Linux kernel NILFS file system was found in the way user triggers function security_inode_alloc to fail with following call to function nilfs_mdt_destroy. A local user could use this flaw to crash the system or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-2978",
@@ -74845,8 +74846,8 @@
         }
     },
     "CVE-2022-3104": {
-        "affected_versions": "unk to v5.19-rc1",
-        "breaks": "",
+        "affected_versions": "v5.7-rc1 to v5.19-rc1",
+        "breaks": "ae2e1aad3e48e495878d9f149e437a308bfdaefa",
         "cmt_msg": "lkdtm/bugs: Check for the NULL pointer after calling kmalloc",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -74863,7 +74864,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "4a9800c81d2f34afb66b4b42e0330ae8298019a2",
         "last_affected_version": "5.18.3",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. lkdtm_ARRAY_BOUNDS in drivers/misc/lkdtm/bugs.c lacks check of the return value of kmalloc() and will cause the null pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3104",
@@ -74875,8 +74876,8 @@
         }
     },
     "CVE-2022-3105": {
-        "affected_versions": "unk to v5.16",
-        "breaks": "",
+        "affected_versions": "v5.0-rc1 to v5.16",
+        "breaks": "6884c6c4bd09fb35b79a3967d15821cdfcbe77a3",
         "cmt_msg": "RDMA/uverbs: Check for null return of kmalloc_array",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -74893,7 +74894,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "7694a7de22c53a312ea98960fcafc6ec62046531",
         "last_affected_version": "5.15",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. uapi_finalize in drivers/infiniband/core/uverbs_uapi.c lacks check of kmalloc_array().",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3105",
@@ -74905,8 +74906,8 @@
         }
     },
     "CVE-2022-3106": {
-        "affected_versions": "unk to v5.16-rc6",
-        "breaks": "",
+        "affected_versions": "v5.9-rc1 to v5.16-rc6",
+        "breaks": "b593b6f1b4921700c00394d35e098259e3d04913",
         "cmt_msg": "sfc_ef100: potential dereference of null pointer",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -74923,7 +74924,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "407ecd1bd726f240123f704620d46e285ff30dd9",
         "last_affected_version": "5.15.10",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. ef100_update_stats in drivers/net/ethernet/sfc/ef100_nic.c lacks check of the return value of kmalloc().",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3106",
@@ -74935,8 +74936,8 @@
         }
     },
     "CVE-2022-3107": {
-        "affected_versions": "unk to v5.17",
-        "breaks": "",
+        "affected_versions": "v4.19-rc1 to v5.17",
+        "breaks": "6ae746711263bd6da45f709fdb9f12e4f57e22bd",
         "cmt_msg": "hv_netvsc: Add check for kvmalloc_array",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -74953,7 +74954,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "886e44c9298a6b428ae046e2fa092ca52e822e6a",
         "last_affected_version": "5.16",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. netvsc_get_ethtool_stats in drivers/net/hyperv/netvsc_drv.c lacks check of the return value of kvmalloc_array() and will cause the null pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3107",
@@ -74965,8 +74966,8 @@
         }
     },
     "CVE-2022-3108": {
-        "affected_versions": "unk to v5.17-rc1",
-        "breaks": "",
+        "affected_versions": "v4.16-rc1 to v5.17-rc1",
+        "breaks": "3a87177eb14113bbe8cd95a276af2c412eced6ac",
         "cmt_msg": "drm/amdkfd: Check for null pointer after calling kmemdup",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -74983,7 +74984,7 @@
         "cwe": "Unchecked Return Value",
         "fixes": "abfaf0eee97925905e742aa3b0b72e04a918fa9e",
         "last_affected_version": "5.16.2",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. kfd_parse_subtype_iolink in drivers/gpu/drm/amd/amdkfd/kfd_crat.c lacks check of the return value of kmemdup().",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3108",
@@ -74995,8 +74996,8 @@
         }
     },
     "CVE-2022-3110": {
-        "affected_versions": "unk to v5.19-rc1",
-        "breaks": "",
+        "affected_versions": "v5.15-rc1 to v5.19-rc1",
+        "breaks": "15865124feed880978b79839c756ef6cbb4ec6b3",
         "cmt_msg": "staging: r8188eu: add check for kzalloc",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -75013,7 +75014,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "f94b47c6bde624d6c07f43054087607c52054a95",
         "last_affected_version": "5.18.3",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. _rtw_init_xmit_priv in drivers/staging/r8188eu/core/rtw_xmit.c lacks check of the return value of rtw_alloc_hwxmits() and will cause the null pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3110",
@@ -75025,8 +75026,8 @@
         }
     },
     "CVE-2022-3111": {
-        "affected_versions": "unk to v5.18-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.29-rc1 to v5.18-rc1",
+        "breaks": "14431aa0c5a443d13d24e6f865a8838f97dab973",
         "cmt_msg": "power: supply: wm8350-power: Add missing free in free_charger_irq",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -75043,7 +75044,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "6dee930f6f6776d1e5a7edf542c6863b47d9f078",
         "last_affected_version": "5.17.1",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. free_charger_irq() in drivers/power/supply/wm8350_power.c lacks free of WM8350_IRQ_CHG_FAST_RDY, which is registered in wm8350_init_charger().",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3111",
@@ -75055,8 +75056,8 @@
         }
     },
     "CVE-2022-3112": {
-        "affected_versions": "unk to v5.18-rc1",
-        "breaks": "",
+        "affected_versions": "v5.7-rc1 to v5.18-rc1",
+        "breaks": "876f123b8956b455a89a172b905f9ecbb6fc5b67",
         "cmt_msg": "media: meson: vdec: potential dereference of null pointer",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -75073,7 +75074,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "c8c80c996182239ff9b05eda4db50184cf3b2e99",
         "last_affected_version": "5.17.1",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. amvdec_set_canvases in drivers/staging/media/meson/vdec/vdec_helpers.c lacks check of the return value of kzalloc() and will cause the null pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3112",
@@ -75085,8 +75086,8 @@
         }
     },
     "CVE-2022-3113": {
-        "affected_versions": "unk to v5.18-rc1",
-        "breaks": "",
+        "affected_versions": "v5.10-rc6 to v5.18-rc1",
+        "breaks": "46233e91fa24a91bffca0680b1c55282ba601918",
         "cmt_msg": "media: mtk-vcodec: potential dereference of null pointer",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -75103,7 +75104,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "e25a89f743b18c029bfbe5e1663ae0c7190912b0",
         "last_affected_version": "5.17.1",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. mtk_vcodec_fw_vpu_init in drivers/media/platform/mtk-vcodec/mtk_vcodec_fw_vpu.c lacks check of the return value of devm_kzalloc() and will cause the null pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3113",
@@ -75115,8 +75116,8 @@
         }
     },
     "CVE-2022-3114": {
-        "affected_versions": "unk to v5.19-rc1",
-        "breaks": "",
+        "affected_versions": "v5.13-rc1 to v5.19-rc1",
+        "breaks": "379c9a24cc239000b1dec53db02fe17a86947423",
         "cmt_msg": "clk: imx: Add check for kcalloc",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -75132,7 +75133,7 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "ed713e2bc093239ccd380c2ce8ae9e4162f5c037",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. imx_register_uart_clocks in drivers/clk/imx/clk.c lacks check of the return value of kcalloc() and will cause the null pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3114",
@@ -75144,8 +75145,8 @@
         }
     },
     "CVE-2022-3115": {
-        "affected_versions": "unk to v5.19-rc1",
-        "breaks": "",
+        "affected_versions": "v4.12-rc1 to v5.19-rc1",
+        "breaks": "99665d07218345647875fea9ad4979bbe297c104",
         "cmt_msg": "drm: mali-dp: potential dereference of null pointer",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -75162,7 +75163,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "73c3ed7495c67b8fbdc31cf58e6ca8757df31a33",
         "last_affected_version": "5.18.2",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16-rc6. malidp_crtc_reset in drivers/gpu/drm/arm/malidp_crtc.c lacks check of the return value of kzalloc() and will cause the null pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3115",
@@ -75500,8 +75501,8 @@
         }
     },
     "CVE-2022-3344": {
-        "affected_versions": "unk to v6.1-rc7",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v6.1-rc7",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "KVM: x86: nSVM: harden svm_free_nested against freeing vmcb02 while still in use",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -75518,7 +75519,7 @@
         "cwe": "Expected Behavior Violation",
         "fixes": "16ae56d7e0528559bf8dc9070e3bfd8ba3de80df",
         "last_affected_version": "6.0.10",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "A flaw was found in the KVM's AMD nested virtualization (SVM). A malicious L1 guest could purposely fail to intercept the shutdown of a cooperative nested guest (L2), possibly leading to a page fault and kernel panic in the host (L0).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3344",
@@ -75775,7 +75776,7 @@
         "cmt_msg": "misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os",
         "fixes": "643a16a0eb1d6ac23744bb6e90a00fc21148a9dc",
         "last_affected_version": "6.1.1",
-        "last_modified": "2023-01-06",
+        "last_modified": "2023-01-13",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3424",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-3424",
@@ -76621,7 +76622,7 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "21a87d88c2253350e115029f14fe2a10a7e6c856",
         "last_affected_version": "6.0.1",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "A vulnerability was found in Linux Kernel. It has been classified as problematic. Affected is the function nilfs_bmap_lookup_at_level of the file fs/nilfs2/inode.c of the component nilfs2. The manipulation leads to null pointer dereference. It is possible to launch the attack remotely. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-211920.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3621",
@@ -76726,9 +76727,11 @@
         "affected_versions": "v3.8-rc1 to v6.1-rc5",
         "breaks": "5c36b99add5c3212b6cdb97cc206e1e3e0fa1e3c",
         "cmt_msg": "wifi: brcmfmac: Fix potential buffer overflow in brcmf_fweh_event_worker()",
+        "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "6788ba8aed4e28e90f72d68a9d794e34eac17295",
         "last_affected_version": "6.0.7",
-        "last_modified": "2022-11-28",
+        "last_modified": "2023-01-13",
+        "nvd_text": "A buffer overflow flaw was found in the Linux kernel Broadcom Full MAC Wi-Fi driver. This issue occurs when a user connects to a malicious USB device. This can allow a local user to crash the system or escalate their privileges.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3628",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-3628",
@@ -76739,8 +76742,8 @@
         }
     },
     "CVE-2022-36280": {
-        "affected_versions": "unk to v6.2-rc1",
-        "breaks": "",
+        "affected_versions": "v3.2-rc1 to v6.2-rc1",
+        "breaks": "2ac863719e518ae1a8f328849e64ea26a222f079",
         "cmt_msg": "drm/vmwgfx: Validate the box size for the snooped cursor",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -76756,7 +76759,8 @@
         },
         "cwe": "Out-of-bounds Write",
         "fixes": "4cf949c7fafe21e085a4ee386bb2dade9067316e",
-        "last_modified": "2023-01-02",
+        "last_affected_version": "6.1.3",
+        "last_modified": "2023-01-13",
         "nvd_text": "An out-of-bounds(OOB) memory access vulnerability was found in vmwgfx driver in drivers/gpu/vmxgfx/vmxgfx_kms.c in GPU component in the Linux kernel with device file '/dev/dri/renderD128 (or Dxxx)'. This flaw allows a local attacker with a user account on the system to gain privilege, causing a denial of service(DoS).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-36280",
@@ -77141,10 +77145,12 @@
         }
     },
     "CVE-2022-3707": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2022-10-31",
+        "affected_versions": "v4.19-rc1 to v6.2-rc3",
+        "breaks": "b901b252b6cf5cecc612059ccf05d974a9085c58",
+        "cmt_msg": "drm/i915/gvt: fix double free bug in split_2MB_gtt_entry",
+        "fixes": "4a61648af68f5ba4884f0e3b494ee1cabc4b6620",
+        "last_affected_version": "6.1.4",
+        "last_modified": "2023-01-13",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3707",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-3707",
@@ -77362,9 +77368,11 @@
         "affected_versions": "v5.18-rc1 to v6.1-rc1",
         "breaks": "63ed1aab3d40aa61aaa66819bdce9377ac7f40fa",
         "cmt_msg": "mctp: prevent double key removal and unref",
+        "cwe": "Use After Free",
         "fixes": "3a732b46736cd8a29092e4b0b1a9ba83e672bf89",
         "last_affected_version": "6.0.1",
-        "last_modified": "2022-11-28",
+        "last_modified": "2023-01-13",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel MCTP (Management Component Transport Protocol) functionality. This issue occurs when a user simultaneously calls DROPTAG ioctl and socket close happens, which could allow a local user to crash the system or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3977",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-3977",
@@ -77537,8 +77545,8 @@
         }
     },
     "CVE-2022-41218": {
-        "affected_versions": "unk to v6.2-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.22-rc1 to v6.2-rc1",
+        "breaks": "57861b432bda77f8bfafda2fb6f5a922d5f3aef1",
         "cmt_msg": "media: dvb-core: Fix UAF due to refcount races at releasing",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -77554,7 +77562,8 @@
         },
         "cwe": "Use After Free",
         "fixes": "fd3d91ab1c6ab0628fe642dd570b56302c30a792",
-        "last_modified": "2023-01-02",
+        "last_affected_version": "6.1.3",
+        "last_modified": "2023-01-13",
         "nvd_text": "In drivers/media/dvb-core/dmxdev.c in the Linux kernel through 5.19.10, there is a use-after-free caused by refcount races, affecting dvb_demux_open and dvb_dmxdev_release.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-41218",
@@ -78165,10 +78174,22 @@
         "affected_versions": "v5.8-rc1 to v6.1",
         "breaks": "32927393dc1ccd60fb2bdc05b9e8e88753761469",
         "cmt_msg": "proc: proc_skip_spaces() shouldn't think it is working on C strings",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "bce9332220bd677d83b19d21502776ad555a0e73",
         "last_affected_version": "6.0",
-        "last_modified": "2023-01-06",
+        "last_modified": "2023-01-13",
         "nvd_text": "A stack overflow flaw was found in the Linux kernel's SYSCTL subsystem in how a user changes certain kernel parameters and variables. This flaw allows a local user to crash or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4378",
@@ -78180,12 +78201,14 @@
         }
     },
     "CVE-2022-4379": {
-        "affected_versions": "unk to v6.2-rc1",
-        "breaks": "",
+        "affected_versions": "v5.6-rc1 to v6.2-rc1",
+        "breaks": "ce0887ac96d35c7105090e166bb0807dc0a0e838",
         "cmt_msg": "NFSD: fix use-after-free in __nfs42_ssc_open()",
+        "cwe": "Use After Free",
         "fixes": "75333d48f92256a0dec91dbf07835e804fc411c0",
         "last_affected_version": "6.1.2",
-        "last_modified": "2023-01-06",
+        "last_modified": "2023-01-13",
+        "nvd_text": "A use-after-free vulnerability was found in __nfs42_ssc_open() in fs/nfs/nfs4file.c in the Linux kernel. This flaw allows an attacker to conduct a remote denial",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4379",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-4379",
@@ -78198,8 +78221,10 @@
     "CVE-2022-4382": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cwe": "Use After Free",
         "fixes": "",
-        "last_modified": "2022-12-20",
+        "last_modified": "2023-01-13",
+        "nvd_text": "A use-after-free flaw caused by a race among the superblock operations in the gadgetfs Linux driver was found. It could be triggered by yanking out a device that is running the gadgetfs side.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4382",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-4382",
@@ -78326,8 +78351,10 @@
     "CVE-2022-4543": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "",
-        "last_modified": "2022-12-20",
+        "last_modified": "2023-01-13",
+        "nvd_text": "A flaw named \"EntryBleed\" was found in the Linux Kernel Page Table Isolation (KPTI). This issue could allow a local attacker to leak KASLR base via prefetch side-channels based on TLB timing for Intel systems.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4543",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-4543",
@@ -78480,8 +78507,8 @@
         }
     },
     "CVE-2022-45888": {
-        "affected_versions": "unk to v6.2-rc1",
-        "breaks": "",
+        "affected_versions": "v5.14-rc1 to v6.2-rc1",
+        "breaks": "a53d1202aef122894b6e46116a92174a9123db5d",
         "cmt_msg": "char: xillybus: Prevent use-after-free due to race condition",
         "cvss3": {
             "Attack Complexity": "High",
@@ -78497,7 +78524,7 @@
         },
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "282a4b71816b6076029017a7bab3a9dcee12a920",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 6.0.9. drivers/char/xillybus/xillyusb.c has a race condition and use-after-free during physical removal of a USB device.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-45888",
@@ -78555,7 +78582,7 @@
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "bcd70260ef56e0aee8a4fc6cd214a419900b0765",
         "last_affected_version": "6.0",
-        "last_modified": "2023-01-06",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel through 6.0.10. l2cap_config_req in net/bluetooth/l2cap_core.c has an integer wraparound via L2CAP_CONF_REQ packets.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-45934",
@@ -78567,8 +78594,8 @@
         }
     },
     "CVE-2022-4662": {
-        "affected_versions": "unk to v6.0-rc4",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v6.0-rc4",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "USB: core: Prevent nested device-reset calls",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -78585,7 +78612,7 @@
         "cwe": "Non-exit on Failed Initialization",
         "fixes": "9c6d778800b921bde3bff3cff5003d1650f942d1",
         "last_affected_version": "5.15.65",
-        "last_modified": "2023-01-06",
+        "last_modified": "2023-01-13",
         "nvd_text": "A flaw incorrect access control in the Linux kernel USB core subsystem was found in the way user attaches usb device. A local user could use this flaw to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4662",
@@ -78594,6 +78621,22 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-4662",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-4662",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-4662"
+        }
+    },
+    "CVE-2022-4696": {
+        "affected_versions": "unk to v5.12-rc1-dontuse",
+        "breaks": "",
+        "cmt_msg": "io_uring: remove any grabbing of context",
+        "fixes": "44526bedc2ff8fcd58552e3c5bae928524b6f13c",
+        "last_modified": "2023-01-13",
+        "nvd_text": "There exists a use-after-free vulnerability in the Linux kernel through io_uring and the IORING_OP_SPLICE operation. If IORING_OP_SPLICE is missing the IO_WQ_WORK_FILES flag, which signals that the operation won't use current->nsproxy, so its reference counter is not increased. This assumption is not always true as calling io_splice on specific files will call the get_uts function which will use current->nsproxy leading to invalidly decreasing its reference counter later causing the use-after-free vulnerability. We recommend upgrading to version 5.10.160 or above",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4696",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2022-4696",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2022-4696",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-4696",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2022-4696",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2022-4696"
         }
     },
     "CVE-2022-47518": {
@@ -78627,8 +78670,8 @@
         }
     },
     "CVE-2022-47519": {
-        "affected_versions": "unk to v6.1-rc8",
-        "breaks": "",
+        "affected_versions": "v5.7-rc1 to v6.1-rc8",
+        "breaks": "4fb8b5aa2a1126783ae00bae544d6f3c519408ef",
         "cmt_msg": "wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_OPER_CHANNEL attribute",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -78645,7 +78688,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "051ae669e4505abbe05165bebf6be7922de11f41",
         "last_affected_version": "6.0.10",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel before 6.0.11. Missing validation of IEEE80211_P2P_ATTR_OPER_CHANNEL in drivers/net/wireless/microchip/wilc1000/cfg80211.c in the WILC1000 wireless driver can trigger an out-of-bounds write when parsing the channel list attribute from Wi-Fi management frames.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-47519",
@@ -78657,8 +78700,8 @@
         }
     },
     "CVE-2022-47520": {
-        "affected_versions": "unk to v6.1-rc8",
-        "breaks": "",
+        "affected_versions": "v4.2-rc1 to v6.1-rc8",
+        "breaks": "c5c77ba18ea66aa05441c71e38473efb787705a4",
         "cmt_msg": "wifi: wilc1000: validate pairwise and authentication suite offsets",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -78675,7 +78718,7 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "cd21d99e595ec1d8721e1058dcdd4f1f7de1d793",
         "last_affected_version": "6.0.10",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel before 6.0.11. Missing offset validation in drivers/net/wireless/microchip/wilc1000/hif.c in the WILC1000 wireless driver can trigger an out-of-bounds read when parsing a Robust Security Network (RSN) information element from a Netlink packet.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-47520",
@@ -78687,8 +78730,8 @@
         }
     },
     "CVE-2022-47521": {
-        "affected_versions": "unk to v6.1-rc8",
-        "breaks": "",
+        "affected_versions": "v5.7-rc1 to v6.1-rc8",
+        "breaks": "4fb8b5aa2a1126783ae00bae544d6f3c519408ef",
         "cmt_msg": "wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_CHANNEL_LIST attribute",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -78705,7 +78748,7 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "f9b62f9843c7b0afdaecabbcebf1dbba18599408",
         "last_affected_version": "6.0.10",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "nvd_text": "An issue was discovered in the Linux kernel before 6.0.11. Missing validation of IEEE80211_P2P_ATTR_CHANNEL_LIST in drivers/net/wireless/microchip/wilc1000/cfg80211.c in the WILC1000 wireless driver can trigger a heap-based buffer overflow when parsing the operating channel attribute from Wi-Fi management frames.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-47521",
@@ -78926,11 +78969,13 @@
         }
     },
     "CVE-2022-4842": {
-        "affected_versions": "unk to v6.2-rc1",
-        "breaks": "",
+        "affected_versions": "v5.15-rc1 to v6.2-rc1",
+        "breaks": "be71b5cba2e6485e8959da7a9f9a44461a1bb074",
         "cmt_msg": "fs/ntfs3: Fix attr_punch_hole() null pointer derenference",
+        "cwe": "NULL Pointer Dereference",
         "fixes": "6d5c9e79b726cc473d40e9cb60976dbe8e669624",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
+        "nvd_text": "A flaw NULL Pointer Dereference in the Linux kernel NTFS3 driver function attr_punch_hole() was found. A local user could use this flaw to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4842",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-4842",
@@ -78941,11 +78986,11 @@
         }
     },
     "CVE-2023-0030": {
-        "affected_versions": "unk to v5.0-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.0-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "drm/nouveau/mmu: add more general vmm free/node handling functions",
         "fixes": "729eba3355674f2d9524629b73683ba1d1cd3f10",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-13",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0030",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0030",
@@ -78956,12 +79001,12 @@
         }
     },
     "CVE-2023-0047": {
-        "affected_versions": "unk to v5.16-rc1",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v5.16-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "mm, oom: do not trigger out_of_memory from the #PF",
         "fixes": "60e2793d440a3ec95abb5d6d4fc034a4b480472d",
         "last_affected_version": "5.15.2",
-        "last_modified": "2023-01-06",
+        "last_modified": "2023-01-13",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0047",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0047",
@@ -78969,6 +79014,36 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0047",
             "SUSE": "https://www.suse.com/security/cve/CVE-2023-0047",
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-0047"
+        }
+    },
+    "CVE-2023-0122": {
+        "affected_versions": "v6.0-rc1 to v6.0-rc4",
+        "breaks": "db1312dd95488b5e6ff362ff66fcf953a46b1821",
+        "fixes": "da0342a3aa0357795224e6283df86444e1117168",
+        "last_modified": "2023-01-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0122",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0122",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-0122",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0122",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-0122",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-0122"
+        }
+    },
+    "CVE-2023-0210": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "cmt_msg": "ksmbd: check nt_len to be at least CIFS_ENCPWD_SIZE in ksmbd_decode_ntlmssp_auth_blob",
+        "fixes": "797805d81baa814f76cf7bdab35f86408a79d707",
+        "last_affected_version": "6.1.4",
+        "last_modified": "2023-01-13",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0210",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0210",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-0210",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0210",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-0210",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-0210"
         }
     },
     "CVE-2023-20928": {
@@ -78985,6 +79060,40 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-20928",
             "SUSE": "https://www.suse.com/security/cve/CVE-2023-20928",
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-20928"
+        }
+    },
+    "CVE-2023-23454": {
+        "affected_versions": "unk to v6.2-rc3",
+        "breaks": "",
+        "cmt_msg": "net: sched: cbq: dont intepret cls results when asked to drop",
+        "fixes": "caa4b35b4317d5147b3ab0fbdc9c075c7d2e9c12",
+        "last_affected_version": "6.1.4",
+        "last_modified": "2023-01-13",
+        "nvd_text": "cbq_classify in net/sched/sch_cbq.c in the Linux kernel through 6.1.4 allows attackers to cause a denial of service (slab-out-of-bounds read) because of type confusion (non-negative numbers can sometimes indicate a TC_ACT_SHOT condition rather than valid classification results).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-23454",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-23454",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-23454",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-23454",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-23454",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-23454"
+        }
+    },
+    "CVE-2023-23455": {
+        "affected_versions": "unk to v6.2-rc3",
+        "breaks": "",
+        "cmt_msg": "net: sched: atm: dont intepret cls results when asked to drop",
+        "fixes": "a2965c7be0522eaa18808684b7b82b248515511b",
+        "last_affected_version": "6.1.4",
+        "last_modified": "2023-01-13",
+        "nvd_text": "atm_tc_enqueue in net/sched/sch_atm.c in the Linux kernel through 6.1.4 allows attackers to cause a denial of service because of type confusion (non-negative numbers can sometimes indicate a TC_ACT_SHOT condition rather than valid classification results).",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-23455",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-23455",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-23455",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-23455",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-23455",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-23455"
         }
     }
 }

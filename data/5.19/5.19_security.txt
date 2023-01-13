@@ -45,6 +45,7 @@ CVEs fixed in 5.19.14:
   CVE-2022-2308: 38d854c4a11c3bbf6a96ea46f14b282670c784ac vduse: prevent uninitialized memory accesses
 
 CVEs fixed in 5.19.16:
+  CVE-2022-3621: caf2c6b580433b3d3e413a3d54b8414a94725dcd nilfs2: fix NULL pointer dereference at nilfs_bmap_lookup_at_level()
   CVE-2022-40768: 6ae8aa5dcf0d7ada07964c8638e55d3af5896a86 scsi: stex: Properly zero out the passthrough command structure
   CVE-2022-41674: 42ea11a81ac853c3e870c70d61ab435d0b09b851 wifi: cfg80211: fix u8 overflow in cfg80211_update_notlisted_nontrans()
   CVE-2022-42719: e6d77ac0132da7e73fdcc4a38dd4c40ac0226466 wifi: mac80211: fix MBSSID parsing use-after-free
@@ -146,7 +147,6 @@ Outstanding CVEs:
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
   CVE-2022-3619: (unk) Bluetooth: L2CAP: Fix memory leak in vhci_write 
-  CVE-2022-3621: (unk) nilfs2: fix NULL pointer dereference at nilfs_bmap_lookup_at_level() 
   CVE-2022-3623: (unk) mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3625: (unk) devlink: Fix use-after-free after a failed reload 
@@ -161,7 +161,7 @@ Outstanding CVEs:
   CVE-2022-3643: (unk) xen/netback: Ensure protocol headers don't fall in the non-linear area 
   CVE-2022-3646: (unk) nilfs2: fix leak of nilfs_root in case of writer thread creation failure 
   CVE-2022-3649: (unk) nilfs2: fix use-after-free bug of struct nilfs_root 
-  CVE-2022-3707: (unk)  
+  CVE-2022-3707: (unk) drm/i915/gvt: fix double free bug in split_2MB_gtt_entry 
   CVE-2022-38096: (unk)  
   CVE-2022-38457: (unk)  
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
@@ -202,4 +202,7 @@ Outstanding CVEs:
   CVE-2022-47521: (unk) wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_CHANNEL_LIST attribute 
   CVE-2022-47939: (unk) ksmbd: fix use-after-free bug in smb2_tree_disconect 
   CVE-2022-4842: (unk) fs/ntfs3: Fix attr_punch_hole() null pointer derenference 
+  CVE-2023-0210: (unk) ksmbd: check nt_len to be at least CIFS_ENCPWD_SIZE in ksmbd_decode_ntlmssp_auth_blob 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
+  CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
+  CVE-2023-23455: (unk) net: sched: atm: dont intepret cls results when asked to drop 
