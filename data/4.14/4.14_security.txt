@@ -1257,6 +1257,17 @@ CVEs fixed in 4.14.301:
 CVEs fixed in 4.14.302:
   CVE-2022-3643: e173cefc814dec81e9836ecc866cdba154e693cd xen/netback: Ensure protocol headers don't fall in the non-linear area
 
+CVEs fixed in 4.14.303:
+  CVE-2022-3424: 3eec37e223fabedaf90191e8a0cc61d46a96ab8d misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os
+  CVE-2022-3545: 60537e23e40f7ca9e07679fec28af79d43d9e8f6 nfp: fix use-after-free in area_cache_get()
+  CVE-2022-36280: 50d177f90b63ea4138560e500d92be5e4c928186 drm/vmwgfx: Validate the box size for the snooped cursor
+  CVE-2022-41218: 8d904e99c10e2e443c6c7c418541880513eb9790 media: dvb-core: Fix UAF due to refcount races at releasing
+  CVE-2022-45934: 95f1847a361c7b4bf7d74c06ecb6968455082c1a Bluetooth: L2CAP: Fix u8 overflow
+  CVE-2022-47929: 4574e32cbf652d7efcaa6076558752f770b01757 net: sched: disallow noqueue for qdisc classes
+  CVE-2023-0266: c75e7766cef4e492ec156942d2c4d48c25574e5c ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF
+  CVE-2023-0394: 35ed8ba485544a31a4ab9b92a1c68e406ab66a47 ipv6: raw: Deduct extension header length in rawv6_push_pending_frames
+  CVE-2023-23455: db49adc5aff0c84ef0439a666f494a0d57c98bc7 net: sched: atm: dont intepret cls results when asked to drop
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1409,17 +1420,14 @@ Outstanding CVEs:
   CVE-2022-3169: (unk) nvme: ensure subsystem reset is single threaded 
   CVE-2022-3303: (unk) ALSA: pcm: oss: Fix race at SNDCTL_DSP_SYNC 
   CVE-2022-3344: (unk) KVM: x86: nSVM: harden svm_free_nested against freeing vmcb02 while still in use 
-  CVE-2022-3424: (unk) misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
   CVE-2022-3534: (unk) libbpf: Fix use-after-free in btf_dump_name_dups 
-  CVE-2022-3545: (unk) nfp: fix use-after-free in area_cache_get() 
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
-  CVE-2022-36280: (unk) drm/vmwgfx: Validate the box size for the snooped cursor 
   CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
@@ -1428,7 +1436,6 @@ Outstanding CVEs:
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-40133: (unk)  
-  CVE-2022-41218: (unk) media: dvb-core: Fix UAF due to refcount races at releasing 
   CVE-2022-41222: (unk) mm/mremap: hold the rmap lock in write mode when moving page table entries. 
   CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
@@ -1443,12 +1450,8 @@ Outstanding CVEs:
   CVE-2022-45886: (unk)  
   CVE-2022-45887: (unk)  
   CVE-2022-45919: (unk)  
-  CVE-2022-45934: (unk) Bluetooth: L2CAP: Fix u8 overflow 
   CVE-2022-4696: (unk) io_uring: remove any grabbing of context 
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
-  CVE-2022-47946: (unk) io_uring: kill sqo_dead and sqo submission halting 
   CVE-2023-0030: (unk) drm/nouveau/mmu: add more general vmm free/node handling functions 
-  CVE-2023-0210: (unk) ksmbd: check nt_len to be at least CIFS_ENCPWD_SIZE in ksmbd_decode_ntlmssp_auth_blob 
-  CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
-  CVE-2023-23455: (unk) net: sched: atm: dont intepret cls results when asked to drop 
+  CVE-2023-23559: (unk)  

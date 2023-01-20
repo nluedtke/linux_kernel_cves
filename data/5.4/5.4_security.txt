@@ -824,6 +824,17 @@ CVEs fixed in 5.4.228:
   CVE-2022-3545: 3c837460f920a63165961d2b88b425703f59affb nfp: fix use-after-free in area_cache_get()
   CVE-2022-3623: 176ba4c19d1bb153aa6baaa61d586e785b7d736c mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page
 
+CVEs fixed in 5.4.229:
+  CVE-2022-3424: 0078dd8758561540ed30b2c5daa1cb647e758977 misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os
+  CVE-2022-36280: 94b283341f9f3f0ed56a360533766377a01540e0 drm/vmwgfx: Validate the box size for the snooped cursor
+  CVE-2022-41218: a29d6213098816ed4574824b6adae94fb1c0457d media: dvb-core: Fix UAF due to refcount races at releasing
+  CVE-2022-45934: 9fdc79b571434af7bc742da40a3405f038b637a7 Bluetooth: L2CAP: Fix u8 overflow
+  CVE-2022-47929: 9b83ec63d0de7b1f379daa1571e128bc7b9570f8 net: sched: disallow noqueue for qdisc classes
+  CVE-2023-0266: eaa5580a74cc8355260caeb526cf49d34e7304a8 ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF
+  CVE-2023-0394: 3998dba0f78a59922b0ef333ccfeb58d9410cd3d ipv6: raw: Deduct extension header length in rawv6_push_pending_frames
+  CVE-2023-23454: 6b17b84634f932f4787f04578f5d030874b9ff32 net: sched: cbq: dont intepret cls results when asked to drop
+  CVE-2023-23455: 63e469cb54a87df53edcfd85bb5bcdd84327ae4a net: sched: atm: dont intepret cls results when asked to drop
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -929,7 +940,6 @@ Outstanding CVEs:
   CVE-2022-3108: (unk) drm/amdkfd: Check for null pointer after calling kmemdup 
   CVE-2022-3176: (unk) io_uring: fix UAF due to missing POLLFREE handling 
   CVE-2022-3344: (unk) KVM: x86: nSVM: harden svm_free_nested against freeing vmcb02 while still in use 
-  CVE-2022-3424: (unk) misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os 
   CVE-2022-34918: (unk) netfilter: nf_tables: stricter validation of element data 
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
@@ -938,7 +948,6 @@ Outstanding CVEs:
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
-  CVE-2022-36280: (unk) drm/vmwgfx: Validate the box size for the snooped cursor 
   CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
@@ -949,7 +958,6 @@ Outstanding CVEs:
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
   CVE-2022-40133: (unk)  
-  CVE-2022-41218: (unk) media: dvb-core: Fix UAF due to refcount races at releasing 
   CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
   CVE-2022-4269: (unk)  
@@ -963,11 +971,8 @@ Outstanding CVEs:
   CVE-2022-45886: (unk)  
   CVE-2022-45887: (unk)  
   CVE-2022-45919: (unk)  
-  CVE-2022-45934: (unk) Bluetooth: L2CAP: Fix u8 overflow 
   CVE-2022-4696: (unk) io_uring: remove any grabbing of context 
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
   CVE-2022-47946: (unk) io_uring: kill sqo_dead and sqo submission halting 
-  CVE-2023-0210: (unk) ksmbd: check nt_len to be at least CIFS_ENCPWD_SIZE in ksmbd_decode_ntlmssp_auth_blob 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
-  CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
-  CVE-2023-23455: (unk) net: sched: atm: dont intepret cls results when asked to drop 
+  CVE-2023-23559: (unk)  
