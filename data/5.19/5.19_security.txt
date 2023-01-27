@@ -55,7 +55,9 @@ CVEs fixed in 5.19.16:
 
 CVEs fixed in 5.19.17:
   CVE-2022-3542: 96c0c14135f5803f9e94e6da2ee9c4b012fdcb20 bnx2x: fix potential memory leak in bnx2x_tpa_stop()
+  CVE-2022-3565: 1f76323ac43fe0b00677794c930dee9f66ea2999 mISDN: fix use-after-free bugs in l1oip timer handlers
   CVE-2022-3594: 2e896abccf99fef76691d8e1019bd44105a12e1f r8152: Rate limit overflow messages
+  CVE-2022-3623: 86a913d55c89dd13ba070a87f61a493563e94b54 mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page
   CVE-2022-43945: c2a878095b5c6f04f90553a3c45872f990dab14e NFSD: Protect against send buffer overflow in NFSv2 READDIR
 
 Outstanding CVEs:
@@ -142,12 +144,10 @@ Outstanding CVEs:
   CVE-2022-3544: (unk)  
   CVE-2022-3545: (unk) nfp: fix use-after-free in area_cache_get() 
   CVE-2022-3564: (unk) Bluetooth: L2CAP: Fix use-after-free caused by l2cap_reassemble_sdu 
-  CVE-2022-3565: (unk) mISDN: fix use-after-free bugs in l1oip timer handlers 
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
   CVE-2022-3619: (unk) Bluetooth: L2CAP: Fix memory leak in vhci_write 
-  CVE-2022-3623: (unk) mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3625: (unk) devlink: Fix use-after-free after a failed reload 
   CVE-2022-3628: (unk) wifi: brcmfmac: Fix potential buffer overflow in brcmf_fweh_event_worker() 
@@ -203,11 +203,13 @@ Outstanding CVEs:
   CVE-2022-47929: (unk) net: sched: disallow noqueue for qdisc classes 
   CVE-2022-47939: (unk) ksmbd: fix use-after-free bug in smb2_tree_disconect 
   CVE-2022-4842: (unk) fs/ntfs3: Fix attr_punch_hole() null pointer derenference 
-  CVE-2023-0179: (unk)  
+  CVE-2023-0179: (unk) netfilter: nft_payload: incorrect arithmetics when fetching VLAN header bits 
   CVE-2023-0210: (unk) ksmbd: check nt_len to be at least CIFS_ENCPWD_SIZE in ksmbd_decode_ntlmssp_auth_blob 
   CVE-2023-0266: (unk) ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF 
   CVE-2023-0394: (unk) ipv6: raw: Deduct extension header length in rawv6_push_pending_frames 
+  CVE-2023-0468: (unk) io_uring: make poll refs more robust 
+  CVE-2023-0469: (unk) io_uring/filetable: fix file reference underflow 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
   CVE-2023-23455: (unk) net: sched: atm: dont intepret cls results when asked to drop 
-  CVE-2023-23559: (unk)  
+  CVE-2023-23559: (unk) wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid 

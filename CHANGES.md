@@ -1,45 +1,39 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 20Jan23 15:39
+## Last Update - 27Jan23 13:54
 
 ### **New CVEs Added:**
 
-[CVE-2022-47929](cves/CVE-2022-47929)  
-[CVE-2023-0179](cves/CVE-2023-0179)  
-[CVE-2023-0266](cves/CVE-2023-0266)  
-[CVE-2023-0394](cves/CVE-2023-0394)  
-[CVE-2023-23559](cves/CVE-2023-23559)  
+[CVE-2023-0468](cves/CVE-2023-0468)  
+[CVE-2023-0469](cves/CVE-2023-0469)  
 
 
 ### **New Versions Checked:**
 
-[4.14.303](streams/4.14)  
-[4.19.270](streams/4.19)  
-[5.10.164](streams/5.10)  
-[5.15.89](streams/5.15)  
-[5.4.229](streams/5.4)  
-[6.1.7](streams/6.1)  
+[4.14.304](streams/4.14)  
+[4.19.271](streams/4.19)  
+[5.10.165](streams/5.10)  
+[5.15.90](streams/5.15)  
+[5.4.230](streams/5.4)  
+[6.1.8](streams/6.1)  
 
 
 ### **Updated CVEs:**
 
-[CVE-2022-3424](cves/CVE-2022-3424)  
-[CVE-2022-3534](cves/CVE-2022-3534)  
-[CVE-2022-3545](cves/CVE-2022-3545)  
-[CVE-2022-36280](cves/CVE-2022-36280)  
-[CVE-2022-41218](cves/CVE-2022-41218)  
-[CVE-2022-45934](cves/CVE-2022-45934)  
-[CVE-2022-47946](cves/CVE-2022-47946)  
-[CVE-2023-0210](cves/CVE-2023-0210)  
+[CVE-2022-3565](cves/CVE-2022-3565)  
+[CVE-2022-3623](cves/CVE-2022-3623)  
+[CVE-2022-4696](cves/CVE-2022-4696)  
+[CVE-2022-47929](cves/CVE-2022-47929)  
+[CVE-2022-4842](cves/CVE-2022-4842)  
+[CVE-2023-0179](cves/CVE-2023-0179)  
+[CVE-2023-23559](cves/CVE-2023-23559)  
+[CVE-2022-3522](cves/CVE-2022-3522)  
+[CVE-2022-3628](cves/CVE-2022-3628)  
+[CVE-2022-3977](cves/CVE-2022-3977)  
+[CVE-2022-41858](cves/CVE-2022-41858)  
+[CVE-2023-0122](cves/CVE-2023-0122)  
+[CVE-2023-0394](cves/CVE-2023-0394)  
 [CVE-2023-20928](cves/CVE-2023-20928)  
 [CVE-2023-23454](cves/CVE-2023-23454)  
 [CVE-2023-23455](cves/CVE-2023-23455)  
-[CVE-2022-2196](cves/CVE-2022-2196)  
-[CVE-2022-23816](cves/CVE-2022-23816)  
-[CVE-2022-41858](cves/CVE-2022-41858)  
-[CVE-2022-4379](cves/CVE-2022-4379)  
-[CVE-2022-4382](cves/CVE-2022-4382)  
-[CVE-2022-4543](cves/CVE-2022-4543)  
-[CVE-2022-4696](cves/CVE-2022-4696)  
-[CVE-2023-0122](cves/CVE-2023-0122)  

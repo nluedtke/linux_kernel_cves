@@ -75999,8 +75999,8 @@
         },
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "f9bf6c03eca1077cae8de0e6d86427656fa42a9b",
-        "last_modified": "2023-01-02",
-        "nvd_text": "A vulnerability was found in Linux Kernel and classified as problematic. This issue affects the function hugetlb_no_page of the file mm/hugetlb.c. The manipulation leads to race condition. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-211019.",
+        "last_modified": "2023-01-27",
+        "nvd_text": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3522",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-3522",
@@ -76008,7 +76008,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2022-3522",
             "SUSE": "https://www.suse.com/security/cve/CVE-2022-3522",
             "Ubuntu": "https://ubuntu.com/security/CVE-2022-3522"
-        }
+        },
+        "rejected": true
     },
     "CVE-2022-3523": {
         "affected_versions": "v2.6.12-rc2 to v6.1-rc1",
@@ -76368,7 +76369,7 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "2568a7e0832ee30b0a351016d03062ab4e0e0a3f",
         "last_affected_version": "6.0.2",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-27",
         "nvd_text": "A vulnerability, which was classified as critical, has been found in Linux Kernel. Affected by this issue is the function del_timer of the file drivers/isdn/mISDN/l1oip_core.c of the component Bluetooth. The manipulation leads to use after free. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-211088.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3565",
@@ -76667,7 +76668,7 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "fac35ba763ed07ba93154c95ffc0c4a55023707f",
         "last_affected_version": "6.0.2",
-        "last_modified": "2023-01-02",
+        "last_modified": "2023-01-27",
         "nvd_text": "A vulnerability was found in Linux Kernel. It has been declared as problematic. Affected by this vulnerability is the function follow_page_pte of the file mm/gup.c of the component BPF. The manipulation leads to race condition. The attack can be launched remotely. It is recommended to apply a patch to fix this issue. The identifier VDB-211921 was assigned to this vulnerability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3623",
@@ -76742,10 +76743,22 @@
         "affected_versions": "v3.8-rc1 to v6.1-rc5",
         "breaks": "5c36b99add5c3212b6cdb97cc206e1e3e0fa1e3c",
         "cmt_msg": "wifi: brcmfmac: Fix potential buffer overflow in brcmf_fweh_event_worker()",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 6.6
+        },
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "6788ba8aed4e28e90f72d68a9d794e34eac17295",
         "last_affected_version": "6.0.7",
-        "last_modified": "2023-01-13",
+        "last_modified": "2023-01-27",
         "nvd_text": "A buffer overflow flaw was found in the Linux kernel Broadcom Full MAC Wi-Fi driver. This issue occurs when a user connects to a malicious USB device. This can allow a local user to crash the system or escalate their privileges.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3628",
@@ -77383,10 +77396,22 @@
         "affected_versions": "v5.18-rc1 to v6.1-rc1",
         "breaks": "63ed1aab3d40aa61aaa66819bdce9377ac7f40fa",
         "cmt_msg": "mctp: prevent double key removal and unref",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "cwe": "Use After Free",
         "fixes": "3a732b46736cd8a29092e4b0b1a9ba83e672bf89",
         "last_affected_version": "6.0.1",
-        "last_modified": "2023-01-13",
+        "last_modified": "2023-01-27",
         "nvd_text": "A use-after-free flaw was found in the Linux kernel MCTP (Management Component Transport Protocol) functionality. This issue occurs when a user simultaneously calls DROPTAG ioctl and socket close happens, which could allow a local user to crash the system or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3977",
@@ -77845,10 +77870,22 @@
         "affected_versions": "v2.6.12-rc2 to v5.18-rc2",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "drivers: net: slip: fix NPD bug in sl_tx_timeout()",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "score": 7.1
+        },
         "cwe": "Use After Free",
         "fixes": "ec4eb8a86ade4d22633e1da2a7d85a846b7d1798",
         "last_affected_version": "5.17.3",
-        "last_modified": "2023-01-20",
+        "last_modified": "2023-01-27",
         "nvd_text": "A flaw was found in the Linux kernel. A NULL pointer dereference may occur while a slip driver is in progress to detach in sl_tx_timeout in drivers/net/slip/slip.c. This issue could allow an attacker to crash the system or leak internal kernel information.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-41858",
@@ -78677,8 +78714,8 @@
         }
     },
     "CVE-2022-4696": {
-        "affected_versions": "unk to v5.12-rc1-dontuse",
-        "breaks": "",
+        "affected_versions": "v5.10-rc1 to v5.12-rc1-dontuse",
+        "breaks": "0f203765880c4416675726be558b65da4a7604e2",
         "cmt_msg": "io_uring: remove any grabbing of context",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -78694,7 +78731,7 @@
         },
         "cwe": "Use After Free",
         "fixes": "44526bedc2ff8fcd58552e3c5bae928524b6f13c",
-        "last_modified": "2023-01-20",
+        "last_modified": "2023-01-27",
         "nvd_text": "There exists a use-after-free vulnerability in the Linux kernel through io_uring and the IORING_OP_SPLICE operation. If IORING_OP_SPLICE is missing the IO_WQ_WORK_FILES flag, which signals that the operation won't use current->nsproxy, so its reference counter is not increased. This assumption is not always true as calling io_splice on specific files will call the get_uts function which will use current->nsproxy leading to invalidly decreasing its reference counter later causing the use-after-free vulnerability. We recommend upgrading to version 5.10.160 or above",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4696",
@@ -78826,12 +78863,25 @@
         }
     },
     "CVE-2022-47929": {
-        "affected_versions": "unk to v6.2-rc4",
-        "breaks": "",
+        "affected_versions": "v4.3-rc1 to v6.2-rc4",
+        "breaks": "d66d6c3152e8d5a6db42a56bf7ae1c6cae87ba48",
         "cmt_msg": "net: sched: disallow noqueue for qdisc classes",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "NULL Pointer Dereference",
         "fixes": "96398560f26aa07e8f2969d73c8197e6a6d10407",
         "last_affected_version": "6.1.5",
-        "last_modified": "2023-01-20",
+        "last_modified": "2023-01-27",
         "nvd_text": "In the Linux kernel before 6.1.6, a NULL pointer dereference bug in the traffic control subsystem allows an unprivileged user to trigger a denial of service (system crash) via a crafted traffic control configuration that is set up with \"tc qdisc\" and \"tc class\" commands. This affects qdisc_graft in net/sched/sch_api.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-47929",
@@ -79055,9 +79105,22 @@
         "affected_versions": "v5.15-rc1 to v6.2-rc1",
         "breaks": "be71b5cba2e6485e8959da7a9f9a44461a1bb074",
         "cmt_msg": "fs/ntfs3: Fix attr_punch_hole() null pointer derenference",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
         "cwe": "NULL Pointer Dereference",
         "fixes": "6d5c9e79b726cc473d40e9cb60976dbe8e669624",
-        "last_modified": "2023-01-13",
+        "last_affected_version": "6.1.7",
+        "last_modified": "2023-01-27",
         "nvd_text": "A flaw NULL Pointer Dereference in the Linux kernel NTFS3 driver function attr_punch_hole() was found. A local user could use this flaw to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4842",
@@ -79102,9 +79165,21 @@
     "CVE-2023-0122": {
         "affected_versions": "v6.0-rc1 to v6.0-rc4",
         "breaks": "db1312dd95488b5e6ff362ff66fcf953a46b1821",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Network",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+        },
         "cwe": "NULL Pointer Dereference",
         "fixes": "da0342a3aa0357795224e6283df86444e1117168",
-        "last_modified": "2023-01-20",
+        "last_modified": "2023-01-27",
         "nvd_text": "A NULL pointer dereference vulnerability in the Linux kernel NVMe functionality, in nvmet_setup_auth(), allows an attacker to perform a Pre-Auth Denial of Service (DoS) attack on a remote machine. Affected versions v6.0-rc1 to v6.0-rc3, fixed in v6.0-rc4.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0122",
@@ -79116,10 +79191,12 @@
         }
     },
     "CVE-2023-0179": {
-        "affected_versions": "v5.5-rc1 to unk",
+        "affected_versions": "v5.5-rc1 to v6.2-rc5",
         "breaks": "f6ae9f120dada00abfb47313364c35118469455f",
+        "cmt_msg": "netfilter: nft_payload: incorrect arithmetics when fetching VLAN header bits",
         "fixes": "696e1a48b1a1b01edad542a1ef293665864a4dd0",
-        "last_modified": "2023-01-20",
+        "last_affected_version": "6.1.6",
+        "last_modified": "2023-01-27",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0179",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0179",
@@ -79165,9 +79242,11 @@
         "affected_versions": "v2.6.12-rc3 to v6.2-rc4",
         "breaks": "357b40a18b04c699da1d45608436e9b76b50e251",
         "cmt_msg": "ipv6: raw: Deduct extension header length in rawv6_push_pending_frames",
+        "cwe": "NULL Pointer Dereference",
         "fixes": "cb3e9864cdbe35ff6378966660edbcbac955fe17",
         "last_affected_version": "6.1.6",
-        "last_modified": "2023-01-20",
+        "last_modified": "2023-01-27",
+        "nvd_text": "A NULL pointer dereference flaw was found in rawv6_push_pending_frames in net/ipv6/raw.c in the network subcomponent in the Linux kernel. This flaw causes the system to crash.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0394",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0394",
@@ -79177,13 +79256,49 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-0394"
         }
     },
+    "CVE-2023-0468": {
+        "affected_versions": "v5.17-rc1 to v6.1-rc7",
+        "breaks": "aa43477b040251f451db0d844073ac00a8ab66ee",
+        "cmt_msg": "io_uring: make poll refs more robust",
+        "fixes": "a26a35e9019fd70bf3cf647dcfdae87abc7bacea",
+        "last_affected_version": "6.0.10",
+        "last_modified": "2023-01-27",
+        "nvd_text": "A use-after-free flaw was found in io_uring/poll.c in io_poll_check_events in the io_uring subcomponent in the Linux Kernel due to a race condition of poll_refs. This flaw may cause a NULL pointer dereference.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0468",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0468",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-0468",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0468",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-0468",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-0468"
+        }
+    },
+    "CVE-2023-0469": {
+        "affected_versions": "unk to v6.1-rc7",
+        "breaks": "",
+        "cmt_msg": "io_uring/filetable: fix file reference underflow",
+        "cwe": "Integer Underflow (Wrap or Wraparound)",
+        "fixes": "9d94c04c0db024922e886c9fd429659f22f48ea4",
+        "last_affected_version": "6.0.10",
+        "last_modified": "2023-01-27",
+        "nvd_text": "A use-after-free flaw was found in io_uring/filetable.c in io_install_fixed_file in the io_uring subcomponent in the Linux Kernel during call cleanup. This flaw may lead to a denial of service.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0469",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0469",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-0469",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0469",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-0469",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-0469"
+        }
+    },
     "CVE-2023-20928": {
         "affected_versions": "v4.20-rc1 to v6.0-rc1",
         "breaks": "dd2283f2605e3b3e9c61bcae844b34f2afa4813f",
         "cmt_msg": "android: binder: stop saving a pointer to the VMA",
         "fixes": "a43cfc87caaf46710c8027a8c23b8a55f1078f19",
         "last_affected_version": "5.18.17",
-        "last_modified": "2023-01-20",
+        "last_modified": "2023-01-27",
+        "nvd_text": "In binder_vma_close of binder.c, there is a possible use after free due to improper locking. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-254837884References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-20928",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-20928",
@@ -79197,9 +79312,22 @@
         "affected_versions": "v2.6.12-rc2 to v6.2-rc3",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "net: sched: cbq: dont intepret cls results when asked to drop",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Access of Resource Using Incompatible Type ('Type Confusion')",
         "fixes": "caa4b35b4317d5147b3ab0fbdc9c075c7d2e9c12",
         "last_affected_version": "6.1.4",
-        "last_modified": "2023-01-20",
+        "last_modified": "2023-01-27",
         "nvd_text": "cbq_classify in net/sched/sch_cbq.c in the Linux kernel through 6.1.4 allows attackers to cause a denial of service (slab-out-of-bounds read) because of type confusion (non-negative numbers can sometimes indicate a TC_ACT_SHOT condition rather than valid classification results).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-23454",
@@ -79214,9 +79342,22 @@
         "affected_versions": "v2.6.23-rc1 to v6.2-rc3",
         "breaks": "b0188d4dbe5f4285372dd033acf7c92a97006629",
         "cmt_msg": "net: sched: atm: dont intepret cls results when asked to drop",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
+        "cwe": "Access of Resource Using Incompatible Type ('Type Confusion')",
         "fixes": "a2965c7be0522eaa18808684b7b82b248515511b",
         "last_affected_version": "6.1.4",
-        "last_modified": "2023-01-20",
+        "last_modified": "2023-01-27",
         "nvd_text": "atm_tc_enqueue in net/sched/sch_atm.c in the Linux kernel through 6.1.4 allows attackers to cause a denial of service because of type confusion (non-negative numbers can sometimes indicate a TC_ACT_SHOT condition rather than valid classification results).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-23455",
@@ -79228,10 +79369,24 @@
         }
     },
     "CVE-2023-23559": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2023-01-20",
+        "affected_versions": "v2.6.35-rc1 to v6.2-rc5",
+        "breaks": "80f8c5b434f94926c6489d7350d58aecb53ab70f",
+        "cmt_msg": "wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Integer Overflow or Wraparound",
+        "fixes": "b870e73a56c4cccbec33224233eaf295839f228c",
+        "last_modified": "2023-01-27",
         "nvd_text": "In rndis_query_oid in drivers/net/wireless/rndis_wlan.c in the Linux kernel through 6.1.5, there is an integer overflow in an addition.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-23559",
