@@ -816,6 +816,7 @@ CVEs fixed in 5.4.225:
 CVEs fixed in 5.4.226:
   CVE-2022-3169: 99c59256ea00ff7fab4914bb38e10a84850de514 nvme: ensure subsystem reset is single threaded
   CVE-2022-42896: 0d87bb6070361e5d1d9cb391ba7ee73413bc109b Bluetooth: L2CAP: Fix accepting connection request for invalid SPSM
+  CVE-2023-20938: 4741b00cac23d5fe7d6f74858dff1968eeb1b63a binder: Gracefully handle BINDER_TYPE_FDA objects with num_fds=0
 
 CVEs fixed in 5.4.227:
   CVE-2022-3643: 8fe1bf6f32cd5b96ddcd2a38110603fe34753e52 xen/netback: Ensure protocol headers don't fall in the non-linear area
@@ -830,10 +831,18 @@ CVEs fixed in 5.4.229:
   CVE-2022-41218: a29d6213098816ed4574824b6adae94fb1c0457d media: dvb-core: Fix UAF due to refcount races at releasing
   CVE-2022-45934: 9fdc79b571434af7bc742da40a3405f038b637a7 Bluetooth: L2CAP: Fix u8 overflow
   CVE-2022-47929: 9b83ec63d0de7b1f379daa1571e128bc7b9570f8 net: sched: disallow noqueue for qdisc classes
+  CVE-2023-0045: 8cbd7f26438738238c245a9c0aaf7ebf43283fba x86/bugs: Flush IBP in ib_prctl_set()
   CVE-2023-0266: eaa5580a74cc8355260caeb526cf49d34e7304a8 ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF
   CVE-2023-0394: 3998dba0f78a59922b0ef333ccfeb58d9410cd3d ipv6: raw: Deduct extension header length in rawv6_push_pending_frames
   CVE-2023-23454: 6b17b84634f932f4787f04578f5d030874b9ff32 net: sched: cbq: dont intepret cls results when asked to drop
   CVE-2023-23455: 63e469cb54a87df53edcfd85bb5bcdd84327ae4a net: sched: atm: dont intepret cls results when asked to drop
+
+CVEs fixed in 5.4.230:
+  CVE-2022-4382: 9a39f4626b361ee7aa10fd990401c37ec3b466ae USB: gadgetfs: Fix race between mounting and unmounting
+
+CVEs fixed in 5.4.231:
+  CVE-2022-4129: 7188c37f3c2527086aa46cbb37060fa73b144c65 l2tp: Serialize access to sk_user_data with sk_callback_lock
+  CVE-2023-23559: 9042a9a3f29c942387e6d6036551d90c9ae6ce4f wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -958,10 +967,8 @@ Outstanding CVEs:
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
   CVE-2022-40133: (unk)  
-  CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
   CVE-2022-4269: (unk)  
-  CVE-2022-4382: (unk)  
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
@@ -973,6 +980,9 @@ Outstanding CVEs:
   CVE-2022-45919: (unk)  
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
   CVE-2022-47946: (unk) io_uring: kill sqo_dead and sqo submission halting 
-  CVE-2023-0469: (unk) io_uring/filetable: fix file reference underflow 
+  CVE-2023-0240: (unk) io_uring: COW io_identity on mismatch 
+  CVE-2023-0590: (unk) net: sched: fix race condition in qdisc_graft() 
+  CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
+  CVE-2023-0615: (unk)  
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
-  CVE-2023-23559: (unk) wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid 
+  CVE-2023-20937: (unk)  

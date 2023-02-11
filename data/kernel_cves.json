@@ -12726,7 +12726,8 @@
         "cwe": "Race Conditions",
         "fixes": "f3747379accba8e95d70cec0eae0582c8c182050",
         "last_affected_version": "3.18.4",
-        "nvd_text": "The em_sysenter function in arch/x86/kvm/emulate.c in the Linux kernel before 3.18.5, when the guest OS lacks SYSENTER MSR initialization, allows guest OS users to gain guest OS privileges or cause a denial of service (guest OS crash) by triggering use of a 16-bit code segment for emulation of a SYSENTER instruction.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It was found that the Linux kernel KVM subsystem's sysenter instruction emulation was not sufficient. An unprivileged guest user could use this flaw to escalate their privileges by tricking the hypervisor to emulate a SYSENTER instruction in 16-bit mode, if the guest OS did not initialize the SYSENTER model-specific registers (MSRs). Note: Certified guest operating systems for Red Hat Enterprise Linux with KVM do initialize the SYSENTER MSRs and are thus not vulnerable to this issue when running on a KVM hypervisor.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-0239",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-0239",
@@ -13418,7 +13419,8 @@
         "cwe": "Race Conditions",
         "fixes": "2d45a02d0166caf2627fe91897c6ffc3b19514c4",
         "last_affected_version": "4.1.1",
-        "nvd_text": "Race condition in net/sctp/socket.c in the Linux kernel before 4.1.2 allows local users to cause a denial of service (list corruption and panic) via a rapid series of system calls related to sockets, as demonstrated by setsockopt calls.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A race condition flaw was found in the way the Linux kernel's SCTP implementation handled Address Configuration lists when performing Address Configuration Change (ASCONF). A local attacker could use this flaw to crash the system via a race condition triggered by setting certain ASCONF options on a socket.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-3212",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-3212",
@@ -13442,7 +13444,8 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "ee73f656a604d5aa9df86a97102e4e462dd79924",
-        "nvd_text": "The pit_ioport_read in i8254.c in the Linux kernel before 2.6.33 and QEMU before 2.3.1 does not distinguish between read lengths and write lengths, which might allow guest OS users to execute arbitrary code on the host OS by triggering use of an invalid index.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "An out-of-bounds memory access flaw, leading to memory corruption or possibly an information leak, was found in QEMU's pit_ioport_read() function. A privileged guest user in a QEMU guest, which had QEMU PIT emulation enabled, could potentially, in rare cases, use this flaw to execute arbitrary code on the host with the privileges of the hosting QEMU process.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-3214",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-3214",
@@ -13479,7 +13482,8 @@
         "cwe": "Input Validation",
         "fixes": "6b7339f4c31ad69c8e9c0b2859276e22cf72176d",
         "last_affected_version": "4.1.3",
-        "nvd_text": "mm/memory.c in the Linux kernel before 4.1.4 mishandles anonymous pages, which allows local users to gain privileges or cause a denial of service (page tainting) via a crafted application that triggers writing to page zero.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "CVE-2015-3288 kernel: zero page memory arbitrary modification",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-3288",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-3288",
@@ -14020,7 +14024,8 @@
         "cwe": "Buffer Errors",
         "fixes": "48900cb6af4282fa0fb6ff4d72a81aa3dadb5c39",
         "last_affected_version": "4.1.13",
-        "nvd_text": "The virtnet_probe function in drivers/net/virtio_net.c in the Linux kernel before 4.2 attempts to support a FRAGLIST feature without proper memory allocation, which allows guest OS users to cause a denial of service (buffer overflow and memory corruption) via a crafted sequence of fragmented packets.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A buffer overflow flaw was found in the way the Linux kernel's virtio-net subsystem handled certain fraglists when the GRO (Generic Receive Offload) functionality was enabled in a bridged network configuration. An attacker on the local network could potentially use this flaw to crash the system, or, although unlikely, elevate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-5156",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-5156",
@@ -14046,7 +14051,8 @@
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "9b6e6a8334d56354853f9c255d1395c2ba570e0a",
         "last_affected_version": "4.1.5",
-        "nvd_text": "arch/x86/entry/entry_64.S in the Linux kernel before 4.1.6 on the x86_64 platform mishandles IRET faults in processing NMIs that occurred during userspace execution, which might allow local users to gain privileges by triggering an NMI.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the way the Linux kernel handled IRET faults during the processing of NMIs. An unprivileged, local user could use this flaw to crash the system or, potentially (although highly unlikely), escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-5157",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-5157",
@@ -14098,7 +14104,8 @@
         "cwe": "Buffer Errors",
         "fixes": "8e2d61e0aed2b7c4ecb35844fe07e0b2b762dee4",
         "last_affected_version": "4.1.9",
-        "nvd_text": "The sctp_init function in net/sctp/protocol.c in the Linux kernel before 4.2.3 has an incorrect sequence of protocol-initialization steps, which allows local users to cause a denial of service (panic or memory corruption) by creating SCTP sockets before all of the steps have finished.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A NULL pointer dereference flaw was found in the SCTP implementation. A local user could use this flaw to cause a denial of service on the system by triggering a kernel panic when creating multiple sockets in parallel while the system did not have the SCTP module loaded.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-5283",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-5283",
@@ -14124,8 +14131,8 @@
         "cwe": "Resource Management Errors",
         "fixes": "54a20552e1eae07aa240fa370a0293e006b5faed",
         "last_affected_version": "4.3.0",
-        "last_modified": "2019-03-20",
-        "nvd_text": "The KVM subsystem in the Linux kernel through 4.2.6, and Xen 4.3.x through 4.6.x, allows guest OS users to cause a denial of service (host OS panic or hang) by triggering many #AC (aka Alignment Check) exceptions, related to svm.c and vmx.c.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It was found that the x86 ISA (Instruction Set Architecture) is prone to a denial of service attack inside a virtualized environment in the form of an infinite loop in the microcode due to the way (sequential) delivering of benign exceptions such as #AC (alignment check exception) is handled. A privileged user inside a guest could use this flaw to create denial of service conditions on the host kernel.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-5307",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-5307",
@@ -14493,7 +14500,8 @@
         "cwe": "Input Validation",
         "fixes": "c9b92530a723ac5ef8e352885a1862b18f31b2f5",
         "last_affected_version": "3.2.65",
-        "nvd_text": "fs/ext4/namei.c in the Linux kernel before 3.7 allows physically proximate attackers to cause a denial of service (system crash) via a crafted no-journal filesystem, a related issue to CVE-2013-2015.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the way the Linux kernel's ext4 file system driver handled non-journal file systems with an orphan list. An attacker with physical access to the system could use this flaw to crash the system or, although unlikely, escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-7509",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-7509",
@@ -14639,7 +14647,8 @@
         },
         "cwe": "Race Conditions",
         "fixes": "",
-        "nvd_text": "Race condition in the kernel in Red Hat Enterprise Linux 7, kernel-rt and Red Hat Enterprise MRG 2, when the nfnetlink_log module is loaded, allows local users to cause a denial of service (panic) by creating netlink sockets.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A race-condition flaw was discovered in the kernel's netlink module creation, which can trigger a kernel panic in netlink_release->module_put for local users creating netlink sockets. The flaw is specific to Red Hat Enterprise Linux and does not affect upstream kernels. The nfnetlink_log module must be loaded before the flaw can occur.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-7553",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-7553",
@@ -14818,7 +14827,8 @@
         "cwe": "Input Validation",
         "fixes": "f05819df10d7b09f6d1eb6f8534a8f68e5a4fe61",
         "last_affected_version": "4.1.15",
-        "nvd_text": "The key_gc_unused_keys function in security/keys/gc.c in the Linux kernel through 4.2.6 allows local users to cause a denial of service (OOPS) via crafted keyctl commands.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It was found that the Linux kernel's keys subsystem did not correctly garbage collect uninstantiated keyrings. A local attacker could use this flaw to crash the system or, potentially, escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-7872",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-7872",
@@ -15056,7 +15066,8 @@
         },
         "cwe": "Other",
         "fixes": "744692dc059845b2a3022119871846e74d4f6e11",
-        "nvd_text": "The ext4 implementation in the Linux kernel before 2.6.34 does not properly track the initialization of certain data structures, which allows physically proximate attackers to cause a denial of service (NULL pointer dereference and panic) via a crafted USB device, related to the ext4_fill_super function.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A NULL pointer dereference flaw was found in the way the Linux kernel's ext4 file system driver handled certain corrupted file system images. An attacker with physical access to the system could use this flaw to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8324",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-8324",
@@ -16564,8 +16575,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "dd504589577d8e8e70f51f997ad487a4cb6c026f",
         "last_affected_version": "4.4.1",
-        "last_modified": "2019-03-20",
-        "nvd_text": "crypto/algif_skcipher.c in the Linux kernel before 4.4.2 does not verify that a setkey operation has been performed on an AF_ALG socket before an accept system call is processed, which allows local users to cause a denial of service (NULL pointer dereference and system crash) via a crafted application that does not supply a key, related to the lrw_crypt function in crypto/lrw.c.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "The lrw_crypt() function in 'crypto/lrw.c' in the Linux kernel before 4.5 allows local users to cause a system crash and a denial of service by the NULL pointer dereference via accept(2) system call for AF_ALG socket without calling setkey() first to set a cipher key.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2015-8970",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2015-8970",
@@ -16789,8 +16800,8 @@
         "cwe": "Other",
         "fixes": "23567fd052a9abb6d67fe8e7a9ccdd9800a540f2",
         "last_affected_version": "4.4.0",
-        "last_modified": "2019-03-20",
-        "nvd_text": "The join_session_keyring function in security/keys/process_keys.c in the Linux kernel before 4.4.1 mishandles object references in a certain error case, which allows local users to gain privileges or cause a denial of service (integer overflow and use-after-free) via crafted keyctl commands.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A use-after-free flaw was found in the way the Linux kernel's key management subsystem handled keyring object reference counting in certain error path of the join_session_keyring() function. A local, unprivileged user could use this flaw to escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-0728",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-0728",
@@ -16827,7 +16838,8 @@
         "cwe": "Other",
         "fixes": "23c8a812dc3c621009e4f0e5342aa4e2ede1ceaa",
         "last_affected_version": "4.5",
-        "nvd_text": "Integer overflow in lib/asn1_decoder.c in the Linux kernel before 4.6 allows local users to gain privileges via crafted ASN.1 data.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the way the Linux kernel's ASN.1 DER decoder processed certain certificate files with tags of indefinite length. A local, unprivileged user could use a specially crafted X.509 certificate DER file to crash the system or, potentially, escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-0758",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-0758",
@@ -17047,7 +17059,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "48a992727d82cb7db076fa15d372178743b1f4cd",
         "last_affected_version": "4.8",
-        "nvd_text": "crypto/mcryptd.c in the Linux kernel before 4.8.15 allows local users to cause a denial of service (NULL pointer dereference and system crash) by using an AF_ALG socket with an incompatible algorithm, as demonstrated by mcryptd(md5).",
+        "last_modified": "2023-02-11",
+        "nvd_text": "Algorithms not compatible with mcryptd could be spawned by mcryptd with a direct crypto_alloc_tfm invocation using a \"mcryptd(alg)\" name construct. This causes mcryptd to crash the kernel if an arbitrary \"alg\" is incompatible and not intended to be used with mcryptd.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-10147",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-10147",
@@ -17868,7 +17881,8 @@
         "cwe": "Information Leak / Disclosure",
         "fixes": "f43bfaeddc79effbf3d0fcb53ca477cca66f3db8",
         "last_affected_version": "4.5.4",
-        "nvd_text": "The atl2_probe function in drivers/net/ethernet/atheros/atlx/atl2.c in the Linux kernel through 4.5.2 incorrectly enables scatter/gather I/O, which allows remote attackers to obtain sensitive information from kernel memory by reading packet data.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It was discovered that the atl2_probe() function in the Atheros L2 Ethernet driver in the Linux kernel incorrectly enabled scatter/gather I/O. A remote attacker could use this flaw to obtain potentially sensitive information from the kernel memory.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2117",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-2117",
@@ -17905,7 +17919,8 @@
         "cwe": "Input Validation",
         "fixes": "3446c13b268af86391d06611327006b059b8bab1",
         "last_affected_version": "4.4",
-        "nvd_text": "The fork implementation in the Linux kernel before 4.5 on s390 platforms mishandles the case of four page-table levels, which allows local users to cause a denial of service (system crash) or possibly have unspecified other impact via a crafted application, related to arch/s390/include/asm/mmu_context.h and arch/s390/include/asm/pgalloc.h.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It was reported that on s390x, the fork of a process with four page table levels will cause memory corruption with a variety of symptoms. All processes are created with three level page table and a limit of 4TB for the address space. If the parent process has four page table levels with a limit of 8PB, the function that duplicates the address space will try to copy memory areas outside of the address space limit for the child process.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2143",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-2143",
@@ -18541,7 +18556,8 @@
         "cwe": "Resource Management Errors",
         "fixes": "759c01142a5d0f364a462346168a56de28a80f52",
         "last_affected_version": "4.4.12",
-        "nvd_text": "fs/pipe.c in the Linux kernel before 4.5 does not limit the amount of unread data in pipes, which allows local users to cause a denial of service (memory consumption) by creating many pipes with non-default sizes.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It is possible for a single process to cause an OOM condition by filling large pipes with data that are never read. A typical process filling 4096 pipes with 1 MB of data will use 4 GB of memory and there can be multiple such processes, up to a per-user-limit.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-2847",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-2847",
@@ -18685,7 +18701,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "42cb14b110a5698ccf26ce59c4441722605a3743",
         "last_affected_version": "3.16.35",
-        "nvd_text": "The trace_writeback_dirty_page implementation in include/trace/events/writeback.h in the Linux kernel before 4.4 improperly interacts with mm/migrate.c, which allows local users to cause a denial of service (NULL pointer dereference and system crash) or possibly have unspecified other impact by triggering a certain page move.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A security flaw was found in the Linux kernel that an attempt to move page mapped by AIO ring buffer to the other node triggers NULL pointer dereference at trace_writeback_dirty_page(), because aio_fs_backing_dev_info.dev is 0.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-3070",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-3070",
@@ -19160,7 +19177,8 @@
         },
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "",
-        "nvd_text": "The Linux kernel, as used in Red Hat Enterprise Linux 7.2 and Red Hat Enterprise MRG 2 and when booted with UEFI Secure Boot enabled, allows local users to bypass intended Secure Boot restrictions and execute untrusted code by appending ACPI tables to the initrd.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "CVE-2016-3699 kernel: ACPI table override allowed when securelevel is enabled",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-3699",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-3699",
@@ -19195,7 +19213,8 @@
         },
         "cwe": "Improper Access Control",
         "fixes": "",
-        "nvd_text": "The icmp_check_sysrq function in net/ipv4/icmp.c in the kernel.org projects/rt patches for the Linux kernel, as used in the kernel-rt package before 3.10.0-327.22.1 in Red Hat Enterprise Linux for Real Time 7 and other products, allows remote attackers to execute SysRq commands via crafted ICMP Echo Request packets, as demonstrated by a brute-force attack to discover a cookie, or an attack that occurs after reading the local icmp_echo_sysrq file.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the way the realtime kernel processed specially crafted ICMP echo requests. A remote attacker could use this flaw to trigger a sysrql function based on values in the ICMP packet, allowing them to remotely restart the system. Note that this feature is not enabled by default and requires elevated privileges to be configured.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-3707",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-3707",
@@ -19600,7 +19619,8 @@
         "cwe": "Other",
         "fixes": "38327424b40bcebe2de92d07312c89360ac9229a",
         "last_affected_version": "4.6.4",
-        "nvd_text": "The key_reject_and_link function in security/keys/key.c in the Linux kernel through 4.6.3 does not ensure that a certain data structure is initialized, which allows local users to cause a denial of service (system crash) via vectors involving a crafted keyctl request2 command.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's keyring handling code: the key_reject_and_link() function could be forced to free an arbitrary memory block. An attacker could use this flaw to trigger a use-after-free condition on the system, potentially allowing for privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-4470",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-4470",
@@ -20007,7 +20027,8 @@
         "cwe": "Other",
         "fixes": "5ec0811d30378ae104f250bfc9b3640242d81e3f",
         "last_affected_version": "4.5.3",
-        "nvd_text": "fs/pnode.c in the Linux kernel before 4.5.4 does not properly traverse a mount propagation tree in a certain case involving a slave mount, which allows local users to cause a denial of service (NULL pointer dereference and OOPS) via a crafted series of mount system calls.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "CVE-2016-4581 kernel: Slave being first propagated copy causes oops in propagate_mnt",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-4581",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-4581",
@@ -20192,7 +20213,8 @@
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "ce683e5f9d045e5d67d1312a42b359cb2ab2a13c",
         "last_affected_version": "4.6.2",
-        "nvd_text": "The compat IPT_SO_SET_REPLACE and IP6T_SO_SET_REPLACE setsockopt implementations in the netfilter subsystem in the Linux kernel before 4.6.3 allow local users to gain privileges or cause a denial of service (memory corruption) by leveraging in-container root access to provide a crafted offset value that triggers an unintended decrement.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was discovered in processing setsockopt for 32 bit processes on 64 bit systems. This flaw will allow attackers to alter arbitrary kernel memory when unloading a kernel module. This action is usually restricted to root-privileged users but can also be leveraged if the kernel is compiled with CONFIG_USER_NS and CONFIG_NET_NS and the user is granted elevated privileges.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-4997",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-4997",
@@ -20229,7 +20251,8 @@
         "cwe": "Buffer Errors",
         "fixes": "ce683e5f9d045e5d67d1312a42b359cb2ab2a13c",
         "last_affected_version": "4.6.2",
-        "nvd_text": "The IPT_SO_SET_REPLACE setsockopt implementation in the netfilter subsystem in the Linux kernel before 4.6 allows local users to cause a denial of service (out-of-bounds read) or possibly obtain sensitive information from kernel heap memory by leveraging in-container root access to provide a crafted offset value that leads to crossing a ruleset blob boundary.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "An out-of-bounds heap memory access leading to a Denial of Service, heap disclosure, or further impact was found in setsockopt(). The function call is normally restricted to root, however some processes with cap_sys_admin may also be able to trigger this flaw in privileged container environments.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-4998",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-4998",
@@ -20556,7 +20579,8 @@
         "cwe": "Resource Management Errors",
         "fixes": "f024ee098476a3e620232e4a78cfac505f121245",
         "last_affected_version": "4.7.1",
-        "nvd_text": "arch/powerpc/kvm/book3s_hv_rmhandlers.S in the Linux kernel through 4.7 on PowerPC platforms, when CONFIG_KVM_BOOK3S_64_HV is enabled, allows guest OS users to cause a denial of service (host OS infinite loop) by making a H_CEDE hypercall during the existence of a suspended transaction.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "CVE-2016-5412 Kernel: powerpc: kvm: Infinite loop via H_CEDE hypercall when running under hypervisor-mode",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-5412",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-5412",
@@ -21073,7 +21097,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "51093254bf879bc9ce96590400a87897c7498463",
         "last_affected_version": "4.5.0",
-        "nvd_text": "drivers/infiniband/ulp/srpt/ib_srpt.c in the Linux kernel before 4.5.1 allows local users to cause a denial of service (NULL pointer dereference and system crash) by using an ABORT_TASK command to abort a device write operation.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "System using the infiniband support module ib_srpt were vulnerable to a denial of service by system crash by a local attacker who is able to abort writes to a device using this initiator.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-6327",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-6327",
@@ -21293,7 +21318,8 @@
         "cwe": "Use After Free",
         "fixes": "bb1fceca22492109be12640d49f5ea5a544c6bb4",
         "last_affected_version": "4.7.4",
-        "nvd_text": "The tcp_check_send_head function in include/net/tcp.h in the Linux kernel before 4.7.5 does not properly maintain certain SACK state after a failed data copy, which allows local users to cause a denial of service (tcp_xmit_retransmit_queue use-after-free and system crash) via a crafted SACK option.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A use-after-free vulnerability was found in tcp_xmit_retransmit_queue and other tcp_* functions. This condition could allow an attacker to send an incorrect selective acknowledgment to existing connections, possibly resetting a connection.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-6828",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-6828",
@@ -21404,7 +21430,8 @@
         "cwe": "Improper Authorization",
         "fixes": "073931017b49d9458aa351605b43a7e34598caef",
         "last_affected_version": "4.8.5",
-        "nvd_text": "The filesystem implementation in the Linux kernel through 4.8.2 preserves the setgid bit during a setxattr call, which allows local users to gain group privileges by leveraging the existence of a setgid program with restrictions on execute permissions.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It was found that when file permissions were modified via chmod and the user modifying them was not in the owning group or capable of CAP_FSETID, the setgid bit would be cleared. Setting a POSIX ACL via setxattr sets the file permissions as well as the new ACL, but doesn't clear the setgid bit in a similar way. This could allow a local user to gain group privileges via certain setgid applications.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-7097",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-7097",
@@ -22131,7 +22158,8 @@
         "cwe": "Improper Access Control",
         "fixes": "d9092f52d7e61dd1557f2db2400ddb430e85937e",
         "last_affected_version": "4.8.6",
-        "nvd_text": "The x86_decode_insn function in arch/x86/kvm/emulate.c in the Linux kernel before 4.8.7, when KVM is enabled, allows local users to cause a denial of service (host OS crash) via a certain use of a ModR/M byte in an undefined instruction.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "Linux kernel built with the Kernel-based Virtual Machine (CONFIG_KVM) support is vulnerable to a null pointer dereference flaw. It could occur on x86 platform, when emulating an undefined instruction. An attacker could use this flaw to crash the host kernel resulting in DoS.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-8630",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-8630",
@@ -22205,7 +22233,8 @@
         "cwe": "Buffer Errors",
         "fixes": "667121ace9dbafb368618dbabcf07901c962ddac",
         "last_affected_version": "4.8.6",
-        "nvd_text": "drivers/firewire/net.c in the Linux kernel before 4.8.7, in certain unusual hardware configurations, allows remote attackers to execute arbitrary code via crafted fragmented packets.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A buffer overflow vulnerability due to a lack of input filtering of incoming fragmented datagrams was found in the IP-over-1394 driver [firewire-net] in a fragment handling code in the Linux kernel. The vulnerability exists since firewire supported IPv4, i.e. since version 2.6.31 (year 2009) till version v4.9-rc4. A maliciously formed fragment with a respectively large datagram offset would cause a memcpy() past the datagram buffer, which would cause a system panic or possible arbitrary code execution. The flaw requires [firewire-net] module to be loaded and is remotely exploitable from connected firewire devices, but not over a local network.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-8633",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-8633",
@@ -22279,7 +22308,8 @@
         "cwe": "Improper Access Control",
         "fixes": "ac6e780070e30e4c35bd395acfe9191e6268bdd3",
         "last_affected_version": "4.8.9",
-        "nvd_text": "The TCP stack in the Linux kernel before 4.8.10 mishandles skb truncation, which allows local users to cause a denial of service (system crash) via a crafted application that makes sendto system calls, related to net/ipv4/tcp_ipv4.c and net/ipv6/tcp_ipv6.c.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It was discovered that the Linux kernel since 3.6-rc1 with 'net.ipv4.tcp_fastopen' set to 1 can hit BUG() statement in tcp_collapse() function after making a number of certain syscalls leading to a possible system crash.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-8645",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-8645",
@@ -22316,8 +22346,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "4afa5f9617927453ac04b24b584f6c718dfb4f45",
         "last_affected_version": "4.3.5",
-        "last_modified": "2019-03-20",
-        "nvd_text": "The hash_accept function in crypto/algif_hash.c in the Linux kernel before 4.3.6 allows local users to cause a denial of service (OOPS) by attempting to trigger use of in-kernel hash algorithms for a socket that has received zero bytes of data.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A vulnerability was found in the Linux kernel. An unprivileged local user could trigger oops in shash_async_export() by attempting to force the in-kernel hashing algorithms into decrypting an empty data set.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-8646",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-8646",
@@ -22354,7 +22384,8 @@
         "cwe": "Input Validation",
         "fixes": "f5527fffff3f002b0a6b376163613b82f69de073",
         "last_affected_version": "4.8.11",
-        "nvd_text": "The mpi_powm function in lib/mpi/mpi-pow.c in the Linux kernel through 4.8.11 does not ensure that memory is allocated for limb data, which allows local users to cause a denial of service (stack memory corruption and panic) via an add_key system call for an RSA key with a zero exponent.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel key management subsystem in which a local attacker could crash the kernel or corrupt the stack and additional memory (denial of service) by supplying a specially crafted RSA key. This flaw panics the machine during the verification of the RSA key.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-8650",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-8650",
@@ -22391,7 +22422,8 @@
         "cwe": "Race Conditions",
         "fixes": "84ac7260236a49c79eede91617700174c2c19b0c",
         "last_affected_version": "4.8.13",
-        "nvd_text": "Race condition in net/packet/af_packet.c in the Linux kernel through 4.8.12 allows local users to gain privileges or cause a denial of service (use-after-free) by leveraging the CAP_NET_RAW capability to change a socket version, related to the packet_set_ring and packet_setsockopt functions.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A race condition issue leading to a use-after-free flaw was found in the way the raw packet sockets implementation in the Linux kernel networking subsystem handled synchronization while creating the TPACKET_V3 ring buffer. A local user able to open a raw packet socket (requires the CAP_NET_RAW capability) could use this flaw to elevate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-8655",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-8655",
@@ -22796,7 +22828,8 @@
         "cwe": "Use After Free",
         "fixes": "a0ac402cfcdc904f9772e1762b3fda112dcc56a0",
         "last_affected_version": "4.8",
-        "nvd_text": "The blk_rq_map_user_iov function in block/blk-map.c in the Linux kernel before 4.8.14 does not properly restrict the type of iterator, which allows local users to read or write to arbitrary kernel memory locations or cause a denial of service (use-after-free) by leveraging access to a /dev/sg device.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It was found that the blk_rq_map_user_iov() function in the Linux kernel's block device implementation did not properly restrict the type of iterator, which could allow a local attacker to read or write to arbitrary kernel memory locations or cause a denial of service (use-after-free) by leveraging write access to a /dev/sg device.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-9576",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-9576",
@@ -22833,7 +22866,8 @@
         "cwe": "Error Handling",
         "fixes": "ef85b67385436ddc1998f45f1d6a210f935b3388",
         "last_affected_version": "4.9.1",
-        "nvd_text": "arch/x86/kvm/vmx.c in the Linux kernel through 4.9 mismanages the #BP and #OF exceptions, which allows guest OS users to cause a denial of service (guest OS crash) by declining to handle an exception thrown by an L2 guest.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "Linux kernel built with the KVM visualization support (CONFIG_KVM), with nested visualization(nVMX) feature enabled(nested=1), is vulnerable to an uncaught exception issue. It could occur if an L2 guest was to throw an exception which is not handled by an L1 guest.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2016-9588",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2016-9588",
@@ -24968,7 +25002,8 @@
         "cwe": "Improper Access Control",
         "fixes": "51aa68e7d57e3217192d88ce90fd5b8ef29ec94f",
         "last_affected_version": "4.13.4",
-        "nvd_text": "The prepare_vmcs02 function in arch/x86/kvm/vmx.c in the Linux kernel through 4.13.3 does not ensure that the \"CR8-load exiting\" and \"CR8-store exiting\" L0 vmcs02 controls exist in cases where L1 omits the \"use TPR shadow\" vmcs12 control, which allows KVM L2 guest OS users to obtain read and write access to the hardware CR8 register.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "Linux kernel built with the KVM visualization support (CONFIG_KVM), with nested visualization (nVMX) feature enabled (nested=1), is vulnerable to a crash due to disabled external interrupts. As L2 guest could access (r/w) hardware CR8 register of the host(L0). In a nested visualization setup, L2 guest user could use this flaw to potentially crash the host(L0) resulting in DoS.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-12154",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-12154",
@@ -25005,7 +25040,8 @@
         "cwe": "Input Validation",
         "fixes": "9e3f7a29694049edd728e2400ab57ad7553e5aa9",
         "last_affected_version": "4.8.10",
-        "nvd_text": "The access_pmu_evcntr function in arch/arm64/kvm/sys_regs.c in the Linux kernel before 4.8.11 allows privileged KVM guest OS users to cause a denial of service (assertion failure and host OS crash) by accessing the Performance Monitors Cycle Count Register (PMCCNTR).",
+        "last_modified": "2023-02-11",
+        "nvd_text": "An assertion failure issue was found in the Linux kernel's KVM hypervisor module built to support visualization on ARM64 architecture platforms. The failure could occur while accessing Performance Monitors Cycle Count Register (PMCCNTR) from a guest. A privileged guest user could use this flaw to crash the host kernel resulting in denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-12168",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-12168",
@@ -25042,7 +25078,8 @@
         "cwe": "Path Traversal",
         "fixes": "fd19d3b45164466a4adce7cbff448ba9189e1427",
         "last_affected_version": "4.13.7",
-        "nvd_text": "arch/x86/kvm/mmu.c in the Linux kernel through 4.13.5, when nested virtualisation is used, does not properly traverse guest pagetable entries to resolve a guest virtual address, which allows L1 guest OS users to execute arbitrary code on the host OS or cause a denial of service (incorrect index during page walking, and host OS crash), aka an \"MMU potential stack buffer overrun.\"",
+        "last_modified": "2023-02-11",
+        "nvd_text": "The Linux kernel built with the KVM visualization support (CONFIG_KVM), with nested visualization(nVMX) feature enabled (nested=1), was vulnerable to a stack buffer overflow issue. The vulnerability could occur while traversing guest page table entries to resolve guest virtual address(gva). An L1 guest could use this flaw to crash the host kernel resulting in denial of service (DoS) or potentially execute arbitrary code on the host to gain privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-12188",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-12188",
@@ -25079,7 +25116,8 @@
         "cwe": "Buffer Errors",
         "fixes": "95d78c28b5a85bacbc29b8dba7c04babb9b0d467",
         "last_affected_version": "4.13.7",
-        "nvd_text": "The bio_map_user_iov and bio_unmap_user functions in block/bio.c in the Linux kernel before 4.13.8 do unbalanced refcounting when a SCSI I/O vector has small consecutive buffers belonging to the same page. The bio_add_pc_page function merges them into one, but the page reference is never dropped. This causes a memory leak and possible system lockup (exploitable against the host OS by a guest OS user, if a SCSI disk is passed through to a virtual machine) due to an out-of-memory condition.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It was found that in the Linux kernel through v4.14-rc5, bio_map_user_iov() and bio_unmap_user() in 'block/bio.c' do unbalanced pages refcounting if IO vector has small consecutive buffers belonging to the same page. bio_add_pc_page() merges them into one, but the page reference is never dropped, causing a memory leak and possible system lockup due to out-of-memory condition.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-12190",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-12190",
@@ -25116,7 +25154,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "37863c43b2c6464f252862bf2e9768264e961678",
         "last_affected_version": "4.13.4",
-        "nvd_text": "The keyctl_read_key function in security/keys/keyctl.c in the Key Management subcomponent in the Linux kernel before 4.13.5 does not properly consider that a key may be possessed but negatively instantiated, which allows local users to cause a denial of service (OOPS and system crash) via a crafted KEYCTL_READ operation.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A vulnerability was found in the Key Management sub component of the Linux kernel, where when trying to issue a KEYTCL_READ on a negative key would lead to a NULL pointer dereference. A local attacker could use this flaw to crash the kernel.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-12192",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-12192",
@@ -25153,7 +25192,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "ea6789980fdaa610d7eb63602c746bf6ec70cd2b",
         "last_affected_version": "4.13.10",
-        "nvd_text": "The assoc_array_insert_into_terminal_node function in lib/assoc_array.c in the Linux kernel before 4.13.11 mishandles node splitting, which allows local users to cause a denial of service (NULL pointer dereference and panic) via a crafted application, as demonstrated by the keyring key type, and key addition and link creation operations.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's implementation of associative arrays introduced in 3.13. This functionality was backported to the 3.10 kernels in Red Hat Enterprise Linux 7. The flaw involved a null pointer dereference in assoc_array_apply_edit() due to incorrect node-splitting in assoc_array implementation. This affects the keyring key type and thus key addition and link creation operations may cause the kernel to panic.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-12193",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-12193",
@@ -26181,7 +26221,8 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "94f1bb15bed84ad6c893916b7e7b9db6f1d7eec6",
-        "nvd_text": "The rngapi_reset function in crypto/rng.c in the Linux kernel before 4.2 allows attackers to cause a denial of service (NULL pointer dereference).",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's random number generator API. A null pointer dereference in the rngapi_reset function may result in denial of service, crashing the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-15116",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-15116",
@@ -26254,7 +26295,8 @@
         "cwe": "Use After Free",
         "fixes": "384632e67e0829deb8015ee6ad916b180049d252",
         "last_affected_version": "4.13.5",
-        "nvd_text": "A use-after-free flaw was found in fs/userfaultfd.c in the Linux kernel before 4.13.6. The issue is related to the handling of fork failure when dealing with event messages. Failure to fork correctly can lead to a situation where a fork event will be removed from an already freed list of events with userfaultfd_ctx_put().",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's handling of fork failure when dealing with event messages in the userfaultfd code. Failure to fork correctly can create a fork event that will be removed from an already freed list of events.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-15126",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-15126",
@@ -26290,8 +26332,8 @@
         },
         "cwe": "Data Handling",
         "fixes": "5af10dfd0afc559bb4b0f7e3e8227a1578333995",
-        "last_modified": "2021-01-12",
-        "nvd_text": "A flaw was found in the hugetlb_mcopy_atomic_pte function in mm/hugetlb.c in the Linux kernel before 4.13. A superfluous implicit page unlock for VM_SHARED hugetlbfs mapping could trigger a local denial of service (BUG).",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel when freeing pages in hugetlbfs. This could trigger a local denial of service by crashing the kernel.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-15127",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-15127",
@@ -26365,7 +26407,8 @@
         "cwe": "Use After Free",
         "fixes": "21b5944350052d2583e82dd59b19a9ba94a007f0",
         "last_affected_version": "4.14.10",
-        "nvd_text": "A use-after-free vulnerability was found in network namespaces code affecting the Linux kernel before 4.14.11. The function get_net_ns_by_id() in net/core/net_namespace.c does not check for the net::count value after it has found a peer network in netns_ids idr, which could lead to double free and memory corruption. This vulnerability could allow an unprivileged local user to induce kernel memory corruption on the system, leading to a crash. Due to the nature of the flaw, privilege escalation cannot be fully ruled out, although it is thought to be unlikely.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A use-after-free vulnerability was found in a network namespaces code affecting the Linux kernel since v4.0-rc1 through v4.15-rc5. The function get_net_ns_by_id() does not check for the net::count value after it has found a peer network in netns_ids idr which could lead to double free and memory corruption. This vulnerability could allow an unprivileged local user to induce kernel memory corruption on the system, leading to a crash. Due to the nature of the flaw, privilege escalation cannot be fully ruled out, although it is thought to be unlikely.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-15129",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-15129",
@@ -29789,7 +29832,8 @@
         "cwe": "Permissions, Privileges, and Access Control",
         "fixes": "33ab91103b3415e12457e3104f0e4517ce12d0f3",
         "last_affected_version": "4.9.4",
-        "nvd_text": "The load_segment_descriptor implementation in arch/x86/kvm/emulate.c in the Linux kernel before 4.9.5 improperly emulates a \"MOV SS, NULL selector\" instruction, which allows guest OS users to cause a denial of service (guest OS crash) or gain guest OS privileges via a crafted application.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "Linux kernel built with the Kernel-based Virtual Machine (CONFIG_KVM) support was vulnerable to an incorrect segment selector(SS) value error. The error could occur while loading values into the SS register in long mode. A user or process inside a guest could use this flaw to crash the guest, resulting in DoS or potentially escalate their privileges inside the guest.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-2583",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-2583",
@@ -29863,7 +29907,8 @@
         "cwe": "Resource Management Errors",
         "fixes": "06ce521af9558814b8606c0476c54497cf83a653",
         "last_affected_version": "4.10.9",
-        "nvd_text": "The nested_vmx_check_vmptr function in arch/x86/kvm/vmx.c in the Linux kernel through 4.9.8 improperly emulates the VMXON instruction, which allows KVM L1 guest OS users to cause a denial of service (host OS memory consumption) by leveraging the mishandling of page references.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "Linux kernel built with the KVM visualization support (CONFIG_KVM), with nested visualization(nVMX) feature enabled(nested=1), is vulnerable to host memory leakage issue. It could occur while emulating VMXON instruction in 'handle_vmon'. An L1 guest user could use this flaw to leak host memory potentially resulting in DoS.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-2596",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-2596",
@@ -29900,7 +29945,8 @@
         "cwe": "Incorrect Calculation",
         "fixes": "0c461cb727d146c9ef2d3e86214f498b78b7d125",
         "last_affected_version": "4.9.9",
-        "nvd_text": "A flaw was found in the Linux kernel's handling of clearing SELinux attributes on /proc/pid/attr files before 4.9.10. An empty (null) write to this file can crash the system by causing the system to attempt to access unmapped kernel memory.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's handling of clearing SELinux attributes on /proc/pid/attr files. An empty (null) write to this file can crash the system by causing the system to attempt to access unmapped kernel memory.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-2618",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-2618",
@@ -29935,7 +29981,8 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "f53dc67c5e7babafe239b93a11678b0e05bead51",
-        "nvd_text": "It was found that the Linux kernel's Datagram Congestion Control Protocol (DCCP) implementation before 2.6.22.17 used the IPv4-only inet_sk_rebuild_header() function for both IPv4 and IPv6 DCCP connections, which could result in memory corruptions. A remote attacker could use this flaw to crash the system.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "It was found that the Linux kernel's Datagram Congestion Control Protocol (DCCP) implementation used the IPv4-only inet_sk_rebuild_header() function for both IPv4 and IPv6 DCCP connections, which could result in memory corruptions. A remote attacker could use this flaw to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-2634",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-2634",
@@ -29972,7 +30019,8 @@
         "cwe": "Race Conditions",
         "fixes": "82f2341c94d270421f383641b7cd670e474db56b",
         "last_affected_version": "4.10.2",
-        "nvd_text": "Race condition in drivers/tty/n_hdlc.c in the Linux kernel through 4.10.1 allows local users to gain privileges or cause a denial of service (double free) by setting the HDLC line discipline.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A race condition flaw was found in the N_HLDC Linux kernel driver when accessing n_hdlc.tbuf list that can lead to double free. A local, unprivileged user able to set the HDLC line discipline on the tty device could use this flaw to increase their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-2636",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-2636",
@@ -30009,7 +30057,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "c06cfb08b88dfbe13be44a69ae2fdc3a7c902d81",
         "last_affected_version": "3.16.45",
-        "nvd_text": "The KEYS subsystem in the Linux kernel before 3.18 allows local users to gain privileges or cause a denial of service (NULL pointer dereference and system crash) via vectors involving a NULL value for a certain match field, related to the keyring_search_iterator function in keyring.c.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found that can be triggered in keyring_search_iterator in keyring.c if type->match is NULL. A local user could use this flaw to crash the system or, potentially, escalate their privileges.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-2647",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-2647",
@@ -30046,7 +30095,8 @@
         "cwe": "Improper Access Control",
         "fixes": "43a6684519ab0a6c52024b5e253224",
         "last_affected_version": "4.10.13",
-        "nvd_text": "The ping_unhash function in net/ipv4/ping.c in the Linux kernel through 4.10.8 is too late in obtaining a certain lock and consequently cannot ensure that disconnect function calls are safe, which allows local users to cause a denial of service (panic) by leveraging access to the protocol value of IPPROTO_ICMP in a socket system call.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A race condition leading to a NULL pointer dereference was found in the Linux kernel's Link Layer Control implementation. A local attacker with access to ping sockets could use this flaw to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-2671",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-2671",
@@ -31498,7 +31548,8 @@
         "cwe": "Resource Management Errors",
         "fixes": "c9f838d104fed6f2f61d68164712e3204bf5271b",
         "last_affected_version": "4.10.12",
-        "nvd_text": "The KEYS subsystem in the Linux kernel before 4.10.13 allows local users to cause a denial of service (memory consumption) via a series of KEY_REQKEY_DEFL_THREAD_KEYRING keyctl_set_reqkey_keyring calls.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A vulnerability was found in the Linux kernel where the keyctl_set_reqkey_keyring() function leaks the thread keyring. This allows an unprivileged local user to exhaust kernel memory and thus cause a DoS.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-7472",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-7472",
@@ -31535,7 +31586,8 @@
         "cwe": "Buffer Errors",
         "fixes": "4d6fa57b4dab0d77f4d8e9d9c73d1e63f6fe8fee",
         "last_affected_version": "4.10",
-        "nvd_text": "Heap-based buffer overflow in drivers/net/macsec.c in the MACsec module in the Linux kernel through 4.10.12 allows attackers to cause a denial of service or possibly have unspecified other impact by leveraging the use of a MAX_SKB_FRAGS+1 size in conjunction with the NETIF_F_FRAGLIST feature, leading to an error in the skb_to_sgvec function.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the way Linux kernel allocates heap memory to build the scattergather list from a fragment list(skb_shinfo(skb)->frag_list) in the socket buffer(skb_buff). The heap overflow occurred if 'MAX_SKB_FRAGS + 1' parameter and 'NETIF_F_FRAGLIST' feature are both used together. A remote user or process could use this flaw to potentially escalate their privilege on a system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-7477",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-7477",
@@ -31646,7 +31698,8 @@
         "cwe": "Information Leak / Disclosure",
         "fixes": "06bd3c36a733ac27962fea7d6f47168841376824",
         "last_affected_version": "4.6.1",
-        "nvd_text": "fs/ext4/inode.c in the Linux kernel before 4.6.2, when ext4 data=ordered mode is used, mishandles a needs-flushing-before-commit list, which allows local users to obtain sensitive information from other users' files in opportunistic circumstances by waiting for a hardware reset, creating a new file, making write system calls, and reading this file.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A vulnerability was found in the Linux kernel where filesystems mounted with data=ordered mode may allow an attacker to read stale data from recently allocated blocks in new files after a system 'reset' by abusing ext4 mechanics of delayed allocation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-7495",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-7495",
@@ -31720,7 +31773,8 @@
         "cwe": "Race Conditions",
         "fixes": "49d31c2f389acfe83417083e1208422b4091cd9e",
         "last_affected_version": "4.12.4",
-        "nvd_text": "Race condition in the fsnotify implementation in the Linux kernel through 4.12.4 allows local users to gain privileges or cause a denial of service (memory corruption) via a crafted application that leverages simultaneous execution of the inotify_handle_event and vfs_rename functions.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A race condition was found in the Linux kernel, present since v3.14-rc1 through v4.12. The race happens between threads of inotify_handle_event() and vfs_rename() while running the rename operation against the same file. As a result of the race the next slab data or the slab's free list pointer can be corrupted with attacker-controlled data, which may lead to the privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-7533",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-7533",
@@ -31757,7 +31811,8 @@
         "cwe": "Buffer Errors",
         "fixes": "8f44c9a41386729fea410e688959ddaa9d51be7c",
         "last_affected_version": "4.12.2",
-        "nvd_text": "The brcmf_cfg80211_mgmt_tx function in drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c in the Linux kernel before 4.12.3 allows local users to cause a denial of service (buffer overflow and system crash) or possibly gain privileges via a crafted NL80211_CMD_FRAME Netlink packet.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "Kernel memory corruption due to a buffer overflow was found in brcmf_cfg80211_mgmt_tx() function in Linux kernels from v3.9-rc1 to v4.13-rc1. The vulnerability can be triggered by sending a crafted NL80211_CMD_FRAME packet via netlink. This flaw is unlikely to be triggered remotely as certain userspace code is needed for this. An unprivileged local user could use this flaw to induce kernel memory corruption on the system, leading to a crash. Due to the nature of the flaw, privilege escalation cannot be fully ruled out, although it is unlikely.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-7541",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-7541",
@@ -31794,7 +31849,8 @@
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "6399f1fae4ec29fab5ec76070435555e256ca3a6",
         "last_affected_version": "4.12.5",
-        "nvd_text": "The ip6_find_1stfragopt function in net/ipv6/output_core.c in the Linux kernel through 4.12.3 allows local users to cause a denial of service (integer overflow and infinite loop) by leveraging the ability to open a raw socket.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "An integer overflow vulnerability in ip6_find_1stfragopt() function was found. A local attacker that has privileges (of CAP_NET_RAW) to open raw socket can cause an infinite loop inside the ip6_find_1stfragopt() function.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2017-7542",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2017-7542",
@@ -33901,7 +33957,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "57ebd808a97d7c5b1e1afb937c2db22beba3c1f8",
         "last_affected_version": "4.15.9",
-        "nvd_text": "The netfilter subsystem in the Linux kernel through 4.15.7 mishandles the case of a rule blob that contains a jump but lacks a user-defined chain, which allows local users to cause a denial of service (NULL pointer dereference) by leveraging the CAP_NET_RAW or CAP_NET_ADMIN capability, related to arpt_do_table in net/ipv4/netfilter/arp_tables.c, ipt_do_table in net/ipv4/netfilter/ip_tables.c, and ip6t_do_table in net/ipv6/netfilter/ip6_tables.c.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the netfilter/iptables subsystem. A user with the netfilter modification capabilities could insert a rule which could panic the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1065",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-1065",
@@ -34050,7 +34107,8 @@
         "cwe": "Buffer Errors",
         "fixes": "8a2b307c21d4b290e3cbe33f768f194286d07c23",
         "last_affected_version": "4.17.2",
-        "nvd_text": "Linux kernel is vulnerable to a heap-based buffer overflow in the fs/ext4/xattr.c:ext4_xattr_set_entry() function. An attacker could exploit this by operating on a mounted crafted ext4 image.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "The Linux kernel is vulnerable to a heap-based buffer overflow in the fs/ext4/xattr.c:ext4_xattr_set_entry() function. An attacker could exploit this by operating on a mounted crafted ext4 image.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-10840",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-10840",
@@ -34159,7 +34217,8 @@
         },
         "cwe": "Buffer Errors",
         "fixes": "",
-        "nvd_text": "A flaw was found in the way the Linux kernel handled exceptions delivered after a stack switch operation via Mov SS or Pop SS instructions. During the stack switch operation, processor does not deliver interrupts and exceptions, they are delivered once the first instruction after the stack switch is executed. An unprivileged system user could use this flaw to crash the system kernel resulting in DoS. This CVE-2018-10872 was assigned due to regression of CVE-2018-8897 in Red Hat Enterprise Linux 6.10 GA kernel. No other versions are affected by this CVE.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the way the Linux kernel handled exceptions delivered after a stack switch operation via Mov SS or Pop SS instructions. During the stack switch operation, processor does not deliver interrupts and exceptions, they are delivered once the first instruction after the stack switch is executed. An unprivileged system user could use this flaw to crash the system kernel resulting in DoS. This CVE-2018-10872 was assigned due to regression of CVE-2018-8897 in Red Hat Enterprise Linux 6.10 GA kernel; no other versions are affected by this CVE.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-10872",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-10872",
@@ -34197,8 +34256,8 @@
         "cwe": "Use After Free",
         "fixes": "8844618d8aa7a9973e7b527d038a2a589665002c",
         "last_affected_version": "4.17.5",
-        "last_modified": "2019-01-20",
-        "nvd_text": "A flaw was found in Linux kernel in the ext4 filesystem code. A use-after-free is possible in ext4_ext_remove_space() function when mounting and operating a crafted ext4 image.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's ext4 filesystem code. A use-after-free is possible in ext4_ext_remove_space() function when mounting and operating a crafted ext4 image.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-10876",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-10876",
@@ -34235,7 +34294,8 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "bc890a60247171294acc0bd67d211fa4b88d40ba",
         "last_affected_version": "4.17.5",
-        "nvd_text": "Linux kernel ext4 filesystem is vulnerable to an out-of-bound access in the ext4_ext_drop_refs() function when operating on a crafted ext4 filesystem image.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel ext4 filesystem. An out-of-bound access is possible in the ext4_ext_drop_refs() function when operating on a crafted ext4 filesystem image.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-10877",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-10877",
@@ -34346,7 +34406,8 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "8cdb5240ec5928b20490a2bb34cb87e9a5f40226",
         "last_affected_version": "4.17.5",
-        "nvd_text": "Linux kernel is vulnerable to a stack-out-of-bounds write in the ext4 filesystem code when mounting and writing to a crafted ext4 image in ext4_update_inline_data(). An attacker could use this to cause a system crash and a denial of service.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's ext4 filesystem code. A stack-out-of-bounds write in ext4_update_inline_data() is possible when mounting and writing to a crafted ext4 image. An attacker could use this to cause a system crash and a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-10880",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-10880",
@@ -34420,7 +34481,8 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "c37e9e013469521d9adb932d17a1795c139b36db",
         "last_affected_version": "4.17.5",
-        "nvd_text": "A flaw was found in the Linux kernel's ext4 filesystem. A local user can cause an out-of-bound write in in fs/jbd2/transaction.c code, a denial of service, and a system crash by unmounting a crafted ext4 filesystem image.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's ext4 filesystem. A local user can cause an out-of-bound write in the fs/jbd2/transaction.c code, a denial of service, and a system crash by unmounting a crafted ext4 filesystem image.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-10882",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-10882",
@@ -34457,7 +34519,8 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "e09463f220ca9a1a1ecfda84fcda658f99a1f12a",
         "last_affected_version": "4.17.5",
-        "nvd_text": "A flaw was found in the Linux kernel's ext4 filesystem. A local user can cause an out-of-bounds write in jbd2_journal_dirty_metadata(), a denial of service, and a system crash by mounting and operating on a crafted ext4 filesystem image.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's ext4 filesystem. A local user can cause an out-of-bound write in jbd2_journal_dirty_metadata(), a denial of service, and a system crash by mounting and operating on a crafted ext4 filesystem image.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-10883",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-10883",
@@ -34603,7 +34666,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "8e4b5eae5decd9dfe5a4ee369c22028f90ab4c44",
         "last_affected_version": "4.16.3",
-        "nvd_text": "The ext4_iget function in fs/ext4/inode.c in the Linux kernel through 4.15.15 mishandles the case of a root directory with a zero i_links_count, which allows attackers to cause a denial of service (ext4_process_freed_data NULL pointer dereference and OOPS) via a crafted ext4 image.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "The Linux kernel is vulnerable to a NULL pointer dereference in the ext4/mballoc.c:ext4_process_freed_data() function. An attacker could trick a legitimate user or a privileged attacker could exploit this by mounting a crafted ext4 image to cause a kernel panic.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1092",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-1092",
@@ -34714,8 +34778,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "a45403b51582a87872927a3e0fc0a389c26867f1",
         "last_affected_version": "4.16.3",
-        "last_modified": "2019-03-05",
-        "nvd_text": "The ext4_fill_super function in fs/ext4/super.c in the Linux kernel through 4.15.15 does not always initialize the crc32c checksum driver, which allows attackers to cause a denial of service (ext4_xattr_inode_hash NULL pointer dereference and system crash) via a crafted ext4 image.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "The Linux kernel is vulnerable to a NULL pointer dereference in the ext4/xattr.c:ext4_xattr_inode_hash() function. An attacker could trick a legitimate user or a privileged attacker could exploit this to cause a NULL pointer dereference with a crafted ext4 image.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1094",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-1094",
@@ -34789,7 +34853,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "ce3fd194fcc6fbdc00ce095a852f22df97baa401",
         "last_affected_version": "4.16.3",
-        "nvd_text": "The ext4_xattr_check_entries function in fs/ext4/xattr.c in the Linux kernel through 4.15.15 does not properly validate xattr sizes, which causes misinterpretation of a size as an error code, and consequently allows attackers to cause a denial of service (get_acl NULL pointer dereference and system crash) via a crafted ext4 image.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "The Linux kernel is vulnerable to an out-of-bound access bug in the fs/posix_acl.c:get_acl() function. An attacker could trick a legitimate user or a privileged attacker could exploit this to cause a system crash or other unspecified impact with a crafted ext4 image. Due to the nature of the flaw, privilege escalation cannot be fully ruled out, although we believe it is unlikely.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1095",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-1095",
@@ -34863,7 +34928,8 @@
         "cwe": "Information Leak / Disclosure",
         "fixes": "670ae9caaca467ea1bfd325cb2a5c98ba87f94ad",
         "last_affected_version": "4.17.2",
-        "nvd_text": "Linux kernel vhost since version 4.8 does not properly initialize memory in messages passed between virtual guests and the host operating system in the vhost/vhost.c:vhost_new_msg() function. This can allow local privileged users to read some kernel memory contents when reading from the /dev/vhost-net device file.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "The Linux kernel does not properly initialize memory in messages passed between virtual guests and the host operating system in the vhost/vhost.c:vhost_new_msg() function. This can allow local privileged users to read some kernel memory contents when reading from the /dev/vhost-net device file.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-1118",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-1118",
@@ -36580,7 +36646,8 @@
         "cwe": "Race Conditions",
         "fixes": "834e772c8db0c6a275d75315d90aba4ebbb1e249",
         "last_affected_version": "4.19.8",
-        "nvd_text": "A flaw was found in the Linux Kernel where an attacker may be able to have an uncontrolled read to kernel-memory from within a vm guest. A race condition between connect() and close() function may allow an attacker using the AF_VSOCK protocol to gather a 4 byte information leak or possibly intercept or corrupt AF_VSOCK messages destined to other clients.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found where an attacker may be able to have an uncontrolled read to kernel-memory from within a vm guest. A race condition between connect() and close() function may allow an attacker using the AF_VSOCK protocol to gather a 4 byte information leak or possibly impersonate AF_VSOCK messages destined to other clients or leak kernel memory.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14625",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-14625",
@@ -36617,8 +36684,8 @@
         "cwe": "Buffer Errors",
         "fixes": "1816494330a83f2a064499d8ed2797045641f92c",
         "last_affected_version": "4.18.10",
-        "last_modified": "2019-03-05",
-        "nvd_text": "A security flaw was found in the chap_server_compute_md5() function in the ISCSI target code in the Linux kernel in a way an authentication request from an ISCSI initiator is processed. An unauthenticated remote attacker can cause a stack buffer overflow and smash up to 17 bytes of the stack. The attack requires the iSCSI target to be enabled on the victim host. Depending on how the target's code was built (i.e. depending on a compiler, compile flags and hardware architecture) an attack may lead to a system crash and thus to a denial-of-service or possibly to a non-authorized access to data exported by an iSCSI target. Due to the nature of the flaw, privilege escalation cannot be fully ruled out, although we believe it is highly unlikely. Kernel versions 4.18.x, 4.14.x and 3.10.x are believed to be vulnerable.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the ISCSI target code in the Linux kernel. The flaw allows an unauthenticated, remote attacker to cause a stack buffer overflow of 17 bytes of the stack. Depending on how the kernel was compiled (e.g. compiler, compile flags, and hardware architecture), the attack may lead to a system crash or access to data exported by an iSCSI target. Privilege escalation cannot be ruled out. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14633",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-14633",
@@ -36655,9 +36722,9 @@
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "da029c11e6b12f321f36dac8771e833b65cec962",
         "last_affected_version": "4.12.2",
-        "last_modified": "2019-02-08",
+        "last_modified": "2023-02-11",
         "name": "Mutagen Astronomy",
-        "nvd_text": "An integer overflow flaw was found in the Linux kernel's create_elf_tables() function. An unprivileged local user with access to SUID (or otherwise privileged) binary could use this flaw to escalate their privileges on the system. Kernel versions 2.6.x, 3.10.x and 4.14.x are believed to be vulnerable.",
+        "nvd_text": "An integer overflow flaw was found in the Linux kernel's create_elf_tables() function. An unprivileged local user with access to SUID (or otherwise privileged) binary could use this flaw to escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-14634",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-14634",
@@ -37139,8 +37206,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "01310bb7c9c98752cc763b36532fab028e0f8f81",
         "last_affected_version": "4.19.2",
-        "last_modified": "2019-08-06",
-        "nvd_text": "A flaw was found in the Linux kernel's NFS implementation, all versions 3.x and all versions 4.x up to 4.20. An attacker, who is able to mount an exported NFS filesystem, is able to trigger a null pointer dereference by using an invalid NFS sequence. This can panic the machine and deny access to the NFS server. Any outstanding disk writes to the NFS server will be lost.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's NFS implementation. An attacker, who is able to mount an exported NFS filesystem, is able to trigger a null pointer dereference by using an invalid NFS sequence. This can panic the machine and deny access to the NFS server. Any outstanding disk writes to the NFS server will be lost.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16871",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-16871",
@@ -37289,8 +37356,8 @@
         },
         "cwe": "Out-of-bounds Read",
         "fixes": "",
-        "last_modified": "2019-02-12",
-        "nvd_text": "A flaw was found in the Linux kernel that allows the userspace to call memcpy_fromiovecend() and similar functions with a zero offset and buffer length which causes the read beyond the buffer boundaries, in certain cases causing a memory access fault and a system halt by accessing invalid memory address. This issue only affects kernel version 3.10.x as shipped with Red Hat Enterprise Linux 7.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel that allows the userspace to call memcpy_fromiovecend() and similar functions with a zero offset and buffer length. This can cause a read beyond the buffer boundaries flaw and, in certain cases, cause a memory access fault and a system halt by accessing invalid memory address.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2018-16885",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2018-16885",
@@ -40844,8 +40911,8 @@
         "cwe": "Buffer Errors",
         "fixes": "69ae4f6aac1578575126319d3f55550e7e440449",
         "last_affected_version": "5.1.17",
-        "last_modified": "2019-07-21",
-        "nvd_text": "A flaw was found in the Linux kernel. A heap based buffer overflow in mwifiex_uap_parse_tail_ies function in drivers/net/wireless/marvell/mwifiex/ie.c might lead to memory corruption and possibly other consequences.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the mwifiex implementation in the Linux kernel. A system connecting to wireless access point could be manipulated by an attacker with advanced permissions on the access point into localized memory corruption or possibly privilege escalation.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10126",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10126",
@@ -40880,8 +40947,8 @@
         },
         "cwe": "NULL Pointer Dereference",
         "fixes": "",
-        "last_modified": "2019-08-29",
-        "nvd_text": "A vulnerability was found in Linux kernel's, versions up to 3.10, implementation of overlayfs. An attacker with local access can create a denial of service situation via NULL pointer dereference in ovl_posix_acl_create function in fs/overlayfs/dir.c. This can allow attackers with ability to create directories on overlayfs to crash the kernel creating a denial of service (DOS).",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A vulnerability was found in Linux kernel's implementation of overlayfs. An attacker with local access can create a denial of service situation via NULL pointer dereference in ovl_posix_acl_create function in fs/overlayfs/dir.c. This can allow attackers with ability to create directories on overlayfs to crash the kernel creating a denial of service (DOS).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10140",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10140",
@@ -40959,8 +41026,8 @@
         "cwe": "NULL Pointer Dereference",
         "fixes": "b36a1552d7319bbfd5cf7f08726c23c5c66d4f73",
         "last_affected_version": "5.2.5",
-        "last_modified": "2020-04-17",
-        "nvd_text": "A flaw was found in the Linux kernel's Bluetooth implementation of UART, all versions kernel 3.x.x before 4.18.0 and kernel 5.x.x. An attacker with local access and write permissions to the Bluetooth hardware could use this flaw to issue a specially crafted ioctl function call and cause the system to crash.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel\u2019s Bluetooth implementation of UART. An attacker with local access and write permissions to the Bluetooth hardware could use this flaw to issue a specially crafted ioctl function call and cause the system to crash.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-10207",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-10207",
@@ -42668,8 +42735,8 @@
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "7caac62ed598a196d6ddf8d9c121e12e082cac3a",
         "last_affected_version": "5.2",
-        "last_modified": "2019-10-06",
-        "nvd_text": "There is heap-based buffer overflow in Linux kernel, all versions up to, excluding 5.3, in the marvell wifi chip driver in Linux kernel, that allows local users to cause a denial of service(system crash) or possibly execute arbitrary code.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel\u2019s implementation of the Marvell wifi driver, which can allow a local user who has CAP_NET_ADMIN or administrative privileges to possibly cause a Denial Of Service (DOS) by corrupting memory and possible code execution.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14814",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14814",
@@ -42708,8 +42775,8 @@
         "cwe": "Heap-based Buffer Overflow",
         "fixes": "7caac62ed598a196d6ddf8d9c121e12e082cac3a",
         "last_affected_version": "5.2",
-        "last_modified": "2020-04-17",
-        "nvd_text": "A vulnerability was found in Linux Kernel, where a Heap Overflow was found in mwifiex_set_wmm_params() function of Marvell Wifi Driver.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A vulnerability found in the Linux kernel's WMM implementation for Marvell WiFi-based hardware (mwifiex) could lead to a denial of service or allow arbitrary code execution. For this flaw to be executed, the attacker must be both local and privileged. There is no mitigation to this flaw. A patch has been provided to remediate this flaw.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14815",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14815",
@@ -42746,8 +42813,8 @@
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "7caac62ed598a196d6ddf8d9c121e12e082cac3a",
         "last_affected_version": "5.2",
-        "last_modified": "2019-10-06",
-        "nvd_text": "There is heap-based buffer overflow in kernel, all versions up to, excluding 5.3, in the marvell wifi chip driver in Linux kernel, that allows local users to cause a denial of service(system crash) or possibly execute arbitrary code.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A vulnerability was found in the Linux kernel's Marvell WiFi chip driver. Where, while parsing vendor-specific informational attributes, an attacker on the same WiFi physical network segment could cause a system crash, resulting in a denial of service, or potentially execute arbitrary code. This flaw affects the network interface at the most basic level meaning the attacker only needs to affiliate with the same network device as the vulnerable system to create an attack path.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14816",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14816",
@@ -42784,8 +42851,8 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "b60fe990c6b07ef6d4df67bc0530c7c90a62623a",
         "last_affected_version": "5.3.0",
-        "last_modified": "2020-06-25",
-        "nvd_text": "An out-of-bounds access issue was found in the Linux kernel, all versions through 5.3, in the way Linux kernel's KVM hypervisor implements the Coalesced MMIO write operation. It operates on an MMIO ring buffer 'struct kvm_coalesced_mmio' object, wherein write indices 'ring->first' and 'ring->last' value could be supplied by a host user-space process. An unprivileged host user or process with access to '/dev/kvm' device could use this flaw to crash the host kernel, resulting in a denial of service or potentially escalating privileges on the system.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "An out-of-bounds access issue was found in the way Linux kernel's KVM hypervisor implements the Coalesced MMIO write operation. It operates on an MMIO ring buffer 'struct kvm_coalesced_mmio' object, wherein write indices 'ring->first' and 'ring->last' value could be supplied by a host user-space process. An unprivileged host user or process with access to '/dev/kvm' device could use this flaw to crash the host kernel, resulting in a denial of service or potentially escalating privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14821",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14821",
@@ -42822,8 +42889,8 @@
         "cwe": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
         "fixes": "060423bfdee3f8bc6e2c1bac97de24d5415e2bc4",
         "last_affected_version": "5.2",
-        "last_modified": "2019-10-06",
-        "nvd_text": "A buffer overflow flaw was found, in versions from 2.6.34 to 5.2.x, in the way Linux kernel's vhost functionality that translates virtqueue buffers to IOVs, logged the buffer descriptors during migration. A privileged guest user able to pass descriptors with invalid length to the host when migration is underway, could use this flaw to increase their privileges on the host.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A buffer overflow flaw was found in the way Linux kernel's vhost functionality that translates virtqueue buffers to IOVs, logged the buffer descriptors during migration. A privileged guest user able to pass descriptors with invalid length to the host when migration is underway, could use this flaw to increase their privileges on the host. In the worst case (and likely most common virtualization) scenario this flaw affects KVM/qemu hypervisor enabled hosts running Linux guests.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14835",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14835",
@@ -42862,8 +42929,8 @@
         "cwe": "Heap-based Buffer Overflow",
         "fixes": "3d94a4a8373bf5f45cf5f939e88b8354dbf2311b",
         "last_affected_version": "5.4.11",
-        "last_modified": "2020-04-17",
-        "nvd_text": "A heap-based buffer overflow was discovered in the Linux kernel, all versions 3.x.x and 4.x.x before 4.18.0, in Marvell WiFi chip driver. The flaw could occur when the station attempts a connection negotiation during the handling of the remote devices country settings. This could allow the remote device to cause a denial of service (system crash) or possibly execute arbitrary code.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A heap-based buffer overflow was discovered in the Linux kernel's Marvell WiFi chip driver. The flaw could occur when the station attempts a connection negotiation during the handling of the remote devices country settings. This could allow the remote device to cause a denial of service (system crash) or possibly execute arbitrary code.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14895",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14895",
@@ -42902,8 +42969,8 @@
         "cwe": "Heap-based Buffer Overflow",
         "fixes": "e5e884b42639c74b5b57dc277909915c0aefc8bb",
         "last_affected_version": "5.4",
-        "last_modified": "2020-04-28",
-        "nvd_text": "A heap-based buffer overflow vulnerability was found in the Linux kernel, version kernel-2.6.32, in Marvell WiFi chip driver. A remote attacker could cause a denial of service (system crash) or, possibly execute arbitrary code, when the lbs_ibss_join_existing function is called after a STA connects to an AP.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A heap-based buffer overflow vulnerability was found in the Linux kernel's Marvell WiFi chip driver. A remote attacker could cause a denial of service (system crash) or, possibly execute arbitrary code, when the lbs_ibss_join_existing function is called after a STA connects to an AP.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14896",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14896",
@@ -42980,8 +43047,8 @@
         },
         "cwe": "Improper Locking",
         "fixes": "",
-        "last_modified": "2020-05-18",
-        "nvd_text": "The fix for CVE-2019-11599, affecting the Linux kernel before 5.0.10 was not complete. A local user could use this flaw to obtain sensitive information, cause a denial of service, or possibly have other unspecified impacts by triggering a race condition with mmget_not_zero or get_task_mm calls.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "The fix for CVE-2019-11599 was not complete. A local user could use this flaw to obtain sensitive information, cause a denial of service, or possibly have other unspecified impacts by triggering a race condition with mmget_not_zero or get_task_mm calls.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14898",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14898",
@@ -43021,8 +43088,8 @@
         "cwe": "Uncontrolled Resource Consumption",
         "fixes": "1e58252e334dc3f3756f424a157d1b7484464c40",
         "last_affected_version": "5.4.10",
-        "last_modified": "2020-04-28",
-        "nvd_text": "A heap overflow flaw was found in the Linux kernel, all versions 3.x.x and 4.x.x before 4.18.0, in Marvell WiFi chip driver. The vulnerability allows a remote attacker to cause a system crash, resulting in a denial of service, or execute arbitrary code. The highest threat with this vulnerability is with the availability of the system. If code execution occurs, the code will run with the permissions of root. This will affect both confidentiality and integrity of files on the system.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A heap overflow flaw was found in the Linux kernel's Marvell WiFi chip driver. The vulnerability allows a remote attacker to cause a system crash, resulting in a denial of service, or execute arbitrary code. The highest threat with this vulnerability is with the availability of the system. If code execution occurs, the code will run with the permissions of root. This will affect both confidentiality and integrity of files on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-14901",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-14901",
@@ -48324,8 +48391,8 @@
         "cwe": "Out-of-bounds Write",
         "fixes": "433f4ba1904100da65a311033f17a9bf586b287e",
         "last_affected_version": "5.4.2",
-        "last_modified": "2020-04-17",
-        "nvd_text": "An out-of-bounds memory write issue was found in the Linux Kernel, version 3.13 through 5.4, in the way the Linux kernel's KVM hypervisor handled the 'KVM_GET_EMULATED_CPUID' ioctl(2) request to get CPUID features emulated by the KVM hypervisor. A user or process able to access the '/dev/kvm' device could use this flaw to crash the system, resulting in a denial of service.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "An out-of-bounds memory write issue was found in the way the Linux kernel's KVM hypervisor handled the 'KVM_GET_EMULATED_CPUID' ioctl(2) request to get CPUID features emulated by the KVM hypervisor. A user or process able to access the '/dev/kvm' device could use this flaw to crash the system, resulting in a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-19332",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-19332",
@@ -51045,8 +51112,8 @@
         "cwe": "Buffer Errors",
         "fixes": "13ec7f10b87f5fc04c4ccbd491c94c7980236a74",
         "last_affected_version": "5.1.17",
-        "last_modified": "2019-07-21",
-        "nvd_text": "A flaw that allowed an attacker to corrupt memory and possibly escalate privileges was found in the mwifiex kernel module while connecting to a malicious wireless network.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's Marvell wifi chip driver. A heap overflow in mwifiex_update_bss_desc_with_ie function in marvell/mwifiex/scan.c allows remote attackers to cause a denial of service(system crash) or execute arbitrary code.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3846",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3846",
@@ -51083,8 +51150,8 @@
         "cwe": "Buffer Errors",
         "fixes": "1033990ac5b2ab6cee93734cb6d301aa3a35bcaa",
         "last_affected_version": "4.19.136",
-        "last_modified": "2020-08-05",
-        "nvd_text": "The SCTP socket buffer used by a userspace application is not accounted by the cgroups subsystem. An attacker can use this flaw to cause a denial of service attack. Kernel 3.10.x and 4.18.x branches are believed to be vulnerable.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "The SCTP socket buffer used by a userspace application is not accounted by the cgroups subsystem. An attacker can use this flaw to cause a denial of service attack.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3874",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3874",
@@ -51121,8 +51188,8 @@
         "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "492855939bdb59c6f947b0b5b44af9ad82b7e38c",
         "last_affected_version": "5.0.10",
-        "last_modified": "2019-05-17",
-        "nvd_text": "A flaw was found in the Linux kernel's vfio interface implementation that permits violation of the user's locked memory limit. If a device is bound to a vfio driver, such as vfio-pci, and the local attacker is administratively granted ownership of the device, it may cause a system memory exhaustion and thus a denial of service (DoS). Versions 3.10, 4.14 and 4.18 are vulnerable.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel's vfio interface implementation that permits violation of the user's locked memory limit. If a device is bound to a vfio driver, such as vfio-pci, and the local attacker is administratively granted ownership of the device, it may cause a system memory exhaustion and thus a denial of service (DoS).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3882",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3882",
@@ -51159,8 +51226,8 @@
         "cwe": "Input Validation",
         "fixes": "acff78477b9b4f26ecdf65733a4ed77fe837e9dc",
         "last_affected_version": "5.0.7",
-        "last_modified": "2019-04-17",
-        "nvd_text": "A flaw was found in the way KVM hypervisor handled x2APIC Machine Specific Rregister (MSR) access with nested(=1) virtualization enabled. In that, L1 guest could access L0's APIC register values via L2 guest, when 'virtualize x2APIC mode' is enabled. A guest could use this flaw to potentially crash the host kernel resulting in DoS issue. Kernel versions from 4.16 and newer are vulnerable to this issue.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the way KVM hypervisor handled x2APIC Machine Specific Register (MSR) access with nested(=1) virtualization enabled. In that, L1 guest could access L0's APIC register values via L2 guest, when 'virtualize x2APIC mode' is enabled. A guest could use this flaw to potentially crash the host kernel resulting in DoS issue.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3887",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3887",
@@ -51213,8 +51280,8 @@
         },
         "cwe": "Double Free",
         "fixes": "2dcb22b346be7b7b7e630a8970d69cf3f1111ec1",
-        "last_modified": "2019-06-29",
-        "nvd_text": "A double-free can happen in idr_remove_all() in lib/idr.c in the Linux kernel 2.6 branch. An unprivileged local attacker can use this flaw for a privilege escalation or for a system crash and a denial of service (DoS).",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A double-free can happen in idr_remove_all() in lib/idr.c in the Linux kernel. An unprivileged local attacker can use this flaw for a privilege escalation or for a system crash and a denial of service (DoS).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3896",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3896",
@@ -51251,8 +51318,8 @@
         "cwe": "Uncontrolled Resource Consumption ('Resource Exhaustion')",
         "fixes": "e2412c07f8f3040593dfb88207865a3cd58680c0",
         "last_affected_version": "4.19.63",
-        "last_modified": "2019-09-06",
-        "nvd_text": "An infinite loop issue was found in the vhost_net kernel module in Linux Kernel up to and including v5.1-rc6, while handling incoming packets in handle_rx(). It could occur if one end sends packets faster than the other end can process them. A guest user, maybe remote one, could use this flaw to stall the vhost_net kernel thread, resulting in a DoS scenario.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "An infinite loop issue was found in the vhost_net kernel module while handling incoming packets in handle_rx(). The infinite loop could occur if one end sends packets faster than the other end can process them. A guest user, maybe a remote one, could use this flaw to stall the vhost_net kernel thread, resulting in a DoS scenario.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3900",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3900",
@@ -51289,8 +51356,8 @@
         "cwe": "Race Conditions",
         "fixes": "79c9ce57eb2d5f1497546a3946b4ae21b6fdc438",
         "last_affected_version": "4.5.5",
-        "last_modified": "2019-05-03",
-        "nvd_text": "A race condition in perf_event_open() allows local attackers to leak sensitive data from setuid programs. As no relevant locks (in particular the cred_guard_mutex) are held during the ptrace_may_access() call, it is possible for the specified target task to perform an execve() syscall with setuid execution before perf_event_alloc() actually attaches to it, allowing an attacker to bypass the ptrace_may_access() check and the perf_event_exit_task(current) call that is performed in install_exec_creds() during privileged execve() calls. This issue affects kernel versions before 4.8.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A race condition in perf_event_open() allows local attackers to leak sensitive data from setuid programs. As no relevant locks (in particular the cred_guard_mutex) are held during the ptrace_may_access() call, it is possible for the specified target task to perform an execve() syscall with setuid execution before perf_event_alloc() actually attaches to it, allowing an attacker to bypass the ptrace_may_access() check and the perf_event_exit_task(current) call that is performed in install_exec_creds() during privileged execve() calls.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2019-3901",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2019-3901",
@@ -53377,8 +53444,8 @@
         "cwe": "Exposure of Sensitive Information to an Unauthorized Actor",
         "fixes": "1d605416fb7175e1adf094251466caa52093b413",
         "last_affected_version": "5.6",
-        "last_modified": "2020-06-23",
-        "nvd_text": "A flaw was found in the Linux kernel's implementation of Userspace core dumps. This flaw allows an attacker with a local account to crash a trivial program and exfiltrate private kernel data.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel\u2019s implementation of Userspace core dumps. This flaw allows an attacker with a local account to crash a trivial program and exfiltrate private kernel data.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10732",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10732",
@@ -53456,8 +53523,8 @@
         "cwe": "Insufficient Verification of Data Authenticity",
         "fixes": "fb73974172ffaaf57a7c42f35424d9aece1a5af6",
         "last_affected_version": "5.6.10",
-        "last_modified": "2020-06-13",
-        "nvd_text": "A flaw was found in the Linux kernels SELinux LSM hook implementation before version 5.7, where it incorrectly assumed that an skb would only contain a single netlink message. The hook would incorrectly only validate the first netlink message in the skb and allow or deny the rest of the messages within the skb with the granted permission without further processing.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel\u2019s SELinux LSM hook implementation, where it anticipated the skb would only contain a single Netlink message. The hook incorrectly validated the first Netlink message in the skb only, to allow or deny the rest of the messages within the skb with the granted permissions and without further processing. At this time, there is no known ability for an attacker to abuse this flaw.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10751",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10751",
@@ -53496,8 +53563,8 @@
         "cwe": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
         "fixes": "5bfea2d9b17f1034a68147a8b03b9789af5700f9",
         "last_affected_version": "5.7.0",
-        "last_modified": "2020-06-23",
-        "nvd_text": "A flaw was found in the Linux Kernel in versions after 4.5-rc1 in the way mremap handled DAX Huge Pages. This flaw allows a local attacker with access to a DAX enabled storage to escalate their privileges on the system.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the way mremap handled DAX Huge Pages. This flaw allows a local attacker with access to a DAX enabled storage to escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10757",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10757",
@@ -53659,8 +53726,8 @@
         "cwe": "Out-of-bounds Read",
         "fixes": "8f9c469348487844328e162db57112f7d347c49f",
         "last_affected_version": "4.20.3",
-        "last_modified": "2020-07-14",
-        "nvd_text": "A buffer over-read flaw was found in RH kernel versions before 5.0 in crypto_authenc_extractkeys in crypto/authenc.c in the IPsec Cryptographic algorithm's module, authenc. When a payload longer than 4 bytes, and is not following 4-byte alignment boundary guidelines, it causes a buffer over-read threat, leading to a system crash. This flaw allows a local attacker with user privileges to cause a denial of service.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A buffer over-read flaw was found in crypto_authenc_extractkeys in crypto/authenc.c in the IPsec Cryptographic algorithm's module, authenc. When a payload longer than 4 bytes, and is not following 4-byte alignment boundary guidelines, it causes a buffer over-read threat, leading to a system crash. This flaw allows a local attacker with user privileges to cause a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-10769",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2020-10769",
@@ -61140,8 +61207,8 @@
         "cwe": "Improper Input Validation",
         "fixes": "0f2122045b946241a9e549c2a76cea54fa58a7ff",
         "last_affected_version": "5.10.14",
-        "last_modified": "2021-05-06",
-        "nvd_text": "There is a vulnerability in the linux kernel versions higher than 5.2 (if kernel compiled with config params CONFIG_BPF_SYSCALL=y , CONFIG_BPF=y , CONFIG_CGROUPS=y , CONFIG_CGROUP_BPF=y , CONFIG_HARDENED_USERCOPY not set, and BPF hook to getsockopt is registered). As result of BPF execution, the local user can trigger bug in __cgroup_bpf_run_filter_getsockopt() function that can lead to heap overflow (because of non-hardened usercopy). The impact of attack could be deny of service or possibly privileges escalation.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw buffer overflow in the Linux kernel BPF subsystem was found in the way user running BPF script calling getsockopt. A local user could use this flaw to crash the system or possibly escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-20194",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-20194",
@@ -64865,8 +64932,8 @@
         "cwe": "Double Free",
         "fixes": "6a137caec23aeb9e036cdfd8a46dd8a366460e5d",
         "last_affected_version": "5.12.9",
-        "last_modified": "2021-06-18",
-        "nvd_text": "A flaw double-free memory corruption in the Linux kernel HCI device initialization subsystem was found in the way user attach malicious HCI TTY Bluetooth device. A local user could use this flaw to crash the system. This flaw affects all the Linux kernel versions starting from 3.13.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw double-free memory corruption in the Linux kernel HCI device initialization subsystem was found in the way user attach malicious HCI TTY Bluetooth device. A local user could use this flaw to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3564",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3564",
@@ -64979,8 +65046,8 @@
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "d5f9023fa61ee8b94f37a93f08e94b136cf1e463",
         "last_affected_version": "5.13.1",
-        "last_modified": "2022-03-15",
-        "nvd_text": ".A flaw was found in the CAN BCM networking protocol in the Linux kernel, where a local attacker can abuse a flaw in the CAN subsystem to corrupt memory, crash the system or escalate privileges. This race condition in net/can/bcm.c in the Linux kernel allows for local privilege escalation to root.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the CAN BCM networking protocol in the Linux kernel, where a local attacker can abuse a flaw in the CAN subsystem to corrupt memory, crash the system or escalate privileges.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3609",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3609",
@@ -65616,8 +65683,8 @@
         "cwe": "Missing Release of Memory after Effective Lifetime",
         "fixes": "505d9dcb0f7ddf9d075e729523a33d38642ae680",
         "last_affected_version": "5.14.9",
-        "last_modified": "2022-03-15",
-        "nvd_text": "A memory leak flaw was found in the Linux kernel in the ccp_run_aes_gcm_cmd() function in drivers/crypto/ccp/ccp-ops.c, which allows attackers to cause a denial of service (memory consumption). This vulnerability is similar with the older CVE-2019-18808.",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A flaw was found in the Linux kernel. A memory leak in the ccp-ops crypto driver can allow attackers to cause a denial of service. This vulnerability is similar with the older CVE-2019-18808. The highest threat from this vulnerability is to system availability.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2021-3744",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2021-3744",
@@ -77721,7 +77788,8 @@
         },
         "cwe": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
         "fixes": "b68777d54fac21fc833ec26ea1a2a84f975ab035",
-        "last_modified": "2023-01-02",
+        "last_affected_version": "5.15.90",
+        "last_modified": "2023-02-11",
         "nvd_text": "A flaw was found in the Linux kernel's Layer 2 Tunneling Protocol (L2TP). A missing lock when clearing sk_user_data can lead to a race condition and NULL pointer dereference. A local user could use this flaw to potentially crash the system causing a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4129",
@@ -77736,9 +77804,22 @@
         "affected_versions": "v5.17-rc2 to v6.1-rc8",
         "breaks": "7938d61591d33394a21bdd7797a245b65428f44c",
         "cmt_msg": "drm/i915: fix TLB invalidation for Gen12 video and compute engines",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "fixes": "04aa64375f48a5d430b5550d9271f8428883e550",
         "last_affected_version": "6.0.10",
-        "last_modified": "2022-12-08",
+        "last_modified": "2023-02-11",
+        "nvd_text": "An incorrect TLB flush issue was found in the Linux kernel\u2019s GPU i915 kernel driver, potentially leading to random memory corruption or data leaks. This flaw could allow a local user to crash the system or escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4139",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-4139",
@@ -78285,8 +78366,9 @@
         }
     },
     "CVE-2022-4382": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v5.3-rc1 to v6.2-rc5",
+        "breaks": "e5d82a7360d124ae1a38c2a5eac92ba49b125191",
+        "cmt_msg": "USB: gadgetfs: Fix race between mounting and unmounting",
         "cvss3": {
             "Attack Complexity": "High",
             "Attack Vector": "Physical",
@@ -78300,8 +78382,9 @@
             "score": 6.4
         },
         "cwe": "Use After Free",
-        "fixes": "",
-        "last_modified": "2023-01-20",
+        "fixes": "d18dcfe9860e842f394e37ba01ca9440ab2178f4",
+        "last_affected_version": "6.1.7",
+        "last_modified": "2023-02-11",
         "nvd_text": "A use-after-free flaw caused by a race among the superblock operations in the gadgetfs Linux driver was found. It could be triggered by yanking out a device that is running the gadgetfs side.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4382",
@@ -79146,13 +79229,30 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-0030"
         }
     },
+    "CVE-2023-0045": {
+        "affected_versions": "v4.20-rc5 to v6.2-rc3",
+        "breaks": "9137bb27e60e554dab694eafa4cca241fa3a694f",
+        "cmt_msg": "x86/bugs: Flush IBP in ib_prctl_set()",
+        "fixes": "a664ec9158eeddd75121d39c9a0758016097fa96",
+        "last_affected_version": "6.1.4",
+        "last_modified": "2023-02-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0045",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0045",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-0045",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0045",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-0045",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-0045"
+        }
+    },
     "CVE-2023-0047": {
         "affected_versions": "v2.6.12-rc2 to v5.16-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "mm, oom: do not trigger out_of_memory from the #PF",
         "fixes": "60e2793d440a3ec95abb5d6d4fc034a4b480472d",
         "last_affected_version": "5.15.2",
-        "last_modified": "2023-01-13",
+        "last_modified": "2023-02-11",
+        "nvd_text": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was in a CNA pool that was not assigned to any issues during 2023. Notes: none.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0047",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0047",
@@ -79160,7 +79260,8 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0047",
             "SUSE": "https://www.suse.com/security/cve/CVE-2023-0047",
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-0047"
-        }
+        },
+        "rejected": true
     },
     "CVE-2023-0122": {
         "affected_versions": "v6.0-rc1 to v6.0-rc4",
@@ -79222,13 +79323,54 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-0210"
         }
     },
+    "CVE-2023-0240": {
+        "affected_versions": "v5.1-rc1 to v5.10-rc1",
+        "breaks": "2b188cc1bb857a9d4701ae59aa7768b5124e262e",
+        "cmt_msg": "io_uring: COW io_identity on mismatch",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "fixes": "1e6fa5216a0e59ef02e8b6b40d553238a3b81d49",
+        "last_modified": "2023-02-11",
+        "nvd_text": "There is a logic error in io_uring's implementation which can be used to trigger a use-after-free vulnerability leading to privilege escalation. In the io_prep_async_work function the assumption that the last io_grab_identity call cannot return false is not true, and in this case the function will use the init_cred or the previous linked requests identity to do operations instead of using the current identity. This can lead to reference counting issues causing use-after-free. We recommend upgrading past version 5.10.161.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0240",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0240",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-0240",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0240",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-0240",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-0240"
+        }
+    },
     "CVE-2023-0266": {
         "affected_versions": "v2.6.12-rc2 to v6.2-rc4",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "fixes": "56b88b50565cd8b946a2d00b0c83927b7ebb055e",
         "last_affected_version": "6.1.5",
-        "last_modified": "2023-01-20",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A use after free vulnerability exists in the ALSA PCM package in the Linux Kernel. SNDRV_CTL_IOCTL_ELEM_{READ|WRITE}32 is missing locks that can be used in a use-after-free that can result in a priviledge escalation to gain ring0 access from the system user. We recommend upgrading past commit 56b88b50565cd8b946a2d00b0c83927b7ebb055e",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0266",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0266",
@@ -79242,10 +79384,22 @@
         "affected_versions": "v2.6.12-rc3 to v6.2-rc4",
         "breaks": "357b40a18b04c699da1d45608436e9b76b50e251",
         "cmt_msg": "ipv6: raw: Deduct extension header length in rawv6_push_pending_frames",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
         "cwe": "NULL Pointer Dereference",
         "fixes": "cb3e9864cdbe35ff6378966660edbcbac955fe17",
         "last_affected_version": "6.1.6",
-        "last_modified": "2023-01-27",
+        "last_modified": "2023-02-11",
         "nvd_text": "A NULL pointer dereference flaw was found in rawv6_push_pending_frames in net/ipv6/raw.c in the network subcomponent in the Linux kernel. This flaw causes the system to crash.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0394",
@@ -79260,9 +79414,21 @@
         "affected_versions": "v5.17-rc1 to v6.1-rc7",
         "breaks": "aa43477b040251f451db0d844073ac00a8ab66ee",
         "cmt_msg": "io_uring: make poll refs more robust",
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.7
+        },
         "fixes": "a26a35e9019fd70bf3cf647dcfdae87abc7bacea",
         "last_affected_version": "6.0.10",
-        "last_modified": "2023-01-27",
+        "last_modified": "2023-02-11",
         "nvd_text": "A use-after-free flaw was found in io_uring/poll.c in io_poll_check_events in the io_uring subcomponent in the Linux Kernel due to a race condition of poll_refs. This flaw may cause a NULL pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0468",
@@ -79274,13 +79440,25 @@
         }
     },
     "CVE-2023-0469": {
-        "affected_versions": "unk to v6.1-rc7",
-        "breaks": "",
+        "affected_versions": "v5.19-rc1 to v6.1-rc7",
+        "breaks": "61c1b44a21d70d4783db02198fbf68b132f4953c",
         "cmt_msg": "io_uring/filetable: fix file reference underflow",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
         "cwe": "Integer Underflow (Wrap or Wraparound)",
         "fixes": "9d94c04c0db024922e886c9fd429659f22f48ea4",
         "last_affected_version": "6.0.10",
-        "last_modified": "2023-01-27",
+        "last_modified": "2023-02-11",
         "nvd_text": "A use-after-free flaw was found in io_uring/filetable.c in io_install_fixed_file in the io_uring subcomponent in the Linux Kernel during call cleanup. This flaw may lead to a denial of service.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0469",
@@ -79291,13 +79469,71 @@
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-0469"
         }
     },
+    "CVE-2023-0590": {
+        "affected_versions": "v2.6.32-rc1 to v6.1-rc2",
+        "breaks": "af356afa010f3cd2c8b8fcc3bce90f7a7b7ec02a",
+        "cmt_msg": "net: sched: fix race condition in qdisc_graft()",
+        "fixes": "ebda44da44f6f309d302522b049f43d6f829f7aa",
+        "last_affected_version": "6.0.5",
+        "last_modified": "2023-02-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0590",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0590",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-0590",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0590",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-0590",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-0590"
+        }
+    },
+    "CVE-2023-0597": {
+        "affected_versions": "v2.6.12-rc2 to v6.2-rc1",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
+        "cmt_msg": "x86/mm: Randomize per-cpu entry area",
+        "fixes": "97e3d26b5e5f371b3ee223d94dd123e6c442ba80",
+        "last_modified": "2023-02-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0597",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0597",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-0597",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0597",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-0597",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-0597"
+        }
+    },
+    "CVE-2023-0615": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2023-02-11",
+        "nvd_text": "A memory leak flaw and potential divide by zero and Integer overflow was found in the Linux kernel V4L2 and vivid test code functionality. This issue occurs when a user triggers ioctls, such as VIDIOC_S_DV_TIMINGS ioctl. This could allow a local user to crash the system if vivid test code enabled.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0615",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0615",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-0615",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-0615",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-0615",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-0615"
+        }
+    },
     "CVE-2023-20928": {
         "affected_versions": "v4.20-rc1 to v6.0-rc1",
         "breaks": "dd2283f2605e3b3e9c61bcae844b34f2afa4813f",
         "cmt_msg": "android: binder: stop saving a pointer to the VMA",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "fixes": "a43cfc87caaf46710c8027a8c23b8a55f1078f19",
         "last_affected_version": "5.18.17",
-        "last_modified": "2023-01-27",
+        "last_modified": "2023-02-11",
         "nvd_text": "In binder_vma_close of binder.c, there is a possible use after free due to improper locking. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-254837884References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-20928",
@@ -79306,6 +79542,36 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-20928",
             "SUSE": "https://www.suse.com/security/cve/CVE-2023-20928",
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-20928"
+        }
+    },
+    "CVE-2023-20937": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2023-02-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-20937",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-20937",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-20937",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-20937",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-20937",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-20937"
+        }
+    },
+    "CVE-2023-20938": {
+        "affected_versions": "unk to v5.18-rc5",
+        "breaks": "",
+        "cmt_msg": "binder: Gracefully handle BINDER_TYPE_FDA objects with num_fds=0",
+        "fixes": "ef38de9217a04c9077629a24652689d8fdb4c6c6",
+        "last_affected_version": "5.17.5",
+        "last_modified": "2023-02-11",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-20938",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-20938",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-20938",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-20938",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-20938",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-20938"
         }
     },
     "CVE-2023-23454": {
@@ -79386,7 +79652,8 @@
         },
         "cwe": "Integer Overflow or Wraparound",
         "fixes": "b870e73a56c4cccbec33224233eaf295839f228c",
-        "last_modified": "2023-01-27",
+        "last_affected_version": "6.1.8",
+        "last_modified": "2023-02-11",
         "nvd_text": "In rndis_query_oid in drivers/net/wireless/rndis_wlan.c in the Linux kernel through 6.1.5, there is an integer overflow in an addition.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-23559",
@@ -79395,6 +79662,33 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-23559",
             "SUSE": "https://www.suse.com/security/cve/CVE-2023-23559",
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-23559"
+        }
+    },
+    "CVE-2023-25012": {
+        "affected_versions": "v5.6-rc4 to unk",
+        "breaks": "4eb1b01de5b9d8596d6c103efcf1a15cfc1bedf7",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Physical",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 4.6
+        },
+        "fixes": "",
+        "last_modified": "2023-02-11",
+        "nvd_text": "The Linux kernel through 6.1.9 has a Use-After-Free in bigben_remove in drivers/hid/hid-bigbenff.c via a crafted USB device because the LED controllers remain registered for too long.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-25012",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-25012",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-25012",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-25012",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-25012",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-25012"
         }
     }
 }
