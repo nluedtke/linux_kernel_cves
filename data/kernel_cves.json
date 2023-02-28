@@ -72567,7 +72567,8 @@
         },
         "cwe": "Insecure Default Initialization of Resource",
         "fixes": "2e7eab81425ad6c875f2ed47c0ce01e78afc38a5",
-        "last_modified": "2023-01-20",
+        "last_affected_version": "6.1.13",
+        "last_modified": "2023-02-27",
         "nvd_text": "A regression exists in the Linux Kernel within KVM: nVMX that allowed for speculative execution attacks. L2 can carry out Spectre v2 attacks on L1 due to L1 thinking it doesn't need retpolines or IBPB after running L2 due to KVM (L0) advertising eIBRS support to L1. An attacker at L2 with code execution can execute code on an indirect branch on the host machine. We recommend upgrading to Kernel 6.2 or past commit 2e7eab81425a",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-2196",
@@ -77265,7 +77266,7 @@
         "cmt_msg": "drm/i915/gvt: fix double free bug in split_2MB_gtt_entry",
         "fixes": "4a61648af68f5ba4884f0e3b494ee1cabc4b6620",
         "last_affected_version": "6.1.4",
-        "last_modified": "2023-01-13",
+        "last_modified": "2023-02-27",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3707",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-3707",
@@ -79731,6 +79732,7 @@
     "CVE-2023-25012": {
         "affected_versions": "v5.6-rc4 to unk",
         "breaks": "4eb1b01de5b9d8596d6c103efcf1a15cfc1bedf7",
+        "cmt_msg": "HID: bigben: use spinlock to safely schedule workers",
         "cvss3": {
             "Attack Complexity": "Low",
             "Attack Vector": "Physical",
@@ -79743,8 +79745,8 @@
             "raw": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "score": 4.6
         },
-        "fixes": "",
-        "last_modified": "2023-02-11",
+        "fixes": "76ca8da989c7d97a7f76c75d475fe95a584439d7",
+        "last_modified": "2023-02-27",
         "nvd_text": "The Linux kernel through 6.1.9 has a Use-After-Free in bigben_remove in drivers/hid/hid-bigbenff.c via a crafted USB device because the LED controllers remain registered for too long.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-25012",
@@ -79768,6 +79770,83 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-26242",
             "SUSE": "https://www.suse.com/security/cve/CVE-2023-26242",
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-26242"
+        }
+    },
+    "CVE-2023-26544": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2023-02-27",
+        "nvd_text": "In the Linux kernel 6.0.8, there is a use-after-free in run_unpack in fs/ntfs3/run.c, related to a difference between NTFS sector size and media sector size.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26544",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-26544",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-26544",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-26544",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-26544",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-26544"
+        }
+    },
+    "CVE-2023-26545": {
+        "affected_versions": "v4.1-rc8 to v6.2",
+        "breaks": "0fae3bf018d97b210051c8797a49d66d31071847",
+        "cmt_msg": "net: mpls: fix stale pointer if allocation fails during device rename",
+        "fixes": "fda6c89fe3d9aca073495a664e1d5aea28cd4377",
+        "last_affected_version": "6.1.12",
+        "last_modified": "2023-02-27",
+        "nvd_text": "In the Linux kernel before 6.1.13, there is a double free in net/mpls/af_mpls.c upon an allocation failure (for registering the sysctl table under a new location) during the renaming of a device.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26545",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-26545",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-26545",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-26545",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-26545",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-26545"
+        }
+    },
+    "CVE-2023-26605": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2023-02-27",
+        "nvd_text": "In the Linux kernel 6.0.8, there is a use-after-free in inode_cgwb_move_to_attached in fs/fs-writeback.c, related to __list_del_entry_valid.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26605",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-26605",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-26605",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-26605",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-26605",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-26605"
+        }
+    },
+    "CVE-2023-26606": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2023-02-27",
+        "nvd_text": "In the Linux kernel 6.0.8, there is a use-after-free in ntfs_trim_fs in fs/ntfs3/bitmap.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26606",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-26606",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-26606",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-26606",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-26606",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-26606"
+        }
+    },
+    "CVE-2023-26607": {
+        "affected_versions": "unk to unk",
+        "breaks": "",
+        "fixes": "",
+        "last_modified": "2023-02-27",
+        "nvd_text": "In the Linux kernel 6.0.8, there is an out-of-bounds read in ntfs_attr_find in fs/ntfs/attrib.c.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26607",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-26607",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-26607",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-26607",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-26607",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-26607"
         }
     }
 }
