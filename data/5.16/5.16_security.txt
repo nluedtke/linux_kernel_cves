@@ -14,6 +14,9 @@ CVEs fixed in 5.16.3:
   CVE-2021-45469: 258b26a34778cde43f228a392e242d3d0420624a f2fs: fix to do sanity check on last xattr entry in __f2fs_setxattr()
   CVE-2022-0433: f7a6dd58e0817b063252d7c5bec88e588df34b31 bpf: Add missing map_get_next_key method to bloom filter map.
   CVE-2022-3108: 506c9632d77c0ae755fb66f5a0b8578c0b65a84b drm/amdkfd: Check for null pointer after calling kmemdup
+  CVE-2023-22999: d0ed1113ba26a515af47847cceb3618e8483595a usb: dwc3: qcom: Fix NULL vs IS_ERR checking in dwc3_qcom_probe
+  CVE-2023-23001: c994dbcc58d6d09c0f736dfbf9f5d6a62d26bd5a scsi: ufs: ufs-mediatek: Fix error checking in ufs_mtk_init_va09_pwr_ctrl()
+  CVE-2023-23002: 85446a3b87799d87e6839611e5f528331bbe88fb Bluetooth: hci_qca: Fix NULL vs IS_ERR_OR_NULL check in qca_serdev_probe
 
 CVEs fixed in 5.16.4:
   CVE-2022-0330: ec1b6497a2bc0293c064337e981ea1f6cbe57930 drm/i915: Flush TLBs before releasing backing store
@@ -111,6 +114,7 @@ CVEs fixed in 5.16.19:
   CVE-2022-3112: c316e6a49745b09025eed102e30cc1e9ba2910b2 media: meson: vdec: potential dereference of null pointer
   CVE-2022-3113: cbdabb48be7b76d2a61a3554745243e37d81599e media: mtk-vcodec: potential dereference of null pointer
   CVE-2022-3239: 37f808a9e734e9036f7aa42ba4864fc6e91d2572 media: em28xx: initialize refcount before kref_get
+  CVE-2023-22996: 2ee39164a701782bb88cf4a564dc7d8cb43c9bff soc: qcom: aoss: Fix missing put_device call in qmp_get
 
 CVEs fixed in 5.16.20:
   CVE-2022-1263: a1f48251918d825785af9cab83996d4c12ef795a KVM: avoid NULL pointer dereference in kvm_dirty_ring_push
@@ -321,7 +325,7 @@ Outstanding CVEs:
   CVE-2022-41858: (unk) drivers: net: slip: fix NPD bug in sl_tx_timeout() 
   CVE-2022-42328: (unk) xen/netback: don't call kfree_skb() with interrupts disabled 
   CVE-2022-42329: (unk) xen/netback: don't call kfree_skb() with interrupts disabled 
-  CVE-2022-4269: (unk)  
+  CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-42703: (unk) mm/rmap: Fix anon_vma->degree ambiguity leading to double-reuse 
   CVE-2022-42719: (unk) wifi: mac80211: fix MBSSID parsing use-after-free 
   CVE-2022-42720: (unk) wifi: cfg80211: fix BSS refcounting bugs 
@@ -364,11 +368,25 @@ Outstanding CVEs:
   CVE-2023-0210: (unk) ksmbd: check nt_len to be at least CIFS_ENCPWD_SIZE in ksmbd_decode_ntlmssp_auth_blob 
   CVE-2023-0266: (unk) ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF 
   CVE-2023-0394: (unk) ipv6: raw: Deduct extension header length in rawv6_push_pending_frames 
+  CVE-2023-0461: (unk) net/ulp: prevent ULP without clone op from entering the LISTEN status 
   CVE-2023-0590: (unk) net: sched: fix race condition in qdisc_graft() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
+  CVE-2023-1073: (unk) HID: check empty report_list in hid_validate_values() 
+  CVE-2023-1074: (unk) sctp: fail if no bound addresses can be used for a given scope 
+  CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
+  CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
+  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
+  CVE-2023-1078: (unk) rds: rds_rm_zerocopy_callback() use list_first_entry() 
+  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
+  CVE-2023-1095: (unk) netfilter: nf_tables: fix null deref due to zeroed list head 
+  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20937: (unk)  
+  CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
+  CVE-2023-22998: (unk) drm/virtio: Fix NULL vs IS_ERR checking in virtio_gpu_object_shmem_init 
+  CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
+  CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
   CVE-2023-23039: (unk)  
   CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
   CVE-2023-23455: (unk) net: sched: atm: dont intepret cls results when asked to drop 

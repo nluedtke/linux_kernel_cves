@@ -55,6 +55,7 @@ CVEs fixed in 5.15.12:
 
 CVEs fixed in 5.15.13:
   CVE-2022-20154: 75799e71df1da11394740b43ae5686646179561d sctp: use call_rcu to free endpoint
+  CVE-2023-23006: 4595dffccfa5b9360162c72cc0f6a33477d871cf net/mlx5: DR, Fix NULL vs IS_ERR checking in dr_domain_init_resources
 
 CVEs fixed in 5.15.14:
   CVE-2021-4155: b0e72ba9e520b95346e68800afff0db65e766ca8 xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
@@ -69,6 +70,9 @@ CVEs fixed in 5.15.16:
 CVEs fixed in 5.15.17:
   CVE-2021-43976: b2762757f4e484f8a164546f93aca82568d87649 mwifiex: Fix skb_over_panic in mwifiex_usb_recv()
   CVE-2021-44879: 0ddbdc0b7f0cec3815ac05a30b2c2f6457be3050 f2fs: fix to do sanity check on inode type during garbage collection
+  CVE-2023-22999: 5157828d3975768b53a51cdf569203b953184022 usb: dwc3: qcom: Fix NULL vs IS_ERR checking in dwc3_qcom_probe
+  CVE-2023-23001: 0dc4db8abccf266390b81b72064191f876e55876 scsi: ufs: ufs-mediatek: Fix error checking in ufs_mtk_init_va09_pwr_ctrl()
+  CVE-2023-23002: 9186e6ba52af11ba7b5f432aa2321f36e00ad721 Bluetooth: hci_qca: Fix NULL vs IS_ERR_OR_NULL check in qca_serdev_probe
 
 CVEs fixed in 5.15.18:
   CVE-2022-0330: 8a17a077e7e9ecce25c95dbdb27843d2d6c2f0f7 drm/i915: Flush TLBs before releasing backing store
@@ -281,7 +285,9 @@ CVEs fixed in 5.15.61:
   CVE-2022-47938: 577619605556a90e64abc759ca3ad9d86bf51176 ksmbd: prevent out of bound read for SMB2_TREE_CONNNECT
   CVE-2022-47939: a54c509c32adba9d136f2b9d6a075e8cae1b6d27 ksmbd: fix use-after-free bug in smb2_tree_disconect
   CVE-2022-47941: dd4e4c811898410e6a3ae3b63207b7c542860907 ksmbd: fix memory leak in smb2_handle_negotiate
+  CVE-2023-1095: 8a2df34b5bf652566f2889d9fa321f3b398547ef netfilter: nf_tables: fix null deref due to zeroed list head
   CVE-2023-20928: 622ef885a89ad04cfb76ee478fb44f051125d1f1 android: binder: stop saving a pointer to the VMA
+  CVE-2023-22998: 72893aadc0017f0f2998b33e7fa5e6b3a3a72d02 drm/virtio: Fix NULL vs IS_ERR checking in virtio_gpu_object_shmem_init
 
 CVEs fixed in 5.15.62:
   CVE-2022-47942: cb69d4d6f709f87c94afa28ae64c501576692171 ksmbd: fix heap-based overflow in set_ntacl_dacl()
@@ -400,6 +406,7 @@ CVEs fixed in 5.15.87:
 CVEs fixed in 5.15.88:
   CVE-2022-47929: 04941c1d5bb59d64165e09813de2947bdf6f4f28 net: sched: disallow noqueue for qdisc classes
   CVE-2023-0266: 26350c21bc5e97a805af878e092eb8125843fe2c ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF
+  CVE-2023-0461: dadd0dcaa67d27f550131de95c8e182643d2c9d6 net/ulp: prevent ULP without clone op from entering the LISTEN status
 
 CVEs fixed in 5.15.89:
   CVE-2023-0179: a8acfe2c6fb99f9375a9325807a179cd8c32e6e3 netfilter: nft_payload: incorrect arithmetics when fetching VLAN header bits
@@ -411,10 +418,13 @@ CVEs fixed in 5.15.90:
 
 CVEs fixed in 5.15.91:
   CVE-2022-4129: 87d9205d9a57dfc1f39f840b32e38475c3f523f6 l2tp: Serialize access to sk_user_data with sk_callback_lock
+  CVE-2023-1073: 2b49568254365c9c247beb0eabbaa15d0e279d64 HID: check empty report_list in hid_validate_values()
+  CVE-2023-1074: 3391bd42351be0beb14f438c7556912b9f96cb32 sctp: fail if no bound addresses can be used for a given scope
   CVE-2023-23559: 8cbf932c5c40b0c20597fa623c308d5bde0848b5 wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
 
 CVEs fixed in 5.15.94:
   CVE-2022-27672: 8f12dcab90e886d0169a9cd372a8bb35339cfc19 x86/speculation: Identify processors vulnerable to SMT RSB predictions
+  CVE-2023-1078: 528e3f3a4b53df36dafd10cdf6b8c0fe2aa1c4ba rds: rds_rm_zerocopy_callback() use list_first_entry()
 
 CVEs fixed in 5.15.95:
   CVE-2023-26545: 59a74da8da75bdfb464cbdb399e87ba4f7500e96 net: mpls: fix stale pointer if allocation fails during device rename
@@ -507,7 +517,7 @@ Outstanding CVEs:
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-40133: (unk)  
   CVE-2022-41848: (unk)  
-  CVE-2022-4269: (unk)  
+  CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-4379: (unk) NFSD: fix use-after-free in __nfs42_ssc_open() 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
@@ -522,7 +532,15 @@ Outstanding CVEs:
   CVE-2022-47940: (unk) ksmbd: validate length in smb2_write() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
+  CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
+  CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
+  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
+  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
+  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-20937: (unk)  
+  CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
+  CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
+  CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
   CVE-2023-23039: (unk)  
   CVE-2023-25012: (unk) HID: bigben: use spinlock to safely schedule workers 
   CVE-2023-26242: (unk)  

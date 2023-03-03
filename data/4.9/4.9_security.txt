@@ -1323,6 +1323,7 @@ CVEs fixed in 4.9.326:
   CVE-2022-3629: 09fc7ffdf11d20049f3748ccdef57c9a49403214 vsock: Fix memory leak in vsock_connect()
   CVE-2022-3635: acf173d9e27877ac1f4b0fc6614bf7f19ac90894 atm: idt77252: fix use-after-free bugs caused by tst_timer
   CVE-2022-36946: 3b3e2de462323d5fdeb85a3682334a4a3dd07400 netfilter: nf_queue: do not allow packet truncation below transport header offset
+  CVE-2023-1095: ef6b262e551da27579e7ac255928394176353115 netfilter: nf_tables: fix null deref due to zeroed list head
 
 CVEs fixed in 4.9.327:
   CVE-2022-3028: e580d3201ed222c4752ced7e629ad96bc0340713 af_key: Do not call xfrm_probe_algs in parallel
@@ -1589,7 +1590,7 @@ Outstanding CVEs:
   CVE-2022-41222: (unk) mm/mremap: hold the rmap lock in write mode when moving page table entries. 
   CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
-  CVE-2022-4269: (unk)  
+  CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
@@ -1607,7 +1608,12 @@ Outstanding CVEs:
   CVE-2023-0590: (unk) net: sched: fix race condition in qdisc_graft() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
+  CVE-2023-1073: (unk) HID: check empty report_list in hid_validate_values() 
+  CVE-2023-1074: (unk) sctp: fail if no bound addresses can be used for a given scope 
+  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
+  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-20937: (unk)  
+  CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23039: (unk)  
   CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
   CVE-2023-23455: (unk) net: sched: atm: dont intepret cls results when asked to drop 

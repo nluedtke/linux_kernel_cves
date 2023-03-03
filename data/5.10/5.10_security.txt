@@ -307,6 +307,7 @@ CVEs fixed in 5.10.89:
 
 CVEs fixed in 5.10.90:
   CVE-2022-20154: 769d14abd35e0e153b5149c3e1e989a9d719e3ff sctp: use call_rcu to free endpoint
+  CVE-2023-23006: 4cd1da02f0c39606e3378c9255f17d6f85d106c7 net/mlx5: DR, Fix NULL vs IS_ERR checking in dr_domain_init_resources
 
 CVEs fixed in 5.10.91:
   CVE-2021-4155: 16d8568378f9ee2d1e69216d39961aa72710209f xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
@@ -318,6 +319,7 @@ CVEs fixed in 5.10.93:
 
 CVEs fixed in 5.10.94:
   CVE-2021-43976: 6036500fdf77caaca9333003f78d25a3d61c4e40 mwifiex: Fix skb_over_panic in mwifiex_usb_recv()
+  CVE-2023-23002: 4579954bf4cc0bdfc4a42c88b16fe596f1e7f82d Bluetooth: hci_qca: Fix NULL vs IS_ERR_OR_NULL check in qca_serdev_probe
 
 CVEs fixed in 5.10.95:
   CVE-2022-0330: 6a6acf927895c38bdd9f3cd76b8dbfc25ac03e88 drm/i915: Flush TLBs before releasing backing store
@@ -510,6 +512,7 @@ CVEs fixed in 5.10.137:
   CVE-2022-2586: 1a4b18b1ff11ba26f9a852019d674fde9d1d1cff netfilter: nf_tables: do not allow SET_ID to refer to another table
   CVE-2022-2588: 7018f03d97daf344e49b16200caf4363a1407cab net_sched: cls_route: remove from list when handle is 0
   CVE-2022-41222: 2613baa3ab2153cc45b175c58700d93f72ef36c4 mm/mremap: hold the rmap lock in write mode when moving page table entries.
+  CVE-2023-1095: 80977126bc20309f7f7bae6d8621356b393e8b41 netfilter: nf_tables: fix null deref due to zeroed list head
 
 CVEs fixed in 5.10.138:
   CVE-2022-3625: 0e28678a770df7989108327cfe86f835d8760c33 devlink: Fix use-after-free after a failed reload
@@ -610,6 +613,7 @@ CVEs fixed in 5.10.163:
   CVE-2022-47929: 9f7bc28a6b8afc2274e25650511555e93f45470f net: sched: disallow noqueue for qdisc classes
   CVE-2023-0045: 67e39c4f4cb318cfbbf8982ab016c649ed97edaf x86/bugs: Flush IBP in ib_prctl_set()
   CVE-2023-0266: df02234e6b87d2a9a82acd3198e44bdeff8488c6 ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF
+  CVE-2023-0461: f8ed0a93b5d576bbaf01639ad816473bdfd1dcb0 net/ulp: prevent ULP without clone op from entering the LISTEN status
   CVE-2023-23454: b2c917e510e5ddbc7896329c87d20036c8b82952 net: sched: cbq: dont intepret cls results when asked to drop
   CVE-2023-23455: 5f65f48516bfeebaab1ccc52c8fad698ddf21282 net: sched: atm: dont intepret cls results when asked to drop
 
@@ -622,7 +626,12 @@ CVEs fixed in 5.10.165:
 
 CVEs fixed in 5.10.166:
   CVE-2022-4129: e34a965f771f1977f172593c73e373036c765724 l2tp: Serialize access to sk_user_data with sk_callback_lock
+  CVE-2023-1073: 5dc3469a1170dd1344d262a332b26994214eeb58 HID: check empty report_list in hid_validate_values()
+  CVE-2023-1074: 6ef652f35dcfaa1ab2b2cf6c1694718595148eee sctp: fail if no bound addresses can be used for a given scope
   CVE-2023-23559: 802fd7623e9ed19ee809b503e93fccc1e3f37bd6 wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
+
+CVEs fixed in 5.10.168:
+  CVE-2023-1078: c53f34ec3fbf3e9f67574118a6bb35ae1146f7ca rds: rds_rm_zerocopy_callback() use list_first_entry()
 
 CVEs fixed in 5.10.169:
   CVE-2023-26545: 7ff0fdba82298d1f456c685e24930da89703c0fb net: mpls: fix stale pointer if allocation fails during device rename
@@ -630,6 +639,9 @@ CVEs fixed in 5.10.169:
 CVEs fixed in 5.10.170:
   CVE-2022-2196: 1b0cafaae8884726c597caded50af185ffc13349 KVM: VMX: Execute IBPB on emulated VM-exit when guest has IBRS
   CVE-2022-3707: 3d743415c6fb092167df6c23e9c7e9f6df7db625 drm/i915/gvt: fix double free bug in split_2MB_gtt_entry
+
+CVEs fixed in 5.10.171:
+  CVE-2023-22998: 0a4181b23acf53e9c95b351df6a7891116b98f9b drm/virtio: Fix NULL vs IS_ERR checking in virtio_gpu_object_shmem_init
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -739,7 +751,7 @@ Outstanding CVEs:
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
   CVE-2022-40133: (unk)  
   CVE-2022-41848: (unk)  
-  CVE-2022-4269: (unk)  
+  CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-4379: (unk) NFSD: fix use-after-free in __nfs42_ssc_open() 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
@@ -754,8 +766,16 @@ Outstanding CVEs:
   CVE-2022-47946: (unk) io_uring: kill sqo_dead and sqo submission halting 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
+  CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
+  CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
+  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
+  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
+  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20937: (unk)  
+  CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
+  CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
+  CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
   CVE-2023-23039: (unk)  
   CVE-2023-23586: (unk) io_uring: remove io_identity 
   CVE-2023-25012: (unk) HID: bigben: use spinlock to safely schedule workers 

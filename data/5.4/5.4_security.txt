@@ -581,6 +581,7 @@ CVEs fixed in 5.4.169:
 CVEs fixed in 5.4.170:
   CVE-2021-44733: 940e68e57ab69248fabba5889e615305789db8a7 tee: handle lookup of shm with reference count 0
   CVE-2022-20154: 831de271452b87657fcf8d715ee20519b79caef5 sctp: use call_rcu to free endpoint
+  CVE-2023-23006: db484d35a9482d21a7f36da4dfc7a68aa2e9e1d6 net/mlx5: DR, Fix NULL vs IS_ERR checking in dr_domain_init_resources
 
 CVEs fixed in 5.4.171:
   CVE-2021-4155: 102af6edfd3a372db6e229177762a91f552e5f5e xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
@@ -758,6 +759,7 @@ CVEs fixed in 5.4.211:
   CVE-2022-3633: 04e41b6bacf474f5431491f92e981096e8cc8e93 can: j1939: j1939_session_destroy(): fix memory leak of skbs
   CVE-2022-3635: 9a6cbaa50f263b12df18a051b37f3f42f9fb5253 atm: idt77252: fix use-after-free bugs caused by tst_timer
   CVE-2022-41222: 79e522101cf40735f1936a10312e17f937b8dcad mm/mremap: hold the rmap lock in write mode when moving page table entries.
+  CVE-2023-1095: a452bc3deb23bf93f8a13d3e24611b7ef39645dc netfilter: nf_tables: fix null deref due to zeroed list head
 
 CVEs fixed in 5.4.212:
   CVE-2022-3028: 8ee27a4f0f1ad36d430221842767880df6494147 af_key: Do not call xfrm_probe_algs in parallel
@@ -833,6 +835,7 @@ CVEs fixed in 5.4.229:
   CVE-2023-0045: 8cbd7f26438738238c245a9c0aaf7ebf43283fba x86/bugs: Flush IBP in ib_prctl_set()
   CVE-2023-0266: eaa5580a74cc8355260caeb526cf49d34e7304a8 ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF
   CVE-2023-0394: 3998dba0f78a59922b0ef333ccfeb58d9410cd3d ipv6: raw: Deduct extension header length in rawv6_push_pending_frames
+  CVE-2023-0461: c6d29a5ffdbc362314853462a0e24e63330a654d net/ulp: prevent ULP without clone op from entering the LISTEN status
   CVE-2023-23454: 6b17b84634f932f4787f04578f5d030874b9ff32 net: sched: cbq: dont intepret cls results when asked to drop
   CVE-2023-23455: 63e469cb54a87df53edcfd85bb5bcdd84327ae4a net: sched: atm: dont intepret cls results when asked to drop
 
@@ -841,9 +844,12 @@ CVEs fixed in 5.4.230:
 
 CVEs fixed in 5.4.231:
   CVE-2022-4129: 7188c37f3c2527086aa46cbb37060fa73b144c65 l2tp: Serialize access to sk_user_data with sk_callback_lock
+  CVE-2023-1073: 89e7fe3999e057c91f157b6ba663264f4cdfcb55 HID: check empty report_list in hid_validate_values()
+  CVE-2023-1074: a7585028ac0a5836f39139c11594d79ede97d975 sctp: fail if no bound addresses can be used for a given scope
   CVE-2023-23559: 9042a9a3f29c942387e6d6036551d90c9ae6ce4f wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
 
 CVEs fixed in 5.4.232:
+  CVE-2023-1078: ba38eacade35dd2316d77b37494e6e0c01bab595 rds: rds_rm_zerocopy_callback() use list_first_entry()
   CVE-2023-26545: df099e65564aa47478eb1cacf81ba69024fb5c69 net: mpls: fix stale pointer if allocation fails during device rename
 
 CVEs fixed in 5.4.233:
@@ -973,7 +979,7 @@ Outstanding CVEs:
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
   CVE-2022-40133: (unk)  
   CVE-2022-41848: (unk)  
-  CVE-2022-4269: (unk)  
+  CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
@@ -989,8 +995,16 @@ Outstanding CVEs:
   CVE-2023-0590: (unk) net: sched: fix race condition in qdisc_graft() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
+  CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
+  CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
+  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
+  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
+  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20937: (unk)  
+  CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
+  CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
+  CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
   CVE-2023-23039: (unk)  
   CVE-2023-26242: (unk)  
   CVE-2023-26544: (unk)  

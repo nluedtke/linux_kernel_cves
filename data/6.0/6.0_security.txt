@@ -77,6 +77,7 @@ CVEs fixed in 6.0.16:
   CVE-2022-3531: 78b772629cc5adec02ab4182b62abe916f2254a0 selftest/bpf: Fix memory leak in kprobe_multi_test
   CVE-2022-3534: 8c64a8e76eb85d422af5ec60ccbf26e3ead8c333 libbpf: Fix use-after-free in btf_dump_name_dups
   CVE-2022-3595: 983ec6379b9bab7bf790aa7df5dc3a461ebad72a cifs: fix double-fault crash during ntlmssp
+  CVE-2023-22997: 052172bb0e4d816cdd3682e4d021d2911b83aa31 module: Fix NULL vs IS_ERR checking for module_get_next_page
 
 CVEs fixed in 6.0.18:
   CVE-2022-36280: 4d54d11b49860686331c58a00f733b16a93edfc4 drm/vmwgfx: Validate the box size for the snooped cursor
@@ -86,6 +87,7 @@ CVEs fixed in 6.0.19:
   CVE-2022-3707: bb84f2e119accfc65d5fa6ebe31751cdc3bca9fb drm/i915/gvt: fix double free bug in split_2MB_gtt_entry
   CVE-2023-0045: 09f4f4bf0472eaf6781966573ccd2c0eeacee60f x86/bugs: Flush IBP in ib_prctl_set()
   CVE-2023-0210: 1e7ed525c60d8d51daf2700777071cd0dfb6f807 ksmbd: check nt_len to be at least CIFS_ENCPWD_SIZE in ksmbd_decode_ntlmssp_auth_blob
+  CVE-2023-0461: c1b5dee463cc1e89cfa655d6beff81ec1c0c4258 net/ulp: prevent ULP without clone op from entering the LISTEN status
   CVE-2023-23454: cde7091efe3fcc0b19f736acd0163499d1fd6d31 net: sched: cbq: dont intepret cls results when asked to drop
   CVE-2023-23455: bbb870c88576239842602b0f7cc58c361dc8e061 net: sched: atm: dont intepret cls results when asked to drop
 
@@ -168,7 +170,7 @@ Outstanding CVEs:
   CVE-2022-40133: (unk)  
   CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
-  CVE-2022-4269: (unk)  
+  CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-4379: (unk) NFSD: fix use-after-free in __nfs42_ssc_open() 
   CVE-2022-4382: (unk) USB: gadgetfs: Fix race between mounting and unmounting 
   CVE-2022-44032: (unk)  
@@ -188,6 +190,14 @@ Outstanding CVEs:
   CVE-2023-0394: (unk) ipv6: raw: Deduct extension header length in rawv6_push_pending_frames 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
+  CVE-2023-1073: (unk) HID: check empty report_list in hid_validate_values() 
+  CVE-2023-1074: (unk) sctp: fail if no bound addresses can be used for a given scope 
+  CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
+  CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
+  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
+  CVE-2023-1078: (unk) rds: rds_rm_zerocopy_callback() use list_first_entry() 
+  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
+  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-20937: (unk)  
   CVE-2023-23039: (unk)  
   CVE-2023-23559: (unk) wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid 

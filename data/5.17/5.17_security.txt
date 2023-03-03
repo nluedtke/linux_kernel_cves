@@ -34,6 +34,7 @@ CVEs fixed in 5.17.2:
   CVE-2022-3112: 879ab4096ebf996e97a768b8fd8acae4a736cce7 media: meson: vdec: potential dereference of null pointer
   CVE-2022-3113: 0aeb244eb2fddbbc34f2227cf3fd85c86e111c9a media: mtk-vcodec: potential dereference of null pointer
   CVE-2022-3239: d96dd287ca21c5b494bdb55555b33a6afec807cb media: em28xx: initialize refcount before kref_get
+  CVE-2023-22996: 863bf0d2d794de665f7d3dfa5241c55300fad591 soc: qcom: aoss: Fix missing put_device call in qmp_get
 
 CVEs fixed in 5.17.3:
   CVE-2022-1263: e8d7f0dad29e634e26d4614cfbd081514c16e042 KVM: avoid NULL pointer dereference in kvm_dirty_ring_push
@@ -264,7 +265,7 @@ Outstanding CVEs:
   CVE-2022-41850: (unk) HID: roccat: Fix use-after-free in roccat_read() 
   CVE-2022-42328: (unk) xen/netback: don't call kfree_skb() with interrupts disabled 
   CVE-2022-42329: (unk) xen/netback: don't call kfree_skb() with interrupts disabled 
-  CVE-2022-4269: (unk)  
+  CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-42703: (unk) mm/rmap: Fix anon_vma->degree ambiguity leading to double-reuse 
   CVE-2022-42719: (unk) wifi: mac80211: fix MBSSID parsing use-after-free 
   CVE-2022-42720: (unk) wifi: cfg80211: fix BSS refcounting bugs 
@@ -307,12 +308,25 @@ Outstanding CVEs:
   CVE-2023-0210: (unk) ksmbd: check nt_len to be at least CIFS_ENCPWD_SIZE in ksmbd_decode_ntlmssp_auth_blob 
   CVE-2023-0266: (unk) ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF 
   CVE-2023-0394: (unk) ipv6: raw: Deduct extension header length in rawv6_push_pending_frames 
+  CVE-2023-0461: (unk) net/ulp: prevent ULP without clone op from entering the LISTEN status 
   CVE-2023-0468: (unk) io_uring: make poll refs more robust 
   CVE-2023-0590: (unk) net: sched: fix race condition in qdisc_graft() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
+  CVE-2023-1073: (unk) HID: check empty report_list in hid_validate_values() 
+  CVE-2023-1074: (unk) sctp: fail if no bound addresses can be used for a given scope 
+  CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
+  CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
+  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
+  CVE-2023-1078: (unk) rds: rds_rm_zerocopy_callback() use list_first_entry() 
+  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
+  CVE-2023-1095: (unk) netfilter: nf_tables: fix null deref due to zeroed list head 
+  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20937: (unk)  
+  CVE-2023-22997: (unk) module: Fix NULL vs IS_ERR checking for module_get_next_page 
+  CVE-2023-22998: (unk) drm/virtio: Fix NULL vs IS_ERR checking in virtio_gpu_object_shmem_init 
+  CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
   CVE-2023-23039: (unk)  
   CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
   CVE-2023-23455: (unk) net: sched: atm: dont intepret cls results when asked to drop 

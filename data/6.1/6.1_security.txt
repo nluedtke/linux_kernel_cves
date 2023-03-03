@@ -11,6 +11,7 @@ CVEs fixed in 6.1.2:
   CVE-2022-3531: 661e952bc9ef798d1d33ba67f2950a3e0bea455f selftest/bpf: Fix memory leak in kprobe_multi_test
   CVE-2022-3532: d7dc8fad67fab906530c50155b12cf6117e99299 selftests/bpf: Fix memory leak caused by not destroying skeleton
   CVE-2022-3534: fbe08093fb2334549859829ef81d42570812597d libbpf: Fix use-after-free in btf_dump_name_dups
+  CVE-2023-22997: 7a779e84b3c451ce4713456a413d3300143747a7 module: Fix NULL vs IS_ERR checking for module_get_next_page
 
 CVEs fixed in 6.1.3:
   CVE-2022-4379: 650b69b17cfd79f51476d93c2c63bfb73280a77a NFSD: fix use-after-free in __nfs42_ssc_open()
@@ -23,6 +24,7 @@ CVEs fixed in 6.1.5:
   CVE-2022-3707: 1022519da69d99d455c58ca181a6c499c562c70e drm/i915/gvt: fix double free bug in split_2MB_gtt_entry
   CVE-2023-0045: e8377f0456fb6738a4668d4df16c13d7599925fd x86/bugs: Flush IBP in ib_prctl_set()
   CVE-2023-0210: 5e7d97dbae25ab4cb0ac1b1b98aebc4915689a86 ksmbd: check nt_len to be at least CIFS_ENCPWD_SIZE in ksmbd_decode_ntlmssp_auth_blob
+  CVE-2023-0461: 7d242f4a0c8319821548c7176c09a6e0e71f223c net/ulp: prevent ULP without clone op from entering the LISTEN status
   CVE-2023-23454: dc46e39b727fddc5aacc0272ef83ee872d51be16 net: sched: cbq: dont intepret cls results when asked to drop
   CVE-2023-23455: 85655c63877aeafdc23226510ea268a9fa0af807 net: sched: atm: dont intepret cls results when asked to drop
 
@@ -39,10 +41,16 @@ CVEs fixed in 6.1.8:
   CVE-2022-4842: ff3b1a624380c14b81f4e51c48e404a45f047aab fs/ntfs3: Fix attr_punch_hole() null pointer derenference
 
 CVEs fixed in 6.1.9:
+  CVE-2023-1073: cdcdc0531a51659527fea4b4d064af343452062d HID: check empty report_list in hid_validate_values()
+  CVE-2023-1074: 9f08bb650078dca24a13fea1c375358ed6292df3 sctp: fail if no bound addresses can be used for a given scope
   CVE-2023-23559: 7794efa358bca8b8a2a80070c6e088a74945f018 wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
+
+CVEs fixed in 6.1.11:
+  CVE-2023-1075: 37c0cdf7e4919e5f76381ac60817b67bcbdacb50 net/tls: tls_is_tx_ready() checked list_entry
 
 CVEs fixed in 6.1.12:
   CVE-2022-27672: cc95b5d240b631e42e2863e1dcb6ad83920cc449 x86/speculation: Identify processors vulnerable to SMT RSB predictions
+  CVE-2023-1078: 1d52bbfd469af69fbcae88c67f160ce1b968e7f3 rds: rds_rm_zerocopy_callback() use list_first_entry()
 
 CVEs fixed in 6.1.13:
   CVE-2023-26545: c376227845eef8f2e62e2c29c3cf2140d35dd8e8 net: mpls: fix stale pointer if allocation fails during device rename
@@ -121,7 +129,7 @@ Outstanding CVEs:
   CVE-2022-38457: (unk)  
   CVE-2022-40133: (unk)  
   CVE-2022-41848: (unk)  
-  CVE-2022-4269: (unk)  
+  CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
@@ -134,7 +142,12 @@ Outstanding CVEs:
   CVE-2022-45919: (unk)  
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
+  CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
+  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
+  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
+  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-20937: (unk)  
+  CVE-2023-23005: (unk) mm/demotion: fix NULL vs IS_ERR checking in memory_tier_init 
   CVE-2023-23039: (unk)  
   CVE-2023-25012: (unk) HID: bigben: use spinlock to safely schedule workers 
   CVE-2023-26242: (unk)  
