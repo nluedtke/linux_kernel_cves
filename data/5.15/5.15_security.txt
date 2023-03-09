@@ -17,6 +17,7 @@ CVEs fixed in 5.15.3:
   CVE-2021-45868: 332db0909293f3f4d853ee2ea695272c75082d87 quota: check block number when reading the block in quota file
   CVE-2022-20148: 5e1b901dd470659bcfeaa76811d2af9165579d77 f2fs: fix UAF in f2fs_available_free_memory
   CVE-2023-0047: c15aeead2488b3b28db6863f9f2ba2338e3c9838 mm, oom: do not trigger out_of_memory from the #PF
+  CVE-2023-1252: 2f372e38f5724301056e005353c8beecc3f8d257 ovl: fix use after free in struct ovl_aio_req
 
 CVEs fixed in 5.15.5:
   CVE-2020-27820: 0b1a35d63995497a9186113c60a16e7ae59642c1 drm/nouveau: use drm_dev_unplug() during device removal
@@ -79,6 +80,7 @@ CVEs fixed in 5.15.18:
   CVE-2022-22942: 6066977961fc6f437bc064f628cf9b0e4571c56c drm/vmwgfx: Fix stale file descriptors on failed usercopy
 
 CVEs fixed in 5.15.19:
+  CVE-2020-36516: dee686cbfdd13ca022f20be344a14f595a93f303 ipv4: avoid using shared IP generator for connected sockets
   CVE-2022-0617: cbf96c58e28b1fece9630102781a93ff32c347f7 udf: Fix NULL ptr deref when converting from inline format
   CVE-2022-24122: 348a8501e6029f9308ea7675edfa645b5e669c9e ucount:  Make get_ucount a safe get_user replacement
   CVE-2022-24448: 4c36ca387af4a9b5d775e46a6cb9dc2d151bf057 NFSv4: Handle case where the lookup of a directory fails
@@ -170,6 +172,7 @@ CVEs fixed in 5.15.33:
   CVE-2022-3112: b0b890dd8df3b9a2fe726826980b1cffe17b9679 media: meson: vdec: potential dereference of null pointer
   CVE-2022-3113: 0022dc8cafa5fcd156da8ae7bfc9ca99497bdffc media: mtk-vcodec: potential dereference of null pointer
   CVE-2022-3239: 332d45fe51d75a3a95c4a04e2cb7bffef284edd4 media: em28xx: initialize refcount before kref_get
+  CVE-2023-1249: 39fd0cc079c98dafcf355997ada7b5e67f0bb10a coredump: Use the vma snapshot in fill_files_note
 
 CVEs fixed in 5.15.34:
   CVE-2022-1263: 226b4327ef5c88572fc12187193f1b5073c10837 KVM: avoid NULL pointer dereference in kvm_dirty_ring_push
@@ -370,6 +373,7 @@ CVEs fixed in 5.15.78:
 CVEs fixed in 5.15.80:
   CVE-2022-3169: b1a27b2aad936746e6ef64c8a24bcb6dce6f926a nvme: ensure subsystem reset is single threaded
   CVE-2022-3521: 27d706b0d394a907ff8c4f83ffef9d3e5817fa84 kcm: avoid potential race in kcm_tx_work
+  CVE-2023-26607: ab6a1bb17e3c2f6670020d7edeea2fbfe6466690 ntfs: fix out-of-bounds read in ntfs_attr_find()
 
 CVEs fixed in 5.15.81:
   CVE-2022-3344: 3e87cb0caa25d667a9ca2fe15fef889e43ab8f95 KVM: x86: nSVM: harden svm_free_nested against freeing vmcb02 while still in use
@@ -478,7 +482,6 @@ Outstanding CVEs:
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
   CVE-2020-35501: (unk)  
-  CVE-2020-36516: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
   CVE-2021-33061: (unk) ixgbe: add improvement for MDD response functionality 
@@ -537,6 +540,9 @@ Outstanding CVEs:
   CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
   CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
   CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
+  CVE-2023-1192: (unk)  
+  CVE-2023-1193: (unk)  
+  CVE-2023-1194: (unk)  
   CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
@@ -545,6 +551,4 @@ Outstanding CVEs:
   CVE-2023-25012: (unk) HID: bigben: use spinlock to safely schedule workers 
   CVE-2023-26242: (unk)  
   CVE-2023-26544: (unk)  
-  CVE-2023-26605: (unk)  
   CVE-2023-26606: (unk)  
-  CVE-2023-26607: (unk)  

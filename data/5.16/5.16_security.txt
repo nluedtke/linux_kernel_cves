@@ -23,6 +23,7 @@ CVEs fixed in 5.16.4:
   CVE-2022-22942: 1d833b27fb708d6fdf5de9f6b3a8be4bd4321565 drm/vmwgfx: Fix stale file descriptors on failed usercopy
 
 CVEs fixed in 5.16.5:
+  CVE-2020-36516: 32ac95e4478f7aeb1d9f9539430361737eec8459 ipv4: avoid using shared IP generator for connected sockets
   CVE-2022-0617: 620e8243cf5389e706c1c8f66ffacb3c84308a9e udf: Fix NULL ptr deref when converting from inline format
   CVE-2022-24448: f0583af88e7dd413229ea5e670a0db36fdf34ba2 NFSv4: Handle case where the lookup of a directory fails
   CVE-2022-24959: deb0f02d08276d87212c1f19d9d919b13dc4c033 yam: fix a memory leak in yam_siocdevprivate()
@@ -114,6 +115,7 @@ CVEs fixed in 5.16.19:
   CVE-2022-3112: c316e6a49745b09025eed102e30cc1e9ba2910b2 media: meson: vdec: potential dereference of null pointer
   CVE-2022-3113: cbdabb48be7b76d2a61a3554745243e37d81599e media: mtk-vcodec: potential dereference of null pointer
   CVE-2022-3239: 37f808a9e734e9036f7aa42ba4864fc6e91d2572 media: em28xx: initialize refcount before kref_get
+  CVE-2023-1249: c8015981eaa5bd8901a145c8d1253592a5619d2b coredump: Use the vma snapshot in fill_files_note
   CVE-2023-22996: 2ee39164a701782bb88cf4a564dc7d8cb43c9bff soc: qcom: aoss: Fix missing put_device call in qmp_get
 
 CVEs fixed in 5.16.20:
@@ -167,7 +169,6 @@ Outstanding CVEs:
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
   CVE-2020-35501: (unk)  
-  CVE-2020-36516: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
   CVE-2021-33061: (unk) ixgbe: add improvement for MDD response functionality 
@@ -381,6 +382,10 @@ Outstanding CVEs:
   CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
   CVE-2023-1095: (unk) netfilter: nf_tables: fix null deref due to zeroed list head 
   CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
+  CVE-2023-1192: (unk)  
+  CVE-2023-1193: (unk)  
+  CVE-2023-1194: (unk)  
+  CVE-2023-1195: (unk) cifs: fix use-after-free caused by invalid pointer `hostname` 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
@@ -395,6 +400,5 @@ Outstanding CVEs:
   CVE-2023-26242: (unk)  
   CVE-2023-26544: (unk)  
   CVE-2023-26545: (unk) net: mpls: fix stale pointer if allocation fails during device rename 
-  CVE-2023-26605: (unk)  
   CVE-2023-26606: (unk)  
-  CVE-2023-26607: (unk)  
+  CVE-2023-26607: (unk) ntfs: fix out-of-bounds read in ntfs_attr_find() 

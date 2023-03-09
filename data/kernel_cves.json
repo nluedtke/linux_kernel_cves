@@ -59767,8 +59767,9 @@
         }
     },
     "CVE-2020-36516": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v3.16-rc1 to v5.17-rc2",
+        "breaks": "73f156a6e8c1074ac6327e0abd1169e95eb66463",
+        "cmt_msg": "ipv4: avoid using shared IP generator for connected sockets",
         "cvss2": {
             "Access Complexity": "Medium",
             "Access Vector": "Network Accessible",
@@ -59792,8 +59793,9 @@
             "score": 5.9
         },
         "cwe": "Use of a Broken or Risky Cryptographic Algorithm",
-        "fixes": "",
-        "last_modified": "2022-03-15",
+        "fixes": "23f57406b82de51809d5812afd96f210f8b627f3",
+        "last_affected_version": "5.16.4",
+        "last_modified": "2023-03-09",
         "nvd_text": "An issue was discovered in the Linux kernel through 5.16.11. The mixed IPID assignment method with the hash-based IPID assignment policy allows an off-path attacker to inject data into a victim's TCP session or terminate that session.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2020-36516",
@@ -73927,12 +73929,12 @@
         }
     },
     "CVE-2022-27672": {
-        "affected_versions": "unk to v6.2",
-        "breaks": "",
+        "affected_versions": "v2.6.12-rc2 to v6.2",
+        "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "x86/speculation: Identify processors vulnerable to SMT RSB predictions",
         "fixes": "be8de49bea505e7777a69ef63d60e02ac1712683",
         "last_affected_version": "6.1",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "When SMT is enabled, certain AMD processors may speculatively execute instructions using a target from the sibling thread after an SMT mode switch potentially resulting in information disclosure.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-27672",
@@ -75880,7 +75882,8 @@
         "cmt_msg": "misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os",
         "fixes": "643a16a0eb1d6ac23744bb6e90a00fc21148a9dc",
         "last_affected_version": "6.1.1",
-        "last_modified": "2023-01-20",
+        "last_modified": "2023-03-09",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s SGI GRU driver in the way the first gru_file_unlocked_ioctl function is called by the user, where a fail pass occurs in the gru_check_chiplet_assignment function. This flaw allows a local user to crash or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3424",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-3424",
@@ -77267,7 +77270,8 @@
         "cmt_msg": "drm/i915/gvt: fix double free bug in split_2MB_gtt_entry",
         "fixes": "4a61648af68f5ba4884f0e3b494ee1cabc4b6620",
         "last_affected_version": "6.1.4",
-        "last_modified": "2023-02-27",
+        "last_modified": "2023-03-09",
+        "nvd_text": "A double-free memory flaw was found in the Linux kernel. The Intel GVT-g graphics driver triggers VGA card system resource overload, causing a fail in the intel_gvt_dma_map_guest_page function. This issue could allow a local user to crash the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-3707",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2022-3707",
@@ -78060,8 +78064,8 @@
         }
     },
     "CVE-2022-4269": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
+        "affected_versions": "v4.10-rc1 to v6.3-rc1",
+        "breaks": "53592b3640019f2834701093e38272fdfd367ad8",
         "cmt_msg": "act_mirred: use the backlog for nested calls to mirred ingress",
         "cvss3": {
             "Attack Complexity": "Low",
@@ -78077,7 +78081,7 @@
         },
         "cwe": "Deadlock",
         "fixes": "ca22da2fbd693b54dc8e3b7b54ccc9f7e9ba3640",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "A flaw was found in the Linux kernel Traffic Control (TC) subsystem. Using a specific networking configuration (redirecting egress packets to ingress using TC action \"mirred\") a local unprivileged user could trigger a CPU soft lockup (ABBA deadlock) when the transport protocol in use (TCP or SCTP) does a retransmission, resulting in a denial of service condition.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2022-4269",
@@ -79242,7 +79246,8 @@
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "drm/nouveau/mmu: add more general vmm free/node handling functions",
         "fixes": "729eba3355674f2d9524629b73683ba1d1cd3f10",
-        "last_modified": "2023-01-13",
+        "last_modified": "2023-03-09",
+        "nvd_text": "A use-after-free flaw was found in the Linux kernel\u2019s nouveau driver in how a user triggers a memory overflow that causes the nvkm_vma_tail function to fail. This flaw allows a local user to crash or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0030",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-0030",
@@ -79529,8 +79534,20 @@
         "affected_versions": "v2.6.12-rc2 to v6.2-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "x86/mm: Randomize per-cpu entry area",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "None",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 5.5
+        },
         "fixes": "97e3d26b5e5f371b3ee223d94dd123e6c442ba80",
-        "last_modified": "2023-02-24",
+        "last_modified": "2023-03-09",
         "nvd_text": "A flaw possibility of memory leak in the Linux kernel cpu_entry_area mapping of X86 CPU data to memory was found in the way user can guess location of exception stack(s) or other important data. A local user could use this flaw to get access to some important data with expected location in memory.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-0597",
@@ -79617,11 +79634,11 @@
         }
     },
     "CVE-2023-1076": {
-        "affected_versions": "v4.10-rc1 to unk",
+        "affected_versions": "v4.10-rc1 to v6.3-rc1",
         "breaks": "86741ec25462e4c8cdce6df2f41ead05568c7d5e",
         "cmt_msg": "tun: tun_chr_open(): correctly initialize socket uid",
         "fixes": "a096ccca6e503a5c575717ff8a36ace27510ab0a",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1076",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-1076",
@@ -79632,11 +79649,11 @@
         }
     },
     "CVE-2023-1077": {
-        "affected_versions": "v2.6.25-rc1 to unk",
+        "affected_versions": "v2.6.25-rc1 to v6.3-rc1",
         "breaks": "326587b840785c60f5dc18557235a23bafefd620",
         "cmt_msg": "sched/rt: pick_next_rt_entity(): check list_entry",
         "fixes": "7c4a5b89a0b5a57a64b601775b296abf77a9fe97",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1077",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-1077",
@@ -79663,11 +79680,11 @@
         }
     },
     "CVE-2023-1079": {
-        "affected_versions": "v4.12-rc1 to unk",
+        "affected_versions": "v4.12-rc1 to v6.3-rc1",
         "breaks": "af22a610bc38508d5ea760507d31be6b6983dfa8",
         "cmt_msg": "HID: asus: use spinlock to safely schedule workers",
         "fixes": "4ab3a086d10eeec1424f2e8a968827a6336203df",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1079",
             "ExploitDB": "https://www.exploit-db.com/search?cve=2023-1079",
@@ -79681,9 +79698,21 @@
         "affected_versions": "v3.16-rc1 to v6.0-rc1",
         "breaks": "55dd6f93076bb82aa8911191125418dcfcbf2c9b",
         "cmt_msg": "netfilter: nf_tables: fix null deref due to zeroed list head",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
         "fixes": "580077855a40741cf511766129702d97ff02f4d9",
         "last_affected_version": "5.18.17",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "In nf_tables_updtable, if nf_tables_table_enable returns an error, nft_trans_destroy is called to free the transaction object. nft_trans_destroy() calls list_del(), but the transaction was never placed on a list -- the list head is all zeroes, this results in a NULL pointer dereference.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1095",
@@ -79695,11 +79724,11 @@
         }
     },
     "CVE-2023-1118": {
-        "affected_versions": "v2.6.36-rc1 to unk",
+        "affected_versions": "v2.6.36-rc1 to v6.3-rc1",
         "breaks": "9ea53b74df9c4681f5bb2da6b2e10e37d87ea6d6",
         "cmt_msg": "media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()",
         "fixes": "29b0589a865b6f66d141d79b2dd1373e4e50fe17",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "A flaw use after free in the Linux kernel integrated infrared receiver/transceiver driver was found in the way user detaching rc device. A local user could use this flaw to crash the system or potentially escalate their privileges on the system.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1118",
@@ -79708,6 +79737,95 @@
             "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-1118",
             "SUSE": "https://www.suse.com/security/cve/CVE-2023-1118",
             "Ubuntu": "https://ubuntu.com/security/CVE-2023-1118"
+        }
+    },
+    "CVE-2023-1192": {
+        "affected_versions": "v5.15-rc1 to unk",
+        "breaks": "a848c4f15ab6d5d405dbee7de5da71839b2bf35e",
+        "fixes": "",
+        "last_modified": "2023-03-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1192",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-1192",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-1192",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-1192",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-1192",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-1192"
+        }
+    },
+    "CVE-2023-1193": {
+        "affected_versions": "v5.15-rc1 to unk",
+        "breaks": "a848c4f15ab6d5d405dbee7de5da71839b2bf35e",
+        "fixes": "",
+        "last_modified": "2023-03-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1193",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-1193",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-1193",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-1193",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-1193",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-1193"
+        }
+    },
+    "CVE-2023-1194": {
+        "affected_versions": "v5.15-rc1 to unk",
+        "breaks": "a848c4f15ab6d5d405dbee7de5da71839b2bf35e",
+        "fixes": "",
+        "last_modified": "2023-03-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1194",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-1194",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-1194",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-1194",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-1194",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-1194"
+        }
+    },
+    "CVE-2023-1195": {
+        "affected_versions": "v5.16-rc1 to v6.1-rc3",
+        "breaks": "7be3248f313930ff3d3436d4e9ddbe9fccc1f541",
+        "cmt_msg": "cifs: fix use-after-free caused by invalid pointer `hostname`",
+        "fixes": "153695d36ead0ccc4d0256953c751cabf673e621",
+        "last_modified": "2023-03-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1195",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-1195",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-1195",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-1195",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-1195",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-1195"
+        }
+    },
+    "CVE-2023-1249": {
+        "affected_versions": "v3.7-rc1 to v5.18-rc1",
+        "breaks": "2aa362c49c314a98fb9aebbd7760a461667bac05",
+        "cmt_msg": "coredump: Use the vma snapshot in fill_files_note",
+        "fixes": "390031c942116d4733310f0684beb8db19885fe6",
+        "last_affected_version": "5.17.1",
+        "last_modified": "2023-03-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1249",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-1249",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-1249",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-1249",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-1249",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-1249"
+        }
+    },
+    "CVE-2023-1252": {
+        "affected_versions": "unk to v5.16-rc1",
+        "breaks": "",
+        "cmt_msg": "ovl: fix use after free in struct ovl_aio_req",
+        "fixes": "9a254403760041528bc8f69fe2f5e1ef86950991",
+        "last_affected_version": "5.15.2",
+        "last_modified": "2023-03-09",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-1252",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-1252",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-1252",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-1252",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-1252",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-1252"
         }
     },
     "CVE-2023-20928": {
@@ -79742,8 +79860,20 @@
     "CVE-2023-20937": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "fixes": "",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "In several functions of the Android Linux kernel, there is a possible way to corrupt memory due to a use after free. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-257443051References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-20937",
@@ -79758,9 +79888,21 @@
         "affected_versions": "v5.17-rc1 to v5.18-rc5",
         "breaks": "09184ae9b5756cc469db6fd1d1cfdcffbf627c2d",
         "cmt_msg": "binder: Gracefully handle BINDER_TYPE_FDA objects with num_fds=0",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "fixes": "ef38de9217a04c9077629a24652689d8fdb4c6c6",
         "last_affected_version": "5.17.5",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "In binder_transaction_buffer_release of binder.c, there is a possible use after free due to improper input validation. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-257685302References: Upstream kernel",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-20938",
@@ -79775,8 +79917,21 @@
         "affected_versions": "v2.6.12-rc2 to v5.17-rc1",
         "breaks": "1da177e4c3f41524e886b7f1b8a0c1fc7321cac2",
         "cmt_msg": "usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "cwe": "Unspecified",
         "fixes": "fa0ef93868a6062babe1144df2807a8b1d4924d2",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel before 5.17, an error path in dwc3_qcom_acpi_register_core in drivers/usb/dwc3/dwc3-qcom.c lacks certain platform_device_put and kfree calls.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-22995",
@@ -79791,9 +79946,21 @@
         "affected_versions": "v5.16-rc1 to v5.18-rc1",
         "breaks": "8c75d585b931ac874fbe4ee5a8f1811d20c2817f",
         "cmt_msg": "soc: qcom: aoss: Fix missing put_device call in qmp_get",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
         "fixes": "4b41a9d0fe3db5f91078a380f62f0572c3ecf2dd",
         "last_affected_version": "5.17.1",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel before 5.17.2, drivers/soc/qcom/qcom_aoss.c does not release an of_find_device_by_node reference after use, e.g., with put_device.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-22996",
@@ -79808,9 +79975,21 @@
         "affected_versions": "v5.17-rc1 to v6.2-rc1",
         "breaks": "b1ae6dc41eaaa98bb75671e0f3665bfda248c3e7",
         "cmt_msg": "module: Fix NULL vs IS_ERR checking for module_get_next_page",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
         "fixes": "45af1d7aae7d5520d2858f8517a1342646f015db",
         "last_affected_version": "6.1.1",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel before 6.1.2, kernel/module/decompress.c misinterprets the module_get_next_page return value (expects it to be NULL in the error case, whereas it is actually an error pointer).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-22997",
@@ -79825,9 +80004,21 @@
         "affected_versions": "v5.7-rc1 to v6.0-rc1",
         "breaks": "2f2aa13724d56829d910b2fa8e80c502d388f106",
         "cmt_msg": "drm/virtio: Fix NULL vs IS_ERR checking in virtio_gpu_object_shmem_init",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
         "fixes": "c24968734abfed81c8f93dc5f44a7b7a9aecadfa",
         "last_affected_version": "5.19.1",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel before 6.0.3, drivers/gpu/drm/virtio/virtgpu_object.c misinterprets the drm_gem_shmem_get_sg_table return value (expects it to be NULL in the error case, whereas it is actually an error pointer).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-22998",
@@ -79842,9 +80033,21 @@
         "affected_versions": "v5.12-rc1-dontuse to v5.17-rc1",
         "breaks": "c25c210f590e7a37eecd865d84f97d1f40e39786",
         "cmt_msg": "usb: dwc3: qcom: Fix NULL vs IS_ERR checking in dwc3_qcom_probe",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.5
+        },
         "fixes": "b52fe2dbb3e655eb1483000adfab68a219549e13",
         "last_affected_version": "5.16.2",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel before 5.16.3, drivers/usb/dwc3/dwc3-qcom.c misinterprets the dwc3_qcom_create_urs_usb_platdev return value (expects it to be NULL in the error case, whereas it is actually an error pointer).",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-22999",
@@ -79859,8 +80062,20 @@
         "affected_versions": "v4.14-rc6 to v5.17-rc1",
         "breaks": "1df79cb3bae754e4a42240f9851ed82549a44f1a",
         "cmt_msg": "phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "fixes": "045a31b95509c8f25f5f04ec5e0dec5cd09f2c5f",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel before 5.17, drivers/phy/tegra/xusb.c mishandles the tegra_xusb_find_port_node return value. Callers expect NULL in the error case, but an error pointer is used.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-23000",
@@ -79972,8 +80187,20 @@
     "CVE-2023-23039": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss3": {
+            "Attack Complexity": "High",
+            "Attack Vector": "Physical",
+            "Availability": "High",
+            "Confidentiality": "None",
+            "Integrity": "High",
+            "Privileges Required": "None",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
+            "score": 5.7
+        },
         "fixes": "",
-        "last_modified": "2023-02-24",
+        "last_modified": "2023-03-09",
         "nvd_text": "An issue was discovered in the Linux kernel through 6.2.0-rc2. drivers/tty/vcc.c has a race condition and resultant use-after-free if a physically proximate attacker removes a VCC device while calling open(), aka a race condition between vcc_open() and vcc_remove().",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-23039",
@@ -80103,7 +80330,7 @@
         }
     },
     "CVE-2023-25012": {
-        "affected_versions": "v5.6-rc4 to unk",
+        "affected_versions": "v5.6-rc4 to v6.3-rc1",
         "breaks": "4eb1b01de5b9d8596d6c103efcf1a15cfc1bedf7",
         "cmt_msg": "HID: bigben: use spinlock to safely schedule workers",
         "cvss3": {
@@ -80119,7 +80346,7 @@
             "score": 4.6
         },
         "fixes": "76ca8da989c7d97a7f76c75d475fe95a584439d7",
-        "last_modified": "2023-02-27",
+        "last_modified": "2023-03-09",
         "nvd_text": "The Linux kernel through 6.1.9 has a Use-After-Free in bigben_remove in drivers/hid/hid-bigbenff.c via a crafted USB device because the LED controllers remain registered for too long.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-25012",
@@ -80131,6 +80358,33 @@
         }
     },
     "CVE-2023-26242": {
+        "affected_versions": "v4.19-rc1 to unk",
+        "breaks": "857a26222ff75eecf7d701ef0e91e4fbf6efa663",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "fixes": "",
+        "last_modified": "2023-03-09",
+        "nvd_text": "afu_mmio_region_get_by_offset in drivers/fpga/dfl-afu-region.c in the Linux kernel through 6.1.12 has an integer overflow.",
+        "ref_urls": {
+            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26242",
+            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-26242",
+            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-26242",
+            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-26242",
+            "SUSE": "https://www.suse.com/security/cve/CVE-2023-26242",
+            "Ubuntu": "https://ubuntu.com/security/CVE-2023-26242"
+        }
+    },
+    "CVE-2023-26544": {
         "affected_versions": "unk to unk",
         "breaks": "",
         "cvss3": {
@@ -80146,22 +80400,7 @@
             "score": 7.8
         },
         "fixes": "",
-        "last_modified": "2023-03-03",
-        "nvd_text": "afu_mmio_region_get_by_offset in drivers/fpga/dfl-afu-region.c in the Linux kernel through 6.1.12 has an integer overflow.",
-        "ref_urls": {
-            "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26242",
-            "ExploitDB": "https://www.exploit-db.com/search?cve=2023-26242",
-            "NVD": "https://nvd.nist.gov/vuln/detail/CVE-2023-26242",
-            "Red Hat": "https://access.redhat.com/security/cve/CVE-2023-26242",
-            "SUSE": "https://www.suse.com/security/cve/CVE-2023-26242",
-            "Ubuntu": "https://ubuntu.com/security/CVE-2023-26242"
-        }
-    },
-    "CVE-2023-26544": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2023-02-27",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel 6.0.8, there is a use-after-free in run_unpack in fs/ntfs3/run.c, related to a difference between NTFS sector size and media sector size.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26544",
@@ -80176,9 +80415,21 @@
         "affected_versions": "v4.1-rc8 to v6.2",
         "breaks": "0fae3bf018d97b210051c8797a49d66d31071847",
         "cmt_msg": "net: mpls: fix stale pointer if allocation fails during device rename",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "fixes": "fda6c89fe3d9aca073495a664e1d5aea28cd4377",
         "last_affected_version": "6.1",
-        "last_modified": "2023-03-03",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel before 6.1.13, there is a double free in net/mpls/af_mpls.c upon an allocation failure (for registering the sysctl table under a new location) during the renaming of a device.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26545",
@@ -80190,10 +80441,22 @@
         }
     },
     "CVE-2023-26605": {
-        "affected_versions": "unk to unk",
-        "breaks": "",
-        "fixes": "",
-        "last_modified": "2023-02-27",
+        "affected_versions": "v6.1-rc1 to v6.1-rc7",
+        "breaks": "cbfecb927f429a6fa613d74b998496bd71e4438a",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
+        "fixes": "4e3c51f4e805291b057d12f5dda5aeb50a538dc4",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel 6.0.8, there is a use-after-free in inode_cgwb_move_to_attached in fs/fs-writeback.c, related to __list_del_entry_valid.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26605",
@@ -80207,8 +80470,20 @@
     "CVE-2023-26606": {
         "affected_versions": "unk to unk",
         "breaks": "",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "High",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 7.8
+        },
         "fixes": "",
-        "last_modified": "2023-02-27",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel 6.0.8, there is a use-after-free in ntfs_trim_fs in fs/ntfs3/bitmap.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26606",
@@ -80220,10 +80495,24 @@
         }
     },
     "CVE-2023-26607": {
-        "affected_versions": "unk to unk",
+        "affected_versions": "unk to v6.1-rc1",
         "breaks": "",
-        "fixes": "",
-        "last_modified": "2023-02-27",
+        "cmt_msg": "ntfs: fix out-of-bounds read in ntfs_attr_find()",
+        "cvss3": {
+            "Attack Complexity": "Low",
+            "Attack Vector": "Local",
+            "Availability": "High",
+            "Confidentiality": "High",
+            "Integrity": "None",
+            "Privileges Required": "Low",
+            "Scope": "Unchanged",
+            "User Interaction": "None",
+            "raw": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+            "score": 7.1
+        },
+        "fixes": "36a4d82dddbbd421d2b8e79e1cab68c8126d5075",
+        "last_affected_version": "6.0.9",
+        "last_modified": "2023-03-09",
         "nvd_text": "In the Linux kernel 6.0.8, there is an out-of-bounds read in ntfs_attr_find in fs/ntfs/attrib.c.",
         "ref_urls": {
             "Debian": "https://security-tracker.debian.org/tracker/CVE-2023-26607",
