@@ -20,6 +20,7 @@ CVEs fixed in 5.10.7:
 CVEs fixed in 5.10.10:
   CVE-2021-20268: 5f52a8a71b62418d62c736e5aa68aaba0a8da918 bpf: Fix signed_{sub,add32}_overflows type handling
   CVE-2021-3178: fdcaa4af5e70e2d984c9620a09e9dade067f2620 nfsd4: readdirplus shouldn't return parent of export
+  CVE-2023-1390: 60b8b4e6310b7dfc551ba68e8639eeaf70a0b2dd tipc: fix NULL deref in tipc_link_xmit()
 
 CVEs fixed in 5.10.11:
   CVE-2021-39657: 2536194bb3b099cc9a9037009b86e7ccfb81461c scsi: ufs: Correct the LUN used in eh_device_reset_handler() callback
@@ -595,6 +596,7 @@ CVEs fixed in 5.10.157:
   CVE-2022-47519: 905f886eae4b065656a575e8a02544045cbaadcf wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_OPER_CHANNEL attribute
   CVE-2022-47520: 7c6535fb4d67ea37c98a1d1d24ca33dd5ec42693 wifi: wilc1000: validate pairwise and authentication suite offsets
   CVE-2022-47521: 5a068535c0073c8402aa0755e8ef259fb98a33c5 wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_CHANNEL_LIST attribute
+  CVE-2023-1382: e87a077d09c05985a0edac7c6c49bb307f775d12 tipc: set con sock in tipc_conn_alloc
 
 CVEs fixed in 5.10.158:
   CVE-2022-4378: 9ba389863ac63032d4b6ffad2c90a62cd78082ee proc: proc_skip_spaces() shouldn't think it is working on C strings
@@ -602,6 +604,7 @@ CVEs fixed in 5.10.158:
 CVEs fixed in 5.10.159:
   CVE-2022-3623: fccee93eb20d72f5390432ecea7f8c16af88c850 mm/hugetlb: fix races when looking up a CONT-PTE/PMD size hugetlb page
   CVE-2022-3643: 49e07c0768dbebff672ee1834eff9680fc6277bf xen/netback: Ensure protocol headers don't fall in the non-linear area
+  CVE-2023-28327: 575a6266f63dbb3b8eb1da03671451f0d81b8034 af_unix: Get user_ns from in_skb in unix_diag_get_exact().
 
 CVEs fixed in 5.10.160:
   CVE-2022-3545: eb6313c12955c58c3d3d40f086c22e44ca1c9a1b nfp: fix use-after-free in area_cache_get()
@@ -620,6 +623,7 @@ CVEs fixed in 5.10.163:
   CVE-2023-0461: f8ed0a93b5d576bbaf01639ad816473bdfd1dcb0 net/ulp: prevent ULP without clone op from entering the LISTEN status
   CVE-2023-23454: b2c917e510e5ddbc7896329c87d20036c8b82952 net: sched: cbq: dont intepret cls results when asked to drop
   CVE-2023-23455: 5f65f48516bfeebaab1ccc52c8fad698ddf21282 net: sched: atm: dont intepret cls results when asked to drop
+  CVE-2023-28328: 559891d430e3f3a178040c4371ed419edbfa7d65 media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer()
 
 CVEs fixed in 5.10.164:
   CVE-2023-0179: 550efeff989b041f3746118c0ddd863c39ddc1aa netfilter: nft_payload: incorrect arithmetics when fetching VLAN header bits
@@ -646,6 +650,14 @@ CVEs fixed in 5.10.170:
 
 CVEs fixed in 5.10.171:
   CVE-2023-22998: 0a4181b23acf53e9c95b351df6a7891116b98f9b drm/virtio: Fix NULL vs IS_ERR checking in virtio_gpu_object_shmem_init
+
+CVEs fixed in 5.10.173:
+  CVE-2023-1076: 9a31af61f397500ccae49d56d809b2217d1e2178 tun: tun_chr_open(): correctly initialize socket uid
+  CVE-2023-1077: 80a1751730b302d8ab63a084b2fa52c820ad0273 sched/rt: pick_next_rt_entity(): check list_entry
+  CVE-2023-1079: 21a2eec4a440060a6eb294dc890eaf553101ba09 HID: asus: use spinlock to safely schedule workers
+  CVE-2023-1118: 78da5a378bdacd5bf68c3a6389bdc1dd0c0f5b3c media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
+  CVE-2023-23004: a5bbea50d622b8f49ab8ee3b0eb283107febcf1a malidp: Fix NULL vs IS_ERR() checking
+  CVE-2023-25012: fddde36316da8acb45a3cca2e5fda102f5215877 HID: bigben: use spinlock to safely schedule workers
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -748,11 +760,11 @@ Outstanding CVEs:
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
-  CVE-2022-38457: (unk)  
+  CVE-2022-38457: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
-  CVE-2022-40133: (unk)  
+  CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-41848: (unk)  
   CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-4379: (unk) NFSD: fix use-after-free in __nfs42_ssc_open() 
@@ -770,18 +782,13 @@ Outstanding CVEs:
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
-  CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
-  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
-  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
-  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
+  CVE-2023-1380: (unk)  
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
-  CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
   CVE-2023-23039: (unk)  
   CVE-2023-23586: (unk) io_uring: remove io_identity 
-  CVE-2023-25012: (unk) HID: bigben: use spinlock to safely schedule workers 
   CVE-2023-26242: (unk)  
   CVE-2023-26544: (unk)  
-  CVE-2023-26606: (unk)  
+  CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 

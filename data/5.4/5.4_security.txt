@@ -334,6 +334,7 @@ CVEs fixed in 5.4.89:
 
 CVEs fixed in 5.4.92:
   CVE-2021-3178: 4aef760c28e8bd1860a27fd78067b4ea77124987 nfsd4: readdirplus shouldn't return parent of export
+  CVE-2023-1390: 56e8947bcf814d195eb4954b4821868803d3dd67 tipc: fix NULL deref in tipc_link_xmit()
 
 CVEs fixed in 5.4.93:
   CVE-2021-39657: 97853a7eae80a695a18ce432524eaa7432199a41 scsi: ufs: Correct the LUN used in eh_device_reset_handler() callback
@@ -820,9 +821,11 @@ CVEs fixed in 5.4.225:
 CVEs fixed in 5.4.226:
   CVE-2022-3169: 99c59256ea00ff7fab4914bb38e10a84850de514 nvme: ensure subsystem reset is single threaded
   CVE-2022-42896: 0d87bb6070361e5d1d9cb391ba7ee73413bc109b Bluetooth: L2CAP: Fix accepting connection request for invalid SPSM
+  CVE-2023-1382: 30f91687fa2502abb0b4d79569b63d1381169ccf tipc: set con sock in tipc_conn_alloc
 
 CVEs fixed in 5.4.227:
   CVE-2022-3643: 8fe1bf6f32cd5b96ddcd2a38110603fe34753e52 xen/netback: Ensure protocol headers don't fall in the non-linear area
+  CVE-2023-28327: c66d78aee55dab72c92020ebfbebc464d4f5dd2a af_unix: Get user_ns from in_skb in unix_diag_get_exact().
 
 CVEs fixed in 5.4.228:
   CVE-2022-3545: 3c837460f920a63165961d2b88b425703f59affb nfp: fix use-after-free in area_cache_get()
@@ -840,6 +843,7 @@ CVEs fixed in 5.4.229:
   CVE-2023-0461: c6d29a5ffdbc362314853462a0e24e63330a654d net/ulp: prevent ULP without clone op from entering the LISTEN status
   CVE-2023-23454: 6b17b84634f932f4787f04578f5d030874b9ff32 net: sched: cbq: dont intepret cls results when asked to drop
   CVE-2023-23455: 63e469cb54a87df53edcfd85bb5bcdd84327ae4a net: sched: atm: dont intepret cls results when asked to drop
+  CVE-2023-28328: 8b256d23361c51aa4b7fdb71176c1ca50966fb39 media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer()
 
 CVEs fixed in 5.4.230:
   CVE-2022-4382: 9a39f4626b361ee7aa10fd990401c37ec3b466ae USB: gadgetfs: Fix race between mounting and unmounting
@@ -856,6 +860,12 @@ CVEs fixed in 5.4.232:
 
 CVEs fixed in 5.4.233:
   CVE-2022-3707: 787ef0db014085df8691e5aeb58ab0bb081e5ff0 drm/i915/gvt: fix double free bug in split_2MB_gtt_entry
+
+CVEs fixed in 5.4.235:
+  CVE-2023-1076: d92d87000eda9884d49f1acec1c1fccd63cd9b11 tun: tun_chr_open(): correctly initialize socket uid
+  CVE-2023-1077: 084cd75643b61fb924f70cba98a71dea14942938 sched/rt: pick_next_rt_entity(): check list_entry
+  CVE-2023-1079: dd08e68d04d08d2f42b09162c939a0b0841216cc HID: asus: use spinlock to safely schedule workers
+  CVE-2023-1118: d120334278b370b6a1623a75ebe53b0c76cb247c media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -974,11 +984,11 @@ Outstanding CVEs:
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
-  CVE-2022-38457: (unk)  
+  CVE-2022-38457: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
-  CVE-2022-40133: (unk)  
+  CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-41848: (unk)  
   CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-44032: (unk)  
@@ -997,12 +1007,8 @@ Outstanding CVEs:
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
-  CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
-  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
-  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
-  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
-  CVE-2023-1252: (unk) ovl: fix use after free in struct ovl_aio_req 
+  CVE-2023-1380: (unk)  
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
@@ -1011,4 +1017,4 @@ Outstanding CVEs:
   CVE-2023-23039: (unk)  
   CVE-2023-26242: (unk)  
   CVE-2023-26544: (unk)  
-  CVE-2023-26606: (unk)  
+  CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 

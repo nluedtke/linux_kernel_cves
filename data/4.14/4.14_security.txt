@@ -858,6 +858,7 @@ CVEs fixed in 4.14.215:
 
 CVEs fixed in 4.14.217:
   CVE-2021-3178: 0f60f9d1e6182d9440614c13cdf6106e2d470f89 nfsd4: readdirplus shouldn't return parent of export
+  CVE-2023-1390: 3ed0b5bb8cf71b4b9f995d4b3763648674fa032a tipc: fix NULL deref in tipc_link_xmit()
 
 CVEs fixed in 4.14.218:
   CVE-2020-27825: fdb2310d58812b15f6b460509b43ff0b87e59367 tracing: Fix race in trace_open and buffer resize call
@@ -1271,6 +1272,7 @@ CVEs fixed in 4.14.303:
   CVE-2023-0394: 35ed8ba485544a31a4ab9b92a1c68e406ab66a47 ipv6: raw: Deduct extension header length in rawv6_push_pending_frames
   CVE-2023-0461: b689125d04949841337dfa730d48dd91ada9ce3a net/ulp: prevent ULP without clone op from entering the LISTEN status
   CVE-2023-23455: db49adc5aff0c84ef0439a666f494a0d57c98bc7 net: sched: atm: dont intepret cls results when asked to drop
+  CVE-2023-28328: c712d1ccbfb787620422b437a5b8fac0802547bd media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer()
 
 CVEs fixed in 4.14.305:
   CVE-2023-1073: 614dd3d1725d329bf10a7ae974ebdfe101150791 HID: check empty report_list in hid_validate_values()
@@ -1279,6 +1281,10 @@ CVEs fixed in 4.14.305:
 
 CVEs fixed in 4.14.306:
   CVE-2023-26545: b89824a9b2398d78a32ea75343e5472a0fd4986e net: mpls: fix stale pointer if allocation fails during device rename
+
+CVEs fixed in 4.14.308:
+  CVE-2023-1079: df0fad94ca3787727b9cdd76797aaacf46fe93ed HID: asus: use spinlock to safely schedule workers
+  CVE-2023-1118: 0987f836bc1a258cb8fb51669a5afb67bb01c31b media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1444,10 +1450,10 @@ Outstanding CVEs:
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
-  CVE-2022-38457: (unk)  
+  CVE-2022-38457: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
-  CVE-2022-40133: (unk)  
+  CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-41222: (unk) mm/mremap: hold the rmap lock in write mode when moving page table entries. 
   CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
@@ -1468,14 +1474,13 @@ Outstanding CVEs:
   CVE-2023-0615: (unk)  
   CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
   CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
-  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
-  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
-  CVE-2023-1252: (unk) ovl: fix use after free in struct ovl_aio_req 
+  CVE-2023-1380: (unk)  
+  CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
   CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
   CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
   CVE-2023-26544: (unk)  
-  CVE-2023-26606: (unk)  
+  CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 

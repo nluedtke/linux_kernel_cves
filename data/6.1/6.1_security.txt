@@ -5,6 +5,7 @@ CVEs fixed in 6.1:
   CVE-2022-42329: 74e7e1efdad45580cc3839f2a155174cf158f9b5 xen/netback: don't call kfree_skb() with interrupts disabled
   CVE-2022-4378: bce9332220bd677d83b19d21502776ad555a0e73 proc: proc_skip_spaces() shouldn't think it is working on C strings
   CVE-2022-45934: bcd70260ef56e0aee8a4fc6cd214a419900b0765 Bluetooth: L2CAP: Fix u8 overflow
+  CVE-2023-28327: b3abe42e94900bdd045c472f9c9be620ba5ce553 af_unix: Get user_ns from in_skb in unix_diag_get_exact().
 
 CVEs fixed in 6.1.2:
   CVE-2022-3424: 4e947fc71bec7c7da791f8562d5da233b235ba5e misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os
@@ -12,9 +13,13 @@ CVEs fixed in 6.1.2:
   CVE-2022-3532: d7dc8fad67fab906530c50155b12cf6117e99299 selftests/bpf: Fix memory leak caused by not destroying skeleton
   CVE-2022-3534: fbe08093fb2334549859829ef81d42570812597d libbpf: Fix use-after-free in btf_dump_name_dups
   CVE-2023-22997: 7a779e84b3c451ce4713456a413d3300143747a7 module: Fix NULL vs IS_ERR checking for module_get_next_page
+  CVE-2023-26606: f2e58e95273ce072ca95a2afa1f274825a1e1772 fs/ntfs3: Fix slab-out-of-bounds read in ntfs_trim_fs
+  CVE-2023-28328: 6b60cf73a931af34b7a0a3f467a79d9fe0df2d70 media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer()
 
 CVEs fixed in 6.1.3:
   CVE-2022-4379: 650b69b17cfd79f51476d93c2c63bfb73280a77a NFSD: fix use-after-free in __nfs42_ssc_open()
+  CVE-2022-48423: 2f041a19f4eb72bcc851f9e3a15f3cfd1ae1addf fs/ntfs3: Validate resident attribute name
+  CVE-2022-48424: b343c40bb7ff9095430c3f31468a59f8a760dabd fs/ntfs3: Validate attribute name offset
 
 CVEs fixed in 6.1.4:
   CVE-2022-36280: 622d527decaac0eb65512acada935a0fdc1d0202 drm/vmwgfx: Validate the box size for the snooped cursor
@@ -33,6 +38,8 @@ CVEs fixed in 6.1.6:
   CVE-2023-0266: d6ad4bd1d896ae1daffd7628cd50f124280fb8b1 ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF
 
 CVEs fixed in 6.1.7:
+  CVE-2022-38457: 7ac9578e45b20e3f3c0c8eb71f5417a499a7226a drm/vmwgfx: Remove rcu locks from user resources
+  CVE-2022-40133: 7ac9578e45b20e3f3c0c8eb71f5417a499a7226a drm/vmwgfx: Remove rcu locks from user resources
   CVE-2023-0179: 76ef74d4a379faa451003621a84e3498044e7aa3 netfilter: nft_payload: incorrect arithmetics when fetching VLAN header bits
   CVE-2023-0394: 0afa5f0736584411771299074bbeca8c1f9706d4 ipv6: raw: Deduct extension header length in rawv6_push_pending_frames
 
@@ -57,6 +64,17 @@ CVEs fixed in 6.1.13:
 
 CVEs fixed in 6.1.14:
   CVE-2022-2196: 63fada296062e91ad9f871970d4e7f19e21a6a15 KVM: VMX: Execute IBPB on emulated VM-exit when guest has IBRS
+
+CVEs fixed in 6.1.16:
+  CVE-2023-1032: 7c7570791b15c3b78e3229ae97825e7eb869c7da net: avoid double iput when sock_alloc_file fails
+  CVE-2023-1076: b4ada752eaf1341f47bfa3d8ada377eca75a8d44 tun: tun_chr_open(): correctly initialize socket uid
+  CVE-2023-1077: 6b4fcc4e8a3016e85766c161daf0732fca16c3a3 sched/rt: pick_next_rt_entity(): check list_entry
+  CVE-2023-1079: ee907829b36949c452c6f89485cb2a58e97c048e HID: asus: use spinlock to safely schedule workers
+  CVE-2023-1118: 029c1410e345ce579db5c007276340d072aac54a media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
+  CVE-2023-25012: f2bf592ebd5077661e00aa11e12e054c4c8f6dd0 HID: bigben: use spinlock to safely schedule workers
+
+CVEs fixed in 6.1.20:
+  CVE-2023-28466: 14c17c673e1bba08032d245d5fb025d1cbfee123 net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -125,8 +143,6 @@ Outstanding CVEs:
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
-  CVE-2022-38457: (unk)  
-  CVE-2022-40133: (unk)  
   CVE-2022-41848: (unk)  
   CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-44032: (unk)  
@@ -139,19 +155,15 @@ Outstanding CVEs:
   CVE-2022-45887: (unk)  
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2022-45919: (unk)  
+  CVE-2022-48425: (unk)  
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
-  CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
-  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
-  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
-  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-1192: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
+  CVE-2023-1380: (unk)  
   CVE-2023-20937: (unk)  
   CVE-2023-23005: (unk) mm/demotion: fix NULL vs IS_ERR checking in memory_tier_init 
   CVE-2023-23039: (unk)  
-  CVE-2023-25012: (unk) HID: bigben: use spinlock to safely schedule workers 
   CVE-2023-26242: (unk)  
   CVE-2023-26544: (unk)  
-  CVE-2023-26606: (unk)  

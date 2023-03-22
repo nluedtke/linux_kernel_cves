@@ -645,6 +645,7 @@ CVEs fixed in 4.19.167:
 
 CVEs fixed in 4.19.170:
   CVE-2021-3178: a08c2e586ad047fcea3f75664cca0915c77934fe nfsd4: readdirplus shouldn't return parent of export
+  CVE-2023-1390: 4d1d3dddcb3f26000e66cd0a9b8b16f7c2eb41bb tipc: fix NULL deref in tipc_link_xmit()
 
 CVEs fixed in 4.19.171:
   CVE-2021-39657: b397fcae2207963747c6f947ef4d06575553eaef scsi: ufs: Correct the LUN used in eh_device_reset_handler() callback
@@ -1070,6 +1071,7 @@ CVEs fixed in 4.19.267:
 CVEs fixed in 4.19.268:
   CVE-2022-3524: bbfbdca680b0cbea0e57be597b5e2cae19747052 tcp/udp: Fix memory leak in ipv6_renew_options().
   CVE-2022-42896: a2045d57e844864605d39e6cfd2237861d800f13 Bluetooth: L2CAP: Fix accepting connection request for invalid SPSM
+  CVE-2023-1382: 2c9c64a95d97727c9ada0d35abc90ee5fdbaeff7 tipc: set con sock in tipc_conn_alloc
 
 CVEs fixed in 4.19.269:
   CVE-2022-3643: 44dfdecc288b8d5932e09f5e6a597a089d5a82b2 xen/netback: Ensure protocol headers don't fall in the non-linear area
@@ -1085,6 +1087,7 @@ CVEs fixed in 4.19.270:
   CVE-2023-0394: f487d636e49bc1fdfbd8105bc1ab159164e2d8bd ipv6: raw: Deduct extension header length in rawv6_push_pending_frames
   CVE-2023-0461: 755193f2523ce5157c2f844a4b6d16b95593f830 net/ulp: prevent ULP without clone op from entering the LISTEN status
   CVE-2023-23455: 5374c455ebe6102e3d5f1842c6d8ff72b3ca659f net: sched: atm: dont intepret cls results when asked to drop
+  CVE-2023-28328: 7abfe467cd685f5da7ecb415441e45e3e4e2baa8 media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer()
 
 CVEs fixed in 4.19.272:
   CVE-2023-1073: f958da03d9a71808548b2e5418d95482b106eb9a HID: check empty report_list in hid_validate_values()
@@ -1097,6 +1100,10 @@ CVEs fixed in 4.19.273:
 
 CVEs fixed in 4.19.274:
   CVE-2022-3707: c5245a6cf83ca5c4b68d643f8b31ed0eb127126e drm/i915/gvt: fix double free bug in split_2MB_gtt_entry
+
+CVEs fixed in 4.19.276:
+  CVE-2023-1079: 74b78391a9b6f67de90b13f5a85e329e3b3f5a72 HID: asus: use spinlock to safely schedule workers
+  CVE-2023-1118: 52bde2754d76fc97390f097fba763413607f157a media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1242,11 +1249,11 @@ Outstanding CVEs:
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
-  CVE-2022-38457: (unk)  
+  CVE-2022-38457: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
-  CVE-2022-40133: (unk)  
+  CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-41222: (unk) mm/mremap: hold the rmap lock in write mode when moving page table entries. 
   CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
@@ -1267,10 +1274,8 @@ Outstanding CVEs:
   CVE-2023-0615: (unk)  
   CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
   CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
-  CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
-  CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
-  CVE-2023-1252: (unk) ovl: fix use after free in struct ovl_aio_req 
+  CVE-2023-1380: (unk)  
   CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
@@ -1278,4 +1283,4 @@ Outstanding CVEs:
   CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
   CVE-2023-26242: (unk)  
   CVE-2023-26544: (unk)  
-  CVE-2023-26606: (unk)  
+  CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 

@@ -1022,6 +1022,7 @@ CVEs fixed in 4.9.252:
 
 CVEs fixed in 4.9.253:
   CVE-2021-3178: 2174b2cf3960b9091c2516feeb9e345fe24f8906 nfsd4: readdirplus shouldn't return parent of export
+  CVE-2023-1390: 310014f572a59b311c175321265a08c9adfced0c tipc: fix NULL deref in tipc_link_xmit()
 
 CVEs fixed in 4.9.254:
   CVE-2020-27825: 04f51df12ddaa0e2a38223da00e0d3ed02d62a01 tracing: Fix race in trace_open and buffer resize call
@@ -1372,6 +1373,7 @@ CVEs fixed in 4.9.337:
   CVE-2022-3424: f99d5f1bd8cd1e99931b6e5544a5601a1fe33f82 misc: sgi-gru: fix use-after-free error in gru_set_context_option, gru_fault and gru_handle_user_call_os
   CVE-2022-36280: ee8d31836cbe7c26e207bfa0a4a726f0a25cfcf6 drm/vmwgfx: Validate the box size for the snooped cursor
   CVE-2022-45934: 49d5867819ab7c744852b45509e8469839c07e0e Bluetooth: L2CAP: Fix u8 overflow
+  CVE-2023-28328: 2b6a8a1a32746981044e7ab06649c804acb4068a media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1582,10 +1584,10 @@ Outstanding CVEs:
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
-  CVE-2022-38457: (unk)  
+  CVE-2022-38457: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
-  CVE-2022-40133: (unk)  
+  CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-40307: (unk) efi: capsule-loader: Fix use-after-free in efi_capsule_write 
   CVE-2022-41218: (unk) media: dvb-core: Fix UAF due to refcount races at releasing 
   CVE-2022-41222: (unk) mm/mremap: hold the rmap lock in write mode when moving page table entries. 
@@ -1593,7 +1595,6 @@ Outstanding CVEs:
   CVE-2022-41848: (unk)  
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
-  CVE-2022-44034: (unk)  
   CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
@@ -1613,7 +1614,8 @@ Outstanding CVEs:
   CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
   CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
-  CVE-2023-1252: (unk) ovl: fix use after free in struct ovl_aio_req 
+  CVE-2023-1380: (unk)  
+  CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
   CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23039: (unk)  
@@ -1622,4 +1624,3 @@ Outstanding CVEs:
   CVE-2023-23559: (unk) wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid 
   CVE-2023-26544: (unk)  
   CVE-2023-26545: (unk) net: mpls: fix stale pointer if allocation fails during device rename 
-  CVE-2023-26606: (unk)  
