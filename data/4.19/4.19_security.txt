@@ -756,6 +756,7 @@ CVEs fixed in 4.19.198:
   CVE-2021-38199: 743f6b973c8ba8a0a5ed15ab11e1d07fa00d5368 NFSv4: Initialise connection to the server in nfs4_alloc_client()
   CVE-2021-45485: f0be58ec9931907e980cf21737e51d369808eb95 ipv6: use prandom_u32() for ID generation
   CVE-2022-0850: 9ed3a3d3a8d2cbe99d9e4386a98856491f0eade0 ext4: fix kernel infoleak via ext4_extent_header
+  CVE-2023-28772: 1f4c6061fccee64b2072b28dfa3e93cf859c4c0a seq_buf: Fix overflow in seq_buf_putmem_hex()
 
 CVEs fixed in 4.19.199:
   CVE-2021-22543: 117777467bc015f0dc5fc079eeba0fa80c965149 KVM: do not allow mapping valid but non-reference-counted pages
@@ -1096,6 +1097,7 @@ CVEs fixed in 4.19.272:
 
 CVEs fixed in 4.19.273:
   CVE-2023-1078: 909d5eef5ce792bb76d7b5a9b7a6852b813d8cac rds: rds_rm_zerocopy_callback() use list_first_entry()
+  CVE-2023-1513: 669c76e55de332fbcbce5b74fccef1b4698a8936 kvm: initialize all of the kvm_debugregs structure before sending it to userspace
   CVE-2023-26545: aa07c86e43ed8780d610ecfb2ce13da326729201 net: mpls: fix stale pointer if allocation fails during device rename
 
 CVEs fixed in 4.19.274:
@@ -1267,14 +1269,18 @@ Outstanding CVEs:
   CVE-2022-45886: (unk)  
   CVE-2022-45887: (unk)  
   CVE-2022-45919: (unk)  
+  CVE-2022-4744: (unk) tun: avoid double free in tun_free_netdev 
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
   CVE-2023-0030: (unk) drm/nouveau/mmu: add more general vmm free/node handling functions 
+  CVE-2023-0160: (unk)  
+  CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
   CVE-2023-0590: (unk) net: sched: fix race condition in qdisc_graft() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
   CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
   CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
+  CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
   CVE-2023-1380: (unk)  
   CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
@@ -1282,5 +1288,4 @@ Outstanding CVEs:
   CVE-2023-23039: (unk)  
   CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
   CVE-2023-26242: (unk)  
-  CVE-2023-26544: (unk)  
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 

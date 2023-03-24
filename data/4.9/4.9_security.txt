@@ -1112,6 +1112,7 @@ CVEs fixed in 4.9.276:
   CVE-2021-38160: 9e2b8368b2079437c6840f3303cb0b7bc9b896ee virtio_console: Assure used length from device is limited
   CVE-2021-45485: 3fc852e59c0a48094cc0f1b2e866604986bbcd31 ipv6: use prandom_u32() for ID generation
   CVE-2022-0850: 25dcc64fa0c9399653e1fd1a4bad6c1e8cb31f3f ext4: fix kernel infoleak via ext4_extent_header
+  CVE-2023-28772: f2b9f758e1dfb593872fd0fcd7644875bcb8757a seq_buf: Fix overflow in seq_buf_putmem_hex()
 
 CVEs fixed in 4.9.277:
   CVE-2021-3679: 7db12bae1a239d872d17e128fd5271da789bf99c tracing: Fix bug in rb_per_cpu_empty() that might cause deadloop.
@@ -1601,10 +1602,13 @@ Outstanding CVEs:
   CVE-2022-45886: (unk)  
   CVE-2022-45887: (unk)  
   CVE-2022-45919: (unk)  
+  CVE-2022-4744: (unk) tun: avoid double free in tun_free_netdev 
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
   CVE-2022-47929: (unk) net: sched: disallow noqueue for qdisc classes 
   CVE-2023-0030: (unk) drm/nouveau/mmu: add more general vmm free/node handling functions 
+  CVE-2023-0160: (unk)  
   CVE-2023-0266: (unk) ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF 
+  CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
   CVE-2023-0394: (unk) ipv6: raw: Deduct extension header length in rawv6_push_pending_frames 
   CVE-2023-0590: (unk) net: sched: fix race condition in qdisc_graft() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
@@ -1616,11 +1620,11 @@ Outstanding CVEs:
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
   CVE-2023-1380: (unk)  
   CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
+  CVE-2023-1513: (unk) kvm: initialize all of the kvm_debugregs structure before sending it to userspace 
   CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23039: (unk)  
   CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
   CVE-2023-23455: (unk) net: sched: atm: dont intepret cls results when asked to drop 
   CVE-2023-23559: (unk) wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid 
-  CVE-2023-26544: (unk)  
   CVE-2023-26545: (unk) net: mpls: fix stale pointer if allocation fails during device rename 
