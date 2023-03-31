@@ -586,6 +586,7 @@ CVEs fixed in 5.4.170:
   CVE-2023-23006: db484d35a9482d21a7f36da4dfc7a68aa2e9e1d6 net/mlx5: DR, Fix NULL vs IS_ERR checking in dr_domain_init_resources
 
 CVEs fixed in 5.4.171:
+  CVE-2021-3923: 5eb5d9c6591d7e58f32088ef848503a4a947fc46 RDMA/core: Don't infoleak GRH fields
   CVE-2021-4155: 102af6edfd3a372db6e229177762a91f552e5f5e xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
   CVE-2021-45095: 2a6a811a45fde5acb805ead4d1e942be3875b302 phonet: refcount leak in pep_sock_accep
   CVE-2022-3105: 7646a340b25bb68cfb6d2e087a608802346d0f7b RDMA/uverbs: Check for null return of kmalloc_array
@@ -672,6 +673,7 @@ CVEs fixed in 5.4.189:
   CVE-2022-3111: 90bec38f6a4c81814775c7f3dfc9acf281d5dcfa power: supply: wm8350-power: Add missing free in free_charger_irq
   CVE-2022-3202: e19c3149a80e4fc8df298d6546640e01601f3758 jfs: prevent NULL deref in diFree
   CVE-2022-3239: 92f84aa82dfaa8382785874277b0c4bedec89a68 media: em28xx: initialize refcount before kref_get
+  CVE-2023-1637: 17f3e31c860371ff72db7f9b2fb44ab008a133e0 x86/speculation: Restore speculation related MSRs during S3 resume
 
 CVEs fixed in 5.4.190:
   CVE-2022-1204: 9e1e088a57c23251f1cfe9601bbd90ade2ea73b9 ax25: Fix refcount leaks caused by ax25_cb_del()
@@ -779,6 +781,7 @@ CVEs fixed in 5.4.213:
 CVEs fixed in 5.4.215:
   CVE-2022-3303: 4051324a6dafd7053c74c475e80b3ba10ae672b0 ALSA: pcm: oss: Fix race at SNDCTL_DSP_SYNC
   CVE-2022-39842: 1878eaf0edb8c9e58a6ca0cf31b7a647ca346be9 video: fbdev: pxa3xx-gcu: Fix integer overflow in pxa3xx_gcu_write
+  CVE-2022-42432: 721ea8ac063d70c2078c4e762212705de6151764 netfilter: nfnetlink_osf: fix possible bogus match in nf_osf_find()
 
 CVEs fixed in 5.4.217:
   CVE-2022-23816: 893cd858b09ca20c8c919db8dc5b009895626da3 x86/kvm/vmx: Make noinstr clean
@@ -926,6 +929,7 @@ Outstanding CVEs:
   CVE-2020-36310: (unk) KVM: SVM: avoid infinite loop on NPF from bad address 
   CVE-2020-36313: (unk) KVM: Fix out of range accesses to memslots 
   CVE-2020-36385: (unk) RDMA/ucma: Rework ucma_migrate_id() to avoid races with destroy 
+  CVE-2020-36691: (unk) netlink: limit recursion depth in policy validation 
   CVE-2021-0399: (unk)  
   CVE-2021-0929: (unk) staging/android/ion: delete dma_buf->kmap/unmap implemenation 
   CVE-2021-20177: (unk) netfilter: add and use nf_hook_slow_list() 
@@ -1015,11 +1019,16 @@ Outstanding CVEs:
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
   CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
   CVE-2023-1380: (unk)  
+  CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
+  CVE-2023-1611: (unk)  
+  CVE-2023-1652: (unk) NFSD: fix use-after-free in nfsd4_ssc_setup_dul() 
+  CVE-2023-1670: (unk) xirc2ps_cs: Fix use after free bug in xirc2ps_detach 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
-  CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
   CVE-2023-23039: (unk)  
   CVE-2023-26242: (unk)  
+  CVE-2023-28464: (unk)  
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
+  CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 

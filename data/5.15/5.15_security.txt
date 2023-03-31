@@ -60,6 +60,7 @@ CVEs fixed in 5.15.13:
   CVE-2023-23006: 4595dffccfa5b9360162c72cc0f6a33477d871cf net/mlx5: DR, Fix NULL vs IS_ERR checking in dr_domain_init_resources
 
 CVEs fixed in 5.15.14:
+  CVE-2021-3923: e1e354771812b12f0b4c433bbaf916f87cd0f6c7 RDMA/core: Don't infoleak GRH fields
   CVE-2021-4155: b0e72ba9e520b95346e68800afff0db65e766ca8 xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
   CVE-2021-4197: c6ebc35298848accb5e50c37fdb2490cf4690c92 cgroup: Use open-time credentials for process migraton perm checks
   CVE-2021-45095: 9ca97a693aa8b86e8424f0047198ea3ab997d50f phonet: refcount leak in pep_sock_accep
@@ -107,6 +108,7 @@ CVEs fixed in 5.15.25:
   CVE-2022-0847: 114e9f141822e6977633d322c1b03e89bd209932 lib/iov_iter: initialize "flags" in new pipe_buffer
   CVE-2022-20008: f3ff5f75d8f6367eac7556c9db1227bb43e5c615 mmc: block: fix read single on recovery logic
   CVE-2022-27950: de0d102d0c8c681fc9a3263d842fb35f7cf662f4 HID: elo: fix memory leak in elo_probe
+  CVE-2023-1582: a8dd0cfa37792863b6c4bf9542975212a6715d49 fs/proc: task_mmu.c: don't read mapcount for migration entry
 
 CVEs fixed in 5.15.26:
   CVE-2022-25636: 6c5d780469d6c3590729940e2be8a3bd66ea4814 netfilter: nf_tables_offload: incorrect flow offload action array size
@@ -179,6 +181,7 @@ CVEs fixed in 5.15.34:
   CVE-2022-1263: 226b4327ef5c88572fc12187193f1b5073c10837 KVM: avoid NULL pointer dereference in kvm_dirty_ring_push
   CVE-2022-29582: ba7261af2b030ab2c06189be1fc77b273716839f io_uring: fix race between timeout flush and removal
   CVE-2022-3202: d925b7e78b62805fcc5440d1521181c82b6f03cb jfs: prevent NULL deref in diFree
+  CVE-2023-1637: fab4b79e869a8e1c0f7d931a4eff0285d9b5efa7 x86/speculation: Restore speculation related MSRs during S3 resume
 
 CVEs fixed in 5.15.35:
   CVE-2022-1204: 452ae92b99062d2f6a34324eaf705a3b7eac9f8b ax25: Fix refcount leaks caused by ax25_cb_del()
@@ -328,6 +331,9 @@ CVEs fixed in 5.15.70:
   CVE-2022-3061: 59b756da49bfa51a00a0b58b4147ce2652bc3d28 video: fbdev: i740fb: Error out if 'pixclock' equals zero
   CVE-2022-39842: ab5140c6ddd7473509e12f468948de91138b124e video: fbdev: pxa3xx-gcu: Fix integer overflow in pxa3xx_gcu_write
 
+CVEs fixed in 5.15.71:
+  CVE-2022-42432: 816eab147e5c6f6621922b8515ad9010ceb1735e netfilter: nfnetlink_osf: fix possible bogus match in nf_osf_find()
+
 CVEs fixed in 5.15.72:
   CVE-2022-2308: dc248ddf41eab4566e95b1ee2433c8a5134ad94a vduse: prevent uninitialized memory accesses
 
@@ -432,6 +438,7 @@ CVEs fixed in 5.15.91:
   CVE-2023-0386: e91308e63710574c4b6a0cadda3e042a3699666e ovl: fail on invalid uid/gid mapping at copy up
   CVE-2023-1073: 2b49568254365c9c247beb0eabbaa15d0e279d64 HID: check empty report_list in hid_validate_values()
   CVE-2023-1074: 3391bd42351be0beb14f438c7556912b9f96cb32 sctp: fail if no bound addresses can be used for a given scope
+  CVE-2023-1652: 0a27dcd5343026ac0cb168ee63304255372b7a36 NFSD: fix use-after-free in nfsd4_ssc_setup_dul()
   CVE-2023-23559: 8cbf932c5c40b0c20597fa623c308d5bde0848b5 wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
 
 CVEs fixed in 5.15.94:
@@ -456,6 +463,12 @@ CVEs fixed in 5.15.99:
 
 CVEs fixed in 5.15.100:
   CVE-2023-23004: 1c7988d5c79f72287177bb774cde15fde69f3c97 malidp: Fix NULL vs IS_ERR() checking
+
+CVEs fixed in 5.15.105:
+  CVE-2022-4269: 169a41073993add6b0cfdc44e168e75f92f4834d act_mirred: use the backlog for nested calls to mirred ingress
+  CVE-2022-4379: ec5b7814353532243e8a9147d232a32549174909 NFSD: fix use-after-free in __nfs42_ssc_open()
+  CVE-2023-1670: 4ab9e85a5ce0b2ef6e63abf861179898da613d78 xirc2ps_cs: Fix use after free bug in xirc2ps_detach
+  CVE-2023-28466: 0b54d75aa43a1edebc8a3770901f5c3557ee0daa net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -540,8 +553,6 @@ Outstanding CVEs:
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-41848: (unk)  
-  CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
-  CVE-2022-4379: (unk) NFSD: fix use-after-free in __nfs42_ssc_open() 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
@@ -562,10 +573,11 @@ Outstanding CVEs:
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
   CVE-2023-1380: (unk)  
-  CVE-2023-20937: (unk)  
+  CVE-2023-1611: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
   CVE-2023-26242: (unk)  
   CVE-2023-26544: (unk)  
-  CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
+  CVE-2023-28464: (unk)  
+  CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 

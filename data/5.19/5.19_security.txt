@@ -19,6 +19,7 @@ CVEs fixed in 5.19.2:
 
 CVEs fixed in 5.19.4:
   CVE-2022-2785: b429d0b9a7a0f3dddb1f782b72629e6353f292fd bpf: Disallow bpf programs call prog_run command.
+  CVE-2022-3625: 26bef5616255066268c0e40e1da10cc9b78b82e9 devlink: Fix use-after-free after a failed reload
   CVE-2022-3635: af412b252550f9ac36d9add7b013c2a2c3463835 atm: idt77252: fix use-after-free bugs caused by tst_timer
 
 CVEs fixed in 5.19.6:
@@ -42,6 +43,9 @@ CVEs fixed in 5.19.9:
 CVEs fixed in 5.19.11:
   CVE-2022-3910: d50c30b66f040f1a7e3202a95f07c2084f5ca30f io_uring/msg_ring: check file type before putting
 
+CVEs fixed in 5.19.12:
+  CVE-2022-42432: 633c81c0449663f57d4138326d036dc6cfad674e netfilter: nfnetlink_osf: fix possible bogus match in nf_osf_find()
+
 CVEs fixed in 5.19.14:
   CVE-2022-2308: 38d854c4a11c3bbf6a96ea46f14b282670c784ac vduse: prevent uninitialized memory accesses
 
@@ -55,6 +59,7 @@ CVEs fixed in 5.19.16:
   CVE-2022-42722: fa63b5f6f8853ace755d9a23fb75817d5ba20df5 wifi: mac80211: fix crash in beacon protection for P2P-device
 
 CVEs fixed in 5.19.17:
+  CVE-2022-2602: b4293c01ee0d0ecdd3cb5801e13f62271144667a io_uring/af_unix: defer registered files gc to io_uring release
   CVE-2022-3542: 96c0c14135f5803f9e94e6da2ee9c4b012fdcb20 bnx2x: fix potential memory leak in bnx2x_tpa_stop()
   CVE-2022-3565: 1f76323ac43fe0b00677794c930dee9f66ea2999 mISDN: fix use-after-free bugs in l1oip timer handlers
   CVE-2022-3594: 2e896abccf99fef76691d8e1019bd44105a12e1f r8152: Rate limit overflow messages
@@ -123,7 +128,6 @@ Outstanding CVEs:
   CVE-2022-2209: (unk)  
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
-  CVE-2022-2602: (unk) io_uring/af_unix: defer registered files gc to io_uring release 
   CVE-2022-26878: (unk)  
   CVE-2022-27672: (unk) x86/speculation: Identify processors vulnerable to SMT RSB predictions 
   CVE-2022-2961: (unk)  
@@ -150,7 +154,6 @@ Outstanding CVEs:
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
   CVE-2022-3619: (unk) Bluetooth: L2CAP: Fix memory leak in vhci_write 
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
-  CVE-2022-3625: (unk) devlink: Fix use-after-free after a failed reload 
   CVE-2022-3628: (unk) wifi: brcmfmac: Fix potential buffer overflow in brcmf_fweh_event_worker() 
   CVE-2022-36280: (unk) drm/vmwgfx: Validate the box size for the snooped cursor 
   CVE-2022-3629: (unk) vsock: Fix memory leak in vsock_connect() 
@@ -238,8 +241,11 @@ Outstanding CVEs:
   CVE-2023-1380: (unk)  
   CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
   CVE-2023-1513: (unk) kvm: initialize all of the kvm_debugregs structure before sending it to userspace 
+  CVE-2023-1583: (unk) io_uring/rsrc: fix null-ptr-deref in io_file_bitmap_get() 
+  CVE-2023-1611: (unk)  
+  CVE-2023-1652: (unk) NFSD: fix use-after-free in nfsd4_ssc_setup_dul() 
+  CVE-2023-1670: (unk) xirc2ps_cs: Fix use after free bug in xirc2ps_detach 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
-  CVE-2023-20937: (unk)  
   CVE-2023-22997: (unk) module: Fix NULL vs IS_ERR checking for module_get_next_page 
   CVE-2023-23039: (unk)  
   CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
@@ -253,4 +259,6 @@ Outstanding CVEs:
   CVE-2023-26607: (unk) ntfs: fix out-of-bounds read in ntfs_attr_find() 
   CVE-2023-28327: (unk) af_unix: Get user_ns from in_skb in unix_diag_get_exact(). 
   CVE-2023-28328: (unk) media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer() 
+  CVE-2023-28464: (unk)  
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
+  CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 

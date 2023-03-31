@@ -1,5 +1,6 @@
 
 CVEs fixed in 5.16:
+  CVE-2021-3923: b35a0f4dd544eaa6162b6d2f13a2557a121ae5fd RDMA/core: Don't infoleak GRH fields
   CVE-2021-4155: 983d8e60f50806f90534cc5373d0ce867e5aaf79 xfs: map unwritten blocks in XFS_IOC_{ALLOC,FREE}SP just like fallocate
   CVE-2021-4197: 1756d7994ad85c2479af6ae5a9750b92324685af cgroup: Use open-time credentials for process migraton perm checks
   CVE-2022-0382: d6d86830705f173fca6087a3e67ceaf68db80523 net ticp:fix a kernel-infoleak in __tipc_sendmsg()
@@ -43,6 +44,7 @@ CVEs fixed in 5.16.10:
   CVE-2022-25258: 8895017abfc76bbc223499b179919dd205047197 USB: gadget: validate interface OS descriptor requests
   CVE-2022-25375: 2724ebafda0a8df08a9cb91557d33226bee80f7b usb: gadget: rndis: check size of RNDIS_MSG_SET command
   CVE-2022-2964: 9681823f96a811268265f35307072ad80713c274 net: usb: ax88179_178a: Fix out-of-bounds accesses in RX fixup
+  CVE-2023-1582: 05d3f8045efa59457b323caf00bdb9273b7962fa fs/proc: task_mmu.c: don't read mapcount for migration entry
 
 CVEs fixed in 5.16.11:
   CVE-2022-0500: e982070f8970bb62e69ed7c9cafff886ed200349 bpf: Introduce MEM_RDONLY flag
@@ -123,6 +125,7 @@ CVEs fixed in 5.16.20:
   CVE-2022-28893: 7a0921a23cae42e9fa5ce964f6907181b6dc80d8 SUNRPC: Ensure we flush any closed sockets before xs_xprt_free()
   CVE-2022-29582: d568c13d9d29d3151540a0d1b20c3a1ca801a662 io_uring: fix race between timeout flush and removal
   CVE-2022-3202: ffe1d40aec3f6f8cc620369ba07eb5e9bd449d85 jfs: prevent NULL deref in diFree
+  CVE-2023-1637: aeb473e7ed48b1d5e511353cbef5f4e6e00544ac x86/speculation: Restore speculation related MSRs during S3 resume
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -326,6 +329,7 @@ Outstanding CVEs:
   CVE-2022-41858: (unk) drivers: net: slip: fix NPD bug in sl_tx_timeout() 
   CVE-2022-42328: (unk) xen/netback: don't call kfree_skb() with interrupts disabled 
   CVE-2022-42329: (unk) xen/netback: don't call kfree_skb() with interrupts disabled 
+  CVE-2022-42432: (unk) netfilter: nfnetlink_osf: fix possible bogus match in nf_osf_find() 
   CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-42703: (unk) mm/rmap: Fix anon_vma->degree ambiguity leading to double-reuse 
   CVE-2022-42719: (unk) wifi: mac80211: fix MBSSID parsing use-after-free 
@@ -395,8 +399,10 @@ Outstanding CVEs:
   CVE-2023-1380: (unk)  
   CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
   CVE-2023-1513: (unk) kvm: initialize all of the kvm_debugregs structure before sending it to userspace 
+  CVE-2023-1611: (unk)  
+  CVE-2023-1652: (unk) NFSD: fix use-after-free in nfsd4_ssc_setup_dul() 
+  CVE-2023-1670: (unk) xirc2ps_cs: Fix use after free bug in xirc2ps_detach 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
-  CVE-2023-20937: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-22998: (unk) drm/virtio: Fix NULL vs IS_ERR checking in virtio_gpu_object_shmem_init 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
@@ -413,4 +419,6 @@ Outstanding CVEs:
   CVE-2023-26607: (unk) ntfs: fix out-of-bounds read in ntfs_attr_find() 
   CVE-2023-28327: (unk) af_unix: Get user_ns from in_skb in unix_diag_get_exact(). 
   CVE-2023-28328: (unk) media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer() 
+  CVE-2023-28464: (unk)  
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
+  CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 
