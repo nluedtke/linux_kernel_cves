@@ -444,6 +444,7 @@ CVEs fixed in 5.10.117:
 CVEs fixed in 5.10.118:
   CVE-2022-1652: 911b36267855501f7f80a75927c128c0ac03fe58 floppy: use a statically allocated error counter
   CVE-2022-1729: 3ee8e109c3c316073a3e0f83ec0769c7ee8a7375 perf: Fix sys_perf_event_open() race against self
+  CVE-2023-1838: ec0d801d1a44d9259377142c6218885ecd685e41 Fix double fget() in vhost_net_set_backend()
 
 CVEs fixed in 5.10.119:
   CVE-2022-1012: a5c68f457fbf52c5564ca4eea03f84776ef14e41 secure_seq: use the 64 bits of the siphash for port offset calculation
@@ -667,6 +668,14 @@ CVEs fixed in 5.10.173:
   CVE-2023-23004: a5bbea50d622b8f49ab8ee3b0eb283107febcf1a malidp: Fix NULL vs IS_ERR() checking
   CVE-2023-25012: fddde36316da8acb45a3cca2e5fda102f5215877 HID: bigben: use spinlock to safely schedule workers
 
+CVEs fixed in 5.10.176:
+  CVE-2023-1855: 0a73c8b3cc99d214dff83c51805c844240c4f749 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
+
+CVEs fixed in 5.10.177:
+  CVE-2022-4379: 01e4c9c03de8a9f8839cb7342bc4bccf9104efe5 NFSD: fix use-after-free in __nfs42_ssc_open()
+  CVE-2023-1670: bfeeb3aaad4ee8eaaefe5d9edd9b2ccb5d9b7505 xirc2ps_cs: Fix use after free bug in xirc2ps_detach
+  CVE-2023-28466: 1fde5782f187daa05919d2bebd872df8ebcc00d1 net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -775,7 +784,6 @@ Outstanding CVEs:
   CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-41848: (unk)  
   CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
-  CVE-2022-4379: (unk) NFSD: fix use-after-free in __nfs42_ssc_open() 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
@@ -794,14 +802,12 @@ Outstanding CVEs:
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
   CVE-2023-1380: (unk)  
   CVE-2023-1611: (unk)  
-  CVE-2023-1652: (unk) NFSD: fix use-after-free in nfsd4_ssc_setup_dul() 
-  CVE-2023-1670: (unk) xirc2ps_cs: Fix use after free bug in xirc2ps_detach 
+  CVE-2023-1859: (unk)  
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
+  CVE-2023-20941: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
   CVE-2023-23586: (unk) io_uring: remove io_identity 
   CVE-2023-26242: (unk)  
   CVE-2023-28464: (unk)  
-  CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
-  CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 

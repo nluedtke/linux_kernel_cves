@@ -74,6 +74,7 @@ CVEs fixed in 5.17.10:
   CVE-2022-1652: 88887ced7803132ed357a42d050560a2fb5c7ce6 floppy: use a statically allocated error counter
   CVE-2022-1729: 22fb2974224c9836eeaf0d24fdd481fcdaa0aea8 perf: Fix sys_perf_event_open() race against self
   CVE-2022-21499: 281d356a035132f2603724ee0f04767d70e2e98e lockdown: also lock down previous kgdb use
+  CVE-2023-1838: d759015c9bcaa87d2ebf41c7bab561f7033c3e80 Fix double fget() in vhost_net_set_backend()
 
 CVEs fixed in 5.17.12:
   CVE-2022-1789: 19a66796d1f0dd4ce4b05f76d53ce1d0a7dc817d KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID
@@ -340,7 +341,10 @@ Outstanding CVEs:
   CVE-2023-1611: (unk)  
   CVE-2023-1652: (unk) NFSD: fix use-after-free in nfsd4_ssc_setup_dul() 
   CVE-2023-1670: (unk) xirc2ps_cs: Fix use after free bug in xirc2ps_detach 
+  CVE-2023-1855: (unk) hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition 
+  CVE-2023-1859: (unk)  
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
+  CVE-2023-20941: (unk)  
   CVE-2023-22997: (unk) module: Fix NULL vs IS_ERR checking for module_get_next_page 
   CVE-2023-22998: (unk) drm/virtio: Fix NULL vs IS_ERR checking in virtio_gpu_object_shmem_init 
   CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
@@ -350,7 +354,7 @@ Outstanding CVEs:
   CVE-2023-23559: (unk) wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid 
   CVE-2023-25012: (unk) HID: bigben: use spinlock to safely schedule workers 
   CVE-2023-26242: (unk)  
-  CVE-2023-26544: (unk)  
+  CVE-2023-26544: (unk) fs/ntfs3: Fix slab-out-of-bounds read in run_unpack 
   CVE-2023-26545: (unk) net: mpls: fix stale pointer if allocation fails during device rename 
   CVE-2023-26606: (unk) fs/ntfs3: Fix slab-out-of-bounds read in ntfs_trim_fs 
   CVE-2023-26607: (unk) ntfs: fix out-of-bounds read in ntfs_attr_find() 

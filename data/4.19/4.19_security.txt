@@ -971,6 +971,7 @@ CVEs fixed in 4.19.243:
 CVEs fixed in 4.19.245:
   CVE-2022-1652: 3392d8711ad9e5b688999c948fd36d798c0d075d floppy: use a statically allocated error counter
   CVE-2022-1729: 6cdd53a49aa7413e53c14ece27d826f0b628b18a perf: Fix sys_perf_event_open() race against self
+  CVE-2023-1838: 6ca70982c646cc32e458150ee7f2530a24369b8c Fix double fget() in vhost_net_set_backend()
 
 CVEs fixed in 4.19.246:
   CVE-2022-0494: 18243d8479fd77952bdb6340024169d30b173a40 block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern
@@ -1108,6 +1109,14 @@ CVEs fixed in 4.19.274:
 CVEs fixed in 4.19.276:
   CVE-2023-1079: 74b78391a9b6f67de90b13f5a85e329e3b3f5a72 HID: asus: use spinlock to safely schedule workers
   CVE-2023-1118: 52bde2754d76fc97390f097fba763413607f157a media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
+
+CVEs fixed in 4.19.279:
+  CVE-2023-1855: e0a37b43cd732038e37b4e7f6c6c0658fe0b6d73 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
+
+CVEs fixed in 4.19.280:
+  CVE-2022-4744: 8eb43d635950e27c29f1e9e49a23b31637f37757 tun: avoid double free in tun_free_netdev
+  CVE-2023-1670: 526660c25d3b93b1232a525b75469048388f0928 xirc2ps_cs: Fix use after free bug in xirc2ps_detach
+  CVE-2023-23454: 8ed4c82571d848d76877c4d70687686e607766e3 net: sched: cbq: dont intepret cls results when asked to drop
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1254,11 +1263,9 @@ Outstanding CVEs:
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
-  CVE-2022-38457: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
-  CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-41222: (unk) mm/mremap: hold the rmap lock in write mode when moving page table entries. 
   CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
@@ -1272,7 +1279,6 @@ Outstanding CVEs:
   CVE-2022-45886: (unk)  
   CVE-2022-45887: (unk)  
   CVE-2022-45919: (unk)  
-  CVE-2022-4744: (unk) tun: avoid double free in tun_free_netdev 
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
   CVE-2023-0030: (unk) drm/nouveau/mmu: add more general vmm free/node handling functions 
   CVE-2023-0160: (unk)  
@@ -1287,13 +1293,11 @@ Outstanding CVEs:
   CVE-2023-1380: (unk)  
   CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
   CVE-2023-1611: (unk)  
-  CVE-2023-1652: (unk) NFSD: fix use-after-free in nfsd4_ssc_setup_dul() 
-  CVE-2023-1670: (unk) xirc2ps_cs: Fix use after free bug in xirc2ps_detach 
+  CVE-2023-1859: (unk)  
+  CVE-2023-20941: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
-  CVE-2023-23454: (unk) net: sched: cbq: dont intepret cls results when asked to drop 
   CVE-2023-26242: (unk)  
   CVE-2023-28464: (unk)  
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
-  CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 
