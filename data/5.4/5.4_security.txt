@@ -725,6 +725,7 @@ CVEs fixed in 5.4.201:
 
 CVEs fixed in 5.4.202:
   CVE-2021-33656: c87e851b23e5cb2ba90a3049ef38340ed7d5746f vt: drop old FONT ioctls
+  CVE-2023-2008: c7bdaad9cbfe17c83e4f56c7bb7a2d87d944f0fb udmabuf: add back sanity check
 
 CVEs fixed in 5.4.204:
   CVE-2022-2318: bb91556d2af066f8ca2e7fd8e334d652e731ee29 net: rose: fix UAF bugs caused by timer handler
@@ -872,15 +873,20 @@ CVEs fixed in 5.4.235:
   CVE-2023-1077: 084cd75643b61fb924f70cba98a71dea14942938 sched/rt: pick_next_rt_entity(): check list_entry
   CVE-2023-1079: dd08e68d04d08d2f42b09162c939a0b0841216cc HID: asus: use spinlock to safely schedule workers
   CVE-2023-1118: d120334278b370b6a1623a75ebe53b0c76cb247c media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
+  CVE-2023-1829: 7a6fb69bbcb21e9ce13bdf18c008c268874f0480 net/sched: Retire tcindex classifier
 
 CVEs fixed in 5.4.238:
   CVE-2023-1855: 26c176ce902861a45f8d699e057245ed7e0bcdf2 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
+  CVE-2023-1990: b0c202a8dc63008205a5d546559736507a9aae66 nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition
+  CVE-2023-30456: 65e4c9a6d0c9a8c81ce75576869d46fff5d7964f KVM: nVMX: add missing consistency checks for CR0 and CR4
 
 CVEs fixed in 5.4.240:
   CVE-2022-4744: 0c0e566f0387490d16f166808c72e9c772027681 tun: avoid double free in tun_free_netdev
   CVE-2023-0590: 0f5c0e0a4c0b081e5f959578a8e56c7921e63a2d net: sched: fix race condition in qdisc_graft()
   CVE-2023-1670: a07ec453e86abbd14e2d06d59367b4dd11437358 xirc2ps_cs: Fix use after free bug in xirc2ps_detach
+  CVE-2023-1989: a18fb433ceb56e0787546a9d77056dd0f215e762 Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work
   CVE-2023-28466: 754838aa02050ff3d8675bef79d172097218ea71 net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
+  CVE-2023-30772: 6fe078c2864b9defaa632733a5bae969b398b673 power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1028,8 +1034,9 @@ Outstanding CVEs:
   CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
   CVE-2023-1380: (unk)  
   CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
-  CVE-2023-1611: (unk)  
-  CVE-2023-1859: (unk)  
+  CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
+  CVE-2023-1859: (unk) 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition 
+  CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20941: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 

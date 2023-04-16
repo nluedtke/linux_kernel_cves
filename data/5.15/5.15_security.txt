@@ -250,6 +250,9 @@ CVEs fixed in 5.15.48:
   CVE-2022-21125: ebd0f558b48082c265fd594ffb205ae5350bfe79 x86/speculation/mmio: Reuse SRBDS mitigation for SBDS
   CVE-2022-21166: 2044838ab2283c23869ffa7b062e5f388136e432 x86/speculation/mmio: Enable CPU Fill buffer clearing on idle
 
+CVEs fixed in 5.15.51:
+  CVE-2023-2008: 5b45535865d62633e3816ee30eb8d3213038dc17 udmabuf: add back sanity check
+
 CVEs fixed in 5.15.53:
   CVE-2022-2318: 659d39545260100628d8a30020d09fb6bf63b915 net: rose: fix UAF bugs caused by timer handler
   CVE-2022-26365: 7ed65a4ad8fa9f40bc3979b32c54243d6a684ec9 xen/blkfront: fix leaking data in shared pages
@@ -464,16 +467,24 @@ CVEs fixed in 5.15.99:
   CVE-2023-25012: 0fd9998052926ed24cfb30ab1a294cfeda4d0a8f HID: bigben: use spinlock to safely schedule workers
 
 CVEs fixed in 5.15.100:
+  CVE-2023-1829: 7c183dc0af472dec33d2c0786a5e356baa8cad19 net/sched: Retire tcindex classifier
   CVE-2023-23004: 1c7988d5c79f72287177bb774cde15fde69f3c97 malidp: Fix NULL vs IS_ERR() checking
 
 CVEs fixed in 5.15.104:
   CVE-2023-1855: 7091951c2ca9d3fbec75ef1d677cbd89eeac9793 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
+  CVE-2023-1990: 84dd9cc34014e3a3dcce0eb6d54b8a067e97676b nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition
+  CVE-2023-30456: 9c2f09add608a505f0e5fb694805f4766801583f KVM: nVMX: add missing consistency checks for CR0 and CR4
 
 CVEs fixed in 5.15.105:
   CVE-2022-4269: 169a41073993add6b0cfdc44e168e75f92f4834d act_mirred: use the backlog for nested calls to mirred ingress
   CVE-2022-4379: ec5b7814353532243e8a9147d232a32549174909 NFSD: fix use-after-free in __nfs42_ssc_open()
   CVE-2023-1670: 4ab9e85a5ce0b2ef6e63abf861179898da613d78 xirc2ps_cs: Fix use after free bug in xirc2ps_detach
+  CVE-2023-1989: 8efae2112d910d8e5166dd0a836791b08721eef1 Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work
   CVE-2023-28466: 0b54d75aa43a1edebc8a3770901f5c3557ee0daa net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
+  CVE-2023-30772: 0fdb1cc4fe5255d0198c332b961bc4c1f8787982 power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition
+
+CVEs fixed in 5.15.106:
+  CVE-2023-1611: c976f9233ef926e090db5614a837824a0bcab3fb btrfs: fix race between quota disable and quota assign ioctls
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -578,8 +589,8 @@ Outstanding CVEs:
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
   CVE-2023-1380: (unk)  
-  CVE-2023-1611: (unk)  
-  CVE-2023-1859: (unk)  
+  CVE-2023-1859: (unk) 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition 
+  CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-20941: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 

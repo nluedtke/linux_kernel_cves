@@ -1109,14 +1109,18 @@ CVEs fixed in 4.19.274:
 CVEs fixed in 4.19.276:
   CVE-2023-1079: 74b78391a9b6f67de90b13f5a85e329e3b3f5a72 HID: asus: use spinlock to safely schedule workers
   CVE-2023-1118: 52bde2754d76fc97390f097fba763413607f157a media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
+  CVE-2023-1829: 01d0d2b8b4e3cf2110baba9371c0c3d04ad5c77b net/sched: Retire tcindex classifier
 
 CVEs fixed in 4.19.279:
   CVE-2023-1855: e0a37b43cd732038e37b4e7f6c6c0658fe0b6d73 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
+  CVE-2023-1990: 3405eb641dafcc8b28d174784b203c1622c121bf nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition
 
 CVEs fixed in 4.19.280:
   CVE-2022-4744: 8eb43d635950e27c29f1e9e49a23b31637f37757 tun: avoid double free in tun_free_netdev
   CVE-2023-1670: 526660c25d3b93b1232a525b75469048388f0928 xirc2ps_cs: Fix use after free bug in xirc2ps_detach
+  CVE-2023-1989: af4d48754d5517d33bac5e504ff1f1de0808e29e Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work
   CVE-2023-23454: 8ed4c82571d848d76877c4d70687686e607766e3 net: sched: cbq: dont intepret cls results when asked to drop
+  CVE-2023-30772: 533d915899b4a5a7b5b5a99eec24b2920ccd1f11 power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1292,8 +1296,10 @@ Outstanding CVEs:
   CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
   CVE-2023-1380: (unk)  
   CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
-  CVE-2023-1611: (unk)  
-  CVE-2023-1859: (unk)  
+  CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
+  CVE-2023-1859: (unk) 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition 
+  CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
+  CVE-2023-2008: (unk) udmabuf: add back sanity check 
   CVE-2023-20941: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
@@ -1301,3 +1307,4 @@ Outstanding CVEs:
   CVE-2023-26242: (unk)  
   CVE-2023-28464: (unk)  
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
+  CVE-2023-30456: (unk) KVM: nVMX: add missing consistency checks for CR0 and CR4 

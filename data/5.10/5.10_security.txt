@@ -479,6 +479,7 @@ CVEs fixed in 5.10.125:
 
 CVEs fixed in 5.10.127:
   CVE-2021-33656: 3acb7dc242ca25eb258493b513ef2f4b0f2a9ad1 vt: drop old FONT ioctls
+  CVE-2023-2008: 20119c1e0fff89542ff3272ace87e04cf6ee6bea udmabuf: add back sanity check
 
 CVEs fixed in 5.10.129:
   CVE-2022-2318: 8f74cb27c2b4872fd14bf046201fa7b36a46885e net: rose: fix UAF bugs caused by timer handler
@@ -665,16 +666,22 @@ CVEs fixed in 5.10.173:
   CVE-2023-1077: 80a1751730b302d8ab63a084b2fa52c820ad0273 sched/rt: pick_next_rt_entity(): check list_entry
   CVE-2023-1079: 21a2eec4a440060a6eb294dc890eaf553101ba09 HID: asus: use spinlock to safely schedule workers
   CVE-2023-1118: 78da5a378bdacd5bf68c3a6389bdc1dd0c0f5b3c media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
+  CVE-2023-1829: 18c3fa7a7fdbb4d21dafc8a7710ae2c1680930f6 net/sched: Retire tcindex classifier
   CVE-2023-23004: a5bbea50d622b8f49ab8ee3b0eb283107febcf1a malidp: Fix NULL vs IS_ERR() checking
   CVE-2023-25012: fddde36316da8acb45a3cca2e5fda102f5215877 HID: bigben: use spinlock to safely schedule workers
 
 CVEs fixed in 5.10.176:
   CVE-2023-1855: 0a73c8b3cc99d214dff83c51805c844240c4f749 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
+  CVE-2023-1990: 43aa468df246175207a7d5d7d6d31b231f15b49c nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition
+  CVE-2023-30456: c54974ccaff73525462e278602dfe4069877cfaa KVM: nVMX: add missing consistency checks for CR0 and CR4
 
 CVEs fixed in 5.10.177:
   CVE-2022-4379: 01e4c9c03de8a9f8839cb7342bc4bccf9104efe5 NFSD: fix use-after-free in __nfs42_ssc_open()
+  CVE-2023-1611: 5f6347034341bf45056ca1ec3fa72040152ecf83 btrfs: fix race between quota disable and quota assign ioctls
   CVE-2023-1670: bfeeb3aaad4ee8eaaefe5d9edd9b2ccb5d9b7505 xirc2ps_cs: Fix use after free bug in xirc2ps_detach
+  CVE-2023-1989: da3d3fdfb4d523c5da30e35a8dd90e04f0fd8962 Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work
   CVE-2023-28466: 1fde5782f187daa05919d2bebd872df8ebcc00d1 net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
+  CVE-2023-30772: 75e2144291e847009fbc0350e10ec588ff96e05a power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -801,8 +808,8 @@ Outstanding CVEs:
   CVE-2023-0615: (unk)  
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
   CVE-2023-1380: (unk)  
-  CVE-2023-1611: (unk)  
-  CVE-2023-1859: (unk)  
+  CVE-2023-1859: (unk) 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition 
+  CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20941: (unk)  
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 

@@ -40,6 +40,9 @@ CVEs fixed in 5.18.5:
 CVEs fixed in 5.18.6:
   CVE-2022-1976: bba36a27c38650eefc79d18c33a0acd0dcbeabb8 io_uring: reinstate the inflight tracking
 
+CVEs fixed in 5.18.8:
+  CVE-2023-2008: 44bb0618ae37c8a05b93acfcd044b9beb42201dd udmabuf: add back sanity check
+
 CVEs fixed in 5.18.10:
   CVE-2022-2318: 570b99c2e1508708c4a32a58f98071fbc3c2c351 net: rose: fix UAF bugs caused by timer handler
   CVE-2022-26365: 62b5d188a270a25138a88c18409c596c1406b993 xen/blkfront: fix leaking data in shared pages
@@ -291,11 +294,14 @@ Outstanding CVEs:
   CVE-2023-1380: (unk)  
   CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
   CVE-2023-1513: (unk) kvm: initialize all of the kvm_debugregs structure before sending it to userspace 
-  CVE-2023-1611: (unk)  
+  CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
   CVE-2023-1652: (unk) NFSD: fix use-after-free in nfsd4_ssc_setup_dul() 
   CVE-2023-1670: (unk) xirc2ps_cs: Fix use after free bug in xirc2ps_detach 
+  CVE-2023-1829: (unk) net/sched: Retire tcindex classifier 
   CVE-2023-1855: (unk) hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition 
-  CVE-2023-1859: (unk)  
+  CVE-2023-1859: (unk) 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition 
+  CVE-2023-1989: (unk) Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work 
+  CVE-2023-1990: (unk) nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition 
   CVE-2023-20941: (unk)  
   CVE-2023-22997: (unk) module: Fix NULL vs IS_ERR checking for module_get_next_page 
   CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
@@ -314,3 +320,5 @@ Outstanding CVEs:
   CVE-2023-28464: (unk)  
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
   CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 
+  CVE-2023-30456: (unk) KVM: nVMX: add missing consistency checks for CR0 and CR4 
+  CVE-2023-30772: (unk) power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition 

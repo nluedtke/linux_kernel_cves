@@ -49,6 +49,9 @@ CVEs fixed in 5.19.12:
 CVEs fixed in 5.19.14:
   CVE-2022-2308: 38d854c4a11c3bbf6a96ea46f14b282670c784ac vduse: prevent uninitialized memory accesses
 
+CVEs fixed in 5.19.15:
+  CVE-2022-2978: 81de80330fa6907aec32eb54c5619059e6e36452 fs: fix UAF/GPF bug in nilfs_mdt_destroy
+
 CVEs fixed in 5.19.16:
   CVE-2022-3621: caf2c6b580433b3d3e413a3d54b8414a94725dcd nilfs2: fix NULL pointer dereference at nilfs_bmap_lookup_at_level()
   CVE-2022-40768: 6ae8aa5dcf0d7ada07964c8638e55d3af5896a86 scsi: stex: Properly zero out the passthrough command structure
@@ -131,7 +134,6 @@ Outstanding CVEs:
   CVE-2022-26878: (unk)  
   CVE-2022-27672: (unk) x86/speculation: Identify processors vulnerable to SMT RSB predictions 
   CVE-2022-2961: (unk)  
-  CVE-2022-2978: (unk) fs: fix UAF/GPF bug in nilfs_mdt_destroy 
   CVE-2022-3169: (unk) nvme: ensure subsystem reset is single threaded 
   CVE-2022-3238: (unk)  
   CVE-2022-3344: (unk) KVM: x86: nSVM: harden svm_free_nested against freeing vmcb02 while still in use 
@@ -242,11 +244,15 @@ Outstanding CVEs:
   CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
   CVE-2023-1513: (unk) kvm: initialize all of the kvm_debugregs structure before sending it to userspace 
   CVE-2023-1583: (unk) io_uring/rsrc: fix null-ptr-deref in io_file_bitmap_get() 
-  CVE-2023-1611: (unk)  
+  CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
   CVE-2023-1652: (unk) NFSD: fix use-after-free in nfsd4_ssc_setup_dul() 
   CVE-2023-1670: (unk) xirc2ps_cs: Fix use after free bug in xirc2ps_detach 
+  CVE-2023-1829: (unk) net/sched: Retire tcindex classifier 
   CVE-2023-1855: (unk) hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition 
-  CVE-2023-1859: (unk)  
+  CVE-2023-1859: (unk) 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition 
+  CVE-2023-1989: (unk) Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work 
+  CVE-2023-1990: (unk) nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition 
+  CVE-2023-1998: (unk) x86/speculation: Allow enabling STIBP with legacy IBRS 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20941: (unk)  
   CVE-2023-22997: (unk) module: Fix NULL vs IS_ERR checking for module_get_next_page 
@@ -265,3 +271,5 @@ Outstanding CVEs:
   CVE-2023-28464: (unk)  
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
   CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 
+  CVE-2023-30456: (unk) KVM: nVMX: add missing consistency checks for CR0 and CR4 
+  CVE-2023-30772: (unk) power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition 
