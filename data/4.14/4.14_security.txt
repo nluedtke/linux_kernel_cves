@@ -17,6 +17,7 @@ CVEs fixed in 4.14.3:
   CVE-2017-18203: 3bfb87ecb4f7e19c53c31b7beca4ecd9bb906a67 dm: fix race between dm_get_from_kobject() and __dm_destroy()
 
 CVEs fixed in 4.14.4:
+  CVE-2017-1000405: 01ca9727457a167463a47e35b6fe5a5173b4e341 mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d()
   CVE-2017-18202: 786b924d39bad16ff99aacdb4076df027cc2f8b8 mm, oom_reaper: gather each vma to prevent leaking TLB entry
   CVE-2017-18208: 8a0bb9ebaa8b8faee61f095757662fe5d7fd8da6 mm/madvise.c: fix madvise() infinite loop under special circumstances
 
@@ -69,6 +70,8 @@ CVEs fixed in 4.14.14:
   CVE-2017-1000410: 02462928e2234eea95dd1ce05ca1f2c02088dc13 Bluetooth: Prevent stack info leak from the EFS element.
   CVE-2017-13216: 242e20a5b3cc2b99ace977546d3cffc6a2a35991 staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl
   CVE-2017-17741: 653c41ac4729261cb356ee1aff0f3f4f342be1eb KVM: Fix stack-out-of-bounds read in write_mmio
+  CVE-2017-5715: 9298e868dddd820829f814cd25a0f28c92036af7 x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]
+  CVE-2017-5753: 9298e868dddd820829f814cd25a0f28c92036af7 x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]
   CVE-2018-5332: 5d127d15ad2f9f33af788f1edf720ba29317f55b RDS: Heap OOB write in rds_message_alloc_sgs()
   CVE-2018-5333: 5edbe3c0249f54578636b71377861d579b1781cf RDS: null pointer dereference in rds_atomic_free_op
 
@@ -1276,6 +1279,9 @@ CVEs fixed in 4.14.303:
   CVE-2023-23455: db49adc5aff0c84ef0439a666f494a0d57c98bc7 net: sched: atm: dont intepret cls results when asked to drop
   CVE-2023-28328: c712d1ccbfb787620422b437a5b8fac0802547bd media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer()
 
+CVEs fixed in 4.14.304:
+  CVE-2023-0458: 291a0395bb298d0ef0bba21d2186f632e4b30053 prlimit: do_prlimit needs to have a speculation check
+
 CVEs fixed in 4.14.305:
   CVE-2023-1073: 614dd3d1725d329bf10a7ae974ebdfe101150791 HID: check empty report_list in hid_validate_values()
   CVE-2023-1074: 97ca098d8f1a8119b6675c823706cd6231ba6d9b sctp: fail if no bound addresses can be used for a given scope
@@ -1283,7 +1289,11 @@ CVEs fixed in 4.14.305:
 
 CVEs fixed in 4.14.306:
   CVE-2023-1513: 1d43de93b35d85981006ec3c52c0cad8af1f2f6a kvm: initialize all of the kvm_debugregs structure before sending it to userspace
+  CVE-2023-2162: 496af9d3682ed4c28fb734342a09e6cc0c056ea4 scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress
   CVE-2023-26545: b89824a9b2398d78a32ea75343e5472a0fd4986e net: mpls: fix stale pointer if allocation fails during device rename
+
+CVEs fixed in 4.14.307:
+  CVE-2023-0459: e0fbff18bbcee4f07d46bee172803fad63f6f4dd uaccess: Add speculation barrier to copy_from_user()
 
 CVEs fixed in 4.14.308:
   CVE-2023-1079: df0fad94ca3787727b9cdd76797aaacf46fe93ed HID: asus: use spinlock to safely schedule workers
@@ -1297,8 +1307,18 @@ CVEs fixed in 4.14.311:
 CVEs fixed in 4.14.312:
   CVE-2023-1670: fe7eebebca51d56b900331c3052a6342731f1117 xirc2ps_cs: Fix use after free bug in xirc2ps_detach
   CVE-2023-1989: 95eacef5692545f199fae4e52abfbfa273acb351 Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work
+  CVE-2023-2194: b8cb50c68c87f2c4a1d65df9275073e9c94aef5e i2c: xgene-slimpro: Fix out-of-bounds bug in xgene_slimpro_i2c_xfer()
   CVE-2023-23454: c4b1e702dc841a79664c5b8000fd99ffe9b3e9c2 net: sched: cbq: dont intepret cls results when asked to drop
+  CVE-2023-2483: aee129c0096e479eae92e2127f96f9d08f16ad8f net: qcom/emac: Fix use after free bug in emac_remove due to race condition
   CVE-2023-30772: bbf45f079f41efcf1e51bb65a0a45d2b31061bd5 power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition
+
+CVEs fixed in 4.14.313:
+  CVE-2023-1859: b5664e929e2e19f644ea133ae8d87fbd5654ec5a 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition
+
+CVEs fixed in 4.14.314:
+  CVE-2023-2248: 0616570ce23bbcc1ac842e97fb8e167235f1582d net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
+  CVE-2023-2513: ae2c644049184f04f672e23d3fa8122631ef762e ext4: fix use-after-free in ext4_xattr_set_entry
+  CVE-2023-31436: 0616570ce23bbcc1ac842e97fb8e167235f1582d net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1314,11 +1334,8 @@ Outstanding CVEs:
   CVE-2015-2877: (unk)  
   CVE-2016-10723: (unk) mm, oom: remove sleep from under oom_lock 
   CVE-2016-8660: (unk)  
-  CVE-2017-1000405: (unk) mm, thp: Do not make page table dirty unconditionally in touch_p[mu]d() 
   CVE-2017-13693: (unk)  
   CVE-2017-13694: (unk)  
-  CVE-2017-5715: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
-  CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-9986: (unk) sound: Retire OSS 
   CVE-2018-10322: (unk) xfs: enhance dinode verifier 
   CVE-2018-1121: (unk)  
@@ -1492,18 +1509,27 @@ Outstanding CVEs:
   CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
   CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
-  CVE-2023-1380: (unk)  
+  CVE-2023-1380: (unk) wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies() 
   CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
   CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
   CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
   CVE-2023-1838: (unk) Fix double fget() in vhost_net_set_backend() 
-  CVE-2023-1859: (unk) 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition 
-  CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
-  CVE-2023-2008: (unk) udmabuf: add back sanity check 
+  CVE-2023-2002: (unk) bluetooth: Perform careful capability checks in hci_sock_ioctl() 
+  CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20941: (unk)  
+  CVE-2023-21102: (unk) efi: rt-wrapper: Add missing include 
+  CVE-2023-21106: (unk) drm/msm/gpu: Fix potential double-free 
+  CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
+  CVE-2023-2269: (unk) dm ioctl: fix nested locking in table_clear() to remove deadlock concern 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
-  CVE-2023-28464: (unk)  
+  CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
   CVE-2023-30456: (unk) KVM: nVMX: add missing consistency checks for CR0 and CR4 
+  CVE-2023-31081: (unk)  
+  CVE-2023-31082: (unk)  
+  CVE-2023-31083: (unk)  
+  CVE-2023-31084: (unk)  
+  CVE-2023-31085: (unk)  

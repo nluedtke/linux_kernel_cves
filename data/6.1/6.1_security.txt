@@ -5,6 +5,7 @@ CVEs fixed in 6.1:
   CVE-2022-42329: 74e7e1efdad45580cc3839f2a155174cf158f9b5 xen/netback: don't call kfree_skb() with interrupts disabled
   CVE-2022-4378: bce9332220bd677d83b19d21502776ad555a0e73 proc: proc_skip_spaces() shouldn't think it is working on C strings
   CVE-2022-45934: bcd70260ef56e0aee8a4fc6cd214a419900b0765 Bluetooth: L2CAP: Fix u8 overflow
+  CVE-2023-2166: 0acc442309a0a1b01bcdaa135e56e6398a49439c can: af_can: fix NULL pointer dereference in can_rcv_filter
   CVE-2023-28327: b3abe42e94900bdd045c472f9c9be620ba5ce553 af_unix: Get user_ns from in_skb in unix_diag_get_exact().
 
 CVEs fixed in 6.1.2:
@@ -47,16 +48,20 @@ CVEs fixed in 6.1.7:
 CVEs fixed in 6.1.8:
   CVE-2022-4382: 616fd34d017000ecf9097368b13d8a266f4920b3 USB: gadgetfs: Fix race between mounting and unmounting
   CVE-2022-4842: ff3b1a624380c14b81f4e51c48e404a45f047aab fs/ntfs3: Fix attr_punch_hole() null pointer derenference
+  CVE-2023-0458: 91185568c99d60534bacf38439846103962d1e2c prlimit: do_prlimit needs to have a speculation check
+  CVE-2023-21102: 72b0e5faa5149f09c6a7a74e4012f29e33509bab efi: rt-wrapper: Add missing include
 
 CVEs fixed in 6.1.9:
   CVE-2023-0386: 42fea1c35254c49cce07c600d026cbc00c6d3c81 ovl: fail on invalid uid/gid mapping at copy up
   CVE-2023-1073: cdcdc0531a51659527fea4b4d064af343452062d HID: check empty report_list in hid_validate_values()
   CVE-2023-1074: 9f08bb650078dca24a13fea1c375358ed6292df3 sctp: fail if no bound addresses can be used for a given scope
   CVE-2023-1652: 32d5eb95f8f0e362e37c393310b13b9e95404560 NFSD: fix use-after-free in nfsd4_ssc_setup_dul()
+  CVE-2023-21106: 8103d53f25ec7b9aa99c134642c6e840e896be71 drm/msm/gpu: Fix potential double-free
   CVE-2023-23559: 7794efa358bca8b8a2a80070c6e088a74945f018 wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
 
 CVEs fixed in 6.1.11:
   CVE-2023-1075: 37c0cdf7e4919e5f76381ac60817b67bcbdacb50 net/tls: tls_is_tx_ready() checked list_entry
+  CVE-2023-2162: 61e43ebfd243bcbad11be26bd921723027b77441 scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress
 
 CVEs fixed in 6.1.12:
   CVE-2022-27672: cc95b5d240b631e42e2863e1dcb6ad83920cc449 x86/speculation: Identify processors vulnerable to SMT RSB predictions
@@ -69,6 +74,7 @@ CVEs fixed in 6.1.13:
 
 CVEs fixed in 6.1.14:
   CVE-2022-2196: 63fada296062e91ad9f871970d4e7f19e21a6a15 KVM: VMX: Execute IBPB on emulated VM-exit when guest has IBRS
+  CVE-2023-0459: 684db631a15779c8f3b2235d507efdfe6bb10278 uaccess: Add speculation barrier to copy_from_user()
 
 CVEs fixed in 6.1.16:
   CVE-2023-1032: 7c7570791b15c3b78e3229ae97825e7eb869c7da net: avoid double iput when sock_alloc_file fails
@@ -88,6 +94,7 @@ CVEs fixed in 6.1.20:
 CVEs fixed in 6.1.21:
   CVE-2023-1855: b2ae1f15cd6fe0cb36e432a179ae7d479ae2e6e0 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
   CVE-2023-1990: 5e331022b448fbc5e76f24349cd0246844dcad25 nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition
+  CVE-2023-2235: 529546ea2834ce58aa075837d57918740accf713 perf: Fix check before add_event_to_groups() in perf_group_detach()
   CVE-2023-30456: 4bba9c8adec804f03d12dc762e50d083ee88b6b0 KVM: nVMX: add missing consistency checks for CR0 and CR4
 
 CVEs fixed in 6.1.22:
@@ -95,11 +102,24 @@ CVEs fixed in 6.1.22:
   CVE-2023-1583: 7b100a45dc19ffd708f364ba66601efaca1ccf56 io_uring/rsrc: fix null-ptr-deref in io_file_bitmap_get()
   CVE-2023-1670: 9d882229d365f68f74028252261ab14a8de7faed xirc2ps_cs: Fix use after free bug in xirc2ps_detach
   CVE-2023-1989: cbf8deacb7053ce3e3fed64b277c6c6989e65bba Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work
+  CVE-2023-2194: 7c64e839585eac8048bf67b1c6dcb7a5ca189a2e i2c: xgene-slimpro: Fix out-of-bounds bug in xgene_slimpro_i2c_xfer()
+  CVE-2023-2483: 5fc2c4e311a9341a2b0e044ab5f33afa37b56226 net: qcom/emac: Fix use after free bug in emac_remove due to race condition
   CVE-2023-28866: b3168abd24245aa0775c5a387dcf94d36ca7e738 Bluetooth: HCI: Fix global-out-of-bounds
   CVE-2023-30772: 47b2e1a67e6da172bb4cf69ef9dafde4458bde5f power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition
 
 CVEs fixed in 6.1.23:
   CVE-2023-1611: a38ff2024805a30d9b96f52557c6ea0bbc31252a btrfs: fix race between quota disable and quota assign ioctls
+
+CVEs fixed in 6.1.25:
+  CVE-2023-1859: c4002b9d5e837f152a40d1333c56ccb84975147b 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition
+
+CVEs fixed in 6.1.26:
+  CVE-2023-2248: ce729b06dc33b01f8a6ac84da5ef54154326bf7e net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
+  CVE-2023-31436: ce729b06dc33b01f8a6ac84da5ef54154326bf7e net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
+
+CVEs fixed in 6.1.27:
+  CVE-2023-1380: e29661611e6e71027159a3140e818ef3b99f32dd wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies()
+  CVE-2023-2002: 47e6893a5b0ad14c0b1c25983a1facb1cf667b6e bluetooth: Perform careful capability checks in hci_sock_ioctl()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -186,10 +206,16 @@ Outstanding CVEs:
   CVE-2023-1192: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
-  CVE-2023-1380: (unk)  
-  CVE-2023-1859: (unk) 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition 
   CVE-2023-20941: (unk)  
+  CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
+  CVE-2023-2269: (unk) dm ioctl: fix nested locking in table_clear() to remove deadlock concern 
   CVE-2023-23005: (unk) mm/demotion: fix NULL vs IS_ERR checking in memory_tier_init 
   CVE-2023-23039: (unk)  
+  CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
-  CVE-2023-28464: (unk)  
+  CVE-2023-31081: (unk)  
+  CVE-2023-31082: (unk)  
+  CVE-2023-31083: (unk)  
+  CVE-2023-31084: (unk)  
+  CVE-2023-31085: (unk)  

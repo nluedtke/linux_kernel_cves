@@ -282,6 +282,7 @@ CVEs fixed in 5.15.58:
 CVEs fixed in 5.15.59:
   CVE-2022-20566: f32d5615a78a1256c4f557ccc6543866e75d03f4 Bluetooth: L2CAP: Fix use-after-free caused by l2cap_chan_put
   CVE-2022-36946: 91c11008aab0282957b8b8ccb0707d90e74cc3b9 netfilter: nf_queue: do not allow packet truncation below transport header offset
+  CVE-2023-2177: e796e1fe20ecaf6da419ef6a5841ba181bba7a0c sctp: leave the err path free in sctp_stream_init to sctp_stream_free
 
 CVEs fixed in 5.15.60:
   CVE-2022-26373: 7fcd99e889c0634f8275ae7a6b06aec4a22c8715 x86/speculation: Add RSB VM Exit protections
@@ -297,8 +298,10 @@ CVEs fixed in 5.15.61:
   CVE-2022-47939: a54c509c32adba9d136f2b9d6a075e8cae1b6d27 ksmbd: fix use-after-free bug in smb2_tree_disconect
   CVE-2022-47941: dd4e4c811898410e6a3ae3b63207b7c542860907 ksmbd: fix memory leak in smb2_handle_negotiate
   CVE-2023-1095: 8a2df34b5bf652566f2889d9fa321f3b398547ef netfilter: nf_tables: fix null deref due to zeroed list head
+  CVE-2023-2019: f671cf48f383fccba313346eddb4bd6bcbdb55a4 netdevsim: fib: Fix reference count leak on route deletion failure
   CVE-2023-20928: 622ef885a89ad04cfb76ee478fb44f051125d1f1 android: binder: stop saving a pointer to the VMA
   CVE-2023-22998: 72893aadc0017f0f2998b33e7fa5e6b3a3a72d02 drm/virtio: Fix NULL vs IS_ERR checking in virtio_gpu_object_shmem_init
+  CVE-2023-2513: 21f6bd5cbdab8ac7f7e9321de53668e1ef8f22a6 ext4: fix use-after-free in ext4_xattr_set_entry
 
 CVEs fixed in 5.15.62:
   CVE-2022-47942: cb69d4d6f709f87c94afa28ae64c501576692171 ksmbd: fix heap-based overflow in set_ntacl_dacl()
@@ -393,6 +396,7 @@ CVEs fixed in 5.15.81:
   CVE-2022-47520: cd9c4869710bb6e38cfae4478c23e64e91438442 wifi: wilc1000: validate pairwise and authentication suite offsets
   CVE-2022-47521: e9de501cf70d2b508b2793ed3e7d5d5ceabd7a74 wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_CHANNEL_LIST attribute
   CVE-2023-1382: 4ae907c45fcad4450423b8cdefa5a74bad772068 tipc: set con sock in tipc_conn_alloc
+  CVE-2023-2006: 38fe0988bd516f35c614ea9a5ff86c0d29f90c9a rxrpc: Fix race between conn bundle lookup and bundle removal [ZDI-CAN-15975]
 
 CVEs fixed in 5.15.82:
   CVE-2022-4378: 48642f94311b0cf9667aa6833f9f5e3a87d2a0ce proc: proc_skip_spaces() shouldn't think it is working on C strings
@@ -400,6 +404,7 @@ CVEs fixed in 5.15.82:
 
 CVEs fixed in 5.15.83:
   CVE-2022-3643: 0fe29bd92594a747a2561589bd452c259451929e xen/netback: Ensure protocol headers don't fall in the non-linear area
+  CVE-2023-2166: c142cba37de29f740a3852f01f59876af8ae462a can: af_can: fix NULL pointer dereference in can_rcv_filter
   CVE-2023-28327: 5c014eb0ed6c8c57f483e94cc6e90f34ce426d91 af_unix: Get user_ns from in_skb in unix_diag_get_exact().
 
 CVEs fixed in 5.15.84:
@@ -437,6 +442,8 @@ CVEs fixed in 5.15.89:
 CVEs fixed in 5.15.90:
   CVE-2022-4382: a2e075f40122d8daf587db126c562a67abd69cf9 USB: gadgetfs: Fix race between mounting and unmounting
   CVE-2022-4842: 9cca110cf8bb0653b423dba7a7c4cc23ccf91b28 fs/ntfs3: Fix attr_punch_hole() null pointer derenference
+  CVE-2023-0458: f01aefe374d32c4bb1e5fd1e9f931cf77fca621a prlimit: do_prlimit needs to have a speculation check
+  CVE-2023-21102: 7a993c1be595835acf578d0382bfd8f83475f301 efi: rt-wrapper: Add missing include
 
 CVEs fixed in 5.15.91:
   CVE-2022-4129: 87d9205d9a57dfc1f39f840b32e38475c3f523f6 l2tp: Serialize access to sk_user_data with sk_callback_lock
@@ -445,6 +452,9 @@ CVEs fixed in 5.15.91:
   CVE-2023-1074: 3391bd42351be0beb14f438c7556912b9f96cb32 sctp: fail if no bound addresses can be used for a given scope
   CVE-2023-1652: 0a27dcd5343026ac0cb168ee63304255372b7a36 NFSD: fix use-after-free in nfsd4_ssc_setup_dul()
   CVE-2023-23559: 8cbf932c5c40b0c20597fa623c308d5bde0848b5 wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
+
+CVEs fixed in 5.15.93:
+  CVE-2023-2162: 0aaabdb900c7415caa2006ef580322f7eac5f6b6 scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress
 
 CVEs fixed in 5.15.94:
   CVE-2022-27672: 8f12dcab90e886d0169a9cd372a8bb35339cfc19 x86/speculation: Identify processors vulnerable to SMT RSB predictions
@@ -458,6 +468,7 @@ CVEs fixed in 5.15.95:
 CVEs fixed in 5.15.96:
   CVE-2022-2196: 6b539a7dbb49250f92515c2ba60aea239efc9e35 KVM: VMX: Execute IBPB on emulated VM-exit when guest has IBRS
   CVE-2022-3707: 0d3d5099a50badadad6837edda00e42149b2f657 drm/i915/gvt: fix double free bug in split_2MB_gtt_entry
+  CVE-2023-0459: 41d8b591d70a7517293b23958a18452baf22588f uaccess: Add speculation barrier to copy_from_user()
 
 CVEs fixed in 5.15.99:
   CVE-2023-1076: 67f9f02928a34aad0a2c11dab5eea269f5ecf427 tun: tun_chr_open(): correctly initialize socket uid
@@ -473,6 +484,7 @@ CVEs fixed in 5.15.100:
 CVEs fixed in 5.15.104:
   CVE-2023-1855: 7091951c2ca9d3fbec75ef1d677cbd89eeac9793 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
   CVE-2023-1990: 84dd9cc34014e3a3dcce0eb6d54b8a067e97676b nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition
+  CVE-2023-2235: de3ef7ba684a25313c4b7405d007ab22912ef95a perf: Fix check before add_event_to_groups() in perf_group_detach()
   CVE-2023-30456: 9c2f09add608a505f0e5fb694805f4766801583f KVM: nVMX: add missing consistency checks for CR0 and CR4
 
 CVEs fixed in 5.15.105:
@@ -480,11 +492,24 @@ CVEs fixed in 5.15.105:
   CVE-2022-4379: ec5b7814353532243e8a9147d232a32549174909 NFSD: fix use-after-free in __nfs42_ssc_open()
   CVE-2023-1670: 4ab9e85a5ce0b2ef6e63abf861179898da613d78 xirc2ps_cs: Fix use after free bug in xirc2ps_detach
   CVE-2023-1989: 8efae2112d910d8e5166dd0a836791b08721eef1 Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work
+  CVE-2023-2194: 272dc775a52f2b0d0d8e844e77fefa7df8ebc653 i2c: xgene-slimpro: Fix out-of-bounds bug in xgene_slimpro_i2c_xfer()
+  CVE-2023-2483: 8c4a180dc12303159592d15e8f077c20deeb1e55 net: qcom/emac: Fix use after free bug in emac_remove due to race condition
   CVE-2023-28466: 0b54d75aa43a1edebc8a3770901f5c3557ee0daa net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
   CVE-2023-30772: 0fdb1cc4fe5255d0198c332b961bc4c1f8787982 power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition
 
 CVEs fixed in 5.15.106:
   CVE-2023-1611: c976f9233ef926e090db5614a837824a0bcab3fb btrfs: fix race between quota disable and quota assign ioctls
+
+CVEs fixed in 5.15.108:
+  CVE-2023-1859: e35ae49bc198412c9294115677e5acdef95b1fb5 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition
+
+CVEs fixed in 5.15.109:
+  CVE-2023-2248: 1ffc0e8105510cb826cb9d27ed1820a1131c82d4 net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
+  CVE-2023-31436: 1ffc0e8105510cb826cb9d27ed1820a1131c82d4 net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
+
+CVEs fixed in 5.15.110:
+  CVE-2023-1380: 936a23293bbb3332bdf4cdb9c1496e80cb0bc2c8 wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies()
+  CVE-2023-2002: f1e6a14d5ae879d6ab6d90c58d2fde1b5716b389 bluetooth: Perform careful capability checks in hci_sock_ioctl()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -588,12 +613,20 @@ Outstanding CVEs:
   CVE-2023-1192: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
-  CVE-2023-1380: (unk)  
-  CVE-2023-1859: (unk) 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition 
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
+  CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20941: (unk)  
+  CVE-2023-21106: (unk) drm/msm/gpu: Fix potential double-free 
+  CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
+  CVE-2023-2269: (unk) dm ioctl: fix nested locking in table_clear() to remove deadlock concern 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
+  CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
-  CVE-2023-28464: (unk)  
+  CVE-2023-31081: (unk)  
+  CVE-2023-31082: (unk)  
+  CVE-2023-31083: (unk)  
+  CVE-2023-31084: (unk)  
+  CVE-2023-31085: (unk)  

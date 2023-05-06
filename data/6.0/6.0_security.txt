@@ -61,6 +61,8 @@ CVEs fixed in 6.0.11:
   CVE-2023-0468: bc4e6ee16778149811333a969a7a893d4cc110c5 io_uring: make poll refs more robust
   CVE-2023-0469: 77a467a3e20978607c56aa4886f46f78ca287054 io_uring/filetable: fix file reference underflow
   CVE-2023-1382: 66d7a37e2ec769fbb4b086cc03c320565be3fbb9 tipc: set con sock in tipc_conn_alloc
+  CVE-2023-2006: 60272ee9be89f5e8021898e65862f93e9fba90dc rxrpc: Fix race between conn bundle lookup and bundle removal [ZDI-CAN-15975]
+  CVE-2023-2236: 77a467a3e20978607c56aa4886f46f78ca287054 io_uring/filetable: fix file reference underflow
 
 CVEs fixed in 6.0.12:
   CVE-2022-3435: bb20a2ae241be846bc3c11ea4b3a3c69e41d51f2 ipv4: Handle attempt to delete multipath route when fib_info contains an nh reference
@@ -70,6 +72,7 @@ CVEs fixed in 6.0.13:
   CVE-2022-3643: e8851d841fe4f29b613a00de45f39c80dbfdb975 xen/netback: Ensure protocol headers don't fall in the non-linear area
   CVE-2022-42328: 3fb02db125bbcf8163e9e30d2824b4adf13f06cb xen/netback: don't call kfree_skb() with interrupts disabled
   CVE-2022-42329: 3fb02db125bbcf8163e9e30d2824b4adf13f06cb xen/netback: don't call kfree_skb() with interrupts disabled
+  CVE-2023-2166: fcc63f2f7ee3038d53216edd0d8291e57c752557 can: af_can: fix NULL pointer dereference in can_rcv_filter
   CVE-2023-28327: 9c1d6f79a2c7b8221dcec27defc6dc461052ead4 af_unix: Get user_ns from in_skb in unix_diag_get_exact().
 
 CVEs fixed in 6.0.15:
@@ -200,6 +203,8 @@ Outstanding CVEs:
   CVE-2023-0266: (unk) ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF 
   CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
   CVE-2023-0394: (unk) ipv6: raw: Deduct extension header length in rawv6_push_pending_frames 
+  CVE-2023-0458: (unk) prlimit: do_prlimit needs to have a speculation check 
+  CVE-2023-0459: (unk) uaccess: Add speculation barrier to copy_from_user() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
   CVE-2023-1032: (unk) net: avoid double iput when sock_alloc_file fails 
@@ -216,7 +221,7 @@ Outstanding CVEs:
   CVE-2023-1194: (unk)  
   CVE-2023-1195: (unk) cifs: fix use-after-free caused by invalid pointer `hostname` 
   CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
-  CVE-2023-1380: (unk)  
+  CVE-2023-1380: (unk) wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies() 
   CVE-2023-1513: (unk) kvm: initialize all of the kvm_debugregs structure before sending it to userspace 
   CVE-2023-1583: (unk) io_uring/rsrc: fix null-ptr-deref in io_file_bitmap_get() 
   CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
@@ -228,14 +233,31 @@ Outstanding CVEs:
   CVE-2023-1989: (unk) Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work 
   CVE-2023-1990: (unk) nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition 
   CVE-2023-1998: (unk) x86/speculation: Allow enabling STIBP with legacy IBRS 
+  CVE-2023-2002: (unk) bluetooth: Perform careful capability checks in hci_sock_ioctl() 
   CVE-2023-20941: (unk)  
+  CVE-2023-21102: (unk) efi: rt-wrapper: Add missing include 
+  CVE-2023-21106: (unk) drm/msm/gpu: Fix potential double-free 
+  CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-2162: (unk) scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress 
+  CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
+  CVE-2023-2194: (unk) i2c: xgene-slimpro: Fix out-of-bounds bug in xgene_slimpro_i2c_xfer() 
+  CVE-2023-2235: (unk) perf: Fix check before add_event_to_groups() in perf_group_detach() 
+  CVE-2023-2248: (unk) net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg 
+  CVE-2023-2269: (unk) dm ioctl: fix nested locking in table_clear() to remove deadlock concern 
   CVE-2023-23039: (unk)  
   CVE-2023-23559: (unk) wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid 
+  CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
+  CVE-2023-2483: (unk) net: qcom/emac: Fix use after free bug in emac_remove due to race condition 
   CVE-2023-25012: (unk) HID: bigben: use spinlock to safely schedule workers 
   CVE-2023-26242: (unk)  
   CVE-2023-26545: (unk) net: mpls: fix stale pointer if allocation fails during device rename 
-  CVE-2023-28464: (unk)  
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
   CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 
   CVE-2023-30456: (unk) KVM: nVMX: add missing consistency checks for CR0 and CR4 
   CVE-2023-30772: (unk) power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition 
+  CVE-2023-31081: (unk)  
+  CVE-2023-31082: (unk)  
+  CVE-2023-31083: (unk)  
+  CVE-2023-31084: (unk)  
+  CVE-2023-31085: (unk)  
+  CVE-2023-31436: (unk) net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg 
