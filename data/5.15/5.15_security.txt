@@ -455,6 +455,7 @@ CVEs fixed in 5.15.91:
 
 CVEs fixed in 5.15.93:
   CVE-2023-2162: 0aaabdb900c7415caa2006ef580322f7eac5f6b6 scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress
+  CVE-2023-32269: c27e0eac568a008cdf04ae7e4ea2d3c18717e627 netrom: Fix use-after-free caused by accept on already connected socket
 
 CVEs fixed in 5.15.94:
   CVE-2022-27672: 8f12dcab90e886d0169a9cd372a8bb35339cfc19 x86/speculation: Identify processors vulnerable to SMT RSB predictions
@@ -510,6 +511,10 @@ CVEs fixed in 5.15.109:
 CVEs fixed in 5.15.110:
   CVE-2023-1380: 936a23293bbb3332bdf4cdb9c1496e80cb0bc2c8 wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies()
   CVE-2023-2002: f1e6a14d5ae879d6ab6d90c58d2fde1b5716b389 bluetooth: Perform careful capability checks in hci_sock_ioctl()
+
+CVEs fixed in 5.15.111:
+  CVE-2023-2269: e11765cea2050fa25fc3e03da858e83284c5ce79 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
+  CVE-2023-32233: 21c2a454486d5e9c1517ecca19266b3be3df73ca netfilter: nf_tables: deactivate anonymous set from preparation phase
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -605,7 +610,7 @@ Outstanding CVEs:
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2022-45919: (unk)  
   CVE-2022-47940: (unk) ksmbd: validate length in smb2_write() 
-  CVE-2022-48425: (unk)  
+  CVE-2022-48425: (unk) fs/ntfs3: Validate MFT flags before replaying logs 
   CVE-2023-0160: (unk)  
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
@@ -616,15 +621,15 @@ Outstanding CVEs:
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20941: (unk)  
-  CVE-2023-21106: (unk) drm/msm/gpu: Fix potential double-free 
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-2156: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
-  CVE-2023-2269: (unk) dm ioctl: fix nested locking in table_clear() to remove deadlock concern 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
   CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
+  CVE-2023-28410: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk)  
