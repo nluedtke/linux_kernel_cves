@@ -690,6 +690,7 @@ CVEs fixed in 5.10.177:
   CVE-2023-2483: cb5879efde4f9b4de4248b835890df7b6c49ffbc net: qcom/emac: Fix use after free bug in emac_remove due to race condition
   CVE-2023-28466: 1fde5782f187daa05919d2bebd872df8ebcc00d1 net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
   CVE-2023-30772: 75e2144291e847009fbc0350e10ec588ff96e05a power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition
+  CVE-2023-33203: cb5879efde4f9b4de4248b835890df7b6c49ffbc net: qcom/emac: Fix use after free bug in emac_remove due to race condition
 
 CVEs fixed in 5.10.178:
   CVE-2023-1859: 9266e939d76279d8710196d86215ba2be6345041 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition
@@ -698,6 +699,13 @@ CVEs fixed in 5.10.179:
   CVE-2023-2248: ddcf35deb8f2a1d9addc74b586cf4c5a1f5d6020 net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
   CVE-2023-2513: 05cf34a2b6414a1172552d16159b3e17e9da36a3 ext4: fix use-after-free in ext4_xattr_set_entry
   CVE-2023-31436: ddcf35deb8f2a1d9addc74b586cf4c5a1f5d6020 net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
+
+CVEs fixed in 5.10.180:
+  CVE-2022-39189: 529f41f0eb1ef995bfa83c121c3cfe3a0720119a KVM: x86: do not report a vCPU as preempted outside instruction boundaries
+  CVE-2023-1380: 549825602e3e6449927ca1ea1a08fd89868439df wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies()
+  CVE-2023-2002: 98cfbad52fc286c2a1a75e04bf47b98d6489db1f bluetooth: Perform careful capability checks in hci_sock_ioctl()
+  CVE-2023-2269: ea827627a9249154b34b646b1e1007013402afea dm ioctl: fix nested locking in table_clear() to remove deadlock concern
+  CVE-2023-32233: e044a24447189419c3a7ccc5fa6da7516036dc55 netfilter: nf_tables: deactivate anonymous set from preparation phase
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -803,7 +811,6 @@ Outstanding CVEs:
   CVE-2022-38457: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
-  CVE-2022-39189: (unk) KVM: x86: do not report a vCPU as preempted outside instruction boundaries 
   CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-41848: (unk)  
   CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
@@ -823,16 +830,13 @@ Outstanding CVEs:
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
-  CVE-2023-1380: (unk) wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies() 
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
-  CVE-2023-2002: (unk) bluetooth: Perform careful capability checks in hci_sock_ioctl() 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20941: (unk)  
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-2156: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
-  CVE-2023-2269: (unk) dm ioctl: fix nested locking in table_clear() to remove deadlock concern 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
@@ -845,4 +849,3 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk)  
   CVE-2023-31085: (unk)  
-  CVE-2023-32233: (unk) netfilter: nf_tables: deactivate anonymous set from preparation phase 

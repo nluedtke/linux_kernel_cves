@@ -894,6 +894,7 @@ CVEs fixed in 5.4.240:
   CVE-2023-2483: 0e5c7d00ec4f2f359234044b809eb23b7032d9b0 net: qcom/emac: Fix use after free bug in emac_remove due to race condition
   CVE-2023-28466: 754838aa02050ff3d8675bef79d172097218ea71 net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
   CVE-2023-30772: 6fe078c2864b9defaa632733a5bae969b398b673 power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition
+  CVE-2023-33203: 0e5c7d00ec4f2f359234044b809eb23b7032d9b0 net: qcom/emac: Fix use after free bug in emac_remove due to race condition
 
 CVEs fixed in 5.4.241:
   CVE-2021-4037: e76bd6da51235ce86f5a8017dd6c056c76da64f9 xfs: fix up non-directory creation in SGID directories
@@ -903,6 +904,12 @@ CVEs fixed in 5.4.242:
   CVE-2023-2248: 35dceaeab97c9e5f3fda3b10ce7f8110df0feecd net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
   CVE-2023-2513: 5a62248c58556c395c604d4161d53afae16b6fad ext4: fix use-after-free in ext4_xattr_set_entry
   CVE-2023-31436: 35dceaeab97c9e5f3fda3b10ce7f8110df0feecd net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
+
+CVEs fixed in 5.4.243:
+  CVE-2023-1380: 425eea395f1f5ae349fb55f7fe51d833a5324bfe wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies()
+  CVE-2023-2002: 48cdcb40d589d990ccc1a99fb76843484ce732a0 bluetooth: Perform careful capability checks in hci_sock_ioctl()
+  CVE-2023-2269: 29a1ef57c3be1d53ecadb749d45b0636e8245a89 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
+  CVE-2023-32233: c8b6063f13add68f89540aa5030ceee875f48aa2 netfilter: nf_tables: deactivate anonymous set from preparation phase
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1047,17 +1054,14 @@ Outstanding CVEs:
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
   CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
-  CVE-2023-1380: (unk) wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies() 
   CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
   CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
-  CVE-2023-2002: (unk) bluetooth: Perform careful capability checks in hci_sock_ioctl() 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20941: (unk)  
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-2156: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
-  CVE-2023-2269: (unk) dm ioctl: fix nested locking in table_clear() to remove deadlock concern 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
@@ -1070,4 +1074,3 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk)  
   CVE-2023-31085: (unk)  
-  CVE-2023-32233: (unk) netfilter: nf_tables: deactivate anonymous set from preparation phase 
