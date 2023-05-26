@@ -176,6 +176,7 @@ CVEs fixed in 5.15.33:
   CVE-2022-3113: 0022dc8cafa5fcd156da8ae7bfc9ca99497bdffc media: mtk-vcodec: potential dereference of null pointer
   CVE-2022-3239: 332d45fe51d75a3a95c4a04e2cb7bffef284edd4 media: em28xx: initialize refcount before kref_get
   CVE-2023-1249: 39fd0cc079c98dafcf355997ada7b5e67f0bb10a coredump: Use the vma snapshot in fill_files_note
+  CVE-2023-28410: 312d3d4f49e12f97260bcf972c848c3562126a18 drm/i915/gem: add missing boundary check in vm_access
 
 CVEs fixed in 5.15.34:
   CVE-2022-1263: 226b4327ef5c88572fc12187193f1b5073c10837 KVM: avoid NULL pointer dereference in kvm_dirty_ring_push
@@ -498,6 +499,7 @@ CVEs fixed in 5.15.105:
   CVE-2023-28466: 0b54d75aa43a1edebc8a3770901f5c3557ee0daa net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
   CVE-2023-30772: 0fdb1cc4fe5255d0198c332b961bc4c1f8787982 power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition
   CVE-2023-33203: 8c4a180dc12303159592d15e8f077c20deeb1e55 net: qcom/emac: Fix use after free bug in emac_remove due to race condition
+  CVE-2023-33288: 4ca3fd39c72efa250129d2af406c3bb56eec7dd9 power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition
 
 CVEs fixed in 5.15.106:
   CVE-2023-1611: c976f9233ef926e090db5614a837824a0bcab3fb btrfs: fix race between quota disable and quota assign ioctls
@@ -516,6 +518,9 @@ CVEs fixed in 5.15.110:
 CVEs fixed in 5.15.111:
   CVE-2023-2269: e11765cea2050fa25fc3e03da858e83284c5ce79 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-32233: 21c2a454486d5e9c1517ecca19266b3be3df73ca netfilter: nf_tables: deactivate anonymous set from preparation phase
+
+CVEs fixed in 5.15.113:
+  CVE-2022-48425: 2a67f26f70ab344ae6ea78638890eebc1191a501 fs/ntfs3: Validate MFT flags before replaying logs
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -611,7 +616,6 @@ Outstanding CVEs:
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2022-45919: (unk)  
   CVE-2022-47940: (unk) ksmbd: validate length in smb2_write() 
-  CVE-2022-48425: (unk) fs/ntfs3: Validate MFT flags before replaying logs 
   CVE-2023-0160: (unk)  
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-0615: (unk)  
@@ -630,9 +634,11 @@ Outstanding CVEs:
   CVE-2023-23039: (unk)  
   CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
-  CVE-2023-28410: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk)  
-  CVE-2023-31084: (unk)  
+  CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
+  CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
+  CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
+  CVE-2023-33250: (unk)  
