@@ -375,6 +375,8 @@ CVEs fixed in 5.15.76:
 
 CVEs fixed in 5.15.77:
   CVE-2022-3524: 1401e9336bebaa6dd5a320f83bddc17619d4e3a6 tcp/udp: Fix memory leak in ipv6_renew_options().
+  CVE-2023-0615: 0f83edbe4fe95d9c68b32aebe07fe413bcf92afe media: vivid: dev->bitmap_cap wasn't freed in all cases
+  CVE-2023-3006: 52c2329147cf5d956dcaa3a91c886c550e7bdd39 arm64: Add AMPERE1 to the Spectre-BHB affected list
 
 CVEs fixed in 5.15.78:
   CVE-2022-3543: 3975affcf55f93814a8ae14333d7fc7f183e60a4 af_unix: Fix memory leaks of the whole sk due to OOB skb.
@@ -478,6 +480,7 @@ CVEs fixed in 5.15.99:
   CVE-2023-1079: 3959316f8ceb17866646abc6be4a332655407138 HID: asus: use spinlock to safely schedule workers
   CVE-2023-1118: 29962c478e8b2e6a6154d8d84b8806dbe36f9c28 media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
   CVE-2023-25012: 0fd9998052926ed24cfb30ab1a294cfeda4d0a8f HID: bigben: use spinlock to safely schedule workers
+  CVE-2023-2985: 05103d88482dc3757db108415342fdd86821a79b fs: hfsplus: fix UAF issue in hfsplus_put_super
 
 CVEs fixed in 5.15.100:
   CVE-2023-1829: 7c183dc0af472dec33d2c0786a5e356baa8cad19 net/sched: Retire tcindex classifier
@@ -508,6 +511,7 @@ CVEs fixed in 5.15.108:
   CVE-2023-1859: e35ae49bc198412c9294115677e5acdef95b1fb5 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition
 
 CVEs fixed in 5.15.109:
+  CVE-2023-2156: 4eee0d9d3c1117aa4a1c9f4c7f29287107e7c084 net: rpl: fix rpl header size calculation
   CVE-2023-2248: 1ffc0e8105510cb826cb9d27ed1820a1131c82d4 net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
   CVE-2023-31436: 1ffc0e8105510cb826cb9d27ed1820a1131c82d4 net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
 
@@ -518,6 +522,9 @@ CVEs fixed in 5.15.110:
 CVEs fixed in 5.15.111:
   CVE-2023-2269: e11765cea2050fa25fc3e03da858e83284c5ce79 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-32233: 21c2a454486d5e9c1517ecca19266b3be3df73ca netfilter: nf_tables: deactivate anonymous set from preparation phase
+
+CVEs fixed in 5.15.112:
+  CVE-2023-34256: 6d9a705a653eb146b4991dbd198b258f787c70b1 ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum
 
 CVEs fixed in 5.15.113:
   CVE-2022-48425: 2a67f26f70ab344ae6ea78638890eebc1191a501 fs/ntfs3: Validate MFT flags before replaying logs
@@ -616,9 +623,9 @@ Outstanding CVEs:
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2022-45919: (unk)  
   CVE-2022-47940: (unk) ksmbd: validate length in smb2_write() 
+  CVE-2022-48502: (unk) fs/ntfs3: Check fields while reading 
   CVE-2023-0160: (unk)  
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
-  CVE-2023-0615: (unk)  
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
   CVE-2023-1192: (unk)  
   CVE-2023-1193: (unk)  
@@ -627,13 +634,13 @@ Outstanding CVEs:
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20941: (unk)  
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
-  CVE-2023-2156: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
   CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
+  CVE-2023-2898: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk)  
@@ -641,4 +648,4 @@ Outstanding CVEs:
   CVE-2023-31085: (unk)  
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
-  CVE-2023-33250: (unk)  
+  CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 

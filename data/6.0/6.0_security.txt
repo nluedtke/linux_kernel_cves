@@ -36,6 +36,8 @@ CVEs fixed in 6.0.6:
 
 CVEs fixed in 6.0.7:
   CVE-2022-3524: 0c5d628f1e1d049c33595693fab1b6e9baf25795 tcp/udp: Fix memory leak in ipv6_renew_options().
+  CVE-2023-0615: 74e2e978d1e36c3b67e998e779c02cbc8f481527 media: vivid: dev->bitmap_cap wasn't freed in all cases
+  CVE-2023-3006: 5b962b004afa3c11e651c07232f2402b4678007b arm64: Add AMPERE1 to the Spectre-BHB affected list
 
 CVEs fixed in 6.0.8:
   CVE-2022-3564: 9a04161244603f502c6e453913e51edd59cb70c1 Bluetooth: L2CAP: Fix use-after-free caused by l2cap_reassemble_sdu
@@ -198,6 +200,7 @@ Outstanding CVEs:
   CVE-2022-47929: (unk) net: sched: disallow noqueue for qdisc classes 
   CVE-2022-4842: (unk) fs/ntfs3: Fix attr_punch_hole() null pointer derenference 
   CVE-2022-48425: (unk) fs/ntfs3: Validate MFT flags before replaying logs 
+  CVE-2022-48502: (unk) fs/ntfs3: Check fields while reading 
   CVE-2023-0160: (unk)  
   CVE-2023-0179: (unk) netfilter: nft_payload: incorrect arithmetics when fetching VLAN header bits 
   CVE-2023-0266: (unk) ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF 
@@ -206,7 +209,6 @@ Outstanding CVEs:
   CVE-2023-0458: (unk) prlimit: do_prlimit needs to have a speculation check 
   CVE-2023-0459: (unk) uaccess: Add speculation barrier to copy_from_user() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
-  CVE-2023-0615: (unk)  
   CVE-2023-1032: (unk) net: avoid double iput when sock_alloc_file fails 
   CVE-2023-1073: (unk) HID: check empty report_list in hid_validate_values() 
   CVE-2023-1074: (unk) sctp: fail if no bound addresses can be used for a given scope 
@@ -238,7 +240,7 @@ Outstanding CVEs:
   CVE-2023-21102: (unk) efi: rt-wrapper: Add missing include 
   CVE-2023-21106: (unk) drm/msm/gpu: Fix potential double-free 
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
-  CVE-2023-2156: (unk)  
+  CVE-2023-2156: (unk) net: rpl: fix rpl header size calculation 
   CVE-2023-2162: (unk) scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress 
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-2194: (unk) i2c: xgene-slimpro: Fix out-of-bounds bug in xgene_slimpro_i2c_xfer() 
@@ -254,6 +256,8 @@ Outstanding CVEs:
   CVE-2023-26545: (unk) net: mpls: fix stale pointer if allocation fails during device rename 
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
   CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 
+  CVE-2023-2898: (unk)  
+  CVE-2023-2985: (unk) fs: hfsplus: fix UAF issue in hfsplus_put_super 
   CVE-2023-30456: (unk) KVM: nVMX: add missing consistency checks for CR0 and CR4 
   CVE-2023-30772: (unk) power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition 
   CVE-2023-31081: (unk)  
@@ -267,5 +271,6 @@ Outstanding CVEs:
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
   CVE-2023-32269: (unk) netrom: Fix use-after-free caused by accept on already connected socket 
   CVE-2023-33203: (unk) net: qcom/emac: Fix use after free bug in emac_remove due to race condition 
-  CVE-2023-33250: (unk)  
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
+  CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-34256: (unk) ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum 

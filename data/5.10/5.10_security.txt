@@ -589,6 +589,10 @@ CVEs fixed in 5.10.150:
 CVEs fixed in 5.10.152:
   CVE-2023-0590: 7aa3d623c11b9ab60f86b7833666e5d55bac4be9 net: sched: fix race condition in qdisc_graft()
 
+CVEs fixed in 5.10.153:
+  CVE-2023-0615: 147b8f1892aaa474f912ac75babfd316ee0de672 media: vivid: dev->bitmap_cap wasn't freed in all cases
+  CVE-2023-3006: 52a43b82006dc88f996bd06da5a3fcfef85220c8 arm64: Add AMPERE1 to the Spectre-BHB affected list
+
 CVEs fixed in 5.10.154:
   CVE-2021-3759: 836686e1a01d7e2fda6a5a18252243ff30a6e196 memcg: enable accounting of ipc resources
   CVE-2022-3524: 818c36b988b82f31e4be8ad8415e1be902b8e5f8 tcp/udp: Fix memory leak in ipv6_renew_options().
@@ -677,6 +681,7 @@ CVEs fixed in 5.10.173:
   CVE-2023-1829: 18c3fa7a7fdbb4d21dafc8a7710ae2c1680930f6 net/sched: Retire tcindex classifier
   CVE-2023-23004: a5bbea50d622b8f49ab8ee3b0eb283107febcf1a malidp: Fix NULL vs IS_ERR() checking
   CVE-2023-25012: fddde36316da8acb45a3cca2e5fda102f5215877 HID: bigben: use spinlock to safely schedule workers
+  CVE-2023-2985: ef7d71d7bd57b8b7fe514e459927696c1c6d1047 fs: hfsplus: fix UAF issue in hfsplus_put_super
 
 CVEs fixed in 5.10.176:
   CVE-2023-1855: 0a73c8b3cc99d214dff83c51805c844240c4f749 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
@@ -699,6 +704,7 @@ CVEs fixed in 5.10.178:
   CVE-2023-1859: 9266e939d76279d8710196d86215ba2be6345041 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition
 
 CVEs fixed in 5.10.179:
+  CVE-2023-2156: c972851d3848647f57cd8d5625c48663410c3f96 net: rpl: fix rpl header size calculation
   CVE-2023-2248: ddcf35deb8f2a1d9addc74b586cf4c5a1f5d6020 net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
   CVE-2023-2513: 05cf34a2b6414a1172552d16159b3e17e9da36a3 ext4: fix use-after-free in ext4_xattr_set_entry
   CVE-2023-31436: ddcf35deb8f2a1d9addc74b586cf4c5a1f5d6020 net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
@@ -709,6 +715,10 @@ CVEs fixed in 5.10.180:
   CVE-2023-2002: 98cfbad52fc286c2a1a75e04bf47b98d6489db1f bluetooth: Perform careful capability checks in hci_sock_ioctl()
   CVE-2023-2269: ea827627a9249154b34b646b1e1007013402afea dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-32233: e044a24447189419c3a7ccc5fa6da7516036dc55 netfilter: nf_tables: deactivate anonymous set from preparation phase
+  CVE-2023-34256: 0dde3141c527b09b96bef1e7eeb18b8127810ce9 ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum
+
+CVEs fixed in 5.10.181:
+  CVE-2022-4269: 53245103786312f21fb9785327a4367cf10f0dbb act_mirred: use the backlog for nested calls to mirred ingress
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -816,7 +826,6 @@ Outstanding CVEs:
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-41848: (unk)  
-  CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
@@ -828,17 +837,16 @@ Outstanding CVEs:
   CVE-2022-45919: (unk)  
   CVE-2022-4696: (unk) io_uring: remove any grabbing of context 
   CVE-2022-47946: (unk) io_uring: kill sqo_dead and sqo submission halting 
+  CVE-2022-48502: (unk) fs/ntfs3: Check fields while reading 
   CVE-2023-0160: (unk)  
   CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
-  CVE-2023-0615: (unk)  
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20941: (unk)  
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
-  CVE-2023-2156: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
@@ -846,6 +854,7 @@ Outstanding CVEs:
   CVE-2023-23586: (unk) io_uring: remove io_identity 
   CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
+  CVE-2023-2898: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk)  
@@ -853,4 +862,4 @@ Outstanding CVEs:
   CVE-2023-31085: (unk)  
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
-  CVE-2023-33250: (unk)  
+  CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 

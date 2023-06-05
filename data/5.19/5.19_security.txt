@@ -64,6 +64,7 @@ CVEs fixed in 5.19.16:
 
 CVEs fixed in 5.19.17:
   CVE-2022-2602: b4293c01ee0d0ecdd3cb5801e13f62271144667a io_uring/af_unix: defer registered files gc to io_uring release
+  CVE-2022-3535: 169aa2664639de359a7c723ba55023ef57c0dc15 net: mvpp2: fix mvpp2 debugfs leak
   CVE-2022-3542: 96c0c14135f5803f9e94e6da2ee9c4b012fdcb20 bnx2x: fix potential memory leak in bnx2x_tpa_stop()
   CVE-2022-3565: 1f76323ac43fe0b00677794c930dee9f66ea2999 mISDN: fix use-after-free bugs in l1oip timer handlers
   CVE-2022-3594: 2e896abccf99fef76691d8e1019bd44105a12e1f r8152: Rate limit overflow messages
@@ -146,7 +147,6 @@ Outstanding CVEs:
   CVE-2022-3524: (unk) tcp/udp: Fix memory leak in ipv6_renew_options(). 
   CVE-2022-3531: (unk) selftest/bpf: Fix memory leak in kprobe_multi_test 
   CVE-2022-3534: (unk) libbpf: Fix use-after-free in btf_dump_name_dups 
-  CVE-2022-3535: (unk) net: mvpp2: fix mvpp2 debugfs leak 
   CVE-2022-3541: (unk) eth: sp7021: fix use after free bug in spl2sw_nvmem_get_mac_address 
   CVE-2022-3543: (unk) af_unix: Fix memory leaks of the whole sk due to OOB skb. 
   CVE-2022-3544: (unk)  
@@ -213,6 +213,7 @@ Outstanding CVEs:
   CVE-2022-48423: (unk) fs/ntfs3: Validate resident attribute name 
   CVE-2022-48424: (unk) fs/ntfs3: Validate attribute name offset 
   CVE-2022-48425: (unk) fs/ntfs3: Validate MFT flags before replaying logs 
+  CVE-2022-48502: (unk) fs/ntfs3: Check fields while reading 
   CVE-2023-0045: (unk) x86/bugs: Flush IBP in ib_prctl_set() 
   CVE-2023-0160: (unk)  
   CVE-2023-0179: (unk) netfilter: nft_payload: incorrect arithmetics when fetching VLAN header bits 
@@ -227,7 +228,7 @@ Outstanding CVEs:
   CVE-2023-0469: (unk) io_uring/filetable: fix file reference underflow 
   CVE-2023-0590: (unk) net: sched: fix race condition in qdisc_graft() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
-  CVE-2023-0615: (unk)  
+  CVE-2023-0615: (unk) media: vivid: dev->bitmap_cap wasn't freed in all cases 
   CVE-2023-1032: (unk) net: avoid double iput when sock_alloc_file fails 
   CVE-2023-1073: (unk) HID: check empty report_list in hid_validate_values() 
   CVE-2023-1074: (unk) sctp: fail if no bound addresses can be used for a given scope 
@@ -264,7 +265,7 @@ Outstanding CVEs:
   CVE-2023-21102: (unk) efi: rt-wrapper: Add missing include 
   CVE-2023-21106: (unk) drm/msm/gpu: Fix potential double-free 
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
-  CVE-2023-2156: (unk)  
+  CVE-2023-2156: (unk) net: rpl: fix rpl header size calculation 
   CVE-2023-2162: (unk) scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress 
   CVE-2023-2166: (unk) can: af_can: fix NULL pointer dereference in can_rcv_filter 
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
@@ -292,6 +293,9 @@ Outstanding CVEs:
   CVE-2023-28328: (unk) media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer() 
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
   CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 
+  CVE-2023-2898: (unk)  
+  CVE-2023-2985: (unk) fs: hfsplus: fix UAF issue in hfsplus_put_super 
+  CVE-2023-3006: (unk) arm64: Add AMPERE1 to the Spectre-BHB affected list 
   CVE-2023-30456: (unk) KVM: nVMX: add missing consistency checks for CR0 and CR4 
   CVE-2023-30772: (unk) power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition 
   CVE-2023-31081: (unk)  
@@ -305,5 +309,6 @@ Outstanding CVEs:
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
   CVE-2023-32269: (unk) netrom: Fix use-after-free caused by accept on already connected socket 
   CVE-2023-33203: (unk) net: qcom/emac: Fix use after free bug in emac_remove due to race condition 
-  CVE-2023-33250: (unk)  
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
+  CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-34256: (unk) ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum 
