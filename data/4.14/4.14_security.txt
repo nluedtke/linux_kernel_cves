@@ -1153,6 +1153,7 @@ CVEs fixed in 4.14.278:
   CVE-2022-1975: c33b2afffe8ae90e0bd4790e0505edd92addf14c NFC: netlink: fix sleep in atomic bug when firmware download timeout
   CVE-2022-29581: 0511cdd41a03ab396602dded4e778c5edcd8dcd1 net/sched: cls_u32: fix netns refcount changes in u32_change()
   CVE-2022-33981: b7fa84ae1171a3c5ea5d710899080a6e63cfe084 floppy: disable FDRAWCMD by default
+  CVE-2023-3159: 1269a6567274edecd04ee7fd7871aa4d0c937f2a firewire: fix potential uaf in outbound_phy_packet_callback()
 
 CVEs fixed in 4.14.279:
   CVE-2022-1048: a42aa926843acca96c0dfbde2e835b8137f2f092 ALSA: pcm: Fix races among concurrent hw_params and hw_free calls
@@ -1287,11 +1288,13 @@ CVEs fixed in 4.14.305:
   CVE-2023-1073: 614dd3d1725d329bf10a7ae974ebdfe101150791 HID: check empty report_list in hid_validate_values()
   CVE-2023-1074: 97ca098d8f1a8119b6675c823706cd6231ba6d9b sctp: fail if no bound addresses can be used for a given scope
   CVE-2023-23559: 8a97563bf04358f035a0b98142ae48f1ef095b61 wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
+  CVE-2023-3358: eaa86c4ae77e9c6c28e3c417539ebbee987be0c9 HID: intel_ish-hid: Add check for ishtp_dma_tx_map
 
 CVEs fixed in 4.14.306:
   CVE-2023-1513: 1d43de93b35d85981006ec3c52c0cad8af1f2f6a kvm: initialize all of the kvm_debugregs structure before sending it to userspace
   CVE-2023-2162: 496af9d3682ed4c28fb734342a09e6cc0c056ea4 scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress
   CVE-2023-26545: b89824a9b2398d78a32ea75343e5472a0fd4986e net: mpls: fix stale pointer if allocation fails during device rename
+  CVE-2023-3161: 7625513267a2b155a5e31e4ac443bf954591b7fa fbcon: Check font dimension limits
   CVE-2023-32269: 35d5bb094bc7529c15561289a1ea995f897bf2e6 netrom: Fix use-after-free caused by accept on already connected socket
 
 CVEs fixed in 4.14.307:
@@ -1330,10 +1333,18 @@ CVEs fixed in 4.14.315:
   CVE-2023-2269: c9dfa8ba3b181e67970f06d80de18aa257d1ecda dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-32233: 86572872505023e3bb461b271c2f25fdaa3dfcd7 netfilter: nf_tables: deactivate anonymous set from preparation phase
   CVE-2023-34256: 64b7487e3769e013fc7edb3804d1a769747f0228 ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum
+  CVE-2023-35824: df01f9c146ce2134de4daf393e29e18d6d5866ec media: dm1105: Fix use after free bug in dm1105_remove due to race condition
 
 CVEs fixed in 4.14.316:
   CVE-2022-2586: 4e0dbab570defe5b747578cbea8e07f9d0709bec netfilter: nf_tables: do not allow SET_ID to refer to another table
   CVE-2022-34918: acd3e18fbcae6c5f9d79d75455569fc132227162 netfilter: nf_tables: stricter validation of element data
+  CVE-2023-3141: 3faa6fe21c516dbcca469c297df77decbc2fed0f memstick: r592: Fix UAF bug in r592_remove due to race condition
+
+CVEs fixed in 4.14.317:
+  CVE-2023-1838: d1bcb0ab20980c6da663708c9a47c322703f9fc3 Fix double fget() in vhost_net_set_backend()
+
+CVEs fixed in 4.14.318:
+  CVE-2023-3111: ff0e8ed8dfb584575cffc1561f17a1d094e8565b btrfs: unset reloc control if transaction commit fails in prepare_to_relocate()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1525,7 +1536,6 @@ Outstanding CVEs:
   CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
   CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
   CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
-  CVE-2023-1838: (unk) Fix double fget() in vhost_net_set_backend() 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20941: (unk)  
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
@@ -1544,7 +1554,10 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
+  CVE-2023-3212: (unk) gfs2: Don't deref jdesc in evict 
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
+  CVE-2023-3268: (unk) relayfs: fix out-of-bounds access in relay_file_read 
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-35827: (unk)  

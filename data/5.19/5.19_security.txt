@@ -12,6 +12,7 @@ CVEs fixed in 5.19.2:
   CVE-2022-2586: 0d07039397527361850c554c192e749cfc879ea9 netfilter: nf_tables: do not allow SET_ID to refer to another table
   CVE-2022-2588: ee3f18d90e80e79449d575fa3e7a6b775e9fc35e net_sched: cls_route: remove from list when handle is 0
   CVE-2022-47938: 9ec5086d14c587dce3b81fe984d7009584cd9170 ksmbd: prevent out of bound read for SMB2_TREE_CONNNECT
+  CVE-2022-47939: 02ed2a9b7874e1fd08bbeccfe998df373a978b6f ksmbd: fix use-after-free bug in smb2_tree_disconect
   CVE-2022-47941: ff20f1875889dbe4a67c9298e609d7c88cf6456d ksmbd: fix memory leak in smb2_handle_negotiate
   CVE-2022-47942: 8e33102309bd6839b2e2e158f93a7b378cb4655d ksmbd: fix heap-based overflow in set_ntacl_dacl()
   CVE-2022-47943: 0f1c9908c8e18a98b3d6a80bf391bef8001d7fb7 ksmbd: prevent out of bound read for SMB2_WRITE
@@ -208,7 +209,6 @@ Outstanding CVEs:
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
   CVE-2022-47521: (unk) wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_CHANNEL_LIST attribute 
   CVE-2022-47929: (unk) net: sched: disallow noqueue for qdisc classes 
-  CVE-2022-47939: (unk) ksmbd: fix use-after-free bug in smb2_tree_disconect 
   CVE-2022-4842: (unk) fs/ntfs3: Fix attr_punch_hole() null pointer derenference 
   CVE-2022-48423: (unk) fs/ntfs3: Validate resident attribute name 
   CVE-2022-48424: (unk) fs/ntfs3: Validate attribute name offset 
@@ -303,12 +303,28 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
+  CVE-2023-3111: (unk) btrfs: unset reloc control if transaction commit fails in prepare_to_relocate() 
+  CVE-2023-3141: (unk) memstick: r592: Fix UAF bug in r592_remove due to race condition 
   CVE-2023-31436: (unk) net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg 
+  CVE-2023-3161: (unk) fbcon: Check font dimension limits 
+  CVE-2023-3212: (unk) gfs2: Don't deref jdesc in evict 
+  CVE-2023-3220: (unk) drm/msm/dpu: Add check for pstates 
   CVE-2023-32233: (unk) netfilter: nf_tables: deactivate anonymous set from preparation phase 
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
   CVE-2023-32269: (unk) netrom: Fix use-after-free caused by accept on already connected socket 
+  CVE-2023-3268: (unk) relayfs: fix out-of-bounds access in relay_file_read 
   CVE-2023-33203: (unk) net: qcom/emac: Fix use after free bug in emac_remove due to race condition 
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
+  CVE-2023-3357: (unk) HID: amd_sfh: Add missing check for dma_alloc_coherent 
+  CVE-2023-3358: (unk) HID: intel_ish-hid: Add check for ishtp_dma_tx_map 
+  CVE-2023-3359: (unk) nvmem: brcm_nvram: Add check for kzalloc 
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-34256: (unk) ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum 
+  CVE-2023-35788: (unk) net/sched: flower: fix possible OOB write in fl_set_geneve_opt() 
+  CVE-2023-35823: (unk) media: saa7134: fix use after free bug in saa7134_finidev due to race condition 
+  CVE-2023-35824: (unk) media: dm1105: Fix use after free bug in dm1105_remove due to race condition 
+  CVE-2023-35826: (unk) media: cedrus: fix use after free bug in cedrus_remove due to race condition 
+  CVE-2023-35827: (unk)  
+  CVE-2023-35828: (unk) usb: gadget: udc: renesas_usb3: Fix use after free bug in renesas_usb3_remove due to race condition 
+  CVE-2023-35829: (unk) media: rkvdec: fix use after free bug in rkvdec_remove 

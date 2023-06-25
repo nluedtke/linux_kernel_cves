@@ -203,6 +203,7 @@ CVEs fixed in 5.15.39:
   CVE-2022-1734: b8f2b836e7d0a553b886654e8b3925a85862d2eb nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs
   CVE-2022-1974: a2168fb3128a576d0175443403c15dcf8bf128f6 nfc: replace improper check device_is_registered() in netlink related functions
   CVE-2022-1975: 7bd81a05d48942ef2c48630e5e7963b187e95727 NFC: netlink: fix sleep in atomic bug when firmware download timeout
+  CVE-2023-3159: e259ba5c08d3791ab269b7775f1de5b36b06388c firewire: fix potential uaf in outbound_phy_packet_callback()
 
 CVEs fixed in 5.15.40:
   CVE-2022-1943: 9e951f2d85c9430ea8ae0c8448e47e3c234f1580 udf: Avoid using stale lengthOfImpUse
@@ -313,6 +314,7 @@ CVEs fixed in 5.15.63:
   CVE-2022-3629: e4c0428f8a6fc8c218d7fd72bddd163f05b29795 vsock: Fix memory leak in vsock_connect()
   CVE-2022-3633: 98dc8fb08299ab49e0b9c08daedadd2f4de1a2f2 can: j1939: j1939_session_destroy(): fix memory leak of skbs
   CVE-2022-3635: a5d7ce086fe942c5ab422fd2c034968a152be4c4 atm: idt77252: fix use-after-free bugs caused by tst_timer
+  CVE-2023-3111: 78f8c2370e3d33e35f23bdc648653d779aeacb6e btrfs: unset reloc control if transaction commit fails in prepare_to_relocate()
 
 CVEs fixed in 5.15.64:
   CVE-2022-2905: 4f672112f8665102a5842c170be1713f8ff95919 bpf: Don't use tnum_range on array range checking for poke descriptors
@@ -421,6 +423,7 @@ CVEs fixed in 5.15.86:
   CVE-2022-3534: a733bf10198eb5bb927890940de8ab457491ed3b libbpf: Fix use-after-free in btf_dump_name_dups
   CVE-2023-26606: ab53749c32db90eeb4495227c998d21dc07ad8c1 fs/ntfs3: Fix slab-out-of-bounds read in ntfs_trim_fs
   CVE-2023-28328: 210fcf64be4db82c0e190e74b5111e4eef661a7a media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer()
+  CVE-2023-3357: d238f94b2b61c77dd60db820aa683ff6a58c1543 HID: amd_sfh: Add missing check for dma_alloc_coherent
 
 CVEs fixed in 5.15.87:
   CVE-2022-36280: 6948e570f54f2044dd4da444b10471373a047eeb drm/vmwgfx: Validate the box size for the snooped cursor
@@ -455,9 +458,11 @@ CVEs fixed in 5.15.91:
   CVE-2023-1074: 3391bd42351be0beb14f438c7556912b9f96cb32 sctp: fail if no bound addresses can be used for a given scope
   CVE-2023-1652: 0a27dcd5343026ac0cb168ee63304255372b7a36 NFSD: fix use-after-free in nfsd4_ssc_setup_dul()
   CVE-2023-23559: 8cbf932c5c40b0c20597fa623c308d5bde0848b5 wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
+  CVE-2023-3358: c4cb73febe35f92f7a401f4cbc84f94c764732a9 HID: intel_ish-hid: Add check for ishtp_dma_tx_map
 
 CVEs fixed in 5.15.93:
   CVE-2023-2162: 0aaabdb900c7415caa2006ef580322f7eac5f6b6 scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress
+  CVE-2023-3161: dccbd062d71657648efc32fdc9919b33763cc68b fbcon: Check font dimension limits
   CVE-2023-32269: c27e0eac568a008cdf04ae7e4ea2d3c18717e627 netrom: Fix use-after-free caused by accept on already connected socket
 
 CVEs fixed in 5.15.94:
@@ -481,6 +486,7 @@ CVEs fixed in 5.15.99:
   CVE-2023-1118: 29962c478e8b2e6a6154d8d84b8806dbe36f9c28 media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
   CVE-2023-25012: 0fd9998052926ed24cfb30ab1a294cfeda4d0a8f HID: bigben: use spinlock to safely schedule workers
   CVE-2023-2985: 05103d88482dc3757db108415342fdd86821a79b fs: hfsplus: fix UAF issue in hfsplus_put_super
+  CVE-2023-3220: c7ee1772e3c36fff8e13daa5ce1ac61426544a33 drm/msm/dpu: Add check for pstates
 
 CVEs fixed in 5.15.100:
   CVE-2023-1829: 7c183dc0af472dec33d2c0786a5e356baa8cad19 net/sched: Retire tcindex classifier
@@ -522,12 +528,26 @@ CVEs fixed in 5.15.110:
 CVEs fixed in 5.15.111:
   CVE-2023-2269: e11765cea2050fa25fc3e03da858e83284c5ce79 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-32233: 21c2a454486d5e9c1517ecca19266b3be3df73ca netfilter: nf_tables: deactivate anonymous set from preparation phase
+  CVE-2023-3268: 0b46ee654a9dcd330e8183856b88505a9f633f7d relayfs: fix out-of-bounds access in relay_file_read
+  CVE-2023-35823: 2f48c0a463a37ac76ac089ec7936f673b9a0a448 media: saa7134: fix use after free bug in saa7134_finidev due to race condition
+  CVE-2023-35824: c94388b5b9098db82d6ba4627ef6e41a35870818 media: dm1105: Fix use after free bug in dm1105_remove due to race condition
+  CVE-2023-35828: 1e58fb6b1cef4d5e552a0c3038bf946890af6f3b usb: gadget: udc: renesas_usb3: Fix use after free bug in renesas_usb3_remove due to race condition
+  CVE-2023-35829: cac0f4f36e226c79c83d01dddc049ac59d2de157 media: rkvdec: fix use after free bug in rkvdec_remove
 
 CVEs fixed in 5.15.112:
   CVE-2023-34256: 6d9a705a653eb146b4991dbd198b258f787c70b1 ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum
 
 CVEs fixed in 5.15.113:
   CVE-2022-48425: 2a67f26f70ab344ae6ea78638890eebc1191a501 fs/ntfs3: Validate MFT flags before replaying logs
+  CVE-2023-3141: 162a9b321538972a260c7b178638c2368c071f77 memstick: r592: Fix UAF bug in r592_remove due to race condition
+
+CVEs fixed in 5.15.116:
+  CVE-2023-3212: fd8b4e28f400a067e6ef84569816967be1f0642b gfs2: Don't deref jdesc in evict
+  CVE-2023-35788: 45f47d2cf1142fbfe5d6fc39ad78f4aac058907c net/sched: flower: fix possible OOB write in fl_set_geneve_opt()
+
+CVEs fixed in 5.15.117:
+  CVE-2023-2124: 6cfe9ddb6aa698464fa16fb77a0233f68c13360c xfs: verify buffer contents when we skip log replay
+  CVE-2023-34255: 6cfe9ddb6aa698464fa16fb77a0233f68c13360c xfs: verify buffer contents when we skip log replay
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -633,7 +653,6 @@ Outstanding CVEs:
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20941: (unk)  
-  CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
@@ -648,4 +667,4 @@ Outstanding CVEs:
   CVE-2023-31085: (unk)  
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
-  CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-35827: (unk)  

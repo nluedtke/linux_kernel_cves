@@ -64,6 +64,7 @@ CVEs fixed in 5.17.7:
   CVE-2022-1734: f4bfbac45121c8638db5eacb1ebbb61ee956c668 nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs
   CVE-2022-1974: 8b58d6e565d83443c51b3fc076bd4472674aca0c nfc: replace improper check device_is_registered() in netlink related functions
   CVE-2022-1975: 63a545103b77091f2309b44a8975cdf255bb99b2 NFC: netlink: fix sleep in atomic bug when firmware download timeout
+  CVE-2023-3159: bb0aef891131e6347b04528c3f0ce11638d6f419 firewire: fix potential uaf in outbound_phy_packet_callback()
 
 CVEs fixed in 5.17.8:
   CVE-2022-1943: cfd64b858cb2b56969138df7970cb0b7f2388fb0 udf: Avoid using stale lengthOfImpUse
@@ -399,12 +400,26 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
+  CVE-2023-3111: (unk) btrfs: unset reloc control if transaction commit fails in prepare_to_relocate() 
+  CVE-2023-3141: (unk) memstick: r592: Fix UAF bug in r592_remove due to race condition 
   CVE-2023-31436: (unk) net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg 
+  CVE-2023-3161: (unk) fbcon: Check font dimension limits 
+  CVE-2023-3212: (unk) gfs2: Don't deref jdesc in evict 
+  CVE-2023-3220: (unk) drm/msm/dpu: Add check for pstates 
   CVE-2023-32233: (unk) netfilter: nf_tables: deactivate anonymous set from preparation phase 
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
   CVE-2023-32269: (unk) netrom: Fix use-after-free caused by accept on already connected socket 
+  CVE-2023-3268: (unk) relayfs: fix out-of-bounds access in relay_file_read 
   CVE-2023-33203: (unk) net: qcom/emac: Fix use after free bug in emac_remove due to race condition 
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
+  CVE-2023-3357: (unk) HID: amd_sfh: Add missing check for dma_alloc_coherent 
+  CVE-2023-3358: (unk) HID: intel_ish-hid: Add check for ishtp_dma_tx_map 
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-34256: (unk) ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum 
+  CVE-2023-35788: (unk) net/sched: flower: fix possible OOB write in fl_set_geneve_opt() 
+  CVE-2023-35823: (unk) media: saa7134: fix use after free bug in saa7134_finidev due to race condition 
+  CVE-2023-35824: (unk) media: dm1105: Fix use after free bug in dm1105_remove due to race condition 
+  CVE-2023-35827: (unk)  
+  CVE-2023-35828: (unk) usb: gadget: udc: renesas_usb3: Fix use after free bug in renesas_usb3_remove due to race condition 
+  CVE-2023-35829: (unk) media: rkvdec: fix use after free bug in rkvdec_remove 

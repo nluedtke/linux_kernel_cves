@@ -438,6 +438,7 @@ CVEs fixed in 5.10.115:
   CVE-2022-1734: 1961c5a688edb53fe3bc25cbda57f47adf12563c nfc: nfcmrvl: main: reorder destructive operations in nfcmrvl_nci_unregister_dev to avoid bugs
   CVE-2022-1974: 8a9e7c64f4a02c4c397e55ba379609168ec7df4a nfc: replace improper check device_is_registered() in netlink related functions
   CVE-2022-1975: 879b075a9a364a325988d4484b74311edfef82a1 NFC: netlink: fix sleep in atomic bug when firmware download timeout
+  CVE-2023-3159: e757ff4bbc893bc030c2d10143091094da73b9ff firewire: fix potential uaf in outbound_phy_packet_callback()
 
 CVEs fixed in 5.10.117:
   CVE-2022-1786: 29f077d070519a88a793fbc70f1e6484dc6d9e35 io_uring: remove io_identity
@@ -654,10 +655,12 @@ CVEs fixed in 5.10.166:
   CVE-2023-1073: 5dc3469a1170dd1344d262a332b26994214eeb58 HID: check empty report_list in hid_validate_values()
   CVE-2023-1074: 6ef652f35dcfaa1ab2b2cf6c1694718595148eee sctp: fail if no bound addresses can be used for a given scope
   CVE-2023-23559: 802fd7623e9ed19ee809b503e93fccc1e3f37bd6 wifi: rndis_wlan: Prevent buffer overflow in rndis_query_oid
+  CVE-2023-3358: 7b4516ba56f1fcb13ffc91912f3074e28362228d HID: intel_ish-hid: Add check for ishtp_dma_tx_map
 
 CVEs fixed in 5.10.168:
   CVE-2023-1078: c53f34ec3fbf3e9f67574118a6bb35ae1146f7ca rds: rds_rm_zerocopy_callback() use list_first_entry()
   CVE-2023-2162: 9758ffe1c07b86aefd7ca8e40d9a461293427ca0 scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress
+  CVE-2023-3161: 28d190882ba55cbcee1db8e4ae90c149178dcf64 fbcon: Check font dimension limits
   CVE-2023-32269: dd6991251a1382a9b4984962a0c7a467e9d71812 netrom: Fix use-after-free caused by accept on already connected socket
 
 CVEs fixed in 5.10.169:
@@ -682,6 +685,7 @@ CVEs fixed in 5.10.173:
   CVE-2023-23004: a5bbea50d622b8f49ab8ee3b0eb283107febcf1a malidp: Fix NULL vs IS_ERR() checking
   CVE-2023-25012: fddde36316da8acb45a3cca2e5fda102f5215877 HID: bigben: use spinlock to safely schedule workers
   CVE-2023-2985: ef7d71d7bd57b8b7fe514e459927696c1c6d1047 fs: hfsplus: fix UAF issue in hfsplus_put_super
+  CVE-2023-3220: e9743b3052e125c44b555f07f2876a4bdccfd983 drm/msm/dpu: Add check for pstates
 
 CVEs fixed in 5.10.176:
   CVE-2023-1855: 0a73c8b3cc99d214dff83c51805c844240c4f749 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
@@ -715,10 +719,25 @@ CVEs fixed in 5.10.180:
   CVE-2023-2002: 98cfbad52fc286c2a1a75e04bf47b98d6489db1f bluetooth: Perform careful capability checks in hci_sock_ioctl()
   CVE-2023-2269: ea827627a9249154b34b646b1e1007013402afea dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-32233: e044a24447189419c3a7ccc5fa6da7516036dc55 netfilter: nf_tables: deactivate anonymous set from preparation phase
+  CVE-2023-3268: 1b0df44753bf9e45eaf5cee34f87597193f862e8 relayfs: fix out-of-bounds access in relay_file_read
   CVE-2023-34256: 0dde3141c527b09b96bef1e7eeb18b8127810ce9 ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum
+  CVE-2023-35823: 7dac96e9cc985328ec1fae92f0c245f559dc0e11 media: saa7134: fix use after free bug in saa7134_finidev due to race condition
+  CVE-2023-35824: e9d64e90a0ada4d00ac6562e351ef10ae7d9b911 media: dm1105: Fix use after free bug in dm1105_remove due to race condition
+  CVE-2023-35828: 36c237b202a406ba441892eabcf44e60dae7ad73 usb: gadget: udc: renesas_usb3: Fix use after free bug in renesas_usb3_remove due to race condition
+  CVE-2023-35829: de19d02d734ef29f5dbd2c12fe810fa960ecd83f media: rkvdec: fix use after free bug in rkvdec_remove
 
 CVEs fixed in 5.10.181:
   CVE-2022-4269: 53245103786312f21fb9785327a4367cf10f0dbb act_mirred: use the backlog for nested calls to mirred ingress
+  CVE-2023-3141: 5c23f6da62f71ebfeda6ea3960982ccd926ebb09 memstick: r592: Fix UAF bug in r592_remove due to race condition
+
+CVEs fixed in 5.10.183:
+  CVE-2023-3212: d03d31d3a206093b9b8759dddf0ba9bd843606ba gfs2: Don't deref jdesc in evict
+  CVE-2023-35788: 7c5c67aa294444b53f697dc3ddce61b33ff8badd net/sched: flower: fix possible OOB write in fl_set_geneve_opt()
+
+CVEs fixed in 5.10.184:
+  CVE-2023-2124: 0e98a97f772f2ffcee8ced7a49b71e72916e0aa1 xfs: verify buffer contents when we skip log replay
+  CVE-2023-3111: b60e862e133f646f19023ece1d476d630a660de1 btrfs: unset reloc control if transaction commit fails in prepare_to_relocate()
+  CVE-2023-34255: 0e98a97f772f2ffcee8ced7a49b71e72916e0aa1 xfs: verify buffer contents when we skip log replay
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -846,7 +865,6 @@ Outstanding CVEs:
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20941: (unk)  
-  CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
@@ -862,4 +880,4 @@ Outstanding CVEs:
   CVE-2023-31085: (unk)  
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
-  CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-35827: (unk)  
