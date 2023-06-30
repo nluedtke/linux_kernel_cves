@@ -335,6 +335,7 @@ CVEs fixed in 5.15.68:
   CVE-2022-3303: 8015ef9e8a0ee5cecfd0cb6805834d007ab26f86 ALSA: pcm: oss: Fix race at SNDCTL_DSP_SYNC
   CVE-2022-3586: 1a889da60afc017050e1f517b3b976b462846668 sch_sfb: Don't assume the skb is still around after enqueueing to child
   CVE-2022-40307: dd291e070be0eca8807476b022bda00c891d9066 efi: capsule-loader: Fix use-after-free in efi_capsule_write
+  CVE-2023-2860: 55195563ec29f80f984237b743de0e2b6ba4d093 ipv6: sr: fix out-of-bounds read when setting HMAC data.
 
 CVEs fixed in 5.15.70:
   CVE-2022-0171: 39b0235284c7aa33a64e07b825add7a2c108094a KVM: SEV: add cache flush to solve SEV cache incoherency issues
@@ -487,6 +488,7 @@ CVEs fixed in 5.15.99:
   CVE-2023-25012: 0fd9998052926ed24cfb30ab1a294cfeda4d0a8f HID: bigben: use spinlock to safely schedule workers
   CVE-2023-2985: 05103d88482dc3757db108415342fdd86821a79b fs: hfsplus: fix UAF issue in hfsplus_put_super
   CVE-2023-3220: c7ee1772e3c36fff8e13daa5ce1ac61426544a33 drm/msm/dpu: Add check for pstates
+  CVE-2023-3355: 436fb91cadb82da0b0b114baa4fc3b5ef7e6d557 drm/msm/gem: Add check for kmalloc
 
 CVEs fixed in 5.15.100:
   CVE-2023-1829: 7c183dc0af472dec33d2c0786a5e356baa8cad19 net/sched: Retire tcindex classifier
@@ -539,6 +541,7 @@ CVEs fixed in 5.15.112:
 
 CVEs fixed in 5.15.113:
   CVE-2022-48425: 2a67f26f70ab344ae6ea78638890eebc1191a501 fs/ntfs3: Validate MFT flags before replaying logs
+  CVE-2023-3090: 7c8be27727fe194b4625da442ee2b854db76b200 ipvlan:Fix out-of-bounds caused by unclear skb->cb
   CVE-2023-3141: 162a9b321538972a260c7b178638c2368c071f77 memstick: r592: Fix UAF bug in r592_remove due to race condition
 
 CVEs fixed in 5.15.116:
@@ -548,6 +551,10 @@ CVEs fixed in 5.15.116:
 CVEs fixed in 5.15.117:
   CVE-2023-2124: 6cfe9ddb6aa698464fa16fb77a0233f68c13360c xfs: verify buffer contents when we skip log replay
   CVE-2023-34255: 6cfe9ddb6aa698464fa16fb77a0233f68c13360c xfs: verify buffer contents when we skip log replay
+
+CVEs fixed in 5.15.118:
+  CVE-2023-3338: 2a974abc09761c05fef697fe229d1b85a7ce3918 Remove DECnet support from kernel
+  CVE-2023-3390: 44ebe988cb38e720b91826f4d7c31692061ca04a netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -650,6 +657,7 @@ Outstanding CVEs:
   CVE-2023-1192: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
+  CVE-2023-1206: (unk)  
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20941: (unk)  
@@ -667,4 +675,9 @@ Outstanding CVEs:
   CVE-2023-31085: (unk)  
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
+  CVE-2023-3389: (unk) io_uring: mutex locked poll hashing 
+  CVE-2023-33951: (unk) drm/vmwgfx: Do not drop the reference to the handle too soon 
+  CVE-2023-33952: (unk) drm/vmwgfx: Do not drop the reference to the handle too soon 
+  CVE-2023-3397: (unk)  
+  CVE-2023-3439: (unk) mctp: defer the kfree of object mdev->addrs 
   CVE-2023-35827: (unk)  

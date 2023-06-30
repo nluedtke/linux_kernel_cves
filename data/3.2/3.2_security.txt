@@ -633,6 +633,9 @@ CVEs fixed in 3.2.100:
   CVE-2018-7492: cbe131eb2d7bab9b3332094ae279fed7cb170a85 rds: Fix NULL pointer dereference in __rds_rdma_map
   CVE-2019-9454: fa05746dcb3132105d634eb72ec0d455af3be3cf i2c: core-smbus: prevent stack corruption on read I2C_BLOCK_DATA
 
+CVEs fixed in 3.2.101:
+  CVE-2017-5715: 0605c9a548fb39e5b0ee4765ffe828742ecf02ae x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]
+
 CVEs fixed in 3.2.102:
   CVE-2017-18208: 3d886ff142e713000aec6bf6f82944eb03dab28c mm/madvise.c: fix madvise() infinite loop under special circumstances
   CVE-2017-18216: dfd9f20a2db71ca01033040ecf69d5c0e67db629 ocfs2: subsystem.su_mutex is required while accessing the item->ci_parent
@@ -761,7 +764,6 @@ Outstanding CVEs:
   CVE-2017-18509: (unk) ipv6: check sk sk_type and protocol early in ip_mroute_set/getsockopt 
   CVE-2017-18552: (unk) RDS: validate the requested traces user input against max supported 
   CVE-2017-5551: (unk) tmpfs: clear S_ISGID when setting posix ACLs 
-  CVE-2017-5715: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5754: (unk) x86/cpufeatures: Add Intel feature bits for Speculation Control 
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
@@ -1370,6 +1372,7 @@ Outstanding CVEs:
   CVE-2023-1074: (unk) sctp: fail if no bound addresses can be used for a given scope 
   CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
   CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
+  CVE-2023-1206: (unk)  
   CVE-2023-1380: (unk) wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies() 
   CVE-2023-1513: (unk) kvm: initialize all of the kvm_debugregs structure before sending it to userspace 
   CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
@@ -1391,12 +1394,14 @@ Outstanding CVEs:
   CVE-2023-2513: (unk) ext4: fix use-after-free in ext4_xattr_set_entry 
   CVE-2023-26607: (unk) ntfs: fix out-of-bounds read in ntfs_attr_find() 
   CVE-2023-28328: (unk) media: dvb-usb: az6027: fix null-ptr-deref in az6027_i2c_xfer() 
+  CVE-2023-2860: (unk) ipv6: sr: fix out-of-bounds read when setting HMAC data. 
   CVE-2023-28772: (unk) seq_buf: Fix overflow in seq_buf_putmem_hex() 
   CVE-2023-2898: (unk)  
   CVE-2023-2985: (unk) fs: hfsplus: fix UAF issue in hfsplus_put_super 
   CVE-2023-3006: (unk) arm64: Add AMPERE1 to the Spectre-BHB affected list 
   CVE-2023-3022: (unk) ipv6: Use result arg in fib_lookup_arg consistently 
   CVE-2023-30456: (unk) KVM: nVMX: add missing consistency checks for CR0 and CR4 
+  CVE-2023-3090: (unk) ipvlan:Fix out-of-bounds caused by unclear skb->cb 
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk)  
@@ -1413,7 +1418,15 @@ Outstanding CVEs:
   CVE-2023-32269: (unk) netrom: Fix use-after-free caused by accept on already connected socket 
   CVE-2023-3268: (unk) relayfs: fix out-of-bounds access in relay_file_read 
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
+  CVE-2023-3338: (unk) Remove DECnet support from kernel 
+  CVE-2023-3355: (unk) drm/msm/gem: Add check for kmalloc 
+  CVE-2023-3389: (unk) io_uring: mutex locked poll hashing 
+  CVE-2023-3390: (unk) netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE 
+  CVE-2023-33951: (unk) drm/vmwgfx: Do not drop the reference to the handle too soon 
+  CVE-2023-33952: (unk) drm/vmwgfx: Do not drop the reference to the handle too soon 
+  CVE-2023-3397: (unk)  
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-34256: (unk) ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum 
+  CVE-2023-3439: (unk) mctp: defer the kfree of object mdev->addrs 
   CVE-2023-35824: (unk) media: dm1105: Fix use after free bug in dm1105_remove due to race condition 
   CVE-2023-35827: (unk)  

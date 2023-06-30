@@ -76,6 +76,8 @@ CVEs fixed in 6.1.13:
   CVE-2023-1281: bd662ba56187b5ef8a62a3511371cd38299a507f net/sched: tcindex: update imperfect hash filters respecting rcu
   CVE-2023-1513: 747ca7c8a0c7bce004709143d1cd6596b79b1deb kvm: initialize all of the kvm_debugregs structure before sending it to userspace
   CVE-2023-26545: c376227845eef8f2e62e2c29c3cf2140d35dd8e8 net: mpls: fix stale pointer if allocation fails during device rename
+  CVE-2023-33951: 0a127ac972404600c99eb141c8d5b5348e53ee4f drm/vmwgfx: Do not drop the reference to the handle too soon
+  CVE-2023-33952: 0a127ac972404600c99eb141c8d5b5348e53ee4f drm/vmwgfx: Do not drop the reference to the handle too soon
 
 CVEs fixed in 6.1.14:
   CVE-2022-2196: 63fada296062e91ad9f871970d4e7f19e21a6a15 KVM: VMX: Execute IBPB on emulated VM-exit when guest has IBRS
@@ -91,6 +93,7 @@ CVEs fixed in 6.1.16:
   CVE-2023-25012: f2bf592ebd5077661e00aa11e12e054c4c8f6dd0 HID: bigben: use spinlock to safely schedule workers
   CVE-2023-2985: 0c80bef0b7d297ea86e5408fe79c45479e504a26 fs: hfsplus: fix UAF issue in hfsplus_put_super
   CVE-2023-3220: dd49cef313e6a62541b55e739261c5943cb06c47 drm/msm/dpu: Add check for pstates
+  CVE-2023-3355: 31c4251a20fd7addc1bf4fe801f95f9ba1b38990 drm/msm/gem: Add check for kmalloc
 
 CVEs fixed in 6.1.18:
   CVE-2023-1829: 3abebc503a5148072052c229c6b04b329a420ecd net/sched: Retire tcindex classifier
@@ -147,6 +150,7 @@ CVEs fixed in 6.1.29:
   CVE-2023-34256: 1fffe4750500148f3e744ed77cf233db8342603f ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum
 
 CVEs fixed in 6.1.30:
+  CVE-2023-3090: 610a433810b277b3b77389733c07d22e8af68de2 ipvlan:Fix out-of-bounds caused by unclear skb->cb
   CVE-2023-3141: 9a342d4eb9fb8e52f7d1afe088a79513f3f9a9a5 memstick: r592: Fix UAF bug in r592_remove due to race condition
 
 CVEs fixed in 6.1.33:
@@ -155,6 +159,9 @@ CVEs fixed in 6.1.33:
   CVE-2023-3212: 5ae4a618a1558d2b536fdd5d42e53d3e2d73870c gfs2: Don't deref jdesc in evict
   CVE-2023-34255: a2961463d74f5c86a8dda3b41c484c28ccc4c289 xfs: verify buffer contents when we skip log replay
   CVE-2023-35788: eac615ed3c6d91f1196f16f0a0599fff479cb220 net/sched: flower: fix possible OOB write in fl_set_geneve_opt()
+
+CVEs fixed in 6.1.35:
+  CVE-2023-3390: 4aaa3b730d16c13cc3feaa127bfca1af201d969d netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -240,6 +247,7 @@ Outstanding CVEs:
   CVE-2023-1192: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
+  CVE-2023-1206: (unk)  
   CVE-2023-20941: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-23005: (unk) mm/demotion: fix NULL vs IS_ERR checking in memory_tier_init 
@@ -252,4 +260,5 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
+  CVE-2023-3397: (unk)  
   CVE-2023-35827: (unk)  
