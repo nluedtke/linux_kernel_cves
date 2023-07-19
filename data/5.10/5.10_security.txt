@@ -663,6 +663,7 @@ CVEs fixed in 5.10.168:
   CVE-2023-2162: 9758ffe1c07b86aefd7ca8e40d9a461293427ca0 scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress
   CVE-2023-3161: 28d190882ba55cbcee1db8e4ae90c149178dcf64 fbcon: Check font dimension limits
   CVE-2023-32269: dd6991251a1382a9b4984962a0c7a467e9d71812 netrom: Fix use-after-free caused by accept on already connected socket
+  CVE-2023-3567: 55515d7d8743b71b80bfe68e89eb9d92630626ab vc_screen: move load of struct vc_data pointer in vcs_read() to avoid UAF
 
 CVEs fixed in 5.10.169:
   CVE-2023-1281: eb8e9d8572d1d9df17272783ad8a84843ce559d4 net/sched: tcindex: update imperfect hash filters respecting rcu
@@ -880,19 +881,33 @@ Outstanding CVEs:
   CVE-2023-23586: (unk) io_uring: remove io_identity 
   CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
-  CVE-2023-2898: (unk)  
+  CVE-2023-2898: (unk) f2fs: fix to avoid NULL pointer dereference f2fs_write_end_io() 
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
-  CVE-2023-31248: (unk)  
+  CVE-2023-31248: (unk) netfilter: nf_tables: do not ignore genmask when looking up chain by id 
+  CVE-2023-32247: (unk) ksmbd: destroy expired sessions 
+  CVE-2023-32248: (unk) ksmbd: fix NULL pointer dereference in smb2_get_info_filesystem() 
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
+  CVE-2023-32252: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
-  CVE-2023-3269: (unk) mm: introduce new 'lock_mm_and_find_vma()' page fault helper 
-  CVE-2023-3355: (unk) drm/msm/gem: Add check for kmalloc 
+  CVE-2023-32257: (unk) ksmbd: fix racy issue from session setup and logoff 
+  CVE-2023-32258: (unk) ksmbd: fix racy issue from smb2 close and logoff with multichannel 
   CVE-2023-3389: (unk) io_uring: mutex locked poll hashing 
   CVE-2023-3390: (unk) netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE 
   CVE-2023-3397: (unk)  
-  CVE-2023-35001: (unk)  
+  CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
+  CVE-2023-35693: (unk)  
   CVE-2023-35827: (unk)  
+  CVE-2023-3640: (unk)  
+  CVE-2023-37453: (unk)  
+  CVE-2023-37454: (unk)  
+  CVE-2023-38426: (unk) ksmbd: fix global-out-of-bounds in smb2_find_context_vals 
+  CVE-2023-38427: (unk) ksmbd: fix out-of-bound read in deassemble_neg_contexts() 
+  CVE-2023-38428: (unk) ksmbd: fix wrong UserName check in session_user 
+  CVE-2023-38429: (unk) ksmbd: allocate one more byte for implied bcc[0] 
+  CVE-2023-38430: (unk) ksmbd: validate smb request protocol id 
+  CVE-2023-38431: (unk) ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop 
+  CVE-2023-38432: (unk) ksmbd: validate command payload size 

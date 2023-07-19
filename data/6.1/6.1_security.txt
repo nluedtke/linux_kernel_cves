@@ -67,6 +67,7 @@ CVEs fixed in 6.1.11:
   CVE-2023-3161: 5e7f6e2ade57dfd6d133ff7c643abd2079248943 fbcon: Check font dimension limits
   CVE-2023-32269: 5c2227f3f17782d5262ee0979ad30609b3e01f6e netrom: Fix use-after-free caused by accept on already connected socket
   CVE-2023-3359: f5249bbae0e736d612d2095ad79dc1389b3e89b5 nvmem: brcm_nvram: Add check for kzalloc
+  CVE-2023-3567: 8506f16aae9daf354e3732bcfd447e2a97f023df vc_screen: move load of struct vc_data pointer in vcs_read() to avoid UAF
 
 CVEs fixed in 6.1.12:
   CVE-2022-27672: cc95b5d240b631e42e2863e1dcb6ad83920cc449 x86/speculation: Identify processors vulnerable to SMT RSB predictions
@@ -124,6 +125,7 @@ CVEs fixed in 6.1.23:
 
 CVEs fixed in 6.1.25:
   CVE-2023-1859: c4002b9d5e837f152a40d1333c56ccb84975147b 9p/xen : Fix use after free bug in xen_9pfs_front_remove due to race condition
+  CVE-2023-38409: b15df140fe092c3ac28dab32c6b3acdda1a93c63 fbcon: set_con2fb_map needs to set con2fb_map!
 
 CVEs fixed in 6.1.26:
   CVE-2023-2156: 9a0b96d03c59ba560b074cdb9b6233493fd5492d net: rpl: fix rpl header size calculation
@@ -138,6 +140,7 @@ CVEs fixed in 6.1.27:
 CVEs fixed in 6.1.28:
   CVE-2023-2269: 9a94ebc74c3540aba5aa2c7b05032da4610a08c9 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-32233: 4507918cd1f8b80f21a396fa0531d53e372bed66 netfilter: nf_tables: deactivate anonymous set from preparation phase
+  CVE-2023-32248: a70751dd7b60eab025e97e19b6b2477c6eaf2bbb ksmbd: fix NULL pointer dereference in smb2_get_info_filesystem()
   CVE-2023-32254: bd80d35725a0cf4df9307bfe2f1a3b2cb983d8e6 ksmbd: fix racy issue under cocurrent smb2 tree disconnect
   CVE-2023-3268: f6ee841ff2169d7a7d045340ee72b2b9de9f06c5 relayfs: fix out-of-bounds access in relay_file_read
   CVE-2023-35823: 5a72aea9acfe945353fb3a2f141f4e526a5f3684 media: saa7134: fix use after free bug in saa7134_finidev due to race condition
@@ -147,22 +150,41 @@ CVEs fixed in 6.1.28:
   CVE-2023-35829: 6a17add9c61030683b9c1fc86878f00a2d318a95 media: rkvdec: fix use after free bug in rkvdec_remove
 
 CVEs fixed in 6.1.29:
+  CVE-2023-32247: 1fc8a2b14ef5223f8e0b95faba2ee0a6e4d0f99d ksmbd: destroy expired sessions
   CVE-2023-32250: f623f627ad2b1dc215ab3b0df53fb05cfd3a1c3b ksmbd: fix racy issue from session setup and logoff
+  CVE-2023-32252: f623f627ad2b1dc215ab3b0df53fb05cfd3a1c3b ksmbd: fix racy issue from session setup and logoff
+  CVE-2023-32257: f623f627ad2b1dc215ab3b0df53fb05cfd3a1c3b ksmbd: fix racy issue from session setup and logoff
+  CVE-2023-32258: 4aba9ab6a007e41182454f84f95c0bddf7d6d7e1 ksmbd: fix racy issue from smb2 close and logoff with multichannel
   CVE-2023-34256: 1fffe4750500148f3e744ed77cf233db8342603f ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum
 
 CVEs fixed in 6.1.30:
   CVE-2023-3090: 610a433810b277b3b77389733c07d22e8af68de2 ipvlan:Fix out-of-bounds caused by unclear skb->cb
   CVE-2023-3141: 9a342d4eb9fb8e52f7d1afe088a79513f3f9a9a5 memstick: r592: Fix UAF bug in r592_remove due to race condition
+  CVE-2023-38426: 75378b03a90d75b1349bb03577ac8465194c883e ksmbd: fix global-out-of-bounds in smb2_find_context_vals
+  CVE-2023-38428: 40d90ee0275a1bfcd26fa7690adc4330b4227a69 ksmbd: fix wrong UserName check in session_user
+  CVE-2023-38429: af7335a4b946f9f6f9d98398cbcea15cd9850409 ksmbd: allocate one more byte for implied bcc[0]
+
+CVEs fixed in 6.1.31:
+  CVE-2023-21255: e1e198eff1fbaf56fd8022c4fbbf59c5324ea320 binder: fix UAF caused by faulty buffer cleanup
 
 CVEs fixed in 6.1.33:
   CVE-2022-48425: a8eaa9a06addbd9cb0238cb1c729921ecbb6504c fs/ntfs3: Validate MFT flags before replaying logs
+  CVE-2023-1192: a8eaa9a06addbd9cb0238cb1c729921ecbb6504c fs/ntfs3: Validate MFT flags before replaying logs
   CVE-2023-2124: a2961463d74f5c86a8dda3b41c484c28ccc4c289 xfs: verify buffer contents when we skip log replay
   CVE-2023-3212: 5ae4a618a1558d2b536fdd5d42e53d3e2d73870c gfs2: Don't deref jdesc in evict
   CVE-2023-34255: a2961463d74f5c86a8dda3b41c484c28ccc4c289 xfs: verify buffer contents when we skip log replay
   CVE-2023-35788: eac615ed3c6d91f1196f16f0a0599fff479cb220 net/sched: flower: fix possible OOB write in fl_set_geneve_opt()
 
+CVEs fixed in 6.1.34:
+  CVE-2023-38427: bf12d7fb63b365fb766655cedcb5d5f292b0c35e ksmbd: fix out-of-bound read in deassemble_neg_contexts()
+  CVE-2023-38431: 543c12c2644e772caa6880662c2a852cfdc5a10c ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop
+
 CVEs fixed in 6.1.35:
   CVE-2023-3390: 4aaa3b730d16c13cc3feaa127bfca1af201d969d netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
+  CVE-2023-38430: e01fc7caac9ce9ad76df9f42f7f61ef4bf1d27c9 ksmbd: validate smb request protocol id
+
+CVEs fixed in 6.1.36:
+  CVE-2023-38432: 9650cf70ec9d94ff34daa088b643229231723c26 ksmbd: validate command payload size
 
 CVEs fixed in 6.1.37:
   CVE-2023-3269: d6a5c7a1a6e52d4c46fe181237ca96cd46a42386 mm: introduce new 'lock_mm_and_find_vma()' page fault helper
@@ -248,7 +270,6 @@ Outstanding CVEs:
   CVE-2022-48502: (unk) fs/ntfs3: Check fields while reading 
   CVE-2023-0160: (unk)  
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
-  CVE-2023-1192: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
   CVE-2023-1206: (unk)  
@@ -258,13 +279,17 @@ Outstanding CVEs:
   CVE-2023-23039: (unk)  
   CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
-  CVE-2023-2898: (unk)  
+  CVE-2023-2898: (unk) f2fs: fix to avoid NULL pointer dereference f2fs_write_end_io() 
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
-  CVE-2023-31248: (unk)  
+  CVE-2023-31248: (unk) netfilter: nf_tables: do not ignore genmask when looking up chain by id 
   CVE-2023-3397: (unk)  
-  CVE-2023-35001: (unk)  
+  CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
+  CVE-2023-35693: (unk)  
   CVE-2023-35827: (unk)  
+  CVE-2023-3640: (unk)  
+  CVE-2023-37453: (unk)  
+  CVE-2023-37454: (unk)  

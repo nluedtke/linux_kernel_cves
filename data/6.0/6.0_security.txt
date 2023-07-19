@@ -219,7 +219,7 @@ Outstanding CVEs:
   CVE-2023-1078: (unk) rds: rds_rm_zerocopy_callback() use list_first_entry() 
   CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
   CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
-  CVE-2023-1192: (unk)  
+  CVE-2023-1192: (unk) fs/ntfs3: Validate MFT flags before replaying logs 
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
   CVE-2023-1195: (unk) cifs: fix use-after-free caused by invalid pointer `hostname` 
@@ -242,6 +242,7 @@ Outstanding CVEs:
   CVE-2023-21102: (unk) efi: rt-wrapper: Add missing include 
   CVE-2023-21106: (unk) drm/msm/gpu: Fix potential double-free 
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-21255: (unk) binder: fix UAF caused by faulty buffer cleanup 
   CVE-2023-2156: (unk) net: rpl: fix rpl header size calculation 
   CVE-2023-2162: (unk) scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress 
   CVE-2023-2163: (unk) bpf: Fix incorrect verifier pruning due to missing register precision taints 
@@ -259,7 +260,7 @@ Outstanding CVEs:
   CVE-2023-26545: (unk) net: mpls: fix stale pointer if allocation fails during device rename 
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
   CVE-2023-28866: (unk) Bluetooth: HCI: Fix global-out-of-bounds 
-  CVE-2023-2898: (unk)  
+  CVE-2023-2898: (unk) f2fs: fix to avoid NULL pointer dereference f2fs_write_end_io() 
   CVE-2023-2985: (unk) fs: hfsplus: fix UAF issue in hfsplus_put_super 
   CVE-2023-30456: (unk) KVM: nVMX: add missing consistency checks for CR0 and CR4 
   CVE-2023-30772: (unk) power: supply: da9150: Fix use after free bug in da9150_charger_remove due to race condition 
@@ -269,18 +270,22 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
-  CVE-2023-31248: (unk)  
+  CVE-2023-31248: (unk) netfilter: nf_tables: do not ignore genmask when looking up chain by id 
   CVE-2023-3141: (unk) memstick: r592: Fix UAF bug in r592_remove due to race condition 
   CVE-2023-31436: (unk) net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg 
   CVE-2023-3161: (unk) fbcon: Check font dimension limits 
   CVE-2023-3212: (unk) gfs2: Don't deref jdesc in evict 
   CVE-2023-3220: (unk) drm/msm/dpu: Add check for pstates 
   CVE-2023-32233: (unk) netfilter: nf_tables: deactivate anonymous set from preparation phase 
+  CVE-2023-32247: (unk) ksmbd: destroy expired sessions 
+  CVE-2023-32248: (unk) ksmbd: fix NULL pointer dereference in smb2_get_info_filesystem() 
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
+  CVE-2023-32252: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
+  CVE-2023-32257: (unk) ksmbd: fix racy issue from session setup and logoff 
+  CVE-2023-32258: (unk) ksmbd: fix racy issue from smb2 close and logoff with multichannel 
   CVE-2023-32269: (unk) netrom: Fix use-after-free caused by accept on already connected socket 
   CVE-2023-3268: (unk) relayfs: fix out-of-bounds access in relay_file_read 
-  CVE-2023-3269: (unk) mm: introduce new 'lock_mm_and_find_vma()' page fault helper 
   CVE-2023-33203: (unk) net: qcom/emac: Fix use after free bug in emac_remove due to race condition 
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
   CVE-2023-3338: (unk) Remove DECnet support from kernel 
@@ -293,7 +298,9 @@ Outstanding CVEs:
   CVE-2023-3397: (unk)  
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-34256: (unk) ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum 
-  CVE-2023-35001: (unk)  
+  CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
+  CVE-2023-3567: (unk) vc_screen: move load of struct vc_data pointer in vcs_read() to avoid UAF 
+  CVE-2023-35693: (unk)  
   CVE-2023-35788: (unk) net/sched: flower: fix possible OOB write in fl_set_geneve_opt() 
   CVE-2023-35823: (unk) media: saa7134: fix use after free bug in saa7134_finidev due to race condition 
   CVE-2023-35824: (unk) media: dm1105: Fix use after free bug in dm1105_remove due to race condition 
@@ -301,3 +308,14 @@ Outstanding CVEs:
   CVE-2023-35827: (unk)  
   CVE-2023-35828: (unk) usb: gadget: udc: renesas_usb3: Fix use after free bug in renesas_usb3_remove due to race condition 
   CVE-2023-35829: (unk) media: rkvdec: fix use after free bug in rkvdec_remove 
+  CVE-2023-3640: (unk)  
+  CVE-2023-37453: (unk)  
+  CVE-2023-37454: (unk)  
+  CVE-2023-38409: (unk) fbcon: set_con2fb_map needs to set con2fb_map! 
+  CVE-2023-38426: (unk) ksmbd: fix global-out-of-bounds in smb2_find_context_vals 
+  CVE-2023-38427: (unk) ksmbd: fix out-of-bound read in deassemble_neg_contexts() 
+  CVE-2023-38428: (unk) ksmbd: fix wrong UserName check in session_user 
+  CVE-2023-38429: (unk) ksmbd: allocate one more byte for implied bcc[0] 
+  CVE-2023-38430: (unk) ksmbd: validate smb request protocol id 
+  CVE-2023-38431: (unk) ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop 
+  CVE-2023-38432: (unk) ksmbd: validate command payload size 

@@ -17,8 +17,13 @@ CVEs fixed in 6.3.2:
   CVE-2023-2269: a554e6ec3626d4c11f55d7eef8d6aa93fb211c24 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-2598: 3a0a9211d7d0138d55aecd209b05e6d4a9eec383 io_uring/rsrc: check for nonconsecutive pages
   CVE-2023-32233: f8486683ffa30456e0be4290282a44c4459a3287 netfilter: nf_tables: deactivate anonymous set from preparation phase
+  CVE-2023-32247: 6775ee7ef4b37c521aa4cf3730f54554c4875542 ksmbd: destroy expired sessions
+  CVE-2023-32248: 1636e09779f83e10e6ed57d91ef94abcefdd206b ksmbd: fix NULL pointer dereference in smb2_get_info_filesystem()
   CVE-2023-32250: 02f41d88f15d6b7d523e52cc3f87488f57e9265b ksmbd: fix racy issue from session setup and logoff
+  CVE-2023-32252: 02f41d88f15d6b7d523e52cc3f87488f57e9265b ksmbd: fix racy issue from session setup and logoff
   CVE-2023-32254: 39366b47a59d46af15ac57beb0996268bf911f6a ksmbd: fix racy issue under cocurrent smb2 tree disconnect
+  CVE-2023-32257: 02f41d88f15d6b7d523e52cc3f87488f57e9265b ksmbd: fix racy issue from session setup and logoff
+  CVE-2023-32258: 920d5dd2d041484bf001c9713c2e3bcc6de79726 ksmbd: fix racy issue from smb2 close and logoff with multichannel
   CVE-2023-3268: 35ca4fb494c0c9f226fbcfa1c1688e6cc1e5062e relayfs: fix out-of-bounds access in relay_file_read
   CVE-2023-3312: d9bad836cf156ee87d577f0bd1ed01501b31a253 cpufreq: qcom-cpufreq-hw: fix double IO unmap and resource release on exit
   CVE-2023-35823: 3a60e51489a3ec61565f5bc53f726ac9ccc6083c media: saa7134: fix use after free bug in saa7134_finidev due to race condition
@@ -32,8 +37,15 @@ CVEs fixed in 6.3.3:
 
 CVEs fixed in 6.3.4:
   CVE-2022-48425: e6f4b1c32d6d6047958d7700d12fed6d91f441e7 fs/ntfs3: Validate MFT flags before replaying logs
+  CVE-2023-1192: e6f4b1c32d6d6047958d7700d12fed6d91f441e7 fs/ntfs3: Validate MFT flags before replaying logs
   CVE-2023-3090: 3cd16c6a6a6b68bba02fbbc54b9906f44640ffde ipvlan:Fix out-of-bounds caused by unclear skb->cb
   CVE-2023-3141: 76fec5f01c9c70e11b85fdeb3f2707589c9238ca memstick: r592: Fix UAF bug in r592_remove due to race condition
+  CVE-2023-38426: 0adcdc220fa555935bb37a273f08956616f8601a ksmbd: fix global-out-of-bounds in smb2_find_context_vals
+  CVE-2023-38428: 3df195fbddfae60ca24a9bbc209402d9fccdef68 ksmbd: fix wrong UserName check in session_user
+  CVE-2023-38429: 778aae5a513ea09aa5addfa352bd70a5b71dda85 ksmbd: allocate one more byte for implied bcc[0]
+
+CVEs fixed in 6.3.5:
+  CVE-2023-21255: c9e6aae1f26758f3e87b93cff18d79dfd80f2f25 binder: fix UAF caused by faulty buffer cleanup
 
 CVEs fixed in 6.3.7:
   CVE-2023-2124: 69ebe82c73f4f9f4b49ed3b35ce347af20716d0a xfs: verify buffer contents when we skip log replay
@@ -41,8 +53,16 @@ CVEs fixed in 6.3.7:
   CVE-2023-34255: 69ebe82c73f4f9f4b49ed3b35ce347af20716d0a xfs: verify buffer contents when we skip log replay
   CVE-2023-35788: 900fab73a9cd3dd6a3a69f89980f8f3c9a738d5a net/sched: flower: fix possible OOB write in fl_set_geneve_opt()
 
+CVEs fixed in 6.3.8:
+  CVE-2023-38427: 205279b96b5c40c60c6de4f9342416e02ee279f1 ksmbd: fix out-of-bound read in deassemble_neg_contexts()
+  CVE-2023-38431: e9cb7be2fcbaee9e808b729e92948d38d52e5add ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop
+
 CVEs fixed in 6.3.9:
   CVE-2023-3390: bdace3b1a51887211d3e49417a18fdbd315a313b netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
+  CVE-2023-38430: 75e7d81679ef7995422adc84ef597fded99c24a6 ksmbd: validate smb request protocol id
+
+CVEs fixed in 6.3.10:
+  CVE-2023-38432: 768caf4019f0391c0b6452afe34cea1704133f7b ksmbd: validate command payload size
 
 CVEs fixed in 6.3.11:
   CVE-2023-3269: bce721f87edd54379120ffb85111357923f4f326 mm: introduce new 'lock_mm_and_find_vma()' page fault helper
@@ -125,21 +145,24 @@ Outstanding CVEs:
   CVE-2022-45887: (unk)  
   CVE-2022-45919: (unk)  
   CVE-2023-0160: (unk)  
-  CVE-2023-1192: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
   CVE-2023-1206: (unk)  
   CVE-2023-20941: (unk)  
   CVE-2023-23039: (unk)  
   CVE-2023-26242: (unk)  
-  CVE-2023-2898: (unk)  
+  CVE-2023-2898: (unk) f2fs: fix to avoid NULL pointer dereference f2fs_write_end_io() 
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
-  CVE-2023-31248: (unk)  
+  CVE-2023-31248: (unk) netfilter: nf_tables: do not ignore genmask when looking up chain by id 
   CVE-2023-33250: (unk)  
   CVE-2023-3397: (unk)  
-  CVE-2023-35001: (unk)  
+  CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
+  CVE-2023-35693: (unk)  
   CVE-2023-35827: (unk)  
+  CVE-2023-3640: (unk)  
+  CVE-2023-37453: (unk)  
+  CVE-2023-37454: (unk)  
