@@ -826,6 +826,7 @@ CVEs fixed in 5.4.224:
   CVE-2022-3564: 4cd094fd5d872862ca278e15b9b51b07e915ef3f Bluetooth: L2CAP: Fix use-after-free caused by l2cap_reassemble_sdu
   CVE-2022-3628: a16415c8f156bec5399ef0345715ee4b90e5bb83 wifi: brcmfmac: Fix potential buffer overflow in brcmf_fweh_event_worker()
   CVE-2022-42895: 6949400ec9feca7f88c0f6ca5cb5fdbcef419c89 Bluetooth: L2CAP: Fix attempting to access uninitialized memory
+  CVE-2023-3812: ca791952d42c5b40d548ff6c4a879216039b0ca1 net: tun: fix bugs for oversize packet when napi frags enabled
 
 CVEs fixed in 5.4.225:
   CVE-2022-3521: ad39d09190a545d0f05ae0a82900eee96c5facea kcm: avoid potential race in kcm_tx_work
@@ -942,10 +943,22 @@ CVEs fixed in 5.4.247:
 
 CVEs fixed in 5.4.248:
   CVE-2023-3338: 6b1203ae83c3d07bad90b6f38ebf2e4d5998dd28 Remove DECnet support from kernel
+  CVE-2023-3609: 46305daf8064598a4008af1728651296815a74ed net/sched: cls_u32: Fix reference counter leak leading to overflow
 
 CVEs fixed in 5.4.249:
   CVE-2023-2124: c87439055174b31c51a89f8d66af2600033c664d xfs: verify buffer contents when we skip log replay
   CVE-2023-34255: c87439055174b31c51a89f8d66af2600033c664d xfs: verify buffer contents when we skip log replay
+
+CVEs fixed in 5.4.250:
+  CVE-2023-20593: 00363ef30797211c247605464dc3daaa988531a2 x86/cpu/amd: Add a Zenbleed fix
+
+CVEs fixed in 5.4.251:
+  CVE-2023-3117: 1adb5c272b200c24e9a7dd3bff891ce6eb75b019 netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
+  CVE-2023-3212: 23f98fe887ce3e7c8bd111f37e62735c5018c534 gfs2: Don't deref jdesc in evict
+  CVE-2023-3390: 1adb5c272b200c24e9a7dd3bff891ce6eb75b019 netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
+  CVE-2023-35001: b7d636c924eb275651bfb036eb8eca49c3f7bc24 netfilter: nf_tables: prevent OOB access in nft_byteorder_eval
+  CVE-2023-3776: 808211a8d427404331e39e3b8c94ab5242eef8f5 net/sched: cls_fw: Fix improper refcount update leads to use-after-free
+  CVE-2023-3863: dd6ff3f3862709ab1a12566e73b9d6a9b8f6e548 net: nfc: Fix use-after-free caused by nfc_llcp_find_local
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1054,10 +1067,12 @@ Outstanding CVEs:
   CVE-2022-3344: (unk) KVM: x86: nSVM: harden svm_free_nested against freeing vmcb02 while still in use 
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
+  CVE-2022-3533: (unk)  
   CVE-2022-3534: (unk) libbpf: Fix use-after-free in btf_dump_name_dups 
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
+  CVE-2022-3606: (unk)  
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
   CVE-2022-36402: (unk)  
@@ -1080,7 +1095,6 @@ Outstanding CVEs:
   CVE-2022-45919: (unk)  
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
   CVE-2022-47946: (unk) io_uring: kill sqo_dead and sqo submission halting 
-  CVE-2022-48502: (unk) fs/ntfs3: Check fields while reading 
   CVE-2023-0160: (unk)  
   CVE-2023-0240: (unk) io_uring: COW io_identity on mismatch 
   CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
@@ -1107,28 +1121,13 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
-  CVE-2023-3212: (unk) gfs2: Don't deref jdesc in evict 
-  CVE-2023-32247: (unk) ksmbd: destroy expired sessions 
-  CVE-2023-32248: (unk) ksmbd: fix NULL pointer dereference in smb2_get_info_filesystem() 
-  CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
-  CVE-2023-32252: (unk) ksmbd: fix racy issue from session setup and logoff 
-  CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
-  CVE-2023-32257: (unk) ksmbd: fix racy issue from session setup and logoff 
-  CVE-2023-32258: (unk) ksmbd: fix racy issue from smb2 close and logoff with multichannel 
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
   CVE-2023-3389: (unk) io_uring: mutex locked poll hashing 
-  CVE-2023-3390: (unk) netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE 
   CVE-2023-3397: (unk)  
-  CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
-  CVE-2023-35693: (unk)  
   CVE-2023-35827: (unk)  
+  CVE-2023-3611: (unk) net/sched: sch_qfq: account for stab overhead in qfq_enqueue 
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-38426: (unk) ksmbd: fix global-out-of-bounds in smb2_find_context_vals 
-  CVE-2023-38427: (unk) ksmbd: fix out-of-bound read in deassemble_neg_contexts() 
-  CVE-2023-38428: (unk) ksmbd: fix wrong UserName check in session_user 
-  CVE-2023-38429: (unk) ksmbd: allocate one more byte for implied bcc[0] 
-  CVE-2023-38430: (unk) ksmbd: validate smb request protocol id 
-  CVE-2023-38431: (unk) ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop 
-  CVE-2023-38432: (unk) ksmbd: validate command payload size 
+  CVE-2023-3772: (unk)  
+  CVE-2023-3773: (unk)  

@@ -46,6 +46,7 @@ CVEs fixed in 6.0.8:
   CVE-2022-3640: 8f7e4cf0694149a5d999d676ebd9ecf1b4cb2cc9 Bluetooth: L2CAP: fix use-after-free in l2cap_conn_del()
   CVE-2022-42895: e1aada9b71493b2e11c2a239ece99a97e3f13431 Bluetooth: L2CAP: Fix attempting to access uninitialized memory
   CVE-2022-42896: d7efeb93213becae13c6a12e4150ce1e07bd2c49 Bluetooth: L2CAP: Fix accepting connection request for invalid SPSM
+  CVE-2023-3812: d24ba55946e6bdcfacae989638621d7728ee0ec8 net: tun: fix bugs for oversize packet when napi frags enabled
 
 CVEs fixed in 6.0.10:
   CVE-2022-3169: 0c2b1c56252bf19d3412137073c2c07e86f40ba1 nvme: ensure subsystem reset is single threaded
@@ -174,9 +175,11 @@ Outstanding CVEs:
   CVE-2022-3238: (unk)  
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
+  CVE-2022-3533: (unk)  
   CVE-2022-3544: (unk)  
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
+  CVE-2022-3606: (unk)  
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
@@ -238,6 +241,7 @@ Outstanding CVEs:
   CVE-2023-1990: (unk) nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition 
   CVE-2023-1998: (unk) x86/speculation: Allow enabling STIBP with legacy IBRS 
   CVE-2023-2002: (unk) bluetooth: Perform careful capability checks in hci_sock_ioctl() 
+  CVE-2023-20593: (unk) x86/cpu/amd: Add a Zenbleed fix 
   CVE-2023-20941: (unk)  
   CVE-2023-21102: (unk) efi: rt-wrapper: Add missing include 
   CVE-2023-21106: (unk) drm/msm/gpu: Fix potential double-free 
@@ -270,6 +274,7 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
+  CVE-2023-3117: (unk) netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE 
   CVE-2023-31248: (unk) netfilter: nf_tables: do not ignore genmask when looking up chain by id 
   CVE-2023-3141: (unk) memstick: r592: Fix UAF bug in r592_remove due to race condition 
   CVE-2023-31436: (unk) net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg 
@@ -300,7 +305,6 @@ Outstanding CVEs:
   CVE-2023-34256: (unk) ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum 
   CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
   CVE-2023-3567: (unk) vc_screen: move load of struct vc_data pointer in vcs_read() to avoid UAF 
-  CVE-2023-35693: (unk)  
   CVE-2023-35788: (unk) net/sched: flower: fix possible OOB write in fl_set_geneve_opt() 
   CVE-2023-35823: (unk) media: saa7134: fix use after free bug in saa7134_finidev due to race condition 
   CVE-2023-35824: (unk) media: dm1105: Fix use after free bug in dm1105_remove due to race condition 
@@ -308,9 +312,15 @@ Outstanding CVEs:
   CVE-2023-35827: (unk)  
   CVE-2023-35828: (unk) usb: gadget: udc: renesas_usb3: Fix use after free bug in renesas_usb3_remove due to race condition 
   CVE-2023-35829: (unk) media: rkvdec: fix use after free bug in rkvdec_remove 
+  CVE-2023-3609: (unk) net/sched: cls_u32: Fix reference counter leak leading to overflow 
+  CVE-2023-3610: (unk) netfilter: nf_tables: fix chain binding transaction logic 
+  CVE-2023-3611: (unk) net/sched: sch_qfq: account for stab overhead in qfq_enqueue 
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
+  CVE-2023-3772: (unk)  
+  CVE-2023-3773: (unk)  
+  CVE-2023-3776: (unk) net/sched: cls_fw: Fix improper refcount update leads to use-after-free 
   CVE-2023-38409: (unk) fbcon: set_con2fb_map needs to set con2fb_map! 
   CVE-2023-38426: (unk) ksmbd: fix global-out-of-bounds in smb2_find_context_vals 
   CVE-2023-38427: (unk) ksmbd: fix out-of-bound read in deassemble_neg_contexts() 
@@ -319,3 +329,4 @@ Outstanding CVEs:
   CVE-2023-38430: (unk) ksmbd: validate smb request protocol id 
   CVE-2023-38431: (unk) ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop 
   CVE-2023-38432: (unk) ksmbd: validate command payload size 
+  CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 

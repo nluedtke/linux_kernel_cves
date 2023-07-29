@@ -389,6 +389,7 @@ CVEs fixed in 5.15.78:
   CVE-2022-3628: 7038af4ce95105146d22e461eaa450829f28eeaf wifi: brcmfmac: Fix potential buffer overflow in brcmf_fweh_event_worker()
   CVE-2022-42895: 3e4697ffdfbb38a2755012c4e571546c89ab6422 Bluetooth: L2CAP: Fix attempting to access uninitialized memory
   CVE-2022-42896: 81035e1201e26d57d9733ac59140a3e29befbc5a Bluetooth: L2CAP: Fix accepting connection request for invalid SPSM
+  CVE-2023-3812: dcc79cf735b8ec4bedaa82c53bed8c62721c042b net: tun: fix bugs for oversize packet when napi frags enabled
 
 CVEs fixed in 5.15.80:
   CVE-2022-3169: b1a27b2aad936746e6ef64c8a24bcb6dce6f926a nvme: ensure subsystem reset is single threaded
@@ -560,8 +561,26 @@ CVEs fixed in 5.15.117:
   CVE-2023-34255: 6cfe9ddb6aa698464fa16fb77a0233f68c13360c xfs: verify buffer contents when we skip log replay
 
 CVEs fixed in 5.15.118:
+  CVE-2023-3117: 44ebe988cb38e720b91826f4d7c31692061ca04a netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
   CVE-2023-3338: 2a974abc09761c05fef697fe229d1b85a7ce3918 Remove DECnet support from kernel
   CVE-2023-3390: 44ebe988cb38e720b91826f4d7c31692061ca04a netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
+  CVE-2023-3609: 0e1098d72fa462944c68262e1b5cca045dcb555e net/sched: cls_u32: Fix reference counter leak leading to overflow
+
+CVEs fixed in 5.15.119:
+  CVE-2023-3610: 314a8697d08092df6d00521450d44c352c602943 netfilter: nf_tables: fix chain binding transaction logic
+
+CVEs fixed in 5.15.121:
+  CVE-2022-48502: 333feb7ba84f69f9b423422417aaac54fd9e7c84 fs/ntfs3: Check fields while reading
+  CVE-2023-2898: 982c29e0d27a48d65fd0fa0d1bcee501eeb06e76 f2fs: fix to avoid NULL pointer dereference f2fs_write_end_io()
+  CVE-2023-31248: 041e2ac88caef286b39064e83e825e3f53113d36 netfilter: nf_tables: do not ignore genmask when looking up chain by id
+  CVE-2023-35001: 870dcc31c0cf47cb15a568ade4168dc644b3ccfb netfilter: nf_tables: prevent OOB access in nft_byteorder_eval
+  CVE-2023-3611: 91d3554ab1fc2804c36a815c0f79502d727a41e6 net/sched: sch_qfq: account for stab overhead in qfq_enqueue
+  CVE-2023-3776: 5b55f2d6ef403fcda93ae4eb4d8c1ba164c66e92 net/sched: cls_fw: Fix improper refcount update leads to use-after-free
+  CVE-2023-38432: 35f450f54dca1519bb24faacd0428db09f89a11f ksmbd: validate command payload size
+  CVE-2023-3863: fc8429f8d86801f092fbfbd257c3af821ac0dcd3 net: nfc: Fix use-after-free caused by nfc_llcp_find_local
+
+CVEs fixed in 5.15.122:
+  CVE-2023-20593: be824fdb827dc06f77a31122949fe1bc011e3e1e x86/cpu/amd: Add a Zenbleed fix
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -633,9 +652,11 @@ Outstanding CVEs:
   CVE-2022-3238: (unk)  
   CVE-2022-3522: (unk) mm/hugetlb: use hugetlb_pte_stable in migration race check 
   CVE-2022-3523: (unk) mm/memory.c: fix race when faulting a device private page 
+  CVE-2022-3533: (unk)  
   CVE-2022-3566: (unk) tcp: Fix data races around icsk->icsk_af_ops. 
   CVE-2022-3567: (unk) ipv6: Fix data races around sk->sk_prot. 
   CVE-2022-3595: (unk) cifs: fix double-fault crash during ntlmssp 
+  CVE-2022-3606: (unk)  
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
   CVE-2022-36402: (unk)  
@@ -657,7 +678,6 @@ Outstanding CVEs:
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2022-45919: (unk)  
   CVE-2022-47940: (unk) ksmbd: validate length in smb2_write() 
-  CVE-2022-48502: (unk) fs/ntfs3: Check fields while reading 
   CVE-2023-0160: (unk)  
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
@@ -673,13 +693,11 @@ Outstanding CVEs:
   CVE-2023-23039: (unk)  
   CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
-  CVE-2023-2898: (unk) f2fs: fix to avoid NULL pointer dereference f2fs_write_end_io() 
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
-  CVE-2023-31248: (unk) netfilter: nf_tables: do not ignore genmask when looking up chain by id 
   CVE-2023-32247: (unk) ksmbd: destroy expired sessions 
   CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
   CVE-2023-32252: (unk) ksmbd: fix racy issue from session setup and logoff 
@@ -689,13 +707,12 @@ Outstanding CVEs:
   CVE-2023-3389: (unk) io_uring: mutex locked poll hashing 
   CVE-2023-3397: (unk)  
   CVE-2023-3439: (unk) mctp: defer the kfree of object mdev->addrs 
-  CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
-  CVE-2023-35693: (unk)  
   CVE-2023-35827: (unk)  
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
+  CVE-2023-3772: (unk)  
+  CVE-2023-3773: (unk)  
   CVE-2023-38427: (unk) ksmbd: fix out-of-bound read in deassemble_neg_contexts() 
   CVE-2023-38430: (unk) ksmbd: validate smb request protocol id 
   CVE-2023-38431: (unk) ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop 
-  CVE-2023-38432: (unk) ksmbd: validate command payload size 
