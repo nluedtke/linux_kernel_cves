@@ -58,6 +58,7 @@ CVEs fixed in 6.2.13:
   CVE-2023-2163: 71035a0508c04827b91a5bfeb2c9ef374f321e65 bpf: Fix incorrect verifier pruning due to missing register precision taints
   CVE-2023-2248: 420d014b19ff119e210ecc075ff611fe7844690c net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
   CVE-2023-31436: 420d014b19ff119e210ecc075ff611fe7844690c net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
+  CVE-2023-4133: 7977bb80817b552d97bcc8a1ddf2b3029ca5b6a8 cxgb4: fix use after free bugs caused by circular dependency problem
 
 CVEs fixed in 6.2.14:
   CVE-2023-1380: 228186629ea970cc78b7d7d5f593f2d32fddf9f6 wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies()
@@ -154,6 +155,7 @@ Outstanding CVEs:
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
+  CVE-2022-40982: (unk) x86/speculation: Add Gather Data Sampling mitigation 
   CVE-2022-41848: (unk)  
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
@@ -169,14 +171,19 @@ Outstanding CVEs:
   CVE-2023-1192: (unk) fs/ntfs3: Validate MFT flags before replaying logs 
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
-  CVE-2023-1206: (unk)  
+  CVE-2023-1206: (unk) tcp: Reduce chance of collisions in inet6_hashfn(). 
+  CVE-2023-20569: (unk) x86/bugs: Increase the x86 bugs vector size to two u32s 
+  CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
   CVE-2023-20593: (unk) x86/cpu/amd: Add a Zenbleed fix 
   CVE-2023-20941: (unk)  
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-21255: (unk) binder: fix UAF caused by faulty buffer cleanup 
+  CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
+  CVE-2023-21400: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-23039: (unk)  
   CVE-2023-26242: (unk)  
+  CVE-2023-2640: (unk)  
   CVE-2023-2898: (unk) f2fs: fix to avoid NULL pointer dereference f2fs_write_end_io() 
   CVE-2023-3090: (unk) ipvlan:Fix out-of-bounds caused by unclear skb->cb 
   CVE-2023-31081: (unk)  
@@ -188,11 +195,13 @@ Outstanding CVEs:
   CVE-2023-31248: (unk) netfilter: nf_tables: do not ignore genmask when looking up chain by id 
   CVE-2023-3141: (unk) memstick: r592: Fix UAF bug in r592_remove due to race condition 
   CVE-2023-3212: (unk) gfs2: Don't deref jdesc in evict 
+  CVE-2023-32629: (unk)  
   CVE-2023-3269: (unk) mm: introduce new 'lock_mm_and_find_vma()' page fault helper 
   CVE-2023-33250: (unk)  
   CVE-2023-3390: (unk) netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE 
   CVE-2023-3397: (unk)  
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-34319: (unk) xen/netback: Fix buffer overrun triggered by unusual packet 
   CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
   CVE-2023-35788: (unk) net/sched: flower: fix possible OOB write in fl_set_geneve_opt() 
   CVE-2023-35827: (unk)  
@@ -213,3 +222,12 @@ Outstanding CVEs:
   CVE-2023-38431: (unk) ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop 
   CVE-2023-38432: (unk) ksmbd: validate command payload size 
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
+  CVE-2023-4004: (unk) netfilter: nft_set_pipapo: fix improper element removal 
+  CVE-2023-4010: (unk)  
+  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
+  CVE-2023-4132: (unk) media: usb: siano: Fix warning due to null work_func_t function pointer 
+  CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
+  CVE-2023-4147: (unk) netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID 
+  CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
+  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
+  CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 

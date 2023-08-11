@@ -4,6 +4,7 @@ CVEs fixed in 6.3:
   CVE-2023-2163: 71b547f561247897a0a14f3082730156c0533fed bpf: Fix incorrect verifier pruning due to missing register precision taints
   CVE-2023-2248: 3037933448f60f9acb705997eae62013ecb81e0d net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
   CVE-2023-31436: 3037933448f60f9acb705997eae62013ecb81e0d net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg
+  CVE-2023-4133: e50b9b9e8610d47b7c22529443e45a16b1ea3a15 cxgb4: fix use after free bugs caused by circular dependency problem
 
 CVEs fixed in 6.3-rc1:
   CVE-2023-33951: a950b989ea29ab3b38ea7f6e3d2540700a3c54e8 drm/vmwgfx: Do not drop the reference to the handle too soon
@@ -49,6 +50,7 @@ CVEs fixed in 6.3.5:
 
 CVEs fixed in 6.3.7:
   CVE-2023-2124: 69ebe82c73f4f9f4b49ed3b35ce347af20716d0a xfs: verify buffer contents when we skip log replay
+  CVE-2023-21264: c3cd33abe63f0ea32c3966ae67a7efc48e86c3e0 KVM: arm64: Prevent unconditional donation of unmapped regions from the host
   CVE-2023-3212: 14c454764a37b194dc916c07488ce7339c82bc4f gfs2: Don't deref jdesc in evict
   CVE-2023-34255: 69ebe82c73f4f9f4b49ed3b35ce347af20716d0a xfs: verify buffer contents when we skip log replay
   CVE-2023-35788: 900fab73a9cd3dd6a3a69f89980f8f3c9a738d5a net/sched: flower: fix possible OOB write in fl_set_geneve_opt()
@@ -72,6 +74,7 @@ CVEs fixed in 6.3.11:
 
 CVEs fixed in 6.3.13:
   CVE-2023-3863: b3ad46e155a6d91b36c6e892019a43e3ef3c696d net: nfc: Fix use-after-free caused by nfc_llcp_find_local
+  CVE-2023-4134: c261139c1df65c9c4bf00e96c91183bcfc1919ec Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -142,6 +145,7 @@ Outstanding CVEs:
   CVE-2022-36402: (unk)  
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
+  CVE-2022-40982: (unk) x86/speculation: Add Gather Data Sampling mitigation 
   CVE-2022-41848: (unk)  
   CVE-2022-44032: (unk)  
   CVE-2022-44033: (unk)  
@@ -155,11 +159,15 @@ Outstanding CVEs:
   CVE-2023-0160: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
-  CVE-2023-1206: (unk)  
+  CVE-2023-1206: (unk) tcp: Reduce chance of collisions in inet6_hashfn(). 
+  CVE-2023-20569: (unk) x86/bugs: Increase the x86 bugs vector size to two u32s 
+  CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
   CVE-2023-20593: (unk) x86/cpu/amd: Add a Zenbleed fix 
   CVE-2023-20941: (unk)  
+  CVE-2023-21400: (unk)  
   CVE-2023-23039: (unk)  
   CVE-2023-26242: (unk)  
+  CVE-2023-2640: (unk)  
   CVE-2023-2898: (unk) f2fs: fix to avoid NULL pointer dereference f2fs_write_end_io() 
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
@@ -167,8 +175,10 @@ Outstanding CVEs:
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
   CVE-2023-31248: (unk) netfilter: nf_tables: do not ignore genmask when looking up chain by id 
+  CVE-2023-32629: (unk)  
   CVE-2023-33250: (unk)  
   CVE-2023-3397: (unk)  
+  CVE-2023-34319: (unk) xen/netback: Fix buffer overrun triggered by unusual packet 
   CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
   CVE-2023-35827: (unk)  
   CVE-2023-3611: (unk) net/sched: sch_qfq: account for stab overhead in qfq_enqueue 
@@ -178,3 +188,11 @@ Outstanding CVEs:
   CVE-2023-3772: (unk)  
   CVE-2023-3773: (unk)  
   CVE-2023-3776: (unk) net/sched: cls_fw: Fix improper refcount update leads to use-after-free 
+  CVE-2023-4004: (unk) netfilter: nft_set_pipapo: fix improper element removal 
+  CVE-2023-4010: (unk)  
+  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
+  CVE-2023-4132: (unk) media: usb: siano: Fix warning due to null work_func_t function pointer 
+  CVE-2023-4147: (unk) netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID 
+  CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
+  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
+  CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 

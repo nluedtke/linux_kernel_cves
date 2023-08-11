@@ -197,6 +197,7 @@ CVEs fixed in 6.1.39:
   CVE-2023-31248: fc95c8b02c6160936f1f3d8d9d7f4f66f3c84b49 netfilter: nf_tables: do not ignore genmask when looking up chain by id
   CVE-2023-35001: 40f83dd66a823400d8592e3b71e190e3ad978eb5 netfilter: nf_tables: prevent OOB access in nft_byteorder_eval
   CVE-2023-3863: 425d9d3a92df7d96b3cfb7ee5c240293a21cbde3 net: nfc: Fix use-after-free caused by nfc_llcp_find_local
+  CVE-2023-4132: 8abb53c5167cfb5bb275512a3da4ec2468478626 media: usb: siano: Fix warning due to null work_func_t function pointer
 
 CVEs fixed in 6.1.40:
   CVE-2022-48502: 000a9a72efa4a9df289bab9c9e8ba1639c72e0d6 fs/ntfs3: Check fields while reading
@@ -205,6 +206,18 @@ CVEs fixed in 6.1.40:
 
 CVEs fixed in 6.1.41:
   CVE-2023-20593: ed9b87010aa84c157096f98c322491e9af8e8f07 x86/cpu/amd: Add a Zenbleed fix
+
+CVEs fixed in 6.1.42:
+  CVE-2023-4004: 90c3955beb858bb52a9e5c4380ed0e520e3730d1 netfilter: nft_set_pipapo: fix improper element removal
+
+CVEs fixed in 6.1.43:
+  CVE-2023-1206: 51aea7e9d5212adb8a3d198510cfcde4125988f9 tcp: Reduce chance of collisions in inet6_hashfn().
+  CVE-2023-4147: 268cb07ef3ee17b5454a7c4b23376802c5b00c79 netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID
+
+CVEs fixed in 6.1.44:
+  CVE-2022-40982: c66ebe070d9641c9339e42e1c2d707a5052e9904 x86/speculation: Add Gather Data Sampling mitigation
+  CVE-2023-20569: dfede4cb8ef732039b7a479d260bd89d3b474f14 x86/bugs: Increase the x86 bugs vector size to two u32s
+  CVE-2023-34319: fa5b932b77c815d0e416612859d5899424bb4212 xen/netback: Fix buffer overrun triggered by unusual packet
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -290,18 +303,22 @@ Outstanding CVEs:
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
-  CVE-2023-1206: (unk)  
+  CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
   CVE-2023-20941: (unk)  
+  CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
+  CVE-2023-21400: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-23005: (unk) mm/demotion: fix NULL vs IS_ERR checking in memory_tier_init 
   CVE-2023-23039: (unk)  
   CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
+  CVE-2023-2640: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
+  CVE-2023-32629: (unk)  
   CVE-2023-3397: (unk)  
   CVE-2023-35827: (unk)  
   CVE-2023-3640: (unk)  
@@ -309,3 +326,10 @@ Outstanding CVEs:
   CVE-2023-37454: (unk)  
   CVE-2023-3772: (unk)  
   CVE-2023-3773: (unk)  
+  CVE-2023-4010: (unk)  
+  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
+  CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
+  CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
+  CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
+  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
+  CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 

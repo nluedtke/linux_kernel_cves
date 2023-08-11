@@ -1178,6 +1178,10 @@ CVEs fixed in 4.19.287:
 CVEs fixed in 4.19.289:
   CVE-2023-20593: cfef7bbf0dca27209ea5d82d7060d4fc2c0d72ea x86/cpu/amd: Add a Zenbleed fix
 
+CVEs fixed in 4.19.290:
+  CVE-2022-40982: e81494b7259b6b1ab81a9f9be3385b4aa99a7a59 x86/speculation: Add Gather Data Sampling mitigation
+  CVE-2023-34319: 11e6919ae028b5de1fc48007354ea07069561b31 xen/netback: Fix buffer overrun triggered by unusual packet
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1348,14 +1352,17 @@ Outstanding CVEs:
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
   CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
-  CVE-2023-1206: (unk)  
+  CVE-2023-1206: (unk) tcp: Reduce chance of collisions in inet6_hashfn(). 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
   CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
   CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
   CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
+  CVE-2023-20569: (unk) x86/bugs: Increase the x86 bugs vector size to two u32s 
+  CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
   CVE-2023-20941: (unk)  
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
+  CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-2177: (unk) sctp: leave the err path free in sctp_stream_init to sctp_stream_free 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
@@ -1388,3 +1395,11 @@ Outstanding CVEs:
   CVE-2023-3773: (unk)  
   CVE-2023-3776: (unk) net/sched: cls_fw: Fix improper refcount update leads to use-after-free 
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
+  CVE-2023-4010: (unk)  
+  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
+  CVE-2023-4132: (unk) media: usb: siano: Fix warning due to null work_func_t function pointer 
+  CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
+  CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
+  CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
+  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
+  CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 

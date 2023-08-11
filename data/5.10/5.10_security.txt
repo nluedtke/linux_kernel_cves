@@ -761,6 +761,13 @@ CVEs fixed in 5.10.188:
   CVE-2023-3611: 8359ee85fd6dabc5c134ed69fb22faadd8a44071 net/sched: sch_qfq: account for stab overhead in qfq_enqueue
   CVE-2023-3776: 80e0e8d5f54397c5048fa2274144134dd9dc91b5 net/sched: cls_fw: Fix improper refcount update leads to use-after-free
   CVE-2023-3863: 96f2c6f272ec04083d828de46285a7d7b17d1aad net: nfc: Fix use-after-free caused by nfc_llcp_find_local
+  CVE-2023-4004: 3a91099ecd59a42d1632fcb152bf7222f268ea2b netfilter: nft_set_pipapo: fix improper element removal
+  CVE-2023-4132: d87ef4e857b790f1616809eccda6b4d0c9c3da11 media: usb: siano: Fix warning due to null work_func_t function pointer
+
+CVEs fixed in 5.10.189:
+  CVE-2022-40982: 288a2f6bc1ce03ddb3f05fd8c79b00d5d7160b4a x86/speculation: Add Gather Data Sampling mitigation
+  CVE-2023-20569: 073a28a9b50662991e7d6956c2cf2fc5d54f28cd x86/bugs: Increase the x86 bugs vector size to two u32s
+  CVE-2023-34319: f9167a2d6b943f30743de6ff8163d1981c34f9a9 xen/netback: Fix buffer overrun triggered by unusual packet
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -885,12 +892,15 @@ Outstanding CVEs:
   CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
-  CVE-2023-1206: (unk)  
+  CVE-2023-1206: (unk) tcp: Reduce chance of collisions in inet6_hashfn(). 
   CVE-2023-1295: (unk) io_uring: get rid of intermediate IORING_OP_CLOSE stage 
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
+  CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20941: (unk)  
+  CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
+  CVE-2023-21400: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
@@ -911,3 +921,11 @@ Outstanding CVEs:
   CVE-2023-37454: (unk)  
   CVE-2023-3772: (unk)  
   CVE-2023-3773: (unk)  
+  CVE-2023-4010: (unk)  
+  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
+  CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
+  CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
+  CVE-2023-4147: (unk) netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID 
+  CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
+  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
+  CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 
