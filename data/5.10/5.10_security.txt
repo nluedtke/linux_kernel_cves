@@ -424,6 +424,7 @@ CVEs fixed in 5.10.111:
 CVEs fixed in 5.10.112:
   CVE-2022-1204: b20a5ab0f5fb175750c6bafd4cf12daccf00c738 ax25: Fix refcount leaks caused by ax25_cb_del()
   CVE-2022-41858: ca24c5e8f0ac3d43ec0cff29e1c861be73aff165 drivers: net: slip: fix NPD bug in sl_tx_timeout()
+  CVE-2023-4389: 1d2eda18f6ffbd9902594469c6e1a055014eb2ac btrfs: fix root ref counts in error handling in btrfs_get_root_ref
 
 CVEs fixed in 5.10.113:
   CVE-2022-2639: 0837ff17d052b7d755d5086208c3445867aaff82 openvswitch: fix OOB access in reserve_sfa_size()
@@ -448,6 +449,8 @@ CVEs fixed in 5.10.118:
   CVE-2022-1652: 911b36267855501f7f80a75927c128c0ac03fe58 floppy: use a statically allocated error counter
   CVE-2022-1729: 3ee8e109c3c316073a3e0f83ec0769c7ee8a7375 perf: Fix sys_perf_event_open() race against self
   CVE-2023-1838: ec0d801d1a44d9259377142c6218885ecd685e41 Fix double fget() in vhost_net_set_backend()
+  CVE-2023-4387: a54d86cf418427584e0a3cd1e89f757c92df5e89 net: vmxnet3: fix possible use-after-free bugs in vmxnet3_rq_alloc_rx_buf()
+  CVE-2023-4459: 6e2caee5cddc3d9e0ad0484c9c21b9f10676c044 net: vmxnet3: fix possible NULL pointer dereference in vmxnet3_rq_cleanup()
 
 CVEs fixed in 5.10.119:
   CVE-2022-1012: a5c68f457fbf52c5564ca4eea03f84776ef14e41 secure_seq: use the 64 bits of the siphash for port offset calculation
@@ -467,6 +470,7 @@ CVEs fixed in 5.10.121:
   CVE-2022-1184: da2f05919238c7bdc6e28c79539f55c8355408bb ext4: verify dir block before splitting it
   CVE-2022-3115: b4c7dd0037e6aeecad9b947b30f0d9eaeda11762 drm: mali-dp: potential dereference of null pointer
   CVE-2022-3577: 296f8ca0f73f5268cd9b85cf72ff783596b2264e HID: bigben: fix slab-out-of-bounds Write in bigben_probe
+  CVE-2023-4385: 9dfa8d087bb854f613fcdbf1af4fb02c0b2d1e4f fs: jfs: fix possible NULL pointer dereference in dbFree()
 
 CVEs fixed in 5.10.122:
   CVE-2022-3104: 56ac04f35fc5dc8b5b67a1fa2f7204282aa887d5 lkdtm/bugs: Check for the NULL pointer after calling kmalloc
@@ -719,6 +723,7 @@ CVEs fixed in 5.10.179:
 
 CVEs fixed in 5.10.180:
   CVE-2022-39189: 529f41f0eb1ef995bfa83c121c3cfe3a0720119a KVM: x86: do not report a vCPU as preempted outside instruction boundaries
+  CVE-2023-0160: 2f9307222227410453e33654f5d9ed6459351455 bpf, sockmap: fix deadlocks in the sockhash and sockmap
   CVE-2023-1380: 549825602e3e6449927ca1ea1a08fd89868439df wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies()
   CVE-2023-2002: 98cfbad52fc286c2a1a75e04bf47b98d6489db1f bluetooth: Perform careful capability checks in hci_sock_ioctl()
   CVE-2023-2269: ea827627a9249154b34b646b1e1007013402afea dm ioctl: fix nested locking in table_clear() to remove deadlock concern
@@ -767,7 +772,14 @@ CVEs fixed in 5.10.188:
 CVEs fixed in 5.10.189:
   CVE-2022-40982: 288a2f6bc1ce03ddb3f05fd8c79b00d5d7160b4a x86/speculation: Add Gather Data Sampling mitigation
   CVE-2023-20569: 073a28a9b50662991e7d6956c2cf2fc5d54f28cd x86/bugs: Increase the x86 bugs vector size to two u32s
-  CVE-2023-34319: f9167a2d6b943f30743de6ff8163d1981c34f9a9 xen/netback: Fix buffer overrun triggered by unusual packet
+
+CVEs fixed in 5.10.190:
+  CVE-2023-1206: 0cd74fbd3b8327e60525e1ec4a6c28895693909f tcp: Reduce chance of collisions in inet6_hashfn().
+  CVE-2023-20588: b6fc2fbf89089ecfb8eb9a89a7fc91d444f4fec7 x86/CPU/AMD: Do not leak quotient data after a division by 0
+  CVE-2023-40283: 06f87c96216bc5cd1094c23492274f77f1d5dd3b Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb
+  CVE-2023-4128: b4256c99a7116c9514224847e8aaee2ecf110a0a net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-4147: 308a43f1521d5b7220693d0865b23e8dad3ed137 netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID
+  CVE-2023-4273: 381f7df0f3c3bd7dceb3e2b2b64c2f6247e2ac19 exfat: check if filename entries exceeds max filename length
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -818,6 +830,7 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
+  CVE-2020-27418: (unk)  
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
@@ -888,18 +901,14 @@ Outstanding CVEs:
   CVE-2022-45919: (unk)  
   CVE-2022-4696: (unk) io_uring: remove any grabbing of context 
   CVE-2022-47946: (unk) io_uring: kill sqo_dead and sqo submission halting 
-  CVE-2023-0160: (unk)  
   CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
-  CVE-2023-1206: (unk) tcp: Reduce chance of collisions in inet6_hashfn(). 
   CVE-2023-1295: (unk) io_uring: get rid of intermediate IORING_OP_CLOSE stage 
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
-  CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
   CVE-2023-20941: (unk)  
-  CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
   CVE-2023-21400: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
@@ -919,13 +928,8 @@ Outstanding CVEs:
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk)  
-  CVE-2023-3773: (unk)  
+  CVE-2023-3772: (unk) xfrm: add NULL check in xfrm_update_ae_params 
+  CVE-2023-3773: (unk) xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH 
   CVE-2023-4010: (unk)  
-  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-4147: (unk) netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID 
-  CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
-  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
-  CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 

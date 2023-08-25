@@ -231,6 +231,7 @@ CVEs fixed in 3.12.41:
 
 CVEs fixed in 3.12.43:
   CVE-2014-8173: 5f30307e19b93df1e80b073b15967f53850ad33d mm: Fix NULL pointer dereference in madvise(MADV_WILLNEED) support
+  CVE-2015-3339: 5176b77f1aacdc560eaeac4685ade444bb814689 fs: take i_mutex during prepare_binprm for set[ug]id executables
   CVE-2015-3636: 8a9a51ba2eff62e1a899daad7b623becfed8f3f1 ipv4: Missing sk_nulls_node_init() in ping_unhash().
   CVE-2015-6526: d15e6bc4606b27f53ef70a99d05690fa5a0e6c45 powerpc/perf: Cap 64bit userspace backtraces to PERF_MAX_STACK_DEPTH
   CVE-2017-1000253: b255044d68f190693d799263eb4dab66813f2de9 fs/binfmt_elf.c: fix bug in loading of PIE binaries
@@ -501,7 +502,6 @@ Outstanding CVEs:
   CVE-2015-1350: (unk) fs: Avoid premature clearing of capabilities 
   CVE-2015-1805: (unk) new helper: copy_page_from_iter() 
   CVE-2015-2877: (unk)  
-  CVE-2015-3339: (unk) fs: take i_mutex during prepare_binprm for set[ug]id executables 
   CVE-2015-4001: (unk) ozwpan: Use unsigned ints to prevent heap overflow 
   CVE-2015-4004: (unk) staging: ozwpan: Remove from tree 
   CVE-2015-4176: (unk) mnt: Update detach_mounts to leave mounts connected 
@@ -1072,6 +1072,7 @@ Outstanding CVEs:
   CVE-2020-27067: (unk) l2tp: fix l2tp_eth module loading 
   CVE-2020-27068: (unk) cfg80211: add missing policy for NL80211_ATTR_STATUS_CODE 
   CVE-2020-2732: (unk) KVM: nVMX: Don't emulate instructions in guest mode 
+  CVE-2020-27418: (unk)  
   CVE-2020-27673: (unk) xen/events: add a proper barrier to 2-level uevent unmasking 
   CVE-2020-27675: (unk) xen/events: avoid removing an event channel while handling it 
   CVE-2020-27777: (unk) powerpc/rtas: Restrict RTAS requests from userspace 
@@ -1371,7 +1372,6 @@ Outstanding CVEs:
   CVE-2022-4744: (unk) tun: avoid double free in tun_free_netdev 
   CVE-2023-0030: (unk) drm/nouveau/mmu: add more general vmm free/node handling functions 
   CVE-2023-0047: (unk) mm, oom: do not trigger out_of_memory from the #PF 
-  CVE-2023-0160: (unk)  
   CVE-2023-0266: (unk) ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF 
   CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
   CVE-2023-0394: (unk) ipv6: raw: Deduct extension header length in rawv6_push_pending_frames 
@@ -1398,7 +1398,6 @@ Outstanding CVEs:
   CVE-2023-20593: (unk) x86/cpu/amd: Add a Zenbleed fix 
   CVE-2023-20941: (unk)  
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
-  CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
   CVE-2023-2162: (unk) scsi: iscsi_tcp: Fix UAF during login when accessing the shost ipaddress 
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-2248: (unk) net: sched: sch_qfq: prevent slab-out-of-bounds in qfq_activate_agg 
@@ -1437,7 +1436,6 @@ Outstanding CVEs:
   CVE-2023-3397: (unk)  
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-34256: (unk) ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum 
-  CVE-2023-34319: (unk) xen/netback: Fix buffer overrun triggered by unusual packet 
   CVE-2023-3567: (unk) vc_screen: move load of struct vc_data pointer in vcs_read() to avoid UAF 
   CVE-2023-35824: (unk) media: dm1105: Fix use after free bug in dm1105_remove due to race condition 
   CVE-2023-35827: (unk)  
@@ -1445,15 +1443,12 @@ Outstanding CVEs:
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk)  
-  CVE-2023-3773: (unk)  
+  CVE-2023-3772: (unk) xfrm: add NULL check in xfrm_update_ae_params 
+  CVE-2023-3773: (unk) xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH 
   CVE-2023-3776: (unk) net/sched: cls_fw: Fix improper refcount update leads to use-after-free 
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
   CVE-2023-4010: (unk)  
-  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
-  CVE-2023-4132: (unk) media: usb: siano: Fix warning due to null work_func_t function pointer 
-  CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
+  CVE-2023-40283: (unk) Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
-  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
-  CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 
+  CVE-2023-4385: (unk) fs: jfs: fix possible NULL pointer dereference in dbFree() 
+  CVE-2023-4459: (unk) net: vmxnet3: fix possible NULL pointer dereference in vmxnet3_rq_cleanup() 

@@ -138,6 +138,7 @@ CVEs fixed in 6.1.27:
   CVE-2023-2002: 47e6893a5b0ad14c0b1c25983a1facb1cf667b6e bluetooth: Perform careful capability checks in hci_sock_ioctl()
 
 CVEs fixed in 6.1.28:
+  CVE-2023-0160: 1d4ac7b0ffc9dc683b8dafc78b8b93177071a02c bpf, sockmap: fix deadlocks in the sockhash and sockmap
   CVE-2023-2269: 9a94ebc74c3540aba5aa2c7b05032da4610a08c9 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-32233: 4507918cd1f8b80f21a396fa0531d53e372bed66 netfilter: nf_tables: deactivate anonymous set from preparation phase
   CVE-2023-32248: a70751dd7b60eab025e97e19b6b2477c6eaf2bbb ksmbd: fix NULL pointer dereference in smb2_get_info_filesystem()
@@ -219,6 +220,19 @@ CVEs fixed in 6.1.44:
   CVE-2023-20569: dfede4cb8ef732039b7a479d260bd89d3b474f14 x86/bugs: Increase the x86 bugs vector size to two u32s
   CVE-2023-34319: fa5b932b77c815d0e416612859d5899424bb4212 xen/netback: Fix buffer overrun triggered by unusual packet
 
+CVEs fixed in 6.1.45:
+  CVE-2023-20588: f2615bb47be4f53be92c81a6a8aa286c92ef04d9 x86/CPU/AMD: Do not leak quotient data after a division by 0
+  CVE-2023-40283: 29fac18499332211b2615ade356e2bd8b3269f98 Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb
+  CVE-2023-4128: aab2d095ce4dd8d01ca484c0cc641fb497bf74db net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-4273: c2fdf827f8fc6a571e1b7cc38a61041f0321adf5 exfat: check if filename entries exceeds max filename length
+
+CVEs fixed in 6.1.46:
+  CVE-2023-4155: 5bdf1c1f346c81996b6e36b5efd5c92aeda4fbe4 KVM: SEV: only access GHCB fields once
+
+CVEs fixed in 6.1.47:
+  CVE-2023-3772: 87b655f4936b6fc01f3658aa88a22c923b379ebd xfrm: add NULL check in xfrm_update_ae_params
+  CVE-2023-3773: a442cd17019385c53bbddf3bb92d91474081916b xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -263,6 +277,7 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
+  CVE-2020-27418: (unk)  
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
@@ -299,11 +314,9 @@ Outstanding CVEs:
   CVE-2022-45887: (unk)  
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2022-45919: (unk)  
-  CVE-2023-0160: (unk)  
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
-  CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
   CVE-2023-20941: (unk)  
   CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
   CVE-2023-21400: (unk)  
@@ -324,12 +337,6 @@ Outstanding CVEs:
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk)  
-  CVE-2023-3773: (unk)  
   CVE-2023-4010: (unk)  
-  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
-  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
-  CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 

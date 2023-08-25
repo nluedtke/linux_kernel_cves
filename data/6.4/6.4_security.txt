@@ -9,6 +9,7 @@ CVEs fixed in 6.4.1:
 CVEs fixed in 6.4.4:
   CVE-2023-2898: 5619e9aabbd2b369cde2114ad6f55f6eb3e0b5be f2fs: fix to avoid NULL pointer dereference f2fs_write_end_io()
   CVE-2023-31248: 5e5e967e8505fbdabfb6497367ec1b808cadc356 netfilter: nf_tables: do not ignore genmask when looking up chain by id
+  CVE-2023-33250: dbe65261fe1367dc307a89466a1a75c0d80b8233 iommufd: Call iopt_area_contig_done() under the lock
   CVE-2023-35001: b79c09c2bf2d7643902a6ef26152de602c5c5e4b netfilter: nf_tables: prevent OOB access in nft_byteorder_eval
   CVE-2023-3863: e5207c1d69b1a9707615ab6ff9376e59fc096815 net: nfc: Fix use-after-free caused by nfc_llcp_find_local
   CVE-2023-4132: ae65238d3f5a2df48341a7112820e04fb1017422 media: usb: siano: Fix warning due to null work_func_t function pointer
@@ -32,6 +33,20 @@ CVEs fixed in 6.4.9:
   CVE-2022-40982: ff0642207e24f9a7011e8982ab7da1e16db75a38 x86/speculation: Add Gather Data Sampling mitigation
   CVE-2023-20569: d351cc7c14a6e2af73bfea4aa5ee093321f4c307 x86/bugs: Increase the x86 bugs vector size to two u32s
   CVE-2023-34319: cf482893f721f76ac60c0a43482a59b2f194156b xen/netback: Fix buffer overrun triggered by unusual packet
+
+CVEs fixed in 6.4.10:
+  CVE-2023-20588: c9c0b889e2d33d49b06bb716b95a192ed3449173 x86/CPU/AMD: Do not leak quotient data after a division by 0
+  CVE-2023-40283: 10426afe65c8bf7b24dd0c7be4dcc65f86fc99f9 Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb
+  CVE-2023-4128: 4b717802428fa02cbcbb61209f638f65f9cd4710 net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-4194: 36161e7d40e7293d7f213e16d881042d15c8a53a net: tun_chr_open(): set sk_uid from current_fsuid()
+  CVE-2023-4273: e1a73ba43cf883cb37f6331aca5a4c5be6350982 exfat: check if filename entries exceeds max filename length
+
+CVEs fixed in 6.4.11:
+  CVE-2023-4155: ab8e9a874574ce511eca21caa5d7ef5426963a54 KVM: SEV: only access GHCB fields once
+
+CVEs fixed in 6.4.12:
+  CVE-2023-3772: 53df4be4f5221e90dc7aa9ce745a9a21bb7024f4 xfrm: add NULL check in xfrm_update_ae_params
+  CVE-2023-3773: a9020514f175ef15bb68eea9345782abfd9afea3 xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -77,6 +92,7 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
+  CVE-2020-27418: (unk)  
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
@@ -112,10 +128,8 @@ Outstanding CVEs:
   CVE-2022-45886: (unk)  
   CVE-2022-45887: (unk)  
   CVE-2022-45919: (unk)  
-  CVE-2023-0160: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
-  CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
   CVE-2023-20941: (unk)  
   CVE-2023-21400: (unk)  
   CVE-2023-23039: (unk)  
@@ -126,16 +140,9 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31085: (unk)  
   CVE-2023-32629: (unk)  
-  CVE-2023-33250: (unk)  
   CVE-2023-3397: (unk)  
   CVE-2023-35827: (unk)  
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk)  
-  CVE-2023-3773: (unk)  
   CVE-2023-4010: (unk)  
-  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
-  CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
-  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
-  CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 

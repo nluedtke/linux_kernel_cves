@@ -188,6 +188,7 @@ CVEs fixed in 5.15.35:
   CVE-2022-1204: 452ae92b99062d2f6a34324eaf705a3b7eac9f8b ax25: Fix refcount leaks caused by ax25_cb_del()
   CVE-2022-3526: 8f79ce226ad2e9b2ec598de2b9560863b7549d1b macvlan: Fix leaking skb in source mode with nodst option
   CVE-2022-41858: efb020924a71391fc12e6f204eaf25694cc116a1 drivers: net: slip: fix NPD bug in sl_tx_timeout()
+  CVE-2023-4389: 252db93fd0bd5ca07c9b933ed94e93a4a43e8901 btrfs: fix root ref counts in error handling in btrfs_get_root_ref
 
 CVEs fixed in 5.15.36:
   CVE-2022-2639: e411af98013dba5bce8118ee2b84bd1ad4c36b86 openvswitch: fix OOB access in reserve_sfa_size()
@@ -218,6 +219,8 @@ CVEs fixed in 5.15.42:
   CVE-2022-1729: e085354dde254bc6c83ee604ea66c2b36f9f9067 perf: Fix sys_perf_event_open() race against self
   CVE-2022-21499: 69c5d307dce1560fafcb852f39d7a1bf5e266641 lockdown: also lock down previous kgdb use
   CVE-2023-1838: 42d8a6dc45fc6619b8def1a70b7bd0800bcc4574 Fix double fget() in vhost_net_set_backend()
+  CVE-2023-4387: 4ad09fdef55b70f16f8d385981b864ac75cf1354 net: vmxnet3: fix possible use-after-free bugs in vmxnet3_rq_alloc_rx_buf()
+  CVE-2023-4459: e35387a91318ccdec4a30b58d967391e011e34fa net: vmxnet3: fix possible NULL pointer dereference in vmxnet3_rq_cleanup()
 
 CVEs fixed in 5.15.44:
   CVE-2022-1789: acd12d16528152b32fa09be2c5ef95047f69af05 KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID
@@ -239,6 +242,7 @@ CVEs fixed in 5.15.46:
   CVE-2022-1973: 61decb58486d7c0cbded25fe4d301ab4fa148cd8 fs/ntfs3: Fix invalid free in log_replay
   CVE-2022-3115: 4cb37f715f601cee5b026c6f9091a466266b5ba5 drm: mali-dp: potential dereference of null pointer
   CVE-2022-3577: 22e0b0b84c538b60bdf8eeceee7ab3cebf4a1a09 HID: bigben: fix slab-out-of-bounds Write in bigben_probe
+  CVE-2023-4385: 4b9380d92c66cdc66987f65130789abad5c1af6f fs: jfs: fix possible NULL pointer dereference in dbFree()
 
 CVEs fixed in 5.15.47:
   CVE-2022-3104: 1aeeca2b8397e3805c16a4ff26bf3cc8485f9853 lkdtm/bugs: Check for the NULL pointer after calling kmalloc
@@ -531,6 +535,7 @@ CVEs fixed in 5.15.110:
   CVE-2023-2002: f1e6a14d5ae879d6ab6d90c58d2fde1b5716b389 bluetooth: Perform careful capability checks in hci_sock_ioctl()
 
 CVEs fixed in 5.15.111:
+  CVE-2023-0160: f333854dce4a079783f00c201869b9ee8f7ff3c3 bpf, sockmap: fix deadlocks in the sockhash and sockmap
   CVE-2023-2269: e11765cea2050fa25fc3e03da858e83284c5ce79 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-32233: 21c2a454486d5e9c1517ecca19266b3be3df73ca netfilter: nf_tables: deactivate anonymous set from preparation phase
   CVE-2023-32248: 227eb2689b44d0d60da3839b146983e73435924c ksmbd: fix NULL pointer dereference in smb2_get_info_filesystem()
@@ -593,7 +598,11 @@ CVEs fixed in 5.15.124:
 CVEs fixed in 5.15.125:
   CVE-2022-40982: 348a89e2018428c3e55a87cdd9ae3cbd6cc8248a x86/speculation: Add Gather Data Sampling mitigation
   CVE-2023-20569: 236dd7133394bfe30275191e3aefcc6b3b09962b x86/bugs: Increase the x86 bugs vector size to two u32s
-  CVE-2023-34319: b14a3924c2675c22e07a5a190223b6b6cdc2867d xen/netback: Fix buffer overrun triggered by unusual packet
+
+CVEs fixed in 5.15.126:
+  CVE-2023-20588: a74878207b02060c5feaf88b5566208ed08eb78d x86/CPU/AMD: Do not leak quotient data after a division by 0
+  CVE-2023-40283: fbe5a2fed8156cc19eb3b956602b0a1dd46a302d Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb
+  CVE-2023-4128: 262430dfc618509246e07acd26211cb4cca79ecc net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -639,6 +648,7 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
+  CVE-2020-27418: (unk)  
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
@@ -691,16 +701,13 @@ Outstanding CVEs:
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2022-45919: (unk)  
   CVE-2022-47940: (unk) ksmbd: validate length in smb2_write() 
-  CVE-2023-0160: (unk)  
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
-  CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
   CVE-2023-20941: (unk)  
-  CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
   CVE-2023-21400: (unk)  
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
@@ -726,15 +733,13 @@ Outstanding CVEs:
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk)  
-  CVE-2023-3773: (unk)  
+  CVE-2023-3772: (unk) xfrm: add NULL check in xfrm_update_ae_params 
+  CVE-2023-3773: (unk) xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH 
   CVE-2023-38427: (unk) ksmbd: fix out-of-bound read in deassemble_neg_contexts() 
   CVE-2023-38430: (unk) ksmbd: validate smb request protocol id 
   CVE-2023-38431: (unk) ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop 
   CVE-2023-4010: (unk)  
-  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
   CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
-  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
   CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 

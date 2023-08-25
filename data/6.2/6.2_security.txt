@@ -65,6 +65,7 @@ CVEs fixed in 6.2.14:
   CVE-2023-2002: 727b3ea80f3fdda6c686806ce3579face0415c76 bluetooth: Perform careful capability checks in hci_sock_ioctl()
 
 CVEs fixed in 6.2.15:
+  CVE-2023-0160: d0e34aaea13391e28069c50de5519300d408e985 bpf, sockmap: fix deadlocks in the sockhash and sockmap
   CVE-2023-2269: 243093d536fe3cc78b450f1beb8d584505ea3193 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-32233: 6b0801dcc1aa4373d28ac8ee396788d2e715c495 netfilter: nf_tables: deactivate anonymous set from preparation phase
   CVE-2023-32248: b35f6c031b87d9e51f141ff6de0ea59756a8e313 ksmbd: fix NULL pointer dereference in smb2_get_info_filesystem()
@@ -130,6 +131,7 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
+  CVE-2020-27418: (unk)  
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
@@ -167,7 +169,6 @@ Outstanding CVEs:
   CVE-2022-45887: (unk)  
   CVE-2022-45919: (unk)  
   CVE-2022-48425: (unk) fs/ntfs3: Validate MFT flags before replaying logs 
-  CVE-2023-0160: (unk)  
   CVE-2023-1192: (unk) fs/ntfs3: Validate MFT flags before replaying logs 
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
@@ -197,7 +198,7 @@ Outstanding CVEs:
   CVE-2023-3212: (unk) gfs2: Don't deref jdesc in evict 
   CVE-2023-32629: (unk)  
   CVE-2023-3269: (unk) mm: introduce new 'lock_mm_and_find_vma()' page fault helper 
-  CVE-2023-33250: (unk)  
+  CVE-2023-33250: (unk) iommufd: Call iopt_area_contig_done() under the lock 
   CVE-2023-3390: (unk) netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE 
   CVE-2023-3397: (unk)  
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
@@ -211,8 +212,8 @@ Outstanding CVEs:
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk)  
-  CVE-2023-3773: (unk)  
+  CVE-2023-3772: (unk) xfrm: add NULL check in xfrm_update_ae_params 
+  CVE-2023-3773: (unk) xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH 
   CVE-2023-3776: (unk) net/sched: cls_fw: Fix improper refcount update leads to use-after-free 
   CVE-2023-38426: (unk) ksmbd: fix global-out-of-bounds in smb2_find_context_vals 
   CVE-2023-38427: (unk) ksmbd: fix out-of-bound read in deassemble_neg_contexts() 
@@ -224,10 +225,10 @@ Outstanding CVEs:
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
   CVE-2023-4004: (unk) netfilter: nft_set_pipapo: fix improper element removal 
   CVE-2023-4010: (unk)  
+  CVE-2023-40283: (unk) Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb 
   CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4132: (unk) media: usb: siano: Fix warning due to null work_func_t function pointer 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
   CVE-2023-4147: (unk) netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID 
   CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
-  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
   CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 

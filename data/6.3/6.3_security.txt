@@ -15,6 +15,7 @@ CVEs fixed in 6.3.1:
   CVE-2023-2002: dd30f9da333748488d96b7cb3c5a17bbaf86b32d bluetooth: Perform careful capability checks in hci_sock_ioctl()
 
 CVEs fixed in 6.3.2:
+  CVE-2023-0160: d2b8cf384c39ddb6fdb9e9034cd9b9887e09e735 bpf, sockmap: fix deadlocks in the sockhash and sockmap
   CVE-2023-2269: a554e6ec3626d4c11f55d7eef8d6aa93fb211c24 dm ioctl: fix nested locking in table_clear() to remove deadlock concern
   CVE-2023-2598: 3a0a9211d7d0138d55aecd209b05e6d4a9eec383 io_uring/rsrc: check for nonconsecutive pages
   CVE-2023-32233: f8486683ffa30456e0be4290282a44c4459a3287 netfilter: nf_tables: deactivate anonymous set from preparation phase
@@ -73,6 +74,7 @@ CVEs fixed in 6.3.11:
   CVE-2023-3269: bce721f87edd54379120ffb85111357923f4f326 mm: introduce new 'lock_mm_and_find_vma()' page fault helper
 
 CVEs fixed in 6.3.13:
+  CVE-2023-33250: 1d2b603d938c898b5fd8da6e3d80184366ca6ea0 iommufd: Call iopt_area_contig_done() under the lock
   CVE-2023-3863: b3ad46e155a6d91b36c6e892019a43e3ef3c696d net: nfc: Fix use-after-free caused by nfc_llcp_find_local
   CVE-2023-4134: c261139c1df65c9c4bf00e96c91183bcfc1919ec Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync()
 
@@ -120,6 +122,7 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
+  CVE-2020-27418: (unk)  
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
@@ -156,7 +159,6 @@ Outstanding CVEs:
   CVE-2022-45886: (unk)  
   CVE-2022-45887: (unk)  
   CVE-2022-45919: (unk)  
-  CVE-2023-0160: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
   CVE-2023-1206: (unk) tcp: Reduce chance of collisions in inet6_hashfn(). 
@@ -176,7 +178,6 @@ Outstanding CVEs:
   CVE-2023-31085: (unk)  
   CVE-2023-31248: (unk) netfilter: nf_tables: do not ignore genmask when looking up chain by id 
   CVE-2023-32629: (unk)  
-  CVE-2023-33250: (unk)  
   CVE-2023-3397: (unk)  
   CVE-2023-34319: (unk) xen/netback: Fix buffer overrun triggered by unusual packet 
   CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
@@ -185,11 +186,12 @@ Outstanding CVEs:
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk)  
-  CVE-2023-3773: (unk)  
+  CVE-2023-3772: (unk) xfrm: add NULL check in xfrm_update_ae_params 
+  CVE-2023-3773: (unk) xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH 
   CVE-2023-3776: (unk) net/sched: cls_fw: Fix improper refcount update leads to use-after-free 
   CVE-2023-4004: (unk) netfilter: nft_set_pipapo: fix improper element removal 
   CVE-2023-4010: (unk)  
+  CVE-2023-40283: (unk) Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb 
   CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4132: (unk) media: usb: siano: Fix warning due to null work_func_t function pointer 
   CVE-2023-4147: (unk) netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID 

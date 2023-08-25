@@ -1161,6 +1161,8 @@ CVEs fixed in 4.14.279:
 CVEs fixed in 4.14.281:
   CVE-2022-1652: dc650d53bad770f169e498f1231671c51b0b321d floppy: use a statically allocated error counter
   CVE-2022-1729: dee63319e2d1abd5d37a89de046ccf32ca8a8451 perf: Fix sys_perf_event_open() race against self
+  CVE-2023-4387: 2bee202d0649cb53b9860fe15d0642167bffd6bf net: vmxnet3: fix possible use-after-free bugs in vmxnet3_rq_alloc_rx_buf()
+  CVE-2023-4459: 5fd9a74bf04a1eae5dbde8ca8585106d4410427f net: vmxnet3: fix possible NULL pointer dereference in vmxnet3_rq_cleanup()
 
 CVEs fixed in 4.14.282:
   CVE-2022-0494: 4f3ea768c56e8dce55ae538f18b37420366c5c22 block-map: add __GFP_ZERO flag for alloc_page in function bio_copy_kern
@@ -1173,6 +1175,7 @@ CVEs fixed in 4.14.283:
   CVE-2022-1966: 5b732a9e8e22395d911b3e6c343cbed0e1cec275 netfilter: nf_tables: disallow non-stateful expression in sets earlier
   CVE-2022-32250: 5b732a9e8e22395d911b3e6c343cbed0e1cec275 netfilter: nf_tables: disallow non-stateful expression in sets earlier
   CVE-2022-32981: d13c94c4b6f816e79b8e4df193db1bdcc7253610 powerpc/32: Fix overread/overwrite of thread_struct via ptrace
+  CVE-2023-4385: 070ddf59cf17faf6aae7d89f78e0510c94d07940 fs: jfs: fix possible NULL pointer dereference in dbFree()
 
 CVEs fixed in 4.14.284:
   CVE-2022-21123: d6087dda37d3ffa3c8efe6385757d73d9ed173c5 x86/speculation/mmio: Add mitigation for Processor MMIO Stale Data
@@ -1353,7 +1356,19 @@ CVEs fixed in 4.14.319:
 
 CVEs fixed in 4.14.321:
   CVE-2022-40982: cdc2724c9d060a8fa9652a9aa6347d8324f6cd82 x86/speculation: Add Gather Data Sampling mitigation
-  CVE-2023-34319: e1142d87c185c7d7bbf05d175754638b5b9dbf16 xen/netback: Fix buffer overrun triggered by unusual packet
+
+CVEs fixed in 4.14.322:
+  CVE-2023-1206: ebfedbfb36eecab2d4bfa6faeaad763cbfe3a0e8 tcp: Reduce chance of collisions in inet6_hashfn().
+  CVE-2023-3117: d19a80db742ceffc8d92a0cf78885f60d10c6a6d netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
+  CVE-2023-3212: 6fb4b344382879bd4f8cc8394f6fff77c1388b15 gfs2: Don't deref jdesc in evict
+  CVE-2023-3390: d19a80db742ceffc8d92a0cf78885f60d10c6a6d netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
+  CVE-2023-35001: 185a79c8be264720b0b89ce2cc42ca2582dbce6f netfilter: nf_tables: prevent OOB access in nft_byteorder_eval
+  CVE-2023-3609: a7f178f8439e939efdd12d190783eb0fabf5990d net/sched: cls_u32: Fix reference counter leak leading to overflow
+  CVE-2023-3611: c3f21ea515cb4ad7db86ddb511cead2f09e1c1e6 net/sched: sch_qfq: account for stab overhead in qfq_enqueue
+  CVE-2023-3776: fa020e39526994c7248f241f75d615b0df5d7671 net/sched: cls_fw: Fix improper refcount update leads to use-after-free
+  CVE-2023-40283: 51822644a047eac2310fab0799b64e3430b5a111 Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb
+  CVE-2023-4128: f0f874147a5b00eae875c24281531f8de7900079 net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-4132: 45224862e49e1fde86cbd26c7612f029b4e2e662 media: usb: siano: Fix warning due to null work_func_t function pointer
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1440,6 +1455,7 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
+  CVE-2020-27418: (unk)  
   CVE-2020-27820: (unk) drm/nouveau: use drm_dev_unplug() during device removal 
   CVE-2020-27835: (unk) IB/hfi1: Ensure correct mm is used at all times 
   CVE-2020-35501: (unk)  
@@ -1535,13 +1551,11 @@ Outstanding CVEs:
   CVE-2022-4744: (unk) tun: avoid double free in tun_free_netdev 
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
   CVE-2023-0030: (unk) drm/nouveau/mmu: add more general vmm free/node handling functions 
-  CVE-2023-0160: (unk)  
   CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
   CVE-2023-0590: (unk) net: sched: fix race condition in qdisc_graft() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
   CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
-  CVE-2023-1206: (unk) tcp: Reduce chance of collisions in inet6_hashfn(). 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
   CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
   CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
@@ -1553,7 +1567,6 @@ Outstanding CVEs:
   CVE-2023-20593: (unk) x86/cpu/amd: Add a Zenbleed fix 
   CVE-2023-20941: (unk)  
   CVE-2023-2124: (unk) xfs: verify buffer contents when we skip log replay 
-  CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
@@ -1568,30 +1581,17 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
-  CVE-2023-3117: (unk) netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE 
-  CVE-2023-3212: (unk) gfs2: Don't deref jdesc in evict 
   CVE-2023-3268: (unk) relayfs: fix out-of-bounds access in relay_file_read 
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
-  CVE-2023-3390: (unk) netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE 
   CVE-2023-3397: (unk)  
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
-  CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
   CVE-2023-3567: (unk) vc_screen: move load of struct vc_data pointer in vcs_read() to avoid UAF 
   CVE-2023-35827: (unk)  
-  CVE-2023-3609: (unk) net/sched: cls_u32: Fix reference counter leak leading to overflow 
-  CVE-2023-3611: (unk) net/sched: sch_qfq: account for stab overhead in qfq_enqueue 
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk)  
-  CVE-2023-3773: (unk)  
-  CVE-2023-3776: (unk) net/sched: cls_fw: Fix improper refcount update leads to use-after-free 
+  CVE-2023-3772: (unk) xfrm: add NULL check in xfrm_update_ae_params 
+  CVE-2023-3773: (unk) xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH 
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
   CVE-2023-4010: (unk)  
-  CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
-  CVE-2023-4132: (unk) media: usb: siano: Fix warning due to null work_func_t function pointer 
-  CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
-  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
-  CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 

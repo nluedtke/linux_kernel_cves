@@ -24,18 +24,21 @@ CVEs fixed in 5.19.4:
   CVE-2022-2785: b429d0b9a7a0f3dddb1f782b72629e6353f292fd bpf: Disallow bpf programs call prog_run command.
   CVE-2022-3625: 26bef5616255066268c0e40e1da10cc9b78b82e9 devlink: Fix use-after-free after a failed reload
   CVE-2022-3635: af412b252550f9ac36d9add7b013c2a2c3463835 atm: idt77252: fix use-after-free bugs caused by tst_timer
+  CVE-2023-3111: 5d741afed0bac206640cc64d77b97853283cf719 btrfs: unset reloc control if transaction commit fails in prepare_to_relocate()
 
 CVEs fixed in 5.19.6:
   CVE-2022-2590: 9def52eb10baab3b700858003d462fcf17d62873 mm/gup: fix FOLL_FORCE COW security issue and remove FOLL_COW
   CVE-2022-2905: a36df92c7ff7ecde2fb362241d0ab024dddd0597 bpf: Don't use tnum_range on array range checking for poke descriptors
   CVE-2022-3028: 6901885656c029c976498290b52f67f2c251e6a0 af_key: Do not call xfrm_probe_algs in parallel
   CVE-2022-39190: fdca693fcf26c11596e7aa1e540af2b4a5288c76 netfilter: nf_tables: disallow binding to already bound chain
+  CVE-2023-4394: 4b124ad87244cd7f0883c5eaa38d2326b2154cad btrfs: fix possible memory leak in btrfs_get_dev_args_from_path()
 
 CVEs fixed in 5.19.7:
   CVE-2022-42703: 7877eaa1131147b4d6a063962f3aac0ab1b8ea1c mm/rmap: Fix anon_vma->degree ambiguity leading to double-reuse
 
 CVEs fixed in 5.19.8:
   CVE-2022-20421: 603a47f2ae56bf68288784d3c0a8c5b8e0a827ed binder: fix UAF of ref->proc caused by race condition
+  CVE-2022-4662: d5eb850b3e8836197a38475840725260b9783e94 USB: core: Prevent nested device-reset calls
 
 CVEs fixed in 5.19.9:
   CVE-2022-2663: 6cf0609154b2ce8d3ae160e7506ab316400a8d3d netfilter: nf_conntrack_irc: Fix forged IP logic
@@ -119,6 +122,7 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
+  CVE-2020-27418: (unk)  
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
@@ -207,7 +211,6 @@ Outstanding CVEs:
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2022-45919: (unk)  
   CVE-2022-45934: (unk) Bluetooth: L2CAP: Fix u8 overflow 
-  CVE-2022-4662: (unk) USB: core: Prevent nested device-reset calls 
   CVE-2022-47518: (unk) wifi: wilc1000: validate number of channels 
   CVE-2022-47519: (unk) wifi: wilc1000: validate length of IEEE80211_P2P_ATTR_OPER_CHANNEL attribute 
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
@@ -219,7 +222,7 @@ Outstanding CVEs:
   CVE-2022-48425: (unk) fs/ntfs3: Validate MFT flags before replaying logs 
   CVE-2022-48502: (unk) fs/ntfs3: Check fields while reading 
   CVE-2023-0045: (unk) x86/bugs: Flush IBP in ib_prctl_set() 
-  CVE-2023-0160: (unk)  
+  CVE-2023-0160: (unk) bpf, sockmap: fix deadlocks in the sockhash and sockmap 
   CVE-2023-0179: (unk) netfilter: nft_payload: incorrect arithmetics when fetching VLAN header bits 
   CVE-2023-0210: (unk) ksmbd: check nt_len to be at least CIFS_ENCPWD_SIZE in ksmbd_decode_ntlmssp_auth_blob 
   CVE-2023-0266: (unk) ALSA: pcm: Move rwsem lock inside snd_ctl_elem_read to prevent UAF 
@@ -317,7 +320,6 @@ Outstanding CVEs:
   CVE-2023-31083: (unk)  
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
-  CVE-2023-3111: (unk) btrfs: unset reloc control if transaction commit fails in prepare_to_relocate() 
   CVE-2023-3117: (unk) netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE 
   CVE-2023-31248: (unk) netfilter: nf_tables: do not ignore genmask when looking up chain by id 
   CVE-2023-3141: (unk) memstick: r592: Fix UAF bug in r592_remove due to race condition 
@@ -350,7 +352,6 @@ Outstanding CVEs:
   CVE-2023-3397: (unk)  
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-34256: (unk) ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum 
-  CVE-2023-34319: (unk) xen/netback: Fix buffer overrun triggered by unusual packet 
   CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
   CVE-2023-3567: (unk) vc_screen: move load of struct vc_data pointer in vcs_read() to avoid UAF 
   CVE-2023-35788: (unk) net/sched: flower: fix possible OOB write in fl_set_geneve_opt() 
@@ -366,8 +367,8 @@ Outstanding CVEs:
   CVE-2023-3640: (unk)  
   CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk)  
-  CVE-2023-3773: (unk)  
+  CVE-2023-3772: (unk) xfrm: add NULL check in xfrm_update_ae_params 
+  CVE-2023-3773: (unk) xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH 
   CVE-2023-3776: (unk) net/sched: cls_fw: Fix improper refcount update leads to use-after-free 
   CVE-2023-3812: (unk) net: tun: fix bugs for oversize packet when napi frags enabled 
   CVE-2023-38409: (unk) fbcon: set_con2fb_map needs to set con2fb_map! 
@@ -381,11 +382,11 @@ Outstanding CVEs:
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
   CVE-2023-4004: (unk) netfilter: nft_set_pipapo: fix improper element removal 
   CVE-2023-4010: (unk)  
+  CVE-2023-40283: (unk) Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb 
   CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4132: (unk) media: usb: siano: Fix warning due to null work_func_t function pointer 
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
   CVE-2023-4147: (unk) netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID 
   CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
-  CVE-2023-4194: (unk) net: tun_chr_open(): set sk_uid from current_fsuid() 
   CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 
