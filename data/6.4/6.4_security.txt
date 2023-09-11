@@ -23,11 +23,14 @@ CVEs fixed in 6.4.6:
   CVE-2023-20593: 9b8bb5c4e25678af895dc9dd4a1e82b2f948cacc x86/cpu/amd: Add a Zenbleed fix
 
 CVEs fixed in 6.4.7:
+  CVE-2023-3777: ab87c6b43822a56ae0aadc715364b5f8d4a96037 netfilter: nf_tables: skip bound chain on rule flush
   CVE-2023-4004: 48dbb5d24c667bf26bc2fea8caa7fe51fcc6aa62 netfilter: nft_set_pipapo: fix improper element removal
 
 CVEs fixed in 6.4.8:
   CVE-2023-1206: 1e50c11ed44e28a57c6215a5e7643ae85c6297fa tcp: Reduce chance of collisions in inet6_hashfn().
+  CVE-2023-4015: 027d00132487bcf2a4ee7493bb8de9d6331d48e3 netfilter: nf_tables: skip immediate deactivate in _PREPARE_ERROR
   CVE-2023-4147: 14448359681062bf51d9c67e0264869548b79853 netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID
+  CVE-2023-4611: e872d6b6ea4947fb87f0d6ea1ef814019dbed89e mm/mempolicy: Take VMA lock before replacing policy
 
 CVEs fixed in 6.4.9:
   CVE-2022-40982: ff0642207e24f9a7011e8982ab7da1e16db75a38 x86/speculation: Add Gather Data Sampling mitigation
@@ -39,14 +42,19 @@ CVEs fixed in 6.4.10:
   CVE-2023-40283: 10426afe65c8bf7b24dd0c7be4dcc65f86fc99f9 Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb
   CVE-2023-4128: 4b717802428fa02cbcbb61209f638f65f9cd4710 net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
   CVE-2023-4194: 36161e7d40e7293d7f213e16d881042d15c8a53a net: tun_chr_open(): set sk_uid from current_fsuid()
+  CVE-2023-4206: a836184b670f59e24d3a0f7c07115ec6e6ce6900 net/sched: cls_route: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-4207: 7d848d718aeb3b482e177b682dd04e76dd413afb net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-4208: 4b717802428fa02cbcbb61209f638f65f9cd4710 net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
   CVE-2023-4273: e1a73ba43cf883cb37f6331aca5a4c5be6350982 exfat: check if filename entries exceeds max filename length
 
 CVEs fixed in 6.4.11:
   CVE-2023-4155: ab8e9a874574ce511eca21caa5d7ef5426963a54 KVM: SEV: only access GHCB fields once
+  CVE-2023-4563: bd156ce9553dcaf2d6ee2c825d1a5a1718e86524 netfilter: nf_tables: don't skip expired elements during walk
 
 CVEs fixed in 6.4.12:
   CVE-2023-3772: 53df4be4f5221e90dc7aa9ce745a9a21bb7024f4 xfrm: add NULL check in xfrm_update_ae_params
   CVE-2023-3773: a9020514f175ef15bb68eea9345782abfd9afea3 xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH
+  CVE-2023-4569: 83ff16e449a675e215125d97a2c4a7f097d291d0 netfilter: nf_tables: deactivate catchall elements in next generation
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -119,30 +127,28 @@ Outstanding CVEs:
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-41848: (unk)  
-  CVE-2022-44032: (unk)  
-  CVE-2022-44033: (unk)  
   CVE-2022-44034: (unk)  
   CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
-  CVE-2022-45886: (unk)  
-  CVE-2022-45887: (unk)  
-  CVE-2022-45919: (unk)  
   CVE-2023-1193: (unk)  
   CVE-2023-1194: (unk)  
   CVE-2023-20941: (unk)  
   CVE-2023-21400: (unk)  
   CVE-2023-23039: (unk)  
+  CVE-2023-25775: (unk) RDMA/irdma: Prevent zero-length STAG registration 
   CVE-2023-26242: (unk)  
   CVE-2023-2640: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
-  CVE-2023-31083: (unk)  
+  CVE-2023-31083: (unk) Bluetooth: hci_ldisc: check HCI_UART_PROTO_READY flag in HCIUARTGETPROTO 
   CVE-2023-31085: (unk)  
   CVE-2023-32629: (unk)  
   CVE-2023-3397: (unk)  
   CVE-2023-35827: (unk)  
   CVE-2023-3640: (unk)  
-  CVE-2023-37453: (unk)  
+  CVE-2023-37453: (unk) USB: core: Fix race by not overwriting udev->descriptor in hub_port_init() 
   CVE-2023-37454: (unk)  
   CVE-2023-4010: (unk)  
+  CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
+  CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 

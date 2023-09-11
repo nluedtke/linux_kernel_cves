@@ -741,6 +741,9 @@ CVEs fixed in 5.10.181:
   CVE-2023-3141: 5c23f6da62f71ebfeda6ea3960982ccd926ebb09 memstick: r592: Fix UAF bug in r592_remove due to race condition
 
 CVEs fixed in 5.10.183:
+  CVE-2022-45886: 2ea7d26ed851db7176e4bfa8174c8a1380255bbe media: dvb-core: Fix use-after-free due on race condition at dvb_net
+  CVE-2022-45887: eb37fef417a246fe54530901a3ea9c0abc914fc2 media: ttusb-dec: fix memory leak in ttusb_dec_exit_dvb()
+  CVE-2022-45919: 76169f7490899d74aad4b0e2c4c1b9d4904dd01f media: dvb-core: Fix use-after-free due to race condition at dvb_ca_en50221
   CVE-2023-3212: d03d31d3a206093b9b8759dddf0ba9bd843606ba gfs2: Don't deref jdesc in evict
   CVE-2023-35788: 7c5c67aa294444b53f697dc3ddce61b33ff8badd net/sched: flower: fix possible OOB write in fl_set_geneve_opt()
 
@@ -765,6 +768,7 @@ CVEs fixed in 5.10.188:
   CVE-2023-3610: d53c295c1f43b7460d28ba0f0f98a602084fdcb6 netfilter: nf_tables: fix chain binding transaction logic
   CVE-2023-3611: 8359ee85fd6dabc5c134ed69fb22faadd8a44071 net/sched: sch_qfq: account for stab overhead in qfq_enqueue
   CVE-2023-3776: 80e0e8d5f54397c5048fa2274144134dd9dc91b5 net/sched: cls_fw: Fix improper refcount update leads to use-after-free
+  CVE-2023-3777: 30e5460d69e631c0e84db37dba2d8f98648778d4 netfilter: nf_tables: skip bound chain on rule flush
   CVE-2023-3863: 96f2c6f272ec04083d828de46285a7d7b17d1aad net: nfc: Fix use-after-free caused by nfc_llcp_find_local
   CVE-2023-4004: 3a91099ecd59a42d1632fcb152bf7222f268ea2b netfilter: nft_set_pipapo: fix improper element removal
   CVE-2023-4132: d87ef4e857b790f1616809eccda6b4d0c9c3da11 media: usb: siano: Fix warning due to null work_func_t function pointer
@@ -776,10 +780,17 @@ CVEs fixed in 5.10.189:
 CVEs fixed in 5.10.190:
   CVE-2023-1206: 0cd74fbd3b8327e60525e1ec4a6c28895693909f tcp: Reduce chance of collisions in inet6_hashfn().
   CVE-2023-20588: b6fc2fbf89089ecfb8eb9a89a7fc91d444f4fec7 x86/CPU/AMD: Do not leak quotient data after a division by 0
+  CVE-2023-4015: ab5a97a94b57324df76d659686ac2d30494170e6 netfilter: nf_tables: skip immediate deactivate in _PREPARE_ERROR
   CVE-2023-40283: 06f87c96216bc5cd1094c23492274f77f1d5dd3b Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb
   CVE-2023-4128: b4256c99a7116c9514224847e8aaee2ecf110a0a net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
   CVE-2023-4147: 308a43f1521d5b7220693d0865b23e8dad3ed137 netfilter: nf_tables: disallow rule addition to bound chain via NFTA_RULE_CHAIN_ID
+  CVE-2023-4206: aaa71c4e8ad98828ed50dde3eec8e0d545a117f7 net/sched: cls_route: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-4207: a8d478200b104ff356f51e1f63499fe46ba8c9b8 net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-4208: b4256c99a7116c9514224847e8aaee2ecf110a0a net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
   CVE-2023-4273: 381f7df0f3c3bd7dceb3e2b2b64c2f6247e2ac19 exfat: check if filename entries exceeds max filename length
+
+CVEs fixed in 5.10.192:
+  CVE-2023-3772: bd30aa9c7febb6e709670cd5154194189ca3b7b5 xfrm: add NULL check in xfrm_update_ae_params
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -890,15 +901,12 @@ Outstanding CVEs:
   CVE-2022-39188: (unk) mmu_gather: Force tlb-flush VM_PFNMAP vmas 
   CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
   CVE-2022-41848: (unk)  
-  CVE-2022-44032: (unk)  
-  CVE-2022-44033: (unk)  
+  CVE-2022-44032: (unk) char: pcmcia: remove all the drivers 
+  CVE-2022-44033: (unk) char: pcmcia: remove all the drivers 
   CVE-2022-44034: (unk)  
   CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
-  CVE-2022-45886: (unk)  
-  CVE-2022-45887: (unk)  
-  CVE-2022-45919: (unk)  
   CVE-2022-4696: (unk) io_uring: remove any grabbing of context 
   CVE-2022-47946: (unk) io_uring: kill sqo_dead and sqo submission halting 
   CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
@@ -919,17 +927,17 @@ Outstanding CVEs:
   CVE-2023-26242: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
-  CVE-2023-31083: (unk)  
+  CVE-2023-31083: (unk) Bluetooth: hci_ldisc: check HCI_UART_PROTO_READY flag in HCIUARTGETPROTO 
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
   CVE-2023-3389: (unk) io_uring: mutex locked poll hashing 
   CVE-2023-3397: (unk)  
   CVE-2023-35827: (unk)  
   CVE-2023-3640: (unk)  
-  CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk) xfrm: add NULL check in xfrm_update_ae_params 
-  CVE-2023-3773: (unk) xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH 
   CVE-2023-4010: (unk)  
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
+  CVE-2023-4563: (unk) netfilter: nf_tables: don't skip expired elements during walk 
+  CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
+  CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 

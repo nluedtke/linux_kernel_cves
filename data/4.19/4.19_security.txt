@@ -1170,6 +1170,9 @@ CVEs fixed in 4.19.284:
   CVE-2023-3141: dce890c3dfaf631d0a8ac79c2792911f9fc551fa memstick: r592: Fix UAF bug in r592_remove due to race condition
 
 CVEs fixed in 4.19.285:
+  CVE-2022-45886: 7bb9c6e05efcecb15b0354d574efbc36ca321d75 media: dvb-core: Fix use-after-free due on race condition at dvb_net
+  CVE-2022-45887: 3e5af0745a4702ab0df2f880bfe0431eb30f9164 media: ttusb-dec: fix memory leak in ttusb_dec_exit_dvb()
+  CVE-2022-45919: 8624c7e048fa9ba584b7ba43715090ab1aed765c media: dvb-core: Fix use-after-free due to race condition at dvb_ca_en50221
   CVE-2023-35788: 59a27414bb00e48c4153a8b794fb4e69910a6a1b net/sched: flower: fix possible OOB write in fl_set_geneve_opt()
 
 CVEs fixed in 4.19.286:
@@ -1196,6 +1199,12 @@ CVEs fixed in 4.19.291:
   CVE-2023-40283: 82cdb2ccbe43337798393369f0ceb98699fe6037 Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb
   CVE-2023-4128: 4aae24015ecd70d824a953e2dc5b0ca2c4769243 net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
   CVE-2023-4132: 54073c46cbbd2c0c03d6f7d481540cb95cf181a1 media: usb: siano: Fix warning due to null work_func_t function pointer
+  CVE-2023-4206: ad8f36f96696a7f1d191da66637c415959bab6d8 net/sched: cls_route: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-4208: 4aae24015ecd70d824a953e2dc5b0ca2c4769243 net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
+
+CVEs fixed in 4.19.293:
+  CVE-2023-1077: 84d90fb72a053c034b018fcc3cfaa6f606faf1c6 sched/rt: pick_next_rt_entity(): check list_entry
+  CVE-2023-3772: 44f69c96f8a147413c23c68cda4d6fb5e23137cd xfrm: add NULL check in xfrm_update_ae_params
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1351,22 +1360,18 @@ Outstanding CVEs:
   CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
   CVE-2022-41848: (unk)  
   CVE-2022-4269: (unk) act_mirred: use the backlog for nested calls to mirred ingress 
-  CVE-2022-44032: (unk)  
-  CVE-2022-44033: (unk)  
+  CVE-2022-44032: (unk) char: pcmcia: remove all the drivers 
+  CVE-2022-44033: (unk) char: pcmcia: remove all the drivers 
   CVE-2022-44034: (unk)  
   CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
-  CVE-2022-45886: (unk)  
-  CVE-2022-45887: (unk)  
-  CVE-2022-45919: (unk)  
   CVE-2022-47520: (unk) wifi: wilc1000: validate pairwise and authentication suite offsets 
   CVE-2023-0030: (unk) drm/nouveau/mmu: add more general vmm free/node handling functions 
   CVE-2023-0386: (unk) ovl: fail on invalid uid/gid mapping at copy up 
   CVE-2023-0590: (unk) net: sched: fix race condition in qdisc_graft() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1076: (unk) tun: tun_chr_open(): correctly initialize socket uid 
-  CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
   CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
   CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
@@ -1388,7 +1393,7 @@ Outstanding CVEs:
   CVE-2023-3022: (unk) ipv6: Use result arg in fib_lookup_arg consistently 
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
-  CVE-2023-31083: (unk)  
+  CVE-2023-31083: (unk) Bluetooth: hci_ldisc: check HCI_UART_PROTO_READY flag in HCIUARTGETPROTO 
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-31085: (unk)  
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
@@ -1396,11 +1401,11 @@ Outstanding CVEs:
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-35827: (unk)  
   CVE-2023-3640: (unk)  
-  CVE-2023-37453: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-3772: (unk) xfrm: add NULL check in xfrm_update_ae_params 
-  CVE-2023-3773: (unk) xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH 
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
   CVE-2023-4010: (unk)  
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
+  CVE-2023-4207: (unk) net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free 
+  CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
+  CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
