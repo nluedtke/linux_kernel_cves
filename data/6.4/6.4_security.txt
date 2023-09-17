@@ -2,6 +2,8 @@
 CVEs fixed in 6.4:
   CVE-2023-3610: 4bedf9eee016286c835e3d8fa981ddece5338795 netfilter: nf_tables: fix chain binding transaction logic
   CVE-2023-38432: 2b9b8f3b68edb3d67d79962f02e26dbb5ae3808d ksmbd: validate command payload size
+  CVE-2023-3865: 5fe7f7b78290638806211046a99f031ff26164e1 ksmbd: fix out-of-bound read in smb2_write
+  CVE-2023-3866: 5005bcb4219156f1bf7587b185080ec1da08518e ksmbd: validate session id and tree id in the compound request
 
 CVEs fixed in 6.4.1:
   CVE-2023-3269: b11fa3d22ac0fbc0bfaa740b3b3669d43ec48503 mm: introduce new 'lock_mm_and_find_vma()' page fault helper
@@ -18,6 +20,7 @@ CVEs fixed in 6.4.4:
 CVEs fixed in 6.4.5:
   CVE-2023-3611: bd2333fa86dc520823e8c317980b29ba91ee6b87 net/sched: sch_qfq: account for stab overhead in qfq_enqueue
   CVE-2023-3776: 0a2e3f49febda459252f58cec2d659623d582800 net/sched: cls_fw: Fix improper refcount update leads to use-after-free
+  CVE-2023-3867: ffaa0c85edd9245594a94918c09db9163b71767a ksmbd: add missing compound request handing in some commands
 
 CVEs fixed in 6.4.6:
   CVE-2023-20593: 9b8bb5c4e25678af895dc9dd4a1e82b2f948cacc x86/cpu/amd: Add a Zenbleed fix
@@ -54,7 +57,13 @@ CVEs fixed in 6.4.11:
 CVEs fixed in 6.4.12:
   CVE-2023-3772: 53df4be4f5221e90dc7aa9ce745a9a21bb7024f4 xfrm: add NULL check in xfrm_update_ae_params
   CVE-2023-3773: a9020514f175ef15bb68eea9345782abfd9afea3 xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH
+  CVE-2023-4244: 3bdf400a1ad166274e85fa537f8a993a4553e36d netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path
   CVE-2023-4569: 83ff16e449a675e215125d97a2c4a7f097d291d0 netfilter: nf_tables: deactivate catchall elements in next generation
+
+CVEs fixed in 6.4.16:
+  CVE-2023-25775: ceba966f1d6391800cab3c1c9ac1661b5166bc5b RDMA/irdma: Prevent zero-length STAG registration
+  CVE-2023-37453: b4a074b1fb222164ed7d5c0b8c922dc4a0840848 USB: core: Fix race by not overwriting udev->descriptor in hub_port_init()
+  CVE-2023-4623: 5293f466d41d6c2eaad8b833576ea3dbee630dc2 net/sched: sch_hfsc: Ensure inner classes have fsc curve
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -136,7 +145,6 @@ Outstanding CVEs:
   CVE-2023-20941: (unk)  
   CVE-2023-21400: (unk)  
   CVE-2023-23039: (unk)  
-  CVE-2023-25775: (unk) RDMA/irdma: Prevent zero-length STAG registration 
   CVE-2023-26242: (unk)  
   CVE-2023-2640: (unk)  
   CVE-2023-31081: (unk)  
@@ -147,8 +155,8 @@ Outstanding CVEs:
   CVE-2023-3397: (unk)  
   CVE-2023-35827: (unk)  
   CVE-2023-3640: (unk)  
-  CVE-2023-37453: (unk) USB: core: Fix race by not overwriting udev->descriptor in hub_port_init() 
   CVE-2023-37454: (unk)  
   CVE-2023-4010: (unk)  
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
-  CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
+  CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
+  CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 

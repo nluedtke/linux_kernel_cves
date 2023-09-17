@@ -192,6 +192,8 @@ CVEs fixed in 6.1.35:
 CVEs fixed in 6.1.36:
   CVE-2023-3610: 891cd2edddc76c58e842706ad27e2ff96000bd5d netfilter: nf_tables: fix chain binding transaction logic
   CVE-2023-38432: 9650cf70ec9d94ff34daa088b643229231723c26 ksmbd: validate command payload size
+  CVE-2023-3865: c86211159bc3178b891e0d60e586a32c7b6a231b ksmbd: fix out-of-bound read in smb2_write
+  CVE-2023-3866: 854156d12caa9d36de1cf5f084591c7686cc8a9d ksmbd: validate session id and tree id in the compound request
 
 CVEs fixed in 6.1.37:
   CVE-2023-3269: d6a5c7a1a6e52d4c46fe181237ca96cd46a42386 mm: introduce new 'lock_mm_and_find_vma()' page fault helper
@@ -207,6 +209,7 @@ CVEs fixed in 6.1.40:
   CVE-2022-48502: 000a9a72efa4a9df289bab9c9e8ba1639c72e0d6 fs/ntfs3: Check fields while reading
   CVE-2023-3611: 70feebdbfad85772ab3ef152812729cab5c6c426 net/sched: sch_qfq: account for stab overhead in qfq_enqueue
   CVE-2023-3776: c91fb29bb07ee4dd40aabd1e41f19c0f92ac3199 net/sched: cls_fw: Fix improper refcount update leads to use-after-free
+  CVE-2023-3867: 869ef4f2965bbb91157dad220133f76c16faba9b ksmbd: add missing compound request handing in some commands
 
 CVEs fixed in 6.1.41:
   CVE-2023-20593: ed9b87010aa84c157096f98c322491e9af8e8f07 x86/cpu/amd: Add a Zenbleed fix
@@ -244,6 +247,10 @@ CVEs fixed in 6.1.47:
 
 CVEs fixed in 6.1.50:
   CVE-2023-2430: 22a406b3629a10979916ea7cace47858410117b5 io_uring/msg_ring: fix missing lock on overflow for IOPOLL
+
+CVEs fixed in 6.1.53:
+  CVE-2023-25775: f01cfec8d3456bf389918eb898eda11f46d8b1b7 RDMA/irdma: Prevent zero-length STAG registration
+  CVE-2023-4623: a1e820fc7808e42b990d224f40e9b4895503ac40 net/sched: sch_hfsc: Ensure inner classes have fsc curve
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -332,7 +339,6 @@ Outstanding CVEs:
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
   CVE-2023-23005: (unk) mm/demotion: fix NULL vs IS_ERR checking in memory_tier_init 
   CVE-2023-23039: (unk)  
-  CVE-2023-25775: (unk) RDMA/irdma: Prevent zero-length STAG registration 
   CVE-2023-26242: (unk)  
   CVE-2023-2640: (unk)  
   CVE-2023-31081: (unk)  
@@ -348,6 +354,8 @@ Outstanding CVEs:
   CVE-2023-4010: (unk)  
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
+  CVE-2023-4244: (unk) netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path 
   CVE-2023-4563: (unk) netfilter: nf_tables: don't skip expired elements during walk 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
-  CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
+  CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
+  CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 

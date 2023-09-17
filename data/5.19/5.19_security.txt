@@ -38,6 +38,7 @@ CVEs fixed in 5.19.7:
 
 CVEs fixed in 5.19.8:
   CVE-2022-20421: 603a47f2ae56bf68288784d3c0a8c5b8e0a827ed binder: fix UAF of ref->proc caused by race condition
+  CVE-2022-4095: b1727def850904e4b8ba384043775672841663a1 staging: rtl8712: fix use after free bugs
   CVE-2022-4662: d5eb850b3e8836197a38475840725260b9783e94 USB: core: Prevent nested device-reset calls
 
 CVEs fixed in 5.19.9:
@@ -183,7 +184,6 @@ Outstanding CVEs:
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
   CVE-2022-3977: (unk) mctp: prevent double key removal and unref 
   CVE-2022-40133: (unk) drm/vmwgfx: Remove rcu locks from user resources 
-  CVE-2022-4095: (unk) staging: rtl8712: fix use after free bugs 
   CVE-2022-40982: (unk) x86/speculation: Add Gather Data Sampling mitigation 
   CVE-2022-41218: (unk) media: dvb-core: Fix UAF due to refcount races at releasing 
   CVE-2022-4129: (unk) l2tp: Serialize access to sk_user_data with sk_callback_lock 
@@ -381,6 +381,9 @@ Outstanding CVEs:
   CVE-2023-38431: (unk) ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop 
   CVE-2023-38432: (unk) ksmbd: validate command payload size 
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
+  CVE-2023-3865: (unk) ksmbd: fix out-of-bound read in smb2_write 
+  CVE-2023-3866: (unk) ksmbd: validate session id and tree id in the compound request 
+  CVE-2023-3867: (unk) ksmbd: add missing compound request handing in some commands 
   CVE-2023-4004: (unk) netfilter: nft_set_pipapo: fix improper element removal 
   CVE-2023-4010: (unk)  
   CVE-2023-4015: (unk) netfilter: nf_tables: skip immediate deactivate in _PREPARE_ERROR 
@@ -394,8 +397,11 @@ Outstanding CVEs:
   CVE-2023-4206: (unk) net/sched: cls_route: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4207: (unk) net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4208: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
+  CVE-2023-4244: (unk) netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path 
   CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 
   CVE-2023-4563: (unk) netfilter: nf_tables: don't skip expired elements during walk 
   CVE-2023-4569: (unk) netfilter: nf_tables: deactivate catchall elements in next generation 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
+  CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
+  CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 
