@@ -767,6 +767,9 @@ CVEs fixed in 4.14.195:
   CVE-2020-14314: fbbfd55a40d5d0806b59ee0403c75d5ac517533f ext4: fix potential negative array index in do_split()
   CVE-2020-29371: 89346bc395e7bc0a7d3c36c824782050b17d4fec romfs: fix uninitialized memory leak in romfs_dev_read()
 
+CVEs fixed in 4.14.196:
+  CVE-2020-36766: e6a62b5c4f7a05afec7ea4cfb040fb8512376259 cec-api: prevent leaking memory through hole in structure
+
 CVEs fixed in 4.14.197:
   CVE-2020-0465: a083dcdcfa2568747112edf865b3e848d70835e5 HID: core: Sanitize event code and type when mapping input
   CVE-2020-25285: c4b219136040bc57e9704afee8f5c5a9430795a5 mm/hugetlb: fix a race between hugetlb sysctl handlers
@@ -1377,6 +1380,12 @@ CVEs fixed in 4.14.322:
 CVEs fixed in 4.14.324:
   CVE-2023-3772: ed1cba039309c80b49719fcff3e3d7cdddb73d96 xfrm: add NULL check in xfrm_update_ae_params
 
+CVEs fixed in 4.14.326:
+  CVE-2023-4207: 530a85ea747965b7c275fa44a364916e0ec2efaa net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-42752: afd2657ba7af6d05afd6cc6b9315c091fafed14b igmp: limit igmpv3_newpack() packet size to IP_MAX_MTU
+  CVE-2023-42755: a048f77ba9cf7f77a06b2ee60446c6cc061c2daf net/sched: Retire rsvp classifier
+  CVE-2023-4921: d9f43fc5a78d1505733d3621cd4c044eaf71a02f net: sched: sch_qfq: Fix UAF in qfq_dequeue()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1597,9 +1606,7 @@ Outstanding CVEs:
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
   CVE-2023-4010: (unk)  
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-4207: (unk) net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4244: (unk) netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
-  CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 

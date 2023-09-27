@@ -60,6 +60,7 @@ CVEs fixed in 6.3.7:
   CVE-2023-35788: 900fab73a9cd3dd6a3a69f89980f8f3c9a738d5a net/sched: flower: fix possible OOB write in fl_set_geneve_opt()
 
 CVEs fixed in 6.3.8:
+  CVE-2023-1194: 61dfe01204daf5469f21cc639f710f9e28e929c8 ksmbd: fix out-of-bound read in parse_lease_state()
   CVE-2023-38427: 205279b96b5c40c60c6de4f9342416e02ee279f1 ksmbd: fix out-of-bound read in deassemble_neg_contexts()
   CVE-2023-38431: e9cb7be2fcbaee9e808b729e92948d38d52e5add ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop
 
@@ -162,7 +163,6 @@ Outstanding CVEs:
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
   CVE-2023-1193: (unk)  
-  CVE-2023-1194: (unk)  
   CVE-2023-1206: (unk) tcp: Reduce chance of collisions in inet6_hashfn(). 
   CVE-2023-20569: (unk) x86/bugs: Increase the x86 bugs vector size to two u32s 
   CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
@@ -208,9 +208,13 @@ Outstanding CVEs:
   CVE-2023-4208: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4244: (unk) netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path 
   CVE-2023-4273: (unk) exfat: check if filename entries exceeds max filename length 
+  CVE-2023-42752: (unk) igmp: limit igmpv3_newpack() packet size to IP_MAX_MTU 
+  CVE-2023-42753: (unk) netfilter: ipset: add the missing IP_SET_HASH_WITH_NET0 macro for ip_set_hash_netportnet.c 
   CVE-2023-4563: (unk) netfilter: nf_tables: don't skip expired elements during walk 
   CVE-2023-4569: (unk) netfilter: nf_tables: deactivate catchall elements in next generation 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
   CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 
+  CVE-2023-5158: (unk)  
+  CVE-2023-5197: (unk) netfilter: nf_tables: disallow rule removal from chain binding 

@@ -553,6 +553,9 @@ CVEs fixed in 4.19.142:
   CVE-2020-14314: b3ddf6ba5e28a57729fff1605ae08e21be5c92e3 ext4: fix potential negative array index in do_split()
   CVE-2020-29371: 9660983738399465fd0e3b1977a61bbd29b2e5be romfs: fix uninitialized memory leak in romfs_dev_read()
 
+CVEs fixed in 4.19.143:
+  CVE-2020-36766: da489549711e61bd43f3fd6fe19bb538eb575b39 cec-api: prevent leaking memory through hole in structure
+
 CVEs fixed in 4.19.144:
   CVE-2020-0465: a47b8511d90528c77346597e2012100dfc28cd8c HID: core: Sanitize event code and type when mapping input
   CVE-2020-12888: da7aea6eb5608695f590dcd72523536b709d0399 vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
@@ -1206,6 +1209,13 @@ CVEs fixed in 4.19.293:
   CVE-2023-1077: 84d90fb72a053c034b018fcc3cfaa6f606faf1c6 sched/rt: pick_next_rt_entity(): check list_entry
   CVE-2023-3772: 44f69c96f8a147413c23c68cda4d6fb5e23137cd xfrm: add NULL check in xfrm_update_ae_params
 
+CVEs fixed in 4.19.295:
+  CVE-2023-4207: 4f38dc8496d1991e2c055a0068dd98fb48affcc6 net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-42752: 76ce657a5db97ff4e26b284fedc33e8591a4be17 igmp: limit igmpv3_newpack() packet size to IP_MAX_MTU
+  CVE-2023-42755: 6ca0ea6a46e7a2d70fb1b1f6a886efe2b2365e16 net/sched: Retire rsvp classifier
+  CVE-2023-4623: 7c62e0c3c6e9c9c15ead63339db6a0e158d22a66 net/sched: sch_hfsc: Ensure inner classes have fsc curve
+  CVE-2023-4921: 7ea1faa59c75336d86893378838ed1e6f20c0520 net: sched: sch_qfq: Fix UAF in qfq_dequeue()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1406,9 +1416,6 @@ Outstanding CVEs:
   CVE-2023-4010: (unk)  
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-4207: (unk) net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4244: (unk) netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
-  CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
-  CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 

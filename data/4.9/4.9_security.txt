@@ -326,6 +326,7 @@ CVEs fixed in 4.9.77:
   CVE-2017-1000410: 6aebc2670ebfdda0762a6b471fbf8ca18dcf44f2 Bluetooth: Prevent stack info leak from the EFS element.
   CVE-2017-13216: c51d23dffc2e9ca05d611c86c440f9055541c62d staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl
   CVE-2017-17741: c781e3be97a1cbeef8c853101e8f266db556b0a3 KVM: Fix stack-out-of-bounds read in write_mmio
+  CVE-2017-5715: 26323fb4d717e11a69484c6df02eeef90dba7ef2 x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]
   CVE-2018-5332: cebb382931c4fb341162eae80b696650260e4a2b RDS: Heap OOB write in rds_message_alloc_sgs()
   CVE-2018-5333: ce31b6ac1111096ae9bb0b45f4ba564a909bb366 RDS: null pointer dereference in rds_atomic_free_op
 
@@ -941,6 +942,9 @@ CVEs fixed in 4.9.234:
   CVE-2020-14314: 539ae3e03875dacaa9c388aff141ccbb4ef4ecb5 ext4: fix potential negative array index in do_split()
   CVE-2020-29371: 6d26d08216475e5a40e4f6ade397c181a19dc524 romfs: fix uninitialized memory leak in romfs_dev_read()
 
+CVEs fixed in 4.9.235:
+  CVE-2020-36766: 43f90dc5c73e0e9d2a459d904b71f9682fd54f1b cec-api: prevent leaking memory through hole in structure
+
 CVEs fixed in 4.9.236:
   CVE-2020-0465: ac48d8300edd1aa4ce0fbef0ff5136d363f44cdf HID: core: Sanitize event code and type when mapping input
   CVE-2020-12888: 5f2c69e2ef24a79b6909a6dc6b249a17909965f8 vfio-pci: Invalidate mmaps and block MMIO access on disabled memory
@@ -1406,7 +1410,6 @@ Outstanding CVEs:
   CVE-2017-18232: (unk) scsi: libsas: direct call probe and destruct 
   CVE-2017-18261: (unk) clocksource/drivers/arm_arch_timer: Avoid infinite recursion when ftrace is enabled 
   CVE-2017-18552: (unk) RDS: validate the requested traces user input against max supported 
-  CVE-2017-5715: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
   CVE-2017-8065: (unk) crypto: ccm - move cbcmac input off the stack 
@@ -1708,6 +1711,8 @@ Outstanding CVEs:
   CVE-2023-4207: (unk) net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4208: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4244: (unk) netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path 
+  CVE-2023-42752: (unk) igmp: limit igmpv3_newpack() packet size to IP_MAX_MTU 
+  CVE-2023-42755: (unk) net/sched: Retire rsvp classifier 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 

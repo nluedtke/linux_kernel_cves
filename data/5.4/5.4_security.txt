@@ -239,6 +239,7 @@ CVEs fixed in 5.4.61:
   CVE-2020-29371: 19a77c937a1914bdd655366e79a2a1b7d675f554 romfs: fix uninitialized memory leak in romfs_dev_read()
 
 CVEs fixed in 5.4.62:
+  CVE-2020-36766: 6734eeb6c2f07336f76bcf2c57e7bf8259ae0d40 cec-api: prevent leaking memory through hole in structure
   CVE-2021-3428: 8e63c86f658005a9d8bc672642e587a787c53a72 ext4: handle error of ext4_setup_system_zone() on remount
 
 CVEs fixed in 5.4.63:
@@ -986,6 +987,13 @@ CVEs fixed in 5.4.253:
 CVEs fixed in 5.4.255:
   CVE-2023-3772: 8046beb890ebc83c5820188c650073e1c6066e67 xfrm: add NULL check in xfrm_update_ae_params
 
+CVEs fixed in 5.4.257:
+  CVE-2023-42752: 3d54e99499307c3e5613a2fe2a5c9b97eef95ff4 igmp: limit igmpv3_newpack() packet size to IP_MAX_MTU
+  CVE-2023-42753: 109e830585e89a03d554bf8ad0e668630d0a6260 netfilter: ipset: add the missing IP_SET_HASH_WITH_NET0 macro for ip_set_hash_netportnet.c
+  CVE-2023-42755: 42900fd140c8db99141b9f083bfe8de887190ed9 net/sched: Retire rsvp classifier
+  CVE-2023-4623: da13749d5ff70bb033a8f35da32cfd6e88246b2f net/sched: sch_hfsc: Ensure inner classes have fsc curve
+  CVE-2023-4921: a6d11571b91d34fd7ce8451c2dfd112194c79ae2 net: sched: sch_qfq: Fix UAF in qfq_dequeue()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1154,6 +1162,4 @@ Outstanding CVEs:
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
   CVE-2023-4244: (unk) netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
-  CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
-  CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 
