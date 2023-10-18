@@ -110,6 +110,7 @@ CVEs fixed in 5.4.24:
   CVE-2020-27068: f0593f5b1b64d3e08c67ee756c4253080e52afb2 cfg80211: add missing policy for NL80211_ATTR_STATUS_CODE
 
 CVEs fixed in 5.4.25:
+  CVE-2020-27418: 5d230547476eea90b57ed9fda4bfe5307779abbb vgacon: Fix a UAF in vgacon_invert_region
   CVE-2020-8647: 5d230547476eea90b57ed9fda4bfe5307779abbb vgacon: Fix a UAF in vgacon_invert_region
   CVE-2020-8648: 4387bfa605206b57451e6f77af1287960981ffa2 vt: selection, close sel_buffer race
   CVE-2020-8649: 5d230547476eea90b57ed9fda4bfe5307779abbb vgacon: Fix a UAF in vgacon_invert_region
@@ -895,6 +896,7 @@ CVEs fixed in 5.4.235:
   CVE-2023-1829: 7a6fb69bbcb21e9ce13bdf18c008c268874f0480 net/sched: Retire tcindex classifier
   CVE-2023-2985: 3776ef785e1005355cdd86c751a8e838bac8e2e8 fs: hfsplus: fix UAF issue in hfsplus_put_super
   CVE-2023-3220: dadd30fcc7e3e01561ef3624f6c0e323105ab523 drm/msm/dpu: Add check for pstates
+  CVE-2023-45862: da4e715a466ca982d4584da21ea385f28ca79ce6 USB: ene_usb6250: Allocate enough memory for full object
 
 CVEs fixed in 5.4.238:
   CVE-2023-1855: 26c176ce902861a45f8d699e057245ed7e0bcdf2 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
@@ -986,13 +988,23 @@ CVEs fixed in 5.4.253:
 
 CVEs fixed in 5.4.255:
   CVE-2023-3772: 8046beb890ebc83c5820188c650073e1c6066e67 xfrm: add NULL check in xfrm_update_ae_params
+  CVE-2023-39194: 373848d51fde9138cdc539b1d97dc6b301cc04d5 net: xfrm: Fix xfrm_address_filter OOB read
 
 CVEs fixed in 5.4.257:
+  CVE-2023-39189: a44602888bbe89d9dd89cb84baed2e356aba7436 netfilter: nfnetlink_osf: avoid OOB read
+  CVE-2023-39192: 28ce8495b5599abaa4b4f0bbb45f1f8e89b07e15 netfilter: xt_u32: validate user space input
+  CVE-2023-39193: 64831fb6a2040c25473ff8c8e85b3a42bd38494c netfilter: xt_sctp: validate the flag_info count
   CVE-2023-42752: 3d54e99499307c3e5613a2fe2a5c9b97eef95ff4 igmp: limit igmpv3_newpack() packet size to IP_MAX_MTU
   CVE-2023-42753: 109e830585e89a03d554bf8ad0e668630d0a6260 netfilter: ipset: add the missing IP_SET_HASH_WITH_NET0 macro for ip_set_hash_netportnet.c
   CVE-2023-42755: 42900fd140c8db99141b9f083bfe8de887190ed9 net/sched: Retire rsvp classifier
+  CVE-2023-45871: c2ad60ed38b872aa971408b8b8eaad7a91501b37 igb: set max size RX buffer when store bad packet is enabled
   CVE-2023-4623: da13749d5ff70bb033a8f35da32cfd6e88246b2f net/sched: sch_hfsc: Ensure inner classes have fsc curve
   CVE-2023-4921: a6d11571b91d34fd7ce8451c2dfd112194c79ae2 net: sched: sch_qfq: Fix UAF in qfq_dequeue()
+
+CVEs fixed in 5.4.258:
+  CVE-2023-31085: c6d358387632a6d45b3e5d4c310cfec1bde59423 ubi: Refuse attaching if mtd's erasesize is 0
+  CVE-2023-34324: f70c285cf02c2430da74c58b8a177fcb5df6ca43 xen/events: replace evtchn_rwlock with RCU
+  CVE-2023-42754: 810fd23d9715474aa27997584e8fc9396ef3cb67 ipv4: fix null-deref in ipv4_link_failure
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1044,7 +1056,6 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
-  CVE-2020-27418: (unk)  
   CVE-2020-27835: (unk) IB/hfi1: Ensure correct mm is used at all times 
   CVE-2020-29373: (unk) io_uring: grab ->fs as part of async preparation 
   CVE-2020-29534: (unk) io_uring: don't rely on weak ->files references 
@@ -1150,16 +1161,20 @@ Outstanding CVEs:
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk) Bluetooth: hci_ldisc: check HCI_UART_PROTO_READY flag in HCIUARTGETPROTO 
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
-  CVE-2023-31085: (unk)  
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
   CVE-2023-3389: (unk) io_uring: mutex locked poll hashing 
   CVE-2023-3397: (unk)  
   CVE-2023-35827: (unk)  
   CVE-2023-3640: (unk)  
   CVE-2023-37454: (unk)  
+  CVE-2023-39191: (unk) bpf: Fix state pruning for STACK_DYNPTR stack slots 
   CVE-2023-4010: (unk)  
+  CVE-2023-40791: (unk) crypto, cifs: fix error handling in extract_iter_to_sg() 
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-4244: (unk) netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path 
+  CVE-2023-45863: (unk) kobject: Fix slab-out-of-bounds in fill_kobj_path() 
+  CVE-2023-45898: (unk) ext4: fix slab-use-after-free in ext4_es_insert_extent() 
+  CVE-2023-4610: (unk)  
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
+  CVE-2023-4732: (unk) mm/userfaultfd: fix uffd-wp special cases for fork() 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 

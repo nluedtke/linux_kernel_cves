@@ -654,6 +654,7 @@ CVEs fixed in 4.14.173:
   CVE-2020-0444: edde9fcd5f41b2e22e455250214de0c4b126b255 audit: fix error handling in audit_data_to_entry()
   CVE-2020-10942: ff8e12b0cfe277a54edbab525f068b39c7ed0de3 vhost: Check docket sk_family instead of call getname
   CVE-2020-27068: ffe09a48bd96094786c303f1cf29b32a29aa6dc8 cfg80211: add missing policy for NL80211_ATTR_STATUS_CODE
+  CVE-2020-27418: 1855aaccd74cb9528c24ceb6bc15358a411f65ff vgacon: Fix a UAF in vgacon_invert_region
   CVE-2020-8647: 1855aaccd74cb9528c24ceb6bc15358a411f65ff vgacon: Fix a UAF in vgacon_invert_region
   CVE-2020-8648: 432ef54c0444e7cab85a291347bfc1f69ee6257a vt: selection, close sel_buffer race
   CVE-2020-8649: 1855aaccd74cb9528c24ceb6bc15358a411f65ff vgacon: Fix a UAF in vgacon_invert_region
@@ -1312,6 +1313,7 @@ CVEs fixed in 4.14.308:
   CVE-2023-1118: 0987f836bc1a258cb8fb51669a5afb67bb01c31b media: rc: Fix use-after-free bugs caused by ene_tx_irqsim()
   CVE-2023-1829: 53af9c793f644d5841d84d8e0ad83bd7ab47f3e0 net/sched: Retire tcindex classifier
   CVE-2023-2985: a9433406837c211af58a533d9e6f7a8f865b01f3 fs: hfsplus: fix UAF issue in hfsplus_put_super
+  CVE-2023-45862: 26f31c6e1389c23a1b822a61c59d5d1f357cb478 USB: ene_usb6250: Allocate enough memory for full object
 
 CVEs fixed in 4.14.311:
   CVE-2023-1855: c809ed776e190edfc04f8d6b25a62855b1386a0d hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
@@ -1379,12 +1381,21 @@ CVEs fixed in 4.14.322:
 
 CVEs fixed in 4.14.324:
   CVE-2023-3772: ed1cba039309c80b49719fcff3e3d7cdddb73d96 xfrm: add NULL check in xfrm_update_ae_params
+  CVE-2023-39194: 0a42d1335985f9ebfbc997944ba8b1d84b9b661e net: xfrm: Fix xfrm_address_filter OOB read
 
 CVEs fixed in 4.14.326:
+  CVE-2023-39192: e416d65ff456066d60d813c540ab2dd2a06d3d12 netfilter: xt_u32: validate user space input
+  CVE-2023-39193: be52e3c14651ade0f4539f319f9f0c40a230b076 netfilter: xt_sctp: validate the flag_info count
   CVE-2023-4207: 530a85ea747965b7c275fa44a364916e0ec2efaa net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free
   CVE-2023-42752: afd2657ba7af6d05afd6cc6b9315c091fafed14b igmp: limit igmpv3_newpack() packet size to IP_MAX_MTU
   CVE-2023-42755: a048f77ba9cf7f77a06b2ee60446c6cc061c2daf net/sched: Retire rsvp classifier
+  CVE-2023-45871: 017d5c8eef06178e4148db273df03b7ad9eeb5bc igb: set max size RX buffer when store bad packet is enabled
   CVE-2023-4921: d9f43fc5a78d1505733d3621cd4c044eaf71a02f net: sched: sch_qfq: Fix UAF in qfq_dequeue()
+
+CVEs fixed in 4.14.327:
+  CVE-2023-31085: ef7a4c97a85ab1bff7abc98f885678bd33bb4881 ubi: Refuse attaching if mtd's erasesize is 0
+  CVE-2023-34324: bc32110d6176cc34c58f4efa22194546f103b81a xen/events: replace evtchn_rwlock with RCU
+  CVE-2023-4623: 3c0bd0b79733b7f628af1c967269db339eeef8d3 net/sched: sch_hfsc: Ensure inner classes have fsc curve
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1471,7 +1482,6 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
-  CVE-2020-27418: (unk)  
   CVE-2020-27820: (unk) drm/nouveau: use drm_dev_unplug() during device removal 
   CVE-2020-27835: (unk) IB/hfi1: Ensure correct mm is used at all times 
   CVE-2020-35501: (unk)  
@@ -1594,7 +1604,6 @@ Outstanding CVEs:
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk) Bluetooth: hci_ldisc: check HCI_UART_PROTO_READY flag in HCIUARTGETPROTO 
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
-  CVE-2023-31085: (unk)  
   CVE-2023-3268: (unk) relayfs: fix out-of-bounds access in relay_file_read 
   CVE-2023-33288: (unk) power: supply: bq24190: Fix use after free bug in bq24190_remove due to race condition 
   CVE-2023-3397: (unk)  
@@ -1604,9 +1613,14 @@ Outstanding CVEs:
   CVE-2023-3640: (unk)  
   CVE-2023-37454: (unk)  
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
+  CVE-2023-39189: (unk) netfilter: nfnetlink_osf: avoid OOB read 
+  CVE-2023-39191: (unk) bpf: Fix state pruning for STACK_DYNPTR stack slots 
   CVE-2023-4010: (unk)  
+  CVE-2023-40791: (unk) crypto, cifs: fix error handling in extract_iter_to_sg() 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-4244: (unk) netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path 
+  CVE-2023-45863: (unk) kobject: Fix slab-out-of-bounds in fill_kobj_path() 
+  CVE-2023-45898: (unk) ext4: fix slab-use-after-free in ext4_es_insert_extent() 
+  CVE-2023-4610: (unk)  
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
-  CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
+  CVE-2023-4732: (unk) mm/userfaultfd: fix uffd-wp special cases for fork() 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 

@@ -21,6 +21,7 @@ CVEs fixed in 6.4.5:
   CVE-2023-3611: bd2333fa86dc520823e8c317980b29ba91ee6b87 net/sched: sch_qfq: account for stab overhead in qfq_enqueue
   CVE-2023-3776: 0a2e3f49febda459252f58cec2d659623d582800 net/sched: cls_fw: Fix improper refcount update leads to use-after-free
   CVE-2023-3867: ffaa0c85edd9245594a94918c09db9163b71767a ksmbd: add missing compound request handing in some commands
+  CVE-2023-44466: 0a6db56467773851e4ea4d652308314d8f9c4f91 libceph: harden msgr2.1 frame segment length checks
 
 CVEs fixed in 6.4.6:
   CVE-2023-20593: 9b8bb5c4e25678af895dc9dd4a1e82b2f948cacc x86/cpu/amd: Add a Zenbleed fix
@@ -57,14 +58,19 @@ CVEs fixed in 6.4.11:
 CVEs fixed in 6.4.12:
   CVE-2023-3772: 53df4be4f5221e90dc7aa9ce745a9a21bb7024f4 xfrm: add NULL check in xfrm_update_ae_params
   CVE-2023-3773: a9020514f175ef15bb68eea9345782abfd9afea3 xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH
+  CVE-2023-39194: 5713c7ca31f563a493281c25cbdbd3f4ef53a9e9 net: xfrm: Fix xfrm_address_filter OOB read
+  CVE-2023-40791: 0ba71114c3af9fa44a474d16a12cecd12e3779b9 crypto, cifs: fix error handling in extract_iter_to_sg()
   CVE-2023-4244: 3bdf400a1ad166274e85fa537f8a993a4553e36d netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path
   CVE-2023-4569: 83ff16e449a675e215125d97a2c4a7f097d291d0 netfilter: nf_tables: deactivate catchall elements in next generation
 
 CVEs fixed in 6.4.16:
   CVE-2023-25775: ceba966f1d6391800cab3c1c9ac1661b5166bc5b RDMA/irdma: Prevent zero-length STAG registration
   CVE-2023-37453: b4a074b1fb222164ed7d5c0b8c922dc4a0840848 USB: core: Fix race by not overwriting udev->descriptor in hub_port_init()
+  CVE-2023-39192: 83b995321eaaa0176041d9d79c7d0415cb6ed7e1 netfilter: xt_u32: validate user space input
+  CVE-2023-39193: b63b4e114593073a1c25087526782258c9dd5347 netfilter: xt_sctp: validate the flag_info count
   CVE-2023-42752: 87f07ec534e39e29bc715753df2e77509e8fafc3 igmp: limit igmpv3_newpack() packet size to IP_MAX_MTU
   CVE-2023-42753: d59b6fc405549f7caf31f6aa5da1d6bef746b166 netfilter: ipset: add the missing IP_SET_HASH_WITH_NET0 macro for ip_set_hash_netportnet.c
+  CVE-2023-45871: 6a9abbccaac418e965f42e8a8f6dd826e341a6f9 igb: set max size RX buffer when store bad packet is enabled
   CVE-2023-4623: 5293f466d41d6c2eaad8b833576ea3dbee630dc2 net/sched: sch_hfsc: Ensure inner classes have fsc curve
 
 Outstanding CVEs:
@@ -111,7 +117,6 @@ Outstanding CVEs:
   CVE-2020-26557: (unk)  
   CVE-2020-26559: (unk)  
   CVE-2020-26560: (unk)  
-  CVE-2020-27418: (unk)  
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
@@ -151,15 +156,22 @@ Outstanding CVEs:
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk) Bluetooth: hci_ldisc: check HCI_UART_PROTO_READY flag in HCIUARTGETPROTO 
-  CVE-2023-31085: (unk)  
+  CVE-2023-31085: (unk) ubi: Refuse attaching if mtd's erasesize is 0 
   CVE-2023-32629: (unk)  
   CVE-2023-3397: (unk)  
+  CVE-2023-34324: (unk) xen/events: replace evtchn_rwlock with RCU 
   CVE-2023-35827: (unk)  
   CVE-2023-3640: (unk)  
   CVE-2023-37454: (unk)  
+  CVE-2023-39189: (unk) netfilter: nfnetlink_osf: avoid OOB read 
   CVE-2023-4010: (unk)  
+  CVE-2023-42754: (unk) ipv4: fix null-deref in ipv4_link_failure 
+  CVE-2023-42756: (unk) netfilter: ipset: Fix race between IPSET_CMD_CREATE and IPSET_CMD_SWAP 
+  CVE-2023-45898: (unk) ext4: fix slab-use-after-free in ext4_es_insert_extent() 
+  CVE-2023-4610: (unk)  
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
   CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 
   CVE-2023-5158: (unk)  
   CVE-2023-5197: (unk) netfilter: nf_tables: disallow rule removal from chain binding 
+  CVE-2023-5345: (unk) fs/smb/client: Reset password pointer to NULL 

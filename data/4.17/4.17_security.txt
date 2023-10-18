@@ -504,7 +504,7 @@ Outstanding CVEs:
   CVE-2020-27066: (unk) xfrm: policy: Fix doulbe free in xfrm_policy_timer 
   CVE-2020-27068: (unk) cfg80211: add missing policy for NL80211_ATTR_STATUS_CODE 
   CVE-2020-2732: (unk) KVM: nVMX: Don't emulate instructions in guest mode 
-  CVE-2020-27418: (unk)  
+  CVE-2020-27418: (unk) vgacon: Fix a UAF in vgacon_invert_region 
   CVE-2020-27673: (unk) xen/events: add a proper barrier to 2-level uevent unmasking 
   CVE-2020-27675: (unk) xen/events: avoid removing an event channel while handling it 
   CVE-2020-27777: (unk) powerpc/rtas: Restrict RTAS requests from userspace 
@@ -969,7 +969,7 @@ Outstanding CVEs:
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk) Bluetooth: hci_ldisc: check HCI_UART_PROTO_READY flag in HCIUARTGETPROTO 
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
-  CVE-2023-31085: (unk)  
+  CVE-2023-31085: (unk) ubi: Refuse attaching if mtd's erasesize is 0 
   CVE-2023-3111: (unk) btrfs: unset reloc control if transaction commit fails in prepare_to_relocate() 
   CVE-2023-3117: (unk) netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE 
   CVE-2023-3141: (unk) memstick: r592: Fix UAF bug in r592_remove due to race condition 
@@ -988,6 +988,7 @@ Outstanding CVEs:
   CVE-2023-3397: (unk)  
   CVE-2023-34255: (unk) xfs: verify buffer contents when we skip log replay 
   CVE-2023-34256: (unk) ext4: avoid a potential slab-out-of-bounds in ext4_group_desc_csum 
+  CVE-2023-34324: (unk) xen/events: replace evtchn_rwlock with RCU 
   CVE-2023-35001: (unk) netfilter: nf_tables: prevent OOB access in nft_byteorder_eval 
   CVE-2023-3567: (unk) vc_screen: move load of struct vc_data pointer in vcs_read() to avoid UAF 
   CVE-2023-35823: (unk) media: saa7134: fix use after free bug in saa7134_finidev due to race condition 
@@ -1001,8 +1002,14 @@ Outstanding CVEs:
   CVE-2023-3776: (unk) net/sched: cls_fw: Fix improper refcount update leads to use-after-free 
   CVE-2023-3812: (unk) net: tun: fix bugs for oversize packet when napi frags enabled 
   CVE-2023-3863: (unk) net: nfc: Fix use-after-free caused by nfc_llcp_find_local 
+  CVE-2023-39189: (unk) netfilter: nfnetlink_osf: avoid OOB read 
+  CVE-2023-39191: (unk) bpf: Fix state pruning for STACK_DYNPTR stack slots 
+  CVE-2023-39192: (unk) netfilter: xt_u32: validate user space input 
+  CVE-2023-39193: (unk) netfilter: xt_sctp: validate the flag_info count 
+  CVE-2023-39194: (unk) net: xfrm: Fix xfrm_address_filter OOB read 
   CVE-2023-4010: (unk)  
   CVE-2023-40283: (unk) Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_ready_cb 
+  CVE-2023-40791: (unk) crypto, cifs: fix error handling in extract_iter_to_sg() 
   CVE-2023-4128: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4132: (unk) media: usb: siano: Fix warning due to null work_func_t function pointer 
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
@@ -1010,13 +1017,18 @@ Outstanding CVEs:
   CVE-2023-4206: (unk) net/sched: cls_route: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4207: (unk) net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free 
   CVE-2023-4208: (unk) net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free 
-  CVE-2023-4244: (unk) netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path 
   CVE-2023-42752: (unk) igmp: limit igmpv3_newpack() packet size to IP_MAX_MTU 
   CVE-2023-42755: (unk) net/sched: Retire rsvp classifier 
   CVE-2023-4385: (unk) fs: jfs: fix possible NULL pointer dereference in dbFree() 
   CVE-2023-4387: (unk) net: vmxnet3: fix possible use-after-free bugs in vmxnet3_rq_alloc_rx_buf() 
   CVE-2023-4459: (unk) net: vmxnet3: fix possible NULL pointer dereference in vmxnet3_rq_cleanup() 
+  CVE-2023-45862: (unk) USB: ene_usb6250: Allocate enough memory for full object 
+  CVE-2023-45863: (unk) kobject: Fix slab-out-of-bounds in fill_kobj_path() 
+  CVE-2023-45871: (unk) igb: set max size RX buffer when store bad packet is enabled 
+  CVE-2023-45898: (unk) ext4: fix slab-use-after-free in ext4_es_insert_extent() 
+  CVE-2023-4610: (unk)  
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
+  CVE-2023-4732: (unk) mm/userfaultfd: fix uffd-wp special cases for fork() 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
   CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 
