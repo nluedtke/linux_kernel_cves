@@ -280,6 +280,15 @@ CVEs fixed in 6.1.56:
 CVEs fixed in 6.1.57:
   CVE-2023-31085: 91aeb418b9175d09fc858f0fdf01988cbf990c5d ubi: Refuse attaching if mtd's erasesize is 0
   CVE-2023-34324: a4cc925e2e12c3bbffb0860acdb9f9c1abde47dd xen/events: replace evtchn_rwlock with RCU
+  CVE-2023-5158: 3a72decd6b49ff11a894aabd4d9b3025f046fe61 vringh: don't use vringh_kiov_advance() in vringh_iov_xfer()
+
+CVEs fixed in 6.1.59:
+  CVE-2023-35827: 6f6fa8061f756aedb93af12a8a5d3cf659127965 ravb: Fix use-after-free issue in ravb_tx_timeout_work()
+
+CVEs fixed in 6.1.60:
+  CVE-2023-46813: 57d0639f60f1ff04cbe7fd52823b94b894d7f812 x86/sev: Check for user-space IOIO pointing to kernel space
+  CVE-2023-5178: f691ec5a548257edb3aacd952e2a574e4e57b2c4 nvmet-tcp: Fix a possible UAF in queue intialization setup
+  CVE-2023-5717: f6952655a61264900ed08e9d642adad8222f8e29 perf: Disallow mis-matched inherited group reads
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -359,7 +368,7 @@ Outstanding CVEs:
   CVE-2022-45885: (unk)  
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
-  CVE-2023-1193: (unk)  
+  CVE-2023-1193: (unk) ksmbd: delete asynchronous work from list 
   CVE-2023-20941: (unk)  
   CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
   CVE-2023-21400: (unk)  
@@ -374,7 +383,6 @@ Outstanding CVEs:
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
   CVE-2023-32629: (unk)  
   CVE-2023-3397: (unk)  
-  CVE-2023-35827: (unk)  
   CVE-2023-3640: (unk)  
   CVE-2023-37454: (unk)  
   CVE-2023-39191: (unk) bpf: Fix state pruning for STACK_DYNPTR stack slots 
@@ -382,7 +390,8 @@ Outstanding CVEs:
   CVE-2023-40791: (unk) crypto, cifs: fix error handling in extract_iter_to_sg() 
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-45898: (unk) ext4: fix slab-use-after-free in ext4_es_insert_extent() 
-  CVE-2023-4610: (unk)  
+  CVE-2023-4610: (unk) Revert "mm: vmscan: make global slab shrink lockless" 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
-  CVE-2023-5158: (unk)  
+  CVE-2023-46862: (unk) io_uring/fdinfo: lock SQ thread while retrieving thread cpu/pid 
+  CVE-2023-5090: (unk) x86: KVM: SVM: always update the x2avic msr interception 
+  CVE-2023-5633: (unk) drm/vmwgfx: Keep a gem reference to user bos in surfaces 
