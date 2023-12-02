@@ -15,6 +15,7 @@ CVEs fixed in 6.4.4:
   CVE-2023-33250: dbe65261fe1367dc307a89466a1a75c0d80b8233 iommufd: Call iopt_area_contig_done() under the lock
   CVE-2023-35001: b79c09c2bf2d7643902a6ef26152de602c5c5e4b netfilter: nf_tables: prevent OOB access in nft_byteorder_eval
   CVE-2023-3863: e5207c1d69b1a9707615ab6ff9376e59fc096815 net: nfc: Fix use-after-free caused by nfc_llcp_find_local
+  CVE-2023-39197: 8c0980493beed3a80d6329c44ab293dc8c032927 netfilter: conntrack: dccp: copy entire header to stack buffer, not just basic one
   CVE-2023-4132: ae65238d3f5a2df48341a7112820e04fb1017422 media: usb: siano: Fix warning due to null work_func_t function pointer
   CVE-2023-4134: 28dc11949357f10712bd641b724ab373a92318de Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync()
 
@@ -51,6 +52,7 @@ CVEs fixed in 6.4.10:
   CVE-2023-4207: 7d848d718aeb3b482e177b682dd04e76dd413afb net/sched: cls_fw: No longer copy tcf_result on update to avoid use-after-free
   CVE-2023-4208: 4b717802428fa02cbcbb61209f638f65f9cd4710 net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
   CVE-2023-4273: e1a73ba43cf883cb37f6331aca5a4c5be6350982 exfat: check if filename entries exceeds max filename length
+  CVE-2023-6039: a54bf862ccad27c8b91795b69a9ca105f8e6295e net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs
 
 CVEs fixed in 6.4.11:
   CVE-2023-4155: ab8e9a874574ce511eca21caa5d7ef5426963a54 KVM: SEV: only access GHCB fields once
@@ -60,6 +62,7 @@ CVEs fixed in 6.4.12:
   CVE-2023-3772: 53df4be4f5221e90dc7aa9ce745a9a21bb7024f4 xfrm: add NULL check in xfrm_update_ae_params
   CVE-2023-3773: a9020514f175ef15bb68eea9345782abfd9afea3 xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH
   CVE-2023-39194: 5713c7ca31f563a493281c25cbdbd3f4ef53a9e9 net: xfrm: Fix xfrm_address_filter OOB read
+  CVE-2023-39198: a79aebe5bb68266ce9c7f8714fad166a3216460d drm/qxl: fix UAF on handle creation
   CVE-2023-40791: 0ba71114c3af9fa44a474d16a12cecd12e3779b9 crypto, cifs: fix error handling in extract_iter_to_sg()
   CVE-2023-4244: 3bdf400a1ad166274e85fa537f8a993a4553e36d netfilter: nf_tables: fix GC transaction races with netns and netlink event exit path
   CVE-2023-4569: 83ff16e449a675e215125d97a2c4a7f097d291d0 netfilter: nf_tables: deactivate catchall elements in next generation
@@ -144,7 +147,6 @@ Outstanding CVEs:
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-41848: (unk)  
-  CVE-2022-44034: (unk)  
   CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
@@ -180,3 +182,7 @@ Outstanding CVEs:
   CVE-2023-5345: (unk) fs/smb/client: Reset password pointer to NULL 
   CVE-2023-5633: (unk) drm/vmwgfx: Keep a gem reference to user bos in surfaces 
   CVE-2023-5717: (unk) perf: Disallow mis-matched inherited group reads 
+  CVE-2023-5972: (unk) nf_tables: fix NULL pointer dereference in nft_expr_inner_parse() 
+  CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
+  CVE-2023-6176: (unk) net/tls: do not free tls_rec on async operation in bpf_exec_tx_verdict() 
+  CVE-2023-6238: (unk)  

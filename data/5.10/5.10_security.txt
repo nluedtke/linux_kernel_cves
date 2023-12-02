@@ -774,6 +774,7 @@ CVEs fixed in 5.10.188:
   CVE-2023-3776: 80e0e8d5f54397c5048fa2274144134dd9dc91b5 net/sched: cls_fw: Fix improper refcount update leads to use-after-free
   CVE-2023-3777: 30e5460d69e631c0e84db37dba2d8f98648778d4 netfilter: nf_tables: skip bound chain on rule flush
   CVE-2023-3863: 96f2c6f272ec04083d828de46285a7d7b17d1aad net: nfc: Fix use-after-free caused by nfc_llcp_find_local
+  CVE-2023-39197: 9bdcda7abaf22f6453e5b5efb7eb4e524095d5d8 netfilter: conntrack: dccp: copy entire header to stack buffer, not just basic one
   CVE-2023-4004: 3a91099ecd59a42d1632fcb152bf7222f268ea2b netfilter: nft_set_pipapo: fix improper element removal
   CVE-2023-4132: d87ef4e857b790f1616809eccda6b4d0c9c3da11 media: usb: siano: Fix warning due to null work_func_t function pointer
 
@@ -806,6 +807,7 @@ CVEs fixed in 5.10.195:
   CVE-2023-45871: 3e39008e9e3043663324f0920a5d6ebfa68cc92a igb: set max size RX buffer when store bad packet is enabled
   CVE-2023-4623: b08cc6c0396fd5cfaac4ca044f2282367347c062 net/sched: sch_hfsc: Ensure inner classes have fsc curve
   CVE-2023-4921: 746a8df5e4d235059b1adf02e8456e7ec132d2d8 net: sched: sch_qfq: Fix UAF in qfq_dequeue()
+  CVE-2023-6176: a5096cc6e7836711541b7cd2d6da48d36fe420e9 net/tls: do not free tls_rec on async operation in bpf_exec_tx_verdict()
 
 CVEs fixed in 5.10.197:
   CVE-2023-42755: 8db844077ec9912d75952c80d76da71fc2412852 net/sched: Retire rsvp classifier
@@ -824,6 +826,13 @@ CVEs fixed in 5.10.199:
   CVE-2023-46813: 6550cbe25de182f6c0176909a90b324cb375133f x86/sev: Check for user-space IOIO pointing to kernel space
   CVE-2023-5178: e985d78bdcf37f7ef73666a43b0d2407715f00d3 nvmet-tcp: Fix a possible UAF in queue intialization setup
   CVE-2023-5717: 487a8e24643a0effb2ba19cad3227fc75dc3c4b7 perf: Disallow mis-matched inherited group reads
+
+CVEs fixed in 5.10.200:
+  CVE-2021-44879: 571ce7d944cdd204da163cb5d5cc75bb38090246 f2fs: fix to do sanity check on inode type during garbage collection
+  CVE-2023-45863: b2e62728b106fe54f8618c21a252df7d4a4cc775 kobject: Fix slab-out-of-bounds in fill_kobj_path()
+
+CVEs fixed in 5.10.202:
+  CVE-2023-46862: c6e8af2a8a63e0957284c16003c501e4a058e8d9 io_uring/fdinfo: lock SQ thread while retrieving thread cpu/pid
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -890,7 +899,6 @@ Outstanding CVEs:
   CVE-2021-4023: (unk) io-wq: fix cancellation on create-worker failure 
   CVE-2021-4150: (unk) block: fix incorrect references to disk objects 
   CVE-2021-4204: (unk) bpf: Generalize check_ctx_reg for reuse with other types 
-  CVE-2021-44879: (unk) f2fs: fix to do sanity check on inode type during garbage collection 
   CVE-2022-0382: (unk) net ticp:fix a kernel-infoleak in __tipc_sendmsg() 
   CVE-2022-0400: (unk)  
   CVE-2022-0480: (unk) memcg: enable accounting for file lock caches 
@@ -935,7 +943,7 @@ Outstanding CVEs:
   CVE-2022-41848: (unk)  
   CVE-2022-44032: (unk) char: pcmcia: remove all the drivers 
   CVE-2022-44033: (unk) char: pcmcia: remove all the drivers 
-  CVE-2022-44034: (unk)  
+  CVE-2022-44034: (unk) char: pcmcia: remove all the drivers 
   CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
@@ -965,12 +973,13 @@ Outstanding CVEs:
   CVE-2023-3397: (unk)  
   CVE-2023-3640: (unk)  
   CVE-2023-37454: (unk)  
+  CVE-2023-39198: (unk) drm/qxl: fix UAF on handle creation 
   CVE-2023-4010: (unk)  
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-45863: (unk) kobject: Fix slab-out-of-bounds in fill_kobj_path() 
   CVE-2023-4610: (unk) Revert "mm: vmscan: make global slab shrink lockless" 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
-  CVE-2023-46862: (unk) io_uring/fdinfo: lock SQ thread while retrieving thread cpu/pid 
   CVE-2023-47233: (unk)  
-  CVE-2023-5633: (unk) drm/vmwgfx: Keep a gem reference to user bos in surfaces 
+  CVE-2023-5972: (unk) nf_tables: fix NULL pointer dereference in nft_expr_inner_parse() 
+  CVE-2023-6039: (unk) net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs 
+  CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 

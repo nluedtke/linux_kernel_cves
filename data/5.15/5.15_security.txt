@@ -590,6 +590,7 @@ CVEs fixed in 5.15.121:
   CVE-2023-3863: fc8429f8d86801f092fbfbd257c3af821ac0dcd3 net: nfc: Fix use-after-free caused by nfc_llcp_find_local
   CVE-2023-3865: 3813eee5154d6a4c5875cb4444cb2b63bac8947f ksmbd: fix out-of-bound read in smb2_write
   CVE-2023-3866: eb947403518ea3d93f6d89264bb1f5416bb0c7d0 ksmbd: validate session id and tree id in the compound request
+  CVE-2023-39197: c052797ac36813419ad3bfa54cb8615db4b41f15 netfilter: conntrack: dccp: copy entire header to stack buffer, not just basic one
   CVE-2023-4132: 784a8027b8ac5a876d71cb3d3d4d97b2b6cb5920 media: usb: siano: Fix warning due to null work_func_t function pointer
   CVE-2023-44466: db8ca8d9b4dfce6d8cded796f0e671ef2c782613 libceph: harden msgr2.1 frame segment length checks
 
@@ -620,6 +621,7 @@ CVEs fixed in 5.15.126:
 CVEs fixed in 5.15.128:
   CVE-2023-3772: 075448a2eb753f813fe873cfa52853e9fef8eedb xfrm: add NULL check in xfrm_update_ae_params
   CVE-2023-39194: 1960f468078b3471d1ee9aafa0cf06c8c34a505f net: xfrm: Fix xfrm_address_filter OOB read
+  CVE-2023-39198: d578c919deb786b4d6ba8c7639255cb658731671 drm/qxl: fix UAF on handle creation
   CVE-2023-4273: 6b64974e02ea82d0bae917f1fa79495a1a59b5bf exfat: check if filename entries exceeds max filename length
   CVE-2023-4569: 1adaec4758d1cefbf348a291ad9b752aaa10f8d3 netfilter: nf_tables: deactivate catchall elements in next generation
 
@@ -633,6 +635,7 @@ CVEs fixed in 5.15.132:
   CVE-2023-4623: 4cf994d3f4ff42d604fae2b461bdd5195a7dfabd net/sched: sch_hfsc: Ensure inner classes have fsc curve
   CVE-2023-4881: 1ad7b189cc1411048434e8595ffcbe7873b71082 netfilter: nftables: exthdr: fix 4-byte stack OOB write
   CVE-2023-4921: 6ea277b2c6263931798234e2eed892ecfbb85596 net: sched: sch_qfq: Fix UAF in qfq_dequeue()
+  CVE-2023-6176: 481bd6dcc5fe6c0ec57b61240ab552f67ff51b6b net/tls: do not free tls_rec on async operation in bpf_exec_tx_verdict()
 
 CVEs fixed in 5.15.133:
   CVE-2023-42755: 08569c92f7f339de21b7a68d43d6795fc0aa24f2 net/sched: Retire rsvp classifier
@@ -655,6 +658,9 @@ CVEs fixed in 5.15.137:
   CVE-2023-46813: 582f7993353c7b116651f88385b1785dffa14c5d x86/sev: Check for user-space IOIO pointing to kernel space
   CVE-2023-5178: 34f62612be2a7f90ab68a14154db6664a32f8db0 nvmet-tcp: Fix a possible UAF in queue intialization setup
   CVE-2023-5717: 71d224acc4d1df1b61a294abee0f1032a9b03b40 perf: Disallow mis-matched inherited group reads
+
+CVEs fixed in 5.15.140:
+  CVE-2023-46862: 3d7912710e5e187217313fea5c145881cfeaf952 io_uring/fdinfo: lock SQ thread while retrieving thread cpu/pid
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -743,7 +749,7 @@ Outstanding CVEs:
   CVE-2022-41848: (unk)  
   CVE-2022-44032: (unk) char: pcmcia: remove all the drivers 
   CVE-2022-44033: (unk) char: pcmcia: remove all the drivers 
-  CVE-2022-44034: (unk)  
+  CVE-2022-44034: (unk) char: pcmcia: remove all the drivers 
   CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
@@ -789,6 +795,7 @@ Outstanding CVEs:
   CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
   CVE-2023-4610: (unk) Revert "mm: vmscan: make global slab shrink lockless" 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
-  CVE-2023-46862: (unk) io_uring/fdinfo: lock SQ thread while retrieving thread cpu/pid 
   CVE-2023-47233: (unk)  
-  CVE-2023-5633: (unk) drm/vmwgfx: Keep a gem reference to user bos in surfaces 
+  CVE-2023-5972: (unk) nf_tables: fix NULL pointer dereference in nft_expr_inner_parse() 
+  CVE-2023-6039: (unk) net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs 
+  CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 

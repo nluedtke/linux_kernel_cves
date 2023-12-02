@@ -206,6 +206,7 @@ CVEs fixed in 6.1.39:
   CVE-2023-31248: fc95c8b02c6160936f1f3d8d9d7f4f66f3c84b49 netfilter: nf_tables: do not ignore genmask when looking up chain by id
   CVE-2023-35001: 40f83dd66a823400d8592e3b71e190e3ad978eb5 netfilter: nf_tables: prevent OOB access in nft_byteorder_eval
   CVE-2023-3863: 425d9d3a92df7d96b3cfb7ee5c240293a21cbde3 net: nfc: Fix use-after-free caused by nfc_llcp_find_local
+  CVE-2023-39197: 5c618daa5038712c4a4ef8923905a2ea1b8836a1 netfilter: conntrack: dccp: copy entire header to stack buffer, not just basic one
   CVE-2023-4132: 8abb53c5167cfb5bb275512a3da4ec2468478626 media: usb: siano: Fix warning due to null work_func_t function pointer
 
 CVEs fixed in 6.1.40:
@@ -248,6 +249,7 @@ CVEs fixed in 6.1.47:
   CVE-2023-3772: 87b655f4936b6fc01f3658aa88a22c923b379ebd xfrm: add NULL check in xfrm_update_ae_params
   CVE-2023-3773: a442cd17019385c53bbddf3bb92d91474081916b xfrm: add forgotten nla_policy for XFRMA_MTIMER_THRESH
   CVE-2023-39194: 9a0056276f5f38e188732bd7b6949edca6a80ea1 net: xfrm: Fix xfrm_address_filter OOB read
+  CVE-2023-39198: a1fa8f0fc58e0ec972f718030710efc442d7304b drm/qxl: fix UAF on handle creation
   CVE-2023-4569: 00ea7eb1c69eec91cdf9259f0e427c56e7999fcd netfilter: nf_tables: deactivate catchall elements in next generation
 
 CVEs fixed in 6.1.50:
@@ -266,6 +268,7 @@ CVEs fixed in 6.1.54:
   CVE-2023-39189: 7bb8d52b4271be7527b6e3120ae6ce4c6cdf6e34 netfilter: nfnetlink_osf: avoid OOB read
   CVE-2023-4881: d9ebfc0f21377690837ebbd119e679243e0099cc netfilter: nftables: exthdr: fix 4-byte stack OOB write
   CVE-2023-4921: a18349dc8d916a64d7c93f05da98953e3386d8e9 net: sched: sch_qfq: Fix UAF in qfq_dequeue()
+  CVE-2023-6176: 7f4116c6f98412a6e29ace6d6a7b41ebb4e8a392 net/tls: do not free tls_rec on async operation in bpf_exec_tx_verdict()
 
 CVEs fixed in 6.1.55:
   CVE-2023-42755: b93aeb6352b0229e3c5ca5ca4ff015b015aff33c net/sched: Retire rsvp classifier
@@ -292,6 +295,9 @@ CVEs fixed in 6.1.60:
 
 CVEs fixed in 6.1.61:
   CVE-2023-46862: 9236d2ea6465b37c0a73d994c1ad31753d31e5f5 io_uring/fdinfo: lock SQ thread while retrieving thread cpu/pid
+
+CVEs fixed in 6.1.62:
+  CVE-2023-5090: 7ab62e3415fb59289ab6dea31f0cc0237b949200 x86: KVM: SVM: always update the x2avic msr interception
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -365,7 +371,7 @@ Outstanding CVEs:
   CVE-2022-41848: (unk)  
   CVE-2022-44032: (unk) char: pcmcia: remove all the drivers 
   CVE-2022-44033: (unk) char: pcmcia: remove all the drivers 
-  CVE-2022-44034: (unk)  
+  CVE-2022-44034: (unk) char: pcmcia: remove all the drivers 
   CVE-2022-4543: (unk)  
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
@@ -395,5 +401,6 @@ Outstanding CVEs:
   CVE-2023-4610: (unk) Revert "mm: vmscan: make global slab shrink lockless" 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-47233: (unk)  
-  CVE-2023-5090: (unk) x86: KVM: SVM: always update the x2avic msr interception 
-  CVE-2023-5633: (unk) drm/vmwgfx: Keep a gem reference to user bos in surfaces 
+  CVE-2023-5972: (unk) nf_tables: fix NULL pointer dereference in nft_expr_inner_parse() 
+  CVE-2023-6039: (unk) net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs 
+  CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
