@@ -624,6 +624,7 @@ CVEs fixed in 5.15.128:
   CVE-2023-39198: d578c919deb786b4d6ba8c7639255cb658731671 drm/qxl: fix UAF on handle creation
   CVE-2023-4273: 6b64974e02ea82d0bae917f1fa79495a1a59b5bf exfat: check if filename entries exceeds max filename length
   CVE-2023-4569: 1adaec4758d1cefbf348a291ad9b752aaa10f8d3 netfilter: nf_tables: deactivate catchall elements in next generation
+  CVE-2023-6546: 2a523446438376bb7c224f3169ae9b98ce0fb893 tty: n_gsm: fix the UAF caused by race condition in gsm_cleanup_mux
 
 CVEs fixed in 5.15.132:
   CVE-2023-39189: 19280e8dfb52cf9660760fdc86e606e0653170fa netfilter: nfnetlink_osf: avoid OOB read
@@ -664,6 +665,35 @@ CVEs fixed in 5.15.140:
 
 CVEs fixed in 5.15.141:
   CVE-2023-6121: e26c6febac43a2dd2c5fb993b2137489005d43bf nvmet: nul-terminate the NQNs passed in the connect command
+
+CVEs fixed in 5.15.142:
+  CVE-2023-6932: c4a00c47a140c39a0497a40b0f54cf4586a2b1d7 ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet
+
+CVEs fixed in 5.15.143:
+  CVE-2023-6622: cf5f113c41eb2c7dbe19d849a0883f7a429fa54b netfilter: nf_tables: bail out on mismatching dynset and set expressions
+  CVE-2023-6817: e65128616faa101b336e52fefbd62b83bb309916 netfilter: nft_set_pipapo: skip inactive elements during set walk
+  CVE-2023-6931: ebc7597ce9719d2ff72e13df072680aa491f27fb perf: Fix perf_event_validate_size()
+
+CVEs fixed in 5.15.144:
+  CVE-2023-25775: 410c05b60c1af650b37ae45010086091f2d0cebe RDMA/irdma: Prevent zero-length STAG registration
+  CVE-2023-51780: 3bb41dc361bfd938041a1d17a3768aa788a36a3c atm: Fix Use-After-Free in do_vcc_ioctl
+  CVE-2023-51781: 5b87ac25e8cfeb2d3d27574cdc077b09e8ceca82 appletalk: Fix Use-After-Free in atalk_ioctl
+  CVE-2023-51782: 3f1f6a94d8858706863fe90da35663f6e24be274 net/rose: Fix Use-After-Free in rose_ioctl
+
+CVEs fixed in 5.15.145:
+  CVE-2022-47940: 6bb4399303383c2c06bce33f2335c39fbf35d979 ksmbd: validate length in smb2_write()
+  CVE-2023-1193: 9494242c8e76e6a98c8ab5f6aed0fa4bd56ac6d5 ksmbd: delete asynchronous work from list
+  CVE-2023-1194: 55ceeb4e1c71793e852c20ad01ffd31515303546 ksmbd: fix out-of-bound read in parse_lease_state()
+  CVE-2023-32247: a6a9601ba995d0fec635324cb9fd8d14f9bea14e ksmbd: destroy expired sessions
+  CVE-2023-32250: 708c304b583d789957399dd8237f212cf8ad1e4d ksmbd: fix racy issue from session setup and logoff
+  CVE-2023-32252: 708c304b583d789957399dd8237f212cf8ad1e4d ksmbd: fix racy issue from session setup and logoff
+  CVE-2023-32254: b36295c17fb97424406f0c3ab321b1ccaabb9be8 ksmbd: fix racy issue under cocurrent smb2 tree disconnect
+  CVE-2023-32257: 708c304b583d789957399dd8237f212cf8ad1e4d ksmbd: fix racy issue from session setup and logoff
+  CVE-2023-32258: ae06b798f72d6cc792cfa1745490be65da90eb03 ksmbd: fix racy issue from smb2 close and logoff with multichannel
+  CVE-2023-38427: 4adb4fbd74812aeada97e7cc6de3dad41952443e ksmbd: fix out-of-bound read in deassemble_neg_contexts()
+  CVE-2023-38430: 0d1a3f97efbe73fe6d6c18574e6ac94cd2492c11 ksmbd: validate smb request protocol id
+  CVE-2023-38431: df3a4518aee64f21bcafa891105b468413f27431 ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop
+  CVE-2023-3867: 97f5c1e3086c8ba1473c265d9a5523cc9ef5579e ksmbd: add missing compound request handing in some commands
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -757,11 +787,8 @@ Outstanding CVEs:
   CVE-2022-45884: (unk)  
   CVE-2022-45885: (unk)  
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
-  CVE-2022-47940: (unk) ksmbd: validate length in smb2_write() 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
-  CVE-2023-1193: (unk) ksmbd: delete asynchronous work from list 
-  CVE-2023-1194: (unk) ksmbd: fix out-of-bound read in parse_lease_state() 
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20941: (unk)  
@@ -771,27 +798,16 @@ Outstanding CVEs:
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
   CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
-  CVE-2023-25775: (unk) RDMA/irdma: Prevent zero-length STAG registration 
   CVE-2023-26242: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
   CVE-2023-31083: (unk) Bluetooth: hci_ldisc: check HCI_UART_PROTO_READY flag in HCIUARTGETPROTO 
   CVE-2023-31084: (unk) media: dvb-core: Fix kernel WARNING for blocking operation in wait_event*() 
-  CVE-2023-32247: (unk) ksmbd: destroy expired sessions 
-  CVE-2023-32250: (unk) ksmbd: fix racy issue from session setup and logoff 
-  CVE-2023-32252: (unk) ksmbd: fix racy issue from session setup and logoff 
-  CVE-2023-32254: (unk) ksmbd: fix racy issue under cocurrent smb2 tree disconnect 
-  CVE-2023-32257: (unk) ksmbd: fix racy issue from session setup and logoff 
-  CVE-2023-32258: (unk) ksmbd: fix racy issue from smb2 close and logoff with multichannel 
   CVE-2023-3389: (unk) io_uring: mutex locked poll hashing 
   CVE-2023-3397: (unk)  
   CVE-2023-3439: (unk) mctp: defer the kfree of object mdev->addrs 
   CVE-2023-3640: (unk)  
   CVE-2023-37454: (unk)  
-  CVE-2023-38427: (unk) ksmbd: fix out-of-bound read in deassemble_neg_contexts() 
-  CVE-2023-38430: (unk) ksmbd: validate smb request protocol id 
-  CVE-2023-38431: (unk) ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop 
-  CVE-2023-3867: (unk) ksmbd: add missing compound request handing in some commands 
   CVE-2023-4010: (unk)  
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
@@ -799,5 +815,14 @@ Outstanding CVEs:
   CVE-2023-4610: (unk) Revert "mm: vmscan: make global slab shrink lockless" 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-47233: (unk)  
-  CVE-2023-5972: (unk) nf_tables: fix NULL pointer dereference in nft_expr_inner_parse() 
+  CVE-2023-50431: (unk)  
+  CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
   CVE-2023-6039: (unk) net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs 
+  CVE-2023-6356: (unk)  
+  CVE-2023-6535: (unk)  
+  CVE-2023-6536: (unk)  
+  CVE-2023-6560: (unk) io_uring: don't allow discontig pages for IORING_SETUP_NO_MMAP 
+  CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
+  CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
+  CVE-2023-6679: (unk) dpll: sanitize possible null pointer dereference in dpll_pin_parent_pin_set() 
+  CVE-2023-7042: (unk)  

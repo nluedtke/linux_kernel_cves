@@ -797,6 +797,7 @@ CVEs fixed in 5.10.190:
 CVEs fixed in 5.10.192:
   CVE-2023-3772: bd30aa9c7febb6e709670cd5154194189ca3b7b5 xfrm: add NULL check in xfrm_update_ae_params
   CVE-2023-39194: 7e50815d29037e08d3d26f3ebc41bcec729847b7 net: xfrm: Fix xfrm_address_filter OOB read
+  CVE-2023-6546: 869ce5e5984595bd2c62b598d977debc218b6f4d tty: n_gsm: fix the UAF caused by race condition in gsm_cleanup_mux
 
 CVEs fixed in 5.10.195:
   CVE-2023-39189: 780f60dde29692c42091602fee9c25e9e391f3dc netfilter: nfnetlink_osf: avoid OOB read
@@ -833,6 +834,19 @@ CVEs fixed in 5.10.200:
 
 CVEs fixed in 5.10.202:
   CVE-2023-46862: c6e8af2a8a63e0957284c16003c501e4a058e8d9 io_uring/fdinfo: lock SQ thread while retrieving thread cpu/pid
+
+CVEs fixed in 5.10.203:
+  CVE-2023-6121: 2be451e7a2f124899546c1bb5c6d509a927968c8 nvmet: nul-terminate the NQNs passed in the connect command
+  CVE-2023-6932: 772fe1da9a8d4dcd8993abaecbde04789c52a4c2 ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet
+
+CVEs fixed in 5.10.204:
+  CVE-2023-6817: bf72b44fe81be08a9fcd58aabf417cd3337ffc99 netfilter: nft_set_pipapo: skip inactive elements during set walk
+  CVE-2023-6931: 208dd116f96ea19e5d38d7b80fce49bc5ce1bbe8 perf: Fix perf_event_validate_size()
+
+CVEs fixed in 5.10.205:
+  CVE-2023-51780: 64a032015c336ca1795b3e1b1d1f94085ada3553 atm: Fix Use-After-Free in do_vcc_ioctl
+  CVE-2023-51781: a232eb81c7cb5d4dbd325d4611ed029b7fa07596 appletalk: Fix Use-After-Free in atalk_ioctl
+  CVE-2023-51782: 7eda5960a5332654b10d951e735750ed60d7f0a9 net/rose: Fix Use-After-Free in rose_ioctl
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -980,5 +994,14 @@ Outstanding CVEs:
   CVE-2023-4610: (unk) Revert "mm: vmscan: make global slab shrink lockless" 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-47233: (unk)  
-  CVE-2023-5972: (unk) nf_tables: fix NULL pointer dereference in nft_expr_inner_parse() 
-  CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
+  CVE-2023-50431: (unk)  
+  CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
+  CVE-2023-6356: (unk)  
+  CVE-2023-6535: (unk)  
+  CVE-2023-6536: (unk)  
+  CVE-2023-6560: (unk) io_uring: don't allow discontig pages for IORING_SETUP_NO_MMAP 
+  CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
+  CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
+  CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
+  CVE-2023-6679: (unk) dpll: sanitize possible null pointer dereference in dpll_pin_parent_pin_set() 
+  CVE-2023-7042: (unk)  

@@ -16,6 +16,7 @@ CVEs fixed in 5.19.2:
   CVE-2022-47941: ff20f1875889dbe4a67c9298e609d7c88cf6456d ksmbd: fix memory leak in smb2_handle_negotiate
   CVE-2022-47942: 8e33102309bd6839b2e2e158f93a7b378cb4655d ksmbd: fix heap-based overflow in set_ntacl_dacl()
   CVE-2022-47943: 0f1c9908c8e18a98b3d6a80bf391bef8001d7fb7 ksmbd: prevent out of bound read for SMB2_WRITE
+  CVE-2023-1095: 109539c9ba8497aad2948af4f09077f6a65059fe netfilter: nf_tables: fix null deref due to zeroed list head
   CVE-2023-2019: ece188f236db01f5f60f1bc578bde5af2a816db2 netdevsim: fib: Fix reference count leak on route deletion failure
   CVE-2023-22998: 0cde00c48ea2bef890a0db7a788cd4bfad1573ac drm/virtio: Fix NULL vs IS_ERR checking in virtio_gpu_object_shmem_init
   CVE-2023-2513: 52e6feee51b859c52af61f8a75cfdad70238c100 ext4: fix use-after-free in ext4_xattr_set_entry
@@ -24,6 +25,7 @@ CVEs fixed in 5.19.4:
   CVE-2022-2785: b429d0b9a7a0f3dddb1f782b72629e6353f292fd bpf: Disallow bpf programs call prog_run command.
   CVE-2022-3625: 26bef5616255066268c0e40e1da10cc9b78b82e9 devlink: Fix use-after-free after a failed reload
   CVE-2022-3629: 8ff5db3c1b3d6797eda5cd326dcd31b9cd1c5f72 vsock: Fix memory leak in vsock_connect()
+  CVE-2022-3630: 7a369dc87b66acc85d0cffcf39984344a203e20b fscache: don't leak cookie access refs if invalidation is in progress or failed
   CVE-2022-3635: af412b252550f9ac36d9add7b013c2a2c3463835 atm: idt77252: fix use-after-free bugs caused by tst_timer
   CVE-2023-3111: 5d741afed0bac206640cc64d77b97853283cf719 btrfs: unset reloc control if transaction commit fails in prepare_to_relocate()
 
@@ -170,7 +172,6 @@ Outstanding CVEs:
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3628: (unk) wifi: brcmfmac: Fix potential buffer overflow in brcmf_fweh_event_worker() 
   CVE-2022-36280: (unk) drm/vmwgfx: Validate the box size for the snooped cursor 
-  CVE-2022-3630: (unk) fscache: don't leak cookie access refs if invalidation is in progress or failed 
   CVE-2022-3633: (unk) can: j1939: j1939_session_destroy(): fix memory leak of skbs 
   CVE-2022-3640: (unk) Bluetooth: L2CAP: fix use-after-free in l2cap_conn_del() 
   CVE-2022-36402: (unk)  
@@ -243,7 +244,6 @@ Outstanding CVEs:
   CVE-2023-1077: (unk) sched/rt: pick_next_rt_entity(): check list_entry 
   CVE-2023-1078: (unk) rds: rds_rm_zerocopy_callback() use list_first_entry() 
   CVE-2023-1079: (unk) HID: asus: use spinlock to safely schedule workers 
-  CVE-2023-1095: (unk) netfilter: nf_tables: fix null deref due to zeroed list head 
   CVE-2023-1118: (unk) media: rc: Fix use-after-free bugs caused by ene_tx_irqsim() 
   CVE-2023-1192: (unk) fs/ntfs3: Validate MFT flags before replaying logs 
   CVE-2023-1193: (unk) ksmbd: delete asynchronous work from list 
@@ -424,11 +424,28 @@ Outstanding CVEs:
   CVE-2023-47233: (unk)  
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
   CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 
+  CVE-2023-50431: (unk)  
   CVE-2023-5158: (unk) vringh: don't use vringh_kiov_advance() in vringh_iov_xfer() 
+  CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
   CVE-2023-5178: (unk) nvmet-tcp: Fix a possible UAF in queue intialization setup 
+  CVE-2023-51780: (unk) atm: Fix Use-After-Free in do_vcc_ioctl 
+  CVE-2023-51781: (unk) appletalk: Fix Use-After-Free in atalk_ioctl 
+  CVE-2023-51782: (unk) net/rose: Fix Use-After-Free in rose_ioctl 
   CVE-2023-5197: (unk) netfilter: nf_tables: disallow rule removal from chain binding 
   CVE-2023-5717: (unk) perf: Disallow mis-matched inherited group reads 
-  CVE-2023-5972: (unk) nf_tables: fix NULL pointer dereference in nft_expr_inner_parse() 
   CVE-2023-6039: (unk) net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs 
   CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
   CVE-2023-6176: (unk) net/tls: do not free tls_rec on async operation in bpf_exec_tx_verdict() 
+  CVE-2023-6356: (unk)  
+  CVE-2023-6535: (unk)  
+  CVE-2023-6536: (unk)  
+  CVE-2023-6546: (unk) tty: n_gsm: fix the UAF caused by race condition in gsm_cleanup_mux 
+  CVE-2023-6560: (unk) io_uring: don't allow discontig pages for IORING_SETUP_NO_MMAP 
+  CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
+  CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
+  CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
+  CVE-2023-6679: (unk) dpll: sanitize possible null pointer dereference in dpll_pin_parent_pin_set() 
+  CVE-2023-6817: (unk) netfilter: nft_set_pipapo: skip inactive elements during set walk 
+  CVE-2023-6931: (unk) perf: Fix perf_event_validate_size() 
+  CVE-2023-6932: (unk) ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet 
+  CVE-2023-7042: (unk)  
