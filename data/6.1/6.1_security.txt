@@ -100,6 +100,7 @@ CVEs fixed in 6.1.16:
 CVEs fixed in 6.1.18:
   CVE-2023-1829: 3abebc503a5148072052c229c6b04b329a420ecd net/sched: Retire tcindex classifier
   CVE-2023-45862: ff542083b105c9c72d83899d3f74eeec354f808e USB: ene_usb6250: Allocate enough memory for full object
+  CVE-2023-7192: 4f25d1dff80535f088b8f8568dd731fb098e29b4 netfilter: ctnetlink: fix possible refcount leak in ctnetlink_create_conntrack()
 
 CVEs fixed in 6.1.20:
   CVE-2023-28466: 14c17c673e1bba08032d245d5fb025d1cbfee123 net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf()
@@ -291,7 +292,6 @@ CVEs fixed in 6.1.59:
 
 CVEs fixed in 6.1.60:
   CVE-2023-46813: 57d0639f60f1ff04cbe7fd52823b94b894d7f812 x86/sev: Check for user-space IOIO pointing to kernel space
-  CVE-2023-5178: f691ec5a548257edb3aacd952e2a574e4e57b2c4 nvmet-tcp: Fix a possible UAF in queue intialization setup
   CVE-2023-5717: f6952655a61264900ed08e9d642adad8222f8e29 perf: Disallow mis-matched inherited group reads
 
 CVEs fixed in 6.1.61:
@@ -307,6 +307,7 @@ CVEs fixed in 6.1.66:
   CVE-2023-6932: 94445d9583079e0ccc5dde1370076ff24800d86e ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet
 
 CVEs fixed in 6.1.68:
+  CVE-2023-6531: f2f57f51b53be153a522300454ddb3887722fb2c io_uring/af_unix: disable sending io_uring over sockets
   CVE-2023-6622: 96f8654b701f772af5f358b91807ce2836ff3444 netfilter: nf_tables: bail out on mismatching dynset and set expressions
   CVE-2023-6817: 189c2a82933c67ad360c421258d5449f6647544a netfilter: nft_set_pipapo: skip inactive elements during set walk
   CVE-2023-6931: 06dec254c59afd01b7a44838cf8bfc382bef019b perf: Fix perf_event_validate_size()
@@ -315,6 +316,14 @@ CVEs fixed in 6.1.69:
   CVE-2023-51780: 2de2a6cbe14f7e949da59bddd5d69baf5dd893c0 atm: Fix Use-After-Free in do_vcc_ioctl
   CVE-2023-51781: 1646b2929d5efc3861139ba58556b0f149c848f6 appletalk: Fix Use-After-Free in atalk_ioctl
   CVE-2023-51782: 01540ee2366a0a8671c35cd57a66bf0817106ffa net/rose: Fix Use-After-Free in rose_ioctl
+
+CVEs fixed in 6.1.70:
+  CVE-2023-51779: 37f71e2c9f515834841826f4eb68ec33cfb2a1ff Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg
+  CVE-2023-6606: c60e10d1549f8748a68ec13dcd177c62843985ff smb: client: fix OOB in smbCalcSize()
+
+CVEs fixed in 6.1.71:
+  CVE-2023-1193: 8d271ef5e5cac8a470076891b248a28a2c57fb1e ksmbd: delete asynchronous work from list
+  CVE-2024-0193: 0105571f80edb96f81bb4bbdd5233a9130dc345b netfilter: nf_tables: skip set commit for deleted/destroyed sets
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -394,7 +403,6 @@ Outstanding CVEs:
   CVE-2022-45885: (unk)  
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
-  CVE-2023-1193: (unk) ksmbd: delete asynchronous work from list 
   CVE-2023-20941: (unk)  
   CVE-2023-21264: (unk) KVM: arm64: Prevent unconditional donation of unmapped regions from the host 
   CVE-2023-21400: (unk)  
@@ -419,13 +427,12 @@ Outstanding CVEs:
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-47233: (unk)  
   CVE-2023-50431: (unk)  
-  CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
   CVE-2023-6039: (unk) net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs 
+  CVE-2023-6270: (unk)  
   CVE-2023-6356: (unk)  
   CVE-2023-6535: (unk)  
   CVE-2023-6536: (unk)  
   CVE-2023-6560: (unk) io_uring: don't allow discontig pages for IORING_SETUP_NO_MMAP 
-  CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
-  CVE-2023-6679: (unk) dpll: sanitize possible null pointer dereference in dpll_pin_parent_pin_set() 
   CVE-2023-7042: (unk)  
+  CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 

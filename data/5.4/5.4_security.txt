@@ -897,6 +897,7 @@ CVEs fixed in 5.4.235:
   CVE-2023-2985: 3776ef785e1005355cdd86c751a8e838bac8e2e8 fs: hfsplus: fix UAF issue in hfsplus_put_super
   CVE-2023-3220: dadd30fcc7e3e01561ef3624f6c0e323105ab523 drm/msm/dpu: Add check for pstates
   CVE-2023-45862: da4e715a466ca982d4584da21ea385f28ca79ce6 USB: ene_usb6250: Allocate enough memory for full object
+  CVE-2023-7192: 5d0d38805d3234ca2cd6fbeb74d706348f4bbc43 netfilter: ctnetlink: fix possible refcount leak in ctnetlink_create_conntrack()
 
 CVEs fixed in 5.4.238:
   CVE-2023-1855: 26c176ce902861a45f8d699e057245ed7e0bcdf2 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
@@ -1013,7 +1014,6 @@ CVEs fixed in 5.4.259:
 CVEs fixed in 5.4.260:
   CVE-2021-44879: e9a988cd4c8baac7550aa0c2f1efc9533ed9da36 f2fs: fix to do sanity check on inode type during garbage collection
   CVE-2023-45863: 5776aeee2a604ccc03e8269713624f9c8fd318e0 kobject: Fix slab-out-of-bounds in fill_kobj_path()
-  CVE-2023-5178: 4e53bab11f01a401a5acd3bc94335b27ec79106b nvmet-tcp: Fix a possible UAF in queue intialization setup
 
 CVEs fixed in 5.4.263:
   CVE-2023-6121: afbedd6136cbff0b4412efd09d98d2cb7348563c nvmet: nul-terminate the NQNs passed in the connect command
@@ -1026,6 +1026,9 @@ CVEs fixed in 5.4.265:
   CVE-2023-51780: b099c28847cfa33854731eeec9c64619d99a1255 atm: Fix Use-After-Free in do_vcc_ioctl
   CVE-2023-51781: 9112bd107208cd6a4f0175ca36289ed170622cce appletalk: Fix Use-After-Free in atalk_ioctl
   CVE-2023-51782: 3df812627e7d0bf557f3781c3448d42c8fe8313e net/rose: Fix Use-After-Free in rose_ioctl
+
+CVEs fixed in 5.4.266:
+  CVE-2023-6606: 508e2fdd978e4c26798eac2059f9520255904f82 smb: client: fix OOB in smbCalcSize()
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1197,14 +1200,16 @@ Outstanding CVEs:
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
   CVE-2023-50431: (unk)  
   CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
+  CVE-2023-6040: (unk) netfilter: nf_tables: Reject tables of unsupported family 
+  CVE-2023-6270: (unk)  
   CVE-2023-6356: (unk)  
   CVE-2023-6535: (unk)  
   CVE-2023-6536: (unk)  
   CVE-2023-6546: (unk) tty: n_gsm: fix the UAF caused by race condition in gsm_cleanup_mux 
   CVE-2023-6560: (unk) io_uring: don't allow discontig pages for IORING_SETUP_NO_MMAP 
-  CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
   CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
-  CVE-2023-6679: (unk) dpll: sanitize possible null pointer dereference in dpll_pin_parent_pin_set() 
   CVE-2023-6817: (unk) netfilter: nft_set_pipapo: skip inactive elements during set walk 
   CVE-2023-7042: (unk)  
+  CVE-2024-0193: (unk) netfilter: nf_tables: skip set commit for deleted/destroyed sets 
+  CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 

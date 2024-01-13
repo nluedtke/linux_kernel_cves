@@ -69,6 +69,7 @@ CVEs fixed in 6.3.9:
   CVE-2023-3390: bdace3b1a51887211d3e49417a18fdbd315a313b netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
   CVE-2023-3609: 4efd555a43dc24f3342bcc036522c430f5869e6f net/sched: cls_u32: Fix reference counter leak leading to overflow
   CVE-2023-38430: 75e7d81679ef7995422adc84ef597fded99c24a6 ksmbd: validate smb request protocol id
+  CVE-2024-0443: 0f6090d90f627d8c58f939067d6c6821ce1b3c68 blk-cgroup: Flush stats before releasing blkcg_gq
 
 CVEs fixed in 6.3.10:
   CVE-2023-3610: a1547f81341f14b1b355df04218152e8b5d4b264 netfilter: nf_tables: fix chain binding transaction logic
@@ -233,7 +234,6 @@ Outstanding CVEs:
   CVE-2023-5090: (unk) x86: KVM: SVM: always update the x2avic msr interception 
   CVE-2023-5158: (unk) vringh: don't use vringh_kiov_advance() in vringh_iov_xfer() 
   CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
-  CVE-2023-5178: (unk) nvmet-tcp: Fix a possible UAF in queue intialization setup 
   CVE-2023-51780: (unk) atm: Fix Use-After-Free in do_vcc_ioctl 
   CVE-2023-51781: (unk) appletalk: Fix Use-After-Free in atalk_ioctl 
   CVE-2023-51782: (unk) net/rose: Fix Use-After-Free in rose_ioctl 
@@ -246,7 +246,9 @@ Outstanding CVEs:
   CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
   CVE-2023-6176: (unk) net/tls: do not free tls_rec on async operation in bpf_exec_tx_verdict() 
   CVE-2023-6238: (unk)  
+  CVE-2023-6270: (unk)  
   CVE-2023-6356: (unk)  
+  CVE-2023-6531: (unk) io_uring/af_unix: disable sending io_uring over sockets 
   CVE-2023-6535: (unk)  
   CVE-2023-6536: (unk)  
   CVE-2023-6546: (unk) tty: n_gsm: fix the UAF caused by race condition in gsm_cleanup_mux 
@@ -254,8 +256,9 @@ Outstanding CVEs:
   CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
   CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
-  CVE-2023-6679: (unk) dpll: sanitize possible null pointer dereference in dpll_pin_parent_pin_set() 
   CVE-2023-6817: (unk) netfilter: nft_set_pipapo: skip inactive elements during set walk 
   CVE-2023-6931: (unk) perf: Fix perf_event_validate_size() 
   CVE-2023-6932: (unk) ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet 
   CVE-2023-7042: (unk)  
+  CVE-2024-0193: (unk) netfilter: nf_tables: skip set commit for deleted/destroyed sets 
+  CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 

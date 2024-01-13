@@ -1314,6 +1314,7 @@ CVEs fixed in 4.14.308:
   CVE-2023-1829: 53af9c793f644d5841d84d8e0ad83bd7ab47f3e0 net/sched: Retire tcindex classifier
   CVE-2023-2985: a9433406837c211af58a533d9e6f7a8f865b01f3 fs: hfsplus: fix UAF issue in hfsplus_put_super
   CVE-2023-45862: 26f31c6e1389c23a1b822a61c59d5d1f357cb478 USB: ene_usb6250: Allocate enough memory for full object
+  CVE-2023-7192: 8df5f3b50d9ce523251edf9cd0470963be20004b netfilter: ctnetlink: fix possible refcount leak in ctnetlink_create_conntrack()
 
 CVEs fixed in 4.14.311:
   CVE-2023-1855: c809ed776e190edfc04f8d6b25a62855b1386a0d hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
@@ -1540,7 +1541,6 @@ Outstanding CVEs:
   CVE-2022-1247: (unk)  
   CVE-2022-1263: (unk) KVM: avoid NULL pointer dereference in kvm_dirty_ring_push 
   CVE-2022-1280: (unk) drm: avoid circular locks in drm_mode_getconnector 
-  CVE-2022-1508: (unk) io_uring: reexpand under-reexpanded iters 
   CVE-2022-1786: (unk) io_uring: remove io_identity 
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
   CVE-2022-20166: (unk) drivers core: Use sysfs_emit and sysfs_emit_at for show(device *...) functions 
@@ -1549,7 +1549,6 @@ Outstanding CVEs:
   CVE-2022-21499: (unk) lockdown: also lock down previous kgdb use 
   CVE-2022-2209: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
-  CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
   CVE-2022-23816: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
@@ -1611,7 +1610,6 @@ Outstanding CVEs:
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
-  CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
   CVE-2023-3006: (unk) arm64: Add AMPERE1 to the Spectre-BHB affected list 
   CVE-2023-3022: (unk) ipv6: Use result arg in fib_lookup_arg consistently 
@@ -1638,18 +1636,20 @@ Outstanding CVEs:
   CVE-2023-47233: (unk)  
   CVE-2023-4732: (unk) mm/userfaultfd: fix uffd-wp special cases for fork() 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
-  CVE-2023-50431: (unk)  
   CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
+  CVE-2023-5178: (unk) nvmet-tcp: Fix a possible UAF in queue intialization setup 
+  CVE-2023-6040: (unk) netfilter: nf_tables: Reject tables of unsupported family 
   CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
+  CVE-2023-6270: (unk)  
   CVE-2023-6356: (unk)  
   CVE-2023-6535: (unk)  
   CVE-2023-6536: (unk)  
   CVE-2023-6546: (unk) tty: n_gsm: fix the UAF caused by race condition in gsm_cleanup_mux 
-  CVE-2023-6560: (unk) io_uring: don't allow discontig pages for IORING_SETUP_NO_MMAP 
   CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
   CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
-  CVE-2023-6679: (unk) dpll: sanitize possible null pointer dereference in dpll_pin_parent_pin_set() 
   CVE-2023-6817: (unk) netfilter: nft_set_pipapo: skip inactive elements during set walk 
   CVE-2023-6931: (unk) perf: Fix perf_event_validate_size() 
   CVE-2023-7042: (unk)  
+  CVE-2024-0193: (unk) netfilter: nf_tables: skip set commit for deleted/destroyed sets 
+  CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 

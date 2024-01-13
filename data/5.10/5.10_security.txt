@@ -697,6 +697,7 @@ CVEs fixed in 5.10.173:
   CVE-2023-2985: ef7d71d7bd57b8b7fe514e459927696c1c6d1047 fs: hfsplus: fix UAF issue in hfsplus_put_super
   CVE-2023-3220: e9743b3052e125c44b555f07f2876a4bdccfd983 drm/msm/dpu: Add check for pstates
   CVE-2023-45862: 961f93d63da72f5fcaa6793fb2dcbc995c119a8e USB: ene_usb6250: Allocate enough memory for full object
+  CVE-2023-7192: 1ff0b87df98b93e10ced45773aa7d35377355421 netfilter: ctnetlink: fix possible refcount leak in ctnetlink_create_conntrack()
 
 CVEs fixed in 5.10.176:
   CVE-2023-1855: 0a73c8b3cc99d214dff83c51805c844240c4f749 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
@@ -825,7 +826,6 @@ CVEs fixed in 5.10.198:
 CVEs fixed in 5.10.199:
   CVE-2023-35827: db9aafa19547833240f58c2998aed7baf414dc82 ravb: Fix use-after-free issue in ravb_tx_timeout_work()
   CVE-2023-46813: 6550cbe25de182f6c0176909a90b324cb375133f x86/sev: Check for user-space IOIO pointing to kernel space
-  CVE-2023-5178: e985d78bdcf37f7ef73666a43b0d2407715f00d3 nvmet-tcp: Fix a possible UAF in queue intialization setup
   CVE-2023-5717: 487a8e24643a0effb2ba19cad3227fc75dc3c4b7 perf: Disallow mis-matched inherited group reads
 
 CVEs fixed in 5.10.200:
@@ -847,6 +847,11 @@ CVEs fixed in 5.10.205:
   CVE-2023-51780: 64a032015c336ca1795b3e1b1d1f94085ada3553 atm: Fix Use-After-Free in do_vcc_ioctl
   CVE-2023-51781: a232eb81c7cb5d4dbd325d4611ed029b7fa07596 appletalk: Fix Use-After-Free in atalk_ioctl
   CVE-2023-51782: 7eda5960a5332654b10d951e735750ed60d7f0a9 net/rose: Fix Use-After-Free in rose_ioctl
+
+CVEs fixed in 5.10.206:
+  CVE-2023-51779: db1b14eec8c61a20374de9f9c2ddc6c9406a8c42 Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg
+  CVE-2023-6606: 0c54b79d1d9b25f5a406bcf1969f956e14c4704d smb: client: fix OOB in smbCalcSize()
+  CVE-2024-0193: 73117ea03363d4493bd4e9f82f29b34b92d88a91 netfilter: nf_tables: skip set commit for deleted/destroyed sets
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -995,13 +1000,13 @@ Outstanding CVEs:
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-47233: (unk)  
   CVE-2023-50431: (unk)  
-  CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
+  CVE-2023-6040: (unk) netfilter: nf_tables: Reject tables of unsupported family 
+  CVE-2023-6270: (unk)  
   CVE-2023-6356: (unk)  
   CVE-2023-6535: (unk)  
   CVE-2023-6536: (unk)  
   CVE-2023-6560: (unk) io_uring: don't allow discontig pages for IORING_SETUP_NO_MMAP 
-  CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
   CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
-  CVE-2023-6679: (unk) dpll: sanitize possible null pointer dereference in dpll_pin_parent_pin_set() 
   CVE-2023-7042: (unk)  
+  CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 

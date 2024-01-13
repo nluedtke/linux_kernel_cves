@@ -1134,6 +1134,7 @@ CVEs fixed in 4.19.276:
   CVE-2023-2985: e226f1fdcee1ca6e68233b132718deb578a84e38 fs: hfsplus: fix UAF issue in hfsplus_put_super
   CVE-2023-3220: c746a0b9210cebb29511f01d2becf240408327bf drm/msm/dpu: Add check for pstates
   CVE-2023-45862: cef5e33d8b893891817236db819982f87943e8fd USB: ene_usb6250: Allocate enough memory for full object
+  CVE-2023-7192: 43b9a9c78e37a5532c2a9260dff9d9989f2bbb23 netfilter: ctnetlink: fix possible refcount leak in ctnetlink_create_conntrack()
 
 CVEs fixed in 4.19.279:
   CVE-2023-1855: e0a37b43cd732038e37b4e7f6c6c0658fe0b6d73 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
@@ -1247,6 +1248,9 @@ CVEs fixed in 4.19.303:
   CVE-2023-51781: 580ff9f59ab6537d8ce1d0d9f012cf970553ef3d appletalk: Fix Use-After-Free in atalk_ioctl
   CVE-2023-51782: 6c9afea8827dde62c4062185d22ac035090ba39b net/rose: Fix Use-After-Free in rose_ioctl
 
+CVEs fixed in 4.19.304:
+  CVE-2023-6606: 89b6ae907c6bcc175bc95a67d6936217530a29ff smb: client: fix OOB in smbCalcSize()
+
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
   CVE-2007-3719: (unk)  
@@ -1354,7 +1358,6 @@ Outstanding CVEs:
   CVE-2022-1247: (unk)  
   CVE-2022-1263: (unk) KVM: avoid NULL pointer dereference in kvm_dirty_ring_push 
   CVE-2022-1280: (unk) drm: avoid circular locks in drm_mode_getconnector 
-  CVE-2022-1508: (unk) io_uring: reexpand under-reexpanded iters 
   CVE-2022-1786: (unk) io_uring: remove io_identity 
   CVE-2022-1789: (unk) KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID 
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
@@ -1363,7 +1366,6 @@ Outstanding CVEs:
   CVE-2022-21499: (unk) lockdown: also lock down previous kgdb use 
   CVE-2022-2209: (unk)  
   CVE-2022-23222: (unk) bpf: Replace PTR_TO_XXX_OR_NULL with PTR_TO_XXX | PTR_MAYBE_NULL 
-  CVE-2022-2327: (unk) io_uring: remove any grabbing of context 
   CVE-2022-23816: (unk) x86/kvm/vmx: Make noinstr clean 
   CVE-2022-23825: (unk)  
   CVE-2022-25265: (unk)  
@@ -1424,7 +1426,6 @@ Outstanding CVEs:
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
-  CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
   CVE-2023-28466: (unk) net: tls: fix possible race condition between do_tls_getsockopt_conf() and do_tls_setsockopt_conf() 
   CVE-2023-3006: (unk) arm64: Add AMPERE1 to the Spectre-BHB affected list 
@@ -1450,17 +1451,18 @@ Outstanding CVEs:
   CVE-2023-47233: (unk)  
   CVE-2023-4732: (unk) mm/userfaultfd: fix uffd-wp special cases for fork() 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
-  CVE-2023-50431: (unk)  
   CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
+  CVE-2023-5178: (unk) nvmet-tcp: Fix a possible UAF in queue intialization setup 
+  CVE-2023-6040: (unk) netfilter: nf_tables: Reject tables of unsupported family 
   CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
+  CVE-2023-6270: (unk)  
   CVE-2023-6356: (unk)  
   CVE-2023-6535: (unk)  
   CVE-2023-6536: (unk)  
   CVE-2023-6546: (unk) tty: n_gsm: fix the UAF caused by race condition in gsm_cleanup_mux 
-  CVE-2023-6560: (unk) io_uring: don't allow discontig pages for IORING_SETUP_NO_MMAP 
-  CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
   CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
-  CVE-2023-6679: (unk) dpll: sanitize possible null pointer dereference in dpll_pin_parent_pin_set() 
   CVE-2023-6817: (unk) netfilter: nft_set_pipapo: skip inactive elements during set walk 
   CVE-2023-7042: (unk)  
+  CVE-2024-0193: (unk) netfilter: nf_tables: skip set commit for deleted/destroyed sets 
+  CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 

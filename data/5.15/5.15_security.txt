@@ -501,6 +501,7 @@ CVEs fixed in 5.15.100:
   CVE-2023-1829: 7c183dc0af472dec33d2c0786a5e356baa8cad19 net/sched: Retire tcindex classifier
   CVE-2023-23004: 1c7988d5c79f72287177bb774cde15fde69f3c97 malidp: Fix NULL vs IS_ERR() checking
   CVE-2023-45862: 7e902b949600c51c94d06b137f874126a27e6557 USB: ene_usb6250: Allocate enough memory for full object
+  CVE-2023-7192: af41b3cd9a9245f482b8855bd3c62c6f04ae68ab netfilter: ctnetlink: fix possible refcount leak in ctnetlink_create_conntrack()
 
 CVEs fixed in 5.15.104:
   CVE-2023-1855: 7091951c2ca9d3fbec75ef1d677cbd89eeac9793 hwmon: (xgene) Fix use after free bug in xgene_hwmon_remove due to race condition
@@ -657,7 +658,6 @@ CVEs fixed in 5.15.136:
 
 CVEs fixed in 5.15.137:
   CVE-2023-46813: 582f7993353c7b116651f88385b1785dffa14c5d x86/sev: Check for user-space IOIO pointing to kernel space
-  CVE-2023-5178: 34f62612be2a7f90ab68a14154db6664a32f8db0 nvmet-tcp: Fix a possible UAF in queue intialization setup
   CVE-2023-5717: 71d224acc4d1df1b61a294abee0f1032a9b03b40 perf: Disallow mis-matched inherited group reads
 
 CVEs fixed in 5.15.140:
@@ -694,6 +694,11 @@ CVEs fixed in 5.15.145:
   CVE-2023-38430: 0d1a3f97efbe73fe6d6c18574e6ac94cd2492c11 ksmbd: validate smb request protocol id
   CVE-2023-38431: df3a4518aee64f21bcafa891105b468413f27431 ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop
   CVE-2023-3867: 97f5c1e3086c8ba1473c265d9a5523cc9ef5579e ksmbd: add missing compound request handing in some commands
+
+CVEs fixed in 5.15.146:
+  CVE-2023-51779: 2b16d960c79abc397f102c3d23d30005b68cb036 Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg
+  CVE-2023-6606: ded3cfdefec8b2accc767f176419316b61c157c3 smb: client: fix OOB in smbCalcSize()
+  CVE-2024-0193: d10f7540c5541ad9f4fe2a02a73153d25d4a540d netfilter: nf_tables: skip set commit for deleted/destroyed sets
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -816,13 +821,13 @@ Outstanding CVEs:
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-47233: (unk)  
   CVE-2023-50431: (unk)  
-  CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
   CVE-2023-6039: (unk) net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs 
+  CVE-2023-6040: (unk) netfilter: nf_tables: Reject tables of unsupported family 
+  CVE-2023-6270: (unk)  
   CVE-2023-6356: (unk)  
   CVE-2023-6535: (unk)  
   CVE-2023-6536: (unk)  
   CVE-2023-6560: (unk) io_uring: don't allow discontig pages for IORING_SETUP_NO_MMAP 
-  CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
-  CVE-2023-6679: (unk) dpll: sanitize possible null pointer dereference in dpll_pin_parent_pin_set() 
   CVE-2023-7042: (unk)  
+  CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 
