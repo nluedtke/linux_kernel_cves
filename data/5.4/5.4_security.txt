@@ -703,6 +703,7 @@ CVEs fixed in 5.4.196:
   CVE-2022-1652: 67e2b62461b5d02a1e63103e8a02c0bca75e26c7 floppy: use a statically allocated error counter
   CVE-2022-1729: dd0ea88b0a0f913f82500e988ef38158a9ad9885 perf: Fix sys_perf_event_open() race against self
   CVE-2022-28893: 2f8f6c393b11b5da059b1fc10a69fc2f2b6c446a SUNRPC: Ensure we flush any closed sockets before xs_xprt_free()
+  CVE-2022-48619: bb83a744bc671804016e23861a892e9db2aee73f Input: add bounds checking to input_set_capability()
   CVE-2023-1838: 3a12b2c413b20c17832ec51cb836a0b713b916ac Fix double fget() in vhost_net_set_backend()
   CVE-2023-4387: 32f779e6fbbe0c0860a00777b7e3dee6b5ec0c1c net: vmxnet3: fix possible use-after-free bugs in vmxnet3_rq_alloc_rx_buf()
   CVE-2023-4459: dc64e8874e87dc1c1c723a1c6da7efc3305c18da net: vmxnet3: fix possible NULL pointer dereference in vmxnet3_rq_cleanup()
@@ -1116,7 +1117,6 @@ Outstanding CVEs:
   CVE-2022-1247: (unk)  
   CVE-2022-1263: (unk) KVM: avoid NULL pointer dereference in kvm_dirty_ring_push 
   CVE-2022-1280: (unk) drm: avoid circular locks in drm_mode_getconnector 
-  CVE-2022-1508: (unk) io_uring: reexpand under-reexpanded iters 
   CVE-2022-1786: (unk) io_uring: remove io_identity 
   CVE-2022-1789: (unk) KVM: x86/mmu: fix NULL pointer dereference on guest INVPCID 
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
@@ -1167,6 +1167,7 @@ Outstanding CVEs:
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
   CVE-2023-1281: (unk) net/sched: tcindex: update imperfect hash filters respecting rcu 
+  CVE-2023-1476: (unk)  
   CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20588: (unk) x86/CPU/AMD: Do not leak quotient data after a division by 0 
@@ -1178,7 +1179,6 @@ Outstanding CVEs:
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23004: (unk) malidp: Fix NULL vs IS_ERR() checking 
   CVE-2023-23039: (unk)  
-  CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
@@ -1193,10 +1193,8 @@ Outstanding CVEs:
   CVE-2023-4010: (unk)  
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-4610: (unk) Revert "mm: vmscan: make global slab shrink lockless" 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-47233: (unk)  
-  CVE-2023-4732: (unk) mm/userfaultfd: fix uffd-wp special cases for fork() 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
   CVE-2023-50431: (unk)  
   CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
@@ -1211,5 +1209,4 @@ Outstanding CVEs:
   CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
   CVE-2023-6817: (unk) netfilter: nft_set_pipapo: skip inactive elements during set walk 
   CVE-2023-7042: (unk)  
-  CVE-2024-0193: (unk) netfilter: nf_tables: skip set commit for deleted/destroyed sets 
   CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 

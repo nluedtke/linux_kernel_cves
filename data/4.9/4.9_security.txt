@@ -1286,6 +1286,7 @@ CVEs fixed in 4.9.313:
 CVEs fixed in 4.9.316:
   CVE-2022-1652: 2adafe1c646b462c755e99216f966927eec96059 floppy: use a statically allocated error counter
   CVE-2022-1729: a1466528d8ae5d9a3bb29781f0098fa3476e9e1c perf: Fix sys_perf_event_open() race against self
+  CVE-2022-48619: 3e6fa9e4a7a89d67e01424317f7a2e9551025022 Input: add bounds checking to input_set_capability()
   CVE-2023-4387: aae66daa4a8925109c87702979e767346291d1e2 net: vmxnet3: fix possible use-after-free bugs in vmxnet3_rq_alloc_rx_buf()
   CVE-2023-4459: e40ed72f8c8b04ae629d895ed7eb221d8938cdd7 net: vmxnet3: fix possible NULL pointer dereference in vmxnet3_rq_cleanup()
 
@@ -1633,6 +1634,7 @@ Outstanding CVEs:
   CVE-2023-1249: (unk) coredump: Use the vma snapshot in fill_files_note 
   CVE-2023-1380: (unk) wifi: brcmfmac: slab-out-of-bounds read in brcmf_get_assoc_ies() 
   CVE-2023-1382: (unk) tipc: set con sock in tipc_conn_alloc 
+  CVE-2023-1476: (unk)  
   CVE-2023-1513: (unk) kvm: initialize all of the kvm_debugregs structure before sending it to userspace 
   CVE-2023-1582: (unk) fs/proc: task_mmu.c: don't read mapcount for migration entry 
   CVE-2023-1611: (unk) btrfs: fix race between quota disable and quota assign ioctls 
@@ -1718,11 +1720,9 @@ Outstanding CVEs:
   CVE-2023-45862: (unk) USB: ene_usb6250: Allocate enough memory for full object 
   CVE-2023-45863: (unk) kobject: Fix slab-out-of-bounds in fill_kobj_path() 
   CVE-2023-45871: (unk) igb: set max size RX buffer when store bad packet is enabled 
-  CVE-2023-4610: (unk) Revert "mm: vmscan: make global slab shrink lockless" 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
   CVE-2023-47233: (unk)  
-  CVE-2023-4732: (unk) mm/userfaultfd: fix uffd-wp special cases for fork() 
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
   CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 
   CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
@@ -1746,5 +1746,4 @@ Outstanding CVEs:
   CVE-2023-6932: (unk) ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet 
   CVE-2023-7042: (unk)  
   CVE-2023-7192: (unk) netfilter: ctnetlink: fix possible refcount leak in ctnetlink_create_conntrack() 
-  CVE-2024-0193: (unk) netfilter: nf_tables: skip set commit for deleted/destroyed sets 
   CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 

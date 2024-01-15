@@ -218,6 +218,7 @@ CVEs fixed in 5.15.42:
   CVE-2022-1652: fc2bee93e31bbba920e9eeba76af72264ced066f floppy: use a statically allocated error counter
   CVE-2022-1729: e085354dde254bc6c83ee604ea66c2b36f9f9067 perf: Fix sys_perf_event_open() race against self
   CVE-2022-21499: 69c5d307dce1560fafcb852f39d7a1bf5e266641 lockdown: also lock down previous kgdb use
+  CVE-2022-48619: 0211383109832103cfddfd5c5cc99b29d40bb749 Input: add bounds checking to input_set_capability()
   CVE-2023-1838: 42d8a6dc45fc6619b8def1a70b7bd0800bcc4574 Fix double fget() in vhost_net_set_backend()
   CVE-2023-4387: 4ad09fdef55b70f16f8d385981b864ac75cf1354 net: vmxnet3: fix possible use-after-free bugs in vmxnet3_rq_alloc_rx_buf()
   CVE-2023-4459: e35387a91318ccdec4a30b58d967391e011e34fa net: vmxnet3: fix possible NULL pointer dereference in vmxnet3_rq_cleanup()
@@ -698,7 +699,6 @@ CVEs fixed in 5.15.145:
 CVEs fixed in 5.15.146:
   CVE-2023-51779: 2b16d960c79abc397f102c3d23d30005b68cb036 Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg
   CVE-2023-6606: ded3cfdefec8b2accc767f176419316b61c157c3 smb: client: fix OOB in smbCalcSize()
-  CVE-2024-0193: d10f7540c5541ad9f4fe2a02a73153d25d4a540d netfilter: nf_tables: skip set commit for deleted/destroyed sets
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -794,6 +794,7 @@ Outstanding CVEs:
   CVE-2022-45888: (unk) char: xillybus: Prevent use-after-free due to race condition 
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
+  CVE-2023-1476: (unk)  
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20941: (unk)  
@@ -802,7 +803,6 @@ Outstanding CVEs:
   CVE-2023-22995: (unk) usb: dwc3: dwc3-qcom: Add missing platform_device_put() in dwc3_qcom_acpi_register_core 
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
-  CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
@@ -817,7 +817,6 @@ Outstanding CVEs:
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
   CVE-2023-4155: (unk) KVM: SEV: only access GHCB fields once 
-  CVE-2023-4610: (unk) Revert "mm: vmscan: make global slab shrink lockless" 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-47233: (unk)  
   CVE-2023-50431: (unk)  

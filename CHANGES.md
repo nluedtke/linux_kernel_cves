@@ -1,58 +1,25 @@
 
 # **Linux Kernel CVE Changes**
 
-## Last Update - 12Jan24 17:39
+## Last Update - 15Jan24 09:35
 
 ### **New CVEs Added:**
 
-[CVE-2023-6040](cves/CVE-2023-6040)  
-[CVE-2023-6270](cves/CVE-2023-6270)  
-[CVE-2023-6531](cves/CVE-2023-6531)  
-[CVE-2023-7192](cves/CVE-2023-7192)  
-[CVE-2024-0193](cves/CVE-2024-0193)  
-[CVE-2024-0340](cves/CVE-2024-0340)  
-[CVE-2024-0443](cves/CVE-2024-0443)  
+[CVE-2022-48619](cves/CVE-2022-48619)  
+[CVE-2023-1476](cves/CVE-2023-1476)  
 
 
 ### **New Versions Checked:**
 
-[4.14.336](streams/4.14)  
-[4.19.304](streams/4.19)  
-[5.10.206](streams/5.10)  
-[5.15.146](streams/5.15)  
-[5.4.266](streams/5.4)  
-[6.1.72](streams/6.1)  
-[6.6.11](streams/6.6)  
-[6.7](streams/6.7)  
+[5.10.207](streams/5.10)  
 
 
 ### **Updated CVEs:**
 
 [CVE-2022-1508](cves/CVE-2022-1508)  
-[CVE-2022-1786](cves/CVE-2022-1786)  
-[CVE-2022-2327](cves/CVE-2022-2327)  
-[CVE-2023-1193](cves/CVE-2023-1193)  
 [CVE-2023-2430](cves/CVE-2023-2430)  
-[CVE-2023-39198](cves/CVE-2023-39198)  
-[CVE-2023-50431](cves/CVE-2023-50431)  
-[CVE-2023-51779](cves/CVE-2023-51779)  
-[CVE-2023-51780](cves/CVE-2023-51780)  
-[CVE-2023-51781](cves/CVE-2023-51781)  
-[CVE-2023-6121](cves/CVE-2023-6121)  
-[CVE-2023-6546](cves/CVE-2023-6546)  
-[CVE-2023-6560](cves/CVE-2023-6560)  
-[CVE-2023-6606](cves/CVE-2023-6606)  
-[CVE-2023-6610](cves/CVE-2023-6610)  
-[CVE-2023-6679](cves/CVE-2023-6679)  
-[CVE-2023-6932](cves/CVE-2023-6932)  
-[CVE-2023-7042](cves/CVE-2023-7042)  
-[CVE-2021-3600](cves/CVE-2021-3600)  
-[CVE-2022-2585](cves/CVE-2022-2585)  
-[CVE-2022-2586](cves/CVE-2022-2586)  
-[CVE-2022-2588](cves/CVE-2022-2588)  
-[CVE-2022-2602](cves/CVE-2022-2602)  
-[CVE-2023-1032](cves/CVE-2023-1032)  
-[CVE-2023-33952](cves/CVE-2023-33952)  
-[CVE-2023-34324](cves/CVE-2023-34324)  
+[CVE-2023-4610](cves/CVE-2023-4610)  
+[CVE-2023-4732](cves/CVE-2023-4732)  
 [CVE-2023-51782](cves/CVE-2023-51782)  
 [CVE-2023-6931](cves/CVE-2023-6931)  
+[CVE-2024-0193](cves/CVE-2024-0193)  

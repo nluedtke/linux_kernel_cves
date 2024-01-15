@@ -451,6 +451,7 @@ CVEs fixed in 5.10.117:
 CVEs fixed in 5.10.118:
   CVE-2022-1652: 911b36267855501f7f80a75927c128c0ac03fe58 floppy: use a statically allocated error counter
   CVE-2022-1729: 3ee8e109c3c316073a3e0f83ec0769c7ee8a7375 perf: Fix sys_perf_event_open() race against self
+  CVE-2022-48619: d5e88c2d76efa9d7bb7ceffaec60fe6c76c748d7 Input: add bounds checking to input_set_capability()
   CVE-2023-1838: ec0d801d1a44d9259377142c6218885ecd685e41 Fix double fget() in vhost_net_set_backend()
   CVE-2023-4387: a54d86cf418427584e0a3cd1e89f757c92df5e89 net: vmxnet3: fix possible use-after-free bugs in vmxnet3_rq_alloc_rx_buf()
   CVE-2023-4459: 6e2caee5cddc3d9e0ad0484c9c21b9f10676c044 net: vmxnet3: fix possible NULL pointer dereference in vmxnet3_rq_cleanup()
@@ -851,7 +852,6 @@ CVEs fixed in 5.10.205:
 CVEs fixed in 5.10.206:
   CVE-2023-51779: db1b14eec8c61a20374de9f9c2ddc6c9406a8c42 Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg
   CVE-2023-6606: 0c54b79d1d9b25f5a406bcf1969f956e14c4704d smb: client: fix OOB in smbCalcSize()
-  CVE-2024-0193: 73117ea03363d4493bd4e9f82f29b34b92d88a91 netfilter: nf_tables: skip set commit for deleted/destroyed sets
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -927,7 +927,6 @@ Outstanding CVEs:
   CVE-2022-1247: (unk)  
   CVE-2022-1263: (unk) KVM: avoid NULL pointer dereference in kvm_dirty_ring_push 
   CVE-2022-1280: (unk) drm: avoid circular locks in drm_mode_getconnector 
-  CVE-2022-1508: (unk) io_uring: reexpand under-reexpanded iters 
   CVE-2022-20148: (unk) f2fs: fix UAF in f2fs_available_free_memory 
   CVE-2022-20409: (unk) io_uring: remove io_identity 
   CVE-2022-20424: (unk) io_uring: remove io_identity 
@@ -972,6 +971,7 @@ Outstanding CVEs:
   CVE-2023-0597: (unk) x86/mm: Randomize per-cpu entry area 
   CVE-2023-1075: (unk) net/tls: tls_is_tx_ready() checked list_entry 
   CVE-2023-1295: (unk) io_uring: get rid of intermediate IORING_OP_CLOSE stage 
+  CVE-2023-1476: (unk)  
   CVE-2023-1872: (unk) io_uring: propagate issue_flags state down to file assignment 
   CVE-2023-2007: (unk) scsi: dpt_i2o: Remove obsolete driver 
   CVE-2023-20928: (unk) android: binder: stop saving a pointer to the VMA 
@@ -982,7 +982,6 @@ Outstanding CVEs:
   CVE-2023-23000: (unk) phy: tegra: xusb: Fix return value of tegra_xusb_find_port_node function 
   CVE-2023-23039: (unk)  
   CVE-2023-23586: (unk) io_uring: remove io_identity 
-  CVE-2023-2430: (unk) io_uring/msg_ring: fix missing lock on overflow for IOPOLL 
   CVE-2023-26242: (unk)  
   CVE-2023-31081: (unk)  
   CVE-2023-31082: (unk)  
@@ -996,7 +995,6 @@ Outstanding CVEs:
   CVE-2023-4010: (unk)  
   CVE-2023-4133: (unk) cxgb4: fix use after free bugs caused by circular dependency problem 
   CVE-2023-4134: (unk) Input: cyttsp4_core - change del_timer_sync() to timer_shutdown_sync() 
-  CVE-2023-4610: (unk) Revert "mm: vmscan: make global slab shrink lockless" 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-47233: (unk)  
   CVE-2023-50431: (unk)  
