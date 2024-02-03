@@ -1,6 +1,7 @@
 
 CVEs fixed in 5.19:
   CVE-2022-36946: 99a63d36cb3ed5ca3aa6fcb64cffbeaf3b0fb164 netfilter: nf_queue: do not allow packet truncation below transport header offset
+  CVE-2023-2177: 181d8d2066c000ba0a0e6940a7ad80f1a0e68e9d sctp: leave the err path free in sctp_stream_init to sctp_stream_free
 
 CVEs fixed in 5.19.1:
   CVE-2022-26373: f826d0412d80348aa22274ec9884cab0950a350b x86/speculation: Add RSB VM Exit protections
@@ -35,6 +36,7 @@ CVEs fixed in 5.19.6:
   CVE-2022-3028: 6901885656c029c976498290b52f67f2c251e6a0 af_key: Do not call xfrm_probe_algs in parallel
   CVE-2022-39190: fdca693fcf26c11596e7aa1e540af2b4a5288c76 netfilter: nf_tables: disallow binding to already bound chain
   CVE-2023-4394: 4b124ad87244cd7f0883c5eaa38d2326b2154cad btrfs: fix possible memory leak in btrfs_get_dev_args_from_path()
+  CVE-2024-0562: 9a6c710f3bc10bc9cc23e1c080b53245b7f9d5b7 writeback: avoid use-after-free after removing device
 
 CVEs fixed in 5.19.7:
   CVE-2022-42703: 7877eaa1131147b4d6a063962f3aac0ab1b8ea1c mm/rmap: Fix anon_vma->degree ambiguity leading to double-reuse
@@ -129,6 +131,7 @@ Outstanding CVEs:
   CVE-2020-35501: (unk)  
   CVE-2021-0399: (unk)  
   CVE-2021-26934: (unk)  
+  CVE-2021-33631: (unk) ext4: fix kernel BUG in 'ext4_write_inline_data_end()' 
   CVE-2021-3542: (unk)  
   CVE-2021-3714: (unk)  
   CVE-2021-3847: (unk)  
@@ -174,7 +177,7 @@ Outstanding CVEs:
   CVE-2022-36280: (unk) drm/vmwgfx: Validate the box size for the snooped cursor 
   CVE-2022-3633: (unk) can: j1939: j1939_session_destroy(): fix memory leak of skbs 
   CVE-2022-3640: (unk) Bluetooth: L2CAP: fix use-after-free in l2cap_conn_del() 
-  CVE-2022-36402: (unk)  
+  CVE-2022-36402: (unk) drm/vmwgfx: Fix shader stage validation 
   CVE-2022-3642: (unk)  
   CVE-2022-3643: (unk) xen/netback: Ensure protocol headers don't fall in the non-linear area 
   CVE-2022-3649: (unk) nilfs2: fix use-after-free bug of struct nilfs_root 
@@ -284,7 +287,6 @@ Outstanding CVEs:
   CVE-2023-2163: (unk) bpf: Fix incorrect verifier pruning due to missing register precision taints 
   CVE-2023-2166: (unk) can: af_can: fix NULL pointer dereference in can_rcv_filter 
   CVE-2023-2176: (unk) RDMA/core: Refactor rdma_bind_addr 
-  CVE-2023-2177: (unk) sctp: leave the err path free in sctp_stream_init to sctp_stream_free 
   CVE-2023-2194: (unk) i2c: xgene-slimpro: Fix out-of-bounds bug in xgene_slimpro_i2c_xfer() 
   CVE-2023-2235: (unk) perf: Fix check before add_event_to_groups() in perf_group_detach() 
   CVE-2023-2236: (unk) io_uring/filetable: fix file reference underflow 
@@ -419,18 +421,23 @@ Outstanding CVEs:
   CVE-2023-45871: (unk) igb: set max size RX buffer when store bad packet is enabled 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
+  CVE-2023-46343: (unk) nfc: nci: fix possible NULL pointer dereference in send_acknowledge() 
   CVE-2023-46813: (unk) x86/sev: Check for user-space IOIO pointing to kernel space 
+  CVE-2023-46838: (unk) xen-netback: don't produce zero-size SKB frags 
   CVE-2023-46862: (unk) io_uring/fdinfo: lock SQ thread while retrieving thread cpu/pid 
   CVE-2023-47233: (unk)  
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
   CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 
-  CVE-2023-50431: (unk)  
+  CVE-2023-50431: (unk) accel/habanalabs: fix information leak in sec_attest_info() 
+  CVE-2023-51042: (unk) drm/amdgpu: Fix potential fence use-after-free v2 
+  CVE-2023-51043: (unk) drm/atomic: Fix potential use-after-free in nonblocking commits 
   CVE-2023-5158: (unk) vringh: don't use vringh_kiov_advance() in vringh_iov_xfer() 
   CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
   CVE-2023-51780: (unk) atm: Fix Use-After-Free in do_vcc_ioctl 
   CVE-2023-51781: (unk) appletalk: Fix Use-After-Free in atalk_ioctl 
   CVE-2023-51782: (unk) net/rose: Fix Use-After-Free in rose_ioctl 
   CVE-2023-5197: (unk) netfilter: nf_tables: disallow rule removal from chain binding 
+  CVE-2023-52340: (unk) ipv6: remove max_size check inline with ipv4 
   CVE-2023-5717: (unk) perf: Disallow mis-matched inherited group reads 
   CVE-2023-6039: (unk) net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs 
   CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
@@ -445,8 +452,28 @@ Outstanding CVEs:
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
   CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
   CVE-2023-6817: (unk) netfilter: nft_set_pipapo: skip inactive elements during set walk 
+  CVE-2023-6915: (unk) ida: Fix crash in ida_free when the bitmap is empty 
   CVE-2023-6931: (unk) perf: Fix perf_event_validate_size() 
   CVE-2023-6932: (unk) ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet 
   CVE-2023-7042: (unk)  
   CVE-2023-7192: (unk) netfilter: ctnetlink: fix possible refcount leak in ctnetlink_create_conntrack() 
   CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 
+  CVE-2024-0564: (unk)  
+  CVE-2024-0565: (unk) smb: client: fix OOB in receive_encrypted_standard() 
+  CVE-2024-0584: (unk) ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet 
+  CVE-2024-0607: (unk) netfilter: nf_tables: fix pointer math issue in nft_byteorder_eval() 
+  CVE-2024-0639: (unk) sctp: fix potential deadlock on &net->sctp.addr_wq_lock 
+  CVE-2024-0641: (unk) tipc: fix a potential deadlock on &tx->lock 
+  CVE-2024-0646: (unk) net: tls, update curr on splice as well 
+  CVE-2024-0775: (unk) ext4: improve error recovery code paths in __ext4_remount() 
+  CVE-2024-0841: (unk)  
+  CVE-2024-1085: (unk) netfilter: nf_tables: check if catch-all set element is active in next generation 
+  CVE-2024-1086: (unk) netfilter: nf_tables: reject QUEUE/DROP verdict parameters 
+  CVE-2024-21803: (unk)  
+  CVE-2024-22099: (unk)  
+  CVE-2024-22705: (unk) ksmbd: fix slab-out-of-bounds in smb_strndup_from_utf16() 
+  CVE-2024-23307: (unk)  
+  CVE-2024-23848: (unk)  
+  CVE-2024-23849: (unk)  
+  CVE-2024-23850: (unk)  
+  CVE-2024-23851: (unk)  

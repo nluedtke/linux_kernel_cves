@@ -1142,6 +1142,7 @@ CVEs fixed in 4.19.279:
   CVE-2023-1990: 3405eb641dafcc8b28d174784b203c1622c121bf nfc: st-nci: Fix use after free bug in ndlc_remove due to race condition
 
 CVEs fixed in 4.19.280:
+  CVE-2021-33631: 53bb0d3e0a3dfc9649add8133f1ecd9c1bc2dd70 ext4: fix kernel BUG in 'ext4_write_inline_data_end()'
   CVE-2022-4744: 8eb43d635950e27c29f1e9e49a23b31637f37757 tun: avoid double free in tun_free_netdev
   CVE-2023-1670: 526660c25d3b93b1232a525b75469048388f0928 xirc2ps_cs: Fix use after free bug in xirc2ps_detach
   CVE-2023-1989: af4d48754d5517d33bac5e504ff1f1de0808e29e Bluetooth: btsdio: fix use after free bug in btsdio_remove due to unfinished work
@@ -1170,6 +1171,7 @@ CVEs fixed in 4.19.283:
   CVE-2023-35823: 95e684340470a95ff4957cb9a536ec7a0461c75b media: saa7134: fix use after free bug in saa7134_finidev due to race condition
   CVE-2023-35824: 722c156c6eab40a6e7dda98dfa66724f9d5aeceb media: dm1105: Fix use after free bug in dm1105_remove due to race condition
   CVE-2023-35828: ad03fe033a71ed1fd2cb68a067198ae0e342f991 usb: gadget: udc: renesas_usb3: Fix use after free bug in renesas_usb3_remove due to race condition
+  CVE-2024-0775: 37302d4c2724dc92be5f90a3718eafa29834d586 ext4: improve error recovery code paths in __ext4_remount()
 
 CVEs fixed in 4.19.284:
   CVE-2022-34918: 835fd72f61c6162f10471df197f0e4b92b1a7b76 netfilter: nf_tables: stricter validation of element data
@@ -1208,11 +1210,13 @@ CVEs fixed in 4.19.291:
   CVE-2023-4132: 54073c46cbbd2c0c03d6f7d481540cb95cf181a1 media: usb: siano: Fix warning due to null work_func_t function pointer
   CVE-2023-4206: ad8f36f96696a7f1d191da66637c415959bab6d8 net/sched: cls_route: No longer copy tcf_result on update to avoid use-after-free
   CVE-2023-4208: 4aae24015ecd70d824a953e2dc5b0ca2c4769243 net/sched: cls_u32: No longer copy tcf_result on update to avoid use-after-free
+  CVE-2023-51043: 73a82b22963defa87204f0f9f44a534adf7f831a drm/atomic: Fix potential use-after-free in nonblocking commits
 
 CVEs fixed in 4.19.293:
   CVE-2023-1077: 84d90fb72a053c034b018fcc3cfaa6f606faf1c6 sched/rt: pick_next_rt_entity(): check list_entry
   CVE-2023-3772: 44f69c96f8a147413c23c68cda4d6fb5e23137cd xfrm: add NULL check in xfrm_update_ae_params
   CVE-2023-39194: a695f0e724330773283a6d67e149363b89087f76 net: xfrm: Fix xfrm_address_filter OOB read
+  CVE-2023-51042: f9da11d96bde3db277f061ac5a665c234d505787 drm/amdgpu: Fix potential fence use-after-free v2
 
 CVEs fixed in 4.19.295:
   CVE-2023-39189: 40d427ffccf9e60bd7288ea3748c066404a35622 netfilter: nfnetlink_osf: avoid OOB read
@@ -1229,6 +1233,7 @@ CVEs fixed in 4.19.296:
   CVE-2023-31085: a0d71e9e61da8a85a46774c67549739e28fda795 ubi: Refuse attaching if mtd's erasesize is 0
 
 CVEs fixed in 4.19.297:
+  CVE-2023-46343: 5622592f8f74ae3e594379af02e64ea84772d0dd nfc: nci: fix possible NULL pointer dereference in send_acknowledge()
   CVE-2023-5717: a714491fa92d2068358dd603cc50bf2062517bd8 perf: Disallow mis-matched inherited group reads
 
 CVEs fixed in 4.19.298:
@@ -1240,6 +1245,7 @@ CVEs fixed in 4.19.300:
 
 CVEs fixed in 4.19.301:
   CVE-2023-6932: 6b6f5c6671fdfde9c94efe6409fa9f39436017e7 ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet
+  CVE-2024-0584: 6b6f5c6671fdfde9c94efe6409fa9f39436017e7 ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet
 
 CVEs fixed in 4.19.302:
   CVE-2023-6931: f5d6ab016792c9d6d5280fdb7f8962eb3b8c620e perf: Fix perf_event_validate_size()
@@ -1251,6 +1257,13 @@ CVEs fixed in 4.19.303:
 
 CVEs fixed in 4.19.304:
   CVE-2023-6606: 89b6ae907c6bcc175bc95a67d6936217530a29ff smb: client: fix OOB in smbCalcSize()
+
+CVEs fixed in 4.19.305:
+  CVE-2023-52340: 95372b040ae689293c6863b90049f1af68410c8b ipv6: remove max_size check inline with ipv4
+  CVE-2023-6040: 087d38ae0fd5a9a41b949e97601b4b0d09336f19 netfilter: nf_tables: Reject tables of unsupported family
+
+CVEs fixed in 4.19.306:
+  CVE-2023-46838: 5bb8270789c88c0e4ad78c0de2f274f2275c7f6c xen-netback: don't produce zero-size SKB frags
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -1338,6 +1351,7 @@ Outstanding CVEs:
   CVE-2021-29155: (unk) bpf: Use correct permission flag for mixed signed bounds arithmetic 
   CVE-2021-32078: (unk) ARM: footbridge: remove personal server platform 
   CVE-2021-33061: (unk) ixgbe: add improvement for MDD response functionality 
+  CVE-2021-33630: (unk) net/sched: cbs: Fix not adding cbs instance to list 
   CVE-2021-3542: (unk)  
   CVE-2021-3669: (unk) ipc: replace costly bailout check in sysvipc_find_ipc() 
   CVE-2021-3714: (unk)  
@@ -1392,7 +1406,7 @@ Outstanding CVEs:
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3625: (unk) devlink: Fix use-after-free after a failed reload 
   CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
-  CVE-2022-36402: (unk)  
+  CVE-2022-36402: (unk) drm/vmwgfx: Fix shader stage validation 
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
@@ -1453,7 +1467,6 @@ Outstanding CVEs:
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
   CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
   CVE-2023-5178: (unk) nvmet-tcp: Fix a possible UAF in queue intialization setup 
-  CVE-2023-6040: (unk) netfilter: nf_tables: Reject tables of unsupported family 
   CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
   CVE-2023-6270: (unk)  
   CVE-2023-6356: (unk)  
@@ -1461,7 +1474,18 @@ Outstanding CVEs:
   CVE-2023-6536: (unk)  
   CVE-2023-6546: (unk) tty: n_gsm: fix the UAF caused by race condition in gsm_cleanup_mux 
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
-  CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
-  CVE-2023-6817: (unk) netfilter: nft_set_pipapo: skip inactive elements during set walk 
+  CVE-2023-6915: (unk) ida: Fix crash in ida_free when the bitmap is empty 
   CVE-2023-7042: (unk)  
   CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 
+  CVE-2024-0564: (unk)  
+  CVE-2024-0565: (unk) smb: client: fix OOB in receive_encrypted_standard() 
+  CVE-2024-0607: (unk) netfilter: nf_tables: fix pointer math issue in nft_byteorder_eval() 
+  CVE-2024-0841: (unk)  
+  CVE-2024-1086: (unk) netfilter: nf_tables: reject QUEUE/DROP verdict parameters 
+  CVE-2024-21803: (unk)  
+  CVE-2024-22099: (unk)  
+  CVE-2024-22705: (unk) ksmbd: fix slab-out-of-bounds in smb_strndup_from_utf16() 
+  CVE-2024-23307: (unk)  
+  CVE-2024-23848: (unk)  
+  CVE-2024-23849: (unk)  
+  CVE-2024-23851: (unk)  

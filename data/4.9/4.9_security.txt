@@ -327,6 +327,7 @@ CVEs fixed in 4.9.77:
   CVE-2017-13216: c51d23dffc2e9ca05d611c86c440f9055541c62d staging: android: ashmem: fix a race condition in ASHMEM_SET_SIZE ioctl
   CVE-2017-17741: c781e3be97a1cbeef8c853101e8f266db556b0a3 KVM: Fix stack-out-of-bounds read in write_mmio
   CVE-2017-5715: 26323fb4d717e11a69484c6df02eeef90dba7ef2 x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]
+  CVE-2017-5753: 26323fb4d717e11a69484c6df02eeef90dba7ef2 x86/cpufeatures: Add X86_BUG_SPECTRE_V[12]
   CVE-2018-5332: cebb382931c4fb341162eae80b696650260e4a2b RDS: Heap OOB write in rds_message_alloc_sgs()
   CVE-2018-5333: ce31b6ac1111096ae9bb0b45f4ba564a909bb366 RDS: null pointer dereference in rds_atomic_free_op
 
@@ -1412,7 +1413,6 @@ Outstanding CVEs:
   CVE-2017-18232: (unk) scsi: libsas: direct call probe and destruct 
   CVE-2017-18261: (unk) clocksource/drivers/arm_arch_timer: Avoid infinite recursion when ftrace is enabled 
   CVE-2017-18552: (unk) RDS: validate the requested traces user input against max supported 
-  CVE-2017-5753: (unk) x86/cpufeatures: Add X86_BUG_SPECTRE_V[12] 
   CVE-2017-5967: (unk) time: Remove CONFIG_TIMER_STATS 
   CVE-2017-8065: (unk) crypto: ccm - move cbcmac input off the stack 
   CVE-2017-9986: (unk) sound: Retire OSS 
@@ -1520,6 +1520,8 @@ Outstanding CVEs:
   CVE-2021-32078: (unk) ARM: footbridge: remove personal server platform 
   CVE-2021-33061: (unk) ixgbe: add improvement for MDD response functionality 
   CVE-2021-33098: (unk) ixgbe: fix large MTU request from VF 
+  CVE-2021-33630: (unk) net/sched: cbs: Fix not adding cbs instance to list 
+  CVE-2021-33631: (unk) ext4: fix kernel BUG in 'ext4_write_inline_data_end()' 
   CVE-2021-33655: (unk) fbcon: Disallow setting font bigger than screen size 
   CVE-2021-34556: (unk) bpf: Introduce BPF nospec instruction for mitigating Spectre v4 
   CVE-2021-3506: (unk) f2fs: fix to avoid out-of-bounds memory access 
@@ -1596,7 +1598,7 @@ Outstanding CVEs:
   CVE-2022-3606: (unk)  
   CVE-2022-3624: (unk) bonding: fix reference count leak in balance-alb mode 
   CVE-2022-3636: (unk) net: ethernet: mtk_eth_soc: use after free in __mtk_ppe_check_skb() 
-  CVE-2022-36402: (unk)  
+  CVE-2022-36402: (unk) drm/vmwgfx: Fix shader stage validation 
   CVE-2022-3642: (unk)  
   CVE-2022-38096: (unk)  
   CVE-2022-3903: (unk) media: mceusb: Use new usb_control_msg_*() routines 
@@ -1722,14 +1724,18 @@ Outstanding CVEs:
   CVE-2023-45871: (unk) igb: set max size RX buffer when store bad packet is enabled 
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-4623: (unk) net/sched: sch_hfsc: Ensure inner classes have fsc curve 
+  CVE-2023-46343: (unk) nfc: nci: fix possible NULL pointer dereference in send_acknowledge() 
+  CVE-2023-46838: (unk) xen-netback: don't produce zero-size SKB frags 
   CVE-2023-47233: (unk)  
   CVE-2023-4881: (unk) netfilter: nftables: exthdr: fix 4-byte stack OOB write 
   CVE-2023-4921: (unk) net: sched: sch_qfq: Fix UAF in qfq_dequeue() 
+  CVE-2023-51043: (unk) drm/atomic: Fix potential use-after-free in nonblocking commits 
   CVE-2023-51779: (unk) Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg 
   CVE-2023-5178: (unk) nvmet-tcp: Fix a possible UAF in queue intialization setup 
   CVE-2023-51780: (unk) atm: Fix Use-After-Free in do_vcc_ioctl 
   CVE-2023-51781: (unk) appletalk: Fix Use-After-Free in atalk_ioctl 
   CVE-2023-51782: (unk) net/rose: Fix Use-After-Free in rose_ioctl 
+  CVE-2023-52340: (unk) ipv6: remove max_size check inline with ipv4 
   CVE-2023-5717: (unk) perf: Disallow mis-matched inherited group reads 
   CVE-2023-6040: (unk) netfilter: nf_tables: Reject tables of unsupported family 
   CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
@@ -1740,10 +1746,21 @@ Outstanding CVEs:
   CVE-2023-6546: (unk) tty: n_gsm: fix the UAF caused by race condition in gsm_cleanup_mux 
   CVE-2023-6606: (unk) smb: client: fix OOB in smbCalcSize() 
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
-  CVE-2023-6622: (unk) netfilter: nf_tables: bail out on mismatching dynset and set expressions 
-  CVE-2023-6817: (unk) netfilter: nft_set_pipapo: skip inactive elements during set walk 
+  CVE-2023-6915: (unk) ida: Fix crash in ida_free when the bitmap is empty 
   CVE-2023-6931: (unk) perf: Fix perf_event_validate_size() 
   CVE-2023-6932: (unk) ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet 
   CVE-2023-7042: (unk)  
   CVE-2023-7192: (unk) netfilter: ctnetlink: fix possible refcount leak in ctnetlink_create_conntrack() 
   CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 
+  CVE-2024-0564: (unk)  
+  CVE-2024-0584: (unk) ipv4: igmp: fix refcnt uaf issue when receiving igmp query packet 
+  CVE-2024-0607: (unk) netfilter: nf_tables: fix pointer math issue in nft_byteorder_eval() 
+  CVE-2024-0775: (unk) ext4: improve error recovery code paths in __ext4_remount() 
+  CVE-2024-0841: (unk)  
+  CVE-2024-1086: (unk) netfilter: nf_tables: reject QUEUE/DROP verdict parameters 
+  CVE-2024-21803: (unk)  
+  CVE-2024-22099: (unk)  
+  CVE-2024-22705: (unk) ksmbd: fix slab-out-of-bounds in smb_strndup_from_utf16() 
+  CVE-2024-23307: (unk)  
+  CVE-2024-23848: (unk)  
+  CVE-2024-23851: (unk)  
