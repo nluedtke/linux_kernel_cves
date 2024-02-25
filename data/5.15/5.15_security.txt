@@ -708,6 +708,8 @@ CVEs fixed in 5.15.145:
   CVE-2023-38430: 0d1a3f97efbe73fe6d6c18574e6ac94cd2492c11 ksmbd: validate smb request protocol id
   CVE-2023-38431: df3a4518aee64f21bcafa891105b468413f27431 ksmbd: check the validation of pdu_size in ksmbd_conn_handler_loop
   CVE-2023-3867: 97f5c1e3086c8ba1473c265d9a5523cc9ef5579e ksmbd: add missing compound request handing in some commands
+  CVE-2023-52441: 5c0df9d30c289d6b9d7d44e2a450de2f8e3cf40b ksmbd: fix out of bounds in init_smb2_rsp_hdr()
+  CVE-2023-52442: 017d85c94f02090a87f4a473dbe0d6ee0da72693 ksmbd: validate session id and tree id in compound request
 
 CVEs fixed in 5.15.146:
   CVE-2023-51779: 2b16d960c79abc397f102c3d23d30005b68cb036 Bluetooth: af_bluetooth: Fix Use-After-Free in bt_sock_recvmsg
@@ -721,8 +723,42 @@ CVEs fixed in 5.15.147:
 
 CVEs fixed in 5.15.148:
   CVE-2023-46838: e03023fcdb5e959d4252b3a38e1b27afb6c1c23c xen-netback: don't produce zero-size SKB frags
+  CVE-2023-52436: 32a6cfc67675ee96fe107aeed5af9776fec63f11 f2fs: explicitly null-terminate the xattr list
+  CVE-2023-52438: 8ad4d580e8aff8de2a4d57c5930fcc29f1ffd4a6 binder: fix use-after-free in shinker's callback
+  CVE-2023-52439: 5cf604ee538ed0c467abe3b4cda5308a6398f0f7 uio: Fix use-after-free in uio_open
+  CVE-2023-52443: 0a12db736edbb4933e4274932aeea594b5876fa4 apparmor: avoid crash when parsed profile name is empty
+  CVE-2023-52444: f100ba617d8be6c98a68f3744ef7617082975b77 f2fs: fix to avoid dirent corruption
+  CVE-2023-52445: ec3634ebe23fc3c44ebc67c6d25917300bc68c08 media: pvrusb2: fix use after free on context disconnection
+  CVE-2023-52448: ee0586d73cbaf0e7058bc640d62a9daf2dfa9178 gfs2: Fix kernel NULL pointer dereference in gfs2_rgrp_dump
+  CVE-2023-52449: d8ac2537763b54d278b80b2b080e1652523c7d4c mtd: Fix gluebi NULL pointer dereference caused by ftl notifier
+  CVE-2023-52451: 999a27b3ce9a69d54ccd5db000ec3a447bc43e6d powerpc/pseries/memhp: Fix access beyond end of drmem array
+  CVE-2023-52454: 4cb3cf7177ae3666be7fb27d4ad4d72a295fb02d nvmet-tcp: Fix a kernel panic when host sends an invalid H2C PDU length
+  CVE-2023-52456: ff168d4fdb0e1ba35fb413a749b3d6cce918ec19 serial: imx: fix tx statemachine deadlock
+  CVE-2023-52457: 828cd829483f0cda920710997aed79130b0af690 serial: 8250: omap: Don't skip resource freeing if pm_runtime_resume_and_get() failed
+  CVE-2023-52458: 5010c27120962c85d2f421d2cf211791c9603503 block: add check that partition length needs to be aligned with block size
+  CVE-2023-52463: 2aa141f8bc580f8f9811dfe4e0e6009812b73826 efivarfs: force RO when remounting if SetVariable is not supported
+  CVE-2023-52464: 700cf4bead80fac994dcc43ae1ca5d86d8959b21 EDAC/thunderx: Fix possible out-of-bounds string access
   CVE-2023-6915: 5dbcdaf4dbfe074e9142991c5c28eef789c1f6c6 ida: Fix crash in ida_free when the bitmap is empty
   CVE-2024-1085: c9ed30eea4f7bfa2441235ce23abd339ee671f50 netfilter: nf_tables: check if catch-all set element is active in next generation
+  CVE-2024-24860: 4c71c01df8ef209e7fe22b58666cd2cf3dbafb44 Bluetooth: Fix atomicity violation in {min,max}_key_size_set
+  CVE-2024-26586: 348112522a35527c5bcba933b9fefb40a4f44f15 mlxsw: spectrum_acl_tcam: Fix stack corruption
+  CVE-2024-26589: 29ffa63f21bcdcef3e36b03cccf9d0cd031f6ab0 bpf: Reject variable offset alu on PTR_TO_FLOW_KEYS
+  CVE-2024-26591: a7b98aa10f895e2569403896f2d19b73b6c95653 bpf: Fix re-attachment branch in bpf_tracing_prog_attach
+  CVE-2024-26597: 3b5254862258b595662a0ccca6e9eeb88d6e7468 net: qualcomm: rmnet: fix global oob in rmnet_policy
+  CVE-2024-26598: 12c2759ab1343c124ed46ba48f27bd1ef5d2dff4 KVM: arm64: vgic-its: Avoid potential UAF in LPI translation cache
+
+CVEs fixed in 5.15.149:
+  CVE-2023-52429: 888a0a46b80fa37eacfe81faf47ba0b83876251d dm: limit the number of targets and parameter size area
+  CVE-2023-52435: 6c53e8547687d9c767c139cd4b50af566f58c29a net: prevent mss overflow in skb_segment()
+  CVE-2024-0340: be38f291fd4d106be66370debd23d625c576023e vhost: use kzalloc() instead of kmalloc() followed by memset()
+  CVE-2024-1086: 960cf4f812530f01f6acc6878ceaa5404c06af7b netfilter: nf_tables: reject QUEUE/DROP verdict parameters
+  CVE-2024-1151: c45f2fa92cb273f77be33b60a120ff7cf6df8085 net: openvswitch: limit the number of recursions from action sets
+  CVE-2024-23849: 00d1ee8e1d02194f7b7b433e904e04bbcd2cc0dc net/rds: Fix UBSAN: array-index-out-of-bounds in rds_cmsg_recv
+  CVE-2024-23850: e31546b0f34af21738c4ceac47d662c00ee6382f btrfs: do not ASSERT() if the newly created subvolume already got read
+  CVE-2024-23851: 888a0a46b80fa37eacfe81faf47ba0b83876251d dm: limit the number of targets and parameter size area
+  CVE-2024-26592: 999daf367b924fdf14e9d83e034ee0f86bc17ec6 ksmbd: fix UAF issue in ksmbd_tcp_new_connection()
+  CVE-2024-26593: 1f8d0691c50581ba6043f009ec9e8b9f78f09d5a i2c: i801: Fix block process call transactions
+  CVE-2024-26594: dd1de9268745f0eac83a430db7afc32cbd62e84b ksmbd: validate mech token in session setup
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -843,6 +879,9 @@ Outstanding CVEs:
   CVE-2023-4622: (unk) unix: Convert unix_stream_sendpage() to use MSG_SPLICE_PAGES 
   CVE-2023-47233: (unk)  
   CVE-2023-50431: (unk) accel/habanalabs: fix information leak in sec_attest_info() 
+  CVE-2023-52434: (unk) smb: client: fix potential OOBs in smb2_parse_contexts() 
+  CVE-2023-52447: (unk) bpf: Defer the free of inner map when necessary 
+  CVE-2023-52452: (unk) bpf: Fix accesses to uninit stack slots 
   CVE-2023-6039: (unk) net: usb: lan78xx: reorder cleanup operations to avoid UAF bugs 
   CVE-2023-6240: (unk)  
   CVE-2023-6270: (unk)  
@@ -852,11 +891,9 @@ Outstanding CVEs:
   CVE-2023-6560: (unk) io_uring: don't allow discontig pages for IORING_SETUP_NO_MMAP 
   CVE-2023-6610: (unk) smb: client: fix potential OOB in smb2_dump_detail() 
   CVE-2023-7042: (unk)  
-  CVE-2024-0340: (unk) vhost: use kzalloc() instead of kmalloc() followed by memset() 
   CVE-2024-0564: (unk)  
   CVE-2024-0565: (unk) smb: client: fix OOB in receive_encrypted_standard() 
   CVE-2024-0841: (unk)  
-  CVE-2024-1086: (unk) netfilter: nf_tables: reject QUEUE/DROP verdict parameters 
   CVE-2024-1312: (unk) mm: lock_vma_under_rcu() must check vma->anon_vma under vma lock 
   CVE-2024-21803: (unk)  
   CVE-2024-22099: (unk)  
@@ -864,13 +901,19 @@ Outstanding CVEs:
   CVE-2024-23196: (unk)  
   CVE-2024-23307: (unk)  
   CVE-2024-23848: (unk)  
-  CVE-2024-23849: (unk) net/rds: Fix UBSAN: array-index-out-of-bounds in rds_cmsg_recv 
-  CVE-2024-23850: (unk) btrfs: do not ASSERT() if the newly created subvolume already got read 
-  CVE-2024-23851: (unk)  
-  CVE-2024-24855: (unk)  
+  CVE-2024-24855: (unk) scsi: lpfc: Fix a possible data race in lpfc_unregister_fcf_rescan() 
   CVE-2024-24857: (unk)  
   CVE-2024-24858: (unk)  
   CVE-2024-24859: (unk)  
-  CVE-2024-24860: (unk)  
   CVE-2024-24861: (unk)  
   CVE-2024-24864: (unk)  
+  CVE-2024-25739: (unk)  
+  CVE-2024-25740: (unk)  
+  CVE-2024-25741: (unk)  
+  CVE-2024-25744: (unk) x86/coco: Disable 32-bit emulation by default on TDX and SEV 
+  CVE-2024-26583: (unk) tls: fix race between async notify and socket close 
+  CVE-2024-26584: (unk) net: tls: handle backlogging of crypto requests 
+  CVE-2024-26585: (unk) tls: fix race between tx work scheduling and socket close 
+  CVE-2024-26587: (unk) net: netdevsim: don't try to destroy PHC on VFs 
+  CVE-2024-26588: (unk) LoongArch: BPF: Prevent out-of-bounds memory access 
+  CVE-2024-26595: (unk) mlxsw: spectrum_acl_tcam: Fix NULL pointer dereference in error path 

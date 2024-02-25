@@ -2,6 +2,9 @@
 CVEs fixed in 6.5:
   CVE-2022-36402: 14abdfae508228a7307f7491b5c4215ae70c6542 drm/vmwgfx: Fix shader stage validation
 
+CVEs fixed in 6.5.2:
+  CVE-2023-52440: ecd7e1c562cb08e41957fcd4b0e404de5ab38e20 ksmbd: fix slub overflow in ksmbd_decode_ntlmssp_auth_blob()
+
 CVEs fixed in 6.5.3:
   CVE-2023-25775: 782c5702b933477b088e80e6d07b9493145b2916 RDMA/irdma: Prevent zero-length STAG registration
   CVE-2023-37453: b9fbfb349eacc0820f91c797d7f0a3ac7a4935b5 USB: core: Fix race by not overwriting udev->descriptor in hub_port_init()
@@ -17,6 +20,7 @@ CVEs fixed in 6.5.4:
   CVE-2023-45898: c15bf3330a9e3c01b23e59899a6a02432a62ddc3 ext4: fix slab-use-after-free in ext4_es_insert_extent()
   CVE-2023-4881: c8f292322ff16b9a2272a67de396c09a50e09dce netfilter: nftables: exthdr: fix 4-byte stack OOB write
   CVE-2023-4921: e5471b82c36396e809817cb988dfc4bce0a688cb net: sched: sch_qfq: Fix UAF in qfq_dequeue()
+  CVE-2023-52433: e3213ff99a355cda811b41e8dbb3472d13167a3a netfilter: nft_set_rbtree: skip sync GC for new elements in this transaction
   CVE-2023-6176: 74aecad5da19004ccf6321fd397d14b10756622a net/tls: do not free tls_rec on async operation in bpf_exec_tx_verdict()
 
 CVEs fixed in 6.5.6:
@@ -141,6 +145,31 @@ Outstanding CVEs:
   CVE-2023-51780: (unk) atm: Fix Use-After-Free in do_vcc_ioctl 
   CVE-2023-51781: (unk) appletalk: Fix Use-After-Free in atalk_ioctl 
   CVE-2023-51782: (unk) net/rose: Fix Use-After-Free in rose_ioctl 
+  CVE-2023-52429: (unk) dm: limit the number of targets and parameter size area 
+  CVE-2023-52434: (unk) smb: client: fix potential OOBs in smb2_parse_contexts() 
+  CVE-2023-52435: (unk) net: prevent mss overflow in skb_segment() 
+  CVE-2023-52436: (unk) f2fs: explicitly null-terminate the xattr list 
+  CVE-2023-52438: (unk) binder: fix use-after-free in shinker's callback 
+  CVE-2023-52439: (unk) uio: Fix use-after-free in uio_open 
+  CVE-2023-52443: (unk) apparmor: avoid crash when parsed profile name is empty 
+  CVE-2023-52444: (unk) f2fs: fix to avoid dirent corruption 
+  CVE-2023-52445: (unk) media: pvrusb2: fix use after free on context disconnection 
+  CVE-2023-52446: (unk) bpf: Fix a race condition between btf_put() and map_free() 
+  CVE-2023-52447: (unk) bpf: Defer the free of inner map when necessary 
+  CVE-2023-52448: (unk) gfs2: Fix kernel NULL pointer dereference in gfs2_rgrp_dump 
+  CVE-2023-52449: (unk) mtd: Fix gluebi NULL pointer dereference caused by ftl notifier 
+  CVE-2023-52450: (unk) perf/x86/intel/uncore: Fix NULL pointer dereference issue in upi_fill_topology() 
+  CVE-2023-52451: (unk) powerpc/pseries/memhp: Fix access beyond end of drmem array 
+  CVE-2023-52452: (unk) bpf: Fix accesses to uninit stack slots 
+  CVE-2023-52453: (unk) hisi_acc_vfio_pci: Update migration data pointer correctly on saving/resume 
+  CVE-2023-52454: (unk) nvmet-tcp: Fix a kernel panic when host sends an invalid H2C PDU length 
+  CVE-2023-52455: (unk) iommu: Don't reserve 0-length IOVA region 
+  CVE-2023-52456: (unk) serial: imx: fix tx statemachine deadlock 
+  CVE-2023-52457: (unk) serial: 8250: omap: Don't skip resource freeing if pm_runtime_resume_and_get() failed 
+  CVE-2023-52458: (unk) block: add check that partition length needs to be aligned with block size 
+  CVE-2023-52462: (unk) bpf: fix check for attempt to corrupt spilled pointer 
+  CVE-2023-52463: (unk) efivarfs: force RO when remounting if SetVariable is not supported 
+  CVE-2023-52464: (unk) EDAC/thunderx: Fix possible out-of-bounds string access 
   CVE-2023-6121: (unk) nvmet: nul-terminate the NQNs passed in the connect command 
   CVE-2023-6238: (unk)  
   CVE-2023-6240: (unk)  
@@ -167,6 +196,7 @@ Outstanding CVEs:
   CVE-2024-0841: (unk)  
   CVE-2024-1085: (unk) netfilter: nf_tables: check if catch-all set element is active in next generation 
   CVE-2024-1086: (unk) netfilter: nf_tables: reject QUEUE/DROP verdict parameters 
+  CVE-2024-1151: (unk) net: openvswitch: limit the number of recursions from action sets 
   CVE-2024-21803: (unk)  
   CVE-2024-22099: (unk)  
   CVE-2024-22386: (unk)  
@@ -176,11 +206,33 @@ Outstanding CVEs:
   CVE-2024-23848: (unk)  
   CVE-2024-23849: (unk) net/rds: Fix UBSAN: array-index-out-of-bounds in rds_cmsg_recv 
   CVE-2024-23850: (unk) btrfs: do not ASSERT() if the newly created subvolume already got read 
-  CVE-2024-23851: (unk)  
-  CVE-2024-24855: (unk)  
+  CVE-2024-23851: (unk) dm: limit the number of targets and parameter size area 
   CVE-2024-24857: (unk)  
   CVE-2024-24858: (unk)  
   CVE-2024-24859: (unk)  
-  CVE-2024-24860: (unk)  
+  CVE-2024-24860: (unk) Bluetooth: Fix atomicity violation in {min,max}_key_size_set 
   CVE-2024-24861: (unk)  
   CVE-2024-24864: (unk)  
+  CVE-2024-25739: (unk)  
+  CVE-2024-25740: (unk)  
+  CVE-2024-25741: (unk)  
+  CVE-2024-25744: (unk) x86/coco: Disable 32-bit emulation by default on TDX and SEV 
+  CVE-2024-26581: (unk) netfilter: nft_set_rbtree: skip end interval element from gc 
+  CVE-2024-26582: (unk) net: tls: fix use-after-free with partial reads and async decrypt 
+  CVE-2024-26583: (unk) tls: fix race between async notify and socket close 
+  CVE-2024-26584: (unk) net: tls: handle backlogging of crypto requests 
+  CVE-2024-26585: (unk) tls: fix race between tx work scheduling and socket close 
+  CVE-2024-26586: (unk) mlxsw: spectrum_acl_tcam: Fix stack corruption 
+  CVE-2024-26587: (unk) net: netdevsim: don't try to destroy PHC on VFs 
+  CVE-2024-26588: (unk) LoongArch: BPF: Prevent out-of-bounds memory access 
+  CVE-2024-26589: (unk) bpf: Reject variable offset alu on PTR_TO_FLOW_KEYS 
+  CVE-2024-26590: (unk) erofs: fix inconsistent per-file compression format 
+  CVE-2024-26591: (unk) bpf: Fix re-attachment branch in bpf_tracing_prog_attach 
+  CVE-2024-26592: (unk) ksmbd: fix UAF issue in ksmbd_tcp_new_connection() 
+  CVE-2024-26593: (unk) i2c: i801: Fix block process call transactions 
+  CVE-2024-26594: (unk) ksmbd: validate mech token in session setup 
+  CVE-2024-26595: (unk) mlxsw: spectrum_acl_tcam: Fix NULL pointer dereference in error path 
+  CVE-2024-26596: (unk) net: dsa: fix netdev_priv() dereference before check on non-DSA netdevice events 
+  CVE-2024-26597: (unk) net: qualcomm: rmnet: fix global oob in rmnet_policy 
+  CVE-2024-26598: (unk) KVM: arm64: vgic-its: Avoid potential UAF in LPI translation cache 
+  CVE-2024-26599: (unk) pwm: Fix out-of-bounds access in of_pwm_single_xlate() 
