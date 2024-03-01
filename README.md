@@ -1,6 +1,6 @@
 # linux_kernel_cves
 
-This is a simple project to track CVEs in the upstream linux kernel.
+This is a simple project to track common vulnerability and exposure cases (CVEs) in the upstream linux kernel.
 Individual distro's (RHEL, Debian, Ubuntu, etc) often do a good job of
 tracking CVEs for their own kernels but this information is lacking for
 the upstream kernel. This project aims to help out with this void. The output
