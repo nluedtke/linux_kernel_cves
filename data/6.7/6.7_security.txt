@@ -32,6 +32,21 @@ CVEs fixed in 6.7.2:
   CVE-2023-52462: 40617d45ea05535105e202a8a819e388a2b1f036 bpf: fix check for attempt to corrupt spilled pointer
   CVE-2023-52463: d4a714873db0866cc471521114eeac4a5072d548 efivarfs: force RO when remounting if SetVariable is not supported
   CVE-2023-52464: 426fae93c01dffa379225eb2bd4d3cdc42c6eec5 EDAC/thunderx: Fix possible out-of-bounds string access
+  CVE-2023-52465: bd3d2ec447ede9da822addf3960a5f4275e3ae76 power: supply: Fix null pointer dereference in smb2_probe
+  CVE-2023-52467: 7f2c410ac470959b88e03dadd94b7a0b71df7973 mfd: syscon: Fix null pointer dereference in of_syscon_register()
+  CVE-2023-52468: 0f1486dafca3398c4c46b9f6e6452fa27e73b559 class: fix use-after-free in class_register()
+  CVE-2023-52469: 3426f059eacc33ecc676b0d66539297e1cfafd02 drivers/amd/pm: fix a use-after-free in kv_parse_power_table
+  CVE-2023-52470: fb2d8bc9b5e55848b8a7c3c028e2ee8d49f28f97 drm/radeon: check the alloc_workqueue return value in radeon_crtc_init()
+  CVE-2023-52471: 3cd9b9bee33f39f6c6d52360fe381b89a7b12695 ice: Fix some null pointer dereference issues in ice_ptp.c
+  CVE-2023-52472: 95ad8b6879e2e49d02e3bfc0e1fb46421633fe2a crypto: rsa - add a check for allocation failure
+  CVE-2023-52473: 02871710b93058eb1249d5847c0b2d1c2c3c98ae thermal: core: Fix NULL pointer dereference in zone registration error path
+  CVE-2023-52609: 77d210e8db4d61d43b2d16df66b1ec46fad2ee01 binder: fix race between mmput() and do_exit()
+  CVE-2023-52610: f5346df0591d10bc948761ca854b1fae6d2ef441 net/sched: act_ct: fix skb leak and crash on ooo frags
+  CVE-2023-52611: 0e9ffff72a0674cd6656314dbd99cdd2123a3030 wifi: rtw88: sdio: Honor the host max_req_size in the RX path
+  CVE-2023-52612: 71c6670f9f032ec67d8f4e3f8db4646bf5a62883 crypto: scomp - fix req->dst buffer overflow
+  CVE-2023-52613: 6010a9fc14eb1feab5cafd84422001134fe8ec58 drivers/thermal/loongson2_thermal: Fix incorrect PTR_ERR() judgment
+  CVE-2023-6356: 70154e8d015c9b4fb56c1a2ef1fc8b83d45c7f68 nvmet-tcp: Fix a kernel panic when host sends an invalid H2C PDU length
+  CVE-2023-6536: c32d355f507fa81cf23aaa4dd4150e696cb8ebaf nvmet-tcp: fix a crash in nvmet_req_complete()
   CVE-2024-1085: 7e0f5f8ae3e5f17e367f7040ade7a467f1f0e3b9 netfilter: nf_tables: check if catch-all set element is active in next generation
   CVE-2024-24860: d1c6a77d6d48215ba723f910eaabdb6e60d21a37 Bluetooth: Fix atomicity violation in {min,max}_key_size_set
   CVE-2024-26586: a361c2c1da5dbb13ca67601cf961ab3ad68af383 mlxsw: spectrum_acl_tcam: Fix stack corruption
@@ -47,16 +62,143 @@ CVEs fixed in 6.7.2:
   CVE-2024-26597: 17d06a5c44d8fd2e8e61bac295b09153496f87e1 net: qualcomm: rmnet: fix global oob in rmnet_policy
   CVE-2024-26598: dd3956a1b3dd11f46488c928cb890d6937d1ca80 KVM: arm64: vgic-its: Avoid potential UAF in LPI translation cache
   CVE-2024-26599: bae45b7ebb31984b63b13c3519fd724b3ce92123 pwm: Fix out-of-bounds access in of_pwm_single_xlate()
+  CVE-2024-26631: 3bb5849675ae1d592929798a2b37ea450879c855 ipv6: mcast: fix data-race in ipv6_mc_down / mld_ifc_work
+  CVE-2024-26632: ca3ede3f5893e2d26d4dbdef1eec28a8487fafde block: Fix iterating over an empty bio with bio_for_each_folio_all
+  CVE-2024-26633: ba8d904c274268b18ef3dc11d3ca7b24a96cb087 ip6_tunnel: fix NEXTHDR_FRAGMENT handling in ip6_tnl_parse_tlv_enc_lim()
 
 CVEs fixed in 6.7.3:
+  CVE-2023-52485: 303197775a97416b62d4da69280d0c120a20e009 drm/amd/display: Wake DMCUB before sending a command
+  CVE-2023-52486: bfd0feb1b109cb63b87fdcd00122603787c75a1a drm: Don't unref the same fb many times by mistake due to deadlock handling
+  CVE-2023-52487: e24d6f5a7f2d95a98a46257a5a5a5381d572894f net/mlx5e: Fix peer flow lists handling
+  CVE-2023-52488: aa7cb4787698add9367b19f7afc667662c9bdb23 serial: sc16is7xx: convert from _raw_ to _noinc_ regmap functions for FIFO
+  CVE-2023-52489: 3a01daace71b521563c38bbbf874e14c3e58adb7 mm/sparsemem: fix race in accessing memory_section->usage
+  CVE-2023-52490: 3889a418b6eb9a1113fb989aaadecf2f64964767 mm: migrate: fix getting incorrect page mapping during page migration
+  CVE-2023-52491: 6e2f37022f0fc0893da4d85a0500c9d547fffd4c media: mtk-jpeg: Fix use after free bug due to error path handling in mtk_jpeg_dec_device_run
+  CVE-2023-52492: 9263fd2a63487c6d04cbb7b74a48fb12e1e352d0 dmaengine: fix NULL pointer in channel unregistration function
+  CVE-2023-52493: b8eff20d87092e14cac976d057cb0aea2f1d0830 bus: mhi: host: Drop chan lock before queuing buffers
+  CVE-2023-52494: ecf8320111822a1ae5d5fc512953eab46d543d0b bus: mhi: host: Add alignment check for event ring read pointer
+  CVE-2023-52495: d26edf4ee3672cc9828f2a3ffae34086a712574d soc: qcom: pmic_glink_altmode: fix port sanity check
+  CVE-2023-52497: bffc4cc334c5bb31ded54bc3cfd651735a3cb79e erofs: fix lz4 inplace decompression
+  CVE-2023-52498: 9bd3dce27b01c51295b60e1433e1dadfb16649f7 PM: sleep: Fix possible deadlocks in core system-wide PM code
+  CVE-2023-52608: 12dc4217f16551d6dee9cbefc23fdb5659558cda firmware: arm_scmi: Check mailbox/SMT channel for consistency
+  CVE-2023-52614: eaef4650fa2050147ca25fd7ee43bc0082e03c87 PM / devfreq: Fix buffer overflow in trans_stat_show
+  CVE-2023-52615: 6822a14271786150e178869f1495cc03e74c5029 hwrng: core - Fix page fault dead lock on mmap-ed hwrng
+  CVE-2023-52616: 7abdfd45a650c714d5ebab564bb1b988f14d9b49 crypto: lib/mpi - Fix unexpected pointer access in mpi_ec_init
+  CVE-2023-52624: 2ef98c6d753a744e333b7e34b9cf687040fba57d drm/amd/display: Wake DMCUB before executing GPINT commands
+  CVE-2023-52625: 820c3870c491946a78950cdf961bf40e28c1025f drm/amd/display: Refactor DMCUB enter/exit idle interface
+  CVE-2023-52626: 33cdeae8c6fb58cc445f859b67c014dc9f60b4e0 net/mlx5e: Fix operation precedence bug in port timestamping napi_poll context
+  CVE-2023-52627: 55aca2ce91a63740278502066beaddbd841af9c6 iio: adc: ad7091r: Allow users to configure device events
   CVE-2024-1086: f05a497e7bc8851eeeb3a58da180ba469efebb05 netfilter: nf_tables: reject QUEUE/DROP verdict parameters
   CVE-2024-23849: 0b787c2dea15e7a2828fa3a74a5447df4ed57711 net/rds: Fix UBSAN: array-index-out-of-bounds in rds_cmsg_recv
+  CVE-2024-26607: 2a4c6af7934a7b4c304542c38fee35e09cc1770c drm/bridge: sii902x: Fix probing race issue
+  CVE-2024-26608: 6993328a4cd62a24df254b587c0796a4a1eecc95 ksmbd: fix global oob in ksmbd_nl_policy
+  CVE-2024-26610: f32a81999d0b8e5ce60afb5f6a3dd7241c17dd67 wifi: iwlwifi: fix a memory corruption
+  CVE-2024-26611: 5cd781f7216f980207af09c5e0e1bb1eda284540 xsk: fix usage of multi-buffer BPF helpers for ZC XDP
+  CVE-2024-26612: 4200ad3e46ce50f410fdda302745489441bc70f0 netfs, fscache: Prevent Oops in fscache_put_cache()
+  CVE-2024-26614: 3982fe726a63fb3de6005e534e2ac8ca7e0aca2a tcp: make sure init the accept_queue's spinlocks once
+  CVE-2024-26615: 8f3f9186e5bb96a9c9654c41653210e3ea7e48a6 net/smc: fix illegal rmb_desc access in SMC-D connection dump
+  CVE-2024-26616: 34de0f04684ec00c093a0455648be055f0e8e24f btrfs: scrub: avoid use-after-free when chunk length is not 64K aligned
+  CVE-2024-26617: 05509adf297924f51e1493aa86f9fcde1433ed80 fs/proc/task_mmu: move mmu notification mechanism inside mm lock
+  CVE-2024-26618: 814af6b4e6000e574e74d92197190edf07cc3680 arm64/sme: Always exit sme_alloc() early with existing storage
+  CVE-2024-26619: 2fa79badf4bfeffda6b5032cf62b828486ec9a99 riscv: Fix module loading free order
+  CVE-2024-26620: cdd134d56138302976685e6c7bc4755450b3880e s390/vfio-ap: always filter entire AP matrix
+  CVE-2024-26629: 8f5b860de87039b007e84a28a5eefc888154e098 nfsd: fix RELEASE_LOCKOWNER
+  CVE-2024-26634: 8072699aa9e67d1727692cfb3c347263bb627fb9 net: fix removing a namespace with conflicting altnames
+  CVE-2024-26635: df57fc2f2abf548aa889a36ab0bdcc94a75399dc llc: Drop support for ETH_P_TR_802_2.
+  CVE-2024-26636: c451c008f563d56d5e676c9dcafae565fcad84bb llc: make llc_ui_sendmsg() more robust against bonding changes
+  CVE-2024-26637: aa74ce30a8a40d19a4256de4ae5322e71344a274 wifi: ath11k: rely on mac80211 debugfs handling for vif
+  CVE-2024-26638: b0028f333420a65a53a63978522db680b37379dd nbd: always initialize struct msghdr completely
+  CVE-2024-26644: d8680b722f0ff6d7a01ddacc1844e0d52354d6ff btrfs: don't abort filesystem when attempting to snapshot deleted subvolume
+  CVE-2024-26645: bf4aeff7da85c3becd39fb73bac94122331c30fb tracing: Ensure visibility when inserting an element into tracing_map
+  CVE-2024-26646: c9d6d63b6c03afaa6f185df249af693a7939577c thermal: intel: hfi: Add syscore callbacks for system-wide PM
+  CVE-2024-26647: cf656fc7276e5b3709a81bc9d9639459be2b2647 drm/amd/display: Fix late derefrence 'dsc' check in 'link_set_dsc_pps_packet()'
+  CVE-2024-26648: c02d257c654191ecda1dc1af6875d527e85310e7 drm/amd/display: Fix variable deferencing before NULL check in edp_setup_replay()
+  CVE-2024-26649: d3887448486caeef9687fb5dfebd4ff91e0f25aa drm/amdgpu: Fix the null pointer when load rlc firmware
+  CVE-2024-26650: d281ac9a987c553d93211b90fd4fe97d8eca32cd platform/x86: p2sb: Allow p2sb_bar() calls during PCI device probe
+  CVE-2024-26668: 00c2c29aa36d1d1827c51a3720e9f893a22c7c6a netfilter: nft_limit: reject configurations that cause integer overflow
+  CVE-2024-26669: c04709b2cc99ae31c346f79f0211752d7b74df01 net/sched: flower: Fix chain template offload
+  CVE-2024-26670: baa0aaac16432019651e0d60c41cd34a0c3c3477 arm64: entry: fix ARM64_WORKAROUND_SPECULATIVE_UNPRIV_LOAD
+  CVE-2024-26808: 36a0a80f32209238469deb481967d777a3d539ee netfilter: nft_chain_filter: handle NETDEV_UNREGISTER for inet/ingress basechain
+
+CVEs fixed in 6.7.4:
+  CVE-2023-52583: 76cb2aa3421fee4fde706dec41b1344bc0a9ad67 ceph: fix deadlock or deadcode of misusing dget()
+  CVE-2023-52584: 9a3881b1f07db1bb55cb0108e6f05cfd027eaf2e spmi: mediatek: Fix UAF on device remove
+  CVE-2023-52585: 195a6289282e039024ad30ba66e6f94a4d0fbe49 drm/amdgpu: Fix possible NULL dereference in amdgpu_ras_query_error_status_helper()
+  CVE-2023-52586: 14f109bf74dd67e1d0469fed859c8e506b0df53f drm/msm/dpu: Add mutex lock in control vblank irq
+  CVE-2023-52587: 7c7bd4d561e9dc6f5b7df9e184974915f6701a89 IB/ipoib: Fix mcast list locking
+  CVE-2023-52588: b8094c0f1aae329b1c60a275a780d6c2c9ff7aa3 f2fs: fix to tag gcing flag on page during block migration
+  CVE-2023-52589: 7bb1a2822aa2c2de4e09bf7c56dd93bd532f1fa7 media: rkisp1: Fix IRQ disable race issue
+  CVE-2023-52590: de940cede3c41624e2de27f805b490999f419df9 ocfs2: Avoid touching renamed directory if parent does not change
+  CVE-2023-52591: c04c162f82ac403917780eb6d1654694455d4e7c reiserfs: Avoid touching renamed directory if parent does not change
+  CVE-2023-52593: 3739121443f5114c6bcf6d841a5124deb006b878 wifi: wfx: fix possible NULL pointer dereference in wfx_set_mfp_ap()
+  CVE-2023-52594: be609c7002dd4504b15b069cb7582f4c778548d1 wifi: ath9k: Fix potential array-index-out-of-bounds read in ath9k_htc_txstatus()
+  CVE-2023-52595: fdb580ed05df8973aa5149cafa598c64bebcd0cb wifi: rt2x00: restart beacon queue when hardware reset
+  CVE-2023-52596: 2ae7081bc10123b187e36a4f3a8e53768de31489 sysctl: Fix out of bounds access for empty sysctl registers
+  CVE-2023-52597: 2823db0010c400e4b2b12d02aa5d0d3ecb15d7c7 KVM: s390: fix setting of fpc register
+  CVE-2023-52598: bdce67df7f12fb0409fbc604ce7c4254703f56d4 s390/ptrace: handle setting of fpc register correctly
+  CVE-2023-52599: 5a6660139195f5e2fbbda459eeecb8788f3885fe jfs: fix array-index-out-of-bounds in diNewExt
+  CVE-2023-52600: bacdaa04251382d7efd4f09f9a0686bfcc297e2e jfs: fix uaf in jfs_evict_inode
+  CVE-2023-52601: fc67a2e18f4c4e3f07e9f9ae463da24530470e73 jfs: fix array-index-out-of-bounds in dbAdjTree
+  CVE-2023-52602: bff9d4078a232c01e42e9377d005fb2f4d31a472 jfs: fix slab-out-of-bounds Read in dtSearch
+  CVE-2023-52603: 6e2902ecc77e9760a9fc447f56d598383e2372d2 UBSAN: array-index-out-of-bounds in dtSplitRoot
+  CVE-2023-52604: 59342822276f753e49d27ef5eebffbba990572b9 FS:JFS:UBSAN:array-index-out-of-bounds in dbAdjTree
+  CVE-2023-52606: 848e1d7fd710900397e1d0e7584680c1c04e3afd powerpc/lib: Validate size for vector operations
+  CVE-2023-52607: ffd29dc45bc0355393859049f6becddc3ed08f74 powerpc/mm: Fix null-pointer dereference in pgtable_cache_add
+  CVE-2023-52617: e129c7fa7070fbce57feb0bfc5eaa65eef44b693 PCI: switchtec: Fix stdev_release() crash after surprise hot remove
+  CVE-2023-52618: a2c6206f18104fba7f887bf4dbbfe4c41adc4339 block/rnbd-srv: Check for unlikely string overflow
+  CVE-2023-52619: cd40e43f870cf21726b22487a95ed223790b3542 pstore/ram: Fix crash when setting number of cpus to an odd number
+  CVE-2023-52621: c7f1b6146f4a46d727c0d046284c28b6882c6304 bpf: Check rcu_read_lock_trace_held() before calling bpf map helpers
+  CVE-2023-52622: dc3e0f55bec4410f3d74352c4a7c79f518088ee2 ext4: avoid online resizing failures due to oversized flex bg
+  CVE-2023-52623: 8f860c8407470baff2beb9982ad6b172c94f1d0a SUNRPC: Fix a suspicious RCU usage warning
+  CVE-2023-52632: 1556c242e64cdffe58736aa650b0b395854fe4d4 drm/amdkfd: Fix lock dependency warning with srcu
+  CVE-2023-52633: b427f55e9d4185f6f17cc1e3296eb8d0c4425283 um: time-travel: fix time corruption
+  CVE-2023-52634: ce29728ef6485a367934cc100249c66dd3cde5b6 drm/amd/display: Fix disable_otg_wa logic
+  CVE-2023-52635: ae815e2fdc284ab31651d52460698bd89c0fce22 PM / devfreq: Synchronize devfreq_monitor_[start/stop]
+  CVE-2024-26623: 5939feb63ea1f011027576c64b68b681cbad31ca pds_core: Prevent race issues involving the adminq
+  CVE-2024-26625: 8e51f084b5716653f19e291ed5f026791d4b3ed4 llc: call sock_orphan() at release time
+  CVE-2024-26627: 07e3ca0f17f579491b5f54e9ed05173d6c1d6fcb scsi: core: Move scsi_host_busy() out of host lock for waking up EH handler
+  CVE-2024-26640: 1b8adcc0e2c584fec778add7777fe28e20781e60 tcp: add sanity checks to rx zerocopy
+  CVE-2024-26641: c835df3bcc14858ae9b27315dd7de76370b94f3a ip6_tunnel: make sure to pull inner header in __ip6_tnl_rcv()
+  CVE-2024-26671: f1bc0d8163f8ee84a8d5affdf624cfad657df1d2 blk-mq: fix IO hang from sbitmap wakeup race
+  CVE-2024-26672: 7b5d58c07024516c0e81b95e98f37710cf402c53 drm/amdgpu: Fix variable 'mca_funcs' dereferenced before NULL check in 'amdgpu_mca_smu_get_mca_entry()'
+  CVE-2024-26673: 38cc1605338d99205a263707f4dde76408d3e0e8 netfilter: nft_ct: sanitize layer 3 and 4 protocol number in custom expectations
 
 CVEs fixed in 6.7.5:
+  CVE-2023-52630: cd33b330cb21675189e747953845f5c3689e4912 blk-iocost: Fix an UBSAN shift-out-of-bounds warning
+  CVE-2023-52631: 686820fe141ea0220fc6fdfc7e5694f915cf64b2 fs/ntfs3: Fix an NULL dereference bug
+  CVE-2023-52636: bd9442e553ab8bf74b8be3b3c0a43bf4af4dc9b8 libceph: just wait for more data to be available on the socket
   CVE-2024-26581: 6eb14441f10602fa1cf691da9d685718b68b78a9 netfilter: nft_set_rbtree: skip end interval element from gc
+  CVE-2024-26600: 396e17af6761b3cc9e6e4ca94b4de7f642bfece1 phy: ti: phy-omap-usb2: Fix NULL pointer dereference for SRP
+  CVE-2024-26601: 6b0d48647935e4b8c7b75d1eccb9043fcd4ee581 ext4: regenerate buddy after block freeing failed if under fc replay
+  CVE-2024-26605: ef90508574d7af48420bdc5f7b9a4f1cdd26bc70 PCI/ASPM: Fix deadlock when enabling ASPM
+  CVE-2024-26658: 5b41d3fd04c6757b9c2a60a0c5b2609cae9999df bcachefs: grab s_umount only if snapshotting
+  CVE-2024-26659: 418456c0ce56209610523f21734c5612ee634134 xhci: handle isoc Babble and Buffer Overrun events properly
+  CVE-2024-26660: a938eab9586eea31cfd129a507f552efae14d738 drm/amd/display: Implement bounds check for stream encoder creation in DCN301
+  CVE-2024-26661: 39f24c08363af1cd945abad84e3c87fd3e3c845a drm/amd/display: Add NULL test for 'timing generator' in 'dcn21_set_pipe()'
+  CVE-2024-26662: 0c863cab0e9173f8b6c7bc328bee3b8625f131b5 drm/amd/display: Fix 'panel_cntl' could be null in 'dcn21_set_backlight_level()'
+  CVE-2024-26663: 0cd331dfd6023640c9669d0592bc0fd491205f87 tipc: Check the bearer type before calling tipc_udp_nl_bearer_add()
+  CVE-2024-26664: 3a7753bda55985dc26fae17795cb10d825453ad1 hwmon: (coretemp) Fix out-of-bounds memory access
+  CVE-2024-26665: 7dc9feb8b1705cf00de20563b6bc4831f4c99dab tunnels: fix out of bounds access when building IPv6 PMTU error
+  CVE-2024-26666: c255c3b653c6e8b52ac658c305e2fece2825f7ad wifi: mac80211: fix RCU use in TDLS fast-xmit
+  CVE-2024-26667: eb4f56f3ff5799ca754ae6d811803a63fe25a4a2 drm/msm/dpu: check for valid hw_pp in dpu_encoder_helper_phys_cleanup
+  CVE-2024-26674: 2da241c5ed78d0978228a1150735539fe1a60eca x86/lib: Revert to _ASM_EXTABLE_UA() for {get,put}_user() fixups
+  CVE-2024-26675: 210d938f963dddc543b07e66a79b7d8d4bd00bd8 ppp_async: limit MRU to 64K
+  CVE-2024-26676: 82ae47c5c3a6b27fdc0f9e83c1499cb439c56140 af_unix: Call kfree_skb() for dead unix_(sk)->oob_skb in GC.
+  CVE-2024-26677: 63719f490e6a89896e9a463d2b45e8203eab23ae rxrpc: Fix delayed ACKs to not set the reference serial number
+  CVE-2024-26678: 4adeeff8c12321cd453412a659c3c0eeb9bb2397 x86/efistub: Use 1:1 file:memory mapping for PE/COFF .compat section
+  CVE-2024-26679: 307fa8a75ab7423fa5c73573ec3d192de5027830 inet: read sk->sk_family once in inet_recv_error()
+  CVE-2024-26680: e42e334c645575be5432adee224975d4f536fdb1 net: atlantic: Fix DMA mapping for PTP hwts ring
+  CVE-2024-26681: d91964cdada76740811b7c621239f9c407820dbc netdevsim: avoid potential loop in nsim_dev_trap_report_work()
+  CVE-2024-26682: ea88bde8e3fefbe4268f6991375dd629895a090a wifi: mac80211: improve CSA/ECSA connection refusal
+  CVE-2024-26683: ce112c941c2b172afba3e913a90c380647d53975 wifi: cfg80211: detect stuck ECSA element in probe resp
+  CVE-2024-26684: 3b48c9e258c8691c2f093ee07b1ea3764caaa1b2 net: stmmac: xgmac: fix handling of DPP safety error for DMA channels
 
 CVEs fixed in 6.7.6:
   CVE-2023-52429: cd70175481f63af31901dd463e44386f033c3f4c dm: limit the number of targets and parameter size area
+  CVE-2023-52637: fc74b9cb789cae061bbca7b203a3842e059f6b5d can: j1939: Fix UAF in j1939_sk_match_filter during setsockopt(SO_J1939_FILTER)
+  CVE-2023-52638: 559b6322f9480bff68cfa98d108991e945a4f284 can: j1939: prevent deadlock by changing j1939_socks_lock to rwlock
+  CVE-2023-52639: 28bb27824f25f36e5f80229a358d66ee09244082 KVM: s390: vsie: fix race during shadow creation
+  CVE-2024-0841: ec78418801ef7b0c22cd6a30145ec480dd48db39 fs,hugetlb: fix NULL pointer dereference in hugetlbs_fill_super
   CVE-2024-1151: da05eb129c0208ef907420480c5859083408dc2c net: openvswitch: limit the number of recursions from action sets
   CVE-2024-23850: 5a172344bfdabb46458e03708735d7b1a918c468 btrfs: do not ASSERT() if the newly created subvolume already got read
   CVE-2024-23851: cd70175481f63af31901dd463e44386f033c3f4c dm: limit the number of targets and parameter size area
@@ -65,6 +207,157 @@ CVEs fixed in 6.7.6:
   CVE-2024-26584: ab6397f072e5097f267abf5cb08a8004e6b17694 net: tls: handle backlogging of crypto requests
   CVE-2024-26585: e327ed60bff4a991cd7a709c47c4f0c5b4a4fd57 tls: fix race between tx work scheduling and socket close
   CVE-2024-26593: 609c7c1cc976e740d0fed4dbeec688b3ecb5dce2 i2c: i801: Fix block process call transactions
+  CVE-2024-26602: c5b2063c65d05e79fad8029324581d86cfba7eea sched/membarrier: reduce the ability to hammer on sys_membarrier
+  CVE-2024-26603: 627e28cbb65564e55008315d9e02fbb90478beda x86/fpu: Stop relying on userspace for info to fault in xsave buffer
+  CVE-2024-26604: b746d52ce7bcac325a2fa264216ead85b7fbbfaa Revert "kobject: Remove redundant checks for whether ktype is NULL"
+  CVE-2024-26606: 93b372c39c40cbf179e56621e6bc48240943af69 binder: signal epoll threads of self-work
+  CVE-2024-26621: 7432376c913381c5f24d373a87ff629bbde94b47 mm: huge_memory: don't force huge page alignment on 32 bit
+  CVE-2024-26685: 626daab3811b772086aef1bf8eed3ffe6f523eff nilfs2: fix potential bug in end_buffer_async_write
+  CVE-2024-26686: 27978243f165b44e342f28f449b91327944ea071 fs/proc: do_task_stat: use sig->stats_lock to gather the threads/children stats
+  CVE-2024-26687: 9be71aa12afa91dfe457b3fb4a444c42b1ee036b xen/events: close evtchn after mapping cleanup
+  CVE-2024-26688: ec78418801ef7b0c22cd6a30145ec480dd48db39 fs,hugetlb: fix NULL pointer dereference in hugetlbs_fill_super
+  CVE-2024-26689: 7958c1bf5b03c6f1f58e724dbdec93f8f60b96fc ceph: prevent use-after-free in encode_cap_msg()
+  CVE-2024-26690: e6af0f082a4b87b99ad033003be2a904a1791b3f net: stmmac: protect updates of 64-bit statistics counters
+  CVE-2024-26691: 3ab1c40a1e915e350d9181a4603af393141970cc KVM: arm64: Fix circular locking dependency
+  CVE-2024-26692: 63c35afd50e28b49c5b75542045a8c42b696dab9 smb: Fix regression in writes when non-standard maximum write size negotiated
+  CVE-2024-26693: c12f0f4d4caf23b1bfdc2602b6b70d56bdcd6aa7 wifi: iwlwifi: mvm: fix a crash when we run out of stations
+  CVE-2024-26694: d24eb9a27bea8fe5237fa71be274391d9d51eff2 wifi: iwlwifi: fix double-free bug
+  CVE-2024-26695: b5909f197f3b26aebedca7d8ac7b688fd993a266 crypto: ccp - Fix null pointer dereference in __sev_platform_shutdown_locked
+  CVE-2024-26696: e38585401d464578d30f5868ff4ca54475c34f7d nilfs2: fix hang in nilfs_lookup_dirty_data_buffers()
+  CVE-2024-26697: 2000016bab499074e6248ea85aeea7dd762355d9 nilfs2: fix data corruption in dsync block recovery for small block sizes
+  CVE-2024-26698: 0e8875de9dad12805ff66e92cd5edea6a421f1cd hv_netvsc: Fix race condition between netvsc_probe and netvsc_remove
+  CVE-2024-26699: ca400d8e0c1c9d79c08dfb6b7f966e26c8cae7fb drm/amd/display: Fix array-index-out-of-bounds in dcn35_clkmgr
+  CVE-2024-26700: 5cd7185d2db76c42a9b7e69adad9591d9fca093f drm/amd/display: Fix MST Null Ptr for RV
+  CVE-2024-26702: 57d05dbbcd0b3dc0c252103b43012eef5d6430d1 iio: magnetometer: rm3100: add boundary check for the value read from RM3100_REG_TMRC
+  CVE-2024-26703: 2354d29986ebd138f89c2b73fecf8237e0a4ad6b tracing/timerlat: Move hrtimer_init to timerlat_fd open()
+  CVE-2024-26704: 559ddacb90da1d8786dd8ec4fd76bbfa404eaef6 ext4: fix double-free of blocks due to wrong extents moved_len
+  CVE-2024-26705: aa52be55276614d33f22fbe7da36c40d6432d10b parisc: BTLB: Fix crash when setting up BTLB at CPU bringup
+  CVE-2024-26706: ce31d79aa1f13a2345791f84935281a2c194e003 parisc: Fix random data corruption from exception handler
+  CVE-2024-26707: 547545e50c913861219947ce490c68a1776b9b51 net: hsr: remove WARN_ONCE() in send_hsr_supervision_frame()
+  CVE-2024-26708: e158fb9679d15a2317ec13b4f6301bd26265df2f mptcp: really cope with fastopen race
+  CVE-2024-26709: c90fdea9cac9eb419fc266e75d625cb60c8f7f6c powerpc/iommu: Fix the missing iommu_group_put() during platform domain attach
+  CVE-2024-26711: 02876e2df02f8b17a593d77a0a7879a8109b27e1 iio: adc: ad4130: zero-initialize clock init data
+  CVE-2024-26712: 70ef2ba1f4286b2b73675aeb424b590c92d57b25 powerpc/kasan: Fix addr error caused by page alignment
+  CVE-2024-26713: 12b55cfdd3ab91c70cc945cf8b5f45984ea0abf1 powerpc/pseries/iommu: Fix iommu initialisation during DLPAR add
+  CVE-2024-26714: 7a3a70dd08e4b7dffc2f86f2c68fc3812804b9d0 interconnect: qcom: sc8180x: Mark CO0 BCM keepalive
+  CVE-2024-26715: 36695d5eeeefe5a64b47d0336e7c8fc144e78182 usb: dwc3: gadget: Fix NULL pointer dereference in dwc3_gadget_suspend
+  CVE-2024-26716: 465b545d1d7ef282192ddd4439b08279bdb13f6f usb: core: Prevent null pointer dereference in update_port_device_state
+  CVE-2024-26717: e28d6b63aeecbda450935fb58db0e682ea8212d3 HID: i2c-hid-of: fix NULL-deref on failed power up
+  CVE-2024-26718: 0c45a20cbe68bc4d681734f5c03891124a274257 dm-crypt, dm-verity: disable tasklets
+  CVE-2024-26719: 985d053f7633d8b539ab1531738d538efac678a9 nouveau: offload fence uevents work to workqueue
+  CVE-2024-26720: 65977bed167a92e87085e757fffa5798f7314c9f mm/writeback: fix possible divide-by-zero in wb_dirty_limits(), again
+  CVE-2024-26721: ff5999fb03f467e1e7159f0ddb199c787f7512b9 drm/i915/dsc: Fix the macro that calculates DSCC_/DSCA_ PPS reg address
+  CVE-2024-26722: ed5b8b735369b40d6c1f8ef3e62d369f74b4c491 ASoC: rt5645: Fix deadlock in rt5645_jack_detect_work()
+  CVE-2024-26723: 2a492f01228b7d091dfe38974ef40dccf8f9f2f1 lan966x: Fix crash when adding interface under a lag
+  CVE-2024-26724: 1596126ea50228f0ed96697bae4e9368fda02c56 net/mlx5: DPLL, Fix possible use after free after delayed work timer triggers
+  CVE-2024-26725: 087739cbd0d0b87b6cec2c0799436ac66e24acc8 dpll: fix possible deadlock during netlink dump operation
+  CVE-2024-26726: a4b7741c8302e28073bfc6dd1c2e73598e5e535e btrfs: don't drop extent_map for free space inode on write error
+  CVE-2024-26727: 5a172344bfdabb46458e03708735d7b1a918c468 btrfs: do not ASSERT() if the newly created subvolume already got read
+
+CVEs fixed in 6.7.7:
+  CVE-2023-52640: 0830c5cf19bdec50d0ede4755ddc463663deb21c fs/ntfs3: Fix oob in ntfs_listxattr
+  CVE-2023-52641: 847b68f58c212f0439c5a8101b3841f32caffccd fs/ntfs3: Add NULL ptr dereference checking at the end of attr_allocate_frame()
+  CVE-2024-26728: 2d392f7268a1a9bfbd98c831f0f4c964e59aa145 drm/amd/display: fix null-pointer dereference on edid reading
+  CVE-2024-26729: 351080ba3414c96afff0f1338b4aeb2983195b80 drm/amd/display: Fix potential null pointer dereference in dc_dmub_srv
+  CVE-2024-26730: c196387820c9214c5ceaff56d77303c82514b8b1 hwmon: (nct6775) Fix access to temperature configuration registers
+  CVE-2024-26731: d61608a4e394f23e0dca099df9eb8e555453d949 bpf, sockmap: Fix NULL pointer dereference in sk_psock_verdict_data_ready()
+  CVE-2024-26732: 897f75e2cde8a5f9f7529b55249af1fa4248c83b net: implement lockless setsockopt(SO_PEEK_OFF)
+  CVE-2024-26733: 3ab0d6f8289ba8402ca95a9fc61a34909d5e1f3a arp: Prevent overflow in arp_req_get().
+  CVE-2024-26734: e91d3561e28d7665f4f837880501dc8755f635a9 devlink: fix possible use-after-free and memory leaks in devlink_init()
+  CVE-2024-26735: 02b08db594e8218cfbc0e4680d4331b457968a9b ipv6: sr: fix possible use-after-free and null-ptr-deref
+  CVE-2024-26736: d34a5e57632bb5ff825196ddd9a48ca403626dfa afs: Increase buffer size in afs_update_volume_status()
+  CVE-2024-26737: 7d80a9e745fa5b47da3bca001f186c02485c7c33 bpf: Fix racing between bpf_timer_cancel_and_free and bpf_timer_cancel
+  CVE-2024-26738: 46e36ebd5e00a148b67ed77c1d31675996f77c25 powerpc/pseries/iommu: DLPAR add doesn't completely initialize pci_controller
+  CVE-2024-26739: f4e294bbdca8ac8757db436fc82214f3882fc7e7 net/sched: act_mirred: don't override retval if we already lost the skb
+  CVE-2024-26740: 60ddea1600bc476e0f5e02bce0e29a460ccbf0be net/sched: act_mirred: use the backlog for mirred ingress
+  CVE-2024-26741: f8c4a6b850882bc47aaa864b720c7a2ee3102f39 dccp/tcp: Unhash sk from ehash for tb2 alloc failure after check_estalblished().
+  CVE-2024-26742: b9433b25cb06c415c9cb24782599649a406c8d6d scsi: smartpqi: Fix disable_managed_interrupts
+  CVE-2024-26743: bab8875c06ebda5e01c5c4cab30022aed85c14e6 RDMA/qedr: Fix qedr_create_user_qp error flow
+  CVE-2024-26744: c99a827d3cff9f84e1cb997b7cc6386d107aa74d RDMA/srpt: Support specifying the srpt_service_guid parameter
+  CVE-2024-26747: 01f82de440f2ab07c259b7573371e1c42e5565db usb: roles: fix NULL pointer issue when put module's reference
+  CVE-2024-26748: 92d20406a3d4ff3e8be667c79209dc9ed31df5b3 usb: cdns3: fix memory double free when handle zero packet
+  CVE-2024-26749: 9a07244f614bc417de527b799da779dcae780b5d usb: cdns3: fixed memory use after free at cdns3_gadget_ep_disable()
+  CVE-2024-26751: 6abe0895b63c20de06685c8544b908c7e413efa8 ARM: ep93xx: Add terminator to gpiod_lookup_table
+  CVE-2024-26752: 83340c66b498e49353530e41542500fc8a4782d6 l2tp: pass correct message length to ip6_append_data
+  CVE-2024-26753: ef1e47d50324e232d2da484fe55a54274eeb9bc1 crypto: virtio/akcipher - Fix stack overflow on memcpy
+  CVE-2024-26754: 5013bd54d283eda5262c9ae3bcc966d01daf8576 gtp: fix use-after-free and null-ptr-deref in gtp_genl_dump_pdp()
+  CVE-2024-26755: 60d6130d0ac1d883ed93c2a1e10aadb60967fd48 md: Don't suspend the array for interrupted reshape
+  CVE-2024-26756: 13b520fb62b772e408f9b79c5fe18ad414e90417 md: Don't register sync_thread for reshape directly
+  CVE-2024-26757: 2ea169c5a0b1134d573d07fc27a16f327ad0e7d3 md: Don't ignore read-only array in md_check_recovery()
+  CVE-2024-26758: a55f0d6179a19c6b982e2dc344d58c98647a3be0 md: Don't ignore suspended array in md_check_recovery()
+  CVE-2024-26759: d183a4631acfc7af955c02a02e739cec15f5234d mm/swap: fix race when skipping swapcache
+  CVE-2024-26760: 1cfe9489fb563e9a0c9cdc5ca68257a44428c2ec scsi: target: pscsi: Fix bio_put() for error case
+  CVE-2024-26761: 3a3181a71935774bda2398451256d7441426420b cxl/pci: Fix disabling memory if DVSEC CXL Range does not match a CFMWS window
+  CVE-2024-26762: 21e5e84f3f63fdf44e49642a6e45cd895e921a84 cxl/pci: Skip to handle RAS errors if CXL.mem device is detached
+  CVE-2024-26763: d9e3763a505e50ba3bd22846f2a8db99429fb857 dm-crypt: don't modify the data when using authenticated encryption
+  CVE-2024-26764: 1dc7d74fe456944a9b1c57bd776280249f441ac6 fs/aio: Restrict kiocb_set_cancel_fn() to I/O submitted via libaio
+  CVE-2024-26765: 8bf2ca8c60712af288b88ba80f8e4df4573d923f LoongArch: Disable IRQ before init_fn() for nonboot CPUs
+  CVE-2024-26766: 9034a1bec35e9f725315a3bb6002ef39666114d9 IB/hfi1: Fix sdma.h tx->num_descs off-by-one error
+  CVE-2024-26767: beea9ab9080cd2ef46296070bb327af066ee09d7 drm/amd/display: fixed integer types and null check locations
+  CVE-2024-26768: 0f6810e39898af2d2cabd9313e4dbc945fb5dfdd LoongArch: Change acpi_core_pic[NR_CPUS] to acpi_core_pic[MAX_CORE_PIC]
+  CVE-2024-26769: 1d86f79287206deec36d63b89c741cf542b6cadd nvmet-fc: avoid deadlock on delete association path
+  CVE-2024-26770: e71cc4a1e584293deafff1a7dea614b0210d0443 HID: nvidia-shield: Add missing null pointer checks to LED initialization
+  CVE-2024-26771: f2a5e30d1e9a629de6179fa23923a318d5feb29e dmaengine: ti: edma: Add some null pointer checks to the edma_probe
+  CVE-2024-26772: 21dbe20589c7f48e9c5d336ce6402bcebfa6d76a ext4: avoid allocating blocks from corrupted group in ext4_mb_find_by_goal()
+  CVE-2024-26773: a2576ae9a35c078e488f2c573e9e6821d651fbbe ext4: avoid allocating blocks from corrupted group in ext4_mb_try_best_found()
+  CVE-2024-26774: 8cf9cc602cfb40085967c0d140e32691c8b71cf3 ext4: avoid dividing by 0 in mb_update_avg_fragment_size() when block bitmap corrupt
+  CVE-2024-26775: 19a77b27163820f793b4d022979ffdca8f659b77 aoe: avoid potential deadlock at set_capacity
+  CVE-2024-26776: e4168ac25b4bd378bd7dda322d589482a136c1fd spi: hisi-sfc-v3xx: Return IRQ_NONE if no interrupts were detected
+  CVE-2024-26777: 1d11dd3ea5d039c7da089f309f39c4cd363b924b fbdev: sis: Error out if pixclock equals zero
+  CVE-2024-26778: a9ca4e80d23474f90841251f4ac0d941fa337a01 fbdev: savage: Error out if pixclock equals zero
+  CVE-2024-26779: 281280276b70c822f55ce15b661f6d1d3228aaa9 wifi: mac80211: fix race condition on enabling fast-xmit
+
+CVEs fixed in 6.7.9:
+  CVE-2024-26622: 6edefe1b6c29a9932f558a898968a9fcbeec5711 tomoyo: fix UAF write bug in tomoyo_write_control()
+  CVE-2024-26630: fe7e008e0ce728252e4ec652cceebcc62211657c mm: cachestat: fix folio read-after-free in cache walk
+  CVE-2024-26745: 5da6d306f315344af1ca2eff4bd9b10b130f0c28 powerpc/pseries/iommu: IOMMU table is not initialized for kdump over SR-IOV
+  CVE-2024-26746: bb71e040323175e18c233a9afef32ba14fa64eb7 dmaengine: idxd: Ensure safe user copy of completion record
+  CVE-2024-26782: 85933e80d077c9ae2227226beb86c22f464059cc mptcp: fix double-free on socket dismantle
+  CVE-2024-26783: bdd21eed8b72f9e28d6c279f6db258e090c79080 mm/vmscan: fix a bug calling wakeup_kswapd() with a wrong zone index
+  CVE-2024-26784: f6aaf131e4d4a9a26040ecc018eb70ab8b3d355d pmdomain: arm: Fix NULL dereference on scmi_perf_domain removal
+  CVE-2024-26785: fc719ecbca45c9c046640d72baddba3d83e0bc0b iommufd: Fix protection fault in iommufd_test_syz_conv_iova
+  CVE-2024-26786: 9526a46cc0c378d381560279bea9aa34c84298a0 iommufd: Fix iopt_access_list_id overwrite bug
+  CVE-2024-26787: d610a307225951929b9dff807788439454476f85 mmc: mmci: stm32: fix DMA API overlapping mappings warning
+  CVE-2024-26788: 677102a930643c31f1b4c512b041407058bdfef8 dmaengine: fsl-qdma: init irq after reg initialization
+  CVE-2024-26789: 9e8ecd4908b53941ab6f0f51584ab80c6c6606c4 crypto: arm64/neonbs - fix out-of-bounds access on short input
+  CVE-2024-26790: ad2f8920c314e0a2d9e984fc94b729eca3cda471 dmaengine: fsl-qdma: fix SoC may hang on 16 byte unaligned read
+  CVE-2024-26791: 343eecb4ff49a7b1cc1dfe86958a805cf2341cfb btrfs: dev-replace: properly validate device names
+  CVE-2024-26793: 5366969a19a8a0d2ffb3d27ef6e8905e5e4216f8 gtp: fix use-after-free and null-ptr-deref in gtp_newlink()
+  CVE-2024-26795: 2a1728c15ec4f45ed9248ae22f626541c179bfbe riscv: Sparse-Memory/vmemmap out-of-bounds fix
+  CVE-2024-26796: e4f50e85de5a6b21dfdc0d7ca435eba4f62935c3 drivers: perf: ctr_get_width function for legacy is not defined
+  CVE-2024-26797: 50a6302cf881f67f1410461a68fe9eabd00ff31d drm/amd/display: Prevent potential buffer overflow in map_hw_resources
+  CVE-2024-26798: a2c881413dcc5d801bdc9535e51270cc88cb9cd8 fbcon: always restore the old font data in fbcon_do_set_font()
+  CVE-2024-26799: d5a7726e6ea62d447b79ab5baeb537ea6bdb225b ASoC: qcom: Fix uninitialized pointer dmactl
+  CVE-2024-26801: dd594cdc24f2e48dab441732e6dfcafd6b0711d1 Bluetooth: Avoid potential use-after-free in hci_error_reset
+  CVE-2024-26802: f72cf22dccc94038cbbaa1029cb575bf52e5cbc8 stmmac: Clear variable when destroying workqueue
+  CVE-2024-26803: 8f7a3894e58e6f5d5815533cfde60e3838947941 net: veth: clear GRO when clearing XDP even when down
+  CVE-2024-26804: 049d7989c67e8dd50f07a2096dbafdb41331fb9b net: ip_tunnel: prevent perpetual headroom growth
+  CVE-2024-26805: 59fc3e3d049e39e7d0d271f20dd5fb47c57faf1d netlink: Fix kernel-infoleak-after-free in __skb_datagram_iter
+  CVE-2024-26806: 041562ebc4759c9932b59a06527f8753b86da365 spi: cadence-qspi: remove system-wide suspend helper calls from runtime PM hooks
+  CVE-2024-26807: 34e1d5c4407c78de0e3473e1fbf8fb74dbe66d03 spi: cadence-qspi: fix pointer reference in runtime PM hooks
+
+CVEs fixed in 6.7.10:
+  CVE-2023-28746: 18867a204511d032c2a6ed083461a10905061fac x86/mmio: Disable KVM mitigation when X86_FEATURE_CLEAR_CPU_BUF is set
+  CVE-2024-26652: ffda0e962f270b3ec937660afd15b685263232d3 net: pds_core: Fix possible double free in error handling path
+
+CVEs fixed in 6.7.11:
+  CVE-2023-6270: 079cba4f4e307c69878226fdf5228c20aa1c969c aoe: fix the potential use-after-free problem in aoecmd_cfg_pkts
+  CVE-2023-7042: db755cf93f5895bbac491d27a8e2fe04c5f9ae4a wifi: ath10k: fix NULL pointer dereference in ath10k_wmi_tlv_op_pull_mgmt_tx_compl_ev()
+  CVE-2024-22099: 5f9fe302dd3a9bbc50f4888464c1773f45166bfd Bluetooth: rfcomm: Fix null-ptr-deref in rfcomm_check_security
+  CVE-2024-26651: efba65777f98457773c5b65e3135c6132d3b015f sr9800: Add check for usbnet_get_endpoints
+  CVE-2024-26809: 821e28d5b506e6a73ccc367ff792bd894050d48b netfilter: nft_set_pipapo: release elements in clone only from destroy path
+
+CVEs fixed in 6.7.12:
+  CVE-2023-47233: 6678a1e7d896c00030b31491690e8ddc9a90767a wifi: brcmfmac: Fix use-after-free bug in brcmf_cfg80211_detach
+  CVE-2024-23307: 1191f9391105e49115715e55030476849f6f6da5 md/raid5: fix atomicity violation in raid5_cache_count
+  CVE-2024-24861: b0864de231dece0f7226b909521bebc86105743a media: xc4000: Fix atomicity violation in xc4000_get_frequency
+  CVE-2024-26642: 8e07c16695583a66e81f67ce4c46e94dece47ba7 netfilter: nf_tables: disallow anonymous set with timeout flag
+  CVE-2024-26643: 5224afbc30c3ca9ba23e752f0f138729b2c48dd8 netfilter: nf_tables: mark set as dead when unbinding anonymous set with timeout
+  CVE-2024-26653: 420babea4f1881a7c4ea22a8e218b8c6895d3f21 usb: misc: ljca: Fix double free in error handling path
+  CVE-2024-26654: e955e8a7f38a856fc6534ba4e6bffd4d5cc80ac3 ALSA: sh: aica: reorder cleanup operations to avoid UAF bugs
+  CVE-2024-26655: a88649b49523e8cbe95254440d803e38c19d2341 Fix memory leak in posix_clock_open()
+  CVE-2024-26656: af054a5fb24a144f99895afce9519d709891894c drm/amdgpu: fix use-after-free bug
+  CVE-2024-26657: 74cd204c7afe498aa9dcc3ebf0ecac53d477a429 drm/sched: fix null-ptr-deref in init entity
 
 Outstanding CVEs:
   CVE-2005-3660: (unk)  
@@ -151,26 +444,17 @@ Outstanding CVEs:
   CVE-2023-3640: (unk)  
   CVE-2023-37454: (unk)  
   CVE-2023-4010: (unk)  
-  CVE-2023-47233: (unk)  
   CVE-2023-6238: (unk)  
   CVE-2023-6240: (unk)  
-  CVE-2023-6270: (unk)  
-  CVE-2023-6356: (unk)  
   CVE-2023-6535: (unk)  
-  CVE-2023-6536: (unk)  
-  CVE-2023-7042: (unk)  
   CVE-2024-0564: (unk)  
-  CVE-2024-0841: (unk)  
   CVE-2024-21803: (unk)  
-  CVE-2024-22099: (unk)  
+  CVE-2024-2193: (unk)  
   CVE-2024-22386: (unk)  
-  CVE-2024-23196: (unk)  
-  CVE-2024-23307: (unk)  
   CVE-2024-23848: (unk)  
   CVE-2024-24857: (unk)  
   CVE-2024-24858: (unk)  
   CVE-2024-24859: (unk)  
-  CVE-2024-24861: (unk)  
   CVE-2024-24864: (unk)  
   CVE-2024-25739: (unk)  
   CVE-2024-25740: (unk)  
